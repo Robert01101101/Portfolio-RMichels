@@ -1,0 +1,63 @@
+//_____________________________________________ Body
+body, input, select, textarea {
+		color: _palette(white);
+		font-family: _font(family);
+		font-size: 16.5pt;
+		font-weight: _font(weight);
+		line-height: 1.65;
+
+		/*
+		@include breakpoint('<=xlarge') {
+			font-size: 13pt;
+		}
+
+		@include breakpoint('<=large') {
+			font-size: 12pt;
+		}
+
+		@include breakpoint('<=medium') {
+			font-size: 12pt;
+		}
+
+		@include breakpoint('<=small') {
+			font-size: 12pt;
+		}
+
+		@include breakpoint('<=xsmall') {
+			font-size: 12pt;
+		}*/
+}
+
+//_____________________________________________ Headers
+h1, h2, h3, h4, h5, h6 {
+	color: _palette(white);
+	font-family: _font(family-alt);
+	font-weight: _font(weight-bold);
+	margin: _size(element-margin) 0 (_size(element-margin) * 0.5) 0;
+	line-height: 1.2;
+}
+
+h1 {
+	font-size: 3em;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 2.2em;
+}
+
+h3 {
+	font-size: 1.2em;
+}
+
+h4 {
+	font-size: 0.7em;
+}
+
+h5 {
+	font-size: 0.7em;
+}
+
+h6 {
+	font-size: 0.7em;
+}

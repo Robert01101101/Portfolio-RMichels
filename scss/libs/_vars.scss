@@ -1,0 +1,33 @@
+$palette: (
+	blue: 			#228C8C,
+	bg:				#222222,
+	white:			#ffffff,
+	shadow:			rgba(0,0,0,0.5),
+	shadow_light:	rgba(0,0,0,0.1)
+);
+
+$size: (
+	font: 			1rem,
+	fontLrg:		1.5rem,
+	fontXlrg:		4rem,
+	bodyWidth:      680px,
+	btnPadding:		.8rem,
+	element-margin:	2em,
+);
+
+$myWidth: 680px;
+
+$duration: (
+	default:				.4s
+);
+
+$font: (
+	family:					('Lato', sans-serif),
+	family-alt:				('Roboto Condensed', sans-serif),
+	weight:					300,
+	weight-bold:			700,
+	weight-light:			300,
+	kern-heading:			0.1em
+);
+
+/* ========================== ADD LAYERS FOR Z INDEX ====================== */

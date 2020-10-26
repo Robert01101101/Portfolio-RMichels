@@ -1,0 +1,45 @@
+#landingArea {
+    height: 100vh;
+
+    .row {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 100%;
+    }
+
+    .col-50 {
+    	width: 50%;
+    	float: left;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+    }
+
+    #landingText {
+    	font-family: _font(family-alt);
+		font-size: _size(fontXlrg);
+		font-weight: _font(weight-bold);
+		line-height: 150%;
+	}
+}
+
+.txt-rotate > .wrap { 
+	border-right: 0.08em solid #666;
+	padding-right: .5rem;
+}
+
+.fa-chevron-down {
+	position: absolute;
+	bottom: 2rem;
+	left: 50vw;
+	color: _palette(white);
+	transition: _duration(default);
+	padding: 1rem;
+	margin: -1rem;
+
+	&:hover {
+		transform: scale(1.4);
+	}
+}

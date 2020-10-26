@@ -1,0 +1,61 @@
+header {
+  //________________________________________________________ General
+  z-index: 250;
+  grid-column: 1 / 7;
+  grid-row: 1/ 2;
+
+  nav {
+    width: 100%;
+    //background-color: white;
+  }
+
+  ul {
+    margin: 0;
+    padding: .5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  li {
+    display: inline-block;
+    vertical-align: middle;
+    z-index: 250;
+  }
+
+  //________________________________________________________ Cross Icon & Animation
+  //Animated menu icon
+  .menuCont {
+    cursor: pointer;
+  }
+
+  .bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 2px;
+    background-color: _palette(white);
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  /* Rotate first bar */
+  .change .bar1 {
+    /*-webkit-transform: rotate(-45deg) translate(-9px, 6px) ;*/
+    transform: rotate(-45deg) translate(-5px, 4px) ;
+  }
+
+  /* Fade out the second bar */
+  .change .bar2 {
+    opacity: 0;
+  }
+
+  /* Rotate last bar */
+  .change .bar3 {
+    /*-webkit-transform: rotate(45deg) translate(-8px, -8px) ;*/
+    transform: rotate(45deg) translate(-7px, -7px) ;
+  }
+
+  //________________________________________________________ Home Icon
+  i {
+    color: _palette(white);
+  }
+}

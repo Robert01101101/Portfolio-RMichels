@@ -1,0 +1,21 @@
+//CDNs
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+//Libraries
+@import "libs/vars";
+@import "libs/functions";
+
+//Base
+@import "base/page";
+@import "base/type";
+
+//Components
+@import "components/landingArea";
+@import "components/three";
+@import "components/projPanel";
+
+//Layout
+@import "layout/header";
+@import "layout/footer";
+

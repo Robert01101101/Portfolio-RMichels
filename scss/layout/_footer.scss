@@ -1,0 +1,70 @@
+footer {
+	z-index: 10;
+	width: 100%;
+	padding: 1rem 8rem 7rem 8rem;
+	background-color: rgba(0,0,0,0.55);
+	box-sizing: border-box;
+
+
+	grid-column: 3 / 5;
+  	grid-row: 4/ 5;
+
+	* {
+		z-index:11;
+	}
+
+	.getInTouch {
+		display: flex;
+
+
+		h3 {
+			display: flex;
+  			justify-content: flex-end;
+  			align-items: center;
+			text-align: right;
+			flex-grow: 38;
+			padding: 0 4rem 0 0;
+			margin: 0;
+		}
+
+		ul.icons {
+
+			
+			flex-grow: 62;
+			margin: 0;
+			padding: 0;
+			padding-left: 4rem;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			a {
+				color: _palette(white);
+			}
+
+			li {
+
+					display: inline-block;
+					vertical-align: middle;
+					z-index: 250;
+
+					i {
+						transition: .2s;
+
+						&:hover {
+							transform: scale(1.15, 1.15);
+						}
+					}
+				}
+
+			
+		}
+
+
+		
+	}
+
+	
+
+	
+}

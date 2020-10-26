@@ -1,0 +1,26 @@
+#threeModel {
+	z-index: -10;
+	display: block;
+	width: 50vw;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+@mixin fullscreen {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+
+.waves {
+	@include fullscreen;
+	z-index: -1;
+}
+
+.cursor {
+	@include fullscreen;
+	z-index: 1;
+}
