@@ -1,3 +1,6 @@
+///
+///////////////////////////////////////////////////////////////// Footer Particle Waves /////////////////////////////////////
+///
 
 function waves () {
 
@@ -198,6 +201,8 @@ function waves () {
 	}
 
 	console.log(scene);
+
+	updateCamera();
 }
 
 waves();

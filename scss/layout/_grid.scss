@@ -1,0 +1,65 @@
+//_____________________________________________________________________ GRID PARENT ___________________________________________//
+#MainGrid {
+	display: grid;
+
+	grid-template-columns: 1rem calc(100% - 2rem) 1rem; //Margin, Content, Margin
+                                                        //1      2         3      4
+  grid-template-rows: 3.2rem 100vh auto auto; //Header, LandingArea, Body, Footer
+
+  	//----------------------- MEDIA QUERIES -----------------------//
+	@include sm {
+
+    }
+
+    @include md {
+      grid-template-columns: 2rem calc(100% - 4rem) 2rem;
+    }
+
+    @include lg {
+
+    }
+
+    @include xl {
+    	grid-template-columns: 1rem 1fr 2fr 2fr 1fr 1rem; //Margin, Col1/6, Col2/6, Col2/6, Col1/6, Margin
+                                                      //1        2       3       4       5       6       7
+      //grid-template-columns: 1rem 1fr 1fr 4fr 4fr 1fr 1fr 1rem; //Margin, Col1/12, Col1/12, Col4/12, Col4/12, Col1/12, Col1/12, Margin
+                                                               //1        2       3        4        5        6        7       8       9
+    }
+
+    
+    
+}
+
+//_____________________________________________________________________ GRID CHILDREN ___________________________________________//
+//___________________________ Main
+main {
+  	grid-column: 2 / 3;
+  	grid-row: 2 / 4;
+
+  	//----------------------- MEDIA QUERIES -----------------------//
+  	@include xl {
+  		grid-column: 3 / 5;
+    }
+}
+
+//___________________________ Header
+header {
+  z-index: 250;
+  grid-column: 1 / 4;
+  grid-row: 1/ 2;
+
+  @include xl {
+    grid-column: 1 / 7;
+  }
+}
+
+//___________________________ Footer
+footer {
+  z-index: 10;
+  grid-column: 2 / 3;
+  grid-row: 4/ 5;
+
+  @include xl {
+    grid-column: 3 / 5;
+  }
+}

@@ -25,7 +25,7 @@
     <header>
       <nav>
         <ul>
-          <li><a href="projPage.html"><i class="fas fa-home"></i></a></li>
+          <li><a href="#"><i class="fas fa-home"></i></a></li>
           <li><div class="menuCont" onclick="myFunction(this)">
             <div class="bar1"></div>
             <div class="bar2"></div>
@@ -37,73 +37,71 @@
 
     <!-- #################################### CONTENT ###################################### -->
     <main>
-      <a href="#About"><i class="fas fa-chevron-down"></i></a>
-      <canvas id="threeModel"></canvas>
-      <div id="landingArea">
+      <a href="#"><i class="fas fa-chevron-down"></i></a>
+      <div id="projLanding"> <!--___________ Proj Landing ____________-->
         <div class="row">
-          <div class="col-50" id="landingText">
-            <p>Hi, I'm Robert Michels.<br>I <sp id="textDesign">design</sp> and <sp id="textProgram">program</sp><br><span
-       class="txt-rotate"
-       data-period="2000"
-       data-rotate='[ "mobile apps.", "websites.", "games.", "VR experiences."]'>digital media.</span></p>
+          <div class="col-50">
+            <div class="landingText">
+              <h1>Chromakey &<br>Color Matching</h1>
+              <p>A digital image compositing process for automatic creation of high quality composites. Advantages include the ability to deal with any foreground colors, preventing color spill and color grading the subject to match the background.</p>
+              <br>
+              <a href="#">View on Website  &#8594;</a>
+            </div> 
+          </div>
+          <div class="col-50">
+            <img src="img/Chromakey.jpg" class="imgBG">
+            <img src="img/Chromakey.jpg">
           </div>
         </div>
       </div>
 
+      <div id="projMeta"> <!--___________ Proj Meta ____________-->
+        <div class="projMetaItem">
+          <h2>Type</h2>
+          <p>Java App</p>
+        </div>
+        <div class="projMetaItem">
+          <h2>Year</h2>
+          <p>2019</p>
+        </div>
+        <div class="projMetaItem">
+          <h2>Roles</h2>
+          <ul>
+            <li>Programming</li>
+            <li>Research</li>
+          </ul>
+        </div>
+        <div class="projMetaItem">
+          <h2>Team</h2>    
+          <ul>
+            <li>Kaitlyn Andres</li>
+            <li>Robert Michels</li>
+            <li>Akshay Chawla</li>
+            <li>Dawood Shafqat</li>
+            <li>Aditya Mawlankar</li>
+          </ul>
+        </div>
+      </div>
 
-      <section class="sectionText">
-        <h1 id="About">About Me</h1>
-        <p>I am a digital media designer from Vancouver, Canada.<br><br>My strength is my versatility - I create games, websites and apps and code comfortably in dozens of programming languages. In a world, where every day there is a new form of media, I can bridge the gaps between the different platforms. At the same time I aim to design best possible UX using each medium's affordances.<br><br>This versatility of mine is the result of my wide-spread interests and the very interdisciplinary Interactive Arts and Technology (IAT) major I’m pursuing at Simon Fraser University (SFU) right now.</p>
-        <h2>Design Style</h2>
-        <p>In my designs, form always follows function and I aim to have a clear purpose for each feature of a design. My designs are accessible, responsive and clean.</p>
-      </section>
 
-      <section class="sectionMedia">
-        <div class="projRow">
-          <div class="projPanel">
-            <a href="projPage.html">
-              <img src="img/Amae.jpg">
-              <div class="projJScontainer">
-                <h2 class="projLabel">Amae</h2>
-                <h3 class="projMeta">UX / UI Design</h3>
-              </div>
-            </a>
+      <div id="projContent"> <!--___________ Proj Content ____________-->
+
+        <!----- Content / Text ----->
+        <section class="sectionText">
+          <h2>About Me</h2>
+          <p>I am a digital media designer from Vancouver, Canada.<br><br>My strength is my versatility - I create games, websites and apps and code comfortably in dozens of programming languages. In a world, where every day there is a new form of media, I can bridge the gaps between the different platforms. At the same time I aim to design best possible UX using each medium's affordances.<br><br>This versatility of mine is the result of my wide-spread interests and the very interdisciplinary Interactive Arts and Technology (IAT) major I’m pursuing at Simon Fraser University (SFU) right now.</p>
+          <h2>Design Style</h2>
+          <p>In my designs, form always follows function and I aim to have a clear purpose for each feature of a design. My designs are accessible, responsive and clean.</p>
+        </section>
+
+        <!----- Content / Video ----->
+        <div class="auto-resizable-iframe">
+          <div>
+            <iframe src="https://www.youtube.com/embed/6KXxwxTnbgM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
-        <div class="projRow">
-          <div class="projPanel">
-            <a href="projPage.html">
-              <img src="img/Cyberview.jpg">
-              <div class="projJScontainer">
-                <h2 class="projLabel">Cyberview</h2>
-                <h3 class="projMeta">2D Game</h3>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="projRow">
-          <div class="projPanel">
-            <a href="projPage.html">
-              <img src="img/RisingWaters.jpg">
-              <div class="projJScontainer">
-                <h2 class="projLabel">Rising Waters</h2>
-                <h3 class="projMeta">VR Experience</h3>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="projRow">
-          <div class="projPanel">
-            <a href="projPage.html">
-              <img src="img/Chromakey.jpg">
-              <div class="projJScontainer">
-                <h2 class="projLabel">Chromakey &<br>Color Matching</h2>
-                <h3 class="projMeta">Java App</h3>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
+        
+      </div>
     </main>
 
     <!-- #################################### FOOTER ###################################### -->
@@ -161,11 +159,10 @@
   <!--<script src="three/myThreeScript.js"></script>-->
   <!--<script src="three/skull.js"></script>-->
   <script src="js/three/waves.js"></script>
-  <script src="js/three/landingModel.js"></script>
   <!--<script src="js/three/cursor.js"></script>-->
 
   <script src="js/menu.js"></script>
-  <script src="js/textAnim.js"></script>
+  <!--<script src="js/textAnim.js"></script>-->
   <script src="js/projectTile.js"></script>
 
 

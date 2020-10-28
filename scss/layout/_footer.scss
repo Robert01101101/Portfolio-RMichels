@@ -1,13 +1,17 @@
 footer {
-	z-index: 10;
+	//________________________________________________________ General
 	width: 100%;
-	padding: 1rem 8rem 7rem 8rem;
+
+	padding: 1rem;
+	@include md {
+		padding: 1rem 8rem 7rem 8rem;
+	}
+
 	background-color: rgba(0,0,0,0.55);
 	box-sizing: border-box;
 
 
-	grid-column: 3 / 5;
-  	grid-row: 4/ 5;
+	
 
 	* {
 		z-index:11;
@@ -56,15 +60,7 @@ footer {
 						}
 					}
 				}
-
-			
-		}
-
-
-		
+		}	
 	}
 
-	
-
-	
 }

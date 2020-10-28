@@ -1,15 +1,15 @@
 $palette: (
 	blue: 			#228C8C,
 	bg:				#222222,
+	bg_alt:			#444444,
 	white:			#ffffff,
 	shadow:			rgba(0,0,0,0.5),
 	shadow_light:	rgba(0,0,0,0.1)
 );
 
 $size: (
-	font: 			1rem,
-	fontLrg:		1.5rem,
-	fontXlrg:		4rem,
+	textXL:			4rem,
+	textMobileXL:	2em,
 	bodyWidth:      680px,
 	btnPadding:		.8rem,
 	element-margin:	2em,

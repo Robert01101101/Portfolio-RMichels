@@ -1,0 +1,28 @@
+#projContent {
+	margin: 5rem 0;
+
+	.auto-resizable-iframe {
+	  max-width: calc(100% + 2rem);
+	  margin: 0px -1rem;
+
+
+	  @include lg {
+	  	max-width: 100%;
+	  	margin: 0px auto;
+	  }
+	}
+
+	.auto-resizable-iframe > div {
+	  position: relative;
+	  padding-bottom: 75%;
+	  height: 0px;
+	}
+
+	.auto-resizable-iframe iframe {
+	  position: absolute;
+	  top: 0px;
+	  left: 0px;
+	  width: 100%;
+	  height: 100%;
+	}
+}

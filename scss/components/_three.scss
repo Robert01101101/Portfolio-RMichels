@@ -1,11 +1,23 @@
 #threeModel {
 	z-index: -10;
 	display: block;
-	width: 50vw;
-	height: 100vh;
+
+	width: 100vw;
+	height: 80vh;
+
 	position: absolute;
-	top: 0;
+	top: 10%;
 	right: 0;
+	left: 33%;
+
+	@include md {
+		width: 50vw;
+		height: 100vh;
+		left: auto;
+		right: 0;
+		top: 0;
+	}
+	
 }
 
 @mixin fullscreen {

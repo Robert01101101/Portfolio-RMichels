@@ -1,0 +1,55 @@
+#projMeta {
+	background-color: _palette(bg_alt);
+
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+
+	padding: 2rem;
+	margin-top: 3rem;
+
+	//Don't wrap children on small-large screens, wrap on small screens
+	flex-wrap: wrap;
+
+	@include sm {
+		flex-wrap: nowrap;
+	}
+
+	div {
+		flex-basis: 50%;
+
+		@include sm {
+			flex-basis: auto;
+		}
+	}
+
+	h2 {
+		font-size: 1.2rem;
+		font-family: _font(family);
+		font-weight: 300;
+		text-decoration: underline;
+		margin-top: 0;
+	}
+
+	p {
+		font-weight: bold;
+	}
+
+	//Position at the bottom of landing viewport, with negative L / R margins equal the grid margins
+	@include lg {
+		margin: calc(100vh - 3.2rem) calc(calc(17vw + 2px) * -1) 0 calc(calc(17vw + 2px) * -1);
+		padding: 6rem 30%;
+		background-color: _palette(bg_alt);
+	}
+
+	ul {
+		list-style-type: none;
+		padding: 0;
+		margin-bottom: 0;
+
+		li {
+			font-weight: bold;
+		}
+	}
+	
+}

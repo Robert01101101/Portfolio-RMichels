@@ -1,11 +1,18 @@
 .projRow {
 	width: 100%;
-	display: flex;
-	justify-content: flex-end;
 
-	&:nth-child(even) {
-		justify-content: flex-start;
+	//----------------------- MEDIA QUERIES -----------------------//
+	@include lg {
+		display: flex;
+		justify-content: flex-end;
+
+		&:nth-child(even) {
+			justify-content: flex-start;
+		}
 	}
+
+
+	
 
 	&:not(:last-child) {
 		margin-bottom: 10rem; 
@@ -17,12 +24,31 @@
 		padding: 0;
 		z-index: 100;
 
-		h2 {
+		//Mobile only
+		.projJScontainer {
+			width: calc(100% - 2rem);
 			position: absolute;
-			bottom: 0;
-			left: -4rem;
+			margin: 0 1rem;
+
+			@include lg {
+				margin: 0;
+				position: static;
+			}
+		}
+
+		h2.projLabel {
+			font-size: 3em;
+
+			//-- MQ
+			@include lg {
+				position: absolute;
+				bottom: 0;
+				left: 1rem;
+				left: -4rem;
+				font-size: 4em;
+			}
+
 			margin: 0;
-			font-size: 4em;
 			z-index: 150;
 			color: _palette(white); /* TODO: wrap */
 		}
@@ -38,34 +64,63 @@
 			}
 		}
 
-		h2::after {
-			content: "";
-			position: absolute;
-			background-color: _palette(blue);
-			left: -10%;
-			top: -5%;
-			width: 0%;
-			height: 110%;
-			z-index: -1;
-			transition: _duration(default);
-			box-shadow: 5px 5px 20px _palette(shadow);
+		@include lg {
+			h2::after {
+				content: "";
+				position: absolute;
+				background-color: _palette(blue);
+				left: -10%;
+				top: -5%;
+				width: 0%;
+				height: 110%;
+				z-index: -1;
+				transition: _duration(default);
+				box-shadow: 5px 5px 20px _palette(shadow);
+			}
 		}
+		
 
 		img {
-			filter: brightness(80%);
+			filter: brightness(55%);
+
+			@include lg {
+				filter: brightness(70%);
+			}
+
 			transition: _duration(default);
 			box-shadow: 5px 5px 20px _palette(shadow_light);
+
+			max-width: 100%;
+
+			&::after {
+				content: "view more";
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 5rem;
+				height: 5rem;
+			}
 		}
 
 		h3 {
-			position: absolute;
-			left: -3rem;
-			top: 0;
 			margin: 0;
-			transform: rotate(270deg) translate(-100%, 0);
-			transform-origin: 0 0;
+			margin-top: .5rem;
+			margin-left: 3rem;
+			font-weight: normal;
 
-			font-weight: _font(weight-light);
+			//-- MQ
+			@include lg {
+				float: none;
+				position: absolute;
+				left: -3rem;
+				top: 0;
+				margin: 0;
+				transform: rotate(270deg) translate(-100%, 0);
+				transform-origin: 0 0;
+
+				font-weight: _font(weight-light);
+			}
+			
 		}
 	}
 }

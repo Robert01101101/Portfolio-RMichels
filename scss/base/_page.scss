@@ -2,30 +2,25 @@
 html {
 	background-color: _palette(bg);
 	scroll-behavior: smooth;
-}
-
-main, #MainGrid {
-	margin: auto;
+	width: 100%;
 }
 
 #MainGrid {
-	display: grid;
-	grid-template-columns: 1rem 1fr 2fr 2fr 1fr 1rem;
-  	grid-template-rows: auto 100vh auto auto;
+	overflow: hidden;
+}
+
+main, #MainGrid {
+	margin: 0;
 }
 
 main {
-  	grid-column: 2 / 6;
-  	grid-row: 2 / 4;
-
 	.sectionMedia {
-		margin: 25rem 16.66%;
-		/*overflow: hidden;*/
+		margin: 25rem 0;
+		//overflow: hidden;
 		padding: .02px;
 	}
 
 	.sectionText {
-		margin: 0 16.66%;
+		margin: 0 0;
 	}
 }
-

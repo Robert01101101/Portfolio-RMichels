@@ -10,18 +10,28 @@
     }
 
     .col-50 {
-    	width: 50%;
-    	float: left;
+    	@include md {
+			width: 50%;
+    	}
+    	
+
 		display: flex;
 		justify-content: center;
 		align-items: center;
     }
 
     #landingText {
-    	font-family: _font(family-alt);
-		font-size: _size(fontXlrg);
-		font-weight: _font(weight-bold);
-		line-height: 150%;
+		p {
+			font-family: _font(family-alt);
+
+			font-size: _size(textMobileXL);
+			//--MQ
+			@include md {
+				font-size: _size(textXL);
+			}
+			font-weight: _font(weight-bold);
+			line-height: 150%;
+		}
 	}
 }
 
