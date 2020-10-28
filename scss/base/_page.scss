@@ -24,3 +24,58 @@ main {
 		margin: 0 0;
 	}
 }
+
+//////////////////////////////////////////////// TMP
+#tmpVisitorPopUp {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(black, .8);
+	z-index: 500;
+
+	> div {
+		position: fixed;
+		top: calc(50vh - 22rem);
+		left: calc(50vw - 22rem);
+		right: calc(50vw - 22rem);
+		bottom: calc(50vh - 22rem);
+		background-color: rgba(#444, .95);
+
+		padding: 5rem;
+
+		h2 {
+			margin-top: 0;
+		}
+
+		a, button {
+			display: block;
+			color: _palette(white);
+			text-decoration: none;
+			font-weight: bold;
+			margin-top: 1rem;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		button {
+			background-color: transparent;
+			border: none;
+			padding: 0;
+			margin: 0;
+			color: white;
+			text-decoration: none;
+			margin-bottom: 4rem;
+			margin-top: 1rem;
+			cursor: pointer;
+		}
+
+		> div {
+			position: absolute;
+			bottom: 0;
+		}
+	}
+}

@@ -1,14 +1,15 @@
 #projContent {
-	margin: 5rem 0;
+	margin: 8rem 0;
 
+	//____________________________________ YT
 	.auto-resizable-iframe {
 	  max-width: calc(100% + 2rem);
-	  margin: 0px -1rem;
+	  margin: 4rem -1rem 0px -1rem;
 
 
 	  @include lg {
 	  	max-width: 100%;
-	  	margin: 0px auto;
+	  	margin: 8rem auto 0px auto;
 	  }
 	}
 
