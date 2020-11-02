@@ -162,12 +162,18 @@ function waves () {
 
 		requestAnimationFrame( animate );
 
+		//_________________________________________________________________ Not included in orig script, copied from landingModel.js
+		/*
+		if (resizeRendererToDisplaySize(renderer)) {
+	      const canvas = renderer.domElement;
+	      camera.aspect = canvas.clientWidth / canvas.clientHeight;
+	      camera.updateProjectionMatrix();
+	    }
+		*/
 		render();
 	}
 
 	function render() {
-
-
 
 		var positions = particles.geometry.attributes.position.array;
 		var scales = particles.geometry.attributes.scale.array;
@@ -199,6 +205,22 @@ function waves () {
 		count += 0.1;
 
 	}
+
+	//_________________________________________________________________ Not included in orig script, copied from landingModel.js
+	//RESPONSIVE, RESIZE ON SCREEN SIZE CHANGE, ADJUST FOR PPI
+	/*
+	function resizeRendererToDisplaySize(renderer) {
+	    const canvas = renderer.domElement;
+	    const pixelRatio = window.devicePixelRatio;
+	    const width  = canvas.clientWidth  * pixelRatio | 0;
+	    const height = canvas.clientHeight * pixelRatio | 0;
+	    const needResize = canvas.width !== width || canvas.height !== height;
+	    if (needResize) {
+	      renderer.setSize(width, height, false);
+	    }
+	    return needResize;
+	}
+	*/
 
 	console.log(scene);
 

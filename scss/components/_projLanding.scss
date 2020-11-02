@@ -72,6 +72,10 @@
 				width: 150%;
 				height: 150%;
 				filter: blur(100px) brightness(160%);
+
+				&.alt {
+					filter: blur(100px) brightness(50%);
+				}
 			}
 		}
 	}
@@ -86,6 +90,11 @@
 		color: _palette(white);
 		text-decoration: none;
 		font-weight: 700;
+		display: block;
+
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 
 	

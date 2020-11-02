@@ -5,12 +5,12 @@ html {
 	width: 100%;
 }
 
-#MainGrid {
-	overflow: hidden;
-}
-
 main, #MainGrid {
 	margin: 0;
+}
+
+#MainGrid {
+	overflow: hidden;
 }
 
 main {
@@ -30,20 +30,27 @@ main {
 	position: fixed;
 	top: 0;
 	left: 0;
-	right: 0;
-	bottom: 0;
+	width: 100vw;
+	height: 100vh;
 	background-color: rgba(black, .8);
 	z-index: 500;
 
 	> div {
-		position: fixed;
-		top: calc(50vh - 22rem);
-		left: calc(50vw - 22rem);
-		right: calc(50vw - 22rem);
-		bottom: calc(50vh - 22rem);
+		position: absolute;
+		top: 2rem;
+		left: 2rem;
+		right: 2rem;
+		bottom: 2rem;
 		background-color: rgba(#444, .95);
 
-		padding: 5rem;
+		padding: 3rem;
+
+		@include md {
+			top: calc(50vh - 22rem);
+			left: calc(50vw - 22rem);
+			right: calc(50vw - 22rem);
+			bottom: calc(50vh - 22rem);
+		}
 
 		h2 {
 			margin-top: 0;

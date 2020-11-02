@@ -14,7 +14,7 @@ function clamp (num, min, max)   {
 
 //_____________________________________________________________________________________________________________________________________
 //find window Y limit
-var scrollLimit = window.scrollMaxY || (document.documentElement.scrollHeight - document.documentElement.clientHeight)
+var scrollLimit = window.scrollMaxY || (document.documentElement.scrollHeight - document.documentElement.clientHeight);
 console.log("limit: " + scrollLimit);
 
 const mdBreakPoint = 768;
