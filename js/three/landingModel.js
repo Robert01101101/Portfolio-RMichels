@@ -13,11 +13,19 @@ var renderer = new THREE.WebGLRenderer({canvas, alpha:true, antialias:true});
 var mesh;
 
 var loader = new THREE.GLTFLoader();
-loader.load( '/assets/models/meOrig.glb', handle_load);
+loader.load( '/assets/models/me_v2.glb', handle_load);
 
 function handle_load(gltf){
-	mesh = gltf.scene.children[0];
-	scene.add(mesh);
+  mesh = gltf.scene.children[0];
+
+  //assign material
+  /*mesh.material = new THREE.MeshStandardMaterial({
+    color: 0xFF0000,
+    metalness: 0, 
+    roughness: 0.5
+  });*/
+  
+  scene.add(mesh);
 
   handle_particles();
 }
@@ -66,7 +74,7 @@ function handle_particles(){
   //apply transforms
   particles.scale.copy(mesh.scale);
   particles.rotation.copy(mesh.rotation);
-
+  particles.position.copy(mesh.position);
 
   scene.add( particles );
 }
@@ -74,7 +82,7 @@ function handle_particles(){
 
 //_____________________________________________________________________ DEFINE CAMERA
 var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
-camera.position.z = 4.5;
+camera.position.z = 11;
 camera.position.y = 4;
 camera.rotation.x = -Math.PI / 5;
 
@@ -111,7 +119,7 @@ function resizeRendererToDisplaySize(renderer) {
 var mouseX = 0, mouseY = 0;
 
 var windowHalfX = (window.innerWidth / 4)*3;
-var windowHalfY = window.innerHeight / 2;
+var windowHalfY = window.innerHeight / 4;
 document.addEventListener( 'mousemove', onDocumentMouseMove, false );
 
 function onDocumentMouseMove( event ) {

@@ -94,7 +94,7 @@ function waves () {
 
 	//_________________________________________ on Scroll
 	function updateCamera(ev) {
-	    camera.position.y = (scrollLimit + 1600 - window.scrollY)*.5;
+	    camera.position.y = (scrollLimit - window.scrollY) + 800;
 	    //console.log("scroll: " + window.scrollY);
 
 	    var newCol = mapVal(window.scrollY, 0, scrollLimit, 0.13, .35);
