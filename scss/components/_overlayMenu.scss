@@ -1,0 +1,54 @@
+#OverlayMenu {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(#666,.5);
+    overflow: hidden;
+    user-select: none;
+
+    transition: 1s;
+
+    ul {
+        flex-direction: column;
+
+        a{
+            color: _palette(white);
+            font-weight: _font(weight-bold);
+
+            &:not(:first-of-type) {
+                margin-top: 1rem;
+            }
+        }
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &.hidden {
+        display: none;
+        width: 1rem;
+    }
+
+    &:not(.hidden) {
+        width: 20rem;
+    }
+}
+
+#Content {
+    transition: 1s;
+
+    /*
+    backface-visibility: hidden;
+    transform: translateZ(0) scale(1.0, 1.0);
+    transform: translateZ(0);*/
+
+    &.blur {
+        //Add Blur
+        //filter: blur(2px);
+
+    }
+}

@@ -4,13 +4,15 @@ header {
   nav {
     width: 100%;
     //background-color: white;
+    position: fixed;
+    top: 0;
   }
 
   ul {
     margin: 0;
     padding: .5rem 1rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
   }
 
