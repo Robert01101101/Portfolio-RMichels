@@ -11,7 +11,7 @@ renderer.shadowMap.type = THREE.PCFShadowMap;
 var mesh;
 
 var loader = new THREE.GLTFLoader();
-loader.load( 'http://www.sfu.ca/~rmichels/3Dmodels/Joystick.glb', handle_load);
+loader.load( 'http://www.sfu.ca/~rmichels/3Dassets/models/Joystick.glb', handle_load);
 
 function handle_load(gltf){
 	mesh = gltf.scene.children[0];

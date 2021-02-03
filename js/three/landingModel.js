@@ -13,7 +13,7 @@ var renderer = new THREE.WebGLRenderer({canvas, alpha:true, antialias:true});
 var mesh;
 
 var loader = new THREE.GLTFLoader();
-loader.load( '/models/meOrig.glb', handle_load);
+loader.load( '/assets/models/meOrig.glb', handle_load);
 
 function handle_load(gltf){
 	mesh = gltf.scene.children[0];
