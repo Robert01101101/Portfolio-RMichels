@@ -1,3 +1,10 @@
+<?php
+
+//Set cookie
+setcookie("returningVisitor", "true", time()+365*24*60*60);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -75,6 +82,40 @@
           </div>
         </div>
       </div>
+
+      <?php
+
+        //check if filter set
+        if(isset($_GET['filter']))
+        {
+
+            // Filter is set
+            echo "filter is set";
+            echo "<br>";
+
+            $filter = $_GET['filter'];
+            echo $filter;
+
+            echo "<br>";
+
+            switch ($filter) {
+              case 'front-end':
+                  echo "switch: front-end";
+                  break;
+              case 'vr':
+                  echo "switch: vr";
+                  break;
+              case 'game-dev':
+                  echo "switch: game-dev";
+                  break;
+              default:
+                  echo "Error: faulty URL";
+                  break;
+            }
+        }
+
+      ?>
+
 
       <section class="sectionMedia" id="MyWork">
         <div class="projRow">
@@ -163,23 +204,27 @@
     </footer>
   </div>
 
-  <div id="tmpVisitorPopUp">
-    <div>
-      <h2>Hello There!</h2>
-      <p>This website is in development &#38; is expected to be finished by Mid-February 2020.</p>
-      <p>If you are a stranger who just happened to stumble upon this, feel free to explore, but be warned - things aren't quite done yet.</p>
-      <p>If you would like to give me feedback, that would be much appreciated!</p>
+  <?php if(!isset($_COOKIE["returningVisitor"])) : ?>
+
+    <div id="tmpVisitorPopUp">
       <div>
-        <a href="https://forms.gle/kWRg97XYz8k5jd8u7" target="_blank" onclick="closePopUp()">Open survey in another tab &#8594;</a>
-        <button onclick="closePopUp()">Close &#38; explore site &#8594;</button>
-      </div>   
+        <h2>Hello There!</h2>
+        <p>This website is in development &#38; is expected to be finished by Mid-February 2020.</p>
+        <p>If you are a stranger who just happened to stumble upon this, feel free to explore, but be warned - things aren't quite done yet.</p>
+        <p>If you would like to give me feedback, that would be much appreciated!</p>
+        <div>
+          <a href="https://forms.gle/kWRg97XYz8k5jd8u7" target="_blank" onclick="closePopUp()">Open survey in another tab &#8594;</a>
+          <button onclick="closePopUp()">Close &#38; explore site &#8594;</button>
+        </div>   
+      </div>
     </div>
-  </div>
-  <script>
-  function closePopUp() {
-    document.getElementById("tmpVisitorPopUp").style.display = "none";
-  }
-  </script>
+    <script>
+    function closePopUp() {
+      document.getElementById("tmpVisitorPopUp").style.display = "none";
+    }
+    </script>
+
+  <?php endif; ?>
 
   <!--############### JavaScript Loading Section ###############-->
   <script type="x-shader/x-vertex" id="vertexshader">
