@@ -1,7 +1,7 @@
 <?php
 
 //Set cookie
-setcookie("returningVisitor", "true", time()+365*24*60*60);
+setcookie("returningVisitor", "true");
 
 ?>
 
@@ -50,7 +50,7 @@ setcookie("returningVisitor", "true", time()+365*24*60*60);
     <header>
       <nav>
         <ul>
-          <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+          <li><a href="index"><i class="fas fa-home"></i></a></li>
           <li><div class="menuCont" onclick="myFunction(this)">
             <div class="bar1"></div>
             <div class="bar2"></div>
@@ -59,10 +59,10 @@ setcookie("returningVisitor", "true", time()+365*24*60*60);
         </ul>
         <div id="OverlayMenu">
           <ul>
-            <a href="index.html"><li>Portfolio</li></a>
-            <a href="index.html/#MyWork"><li>My Work</li></a>
-            <a href="index.html/#About"><li>About</li></a>
-            <a href="index.html/#Contact"><li>Contact</li></a>
+            <a href="index"><li>Portfolio</li></a>
+            <a href="index#MyWork"><li>My Work</li></a>
+            <a href="index#About"><li>About</li></a>
+            <a href="index#Contact"><li>Contact</li></a>
           </ul>
         </div>
       </nav>
