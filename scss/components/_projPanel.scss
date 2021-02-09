@@ -6,9 +6,12 @@
 		display: flex;
 		justify-content: flex-end;
 
-		&:nth-child(even) {
-			justify-content: flex-start;
+		&--visible{
+			&:nth-of-type(even) {
+				justify-content: flex-start;
+			}
 		}
+
 	}
 
 
@@ -16,6 +19,10 @@
 
 	&:not(:last-child) {
 		margin-bottom: 10rem; 
+	}
+
+	&:not(.projRow--visible) {
+		display: none;
 	}
 
 	.projPanel {

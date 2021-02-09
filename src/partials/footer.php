@@ -82,12 +82,19 @@
   <!--<script src="three/skull.js"></script>-->
 
   <script src="js/three/waves.js"></script>
-  <script src="js/three/landingModel.js"></script>
 
-  <!--<script src="js/three/cursor.js"></script>-->
+  <?php if(isset($index)) : ?>
 
-  <script src="js/menu.js"></script>
-  <script src="js/textAnim.js"></script>
+    <script src="js/three/landingModel.js"></script>
+    <script src="js/textAnim.js"></script>
+
+  <?php endif; ?>
+  <?php if(isset($projects)) : ?>
+
+    <script src="js/projectFilter.js"></script>
+
+  <?php endif; ?>
+  
   <script src="js/projectTile.js"></script>
 
 

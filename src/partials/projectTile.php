@@ -1,10 +1,14 @@
 <?php
 
-//TODO: integrate object loading
+if (isset($roles)){
+  $roleString = "";
+  foreach ($roles as $role) { $roleString .= $role->getSlug().","; }
+  $roleString = substr($roleString, 0, -1);
+}
 
 ?>
 
-<div class="projRow">
+<div class="projRow projRow--visible" <?php if(isset($roles)) : ?>data-js='<?= $roleString; ?>'<?php endif; ?>>
   <div class="projPanel">
     <a href="<?= $slug; ?>">
       <img src="assets/img/<?= $slug; ?>.jpg">

@@ -189,7 +189,8 @@ class Project
         while($row = mysqli_fetch_array($result))
         {
             $role = (new Role($row['role_slug']))
-                            ->setName($row['role_name']);
+                            ->setName($row['role_name'])
+                            ->setSlug($row['role_slug']);
 
             $output->addRole($role);
         }
@@ -260,7 +261,7 @@ class Project
         return $output;
     }
 
-    public static function getAllProjects() : array {
+    public static function getProjects(int $count = 0) : array {
 
         // 1. Set up MySQLi connection
         $DBHOST = "localhost";
@@ -278,12 +279,22 @@ class Project
         $query = "SELECT project_slug FROM project";
         $result = mysqli_query($connection, $query);
 
+        if ($count != 0){
+            $i = 0;
 
-        while($row = mysqli_fetch_array($result))
-        {
-            $output[] = Project::buildProjectFromSlug($row['project_slug']);
-            if (strcmp($row['project_slug'], 'harbingersOfDeath') === 0) break;
+            while($row = mysqli_fetch_array($result))
+            {
+                if ($i>=$count) break;
+                $output[] = Project::buildProjectFromSlug($row['project_slug']);
+                $i++;
+            }
+        } else {
+            while($row = mysqli_fetch_array($result))
+            {
+                $output[] = Project::buildProjectFromSlug($row['project_slug']);
+            }
         }
+        
 
         // 4. Release returned data
         mysqli_free_result($result);

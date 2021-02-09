@@ -1,0 +1,39 @@
+.projectsFilter {
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    margin: 0 -.5rem;
+    margin-bottom: 5rem;
+
+
+    .filterBtn {
+        color: _palette(white);
+        background-color: _palette(bg);
+        text-decoration: none;
+        padding: .5rem;
+        display: inline-block;
+        border: 1px solid _palette(white);;
+        border-radius: .5rem;
+        font-size: _size(textS);
+
+        margin: .5rem;
+    
+        transition: _duration(default);
+
+        cursor: pointer;
+    
+        &:hover {
+            background-color: _palette(white);
+            color: _palette(bg);
+        }
+
+        &--selected{
+            background-color: _palette(white);
+            color: _palette(bg);
+        }
+    }
+
+}
+

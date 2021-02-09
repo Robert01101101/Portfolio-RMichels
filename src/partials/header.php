@@ -70,5 +70,7 @@ setcookie("returningVisitor", "true");
       </nav>
     </header>
 
+    <script src="js/menu.js"></script>
+
     <!-- #################################### CONTENT ###################################### -->
     <main id="Content">

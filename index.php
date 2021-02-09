@@ -72,7 +72,7 @@ Partial::build('header');
 
         //echo count($projects);
     } else {
-      $projects = Project::getAllProjects();
+      $projects = Project::getProjects(5);
     }
 
     foreach ($projects as $project) {
@@ -81,61 +81,15 @@ Partial::build('header');
 
   ?>
 
-  <!--<div class="projRow">
-    <div class="projPanel">
-      <a href="amae">
-        <img src="assets/img/Amae.jpg">
-        <div class="projJScontainer">
-          <h2 class="projLabel">Amae</h2>
-          <h3 class="projMeta">UX / UI Design</h3>
-        </div>
-      </a>
-    </div>
-  </div>
-  <div class="projRow">
-    <div class="projPanel">
-      <a href="cyberview">
-        <img src="assets/img/Cyberview.jpg">
-        <div class="projJScontainer">
-          <h2 class="projLabel">Cyberview</h2>
-          <h3 class="projMeta">2D Game</h3>
-        </div>
-      </a>
-    </div>
-  </div>
-  <div class="projRow">
-    <div class="projPanel">
-      <a href="risingWaters">
-        <img src="assets/img/RisingWaters.jpg">
-        <div class="projJScontainer">
-          <h2 class="projLabel">Rising Waters</h2>
-          <h3 class="projMeta">VR Experience</h3>
-        </div>
-      </a>
-    </div>
-  </div>
-  <div class="projRow">
-    <div class="projPanel">
-      <a href="chromakey">
-        <img src="assets/img/Chromakey.jpg">
-        <div class="projJScontainer">
-          <h2 class="projLabel">Chromakey &<br>Color Matching</h2>
-          <h3 class="projMeta">Java App</h3>
-        </div>
-      </a>
-    </div>
-  </div>
-  <div class="projRow">
-    <div class="projPanel">
-      <a href="harbingersofdeath">
-        <img src="assets/img/HarbingersOfDeath.jpg">
-        <div class="projJScontainer">
-          <h2 class="projLabel">Harbingers Of Death</h2>
-          <h3 class="projMeta">Full-stack Website (LAMP)</h3>
-        </div>
-      </a>
-    </div>
-  </div>-->
+<!-- source: https://codepen.io/fliseno1k/pen/WNboLBy -->
+<div class="seeMoreBtn">
+  <a href="projects">
+    <span>See More</span>
+    <div class="liquid"></div>
+  </a>
+</div>
+
+
 </section>
 
 <section class="sectionText">
@@ -149,6 +103,6 @@ Partial::build('header');
 
 <?php
 
-Partial::build('footer');
+Partial::build('footer', ["index" => TRUE]);
 
 ?>
