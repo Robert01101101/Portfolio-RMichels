@@ -34,45 +34,32 @@ Partial::build('header');
     {
 
         // Filter is set
-        //echo "filter is set";
-        //echo "<br>";
 
         $filter = $_GET['filter'];
         $filters [] = $filter;
 
         if (strpos($filter, ',') !== false) { 
           $filters = explode(',', $filter);
-          //print_r($filters);
           
         }
 
-        
-
-        //echo "<br>";
-
-        /*
-        switch ($filter) {
-          case 'front-end':
-              echo "switch: front-end";
-              break;
-          case 'vr':
-              echo "switch: vr";
-              break;
-          case 'game-dev':
-              echo "switch: game-dev";
-              break;
-          default:
-              echo "Error: faulty URL";
-              break;
-        }*/
-
-        
-
         $projects = Project::getProjectsByFilter($filters);
 
-        //echo count($projects);
+        //if error in URL, get default
+        if (isset($projects)) {
+          if (empty($projects)) {
+            $projects = Project::getProjects(5);
+          } else {
+            //Set cookie
+            setcookie("visitorFilter", $filter);
+          }
+        }
+
     } else {
       $projects = Project::getProjects(5);
+
+      //Delete cookie if no filter set (in case user manually typed in vanilla url)
+      setcookie("visitorFilter", "", time() - 3600);
     }
 
     foreach ($projects as $project) {

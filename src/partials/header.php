@@ -52,7 +52,7 @@ setcookie("returningVisitor", "true");
     <header>
       <nav>
         <ul>
-          <li><a href="index"><i class="fas fa-home"></i></a></li>
+          <li><a href="/<?php if(isset($_COOKIE['visitorFilter'])){ echo "?filter=".$_COOKIE['visitorFilter']; } ?>"><i class="fas fa-home"></i></a></li>
           <li><div class="menuCont" onclick="myFunction(this)">
             <div class="bar1"></div>
             <div class="bar2"></div>
@@ -61,7 +61,7 @@ setcookie("returningVisitor", "true");
         </ul>
         <div id="OverlayMenu">
           <ul>
-            <a href="index"><li>Portfolio</li></a>
+          <a href="/<?php if(isset($_COOKIE['visitorFilter'])){ echo "?filter=".$_COOKIE['visitorFilter']; } ?>"><li>Portfolio</li></a>
             <a href="index#MyWork"><li>My Work</li></a>
             <a href="index#About"><li>About</li></a>
             <a href="index#Contact"><li>Contact</li></a>

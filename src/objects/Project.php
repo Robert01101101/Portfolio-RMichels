@@ -246,11 +246,12 @@ class Project
         {
             $slugs[] = $row['project_slug'];
         }
-        $slugs = array_values(array_unique($slugs));
-
-        foreach ($slugs as $slug) {
-            $output[] = Project::buildProjectFromSlug($slug);
-        }
+        if (isset ($slugs)){
+            $slugs = array_values(array_unique($slugs));
+            foreach ($slugs as $slug) {
+                $output[] = Project::buildProjectFromSlug($slug);
+            }
+        } 
 
         // 4. Release returned data
         mysqli_free_result($result);

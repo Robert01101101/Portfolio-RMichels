@@ -4,10 +4,83 @@
     flex-direction: row;
     flex-wrap: wrap;
     
-    margin: 0 -.5rem;
-    margin-bottom: 5rem;
+    margin: 4rem 0 4rem 0;
 
+    > div {
+        //header row (h1 & toggle)
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        
+        margin: 0 -.5rem;
+        margin-bottom: 5rem;
 
+        width: 100%;
+
+        h1 {
+            margin: 0;
+        }
+
+        :last-child {
+            align-self: center;
+            margin-left: auto;
+            margin-top: auto;
+        }
+
+        ////////////////////////toggle
+        .onoffswitch {
+            margin: auto .5rem 0 auto;
+            position: relative; width: 5rem; 
+            -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+        }
+        .onoffswitch-checkbox {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+        .onoffswitch-label {
+            display: block; overflow: hidden; cursor: pointer;
+            border: 1px solid _palette(white); border-radius: .5rem;
+        }
+        .onoffswitch-inner {
+            display: block; width: 200%; margin-left: -100%; height: .8rem;
+            transition: margin 0.3s ease-in 0s;
+        }
+        .onoffswitch-inner:before, .onoffswitch-inner:after {
+            display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+            color: white; font-size: _size(textS); font-family: _font(family); font-weight: _font(weight-medium);
+            box-sizing: border-box;
+        }
+        .onoffswitch-inner:before {
+            content: "And";
+            padding-left: 10px;
+            background-color: _palette(bg); color:_palette(white);
+        }
+        .onoffswitch-inner:after {
+            content: "Or";
+            padding-right: 10px;
+            background-color: _palette(bg); color: _palette(white);
+            text-align: right;
+            padding-right: 1rem; //edit
+        }
+        .onoffswitch-switch {
+            display: block; width: 35px; margin: -2.5px;
+            background: #FFFFFF;
+            position: absolute; top: 0; bottom: 0;
+            right: 3.1rem;
+            border: 1px solid _palette(white); border-radius: .5rem;
+            transition: all 0.3s ease-in 0s; 
+        }
+        .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+            margin-left: 0;
+        }
+        .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+            right: 0px; 
+        }
+    }
+
+    //Filter Button
     .filterBtn {
         color: _palette(white);
         background-color: _palette(bg);
@@ -34,6 +107,7 @@
             color: _palette(bg);
         }
     }
+
 
 }
 

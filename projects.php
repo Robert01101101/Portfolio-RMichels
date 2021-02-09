@@ -14,12 +14,22 @@ $projects = Project::getProjects();
 
 <section  id="Projects">
 
-    <h1>Filter Projects (<span id="projectCount"><?= count($projects) ?></span>)</h1>
+    
 
     <div class="projectsFilter">
+
+        <div>
+          <h1>Filter Projects (<span id="projectCount"><?= count($projects) ?></span>)</h1>
+          <div class="onoffswitch">
+              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="and_or_switch" tabindex="0">
+              <label class="onoffswitch-label" for="and_or_switch">
+                  <span class="onoffswitch-inner"></span>
+                  <span class="onoffswitch-switch"></span>
+              </label>
+          </div>
+        </div>
         
         <?php
-
             $roles = Role::getAllRoles();
 
             foreach ($roles as $role) {
@@ -27,9 +37,10 @@ $projects = Project::getProjects();
                 echo $role->getName();
                 echo "</button>";
             }
-
         ?>
     </div>
+
+    
 
     <?php
 

@@ -1,3 +1,9 @@
+
+//store all active filters (for multiple filters)
+var activeFilters = new Array();
+var andActive = false;
+
+
 //
 //Find all Filter Buttons, send events on toggle with data attached (slug, toggle), sort projects after click
 //
@@ -10,9 +16,22 @@ document.querySelectorAll('.filterBtn').forEach(item => {
       //toggle button style
       item.classList.toggle("filterBtn--selected");
 
+      //toggle filter state
       toggle = !toggle;
-      
-      //toggle project visibility
+      if (toggle) {
+        //add item to array
+        activeFilters.push(slug)
+      } else {
+        //remove item from array
+        const index = activeFilters.indexOf(slug);
+        if (index > -1) {
+          activeFilters.splice(index, 1);
+        }
+      }
+
+      console.log(activeFilters.length);
+
+      //update projects
       document.dispatchEvent(new CustomEvent('updateProject', { bubbles: true, detail: { slug: () => slug, toggle: () => toggle } }))
 
       setTimeout(() => { sortProjects(); }, 10);
@@ -38,28 +57,43 @@ projRows.forEach(item => {
   counter++;
 
   addEventListener('updateProject', function (e) { //-----toggle project tile on event
-    if (!roles.includes(e.detail.slug())){
-      //matches
-      item.classList.toggle("projRow--visible");
-      if (e.detail.toggle()) {
-        hiddenDiv.appendChild(item);
-      } else {
-        visibleDiv.appendChild(item);
-      }
-      
-      //console.log(e.detail.toggle());
-    } /*else {
-      
 
-      item.style.order=position;
-    }*/
+    //check whether any of the active filters match
+    var active = false;
+    var missedHit = false;
+    if (activeFilters.length > 0){
+      activeFilters.forEach(element => {
+        if (roles.includes(element)) {
+          active = true;
+        } else if (andActive){
+          //for "and" case
+          missedHit = true;
+        }
+      });
+    } else {
+      active = true;
+    }
+    //for "and" case
+    if (missedHit) active = false;
+
+    if (active){ //if (!roles.includes(e.detail.slug())){
+      //show
+      if (item.classList.contains("projRow--hidden")) item.classList.remove("projRow--hidden");
+      visibleDiv.appendChild(item);
+
+    } else {
+      //hide
+      if (!item.classList.contains("projRow--hidden")) item.classList.add("projRow--hidden");
+      hiddenDiv.appendChild(item);
+
+    }
   });
 })
 
 
 const projectCount = document.getElementById('projectCount');
 //
-//dort projects manually to ensure the order is the same
+//sort projects manually to ensure the order is the same
 //
 function sortProjects() {
 
@@ -83,3 +117,21 @@ function sortProjects() {
     visibleDiv.appendChild(itemsArr[i]);
   }
 }
+
+
+
+//
+// Handle Checkbox
+//
+var checkbox = document.getElementById('and_or_switch');
+
+checkbox.addEventListener('change', function() {
+  andActive = this.checked;
+
+  console.log(andActive);
+
+  //update projects
+  document.dispatchEvent(new CustomEvent('updateProject', { bubbles: true, detail: { slug: () => slug, toggle: () => toggle } }))
+
+  setTimeout(() => { sortProjects(); }, 10);
+});

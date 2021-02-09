@@ -21,7 +21,7 @@
 		margin-bottom: 10rem; 
 	}
 
-	&:not(.projRow--visible) {
+	&--hidden {
 		display: none;
 	}
 
