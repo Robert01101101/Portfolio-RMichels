@@ -1,59 +1,16 @@
 <?php
 
 require "src/Partial.php";
-
-// start session so that we can store logged in cookie
-// session_start();
+require "src/objects/Project.php";
 
 Partial::build('header');
 
+$project = Project::buildProjectFromSlug('projPage');
+
+Partial::build('projectPageLanding', ["project" => $project]);
+Partial::build('projectPageMeta', ["project" => $project]);
+
 ?>
-
-<a href="#"><i class="fas fa-chevron-down"></i></a>
-<div id="projLanding"> <!--___________ Proj Landing ____________-->
-  <div class="row">
-    <div class="col-50">
-      <div class="landingText">
-        <h1>Chromakey &<br>Color Matching</h1>
-        <p>A digital image compositing process for automatic creation of high quality composites. Advantages include the ability to deal with any foreground colors, preventing color spill and color grading the subject to match the background.</p>
-        <br>
-        <a href="#">View on Website  &#8594;</a>
-      </div> 
-    </div>
-    <div class="col-50">
-      <img src="assets/img/Chromakey.jpg" class="imgBG">
-      <img src="assets/img/Chromakey.jpg">
-    </div>
-  </div>
-</div>
-
-<div id="projMeta"> <!--___________ Proj Meta ____________-->
-  <div class="projMetaItem">
-    <h2>Type</h2>
-    <p>Java App</p>
-  </div>
-  <div class="projMetaItem">
-    <h2>Year</h2>
-    <p>2019</p>
-  </div>
-  <div class="projMetaItem">
-    <h2>Roles</h2>
-    <ul>
-      <li>Programming</li>
-      <li>Research</li>
-    </ul>
-  </div>
-  <div class="projMetaItem">
-    <h2>Team</h2>    
-    <ul>
-      <li>Kaitlyn Andres</li>
-      <li>Robert Michels</li>
-      <li>Akshay Chawla</li>
-      <li>Dawood Shafqat</li>
-      <li>Aditya Mawlankar</li>
-    </ul>
-  </div>
-</div>
 
 
 <div id="projContent"> <!--___________ Proj Content ____________-->

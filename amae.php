@@ -3,74 +3,14 @@
 require "src/Partial.php";
 require "src/objects/Project.php";
 
-// start session so that we can store logged in cookie
-// session_start();
-
 Partial::build('header');
 
 $project = Project::buildProjectFromSlug('amae');
 
+Partial::build('projectPageLanding', ["project" => $project]);
+Partial::build('projectPageMeta', ["project" => $project]);
+
 ?>
-
-<a href="#"><i class="fas fa-chevron-down"></i></a>
-<div id="projLanding"> <!--___________ Proj Landing ____________-->
-  <div class="row">
-    <div class="col-50">
-      <div class="landingText">
-        <h1><?php echo $project->getName() ?></h1>
-        <p>Amae is a utility app for busy parents. Amae helps parents to manage their time, learn about parenting and get help easily and quickly.</p>
-        <br>
-        <a href="http://www.sfu.ca/~rmichels/Amae/" target="_blank">View on Website  &#8594;</a>
-      </div> 
-    </div>
-    <div class="col-50">
-      <img src="assets/img/Amae.jpg" class="imgBG alt">
-      <img src="assets/img/Amae.jpg">
-    </div>
-  </div>
-</div>
-
-<div id="projMeta"> <!--___________ Proj Meta ____________-->
-  <div class="projMetaItem">
-    <h2>Type</h2>
-    <p><?php echo $project->getType() ?></p>
-  </div>
-  <div class="projMetaItem">
-    <h2>Year</h2>
-    <p><?php echo $project->getYear() ?></p>
-  </div>
-  <div class="projMetaItem">
-    <h2>Roles</h2>
-    <ul>
-
-      <?php 
-
-        $roles = $project->getRoles();
-        foreach ($roles as $role) {
-            echo "<li>".$role->getName()."</li>";
-        }
-
-      ?>
-
-    </ul>
-  </div>
-  <div class="projMetaItem">
-    <h2>Team</h2>    
-    <ul>
-      
-      <?php 
-
-        $teammembers = $project->getTeammembers();
-
-        foreach ($teammembers as $teammember) {
-            echo "<li>".$teammember."</li>";
-        }
-
-      ?>
-
-    </ul>
-  </div>
-</div>
 
 
 <div id="projContent"> <!--___________ Proj Content ____________-->

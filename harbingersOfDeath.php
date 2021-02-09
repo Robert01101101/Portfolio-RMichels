@@ -1,57 +1,16 @@
 <?php
 
 require "src/Partial.php";
-
-// start session so that we can store logged in cookie
-// session_start();
+require "src/objects/Project.php";
 
 Partial::build('header');
 
+$project = Project::buildProjectFromSlug('harbingersOfDeath');
+
+Partial::build('projectPageLanding', ["project" => $project]);
+Partial::build('projectPageMeta', ["project" => $project]);
+
 ?>
-
-<a href="#"><i class="fas fa-chevron-down"></i></a>
-<div id="projLanding"> <!--___________ Proj Landing ____________-->
-  <div class="row">
-    <div class="col-50">
-      <div class="landingText">
-        <h1>Harbingers Of Death</h1>
-        <p>‘Are you going to die?’ compiles historic superstitions about death. This project satirizes present-day conspiracy theories, by presenting now-defunct superstitions as if they are real.</p>
-        <br>
-        <a href="http://harbingersofdeath.rmichels.com/" target="_blank">Visit Website  &#8594;</a>
-
-      </div> 
-    </div>
-    <div class="col-50">
-      <img src="assets/img/HarbingersOfDeath.jpg" class="imgBG">
-      <img src="assets/img/HarbingersOfDeath.jpg">
-    </div>
-  </div>
-</div>
-
-<div id="projMeta"> <!--___________ Proj Meta ____________-->
-  <div class="projMetaItem">
-    <h2>Type</h2>
-    <p>Full-stack Website (LAMP)</p>
-  </div>
-  <div class="projMetaItem">
-    <h2>Year</h2>
-    <p>2020</p>
-  </div>
-  <div class="projMetaItem">
-    <h2>Roles</h2>
-    <ul>
-      <li>Front-End Developer</li>
-      <li>Back-End Developer</li>
-    </ul>
-  </div>
-  <div class="projMetaItem">
-    <h2>Team</h2>    
-    <ul>
-      <li>Samuel Barnett</li>
-      <li>Robert Michels</li>
-    </ul>
-  </div>
-</div>
 
 
 <div id="projContent"> <!--___________ Proj Content ____________-->

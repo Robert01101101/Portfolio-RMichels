@@ -1,58 +1,16 @@
 <?php
 
 require "src/Partial.php";
-
-// start session so that we can store logged in cookie
-// session_start();
+require "src/objects/Project.php";
 
 Partial::build('header');
 
+$project = Project::buildProjectFromSlug('chromakeyAndColorMatching');
+
+Partial::build('projectPageLanding', ["project" => $project]);
+Partial::build('projectPageMeta', ["project" => $project]);
+
 ?>
-
-<a href="#"><i class="fas fa-chevron-down"></i></a>
-<div id="projLanding"> <!--___________ Proj Landing ____________-->
-  <div class="row">
-    <div class="col-50">
-      <div class="landingText">
-        <h1>Chromakey &<br>Color Matching</h1>
-        <p>A digital image compositing process for automatic creation of high quality composites. Advantages include the ability to deal with any foreground colors, preventing color spill and color grading the subject to match the background.</p>
-        <br>
-        <a href="https://www.youtube.com/watch?v=6KXxwxTnbgM" target="_blank">View Project Video  &#8594;</a>
-
-      </div> 
-    </div>
-    <div class="col-50">
-      <img src="assets/img/Chromakey.jpg" class="imgBG">
-      <img src="assets/img/Chromakey.jpg">
-    </div>
-  </div>
-</div>
-
-<div id="projMeta"> <!--___________ Proj Meta ____________-->
-  <div class="projMetaItem">
-    <h2>Type</h2>
-    <p>Java App</p>
-  </div>
-  <div class="projMetaItem">
-    <h2>Year</h2>
-    <p>2019</p>
-  </div>
-  <div class="projMetaItem">
-    <h2>Roles</h2>
-    <ul>
-      <li>Project Manager</li>
-      <li>Java Developer</li>
-    </ul>
-  </div>
-  <div class="projMetaItem">
-    <h2>Team</h2>    
-    <ul>
-      <li>Robert Michels</li>
-      <li>Bianca Pricop</li>
-    </ul>
-  </div>
-</div>
-
 
 <div id="projContent"> <!--___________ Proj Content ____________-->
 
@@ -65,12 +23,7 @@ Partial::build('header');
     <p>Proin molestie a mi vel laoreet. Praesent sed commodo mauris, at malesuada leo. Nullam condimentum fermentum sem. Nullam enim libero, mattis in neque nec, consectetur dictum sem. Sed porta venenatis diam, ut maximus dui tristique rhoncus.</p>
   </section>
 
-  <!----- Content / Video ----->
-  <div class="auto-resizable-iframe">
-    <div>
-      <iframe src="https://www.youtube.com/embed/6KXxwxTnbgM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-  </div>
+  <?php Partial::build('projectPageVideo', ["link" => "https://www.youtube.com/embed/6KXxwxTnbgM"]); ?>
   
 </div>
 

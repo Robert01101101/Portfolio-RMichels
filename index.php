@@ -76,7 +76,7 @@ Partial::build('header');
     }
 
     foreach ($projects as $project) {
-      Partial::build('projectTile', ["slug" => $project->getSlug(), "name" => $project->getName(), "type" => "UX / UI Design"]);
+      Partial::build('projectTile', ["slug" => $project->getSlug(), "name" => $project->getName(), "type" => $project->getType()]);
     }
 
   ?>

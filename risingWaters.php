@@ -1,58 +1,16 @@
 <?php
 
 require "src/Partial.php";
-
-// start session so that we can store logged in cookie
-// session_start();
+require "src/objects/Project.php";
 
 Partial::build('header');
 
+$project = Project::buildProjectFromSlug('risingWaters');
+
+Partial::build('projectPageLanding', ["project" => $project]);
+Partial::build('projectPageMeta', ["project" => $project]);
+
 ?>
-
-<a href="#"><i class="fas fa-chevron-down"></i></a>
-<div id="projLanding"> <!--___________ Proj Landing ____________-->
-  <div class="row">
-    <div class="col-50">
-      <div class="landingText">
-        <h1>Rising Waters</h1>
-        <p>A VR project for the Oculus Go, that tackles the topic of climate change. Set in the future, the user gets to explore the city of Richmond, B.C., in the aftermath of a flood caused by rising sea levels.</p>
-        <br>
-        <a href="https://www.youtube.com/watch?v=mFMDWg2QdYU" target="_blank">View Project Video  &#8594;</a>
-      </div> 
-    </div>
-    <div class="col-50">
-      <img src="assets/img/RisingWaters.jpg" class="imgBG">
-      <img src="assets/img/RisingWaters.jpg">
-    </div>
-  </div>
-</div>
-
-<div id="projMeta"> <!--___________ Proj Meta ____________-->
-  <div class="projMetaItem">
-    <h2>Type</h2>
-    <p>VR Experience</p>
-  </div>
-  <div class="projMetaItem">
-    <h2>Year</h2>
-    <p>2019</p>
-  </div>
-  <div class="projMetaItem">
-    <h2>Roles</h2>
-    <ul>
-      <li>Unity / C# Developer</li>
-      <li>3D Modelling</li>
-    </ul>
-  </div>
-  <div class="projMetaItem">
-    <h2>Team</h2>    
-    <ul>
-      <li>Ricky Lalli</li>
-      <li>Jonathan Lee</li>
-      <li>Robert Michels</li>
-      <li>Elene Wanner</li>
-    </ul>
-  </div>
-</div>
 
 
 <div id="projContent"> <!--___________ Proj Content ____________-->

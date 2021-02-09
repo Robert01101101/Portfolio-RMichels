@@ -1,60 +1,16 @@
 <?php
 
 require "src/Partial.php";
-
-// start session so that we can store logged in cookie
-// session_start();
+require "src/objects/Project.php";
 
 Partial::build('header');
 
+$project = Project::buildProjectFromSlug('cyberview');
+
+Partial::build('projectPageLanding', ["project" => $project]);
+Partial::build('projectPageMeta', ["project" => $project]);
+
 ?>
-
-<a href="#"><i class="fas fa-chevron-down"></i></a>
-<div id="projLanding"> <!--___________ Proj Landing ____________-->
-  <div class="row">
-    <div class="col-50">
-      <div class="landingText">
-        <h1>Cyberview</h1>
-        <p>A narrative-driven 2D platformer, which revolves around unit 241, an AI-equipped droid that gains conciousness. Using a range of available body mods, unit 241 has to fight enemies, solve puzzles, and escape the building.</p>
-        <br>
-        <a href="https://www.youtube.com/watch?v=cMnbb1hC0T4" target="_blank">View Trailer  &#8594;</a>
-        <a href="https://404teamnotfound561902897.wordpress.com/" target="_blank">Visit Team Website  &#8594;</a>
-      </div> 
-    </div>
-    <div class="col-50">
-      <img src="assets/img/Cyberview.jpg" class="imgBG">
-      <img src="assets/img/Cyberview.jpg">
-    </div>
-  </div>
-</div>
-
-<div id="projMeta"> <!--___________ Proj Meta ____________-->
-  <div class="projMetaItem">
-    <h2>Type</h2>
-    <p>2D Game</p>
-  </div>
-  <div class="projMetaItem">
-    <h2>Year</h2>
-    <p>2019</p>
-  </div>
-  <div class="projMetaItem">
-    <h2>Roles</h2>
-    <ul>
-      <li>Project Manager</li>
-      <li>Game Designer</li>
-      <li>Unity / C# Developer</li>
-    </ul>
-  </div>
-  <div class="projMetaItem">
-    <h2>Team</h2>    
-    <ul>
-      <li>Carter Glass</li>
-      <li>Chris Louie</li>
-      <li>Robert Michels</li>
-      <li>Rebecca Singh</li>
-    </ul>
-  </div>
-</div>
 
 
 <div id="projContent"> <!--___________ Proj Content ____________-->
