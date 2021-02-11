@@ -4,14 +4,26 @@
     top: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(#666,.5);
+    background-color: rgba(#444,.7);
     overflow: hidden;
     user-select: none;
 
-    transition: 1s;
+    transition: .4s;
+
+    white-space: nowrap;
+    backdrop-filter: blur(15px);
 
     ul {
         flex-direction: column;
+        background-color: _palette(bg);
+        //padding: 40vw;
+        padding: 2rem;
+
+        @include md {
+            padding: 5rem;
+	    }
+
+        transition: .4s;
 
         a{
             color: _palette(white);
@@ -29,12 +41,23 @@
     }
 
     &.hidden {
-        display: none;
-        width: 1rem;
+        opacity: 0;
+        visibility: hidden;
+        width: 100%;
     }
 
     &:not(.hidden) {
-        width: 20rem;
+        visibility: visible;
+        width: 100%;
+        opacity: 1;
+
+        ul {
+            padding: 6rem;
+
+            @include md {
+                padding: 10rem;
+            }
+        }
     }
 }
 
@@ -48,7 +71,9 @@
 
     &.blur {
         //Add Blur
-        //filter: blur(2px);
+        //filter: blur(20px) !important;
 
+        //margin-left: -8px;
+        //margin-top: -8px;
     }
 }

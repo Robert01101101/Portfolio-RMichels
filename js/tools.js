@@ -17,4 +17,4 @@ function clamp (num, min, max)   {
 var scrollLimit = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 console.log("limit: " + scrollLimit);
 
-const mdBreakPoint = 768;
+const xlBreakPoint = 1200;

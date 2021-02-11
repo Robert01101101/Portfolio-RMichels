@@ -11,7 +11,7 @@ overlayMenu.classList.add("hidden");
 
 var contentToBlur = document.getElementById("Content");
 
-function myFunction(x) {
+function openMenu(x) {
   x.classList.toggle("change");
   overlayMenu.classList.toggle("hidden");
   contentToBlur.classList.toggle("blur");

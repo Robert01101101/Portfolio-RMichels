@@ -1,8 +1,13 @@
 //_____________________________________________ Core Styling
+//prevent sidescrolling
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 html {
 	background-color: _palette(bg);
 	scroll-behavior: smooth;
-	width: 100%;
 }
 
 main, #MainGrid {

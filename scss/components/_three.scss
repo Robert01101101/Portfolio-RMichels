@@ -1,4 +1,4 @@
-#threeModel {
+#threeModel, .cropCanvas {
 	z-index: -10;
 	display: block;
 
@@ -6,11 +6,13 @@
 	height: 80vh;
 
 	position: absolute;
-	top: 10%;
+	//top: 10%;
 	right: 0;
-	left: 33%;
+	//left: 33%;
 
-	@include md {
+	overflow: hidden !important;
+
+	@include xl {
 		width: 50vw;
 		height: 100vh;
 		left: auto;

@@ -10,7 +10,7 @@
     }
 
     .col-50 {
-    	@include md {
+    	@include xl {
 			width: 50%;
     	}
     	
@@ -26,11 +26,12 @@
 
 			font-size: _size(textMobileXL);
 			//--MQ
-			@include md {
+			@include xl {
 				font-size: _size(textXL);
 			}
 			font-weight: _font(weight-bold);
 			line-height: 150%;
+			padding: 3rem;
 		}
 	}
 }

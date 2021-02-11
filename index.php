@@ -13,6 +13,7 @@ Partial::build('header');
 
 <a href="#MyWork"><i class="fas fa-chevron-down"></i></a>
 <canvas id="threeModel"></canvas>
+<canvas class="cropCanvas"></canvas>
 <div id="landingArea">
   <div class="row">
     <div class="col-50" id="landingText">
@@ -87,6 +88,10 @@ Partial::build('header');
   <h2 id="Contact">Contact:</h2>
   <p>Etiam pulvinar eget ligula sit amet sollicitudin. Aliquam sed risus metus. Morbi dapibus tristique sapien luctus molestie. Phasellus sit amet molestie ipsum, id convallis dolor.</p>
 </section>
+
+<script>
+console.log("done");
+</script>
 
 <?php
 

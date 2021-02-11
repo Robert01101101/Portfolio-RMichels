@@ -53,13 +53,13 @@ setcookie("returningVisitor", "true");
       <nav>
         <ul>
           <li><a href="/<?php if(isset($_COOKIE['visitorFilter'])){ echo "?filter=".$_COOKIE['visitorFilter']; } ?>"><i class="fas fa-home"></i></a></li>
-          <li><div class="menuCont" onclick="myFunction(this)">
+          <li><div class="menuCont" onclick="openMenu(this)">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
           </div></li>
         </ul>
-        <div id="OverlayMenu">
+        <div id="OverlayMenu" class="hidden"><!-- TODO: find no js solution -->
           <ul>
           <a href="/<?php if(isset($_COOKIE['visitorFilter'])){ echo "?filter=".$_COOKIE['visitorFilter']; } ?>"><li>Portfolio</li></a>
             <a href="index#MyWork"><li>My Work</li></a>
@@ -69,8 +69,7 @@ setcookie("returningVisitor", "true");
         </div>
       </nav>
     </header>
-
-    <script src="js/menu.js"></script>
-
+    
     <!-- #################################### CONTENT ###################################### -->
     <main id="Content">
+    <script src="js/menu.js"></script>

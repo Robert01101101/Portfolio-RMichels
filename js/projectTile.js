@@ -18,7 +18,7 @@ window.onscroll = function (e) {
 	var elementsToOffset = projLabel;
 
 	//mobile
-	if (window.innerWidth < mdBreakPoint){
+	if (window.innerWidth < xlBreakPoint){
 		min = -40;
 		max = 0;
 		var elementsToOffset = projJScontainer;
