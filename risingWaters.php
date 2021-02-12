@@ -7,7 +7,12 @@ Partial::build('header');
 
 $project = Project::buildProjectFromSlug('risingWaters');
 
-Partial::build('projectPageLanding', ["project" => $project]);
+Partial::build('projectPageLanding', 
+  ["project" => $project, 
+  "description" => "A VR project for the Oculus Go, that tackles the topic of climate change. Set in the future, the user gets to explore the city of Richmond, B.C., in the aftermath of a flood caused by rising sea levels.",
+  "primaryLink" => "#",
+  "primaryLinkText" => "TODO: View on Itch.io"]);
+
 Partial::build('projectPageMeta', ["project" => $project]);
 
 ?>

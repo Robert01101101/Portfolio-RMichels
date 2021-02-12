@@ -8,9 +8,12 @@
     <div class="col-50">
       <div class="landingText">
         <h1><?php echo $project->getName() ?></h1>
-        <p>Amae is a utility app for busy parents. Amae helps parents to manage their time, learn about parenting and get help easily and quickly.</p>
+        <p><?php if (isset($description)) echo $description ?></p>
         <br>
-        <a href="//amae.rmichels.com/" target="_blank">View on Website  &#8594;</a>
+        <?php 
+          if (isset($primaryLink)) echo '<a href="'.$primaryLink.'" target="_blank">'.$primaryLinkText.'  &#8594;</a>';
+          if (isset($secondaryLink)) echo '<a href="'.$secondaryLink.'" target="_blank">'.$secondaryLinkText.'  &#8594;</a>';
+        ?>
       </div> 
     </div>
     <div class="col-50">

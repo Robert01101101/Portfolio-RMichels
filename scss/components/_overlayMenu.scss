@@ -13,11 +13,12 @@
     white-space: nowrap;
     backdrop-filter: blur(15px);
 
-    ul {
+    #MenuContent {
         flex-direction: column;
         background-color: _palette(bg);
         //padding: 40vw;
         padding: 2rem;
+
 
         @include md {
             padding: 5rem;
@@ -25,12 +26,29 @@
 
         transition: .4s;
 
-        a{
+        > a{
             color: _palette(white);
             font-weight: _font(weight-bold);
 
             &:not(:first-of-type) {
                 margin-top: 1rem;
+            }
+        }
+
+        > ul {
+            flex-direction: column;
+            background-color: _palette(bg);
+            //padding: 40vw;
+            padding: 2rem;
+
+
+            a {
+                font-weight: _font(weight-light);
+                color: _palette(white);
+
+                &:not(:first-of-type) {
+                    margin-top: 1rem;
+                }
             }
         }
 
@@ -51,7 +69,7 @@
         width: 100%;
         opacity: 1;
 
-        ul {
+        > #MenuContent {
             padding: 6rem;
 
             @include md {

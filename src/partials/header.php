@@ -53,18 +53,21 @@ setcookie("returningVisitor", "true");
       <nav>
         <ul>
           <li><a href="/<?php if(isset($_COOKIE['visitorFilter'])){ echo "?filter=".$_COOKIE['visitorFilter']; } ?>"><i class="fas fa-home"></i></a></li>
-          <li><div class="menuCont" onclick="openMenu(this)">
+          <li><div class="menuCont" onclick="toggleMenu()" id="MenuToggle">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
           </div></li>
         </ul>
         <div id="OverlayMenu" class="hidden"><!-- TODO: find no js solution -->
-          <ul>
-          <a href="/<?php if(isset($_COOKIE['visitorFilter'])){ echo "?filter=".$_COOKIE['visitorFilter']; } ?>"><li>Portfolio</li></a>
-            <a href="index#MyWork"><li>My Work</li></a>
-            <a href="index#About"><li>About</li></a>
-            <a href="index#Contact"><li>Contact</li></a>
+          <ul id="MenuContent">
+            <a href="/<?php if(isset($_COOKIE['visitorFilter'])){ echo "?filter=".$_COOKIE['visitorFilter']; } ?>"><li>Portfolio</li></a>
+            <ul>
+              <a href="index#MyWork" onclick="toggleMenu()"><li>Featured Work</li></a>
+              <a href="index#About" onclick="toggleMenu()"><li>About</li></a>
+              <a href="index#Contact" onclick="toggleMenu()"><li>Contact</li></a>
+            </ul>
+            <a href="projects"><li>All Projects</li></a>
           </ul>
         </div>
       </nav>

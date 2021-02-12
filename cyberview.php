@@ -7,7 +7,12 @@ Partial::build('header');
 
 $project = Project::buildProjectFromSlug('cyberview');
 
-Partial::build('projectPageLanding', ["project" => $project]);
+Partial::build('projectPageLanding', 
+  ["project" => $project, 
+  "description" => "A narrative-driven 2D platformer, which revolves around unit 241, an AI-equipped droid that gains conciousness. Using a range of available body mods, unit 241 has to fight enemies, solve puzzles, and escape the building.",
+  "primaryLink" => "#",
+  "primaryLinkText" => "TODO: View on Itch.io"]);
+
 Partial::build('projectPageMeta', ["project" => $project]);
 
 ?>

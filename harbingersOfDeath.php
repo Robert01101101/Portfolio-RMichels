@@ -7,7 +7,12 @@ Partial::build('header');
 
 $project = Project::buildProjectFromSlug('harbingersOfDeath');
 
-Partial::build('projectPageLanding', ["project" => $project]);
+Partial::build('projectPageLanding', 
+  ["project" => $project, 
+  "description" => "‘Are you going to die?’ compiles historic superstitions about death. This project satirizes present-day conspiracy theories, by presenting now-defunct superstitions as if they are real.",
+  "primaryLink" => "harbingersofdeath.rmichels.com",
+  "primaryLinkText" => "View Website"]);
+
 Partial::build('projectPageMeta', ["project" => $project]);
 
 ?>

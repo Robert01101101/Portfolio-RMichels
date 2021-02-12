@@ -118,7 +118,7 @@ function resizeRendererToDisplaySize(renderer) {
 
 var mouseX = 0, mouseY = 0;
 
-var windowHalfX = (window.innerWidth / 4)*3;
+var windowHalfX = (window.innerWidth < xlBreakPoint) ? (window.innerWidth / 2) : (window.innerWidth / 4)*3;
 var windowHalfY = window.innerHeight / 4;
 document.addEventListener( 'mousemove', onDocumentMouseMove, false );
 
