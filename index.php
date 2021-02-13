@@ -11,7 +11,7 @@ Partial::build('header');
 ?>
 
 
-<div class="downArrow"><a href="#MyWork"><i class="fas fa-chevron-down"></i></a></div>
+<div class="downArrow"  id="downArrow"><a href="#MyWork"><i class="fas fa-chevron-down"></i></a></div>
 <canvas id="threeModel"></canvas>
 <canvas class="cropCanvas"></canvas>
 <div id="landingArea">

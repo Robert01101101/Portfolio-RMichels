@@ -46,6 +46,15 @@
 	display: block;
 	width: 100%;
 
+	&-project {
+		display: none;
+		width: 50%;
+
+		@include lg {
+			display: block;
+		}
+	}
+
 	position: absolute;
 	bottom: 2rem;
 	left: 0;
@@ -54,8 +63,16 @@
 
 	z-index: 100;
 
+	transition: 1s;
+
 	> a {
 		padding: 1rem;
+	}
+
+	&.hide {
+		visibility: hidden;
+		opacity: 0;
+		transition: visibility 0s, opacity 0.5s linear;
 	}
 }
 

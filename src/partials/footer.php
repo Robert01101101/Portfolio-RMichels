@@ -86,6 +86,7 @@
   <!--<script src="three/skull.js"></script>-->
 
   <script src="js/three/waves.js"></script>
+  <script src="js/downArrow.js"></script>
 
   <?php if(isset($index)) : ?>
 
