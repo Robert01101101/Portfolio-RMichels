@@ -41,7 +41,7 @@
         }
         .onoffswitch-label {
             display: block; overflow: hidden; cursor: pointer;
-            border: 1px solid _palette(white); border-radius: .5rem;
+            border: 1px solid _colour(white); border-radius: .5rem;
         }
         .onoffswitch-inner {
             display: block; width: 200%; margin-left: -100%; height: .8rem;
@@ -55,12 +55,12 @@
         .onoffswitch-inner:before {
             content: "And";
             padding-left: 10px;
-            background-color: _palette(bg); color:_palette(white);
+            background-color: _colour(bg); color:_colour(white);
         }
         .onoffswitch-inner:after {
             content: "Or";
             padding-right: 10px;
-            background-color: _palette(bg); color: _palette(white);
+            background-color: _colour(bg); color: _colour(white);
             text-align: right;
             padding-right: 1rem; //edit
         }
@@ -69,7 +69,7 @@
             background: #FFFFFF;
             position: absolute; top: 0; bottom: 0;
             right: 3.1rem;
-            border: 1px solid _palette(white); border-radius: .5rem;
+            border: 1px solid _colour(white); border-radius: .5rem;
             transition: all 0.3s ease-in 0s; 
         }
         .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
@@ -82,12 +82,12 @@
 
     //Filter Button
     .filterBtn {
-        color: _palette(white);
-        background-color: _palette(bg);
+        color: _colour(white);
+        background-color: _colour(bg);
         text-decoration: none;
         padding: .5rem;
         display: inline-block;
-        border: 1px solid _palette(white);;
+        border: 1px solid _colour(white);;
         border-radius: .5rem;
         font-size: _size(textS);
 
@@ -98,13 +98,13 @@
         cursor: pointer;
     
         &:hover {
-            background-color: _palette(white);
-            color: _palette(bg);
+            background-color: _colour(white);
+            color: _colour(bg);
         }
 
         &--selected{
-            background-color: _palette(white);
-            color: _palette(bg);
+            background-color: _colour(white);
+            color: _colour(bg);
         }
     }
 

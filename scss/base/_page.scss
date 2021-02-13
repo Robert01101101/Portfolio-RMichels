@@ -6,7 +6,7 @@ html, body {
 }
 
 html {
-	background-color: _palette(bg);
+	background-color: _colour(bg);
 	scroll-behavior: smooth;
 }
 
@@ -73,7 +73,7 @@ section#Projects{
 
 		a, button {
 			display: block;
-			color: _palette(white);
+			color: _colour(white);
 			text-decoration: none;
 			font-weight: bold;
 			margin-top: 1rem;

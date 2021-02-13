@@ -65,7 +65,7 @@
 
 			margin: 0;
 			z-index: 150;
-			color: _palette(white); /* TODO: wrap */
+			color: _colour(white); /* TODO: wrap */
 		}
 
 		&:hover{
@@ -73,7 +73,7 @@
 				width: 120%;
 			}
 			img {
-				box-shadow: 5px 5px 20px _palette(shadow);
+				box-shadow: 5px 5px 20px _colour(shadow);
 				transform: scale(1.02);
 				filter: brightness(100%);
 			}
@@ -83,14 +83,14 @@
 			h2::after {
 				content: "";
 				position: absolute;
-				background-color: _palette(blue);
+				background-color: _colour(blue);
 				left: -10%;
 				top: -5%;
 				width: 0%;
 				height: 110%;
 				z-index: -1;
 				transition: _duration(default);
-				box-shadow: 5px 5px 20px _palette(shadow);
+				box-shadow: 5px 5px 20px _colour(shadow);
 			}
 		}
 		
@@ -103,7 +103,7 @@
 			}
 
 			transition: _duration(default);
-			box-shadow: 5px 5px 20px _palette(shadow_light);
+			box-shadow: 5px 5px 20px _colour(shadow_light);
 
 			max-width: 100%;
 

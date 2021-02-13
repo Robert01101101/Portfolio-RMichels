@@ -33,7 +33,7 @@ window.onscroll = function (e) {
 		curElement.style.bottom = clamp(mapVal(yPos, 0, window.innerHeight, max, min), min-buffer, max+buffer) + 'px';
 
 		//console.log("yPos=" + yPos);
-		console.log("bottom=" + curElement.style.bottom);
+		//console.log("bottom=" + curElement.style.bottom);
 		//console.log("window height=" + window.innerHeight);
 	}
 

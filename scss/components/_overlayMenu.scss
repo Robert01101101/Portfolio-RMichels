@@ -15,7 +15,7 @@
 
     #MenuContent {
         flex-direction: column;
-        background-color: _palette(bg);
+        background-color: _colour(bg);
         //padding: 40vw;
         padding: 2rem;
 
@@ -27,7 +27,7 @@
         transition: .4s;
 
         > a{
-            color: _palette(white);
+            color: _colour(white);
             font-weight: _font(weight-bold);
 
             &:not(:first-of-type) {
@@ -37,14 +37,14 @@
 
         > ul {
             flex-direction: column;
-            background-color: _palette(bg);
+            background-color: _colour(bg);
             //padding: 40vw;
             padding: 2rem;
 
 
             a {
                 font-weight: _font(weight-light);
-                color: _palette(white);
+                color: _colour(white);
 
                 &:not(:first-of-type) {
                     margin-top: 1rem;

@@ -1,6 +1,6 @@
 //_____________________________________________ Body
 body, input, select, textarea, p {
-		color: _palette(white);
+		color: _colour(white);
 		font-family: _font(family);
 		
 		font-size: 16px;
@@ -67,7 +67,7 @@ body, input, select, textarea, p {
 
 //_____________________________________________ Headers
 h1, h2, h3, h4, h5, h6 {
-	color: _palette(white);
+	color: _colour(white);
 	font-family: _font(family-alt);
 	font-weight: _font(weight-bold);
 	margin: _size(element-margin) 0 (_size(element-margin) * 0.5) 0;

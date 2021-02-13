@@ -10,7 +10,7 @@ $project = Project::buildProjectFromSlug('amae');
 Partial::build('projectPageLanding', 
   ["project" => $project, 
   "description" => "Amae is a utility app for busy parents. Amae helps parents to manage their time, learn about parenting and get help easily and quickly.",
-  "primaryLink" => "amae.rmichels.com",
+  "primaryLink" => "http://amae.rmichels.com/",
   "primaryLinkText" => "View Product Website",
   "secondaryLink" => "https://www.figma.com/proto/MTkTlvyHoJziDU2ZnpaCSs/334_Stage5_v2?node-id=2%3A2849&viewport=422%2C1134%2C0.19956186413764954&scaling=contain",
   "secondaryLinkText" => "Try Interactive Mockup"]);

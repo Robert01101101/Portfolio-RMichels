@@ -2,7 +2,7 @@
 
 ?>
 
-<a href="#"><i class="fas fa-chevron-down"></i></a>
+<div class="downArrow"><a href="#projMeta"><i class="fas fa-chevron-down"></i></a></div>
 <div id="projLanding"> <!--___________ Proj Landing ____________-->
   <div class="row">
     <div class="col-50">

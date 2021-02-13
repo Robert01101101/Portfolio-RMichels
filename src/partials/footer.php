@@ -7,7 +7,7 @@
     <!-- #################################### FOOTER ###################################### -->
 
     <footer>
-      <h2>Interested?</h2>
+      <h2>Intrigued?</h2>
       <div class="getInTouch">
         <h3>Get in touch with me &nbsp;&#8594;</h3>
         <ul class="icons">
@@ -17,6 +17,10 @@
           <a href="https://play.google.com/store/apps/developer?id=Studio+RM" target="_blank" title="Google Play"><li><i class="fab fa-google-play fa-2x"></i></li></a>
           <a href="https://rmichels.itch.io/" target="_blank" ><li><i class="fab fa-itch-io fa-2x"title="Itch.io"></i></li></a>
           </ul>
+      </div>
+
+      <div class="footer_lastRow">
+        <small>Copyright &copy; <?php echo date("Y"); ?> Robert Michels. All Rights Reserved.</small>
       </div>
       
     </footer>

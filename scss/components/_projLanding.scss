@@ -49,6 +49,7 @@
 	
 	//___________________________________ Images
 	img {
+		display:block;
 		margin-top: 3rem;
 		width: 100vw;
 
@@ -87,7 +88,7 @@
 
 	//___________________________________ CTA Button
 	a {
-		color: _palette(white);
+		color: _colour(white);
 		text-decoration: none;
 		font-weight: 700;
 		display: block;

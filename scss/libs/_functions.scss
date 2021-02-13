@@ -78,8 +78,8 @@
 /// Gets a palette value.
 /// @param {string} $keys Key(s).
 /// @return {string} Value.
-@function _palette($keys...) {
-	@return val($palette, $keys...);
+@function _colour($keys...) {
+	@return val($colour, $keys...);
 }
 
 /// Gets a size value.
@@ -87,4 +87,11 @@
 /// @return {string} Value.
 @function _size($keys...) {
 	@return val($size, $keys...);
+}
+
+/// Gets a grid value.
+/// @param {string} $keys Key(s).
+/// @return {string} Value.
+@function _grid($keys...) {
+	@return val($grid, $keys...);
 }

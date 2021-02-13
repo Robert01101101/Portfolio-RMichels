@@ -159,4 +159,4 @@ function animate() {
 animate();
 
 
-console.log(scene);
+//console.log(scene);

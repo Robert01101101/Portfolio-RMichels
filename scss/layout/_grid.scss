@@ -2,7 +2,7 @@
 #MainGrid {
 	display: grid;
 
-	grid-template-columns: 1rem calc(100% - 2rem) 1rem; //Margin, Content, Margin
+	grid-template-columns: 2rem calc(100% - 4rem) 2rem; //Margin, Content, Margin
                                                         //1      2         3      4
   grid-template-rows: 3.2rem 100vh auto auto; //Header, LandingArea, Body, Footer
 
@@ -12,7 +12,7 @@
     }
 
     @include md {
-      grid-template-columns: 2rem calc(100% - 4rem) 2rem;
+      grid-template-columns: 3.5rem calc(100% - 7rem) 3.5rem;
     }
 
     @include lg {

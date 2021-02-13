@@ -1,18 +1,34 @@
 #projMeta {
-	background-color: _palette(bg_alt);
+	background-color: _colour(bg_alt);
 
 	display: flex;
 	justify-content: space-between;
 	align-items: stretch;
 
-	padding: 2rem;
-	margin-top: 3rem;
-
+	
 	//Don't wrap children on small-large screens, wrap on small screens
 	flex-wrap: wrap;
 
+	//Position at the bottom of landing viewport, with negative L / R margins equal the grid margins
+	$margin-sm: _grid(content-margin);
+	padding: 3rem $margin-sm;
+	margin: 0 -#{$margin-sm};
+
 	@include sm {
 		flex-wrap: nowrap;
+	}
+
+	@include md {
+		$margin-md: _grid(content-margin-md);
+		margin: 0 -#{$margin-md};
+		padding: 4rem $margin-md;
+	}
+	
+	@include lg {
+		$margin-lg: _grid(content-margin-lg);
+		margin: calc(100vh - 3.2rem) calc(#{$margin-lg} * -1) 0 calc(#{$margin-lg} * -1);
+		padding: 6rem $margin-lg;
+		background-color: _colour(bg_alt);
 	}
 
 	div {
@@ -33,13 +49,6 @@
 
 	p {
 		font-weight: bold;
-	}
-
-	//Position at the bottom of landing viewport, with negative L / R margins equal the grid margins
-	@include lg {
-		margin: calc(100vh - 3.2rem) calc(calc(17vw + 2px) * -1) 0 calc(calc(17vw + 2px) * -1);
-		padding: 6rem 30%;
-		background-color: _palette(bg_alt);
 	}
 
 	ul {

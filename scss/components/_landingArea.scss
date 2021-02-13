@@ -41,14 +41,31 @@
 	padding-right: .5rem;
 }
 
-.fa-chevron-down {
+//container to center horizontally
+.downArrow {
+	display: block;
+	width: 100%;
+
 	position: absolute;
 	bottom: 2rem;
-	left: 50vw;
-	color: _palette(white);
+	left: 0;
+
+	text-align: center;
+
+	z-index: 100;
+
+	> a {
+		padding: 1rem;
+	}
+}
+
+//actual arrow
+.fa-chevron-down {
+	text-align: center;
+	color: _colour(white);
 	transition: _duration(default);
-	padding: 1rem;
-	margin: -1rem;
+
+	z-index: 100;
 
 	&:hover {
 		transform: scale(1.4);

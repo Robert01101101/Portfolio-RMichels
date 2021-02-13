@@ -1,4 +1,4 @@
-$palette: (
+$colour: (
 	blue: 			#228C8C,
 	bg:				#222222,
 	bg_alt:			#444444,
@@ -30,6 +30,12 @@ $font: (
 	weight-bold:			700,
 	weight-light:			300,
 	kern-heading:			0.1em
+);
+
+$grid: (
+	content-margin:			2rem,
+	content-margin-md:		3.5rem,
+	content-margin-lg:		calc(16.7vw + 1rem)
 );
 
 /* ========================== ADD LAYERS FOR Z INDEX ====================== */

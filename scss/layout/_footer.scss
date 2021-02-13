@@ -4,7 +4,7 @@ footer {
 
 	padding: 1rem;
 	@include md {
-		padding: 1rem 8rem 7rem 8rem;
+		padding: 1rem 8rem 3rem 8rem;
 	}
 
 	background-color: rgba(0,0,0,0.55);
@@ -43,7 +43,7 @@ footer {
 			align-items: center;
 
 			a {
-				color: _palette(white);
+				color: _colour(white);
 			}
 
 			li {
@@ -61,6 +61,12 @@ footer {
 					}
 				}
 		}	
+	}
+
+	.footer_lastRow {
+		padding-top: 5rem;
+
+		text-align: right;
 	}
 
 }

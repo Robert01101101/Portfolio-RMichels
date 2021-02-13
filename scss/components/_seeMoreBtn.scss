@@ -63,14 +63,14 @@
       a .liquid::before {
         
         border-radius: 45%;
-        background: _palette(bg);
+        background: _colour(bg);
         animation: animate 3s linear infinite;
       }
       
       a .liquid::after {
         
         border-radius: 40%;
-        background-color: rgba(_palette(bg), 0.55);
+        background-color: rgba(_colour(bg), 0.55);
         animation: animate 6s linear infinite;
       }
       

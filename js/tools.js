@@ -14,7 +14,18 @@ function clamp (num, min, max)   {
 
 //_____________________________________________________________________________________________________________________________________
 //find window Y limit
-var scrollLimit = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-console.log("limit: " + scrollLimit);
+function calcDocHeight() {
+  var docHeightBody = document.body,
+		html = document.documentElement;
+
+  docHeight = Math.max( docHeightBody.scrollHeight, docHeightBody.offsetHeight, 
+    html.clientHeight, html.scrollHeight, html.offsetHeight );
+
+  console.log("docHeight: " + docHeight);
+
+  return docHeight;
+}
+
+var docHeight = calcDocHeight();
 
 const xlBreakPoint = 1200;
