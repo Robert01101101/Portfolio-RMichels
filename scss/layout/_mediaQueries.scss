@@ -26,14 +26,14 @@ $screen-xl-min: 1200px;
 
 // Large devices
 @mixin lg {
-   @media (min-width: #{$screen-lg-min}) {
+   @media (min-width: #{$screen-lg-min}) and (orientation: landscape) {
        @content;
    }
 }
 
 // Extra large devices
 @mixin xl {
-   @media (min-width: #{$screen-xl-min}) {
+   @media (min-width: #{$screen-xl-min}) and (orientation: landscape) {
        @content;
    }
 }

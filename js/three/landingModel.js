@@ -82,7 +82,7 @@ function handle_particles(){
 
 //_____________________________________________________________________ DEFINE CAMERA
 var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
-camera.position.z = 11;
+camera.position.z = (window.innerWidth > smBreakPoint) ? 11 : 15;
 camera.position.y = 4;
 camera.rotation.x = -Math.PI / 5;
 
@@ -108,6 +108,10 @@ function resizeRendererToDisplaySize(renderer) {
     const needResize = canvas.width !== width || canvas.height !== height;
     if (needResize) {
       renderer.setSize(width, height, false);
+
+      //update query specific styling
+      windowHalfX = (window.innerWidth < xlBreakPoint) ? (window.innerWidth / 2) : (window.innerWidth / 4)*3;
+      camera.position.z = (window.innerWidth > smBreakPoint) ? 11 : 15;
     }
     return needResize;
 }

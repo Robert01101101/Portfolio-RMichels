@@ -29,3 +29,4 @@ function calcDocHeight() {
 var docHeight = calcDocHeight();
 
 const xlBreakPoint = 1200;
+const smBreakPoint = 576;
