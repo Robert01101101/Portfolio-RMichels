@@ -4,6 +4,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     
+    gap: .8rem;
+
     margin: 4rem 0 4rem 0;
 
     > div {
@@ -11,28 +13,33 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        align-items: flex-end;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 1.5rem;
         
-        margin: 0 -.5rem;
-        margin-bottom: 5rem;
+        margin: 0;
+        margin-bottom: 4rem;
 
         width: 100%;
 
         h1 {
             margin: 0;
-        }
-
-        :last-child {
-            align-self: center;
-            margin-left: auto;
-            margin-top: auto;
+            margin-right: 6rem;
         }
 
         ////////////////////////toggle
         .onoffswitch {
-            margin: auto .5rem 0 auto;
+            //margin: auto .5rem 0 0;
+            margin: 0;
             position: relative; width: 5rem; 
             -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+
+            //hide on small devices
+            display: none;
+            @include sm {
+                display: block;
+            }
         }
         .onoffswitch-checkbox {
             position: absolute;
@@ -91,7 +98,7 @@
         border-radius: .5rem;
         font-size: _size(textS);
 
-        margin: .5rem;
+        //margin: .5rem;
     
         transition: _duration(default);
 

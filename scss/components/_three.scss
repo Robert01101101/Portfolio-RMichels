@@ -1,4 +1,4 @@
-#threeModel, .cropCanvas {
+#threeModel, .cropCanvas, #landingModelImage {
 	z-index: -10;
 	display: block;
 
@@ -20,6 +20,14 @@
 		top: 0;
 	}
 	
+}
+
+#landingModelImage {
+	height: auto;
+	
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 @mixin fullscreen {

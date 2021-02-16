@@ -11,7 +11,7 @@ if (isset($roles)){
 <div class="projRow projRow--visible" <?php if(isset($roles)) : ?>data-js='<?= $roleString; ?>'<?php endif; ?>>
   <div class="projPanel">
     <a href="<?= $slug; ?>">
-      <img src="assets/img/<?= $slug; ?>.jpg">
+      <img src="assets/img/lqip/<?= $slug; ?>.jpg" loading="lazy">
       <div class="projJScontainer">
         <h2 class="projLabel"> <?= $name; ?> </h2>
         <h3 class="projMeta"> <?= $type; ?> </h3>

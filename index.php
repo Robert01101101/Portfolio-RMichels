@@ -13,7 +13,8 @@ Partial::build('header');
 
 <div class="downArrow"  id="downArrow"><a href="#MyWork"><i class="fas fa-chevron-down"></i></a></div>
 <canvas id="threeModel"></canvas>
-<canvas class="cropCanvas"></canvas>
+<!--<canvas class="cropCanvas"></canvas>-->
+<img src="assets/img/lqip/landingModel.gif" id="landingModelImage"></img>
 <div id="landingArea">
   <div class="row">
     <div class="col-50" id="landingText">

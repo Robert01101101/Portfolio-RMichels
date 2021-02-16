@@ -82,6 +82,7 @@
   <script src="js/three/build/three.min.js"></script>
   <script src="js/three/examples/js/loaders/GLTFLoader.js"></script>
   <script src="js/tools.js"></script>
+  <script src="js/lqip.js"></script>
   <!--<script src="three/myThreeScript.js"></script>-->
   <!--<script src="three/skull.js"></script>-->
 

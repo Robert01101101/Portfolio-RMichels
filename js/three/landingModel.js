@@ -5,7 +5,8 @@
 //_____________________________________________________________________ DEFINE SCENE
 var scene = new THREE.Scene();
 var canvas = document.querySelector('#threeModel');
-var renderer = new THREE.WebGLRenderer({canvas, alpha:true, antialias:true});
+var renderer = new THREE.WebGLRenderer({canvas, alpha:true, antialias:true});//, preserveDrawingBuffer: true}); // SAVE IMAGE
+var tmpImage = document.getElementById('landingModelImage');
 
 
 //_____________________________________________________________________ PARTICLES _______________________________________________
@@ -25,6 +26,10 @@ function handle_load(gltf){
     roughness: 0.5
   });*/
   
+  //console.log("model finished loading");
+  tmpImage.style.display = "none";
+
+
   scene.add(mesh);
 
   handle_particles();
@@ -158,6 +163,14 @@ function animate() {
 	//Render
 	renderer.render( scene, camera );
 }
+
+//// SAVE IMAGE
+/*
+setTimeout(() => { 
+  var screenshot = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");; 
+  console.log(screenshot); 
+  window.location.href=screenshot;  
+}, 2000);*/
 
 
 animate();
