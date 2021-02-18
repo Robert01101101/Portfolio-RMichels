@@ -3,6 +3,7 @@ $colour: (
 	bg:				#222222,
 	bg_alt:			#444444,
 	white:			#ffffff,
+	white_alt: 		#dddddd,
 	shadow:			rgba(0,0,0,0.5),
 	shadow_light:	rgba(0,0,0,0.1)
 );
@@ -14,6 +15,7 @@ $size: (
 	bodyWidth:      680px,
 	btnPadding:		.8rem,
 	element-margin:	2em,
+	gap:			1.5rem
 );
 
 $myWidth: 680px;
@@ -23,8 +25,9 @@ $duration: (
 );
 
 $font: (
-	family:					('Lato', sans-serif),
-	family-alt:				('Roboto Condensed', sans-serif),
+	family-header:			('Lato', sans-serif),
+	family-body:			('Roboto Condensed', sans-serif),
+	family-alt:				('Roboto Mono', monospace),
 	weight:					300,
 	weight-medium:  	 	400,
 	weight-bold:			700,

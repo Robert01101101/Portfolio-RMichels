@@ -6,7 +6,15 @@
 
 	//___________________________________ Text, Row, Column
 	.landingText {
-		margin: 0 1rem;
+		margin: 0 #{_grid(content-margin)};
+
+		@include md {
+			margin: 0 #{_grid(content-margin-md)};
+		}
+
+		@include lg {
+			margin: 0 #{_grid(content-margin-lg)};
+		}
 	}
 
 	@include lg {

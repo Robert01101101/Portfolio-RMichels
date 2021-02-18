@@ -18,86 +18,111 @@ main, #MainGrid {
 	overflow: hidden;
 }
 
+figcaption {
+	text-align: left;
+	max-width: 40rem;
+	margin: 1rem auto 0 auto;
+	font-family: _font(family-alt);
+	font-weight: _font(weight);
+	font-size: .8em;
+
+	&.center {
+		text-align: center;
+	}
+}
+
+figure {
+	margin: 0;
+}
+
+#Content {
+    margin-bottom: 5rem;
+}
+
 main {
+	//______________________________________ SECTION MEDIA
 	.sectionMedia {
-		margin: 8rem 0 13rem 0;
+		margin: 0;
+		margin-bottom: 10rem;
 		//overflow: hidden;
 		padding: 2rem .02px;
-	}
 
-	.sectionText {
-		padding: 0 0 8rem 0;
-		margin: 0;
+		.mediaRow {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: flex-start;
+			align-content: flex-start;
 
-		&:last-of-type {
-			margin-bottom: 10rem;
-		}
-	}
-}
+			gap: _size(gap);
 
-//_____________________________________________ Page Specific
-section#Projects{
-	margin-bottom: 16rem;
-}
+			@include lg {
+				flex-wrap: nowrap;
 
-//////////////////////////////////////////////// TMP
-#tmpVisitorPopUp {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	background-color: rgba(black, .8);
-	z-index: 500;
+				&-zigzag {
+					figure {
+						&:nth-of-type(even) {
+							margin-top: 5rem;
+						}
+					}
+				}
+			}
 
-	> div {
-		position: absolute;
-		top: 2rem;
-		left: 2rem;
-		right: 2rem;
-		bottom: 2rem;
-		background-color: rgba(#444, .95);
+			figure {
+				margin: 0;
+				
+				/* four items (requires different width, from: https://stackoverflow.com/questions/8720931/can-css-detect-the-number-of-children-an-element-has) */ 
+				&:first-child:nth-last-child(4),
+				&:first-child:nth-last-child(4) ~ figure {
+					flex: 1 0 40%;
 
-		padding: 3rem;
+					@include lg {
+						flex: 0 1 auto;
+					}
+				}
 
-		@include md {
-			top: calc(50vh - 22rem);
-			left: calc(50vw - 22rem);
-			right: calc(50vw - 22rem);
-			bottom: calc(50vh - 22rem);
-		}
+				flex: 1 0 30%;
 
-		h2 {
-			margin-top: 0;
-		}
-
-		a, button {
-			display: block;
-			color: _colour(white);
-			text-decoration: none;
-			font-weight: bold;
-			margin-top: 1rem;
-
-			&:hover {
-				text-decoration: underline;
+				@include lg {
+					flex: 0 1 auto;
+				}
+	
+				img {
+					max-width: 100%;
+				}
 			}
 		}
 
-		button {
-			background-color: transparent;
-			border: none;
-			padding: 0;
-			margin: 0;
-			color: white;
-			text-decoration: none;
-			margin-bottom: 4rem;
-			margin-top: 1rem;
-			cursor: pointer;
-		}
+		.mediaSquare {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: flex-start;
+			align-content: flex-start;
 
-		> div {
-			position: absolute;
-			bottom: 0;
+			gap: _size(gap);
+
+			figure {
+				flex: 0 1 auto;
+				margin: 0;
+
+				@include lg {
+					flex: 1 0 40%;
+				}
+	
+				img {
+					max-width: 100%;
+				}
+			}
 		}
+	}
+
+	//______________________________________ SECTION TEXT
+	.sectionText {
+		padding: 0 0 8rem 0;
+		margin: 0 auto;
+		max-width: 40rem;
 	}
 }

@@ -78,20 +78,3 @@
         }
     }
 }
-
-#Content {
-    transition: 1s;
-
-    /*
-    backface-visibility: hidden;
-    transform: translateZ(0) scale(1.0, 1.0);
-    transform: translateZ(0);*/
-
-    &.blur {
-        //Add Blur
-        //filter: blur(20px) !important;
-
-        //margin-left: -8px;
-        //margin-top: -8px;
-    }
-}

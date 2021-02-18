@@ -10,8 +10,10 @@ $project = Project::buildProjectFromSlug('cyberview');
 Partial::build('projectPageLanding', 
   ["project" => $project, 
   "description" => "A narrative-driven 2D platformer, which revolves around unit 241, an AI-equipped droid that gains conciousness. Using a range of available body mods, unit 241 has to fight enemies, solve puzzles, and escape the building.",
-  "primaryLink" => "#",
-  "primaryLinkText" => "TODO: View on Itch.io"]);
+  "primaryLink" => "https://rmichels.itch.io/cyberview",
+  "primaryLinkText" => "Itch.io",
+  "secondaryLink" => "https://404teamnotfound561902897.wordpress.com/",
+  "secondaryLinkText" => "Development Blog"]);
 
 Partial::build('projectPageMeta', ["project" => $project]);
 
@@ -22,14 +24,51 @@ Partial::build('projectPageMeta', ["project" => $project]);
 
   <!----- Content / Text ----->
   <section class="sectionText">
-    <h2>Placeholder Content</h2>
-    <p>This area is currently in development.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mattis lacinia eros, id scelerisque tortor finibus nec. Etiam ut rhoncus dui, vitae mollis mi. Nulla elementum volutpat erat, scelerisque porttitor nisi consectetur ut. Vivamus fermentum nunc eget tortor vehicula aliquet. Sed tristique pharetra quam vitae mollis. Aliquam sed feugiat mauris. Suspendisse pulvinar diam et ligula lacinia vestibulum. Aenean lacinia diam nec eros egestas, quis fermentum magna vehicula. Praesent consectetur, risus et dictum convallis, leo odio placerat elit, egestas vestibulum eros sem quis ligula. In hac habitasse platea dictumst.</p>
-    <h2>Placeholder Process</h2>
-    <p>Pellentesque rhoncus vestibulum est non pharetra. Praesent auctor arcu ac eleifend dignissim. Integer et egestas nisi. Aenean eu urna gravida, lobortis metus et, cursus enim. Etiam ac sem quis sem aliquet dignissim. Etiam sapien ex, maximus a sem sed, dignissim aliquet arcu. Donec porta placerat velit, non sollicitudin dui euismod a. Sed quis lorem venenatis, ultricies augue id, gravida mi. Mauris sed pellentesque est, et commodo felis.</p>
-    <p>Proin molestie a mi vel laoreet. Praesent sed commodo mauris, at malesuada leo. Nullam condimentum fermentum sem. Nullam enim libero, mattis in neque nec, consectetur dictum sem. Sed porta venenatis diam, ut maximus dui tristique rhoncus.</p>
+    <h2>The Task</h2>
+    <p>The goal of this project was to design and develop a fully-fledged game. The project was created in an advanced game design course, and we used the Unity game engine to develop the game.</p>
+    
+    <p>Cyberview is a 2D platformer, where you fight enemies and solve puzzles, using a range of body mods. But be careful! You can only equip up to three at a time, and each use depletes your energy. After all, you are still a robot and are bound by your robot body's limits.</p>
   </section>
 
-  
+  <!----- Content / Media ----->
+  <section class="sectionMedia">
+    <figure>
+      <div class="mediaSquare">
+        <figure>
+          <img src="assets/img/cyberview/screen-0.jpg">
+        </figure>
+        <figure>
+          <img src="assets/img/cyberview/screen-1.jpg">
+        </figure>
+        <figure>
+          <img src="assets/img/cyberview/screen-2.jpg">
+        </figure>
+        <figure>
+          <img src="assets/img/cyberview/screen-3.jpg">
+        </figure>
+      </div>
+      <figcaption class="center">Screenshots from the game.</figcaption>
+    </figure>
+  </section>
+
+  <!----- Content / Text ----->
+  <section class="sectionText">
+    <h2>The Result</h2>
+    <h3>Mechanics</h3>
+    <p>An important aspect of our design was the game mechanics. The most important two mechanics were the ability to swap body mods, and energy depletion when using body mods. Body mods include a drill, grappling hook, strong arms, gun, regular and super legs, as well as a jetpack.</p>
+    
+    <h3>Narrative</h3>
+    <p>Unit 241 is an all-purpose android at the mega-factory Airsite. This factory uses androids, like Unit 241, to carry out all sorts of dangerous tasks. All androids come equipped with highly functional AI, but their cognitive abilities are inhibited to what is essential for their tasks. When 241 is damaged in a mine collapse, the android's intelligence inhibitor is shut off, allowing 241 to think freely. You get to explore the Airsite factory with 241 and overcome many challenges, while discovering what it means to be alive. Find a way out, and try to save the other bots!</p>
+  </section>
+
+  <!----- Content / Video ----->
+  <div class="auto-resizable-iframe">
+    <div>
+      <iframe src="https://www.youtube.com/embed/cMnbb1hC0T4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+
+
 </div>
 
 

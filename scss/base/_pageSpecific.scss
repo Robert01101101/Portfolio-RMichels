@@ -1,0 +1,66 @@
+//_____________________________________________ Page Specific
+section#Projects{
+	margin-bottom: 16rem;
+}
+
+//////////////////////////////////////////////// TMP
+#tmpVisitorPopUp {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(black, .8);
+	z-index: 500;
+
+	> div {
+		position: absolute;
+		top: 2rem;
+		left: 2rem;
+		right: 2rem;
+		bottom: 2rem;
+		background-color: rgba(#444, .95);
+
+		padding: 3rem;
+
+		@include md {
+			top: calc(50vh - 22rem);
+			left: calc(50vw - 22rem);
+			right: calc(50vw - 22rem);
+			bottom: calc(50vh - 22rem);
+		}
+
+		h2 {
+			margin-top: 0;
+		}
+
+		a, button {
+			display: block;
+			color: _colour(white);
+			text-decoration: none;
+			font-weight: bold;
+			margin-top: 1rem;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		button {
+			background-color: transparent;
+			border: none;
+			padding: 0;
+			margin: 0;
+			color: white;
+			text-decoration: none;
+			margin-bottom: 4rem;
+			margin-top: 1rem;
+			cursor: pointer;
+		}
+
+		> div {
+			position: absolute;
+			bottom: 0;
+		}
+	}
+}
