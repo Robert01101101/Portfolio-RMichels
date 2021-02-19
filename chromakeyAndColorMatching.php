@@ -9,7 +9,7 @@ $project = Project::buildProjectFromSlug('chromakeyAndColorMatching');
 
 Partial::build('projectPageLanding', 
   ["project" => $project, 
-  "description" => "A digital image compositing process for automatic creation of high quality composites. Advantages include the ability to deal with any foreground colors, preventing color spill and color grading the subject to match the background.",
+  "description" => "A digital image compositing process. Automatically creates high quality composites. Advantages include the ability to deal with any foreground color, preventing color spill, and color grading the subject to match the background.",
   "primaryLink" => "#",
   "primaryLinkText" => "TODO: Download app"]);
 

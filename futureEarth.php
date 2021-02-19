@@ -9,11 +9,12 @@ $project = Project::buildProjectFromSlug('futureEarth');
 
 Partial::build('projectPageLanding', 
   ["project" => $project, 
-  "description" => "A narrative-driven 2D platformer, which revolves around unit 241, an AI-equipped droid that gains conciousness. Using a range of available body mods, unit 241 has to fight enemies, solve puzzles, and escape the building.",
+  "description" => "Future Earth is a VR adventure game set in a dystopian future, where the player has to grow trees, fight droids and collect parts.",
   "primaryLink" => "https://sidequestvr.com/my-app/2597",
   "primaryLinkText" => "TODO: SideQuest",
   "secondaryLink" => "https://404teamnotfound444314077.wordpress.com/",
-  "secondaryLinkText" => "Development Blog"]);
+  "secondaryLinkText" => "Development Blog",
+  "alt" => TRUE]);
 
 Partial::build('projectPageMeta', ["project" => $project]);
 
@@ -118,7 +119,7 @@ Partial::build('projectPageMeta', ["project" => $project]);
       <figure>
         <img src="assets/img/futureearth/20.jpg">
       </figure>
-      \<figure>
+      <figure>
         <img src="assets/img/futureearth/hud1.jpg">
       </figure>
       <figure>

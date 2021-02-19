@@ -1,4 +1,4 @@
-move projects
+# move projects
 
 START TRANSACTION;
 SET FOREIGN_KEY_CHECKS = 0;
@@ -7,3 +7,7 @@ UPDATE project_roles SET project_id = 10 WHERE project_id = 5;
 UPDATE project_teammembers SET project_id = 10 WHERE project_id = 5;
 SET FOREIGN_KEY_CHECKS = 1;
 COMMIT;
+
+
+
+# Delete association

@@ -1,0 +1,97 @@
+<?php
+
+require "src/Partial.php";
+require "src/objects/Project.php";
+
+Partial::build('header');
+
+$project = Project::buildProjectFromSlug('understandingClimateChange');
+
+Partial::build('projectPageLanding', 
+  ["project" => $project, 
+  "description" => "A website that uses D3.js to visually analyze climate change data. Data visualizations include line charts and stacked area charts of global climate change data, as well as a detailed choropleth map and other visualizations of canadian weather data.",
+  "primaryLink" => "http://understandingclimatechange.rmichels.com/ccImpacts.html",
+  "primaryLinkText" => "View Project"]);
+
+Partial::build('projectPageMeta', ["project" => $project]);
+
+?>
+
+
+<div id="projContent"> <!--___________ Proj Content ____________-->
+
+  <!----- Content / Text ----->
+  <section class="sectionText">
+    <h2>The Task</h2>
+    <p>As an exercise of interactive data visualization techniques we planned to comprehensively visualize climate change data. Our goal was to condense complex datasets into simple charts that communicate the mechanics, origins, and local impact of climate change in Canada. To entice users, we would develop simple interactions such as pop-up tooltips, as well as complex interactions such as brushing, changing representations and animation.</p>
+  </section>
+
+  <!----- Content / Media ----->
+  <section class="sectionMedia">
+    <div>
+      <figure>
+        <img src="assets/img/understandingClimateChange/chart1.jpg">
+      </figure>
+      <figure>
+        <img src="assets/img/understandingClimateChange/chart2.jpg">
+      </figure>
+      <figure>
+        <img src="assets/img/understandingClimateChange/chart3.jpg">
+      </figure>
+    </div>
+  </section>
+
+  <!----- Content / Text ----->
+  <section class="sectionText">
+    <h2>The Result</h2>
+    <h3>Understanding Climate Change</h3>
+    <p>Features four color coded line charts of global CO2 emissions and atmospheric concentration, as well as a stacked area chart of CO2 emissions by region.</p>
+    
+    <h3>Understanding Climate Change Impact</h3>
+    <p>With the choropleth map of Canada and its provinces and territories, users can explore Canadian weather data, including temperature and precipitation, by year, month and province. There is also a spider chart of the global temperature anomaly over time. Both charts can be dynamically queried and animated.</p>
+
+    <h3>Climate Change Impact Summary</h3>
+    <p>The climate change summary charts aim to show a correlation, or lack thereof, of CO2 emissions and weather anomalies. There are four line plots of mean Canadian weather temperature, precipitation, and their anomalies, grouped with a line plot of global CO2 emissions. </p>
+  </section>
+
+  <!----- Content / Media ----->
+  <section class="sectionMedia">
+    <div>
+      <figure>
+        <img src="assets/img/understandingClimateChange/chart4.jpg">
+      </figure>
+      <figure>
+        <img src="assets/img/understandingClimateChange/chart5.jpg">
+      </figure>
+    </div>
+  </section>
+
+  <!----- Content / Text ----->
+  <section class="sectionText">
+    <h2>Process</h2>
+    <p>We developed the project in a team of two, over the course of two months, and it was our first experience with D3.js. Early on, we defined two central questions that we would attempt to answer with the project:</p>
+    <ol>
+      <li>What are the contributing factors of climate change?</li>
+      <li>Since climate impacts weather, are there indications of Canadian weather behaving abnormally?</li>
+    </ol>
+    <p>After defining these questions, we set out to find relevant data. Most data needed to be cleaned for outliers and bad data. The most complex dataset was that of Canadian weather data, as we needed to manually merge multiple large datasets, clean and sort the data, and calculate monthly and annual averages.</p>
+    <p>The final phase of project development involved developing the D3.js driven visualizations and assembling the final website, which also doubles as a project report. Most charts, including the line charts and stacked area chart were fairly straightforward to implement. By far the most complex chart was the choropleth map of Canadian weather data. While the visual mapping of data to geography and color was challenging, the outcome was worth it. The resulting map provides an enticing and interactive way to quickly browse through a large dataset of Canadian weather data, and make local as well as federal-level observations.</p>
+  </section>
+
+  <!----- Content / Media ----->
+  <section class="sectionMedia">
+    <div>
+      <figure>
+        <img src="assets/img/understandingClimateChange/chart6.jpg">
+      </figure>
+    </div>
+  </section>
+  
+</div>
+    
+
+<?php
+
+  Partial::build('footer');
+
+?>

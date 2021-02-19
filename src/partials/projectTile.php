@@ -9,9 +9,10 @@ if (isset($roles)){
 ?>
 
 <div class="projRow projRow--visible" <?php if(isset($roles)) : ?>data-js='<?= $roleString; ?>'<?php endif; ?>>
-  <div class="projPanel">
+  <div class="projPanel <?php if ($inDevelopment) echo "inDevelopment" ?>">
     <a href="<?= $slug; ?>">
-      <img src="assets/img/lqip/<?= $slug; ?>.jpg" loading="lazy">
+      <img src="assets/img/lqip/<?= $slug; ?>.jpg" loading="lazy" <?php if ($inDevelopment) echo "class='inDevelopment'" ?>>
+      <?php if ($inDevelopment) echo "<div class='inDevelopmentText'>In Development</div>" ?>
       <div class="projJScontainer">
         <h2 class="projLabel"> <?= $name; ?> </h2>
         <h3 class="projMeta"> <?= $type; ?> </h3>

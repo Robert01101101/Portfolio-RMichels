@@ -68,7 +68,7 @@
 			color: _colour(white); /* TODO: wrap */
 		}
 
-		&:hover{
+		&:hover:not(.inDevelopment){
 			h2::after {
 				width: 120%;
 			}
@@ -114,6 +114,32 @@
 				right: 0;
 				width: 5rem;
 				height: 5rem;
+			}
+
+			//________________________________________________ In Development
+			&.inDevelopment {
+				filter: brightness(40%) contrast(70%);
+			}
+		}
+
+		.inDevelopmentText {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+
+			text-align: center;
+
+			color: _colour(white);
+			font-family: _font(family-alt);
+			font-weight: _font(weight-bold);
+
+			font-size: 2em;
+		}
+
+		&.inDevelopment {
+			h2, h3 {
+				color: #bbb !important;
 			}
 		}
 

@@ -9,6 +9,7 @@ class Project
     protected $name;
     protected $type;
     protected $year;
+    protected $inDevelopment;
     protected $roles = []; 
     protected $teammembers = []; 
 
@@ -146,6 +147,24 @@ class Project
         return $this;
     }
 
+    /**
+     * @return bool
+     */
+    public function getInDevelopment(): bool
+    {
+        return $this->inDevelopment;
+    }
+
+    /**
+     * @param mixed $bool
+     * @return Project
+     */
+    public function setInDevelopment($inDevelopment)
+    {
+        $this->inDevelopment = $inDevelopment;
+        return $this;
+    }
+
     public static function buildProjectFromSlug(string $slug) : self {
 
         // 1. Set up MySQLi connection
@@ -172,13 +191,15 @@ class Project
             $project_type = $row['project_type'];
             $project_year = $row['project_year'];
             $project_slug = $row['project_slug'];
+            $project_inDevelopment = $row['project_indevelopment'];
 
             $output = (new Project($project_slug))
                             ->setId($project_id)
                             ->setName($project_name)
                             ->setType($project_type)
                             ->setYear($project_year)
-                            ->setSlug( $project_slug);
+                            ->setSlug($project_slug)
+                            ->setInDevelopment($project_inDevelopment);
         }
 
         //2 GET ROLES

@@ -47,6 +47,12 @@ main {
 		//overflow: hidden;
 		padding: 2rem .02px;
 
+		figure {
+			img {
+				max-width: 100%;
+			}
+		}
+
 		.mediaRow {
 			display: flex;
 			flex-wrap: wrap;

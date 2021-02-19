@@ -19,7 +19,7 @@
       </div> 
     </div>
     <div class="col-50">
-      <img src="assets/img/<?php echo $project->getSlug() ?>.jpg" class="imgBG alt">
+      <img src="assets/img/<?php echo $project->getSlug() ?>.jpg" class="imgBG <?php if (isset($alt)) echo "alt" ?>">
       <img src="assets/img/<?php echo $project->getSlug() ?>.jpg">
     </div>
   </div>

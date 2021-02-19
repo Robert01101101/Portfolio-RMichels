@@ -49,7 +49,7 @@ $projects = Project::getProjects();
     echo "<div id='projectTileVisible'>";
 
     foreach ($projects as $project) {
-      Partial::build('projectTile', ["slug" => $project->getSlug(), "name" => $project->getName(), "type" => $project->getType(), "roles" => $project->getRoles()]);
+      Partial::build('projectTile', ["slug" => $project->getSlug(), "name" => $project->getName(), "type" => $project->getType(), "inDevelopment" => $project->getInDevelopment(), "roles" => $project->getRoles()]);
     }
 
     echo "</div>";

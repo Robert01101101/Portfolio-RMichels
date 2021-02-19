@@ -13,7 +13,8 @@ Partial::build('projectPageLanding',
   "primaryLink" => "http://amae.rmichels.com/",
   "primaryLinkText" => "Product Website",
   "secondaryLink" => "https://www.figma.com/proto/MTkTlvyHoJziDU2ZnpaCSs/334_Stage5_v2?node-id=2%3A2849&viewport=422%2C1134%2C0.19956186413764954&scaling=contain",
-  "secondaryLinkText" => "Interactive Mockup"]);
+  "secondaryLinkText" => "Interactive Mockup",
+  "alt" => TRUE]);
 
 Partial::build('projectPageMeta', ["project" => $project]);
 
