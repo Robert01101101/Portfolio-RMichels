@@ -22,19 +22,53 @@ Partial::build('projectPageMeta', ["project" => $project]);
 
   <!----- Content / Text ----->
   <section class="sectionText">
-    <h2>Placeholder Content</h2>
-    <p>This area is currently in development.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mattis lacinia eros, id scelerisque tortor finibus nec. Etiam ut rhoncus dui, vitae mollis mi. Nulla elementum volutpat erat, scelerisque porttitor nisi consectetur ut. Vivamus fermentum nunc eget tortor vehicula aliquet. Sed tristique pharetra quam vitae mollis. Aliquam sed feugiat mauris. Suspendisse pulvinar diam et ligula lacinia vestibulum. Aenean lacinia diam nec eros egestas, quis fermentum magna vehicula. Praesent consectetur, risus et dictum convallis, leo odio placerat elit, egestas vestibulum eros sem quis ligula. In hac habitasse platea dictumst.</p>
-    <h2>Placeholder Process</h2>
-    <p>Pellentesque rhoncus vestibulum est non pharetra. Praesent auctor arcu ac eleifend dignissim. Integer et egestas nisi. Aenean eu urna gravida, lobortis metus et, cursus enim. Etiam ac sem quis sem aliquet dignissim. Etiam sapien ex, maximus a sem sed, dignissim aliquet arcu. Donec porta placerat velit, non sollicitudin dui euismod a. Sed quis lorem venenatis, ultricies augue id, gravida mi. Mauris sed pellentesque est, et commodo felis.</p>
-    <p>Proin molestie a mi vel laoreet. Praesent sed commodo mauris, at malesuada leo. Nullam condimentum fermentum sem. Nullam enim libero, mattis in neque nec, consectetur dictum sem. Sed porta venenatis diam, ut maximus dui tristique rhoncus.</p>
+    <h2>The Task</h2>
+    <p>The intent of this project was to practice back-end development, using the LAMP stack. Users can sign up to the site, interact with items on the site and are greeted by a customized homepage. The site features database driven content, secure authentication handling, and AJAX searching and filtering.</p>
   </section>
 
-  <!----- Content / Video ----->
-  <div class="auto-resizable-iframe">
-    <div>
-      <iframe src="https://www.youtube.com/embed/6KXxwxTnbgM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <!----- Content / Media ----->
+  <section class="sectionMedia">
+    <div class="mediaSquare">
+      <figure>
+        <img src="assets/img/harbingersofdeath/screen-home.png">
+        <figcaption class="center">Homepage</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/harbingersofdeath/screen-omen.png">
+        <figcaption class="center">Omen Content Unit</figcaption>
+      </figure>
     </div>
-  </div>
+  </section>
+
+  <!----- Content / Text ----->
+  <section class="sectionText">
+    <h2>The Result</h2>
+    <p>Harbingers of Death presents now-defunct omens sourced from an 1889 article as if they are real, as a satire of modern conspiracy theories. The Content Units are individual omens. They contain information about who is affected, what triggers the omen and the kind of scenario you would encounter them in. User’s can explore them through different taxonomies and by search.</p>
+    <p>Visitors can filter the omens by who is at fault, who will die, and the aspect of life that they apply to. Visitors may also search omens using a text input.</p>
+    <p>Website members sign in to keep track of which omens they have experienced, and who it indicates is going to die.</p>
+  </section>
+
+  <!----- Content / Media ----->
+  <section class="sectionMedia">
+    <div class="mediaSquare">
+      <!--<figure>
+        <img src="assets/img/harbingersofdeath/screen-search.png">
+        <figcaption class="center">Search</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/harbingersofdeath/screen-filter.png">
+        <figcaption class="center">Filter</figcaption>
+      </figure>-->
+      <figure>
+        <img src="assets/img/harbingersofdeath/animated-form.gif" ignorelqip>
+        <figcaption class="center">Form Styling (Accessible without JS)</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/harbingersofdeath/screen-member-home.png">
+        <figcaption class="center">Member Homepage</figcaption>
+      </figure>
+    </div>
+  </section>
   
 </div>
     
