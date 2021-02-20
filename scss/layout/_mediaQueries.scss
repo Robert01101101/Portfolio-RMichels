@@ -10,6 +10,10 @@ $screen-lg-min: 992px;
 // Large tablets and desktops
 $screen-xl-min: 1200px;
 
+// Ultrawide
+$screen-xxl-min: 1600px;
+
+
 // Small devices
 @mixin sm {
    @media (min-width: #{$screen-sm-min}) {
@@ -37,6 +41,13 @@ $screen-xl-min: 1200px;
        @content;
    }
 }
+
+// Extra large devices
+@mixin xxl {
+    @media (min-width: #{$screen-xxl-min}) and (orientation: landscape) {
+        @content;
+    }
+ }
 
 @mixin retina {
   @media 

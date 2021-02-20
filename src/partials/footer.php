@@ -8,23 +8,34 @@
 
     <footer>
       <h2>Intrigued?</h2>
-      <div class="getInTouch">
-        <h3>Get in touch with me &nbsp;&#8594;</h3>
-        <ul class="icons">
-          <a href="mailto: robert_michels@outlook.com" target="_blank" title="E-Mail"><li><i class="fas fa-at fa-2x"></i></li></a>
-          <a href="https://linkedin.com/in/robert-michels" target="_blank" title="LinkedIn"><li><i class="fab fa-linkedin-in fa-2x"></i></li></a>
-          <a href="https://github.com/robert-michels" target="_blank" title="GitHub"><li><i class="fab fa-github fa-2x"></i></li></a>
-          <a href="https://play.google.com/store/apps/developer?id=Studio+RM" target="_blank" title="Google Play"><li><i class="fab fa-google-play fa-2x"></i></li></a>
-          <a href="https://rmichels.itch.io/" target="_blank" ><li><i class="fab fa-itch-io fa-2x"title="Itch.io"></i></li></a>
-          </ul>
+      <div class="footer_row">
+        <div class="footer_lCol">
+          <h3>Get in touch with me &nbsp;&#8594;</h3>
+          <noscript><small>robert_michels@outlook.com</small></noscript>
+        </div>
+        <div class="footer_rCol">
+          <div>
+            <ul class="icons">
+              <div class="emailContainer" onmouseover="overEmailOverlay()" onmouseout="outEmailOverlay()">
+                <a href="mailto: robert_michels@outlook.com" target="_blank" title="E-Mail"><li><i class="fas fa-at fa-2x" id="email"></i></li></a>
+                <div id="emailOverlay" class="hide" onmouseover="overEmailContainer()" onmouseout="outEmailContainer()">
+                  <small class="js-emaillink">robert_michels@outlook.com</small>  
+                  <i class="far fa-copy js-emailcopybtn" title="Copy E-Mail to Clipboard"></i> 
+                </div>
+              </div>
+              <a href="https://linkedin.com/in/robert-michels" target="_blank" title="LinkedIn"><li><i class="fab fa-linkedin-in fa-2x"></i></li></a>
+              <a href="https://github.com/robert-michels" target="_blank" title="GitHub"><li><i class="fab fa-github fa-2x"></i></li></a>
+              <a href="https://play.google.com/store/apps/developer?id=Studio+RM" target="_blank" title="Google Play"><li><i class="fab fa-google-play fa-2x"></i></li></a>
+              <a href="https://rmichels.itch.io/" target="_blank" ><li><i class="fab fa-itch-io fa-2x"title="Itch.io"></i></li></a>
+            </ul>
+          </div>
+          <small>Copyright &copy; <?php echo date("Y"); ?> Robert Michels. All Rights Reserved.</small>
+        </div>
       </div>
-
-      <div class="footer_lastRow">
-        <small>Copyright &copy; <?php echo date("Y"); ?> Robert Michels. All Rights Reserved.</small>
-      </div>
-      
     </footer>
   </div>
+
+  <div id="copyConfirm" class="hidden"><small>Copied to Clipboard!</small></div>
 
   <?php if(!isset($_COOKIE["returningVisitor"])) : ?>
 
@@ -102,6 +113,7 @@
   <?php endif; ?>
   
   <script src="js/projectTile.js"></script>
+  <script src="js/other.js"></script>
 
 
 </body>

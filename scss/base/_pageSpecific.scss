@@ -3,6 +3,23 @@ section#Projects{
 	margin-bottom: 16rem;
 }
 
+//______________________________________________ Index
+.skills {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: flex-start;
+
+	h3 {
+		margin-top: 0;
+	}
+
+	ul {
+		padding-left: 1.4rem;
+	}
+}
+
 //////////////////////////////////////////////// TMP
 #tmpVisitorPopUp {
 	position: fixed;

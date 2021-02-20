@@ -83,11 +83,37 @@ Partial::build('header');
 
 <section class="sectionText">
   <h1 id="About">About Me</h1>
-  <p>I am a digital media designer hailing from Stuttgart, Germany and Vancouver, Canada. I attended Simon Fraser University, where I earned my Bachelor’s Degree of Science, majoring in Interactive Arts & Technology.<br><br>With a strong interdisciplinary background, I am interested in the design and development of interactive systems - such as games and websites. My curiosity has allowed me to apply my skills and gain more experience with plenty of platforms. These include Unity and C# for the development of games for VR, phones and desktop. I also have experience with fullstack development of websites and apps, such as using the LAMP development stack.<br><br>I am currently looking for jobs. If you are interested, please shoot me a message!</p>
-</section>
-<section class="sectionText">
-  <h2 id="Contact">Contact:</h2>
-  <p>Etiam pulvinar eget ligula sit amet sollicitudin. Aliquam sed risus metus. Morbi dapibus tristique sapien luctus molestie. Phasellus sit amet molestie ipsum, id convallis dolor.</p>
+  <p>I’m Robert Michels, a designer and developer from Vancouver. I attended Simon Fraser University (SFU), where I earned my Bachelor’s Degree in Science with a major in Interactive Arts & Technology. My inexhaustible curiosity has made me a jack of all trades, who’s specialized in designing and developing games and websites.</p>
+  <h2>Skills</h2>
+  <div class="skills">
+    <div>
+      <h3>Design Skills</h3>
+      <ul>
+        <li>UX Design</li>
+        <li>UI Design</li>
+        <li>Game Design</li>
+        <li>VR Ix Design</li>
+      </ul>
+    </div><div>
+      <h3>Development Skills</h3>
+      <ul>
+        <li>Web Front-End</li>
+        <li>Web Back-End</li>
+        <li>Game Dev</li>
+        <li>VR Dev</li>
+        <li>Java</li>
+        <li>D3.js</li>
+        <li>Three.js</li>
+      </ul>
+    </div><div>
+      <h3>Other Skills</h3>
+      <ul>
+        <li>Project Management</li>
+        <li>3D Modelling</li>
+        <li>CAD Modelling</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
 <script>

@@ -11,3 +11,5 @@ COMMIT;
 
 
 # Delete association
+
+DELETE FROM project_teammembers WHERE project_id=4 AND teammember_id = 0;
