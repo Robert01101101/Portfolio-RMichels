@@ -3,9 +3,9 @@
 require "src/Partial.php";
 require "src/objects/Project.php";
 
-Partial::build('header');
-
 $project = Project::buildProjectFromSlug('understandingClimateChange');
+
+Partial::build('header', ["project" => $project]);
 
 Partial::build('projectPageLanding', 
   ["project" => $project, 
@@ -28,14 +28,14 @@ Partial::build('projectPageMeta', ["project" => $project]);
 
   <!----- Content / Media ----->
   <section class="sectionMedia">
-    <div>
-      <figure>
+    <div class="mediaColumn">
+      <figure onclick="viewImage(this)">
         <img src="assets/img/understandingClimateChange/chart1.jpg">
       </figure>
-      <figure>
+      <figure onclick="viewImage(this)">
         <img src="assets/img/understandingClimateChange/chart2.jpg">
       </figure>
-      <figure>
+      <figure onclick="viewImage(this)">
         <img src="assets/img/understandingClimateChange/chart3.jpg">
       </figure>
     </div>
@@ -56,11 +56,11 @@ Partial::build('projectPageMeta', ["project" => $project]);
 
   <!----- Content / Media ----->
   <section class="sectionMedia">
-    <div>
-      <figure>
+    <div class="mediaColumn">
+      <figure onclick="viewImage(this)">
         <img src="assets/img/understandingClimateChange/chart4.jpg">
       </figure>
-      <figure>
+      <figure onclick="viewImage(this)">
         <img src="assets/img/understandingClimateChange/chart5.jpg">
       </figure>
     </div>
@@ -80,8 +80,8 @@ Partial::build('projectPageMeta', ["project" => $project]);
 
   <!----- Content / Media ----->
   <section class="sectionMedia">
-    <div>
-      <figure>
+    <div class="mediaColumn">
+      <figure onclick="viewImage(this)">
         <img src="assets/img/understandingClimateChange/chart6.jpg">
       </figure>
     </div>

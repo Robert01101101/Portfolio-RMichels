@@ -59,6 +59,13 @@
 
   <?php endif; ?>
 
+  <div id="imageViewer" class="hidden">
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <i class="fas fa-expand hidden" id="fullScreenExpand" onclick="expandView(this)"></i><i class="fas fa-compress" id="fullScreenCompress" onclick="compressView(this)"></i>
+  </div>
+
   <!--############### JavaScript Loading Section ###############-->
   <script type="x-shader/x-vertex" id="vertexshader">
 
@@ -98,7 +105,7 @@
   <!--<script src="three/skull.js"></script>-->
 
   <script src="js/three/waves.js"></script>
-  <script src="js/downArrow.js"></script>
+  
 
   <?php if(isset($index)) : ?>
 
@@ -110,10 +117,21 @@
 
     <script src="js/projectFilter.js"></script>
 
+  <?php else: ?>
+
+    <script src="js/downArrow.js"></script>
+
+  <?php endif; ?>
+
+  <?php if(!isset($index) && !isset($projects)) : ?>
+
+    <script src="js/imageViewer.js"></script>
+
   <?php endif; ?>
   
   <script src="js/projectTile.js"></script>
   <script src="js/other.js"></script>
+  
 
 
 </body>

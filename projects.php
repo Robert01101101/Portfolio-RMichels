@@ -6,7 +6,7 @@ require "src/objects/Project.php";
 // start session so that we can store logged in cookie
 // session_start();
 
-Partial::build('header');
+Partial::build('header', ["projects" => TRUE]);
 
 $projects = Project::getProjects();
 

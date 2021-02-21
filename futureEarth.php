@@ -3,9 +3,9 @@
 require "src/Partial.php";
 require "src/objects/Project.php";
 
-Partial::build('header');
-
 $project = Project::buildProjectFromSlug('futureEarth');
+
+Partial::build('header', ["project" => $project]);
 
 Partial::build('projectPageLanding', 
   ["project" => $project, 
@@ -32,23 +32,23 @@ Partial::build('projectPageMeta', ["project" => $project]);
 
   <!----- Content / Media ----->
   <section class="sectionMedia">
-    <div class="mediaSquare">
-      <figure>
+    <div class="mediaGrid">
+      <figure onclick="viewImage(this)">
         <img src="assets/img/futureearth/3.jpg">
       </figure>
-      <figure>
+      <figure onclick="viewImage(this)">
         <img src="assets/img/futureearth/4.jpg">
       </figure>
-      <figure>
+      <figure onclick="viewImage(this)">
         <img src="assets/img/futureearth/5.jpg">
       </figure>
-      <figure>
+      <figure onclick="viewImage(this)">
         <img src="assets/img/futureearth/6.jpg">
       </figure>
-      <figure>
+      <figure onclick="viewImage(this)">
         <img src="assets/img/futureearth/7.jpg">
       </figure>
-      <figure>
+      <figure onclick="viewImage(this)">
         <img src="assets/img/futureearth/8.jpg">
       </figure>
     </div>
@@ -67,23 +67,23 @@ Partial::build('projectPageMeta', ["project" => $project]);
 
   <!----- Content / Media ----->
   <section class="sectionMedia">
-    <div class="mediaSquare">
-      <figure>
+    <div class="mediaGrid">
+      <figure onclick="viewImage(this)">
         <img src="assets/img/futureearth/9.jpg">
       </figure>
-      <figure>
+      <figure onclick="viewImage(this)">
         <img src="assets/img/futureearth/10.jpg">
       </figure>
-      <figure>
+      <figure onclick="viewImage(this)">
         <img src="assets/img/futureearth/11.jpg">
       </figure>
-      <figure>
+      <figure onclick="viewImage(this)">
         <img src="assets/img/futureearth/12.jpg">
       </figure>
-      <figure>
+      <figure onclick="viewImage(this)">
         <img src="assets/img/futureearth/13.jpg">
       </figure>
-      <figure>
+      <figure onclick="viewImage(this)">
         <img src="assets/img/futureearth/14.jpg">
       </figure>
     </div>
@@ -100,35 +100,35 @@ Partial::build('projectPageMeta', ["project" => $project]);
 
   <!----- Content / Media ----->
   <section class="sectionMedia">
-    <div class="mediaSquare">
-      <figure>
+    <div class="mediaGrid">
+      <figure onclick="viewImage(this)">
         <img src="assets/img/futureearth/15.jpg">
       </figure>
-      <figure>
+      <figure onclick="viewImage(this)">
         <img src="assets/img/futureearth/16.jpg">
       </figure>
-      <figure>
+      <figure onclick="viewImage(this)">
         <img src="assets/img/futureearth/17.jpg">
       </figure>
-      <figure>
+      <figure onclick="viewImage(this)">
         <img src="assets/img/futureearth/18.jpg">
       </figure>
-      <figure>
+      <figure onclick="viewImage(this)">
         <img src="assets/img/futureearth/19.jpg">
       </figure>
-      <figure>
+      <figure onclick="viewImage(this)">
         <img src="assets/img/futureearth/20.jpg">
       </figure>
-      <figure>
+      <figure onclick="viewImage(this)">
         <img src="assets/img/futureearth/hud1.jpg">
       </figure>
-      <figure>
+      <figure onclick="viewImage(this)">
         <img src="assets/img/futureearth/hud2.jpg">
       </figure>
-      <figure>
+      <figure onclick="viewImage(this)">
         <img src="assets/img/futureearth/hud3.jpg">
       </figure>
-      <figure>
+      <figure onclick="viewImage(this)">
         <img src="assets/img/futureearth/hud4.jpg">
       </figure>
     </div>

@@ -6,6 +6,8 @@ header {
     //background-color: white;
     position: fixed;
     top: 0;
+
+    pointer-events: none;
   }
 
   ul {
@@ -14,12 +16,16 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    pointer-events: none;
   }
 
   li {
     display: inline-block;
     vertical-align: middle;
     z-index: 250;
+
+    pointer-events: auto;
   }
 
   //________________________________________________________ Cross Icon & Animation
@@ -56,5 +62,6 @@ header {
   //________________________________________________________ Home Icon
   i {
     color: _colour(white);
+    font-size: 1.1em;
   }
 }

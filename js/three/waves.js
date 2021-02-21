@@ -254,7 +254,7 @@ function waves () {
 
 		renderer.render( scene, camera );
 
-		count += 0.03;
+		count += 0.02;
 
 	}
 

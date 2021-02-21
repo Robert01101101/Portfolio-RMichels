@@ -3,6 +3,11 @@
 html, body {
     max-width: 100%;
     overflow-x: hidden;
+
+	.stop-scrolling {
+		//max-height: 100vh;
+		//overflow-y: hidden;
+	}
 }
 
 html {
@@ -12,6 +17,11 @@ html {
 
 main, #MainGrid {
 	margin: 0;
+
+	.stop-scrolling {
+		//max-height: 100vh;
+		//overflow-y: hidden;
+	}
 }
 
 #MainGrid {
@@ -46,83 +56,6 @@ main {
 		margin-bottom: 10rem;
 		//overflow: hidden;
 		padding: 2rem .02px;
-
-		figure {
-			img {
-				max-width: 100%;
-			}
-		}
-
-		.mediaRow {
-			display: flex;
-			flex-wrap: wrap;
-			flex-direction: row;
-			justify-content: space-between;
-			align-items: flex-start;
-			align-content: flex-start;
-
-			gap: _size(gap);
-
-			@include lg {
-				flex-wrap: nowrap;
-
-				&-zigzag {
-					figure {
-						&:nth-of-type(even) {
-							margin-top: 5rem;
-						}
-					}
-				}
-			}
-
-			figure {
-				margin: 0;
-				
-				/* four items (requires different width, from: https://stackoverflow.com/questions/8720931/can-css-detect-the-number-of-children-an-element-has) */ 
-				&:first-child:nth-last-child(4),
-				&:first-child:nth-last-child(4) ~ figure {
-					flex: 1 0 40%;
-
-					@include lg {
-						flex: 0 1 auto;
-					}
-				}
-
-				flex: 1 0 30%;
-
-				@include lg {
-					flex: 0 1 auto;
-				}
-	
-				img {
-					max-width: 100%;
-				}
-			}
-		}
-
-		.mediaSquare {
-			display: flex;
-			flex-wrap: wrap;
-			flex-direction: row;
-			justify-content: space-between;
-			align-items: flex-start;
-			align-content: flex-start;
-
-			gap: _size(gap);
-
-			figure {
-				flex: 0 1 auto;
-				margin: 0;
-
-				@include lg {
-					flex: 1 0 40%;
-				}
-	
-				img {
-					max-width: 100%;
-				}
-			}
-		}
 	}
 
 	//______________________________________ SECTION TEXT

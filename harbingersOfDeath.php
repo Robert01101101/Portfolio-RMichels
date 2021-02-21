@@ -3,9 +3,9 @@
 require "src/Partial.php";
 require "src/objects/Project.php";
 
-Partial::build('header');
-
 $project = Project::buildProjectFromSlug('harbingersOfDeath');
+
+Partial::build('header', ["project" => $project]);
 
 Partial::build('projectPageLanding', 
   ["project" => $project, 
@@ -29,11 +29,11 @@ Partial::build('projectPageMeta', ["project" => $project]);
   <!----- Content / Media ----->
   <section class="sectionMedia">
     <div class="mediaSquare">
-      <figure>
+      <figure onclick="viewImage(this)">
         <img src="assets/img/harbingersofdeath/screen-home.png">
         <figcaption class="center">Homepage</figcaption>
       </figure>
-      <figure>
+      <figure onclick="viewImage(this)">
         <img src="assets/img/harbingersofdeath/screen-omen.png">
         <figcaption class="center">Omen Content Unit</figcaption>
       </figure>
@@ -51,19 +51,19 @@ Partial::build('projectPageMeta', ["project" => $project]);
   <!----- Content / Media ----->
   <section class="sectionMedia">
     <div class="mediaSquare">
-      <!--<figure>
+      <!--<figure onclick="viewImage(this)">
         <img src="assets/img/harbingersofdeath/screen-search.png">
         <figcaption class="center">Search</figcaption>
       </figure>
-      <figure>
+      <figure onclick="viewImage(this)">
         <img src="assets/img/harbingersofdeath/screen-filter.png">
         <figcaption class="center">Filter</figcaption>
       </figure>-->
-      <figure>
+      <figure onclick="viewImage(this)">
         <img src="assets/img/harbingersofdeath/animated-form.gif" ignorelqip>
         <figcaption class="center">Form Styling (Accessible without JS)</figcaption>
       </figure>
-      <figure>
+      <figure onclick="viewImage(this)">
         <img src="assets/img/harbingersofdeath/screen-member-home.png">
         <figcaption class="center">Member Homepage</figcaption>
       </figure>

@@ -3,9 +3,9 @@
 require "src/Partial.php";
 require "src/objects/Project.php";
 
-Partial::build('header');
-
 $project = Project::buildProjectFromSlug('cyberview');
+
+Partial::build('header', ["project" => $project]);
 
 Partial::build('projectPageLanding', 
   ["project" => $project, 
@@ -32,18 +32,18 @@ Partial::build('projectPageMeta', ["project" => $project]);
 
   <!----- Content / Media ----->
   <section class="sectionMedia">
-    <figure>
+    <figure ignorecarousel>
       <div class="mediaSquare">
-        <figure>
+        <figure onclick="viewImage(this)">
           <img src="assets/img/cyberview/screen-0.jpg">
         </figure>
-        <figure>
+        <figure onclick="viewImage(this)">
           <img src="assets/img/cyberview/screen-1.jpg">
         </figure>
-        <figure>
+        <figure onclick="viewImage(this)">
           <img src="assets/img/cyberview/screen-2.jpg">
         </figure>
-        <figure>
+        <figure onclick="viewImage(this)">
           <img src="assets/img/cyberview/screen-3.jpg">
         </figure>
       </div>

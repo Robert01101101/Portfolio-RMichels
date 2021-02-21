@@ -3,9 +3,9 @@
 require "src/Partial.php";
 require "src/objects/Project.php";
 
-Partial::build('header');
-
 $project = Project::buildProjectFromSlug('projPage');
+
+Partial::build('header', ["project" => $project]);
 
 Partial::build('projectPageLanding', ["project" => $project]);
 Partial::build('projectPageMeta', ["project" => $project]);

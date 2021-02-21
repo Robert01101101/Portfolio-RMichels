@@ -22,10 +22,23 @@ setcookie("returningVisitor", "true");
     gtag('config', 'G-WXGTTGWVKL');
   </script>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <meta name="description" content="I am a digital media designer with a strong interdisciplinary background, based in Vancouver, Canada. I design and program games, websites, and apps. Robert Michels Portfolio.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Portfolio | Robert Michels</title>
+  <?php if(isset($project)) : ?>
+    <meta name="description" content="<?php echo $project->getName() ?> (<?php echo $project->getType() ?>) | Robert Michels Portfolio | I’m Robert Michels, a designer and developer from Vancouver. I design and program games, websites, and apps. ">
+    <title><?php echo $project->getName() ?> | Robert Michels Portfolio</title>
+
+  <?php elseif(isset($projects)) : ?>
+    <meta name="description" content="Browse through all my projects. Filter them to only see relevant projects. | Robert Michels Portfolio">
+    <title>All Projects | Robert Michels Portfolio</title>
+
+  <?php else : ?>
+    <meta name="description" content="I’m Robert Michels, a designer and developer from Vancouver. I design and program games, websites, and apps. | Robert Michels Portfolio">
+    <title>Portfolio | Robert Michels</title>
+
+  <?php endif; ?>
+
+
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">

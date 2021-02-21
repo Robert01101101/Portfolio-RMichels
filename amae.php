@@ -3,9 +3,9 @@
 require "src/Partial.php";
 require "src/objects/Project.php";
 
-Partial::build('header');
-
 $project = Project::buildProjectFromSlug('amae');
+
+Partial::build('header', ["project" => $project]);
 
 Partial::build('projectPageLanding', 
   ["project" => $project, 
@@ -34,19 +34,19 @@ Partial::build('projectPageMeta', ["project" => $project]);
   <!----- Content / Media ----->
   <section class="sectionMedia">
     <div class="mediaRow mediaRow-zigzag">
-      <figure>
+      <figure onclick="viewImage(this)">
         <img src="assets/img/amae/Screen_Dashboard.png">
         <figcaption class="center">Dashboard</figcaption>
       </figure>
-      <figure>
+      <figure onclick="viewImage(this)">
         <img src="assets/img/amae/Screen_Nanny.png">
         <figcaption class="center">Nanny</figcaption>
       </figure>
-      <figure>
+      <figure onclick="viewImage(this)">
         <img src="assets/img/amae/Screen_Learn.png">
         <figcaption class="center">Learn</figcaption>
       </figure>
-      <figure>
+      <figure onclick="viewImage(this)">
         <img src="assets/img/amae/Screen_Chat.png">
         <figcaption class="center">Chat</figcaption>
       </figure>
@@ -71,18 +71,18 @@ Partial::build('projectPageMeta', ["project" => $project]);
 
    <!----- Content / Media ----->
    <section class="sectionMedia">
-    <figure>
+    <figure ignorecarousel>
       <div class="mediaSquare">
-        <figure>
+        <figure onclick="viewImage(this)">
           <img src="assets/img/amae/process-scroll.jpg">
         </figure>
-        <figure>
+        <figure onclick="viewImage(this)">
           <img src="assets/img/amae/process-modality.jpg">
         </figure>
-        <figure>
+        <figure onclick="viewImage(this)">
           <img src="assets/img/amae/process-styleguide.jpg">
         </figure>
-        <figure>
+        <figure onclick="viewImage(this)">
           <img src="assets/img/amae/process-components.jpg">
         </figure>
       </div>
@@ -102,15 +102,15 @@ Partial::build('projectPageMeta', ["project" => $project]);
 
   <!----- Content / Media ----->
   <section class="sectionMedia">
-    <figure>
+    <figure ignorecarousel>
       <div class="mediaRow">
-        <figure>
+        <figure onclick="viewImage(this)">
           <img src="assets/img/amae/site-home.jpg">
         </figure>
-        <figure>
+        <figure onclick="viewImage(this)">
           <img src="assets/img/amae/site-taskboard.jpg">
         </figure>
-        <figure>
+        <figure onclick="viewImage(this)">
           <img src="assets/img/amae/site-concept.jpg">
         </figure>
       </div>
