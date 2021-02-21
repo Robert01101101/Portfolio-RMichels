@@ -109,12 +109,16 @@
 		align-items: center;
 
 		opacity: 1; visibility: visible;
-		transition: opacity .5s;
+		transition: opacity .5s, visibility, .55s, transform .2s;
 		
 		user-select: none;
 		cursor: pointer;
 
 		z-index: 1000;
+
+		&:hover {
+			transform: scale(1.1);
+		}
 
 		&.hidden {
 			display: none;
