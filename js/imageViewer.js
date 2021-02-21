@@ -4,7 +4,7 @@ const imageViewer = document.getElementById('imageViewer');
 var body = document.getElementsByTagName("BODY")[0];//const body = document.getElementById('Content');
 var mainGrid = document.getElementById('MainGrid');
 var viewerOpen = false;
-var newDiv, clone, originImage, next, prev;
+var newDiv, clone, originImage, next, prev, closeBtn;
 var origInnerHTML = imageViewer.innerHTML;
 
 function viewImage (sourceImage, carousel=false) {
@@ -21,6 +21,7 @@ function viewImage (sourceImage, carousel=false) {
         originImage = sourceImage;
         viewerOpen = true;
         clone = sourceImage.cloneNode(true)
+        clone.removeAttribute("onclick");
         //add cloned image
         imageViewer.appendChild(clone);
 
@@ -73,8 +74,10 @@ function viewImage (sourceImage, carousel=false) {
         var loadDelay = 10;
         next = document.getElementsByClassName("next")[0];
         prev = document.getElementsByClassName("prev")[0];
+        closeBtn = document.getElementsByClassName("closeBtn")[0];
         next.classList.add("hidden");
         prev.classList.add("hidden");
+        closeBtn.classList.add("hidden");
         setTimeout(function() {
             tmpDisableImg = false;
             updateArrows();
@@ -88,6 +91,7 @@ function viewImage (sourceImage, carousel=false) {
 
 //_____________________________________ Close //
 function closeImageViewer() {
+    console.log("close");
     viewerOpen = false;
     //hide & clear viewer
     if (!imageViewer.classList.contains('hidden')) imageViewer.classList.add('hidden');
@@ -221,14 +225,17 @@ function updateArrows() {
     if (windowWidth - imgWidth < 170) {
         if (!next.classList.contains('flip')) next.classList.add('flip');
         if (!prev.classList.contains('flip')) prev.classList.add('flip');
+        if (!closeBtn.classList.contains('flip')) closeBtn.classList.add('flip');
         //console.log("arrowsInside");
     } else {
         if (next.classList.contains('flip')) next.classList.remove('flip');
         if (prev.classList.contains('flip')) prev.classList.remove('flip');
+        if (closeBtn.classList.contains('flip')) closeBtn.classList.remove('flip');
         //console.log("arrowsOutside");
     }
     next.classList.remove("hidden");
     prev.classList.remove("hidden");
+    closeBtn.classList.remove("hidden");
 }
   
 window.onresize = updateArrows;

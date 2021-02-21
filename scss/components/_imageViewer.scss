@@ -75,7 +75,7 @@
 				transform: scale(1.1);
 			}
 
-			opacity: 0; visibility: hidden; transition: .2s;
+			opacity: 0; visibility: hidden; transition: .5s;
 		}
 
 		&:hover{
@@ -85,7 +85,7 @@
 		}
 
 		&:not(:hover) {
-			.prev.flip, .next.flip {
+			.prev.flip, .next.flip, .closeBtn.flip {
 				opacity: 0; visibility: hidden;
 			}
 		}
@@ -95,7 +95,7 @@
 		display: none;
 	}
 
-	.prev, .next {
+	.prev, .next, .closeBtn {
 		position: absolute;
 		top: 50%;
 
@@ -109,7 +109,7 @@
 		align-items: center;
 
 		opacity: 1; visibility: visible;
-		transition: opacity .2s;
+		transition: opacity .5s;
 		
 		user-select: none;
 		cursor: pointer;
@@ -121,6 +121,10 @@
 		}
 	}
 
+	.closeBtn {
+		top: 2rem;
+	}
+
 	.prev {
 		left: -5rem;
 
@@ -129,7 +133,7 @@
 		}
 	}
 
-	.next {
+	.next, .closeBtn {
 		right: -5rem;
 
 		&.flip {
