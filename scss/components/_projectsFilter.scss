@@ -56,7 +56,7 @@
         }
         .onoffswitch-inner:before, .onoffswitch-inner:after {
             display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
-            color: white; font-size: _size(textS); font-family: _font(family-header); font-weight: _font(weight-medium);
+            color: white; font-size: _size(textS); font-family: _font(family-body); font-weight: _font(weight-medium);
             box-sizing: border-box;
         }
         .onoffswitch-inner:before {

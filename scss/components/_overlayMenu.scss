@@ -26,8 +26,18 @@
 
         transition: .4s;
 
-        > a{
+        a {
             color: _colour(white);
+            transition: 1s;
+
+            &:hover {
+                * {
+                    text-decoration: underline !important;
+                }
+            }
+        }
+
+        > a{
             font-weight: _font(weight-bold);
 
             &:not(:first-of-type) {
@@ -44,7 +54,6 @@
 
             a {
                 font-weight: _font(weight-light);
-                color: _colour(white);
 
                 &:not(:first-of-type) {
                     margin-top: 1rem;

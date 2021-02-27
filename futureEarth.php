@@ -10,8 +10,8 @@ Partial::build('header', ["project" => $project]);
 Partial::build('projectPageLanding', 
   ["project" => $project, 
   "description" => "Future Earth is a VR adventure game set in a dystopian future, where the player has to grow trees, fight droids and collect parts.",
-  "primaryLink" => "https://sidequestvr.com/my-app/2597",
-  "primaryLinkText" => "TODO: SideQuest",
+  "primaryLink" => "https://sidequestvr.com/app/2597/future-earth",
+  "primaryLinkText" => "SideQuest",
   "secondaryLink" => "https://404teamnotfound444314077.wordpress.com/",
   "secondaryLinkText" => "Development Blog",
   "alt" => TRUE]);

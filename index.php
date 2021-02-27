@@ -11,7 +11,7 @@ Partial::build('header');
 ?>
 
 
-<div class="downArrow"  id="downArrow"><a href="#MyWork"><i class="fas fa-chevron-down"></i></a></div>
+<div class="downArrow"  id="downArrow"><a href="#MyWork" title="View Projects"><i class="fas fa-chevron-down"></i></a></div>
 <canvas id="threeModel"></canvas>
 <!--<canvas class="cropCanvas"></canvas>-->
 <img src="assets/img/lqip/landingModel.gif" id="landingModelImage"></img>
@@ -79,41 +79,6 @@ Partial::build('header');
 </div>
 
 
-</section>
-
-<section class="sectionText">
-  <h1 id="About">About Me</h1>
-  <p>I’m Robert Michels, a designer and developer from Vancouver. I attended Simon Fraser University (SFU), where I earned my Bachelor’s Degree in Science with a major in Interactive Arts & Technology. My inexhaustible curiosity has made me a jack of all trades, who’s specialized in designing and developing games and websites.</p>
-  <h2>Skills</h2>
-  <div class="skills">
-    <div>
-      <h3>Design Skills</h3>
-      <ul>
-        <li>UX Design</li>
-        <li>UI Design</li>
-        <li>Game Design</li>
-        <li>VR Ix Design</li>
-      </ul>
-    </div><div>
-      <h3>Development Skills</h3>
-      <ul>
-        <li>Web Front-End</li>
-        <li>Web Back-End</li>
-        <li>Game Dev</li>
-        <li>VR Dev</li>
-        <li>Java</li>
-        <li>D3.js</li>
-        <li>Three.js</li>
-      </ul>
-    </div><div>
-      <h3>Other Skills</h3>
-      <ul>
-        <li>Project Management</li>
-        <li>3D Modelling</li>
-        <li>CAD Modelling</li>
-      </ul>
-    </div>
-  </div>
 </section>
 
 <script>

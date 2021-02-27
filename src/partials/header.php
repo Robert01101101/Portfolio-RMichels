@@ -32,6 +32,10 @@ setcookie("returningVisitor", "true");
     <meta name="description" content="Browse through all my projects. Filter them to only see relevant projects. | Robert Michels Portfolio">
     <title>All Projects | Robert Michels Portfolio</title>
 
+    <?php elseif(isset($about)) : ?>
+    <meta name="description" content="Who is this Robert Michels? I'm a digital media designer and developer from Vancouver. I design and program games, websites, and apps.">
+    <title>About | Robert Michels Portfolio</title>
+
   <?php else : ?>
     <meta name="description" content="I’m Robert Michels, a designer and developer from Vancouver. I design and program games, websites, and apps. | Robert Michels Portfolio">
     <title>Portfolio | Robert Michels</title>
@@ -65,8 +69,12 @@ setcookie("returningVisitor", "true");
     <header>
       <nav>
         <ul>
-          <li><a href="/<?php if(isset($_COOKIE['visitorFilter'])){ echo "?filter=".$_COOKIE['visitorFilter']; } ?>"><i class="fas fa-home"></i></a></li>
-          <li><div class="menuCont" onclick="toggleMenu()" id="MenuToggle">
+          <?php if(isset($project) || isset($about)) : ?>
+            <li><a href="/<?php if(isset($_COOKIE['visitorFilter'])){ echo "?filter=".$_COOKIE['visitorFilter']; } ?>"><i class="fas fa-home"></i></a></li>
+          <?php else : ?>
+            <li><a href="about" title="About"><i class="fas fa-info-circle"></i></a></li>
+          <?php endif; ?>
+          <li><div class="menuCont" onclick="toggleMenu()" id="MenuToggle" title="Menu">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
@@ -78,8 +86,9 @@ setcookie("returningVisitor", "true");
             <ul>
               <a href="index#MyWork" onclick="toggleMenu()"><li>Featured Work</li></a>
               <a href="index#About" onclick="toggleMenu()"><li>About</li></a>
-              <a href="index#Contact" onclick="toggleMenu()"><li>Contact</li></a>
+              <a href="#Footer" onclick="toggleMenu()"><li>Contact</li></a>
             </ul>
+            <a href="about"><li>About</li></a>
             <a href="projects"><li>All Projects</li></a>
           </ul>
         </div>

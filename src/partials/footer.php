@@ -6,7 +6,7 @@
 
     <!-- #################################### FOOTER ###################################### -->
 
-    <footer>
+    <footer id="Footer">
       <h2>Intrigued?</h2>
       <div class="footer_row">
         <div class="footer_lCol">
@@ -39,7 +39,7 @@
 
   <?php if(!isset($_COOKIE["returningVisitor"])) : ?>
 
-    <div id="tmpVisitorPopUp">
+    <!--<div id="tmpVisitorPopUp">
       <div>
         <h2>Hello There!</h2>
         <p>This website is in development &#38; is expected to be finished by Mid-February 2020.</p>
@@ -55,7 +55,7 @@
     function closePopUp() {
       document.getElementById("tmpVisitorPopUp").style.display = "none";
     }
-    </script>
+    </script>-->
 
   <?php endif; ?>
 

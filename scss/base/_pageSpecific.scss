@@ -7,16 +7,36 @@ section#Projects{
 .skills {
 	display: flex;
 	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-between;
+	flex-wrap: wrap;
+	justify-content: flex-start;
 	align-items: flex-start;
+
+	gap: 1rem;
+
+	@include sm {
+		justify-content: space-between;
+	}
+
+	@include md {
+		flex-wrap: nowrap;
+	}
 
 	h3 {
 		margin-top: 0;
 	}
 
 	ul {
-		padding-left: 1.4rem;
+		padding-left: 0rem;
+		list-style-type: none;
+
+		li {
+
+			&:before{
+				content: "-";
+				margin-right: 1.4rem;
+				color: white;
+			}
+		}
 	}
 }
 
@@ -81,6 +101,23 @@ section#Projects{
 		> div {
 			position: absolute;
 			bottom: 0;
+		}
+	}
+}
+
+//________________________________________________ about
+.sectionText {
+	&.about {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		align-content: center;
+		max-width: 100%;
+	
+		gap: 10rem;
+	
+		* {
+			flex-basis: 50%;
 		}
 	}
 }
