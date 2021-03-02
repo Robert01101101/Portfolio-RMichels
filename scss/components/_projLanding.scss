@@ -111,10 +111,24 @@
 	
 			&:hover {
 				text-decoration: underline;
+
+				&:after{
+					margin-left: -1.3rem;
+					text-decoration: none !important;
+				}
 			}
 
 			&:not(:last-of-type) {
 				margin-bottom: .2rem;
+			}
+
+			&:after{
+				white-space: pre;
+				content: "       →";
+				margin-left: -1.85rem;
+				color: white;
+				transition: .5s;
+				text-decoration: none !important;
 			}
 		}
 	}

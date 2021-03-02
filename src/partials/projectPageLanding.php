@@ -12,8 +12,8 @@
         <br>
         <div class="projectCallToAction">
         <?php 
-          if (isset($primaryLink)) echo '<a href="'.$primaryLink.'" target="_blank">'.$primaryLinkText.'  &#8594;</a>';
-          if (isset($secondaryLink)) echo '<a href="'.$secondaryLink.'" target="_blank">'.$secondaryLinkText.'  &#8594;</a>';
+          if (isset($primaryLink)) echo '<a href="'.$primaryLink.'" target="_blank">'.$primaryLinkText.'</a>';
+          if (isset($secondaryLink)) echo '<a href="'.$secondaryLink.'" target="_blank">'.$secondaryLinkText.'</a>';
         ?>
         </div>
       </div> 
