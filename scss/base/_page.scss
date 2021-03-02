@@ -26,6 +26,10 @@ main, #MainGrid {
 
 #MainGrid {
 	overflow: hidden;
+
+	&.noClick {
+		pointer-events: none;
+	}
 }
 
 figcaption {

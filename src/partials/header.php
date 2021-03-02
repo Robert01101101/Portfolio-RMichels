@@ -70,10 +70,10 @@ setcookie("returningVisitor", "true");
       <nav>
         <ul>
           <?php if(isset($project) || isset($about)) : ?>
-            <li><a title="Home" href="/<?php if(isset($_COOKIE['visitorFilter'])){ echo "?filter=".$_COOKIE['visitorFilter']; } ?>"><i class="fas fa-home"></i></a></li>
+            <li class="homeIcon"><a title="Home" href="/<?php if(isset($_COOKIE['visitorFilter'])){ echo "?filter=".$_COOKIE['visitorFilter']; } ?>"><i class="fas fa-home"></i></a></li>
 
           <?php else : ?>
-            <li><a title="About" href="about" title="About"><i class="fas fa-info-circle"></i></a></li>
+            <li class="homeIcon"><a title="About" href="about" title="About"><i class="fas fa-info-circle"></i></a></li>
 
           <?php endif; ?>
 

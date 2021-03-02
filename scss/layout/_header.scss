@@ -23,7 +23,11 @@ header {
   li {
     display: inline-block;
     vertical-align: middle;
-    z-index: 250;
+    z-index: 999;
+
+    &.homeIcon {
+      z-index: 800;
+    }
 
     pointer-events: auto;
   }

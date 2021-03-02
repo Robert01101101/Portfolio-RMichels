@@ -13,11 +13,16 @@
     white-space: nowrap;
     backdrop-filter: blur(15px);
 
+    z-index: 900;
+    
+
     #MenuContent {
         flex-direction: column;
         background-color: _colour(bg);
         //padding: 40vw;
         padding: 2rem;
+
+        pointer-events: auto;
 
 
         @include md {
@@ -38,7 +43,7 @@
         }
 
         > a{
-            font-weight: _font(weight-bold);
+            font-weight: _font(weight-light);
 
             &:not(:first-of-type) {
                 margin-top: 1rem;

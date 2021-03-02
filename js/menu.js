@@ -10,6 +10,7 @@ var menuToggle = document.getElementById('MenuToggle');
 var overlayMenu = document.getElementById("OverlayMenu");
 overlayMenu.classList.add("hidden");
 
+var mainGrid = document.getElementById('MainGrid');
 var contentToBlur = document.getElementById("Content");
 
 function toggleMenu() {
@@ -17,6 +18,7 @@ function toggleMenu() {
   menuToggle.classList.toggle("change");
   overlayMenu.classList.toggle("hidden");
   contentToBlur.classList.toggle("blur");
+  mainGrid.classList.toggle("noClick");
   console.log("toggle");
 
   var loadDelay = 200;
@@ -33,13 +35,18 @@ var tmpDisable = false;
 
 document.addEventListener('click', function(event) {
   if (!overlayMenu.classList.contains("hidden") && !tmpDisable){
-    console.log("clickoutside");
     var isClickInside = menuContent.contains(event.target);
 
+    console.log(menuContent);
+    console.log(event.target);
+    console.log(isClickInside);
+
     if (!isClickInside) {
+      console.log("clickoutside");
       menuToggle.classList.toggle("change");
       overlayMenu.classList.toggle("hidden");
       contentToBlur.classList.toggle("blur");
+      mainGrid.classList.toggle("noClick");
     }
   }
 });
