@@ -19,7 +19,7 @@ Partial::build('header', ["about" => TRUE]);
     <h2>Skills</h2>
     <div class="skills">
       <div>
-        <h3>Design Skills</h3>
+        <h3>Design</h3>
         <ul>
           <li>UX Design</li>
           <li>UI Design</li>
@@ -28,7 +28,7 @@ Partial::build('header', ["about" => TRUE]);
         </ul>
       </div>
       <div>
-        <h3>Development Skills</h3>
+        <h3>Development</h3>
         <ul>
           <li>HTML</li>
           <li>SCSS</li>
@@ -42,7 +42,7 @@ Partial::build('header', ["about" => TRUE]);
         </ul>
       </div>
       <div>
-        <h3>Other Skills</h3>
+        <h3>Other</h3>
         <ul>
           <li>Project Management</li>
           <li>3D Modelling</li>

@@ -70,10 +70,13 @@ setcookie("returningVisitor", "true");
       <nav>
         <ul>
           <?php if(isset($project) || isset($about)) : ?>
-            <li><a href="/<?php if(isset($_COOKIE['visitorFilter'])){ echo "?filter=".$_COOKIE['visitorFilter']; } ?>"><i class="fas fa-home"></i></a></li>
+            <li><a title="Home" href="/<?php if(isset($_COOKIE['visitorFilter'])){ echo "?filter=".$_COOKIE['visitorFilter']; } ?>"><i class="fas fa-home"></i></a></li>
+
           <?php else : ?>
-            <li><a href="about" title="About"><i class="fas fa-info-circle"></i></a></li>
+            <li><a title="About" href="about" title="About"><i class="fas fa-info-circle"></i></a></li>
+
           <?php endif; ?>
+
           <li><div class="menuCont" onclick="toggleMenu()" id="MenuToggle" title="Menu">
             <div class="bar1"></div>
             <div class="bar2"></div>
@@ -82,14 +85,10 @@ setcookie("returningVisitor", "true");
         </ul>
         <div id="OverlayMenu" class="hidden"><!-- TODO: find no js solution -->
           <ul id="MenuContent">
-            <a href="/<?php if(isset($_COOKIE['visitorFilter'])){ echo "?filter=".$_COOKIE['visitorFilter']; } ?>"><li>Portfolio</li></a>
-            <ul>
-              <a href="index#MyWork" onclick="toggleMenu()"><li>Featured Work</li></a>
-              <a href="index#About" onclick="toggleMenu()"><li>About</li></a>
-              <a href="#Footer" onclick="toggleMenu()"><li>Contact</li></a>
-            </ul>
-            <a href="about"><li>About</li></a>
-            <a href="projects"><li>All Projects</li></a>
+            <a title="Featured Work" href="/<?php if(isset($_COOKIE['visitorFilter'])){ echo "?filter=".$_COOKIE['visitorFilter']; } ?>"><li>Featured Work</li></a>
+            <a href="about" title="About"><li>About</li></a>
+            <a href="#Footer" title="Contact" onclick="toggleMenu()"><li>Contact</li></a>
+            <a href="projects" title="All Projects"><li>All Projects</li></a>
           </ul>
         </div>
       </nav>

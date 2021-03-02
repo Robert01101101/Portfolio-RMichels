@@ -3,7 +3,7 @@ section#Projects{
 	margin-bottom: 16rem;
 }
 
-//______________________________________________ Index
+//______________________________________________ About
 .skills {
 	display: flex;
 	flex-direction: row;
@@ -33,7 +33,7 @@ section#Projects{
 
 			&:before{
 				content: "-";
-				margin-right: 1.4rem;
+				margin-right: 1rem;
 				color: white;
 			}
 		}
@@ -118,6 +118,31 @@ section#Projects{
 	
 		* {
 			flex-basis: 50%;
+		}
+
+		///Decide which approach to keep:
+		//1) Center align with custom margins
+		/*
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: calc(100vw - calc(#{_grid(content-margin-md)} * 2));
+		box-sizing: border-box;
+
+		padding: 0 2rem 2rem 2rem;*/
+
+		//2) Within grid, with default margins, top-align with vertical centering
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+
+		padding-bottom: 2rem;
+
+		> div {
+			&:first-of-type {
+				max-width: 40rem;
+			}
 		}
 	}
 }

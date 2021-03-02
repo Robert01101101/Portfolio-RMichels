@@ -19,9 +19,9 @@ Partial::build('header');
   <div class="row">
     <div class="col-50" id="landingText">
       <p>Hi, I'm Robert Michels.<br>I <sp id="textDesign">design</sp> and <sp id="textProgram">program</sp><br><span
-  class="txt-rotate"
-  data-period="2000"
-  data-rotate='[ "mobile apps.", "websites.", "games.", "VR experiences."]'>digital media.</span></p>
+          class="txt-rotate"
+          data-period="2000"
+          data-rotate='[ "mobile apps.", "websites.", "games.", "VR experiences."]'>digital media.</span></p>
     </div>
   </div>
 </div>
