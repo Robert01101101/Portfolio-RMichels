@@ -29,4 +29,174 @@
 	  height: 100%;
 	  border: 0;
 	}
+
+	//____________________________________ Sketchfab
+	.models {
+		display: flex;
+
+
+		.sketchfab-embed-wrapper {
+			width: 100%;
+	
+			iframe {
+				width: 100%;
+				height: 20rem;
+			}
+	
+			p {
+				width: 100%;
+			}
+		}
+	}
+}
+
+main {
+    .sectionMedia{
+        img {
+			display: block;
+		}
+
+		figure {
+			img {
+				max-width: 100%;
+				cursor: pointer;
+			}
+
+			&.spacer {
+				margin-bottom: 6rem;
+			}
+		}
+
+		//____________________________________ mediaRow
+		.mediaRow {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: flex-start;
+			align-content: flex-start;
+
+			gap: _size(gap);
+
+			@include lg {
+				flex-wrap: nowrap;
+
+				&-zigzag {
+					figure {
+						&:nth-of-type(even) {
+							margin-top: 5rem;
+						}
+					}
+				}
+			}
+
+			figure {
+				margin: 0;
+				
+				/* four items (requires different width, from: https://stackoverflow.com/questions/8720931/can-css-detect-the-number-of-children-an-element-has) */ 
+				&:first-child:nth-last-child(4),
+				&:first-child:nth-last-child(4) ~ figure {
+					flex: 1 0 40%;
+
+					@include lg {
+						flex: 0 1 auto;
+					}
+				}
+
+				flex: 1 0 30%;
+
+				@include lg {
+					flex: 0 1 auto;
+				}
+	
+				img {
+					max-width: 100%;
+				}
+			}
+		}
+
+		//____________________________________ mediaSquare
+		.mediaSquare {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: flex-start;
+			align-content: flex-start;
+
+			gap: _size(gap);
+
+			figure {
+				flex: 0 1 auto;
+				margin: 0;
+
+				@include lg {
+					flex: 1 0 40%;
+				}
+	
+				img {
+					max-width: 100%;
+				}
+			}
+
+			> * {
+				flex: 0 1 auto;
+				margin: 0;
+
+				@include lg {
+					flex: 1 0 40%;
+				}
+			}
+		}
+
+		//____________________________________ mediaGrid
+		.mediaGrid {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			justify-content: center;
+			align-items: flex-start;
+			align-content: flex-start;
+
+			gap: _size(gap);
+
+			figure {
+				flex: 0 1 auto;
+				margin: 0;
+
+				@include sm {
+					flex: 2 1 40%;
+				}
+
+				@include lg {
+					flex: 1 0 20%;
+				}
+	
+				img {
+					max-width: 100%;
+				}
+			}
+		}
+
+		//____________________________________ mediaColumn
+		.mediaColumn{
+			display: flex;
+			flex-wrap: nowrap;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			align-content: center;
+
+			gap: _size(gap);
+
+			figure {
+				
+				margin: 0;
+
+				img {
+					max-width: 100%;
+				}
+			}
+		}
+    }
 }

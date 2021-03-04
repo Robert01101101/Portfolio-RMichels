@@ -67,6 +67,12 @@
 
 	> a {
 		padding: 1rem;
+
+		&:hover {
+			.fa-chevron-down {
+				transform: scale(1.4);
+			}
+		}
 	}
 
 	&.hide {

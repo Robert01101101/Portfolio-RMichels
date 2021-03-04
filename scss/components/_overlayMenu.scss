@@ -39,6 +39,13 @@
                 * {
                     text-decoration: underline !important;
                 }
+                .curPage {
+                    text-decoration: underline line-through!important;
+                }
+            }
+
+            .curPage {
+                text-decoration: line-through;
             }
         }
 

@@ -85,10 +85,18 @@ setcookie("returningVisitor", "true");
         </ul>
         <div id="OverlayMenu" class="hidden"><!-- TODO: find no js solution -->
           <ul id="MenuContent">
-            <a title="Featured Work" href="/<?php if(isset($_COOKIE['visitorFilter'])){ echo "?filter=".$_COOKIE['visitorFilter']; } ?>"><li>Featured Work</li></a>
-            <a href="about" title="About"><li>About</li></a>
-            <a href="#Footer" title="Contact" onclick="toggleMenu()"><li>Contact</li></a>
-            <a href="projects" title="All Projects"><li>All Projects</li></a>
+            <a title="Featured Work" href="/<?php if(isset($_COOKIE['visitorFilter'])){ echo "?filter=".$_COOKIE['visitorFilter']; } ?>">
+              <li <?php if(!isset($about) && !isset($projects) && !isset($project)){ echo "class='curPage'"; } ?>>Featured Work</li>
+            </a>
+            <a href="about" title="About">
+              <li <?php if(isset($about)){ echo "class='curPage'"; } ?>>About</li>
+            </a>
+            <a href="#Footer" title="Contact" onclick="toggleMenu()">
+              <li>Contact</li>
+            </a>
+            <a href="projects" title="All Projects">
+              <li <?php if(isset($projects)){ echo "class='curPage'"; } ?>>All Projects</li>
+            </a>
           </ul>
         </div>
       </nav>
