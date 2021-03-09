@@ -71,5 +71,13 @@ main {
 		> * {
 			background-color: rgba(_colour(bg), .8);
 		}
+
+		a {
+			color: _colour(white);
+
+			&:hover {
+				color: _colour(blue);
+			}
+		}
 	}
 }

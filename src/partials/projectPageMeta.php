@@ -12,7 +12,7 @@
     <p><?php echo $project->getYear() ?></p>
   </div>
   <div class="projMetaItem">
-    <h2>Roles</h2>
+    <h2>My Roles</h2>
     <ul>
 
       <?php 
