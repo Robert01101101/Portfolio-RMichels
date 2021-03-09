@@ -4,7 +4,7 @@ const imageViewer = document.getElementById('imageViewer');
 var body = document.getElementsByTagName("BODY")[0];//const body = document.getElementById('Content');
 var mainGrid = document.getElementById('MainGrid');
 var viewerOpen = false;
-var newDiv, clone, originImage, next, prev, closeBtn;
+var newDiv, clone, originImage, next, prev, closeBtn, expand, compress;
 var origInnerHTML = imageViewer.innerHTML;
 
 function viewImage (sourceImage, carousel=false) {
@@ -38,7 +38,7 @@ function viewImage (sourceImage, carousel=false) {
         //console.log(window.innerHeight);
 
         //If very tall image, view with overflow
-        if (aspectRatio < 1.2 && img.naturalHeight > window.innerHeight + 100){
+        if ((aspectRatio < 1.2 && img.naturalHeight > window.innerHeight + 100) || sourceImage.hasAttribute("fullscreen")){
             clone.classList.add("tall");
 
             //Add scroll container div to keep fullscreen icon at top
@@ -74,6 +74,8 @@ function viewImage (sourceImage, carousel=false) {
         var loadDelay = 10;
         next = document.getElementsByClassName("next")[0];
         prev = document.getElementsByClassName("prev")[0];
+        expand = document.getElementsByClassName("fa-expand")[0];
+        compress = document.getElementsByClassName("fa-compress")[0];
         closeBtn = document.getElementsByClassName("closeBtn")[0];
         next.classList.add("hidden");
         prev.classList.add("hidden");
@@ -226,11 +228,15 @@ function updateArrows() {
         if (!next.classList.contains('flip')) next.classList.add('flip');
         if (!prev.classList.contains('flip')) prev.classList.add('flip');
         if (!closeBtn.classList.contains('flip')) closeBtn.classList.add('flip');
+        if (!expand.classList.contains('flip')) expand.classList.add('flip');
+        if (!compress.classList.contains('flip')) compress.classList.add('flip');
         //console.log("arrowsInside");
     } else {
         if (next.classList.contains('flip')) next.classList.remove('flip');
         if (prev.classList.contains('flip')) prev.classList.remove('flip');
         if (closeBtn.classList.contains('flip')) closeBtn.classList.remove('flip');
+        if (expand.classList.contains('flip')) expand.classList.remove('flip');
+        if (compress.classList.contains('flip')) compress.classList.remove('flip');
         //console.log("arrowsOutside");
     }
     next.classList.remove("hidden");
