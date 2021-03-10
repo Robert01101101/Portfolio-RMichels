@@ -37,6 +37,7 @@ Partial::build('header', ["about" => TRUE]);
           <li>MySQL</li>
           <li>C#</li>
           <li>Unity</li>
+          <li>Java</li>
           <li>D3.js</li>
           <li>Three.js</li>
         </ul>

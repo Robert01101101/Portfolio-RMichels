@@ -203,8 +203,6 @@ function plusSlides(n) {
     //console.log(imgArray[slideIndex]);
     //console.log(slideIndex);
     viewImage(imgArray[slideIndex], true);
-
-    
 }
 
 
@@ -242,6 +240,17 @@ function updateArrows() {
     next.classList.remove("hidden");
     prev.classList.remove("hidden");
     closeBtn.classList.remove("hidden");
+
+    //hide l/r arrow if at start/end of carousel
+    if (slideIndex == 0) {
+        console.log(prev);
+        if (!prev.classList.contains('end')) { prev.classList.add('end'); console.log("hi");}
+    } else if (slideIndex == imgArray.length-1) {
+        if (!next.classList.contains("end")) next.classList.add("end");
+    } else {
+        if (prev.classList.contains("end")) prev.classList.remove("end");
+        if (next.classList.contains("end")) next.classList.remove("end");
+    }
 }
   
 window.onresize = updateArrows;

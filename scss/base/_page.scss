@@ -33,7 +33,7 @@ main, #MainGrid {
 }
 
 figcaption {
-	text-align: left;
+	text-align: center;
 	max-width: 40rem;
 	margin: 1rem auto 0 auto;
 	font-family: _font(family-alt);
@@ -78,6 +78,11 @@ main {
 			&:hover {
 				color: _colour(blue);
 			}
+		}
+
+		.references {
+			padding-left: 36px;
+    		text-indent: -36px;
 		}
 	}
 }

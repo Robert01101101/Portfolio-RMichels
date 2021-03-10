@@ -62,8 +62,8 @@ Partial::build('projectPageMeta', ["project" => $project]);
   <section class="sectionText">
     <h2>The Result</h2>
     <p>Our interface allows users to select a foreground image which includes both a green and magenta background and create a matte. At the same time, the user is also able to select the background image in which the foreground image will appear on top. The color transfer of the background image will affect the foreground image and apply its characteristics at a set value. Once set, the user is able to control the intensity of the color transfer, brightness transfer, and the blurring of the foreground matte edges to help create a more believable composite image. The user is also able to view all of the process images created to form the final output image in order to view the progression. Lastly, the user is able to save the image they have created with a save button on the bottom of the main screen.</p>
-    <p>The first step in this process is based on the paper <i>Color invariant chroma keying and color spill neutralization for dynamic scenes and cameras</i> (Grundhöfer, Kurz, Thiele, & Bimber, 2010). This technique cleverly uses two complementary background colors, such as green and magenta, to be able to A) feature any colors in the foreground, and B) automatically suppress color spill. A) is achieved by deriving the maximum of the two mattes resulting from a simple chromakey with each background color. B) is achieved by blending the two images with the complementary background colors, so that the light spilling onto the subject is neutralized into a grayscale tone, rather than green or magenta.</p>
-    <p>The second step in the process is not specifically intended for composites, but proved to be very useful. The technique described in <i>Color transfer between images</i> (Reinhard, Adhikhmin, Gooch, & Shirley, 2001) analyzes a source image’s color characteristics by calculating mean and standard deviation of each color channel. These characteristics are then applied to the color distribution of the target image. For this technique to work, the images need to be converted into the lαβ color space, which heavily considers the human visual system and minimizes correlation between channels for most natural scenes.</p>
+    <p>The first step in this process is based on the paper <cite>Color invariant chroma keying and color spill neutralization for dynamic scenes and cameras</cite> (Grundhöfer, Kurz, Thiele, & Bimber, 2010). This technique cleverly uses two complementary background colors, such as green and magenta, to be able to A) feature any colors in the foreground, and B) automatically suppress color spill. A) is achieved by deriving the maximum of the two mattes resulting from a simple chromakey with each background color. B) is achieved by blending the two images with the complementary background colors, so that the light spilling onto the subject is neutralized into a grayscale tone, rather than green or magenta.</p>
+    <p>The second step in the process is not specifically intended for composites, but proved to be very useful. The technique described in <cite>Color transfer between images</cite> (Reinhard, Adhikhmin, Gooch, & Shirley, 2001) analyzes a source image’s color characteristics by calculating mean and standard deviation of each color channel. These characteristics are then applied to the color distribution of the target image. For this technique to work, the images need to be converted into the lαβ color space, which heavily considers the human visual system and minimizes correlation between channels for most natural scenes.</p>
   </section>
 
   <!----- Content / Media ----->
@@ -82,6 +82,16 @@ Partial::build('projectPageMeta', ["project" => $project]);
       </div>
       <figcaption>App demo, walkthrough of the code, and explanation of the theory behind the technique.</figcaption>
     </div>
+  </section>
+
+  <!----- Content / Text ----->
+  <section class="sectionText">
+    <h2>References</h2>
+    <div class="references">
+    <p>Grundhöfer, A., Kurz, D., Thiele, S., &amp; Bimber, O. (2010). <a href="https://link.springer.com/article/10.1007/s00371-010-0464-8" target="_blank" title="Springer Link: Color invariant chroma keying and color spill neutralization for dynamic scenes and cameras"><cite>Color invariant chroma keying and color spill neutralization for dynamic scenes and cameras.</cite></a> The Visual Computer, 26(9), 1167-1176. doi:10.1007/s00371-010-0464-8</p>
+    <p>Reinhard, E., Adhikhmin, M., Gooch, B., &amp; Shirley, P. (2001). <a href="https://www.cs.tau.ac.il/~turkel/imagepapers/ColorTransfer.pdf" target="_blank" title="IEEE PDF: Color transfer between images"><cite>Color transfer between images.</cite></a> IEEE Computer Graphics and Applications, 21(4), 34-41. doi:10.1109/38.946629</p>
+    </div>
+    
   </section>
 
   
