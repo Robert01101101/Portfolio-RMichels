@@ -25,6 +25,8 @@ Partial::build('header', ["about" => TRUE]);
           <li>UI Design</li>
           <li>Game Design</li>
           <li>VR Ix Design</li>
+          <li>Figma</li>
+          <li>Adobe CC</li>
         </ul>
       </div>
       <div>

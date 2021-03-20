@@ -287,6 +287,10 @@ function waves () {
 			calcDocHeight();
 			updateCamera();
 		}
+
+		if (typeof initProjectTiles !== "undefined") { 
+			initProjectTiles();
+		}
 	};
 
 	animate();

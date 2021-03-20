@@ -1,5 +1,5 @@
 //_____________________________________________ Body
-body, input, select, textarea, p {
+body, input, select, textarea, p, code {
 		color: _colour(white);
 		font-family: _font(family-body);
 		
@@ -99,4 +99,12 @@ h5 {
 
 h6 {
 	font-size: .7rem;
+}
+code {
+	font-family: _font(family-alt);
+	font-size: .9em;
+	border: 1px solid rgba(white, .3);
+	border-radius: .5rem;
+	padding: 0rem .3rem;
+	font-weight: _font(weight);
 }
