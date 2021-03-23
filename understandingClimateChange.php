@@ -86,6 +86,17 @@ Partial::build('projectPageMeta', ["project" => $project]);
       </figure>
     </div>
   </section>
+
+  <!----- Content / Text ----->
+  <section class="sectionText">
+    <h2>The Code</h2>
+    <p>TODO</p>
+  </section>
+
+  <!----- Content / Media ----->
+  <section class="sectionMedia">
+    <script src="https://gist.github.com/robert-michels/fea50c19b3bcdff1b1ee446cad3a8028.js"></script>
+  </section>
   
 </div>
     
