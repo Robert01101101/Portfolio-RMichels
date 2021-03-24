@@ -61,9 +61,12 @@ main {
 				max-width: 100%;
 				cursor: pointer;
 			}
+		}
 
-			&.spacer {
-				margin-bottom: 6rem;
+		.spacer {
+			padding-bottom: 2rem !important;
+			&:not(:first-of-type) {
+				padding-top: 2rem !important;
 			}
 		}
 

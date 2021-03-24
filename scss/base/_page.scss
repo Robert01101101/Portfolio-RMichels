@@ -34,7 +34,6 @@ main, #MainGrid {
 
 figcaption {
 	text-align: center;
-	max-width: 40rem;
 	margin: 1rem auto 0 auto;
 	font-family: _font(family-alt);
 	font-weight: _font(weight);
@@ -74,6 +73,8 @@ main {
 
 		a {
 			color: _colour(white);
+			transition: .2s;
+			text-decoration-thickness: from-font;
 
 			&:hover {
 				color: _colour(blue);
