@@ -106,24 +106,26 @@ Partial::build('projectPageMeta', ["project" => $project]);
       </div>
       <figcaption>The physical models of the two pavilions. The modular pavilion (L) was created from cardboard prepared with a lasercutter. The parametric pavilion (R) was created using the Anet A8 3D printer, and wood PLA filament.</figcaption>
     </figure>
-    <figure ignorecarousel>
-      <div class="mediaSquare">
-        <div class="mediaColumn">
-          <figure onclick="viewImage(this)">
-            <img src="assets/img/pavilions/2_4.jpg">
-          </figure>
-          <figure onclick="viewImage(this)">
-            <img src="assets/img/pavilions/2_5.jpg">
-          </figure>
-        </div>
+    <figure ignorecarousel class="spacer">
         <div class="mediaColumn">
           <figure onclick="viewImage(this)">
             <img src="assets/img/pavilions/3_5.jpg">
           </figure>
         </div>
-      </div>
-      <figcaption>Artifacts from the production process: 1) Modular infill ruleset, 2) lasercutter instructionset, 3) Grasshoper parametric algorithm visualized with nodes. </figcaption>
+      <figcaption>Grasshoper parametric algorithm visualized with nodes.</figcaption>
     </figure>
+    <div class="auto-resizable-iframe">
+      <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/9VzTCMDgkMM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <figcaption>A brief walkthrough of the Grasshopper algorithm, showing each node's functionality.</figcaption>
+    </div>
+    <div class="auto-resizable-iframe">
+      <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/MHUs1-AVnpA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <figcaption>To stylize the final pavilion, reactor points are used to algorithmically affect the thickness of the structure.</figcaption>
+    </div>
   </section>
   
 </div>
