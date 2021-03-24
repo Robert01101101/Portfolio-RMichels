@@ -30,13 +30,13 @@ Partial::build('projectPageMeta', ["project" => $project]);
   <section class="sectionMedia">
     <div class="mediaColumn">
       <figure onclick="viewImage(this)">
-        <img src="assets/img/understandingClimateChange/chart1.jpg">
+        <img src="assets/img/understandingClimateChange/lqip/chart1.jpg">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="assets/img/understandingClimateChange/chart2.jpg">
+        <img src="assets/img/understandingClimateChange/lqip/chart2.jpg">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="assets/img/understandingClimateChange/chart3.jpg">
+        <img src="assets/img/understandingClimateChange/lqip/chart3.jpg">
       </figure>
     </div>
   </section>
@@ -58,10 +58,10 @@ Partial::build('projectPageMeta', ["project" => $project]);
   <section class="sectionMedia">
     <div class="mediaColumn">
       <figure onclick="viewImage(this)" id="chart4">
-        <img src="assets/img/understandingClimateChange/chart4.jpg">
+        <img src="assets/img/understandingClimateChange/lqip/chart4.jpg">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="assets/img/understandingClimateChange/chart5.jpg">
+        <img src="assets/img/understandingClimateChange/lqip/chart5.jpg">
       </figure>
     </div>
   </section>
@@ -82,7 +82,7 @@ Partial::build('projectPageMeta', ["project" => $project]);
   <section class="sectionMedia">
     <div class="mediaColumn">
       <figure onclick="viewImage(this)">
-        <img src="assets/img/understandingClimateChange/chart6.jpg">
+        <img src="assets/img/understandingClimateChange/lqip/chart6.jpg">
       </figure>
     </div>
   </section>

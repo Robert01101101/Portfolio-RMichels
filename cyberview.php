@@ -35,16 +35,16 @@ Partial::build('projectPageMeta', ["project" => $project]);
     <figure ignorecarousel>
       <div class="mediaSquare">
         <figure onclick="viewImage(this)">
-          <img src="assets/img/cyberview/screen-0.jpg">
+          <img src="assets/img/cyberview/lqip/screen-0.jpg">
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="assets/img/cyberview/screen-1.jpg">
+          <img src="assets/img/cyberview/lqip/screen-1.jpg">
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="assets/img/cyberview/screen-2.jpg">
+          <img src="assets/img/cyberview/lqip/screen-2.jpg">
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="assets/img/cyberview/screen-3.jpg">
+          <img src="assets/img/cyberview/lqip/screen-3.jpg">
         </figure>
       </div>
       <figcaption class="center">Screenshots from the game.</figcaption>

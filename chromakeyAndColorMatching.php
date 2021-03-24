@@ -29,30 +29,30 @@ Partial::build('projectPageMeta', ["project" => $project]);
   <section class="sectionMedia">
     <div class="mediaColumn"><div class="mediaRow">
       <figure onclick="viewImage(this)">
-        <img src="assets/img/chromakeyAndColorMatching/1.jpg">
+        <img src="assets/img/chromakeyAndColorMatching/lqip/1.jpg">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="assets/img/chromakeyAndColorMatching/2.jpg">
+        <img src="assets/img/chromakeyAndColorMatching/lqip/2.jpg">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="assets/img/chromakeyAndColorMatching/3.jpg">
+        <img src="assets/img/chromakeyAndColorMatching/lqip/3.jpg">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="assets/img/chromakeyAndColorMatching/4.jpg">
+        <img src="assets/img/chromakeyAndColorMatching/lqip/4.jpg">
       </figure>
     </div>
     <div class="mediaRow">
       <figure onclick="viewImage(this)">
-        <img src="assets/img/chromakeyAndColorMatching/5.jpg">
+        <img src="assets/img/chromakeyAndColorMatching/lqip/5.jpg">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="assets/img/chromakeyAndColorMatching/6.jpg">
+        <img src="assets/img/chromakeyAndColorMatching/lqip/6.jpg">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="assets/img/chromakeyAndColorMatching/7.jpg">
+        <img src="assets/img/chromakeyAndColorMatching/lqip/7.jpg">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="assets/img/chromakeyAndColorMatching/8.jpg">
+        <img src="assets/img/chromakeyAndColorMatching/lqip/8.jpg">
       </figure>
     </div></div>
     
@@ -70,7 +70,7 @@ Partial::build('projectPageMeta', ["project" => $project]);
   <section class="sectionMedia">
     <div class="mediaColumn">
       <figure onclick="viewImage(this)" fullscreen class="wide">
-        <img src="assets/img/chromakeyAndColorMatching/overview.jpg">
+        <img src="assets/img/chromakeyAndColorMatching/lqip/overview.jpg">
         <figcaption>An overview of the entire process, with clear distinction between the two techniques implemented, and additional processing applied to the images.</figcaption>
       </figure>
     </div>

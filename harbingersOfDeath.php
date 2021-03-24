@@ -30,11 +30,11 @@ Partial::build('projectPageMeta', ["project" => $project]);
   <section class="sectionMedia">
     <div class="mediaSquare">
       <figure onclick="viewImage(this)">
-        <img src="assets/img/harbingersofdeath/screen-home.png">
+        <img src="assets/img/harbingersofdeath/lqip/screen-home.jpg">
         <figcaption class="center">Homepage</figcaption>
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="assets/img/harbingersofdeath/screen-omen.png">
+        <img src="assets/img/harbingersofdeath/lqip/screen-omen.jpg">
         <figcaption class="center">Omen Content Unit</figcaption>
       </figure>
     </div>
@@ -52,11 +52,11 @@ Partial::build('projectPageMeta', ["project" => $project]);
   <section class="sectionMedia">
     <div class="mediaSquare">
       <!--<figure onclick="viewImage(this)">
-        <img src="assets/img/harbingersofdeath/screen-search.png">
+        <img src="assets/img/harbingersofdeath/lqip/screen-search.jpg">
         <figcaption class="center">Search</figcaption>
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="assets/img/harbingersofdeath/screen-filter.png">
+        <img src="assets/img/harbingersofdeath/lqip/screen-filter.jpg">
         <figcaption class="center">Filter</figcaption>
       </figure>-->
       <figure onclick="viewImage(this)">
@@ -64,7 +64,7 @@ Partial::build('projectPageMeta', ["project" => $project]);
         <figcaption class="center">Form Styling (ARIA-friendly)</figcaption>
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="assets/img/harbingersofdeath/screen-member-home.png">
+        <img src="assets/img/harbingersofdeath/lqip/screen-member-home.jpg">
         <figcaption class="center">Member Homepage</figcaption>
       </figure>
     </div>
@@ -102,7 +102,7 @@ Partial::build('projectPageMeta', ["project" => $project]);
   <section class="sectionMedia">
     <div class="mediaColumn">
       <figure onclick="viewImage(this)">
-        <img src="assets/img/harbingersofdeath/db.jpg">
+        <img src="assets/img/harbingersofdeath/lqip/db.jpg">
         <figcaption class="center">ER Diagram of our database.</figcaption>
       </figure>
     </div>

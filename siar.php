@@ -21,17 +21,17 @@ Partial::build('projectPageMeta', ["project" => $project]);
   <!----- Content / Text ----->
   <section class="sectionText">
     <h2>About the program</h2>
-    <p>Semester in Alternate Realities (SIAR) was unlike any other course I took at my time at SFU. A team of two instructors set out with a small class to create extended reality (xR) projects that aim for a positive impact. While it was a great opportunity to learn VR design and development, the course stood out for its interdisciplinary and collaborative nature. Key takeaways from the course were soft skills such as agile project development, teambuilding, project pitching and presenting, as well as hard skills, such as Unity VR development. If you want to find out more, check out this <a href="http://ispace.iat.sfu.ca/riecke/teaching/siar/" target="_blank" title="iSpace Lab: Semester in Alternate Realities">info page</a>. Finally, I’d like to thank our professors Bernhard Riecke and Patrick Pennefather for this great experience.</p>
+    <p>Semester in Alternate Realities (SIAR) was unlike any other course I took at my time at SFU. A team of two instructors set out with a small class to create extended reality (xR) projects that aim for a positive impact. While it was a great opportunity to learn VR design and development, the course stood out for its interdisciplinary and collaborative nature. Key takeaways from the course were soft skills such as agile project development, teambuilding, project pitching and presenting, as well as hard skills, such as Unity VR development. If you want to find out more, check out this <a href="http://ispace.iat.sfu.ca/riecke/teaching/siar/lqip/" target="_blank" title="iSpace Lab: Semester in Alternate Realities">info page</a>. Finally, I’d like to thank our professors Bernhard Riecke and Patrick Pennefather for this great experience.</p>
   </section>
 
   <!----- Content / Media ----->
   <section class="sectionMedia">
     <div class="mediaGrid">
         <figure onclick="viewImage(this)">
-          <img src="assets/img/siar/1.jpg">
+          <img src="assets/img/siar/lqip/1.jpg">
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="assets/img/siar/2.jpg">
+          <img src="assets/img/siar/lqip/2.jpg">
         </figure>
     </div>
     <figcaption>(L) The marshmallow challenge was one of the team building exercises we did. (R) Interdisciplinary collaboration features a lot of conceptual discussions.</figcaption>

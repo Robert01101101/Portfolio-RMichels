@@ -80,27 +80,27 @@ Partial::build('projectPageMeta', ["project" => $project]);
       <div class="mediaSquare">
         <div class="mediaColumn">
           <figure onclick="viewImage(this)">
-            <img src="assets/img/pavilions/2_1.jpg">
+            <img src="assets/img/pavilions/lqip/2_1.jpg">
           </figure>
           <figure onclick="viewImage(this)">
-            <img src="assets/img/pavilions/2_2.jpg">
+            <img src="assets/img/pavilions/lqip/2_2.jpg">
           </figure>
           <figure onclick="viewImage(this)">
-            <img src="assets/img/pavilions/2_3.jpg">
+            <img src="assets/img/pavilions/lqip/2_3.jpg">
           </figure>
         </div>
         <div class="mediaColumn">
           <figure onclick="viewImage(this)">
-            <img src="assets/img/pavilions/3_1.jpg">
+            <img src="assets/img/pavilions/lqip/3_1.jpg">
           </figure>
           <figure onclick="viewImage(this)">
-            <img src="assets/img/pavilions/3_2.jpg">
+            <img src="assets/img/pavilions/lqip/3_2.jpg">
           </figure>
           <figure onclick="viewImage(this)">
-            <img src="assets/img/pavilions/3_3.jpg">
+            <img src="assets/img/pavilions/lqip/3_3.jpg">
           </figure>
           <figure onclick="viewImage(this)">
-            <img src="assets/img/pavilions/3_4.jpg">
+            <img src="assets/img/pavilions/lqip/3_4.jpg">
           </figure>
         </div>
       </div>
@@ -109,7 +109,7 @@ Partial::build('projectPageMeta', ["project" => $project]);
     <figure ignorecarousel class="spacer">
         <div class="mediaColumn">
           <figure onclick="viewImage(this)">
-            <img src="assets/img/pavilions/3_5.jpg">
+            <img src="assets/img/pavilions/lqip/3_5.jpg">
           </figure>
         </div>
       <figcaption>Grasshoper parametric algorithm visualized with nodes.</figcaption>

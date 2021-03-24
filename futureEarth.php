@@ -34,22 +34,22 @@ Partial::build('projectPageMeta', ["project" => $project]);
   <section class="sectionMedia">
     <div class="mediaGrid">
       <figure onclick="viewImage(this)">
-        <img src="assets/img/futureearth/3.jpg">
+        <img src="assets/img/futureearth/lqip/3.jpg">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="assets/img/futureearth/4.jpg">
+        <img src="assets/img/futureearth/lqip/4.jpg">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="assets/img/futureearth/5.jpg">
+        <img src="assets/img/futureearth/lqip/5.jpg">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="assets/img/futureearth/6.jpg">
+        <img src="assets/img/futureearth/lqip/6.jpg">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="assets/img/futureearth/7.jpg">
+        <img src="assets/img/futureearth/lqip/7.jpg">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="assets/img/futureearth/8.jpg">
+        <img src="assets/img/futureearth/lqip/8.jpg">
       </figure>
     </div>
   </section>
@@ -69,22 +69,22 @@ Partial::build('projectPageMeta', ["project" => $project]);
   <section class="sectionMedia">
     <div class="mediaGrid">
       <figure onclick="viewImage(this)">
-        <img src="assets/img/futureearth/9.jpg">
+        <img src="assets/img/futureearth/lqip/9.jpg">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="assets/img/futureearth/10.jpg">
+        <img src="assets/img/futureearth/lqip/10.jpg">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="assets/img/futureearth/11.jpg">
+        <img src="assets/img/futureearth/lqip/11.jpg">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="assets/img/futureearth/12.jpg">
+        <img src="assets/img/futureearth/lqip/12.jpg">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="assets/img/futureearth/13.jpg">
+        <img src="assets/img/futureearth/lqip/13.jpg">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="assets/img/futureearth/14.jpg">
+        <img src="assets/img/futureearth/lqip/14.jpg">
       </figure>
     </div>
   </section>
@@ -102,34 +102,34 @@ Partial::build('projectPageMeta', ["project" => $project]);
   <section class="sectionMedia">
     <div class="mediaGrid">
       <figure onclick="viewImage(this)">
-        <img src="assets/img/futureearth/15.jpg">
+        <img src="assets/img/futureearth/lqip/15.jpg">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="assets/img/futureearth/16.jpg">
+        <img src="assets/img/futureearth/lqip/16.jpg">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="assets/img/futureearth/17.jpg">
+        <img src="assets/img/futureearth/lqip/17.jpg">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="assets/img/futureearth/18.jpg">
+        <img src="assets/img/futureearth/lqip/18.jpg">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="assets/img/futureearth/19.jpg">
+        <img src="assets/img/futureearth/lqip/19.jpg">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="assets/img/futureearth/20.jpg">
+        <img src="assets/img/futureearth/lqip/20.jpg">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="assets/img/futureearth/hud1.jpg">
+        <img src="assets/img/futureearth/lqip/hud1.jpg">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="assets/img/futureearth/hud2.jpg">
+        <img src="assets/img/futureearth/lqip/hud2.jpg">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="assets/img/futureearth/hud3.jpg">
+        <img src="assets/img/futureearth/lqip/hud3.jpg">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="assets/img/futureearth/hud4.jpg">
+        <img src="assets/img/futureearth/lqip/hud4.jpg">
       </figure>
     </div>
   </section>

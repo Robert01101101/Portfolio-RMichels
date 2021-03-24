@@ -35,19 +35,19 @@ Partial::build('projectPageMeta', ["project" => $project]);
   <section class="sectionMedia">
     <div class="mediaRow mediaRow-zigzag">
       <figure onclick="viewImage(this)">
-        <img src="assets/img/amae/Screen_Dashboard.png">
+        <img src="assets/img/amae/lqip/Screen_Dashboard.gif">
         <figcaption class="center">Dashboard</figcaption>
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="assets/img/amae/Screen_Nanny.png">
+        <img src="assets/img/amae/lqip/Screen_Nanny.gif">
         <figcaption class="center">Nanny</figcaption>
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="assets/img/amae/Screen_Learn.png">
+        <img src="assets/img/amae/lqip/Screen_Learn.gif">
         <figcaption class="center">Learn</figcaption>
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="assets/img/amae/Screen_Chat.png">
+        <img src="assets/img/amae/lqip/Screen_Chat.gif">
         <figcaption class="center">Chat</figcaption>
       </figure>
     </div>
@@ -74,16 +74,16 @@ Partial::build('projectPageMeta', ["project" => $project]);
     <figure ignorecarousel>
       <div class="mediaSquare">
         <figure onclick="viewImage(this)">
-          <img src="assets/img/amae/process-scroll.jpg">
+          <img src="assets/img/amae/lqip/process-scroll.jpg">
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="assets/img/amae/process-modality.jpg">
+          <img src="assets/img/amae/lqip/process-modality.jpg">
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="assets/img/amae/process-styleguide.jpg">
+          <img src="assets/img/amae/lqip/process-styleguide.jpg">
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="assets/img/amae/process-components.jpg">
+          <img src="assets/img/amae/lqip/process-components.jpg">
         </figure>
       </div>
       <figcaption>Design artifacts that explain components of our design & define a clear styleguide to achieve consistency.</figcaption>
@@ -105,13 +105,13 @@ Partial::build('projectPageMeta', ["project" => $project]);
     <figure ignorecarousel>
       <div class="mediaRow">
         <figure onclick="viewImage(this)">
-          <img src="assets/img/amae/site-home.jpg">
+          <img src="assets/img/amae/lqip/site-home.jpg">
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="assets/img/amae/site-taskboard.jpg">
+          <img src="assets/img/amae/lqip/site-taskboard.jpg">
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="assets/img/amae/site-concept.jpg">
+          <img src="assets/img/amae/lqip/site-concept.jpg">
         </figure>
       </div>
       <figcaption class="center">Mockup of the product website created in the last stage.</figcaption>
