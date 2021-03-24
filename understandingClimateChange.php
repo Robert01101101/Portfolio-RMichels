@@ -57,7 +57,7 @@ Partial::build('projectPageMeta', ["project" => $project]);
   <!----- Content / Media ----->
   <section class="sectionMedia">
     <div class="mediaColumn">
-      <figure onclick="viewImage(this)">
+      <figure onclick="viewImage(this)" id="chart4">
         <img src="assets/img/understandingClimateChange/chart4.jpg">
       </figure>
       <figure onclick="viewImage(this)">
@@ -90,7 +90,7 @@ Partial::build('projectPageMeta', ["project" => $project]);
   <!----- Content / Text ----->
   <section class="sectionText">
     <h2>The Code</h2>
-    <p>TODO</p>
+    <p>The project is developed with HTML, CSS and JS, where we employ the data-driven visualization library <a href="https://d3js.org/" target="_blank">D3.js</a>. Implementing all the visualizations was very challenging, as D3 was new to us. Particularly the use of the chain syntax was cumbersome in the beginning. The general workflow consists of loading data, selecting DOM elements and inserting SVG elements with certain attributes mapped to the data. In the excerpt below, the <a href="#chart4">Canadian Weather Data Chart</a> is rendered, with the color of each province mapped to temperature or percipitation data depending on the user's inputs. The excerpt also includes mouse hover interactions for the individual provinces, where the province is visually highlighted and data in the legend is updated by calling <code>updateDataData()</code>, which isn't show in the example.</p>
   </section>
 
   <!----- Content / Media ----->
