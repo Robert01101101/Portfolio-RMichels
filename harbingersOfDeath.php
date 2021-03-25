@@ -43,9 +43,9 @@ Partial::build('projectPageMeta', ["project" => $project]);
   <!----- Content / Text ----->
   <section class="sectionText">
     <h2>The Result</h2>
-    <p>Harbingers of Death presents now-defunct omens sourced from an 1889 article as if they are real, as a satire of modern conspiracy theories. The Content Units are individual omens. They contain information about who is affected, what triggers the omen and the kind of scenario you would encounter them in. User’s can explore them through different taxonomies and by search.</p>
+    <p>Harbingers of Death presents now-defunct omens sourced from an 1889 article as if they are real, as a satire of modern conspiracy theories. The Content Units are individual omens. They contain information about who is affected, what triggers the omen, and the kind of scenario you would encounter them in. Users can explore them through different taxonomies and by search.</p>
     <p>Visitors can filter the omens by who is at fault, who will die, and the aspect of life that they apply to. Visitors may also search omens using a text input.</p>
-    <p>Website members sign in to keep track of which omens they have experienced, and who it indicates is going to die.</p>
+    <p>Website members sign in to keep track of which omens they have experienced, and whom it indicates is going to die.</p>
   </section>
 
   <!----- Content / Media ----->

@@ -9,7 +9,7 @@ Partial::build('header', ["project" => $project]);
 
 Partial::build('projectPageLanding', 
   ["project" => $project, 
-  "description" => "A narrative-driven 2D platformer, which revolves around unit 241, an AI-equipped droid that gains conciousness. Using a range of available body mods, unit 241 has to fight enemies, solve puzzles, and escape the building.",
+  "description" => "A narrative-driven 2D platformer, which revolves around unit 241, an AI-equipped droid that gains consciousness. Using a range of available body mods, unit 241 has to fight enemies, solve puzzles, and escape the building.",
   "primaryLink" => "https://rmichels.itch.io/cyberview",
   "primaryLinkText" => "Itch.io",
   "secondaryLink" => "https://404teamnotfound561902897.wordpress.com/",
@@ -58,7 +58,7 @@ Partial::build('projectPageMeta', ["project" => $project]);
     <p>An important aspect of our design was the game mechanics. The most important two mechanics were the ability to swap body mods, and energy depletion when using body mods. Body mods include a drill, grappling hook, strong arms, gun, regular and super legs, as well as a jetpack.</p>
     
     <h3>Narrative</h3>
-    <p>Unit 241 is an all-purpose android at the mega-factory Airsite. This factory uses androids, like Unit 241, to carry out all sorts of dangerous tasks. All androids come equipped with highly functional AI, but their cognitive abilities are inhibited to what is essential for their tasks. When 241 is damaged in a mine collapse, the android's intelligence inhibitor is shut off, allowing 241 to think freely. You get to explore the Airsite factory with 241 and overcome many challenges, while discovering what it means to be alive. Find a way out, and try to save the other bots!</p>
+    <p>Unit 241 is an all-purpose android at the mega-factory Airsite. This factory uses androids, like Unit 241, to carry out all sorts of dangerous tasks. All androids come equipped with highly functional AI, but their cognitive abilities are inhibited to what is essential for their tasks. When 241 is damaged in a mine collapse, the android's intelligence inhibitor is shut off, allowing 241 to think freely. You get to explore the Airsite factory with 241 and overcome many challenges while discovering what it means to be alive. Find a way out, and try to save the other bots!</p>
   </section>
 
   <!----- Content / Video ----->
