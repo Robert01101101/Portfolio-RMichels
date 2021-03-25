@@ -284,8 +284,7 @@ function waves () {
 			// document ready
 			console.log("page finished loading");
 		
-			calcDocHeight();
-			updateCamera();
+			setTimeout(() => { calcDocHeight(); updateCamera(); }, 20);
 		}
 
 		if (typeof initProjectTiles !== "undefined") { 
