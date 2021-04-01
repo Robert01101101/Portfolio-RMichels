@@ -26,7 +26,7 @@
           <hr>
           <div class="footerEnd">
             <small>Copyright &copy; <?php echo date("Y"); ?> Robert Michels. All Rights Reserved.</small>
-            <a href="#"><small>Privacy Policy</small></a>
+            <a href="privacyPolicy"><small>Privacy Policy</small></a>
           </div>          
     </footer>
   </div>
