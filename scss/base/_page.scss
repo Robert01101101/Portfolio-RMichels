@@ -72,13 +72,7 @@ main {
 		}
 
 		a {
-			color: _colour(white);
-			transition: .2s;
-			text-decoration-thickness: from-font;
-
-			&:hover {
-				color: _colour(blue);
-			}
+			@include inTextLink;
 		}
 
 		.references {

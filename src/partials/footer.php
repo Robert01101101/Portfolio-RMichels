@@ -7,31 +7,27 @@
     <!-- #################################### FOOTER ###################################### -->
 
     <footer id="Footer">
-      <h2>Intrigued?</h2>
-      <div class="footer_row">
-        <div class="footer_lCol">
-          <h3>Get in touch with me &nbsp;&#8594;</h3>
-          <noscript><small>robert_michels@outlook.com</small></noscript>
-        </div>
-        <div class="footer_rCol">
           <div>
             <ul class="icons">
-              <div class="emailContainer" onmouseover="overEmailOverlay()" onmouseout="outEmailOverlay()">
-                <a href="mailto: robert_michels@outlook.com" target="_blank" title="E-Mail"><li><i class="fas fa-at fa-2x" id="email"></i></li></a>
-                <div id="emailOverlay" class="hide" onmouseover="overEmailContainer()" onmouseout="outEmailContainer()">
-                  <small class="js-emaillink">robert_michels@outlook.com</small>  
-                  <i class="far fa-copy js-emailcopybtn" title="Copy E-Mail to Clipboard"></i> 
-                </div>
+              <div class="emailContainer"> <!-- onmouseover="overEmailOverlay()" onmouseout="outEmailOverlay()"> -->
+                <a href="mailto: robert_michels@outlook.com" target="_blank" title="E-Mail | Right-click to copy to clipboard" id="emailLink"><li><i class="fas fa-at fa-2x" id="email"></i></li></a>
+                <!--<div id="emailOverlay" class="hide" onmouseover="overEmailContainer()" onmouseout="outEmailContainer()">
+                <i class="far fa-copy js-emailcopybtn" title="Copy E-Mail to Clipboard"></i>   
+                </div>-->
               </div>
+              <small class="js-emaillink">robert_michels@outlook.com</small> 
               <a href="https://linkedin.com/in/robert-michels" target="_blank" title="LinkedIn"><li><i class="fab fa-linkedin-in fa-2x"></i></li></a>
               <a href="https://github.com/robert-michels" target="_blank" title="GitHub"><li><i class="fab fa-github fa-2x"></i></li></a>
               <a href="https://play.google.com/store/apps/developer?id=Studio+RM" target="_blank" title="Google Play"><li><i class="fab fa-google-play fa-2x"></i></li></a>
               <a href="https://rmichels.itch.io/" target="_blank" ><li><i class="fab fa-itch-io fa-2x"title="Itch.io"></i></li></a>
             </ul>
           </div>
-          <small>Copyright &copy; <?php echo date("Y"); ?> Robert Michels. All Rights Reserved.</small>
-        </div>
-      </div>
+          <noscript><small>robert_michels@outlook.com</small></noscript>
+          <hr>
+          <div class="footerEnd">
+            <small>Copyright &copy; <?php echo date("Y"); ?> Robert Michels. All Rights Reserved.</small>
+            <a href="#"><small>Privacy Policy</small></a>
+          </div>          
     </footer>
   </div>
 
