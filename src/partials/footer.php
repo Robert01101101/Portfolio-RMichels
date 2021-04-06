@@ -23,7 +23,6 @@
             </ul>
           </div>
           <noscript><small>robert_michels@outlook.com</small></noscript>
-          <hr>
           <div class="footerEnd">
             <small>Copyright &copy; <?php echo date("Y"); ?> Robert Michels. All Rights Reserved.</small>
             <a href="privacyPolicy"><small>Privacy Policy</small></a>

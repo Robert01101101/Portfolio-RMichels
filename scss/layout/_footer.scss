@@ -3,18 +3,8 @@ footer {
 	width: 100vw;
 	margin-left: -#{_grid(content-margin)};
 	margin-right: -#{_grid(content-margin)};
-	padding: 0 #{_grid(content-margin)};
+	padding: 2rem #{_grid(content-margin)};
 
-
-	@include md {
-		width: 100%;
-		padding: 1rem 3rem 2rem 3rem;
-		margin: 0;
-	}
-
-	@include lg {
-		padding: 6rem 8rem 4rem 8rem;
-	}
 
 	background-color: rgba(0,0,0,0.55);
 	box-sizing: border-box;
@@ -23,7 +13,7 @@ footer {
 	flex-direction: column;
 	flex-wrap: nowrap;
 	justify-content: space-between;
-	align-items: center;
+	align-items: stretch;
 	align-content: space-between;
 
 	gap: 3rem;
@@ -32,12 +22,21 @@ footer {
 		z-index:11;
 	}
 
-	@include xxl {
-		padding-left: 15%;
+	@include md {
+		width: 100%;
+		padding: 6rem 8rem 4rem 8rem;
+		margin: 0;
+
+		align-items: center;
+	}
+
+	@include lg {
+		padding: 6rem 8rem 4rem 8rem;
 	}
 
 	hr {
 		width: 40rem;
+		//border-color: rgba(_colour(white), 0.3);
 	}
 
 	.js-emaillink {
@@ -53,7 +52,9 @@ footer {
 		justify-content: space-between;
 		align-items: center;
 
-		gap: 5rem;
+		@include md {
+			gap: 5rem;
+		}
 
 		a {
 			color: _colour(white);
