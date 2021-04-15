@@ -86,7 +86,7 @@ Partial::build('projectPageMeta', ["project" => $project]);
           <img src="assets/img/amae/lqip/process-components.jpg">
         </figure>
       </div>
-      <figcaption>Design artifacts that explain components of our design & define a clear styleguide to achieve consistency.</figcaption>
+      <figcaption>Design artifacts that detail components of our design & define a clear styleguide to achieve consistency.</figcaption>
     </figure>
   </section>
 

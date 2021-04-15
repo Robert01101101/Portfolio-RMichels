@@ -37,9 +37,11 @@
 
             &:hover {
                 * {
+                    text-decoration-thickness: from-font;
                     text-decoration: underline !important;
                 }
                 .curPage {
+                    text-decoration-thickness: from-font;
                     text-decoration: underline line-through!important;
                 }
             }

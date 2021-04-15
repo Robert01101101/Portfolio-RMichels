@@ -137,6 +137,17 @@ footer {
 		justify-content: space-between;
 		align-items: center;
 		align-content: space-between;
+
+		div {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: space-between;
+			align-items: center;
+			align-content: space-between;
+
+			gap: 1rem;
+		}
 	}
 
 	a {
