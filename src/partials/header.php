@@ -44,20 +44,20 @@ setcookie("returningVisitor", "true");
 
 
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="<?php echo $GLOBALS['d'];?>css/normalize.css">
+  <link rel="stylesheet" href="<?php echo $GLOBALS['d'];?>css/main.css">
 
   <!-- Load Font -->
   <!-- Load Icons -->
   <script src="https://kit.fontawesome.com/93c460f451.js" crossorigin="anonymous"></script>
 
   <!-- Load Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icon/favicon-16x16.png">
-  <link rel="manifest" href="/assets/icon/site.webmanifest">
-  <link rel="mask-icon" href="/assets/icon/safari-pinned-tab.svg" color="#5bbad5">
-  <link rel="shortcut icon" href="/assets/icon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="<?php echo $GLOBALS['d'];?>/assets/icon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="<?php echo $GLOBALS['d'];?>/assets/icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="<?php echo $GLOBALS['d'];?>/assets/icon/favicon-16x16.png">
+  <link rel="manifest" href="<?php echo $GLOBALS['d'];?>/assets/icon/site.webmanifest">
+  <link rel="mask-icon" href="<?php echo $GLOBALS['d'];?>/assets/icon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="<?php echo $GLOBALS['d'];?>/assets/icon/favicon.ico">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="msapplication-config" content="/assets/icon/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
@@ -73,7 +73,7 @@ setcookie("returningVisitor", "true");
             <li class="homeIcon"><a title="Home" href="/<?php if(isset($_COOKIE['visitorFilter'])){ echo "?filter=".$_COOKIE['visitorFilter']; } ?>"><i class="fas fa-home"></i></a></li>
 
           <?php else : ?>
-            <li class="homeIcon"><a title="About" href="about" title="About"><i class="fas fa-info-circle"></i></a></li>
+            <li class="homeIcon"><a title="About" href="<?php echo $GLOBALS['d'];?>about" title="About"><i class="fas fa-info-circle"></i></a></li>
 
           <?php endif; ?>
 
@@ -88,13 +88,13 @@ setcookie("returningVisitor", "true");
             <a title="Featured Work" href="/<?php if(isset($_COOKIE['visitorFilter'])){ echo "?filter=".$_COOKIE['visitorFilter']; } ?>">
               <li <?php if(!isset($about) && !isset($projects) && !isset($project)){ echo "class='curPage'"; } ?>>Featured Work</li>
             </a>
-            <a href="about" title="About">
+            <a href="<?php echo $GLOBALS['d'];?>about" title="About">
               <li <?php if(isset($about)){ echo "class='curPage'"; } ?>>About</li>
             </a>
             <a href="#Footer" title="Contact" onclick="toggleMenu()">
               <li>Contact</li>
             </a>
-            <a href="projects" title="All Projects">
+            <a href="<?php echo $GLOBALS['d'];?>projects" title="All Projects">
               <li <?php if(isset($projects)){ echo "class='curPage'"; } ?>>All Projects</li>
             </a>
           </ul>
@@ -104,4 +104,4 @@ setcookie("returningVisitor", "true");
     
     <!-- #################################### CONTENT ###################################### -->
     <main id="Content">
-    <script src="js/menu.js"></script>
+    <script src="<?php echo $GLOBALS['d'];?>js/menu.js"></script>

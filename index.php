@@ -1,5 +1,6 @@
 <?php
 
+require "config.php";
 require "src/Partial.php";
 require "src/objects/Project.php";
 

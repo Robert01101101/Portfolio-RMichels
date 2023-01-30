@@ -26,8 +26,8 @@
           <div class="footerEnd">
             <small>Copyright &copy; <?php echo date("Y"); ?> Robert Michels. All Rights Reserved.</small>
             <div>
-              <a href="assets/other/RobertMichelsResume.pdf"><small>Resume</small></a>
-              <a href="privacyPolicy"><small>Privacy Policy</small></a>
+              <a href="<?php echo $GLOBALS['d'];?>assets/other/RobertMichelsResume.pdf"><small>Resume</small></a>
+              <a href="<?php echo $GLOBALS['d'];?>privacyPolicy"><small>Privacy Policy</small></a>
             </div>
           </div>          
     </footer>
@@ -96,40 +96,40 @@
 
     </script>
     
-  <script src="js/three/build/three.min.js"></script>
-  <script src="js/three/examples/js/loaders/GLTFLoader.js"></script>
-  <script src="js/tools.js"></script>
-  <script src="js/lqip.js"></script>
-  <!--<script src="three/myThreeScript.js"></script>-->
-  <!--<script src="three/skull.js"></script>-->
+  <script src="<?php echo $GLOBALS['d'];?>js/three/build/three.min.js"></script>
+  <script src="<?php echo $GLOBALS['d'];?>js/three/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="<?php echo $GLOBALS['d'];?>js/tools.js"></script>
+  <script src="<?php echo $GLOBALS['d'];?>js/lqip.js"></script>
+  <!--<script src="<?php echo $GLOBALS['d'];?>three/myThreeScript.js"></script>-->
+  <!--<script src="<?php echo $GLOBALS['d'];?>three/skull.js"></script>-->
 
-  <script src="js/three/waves.js"></script>
+  <script src="<?php echo $GLOBALS['d'];?>js/three/waves.js"></script>
   
 
   <?php if(isset($index)) : ?>
 
-    <script src="js/three/landingModel.js"></script>
-    <script src="js/textAnim.js"></script>
+    <script src="<?php echo $GLOBALS['d'];?>js/three/landingModel.js"></script>
+    <script src="<?php echo $GLOBALS['d'];?>js/textAnim.js"></script>
 
   <?php endif; ?>
   <?php if(isset($projects)) : ?>
 
-    <script src="js/projectFilter.js"></script>
+    <script src="<?php echo $GLOBALS['d'];?>js/projectFilter.js"></script>
 
   <?php else: ?>
 
-    <script src="js/downArrow.js"></script>
+    <script src="<?php echo $GLOBALS['d'];?>js/downArrow.js"></script>
 
   <?php endif; ?>
 
   <?php if(!isset($index) && !isset($projects)) : ?>
 
-    <script src="js/imageViewer.js"></script>
+    <script src="<?php echo $GLOBALS['d'];?>js/imageViewer.js"></script>
 
   <?php endif; ?>
   
-  <script src="js/projectTile.js"></script>
-  <script src="js/other.js"></script>
+  <script src="<?php echo $GLOBALS['d'];?>js/projectTile.js"></script>
+  <script src="<?php echo $GLOBALS['d'];?>js/other.js"></script>
   
 
 

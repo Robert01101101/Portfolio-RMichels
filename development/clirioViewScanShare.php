@@ -1,5 +1,8 @@
 <?php
 
+chdir('../');
+
+require "config.php";
 require "src/Partial.php";
 require "src/objects/Project.php";
 
@@ -36,16 +39,16 @@ Partial::build('projectPageMeta', ["project" => $project]);
     <figure ignorecarousel>
       <div class="mediaSquare">
         <figure onclick="viewImage(this)">
-          <img src="assets/img/img.jpg">
+          <img src="<?php echo $GLOBALS['d'];?>assets/img/img.jpg">
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="assets/img/img.jpg">
+          <img src="<?php echo $GLOBALS['d'];?>assets/img/img.jpg">
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="assets/img/img.jpg">
+          <img src="<?php echo $GLOBALS['d'];?>assets/img/img.jpg">
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="assets/img/img.jpg">
+          <img src="<?php echo $GLOBALS['d'];?>assets/img/img.jpg">
         </figure>
       </div>
       <figcaption>Caption</figcaption>

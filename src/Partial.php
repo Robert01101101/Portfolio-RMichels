@@ -1,5 +1,6 @@
 <?php
 
+$mainDir = "../";
 
 //namespace View;
 

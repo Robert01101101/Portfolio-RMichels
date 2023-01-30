@@ -10,8 +10,8 @@ if (isset($roles)){
 
 <div class="projRow projRow--visible" <?php if(isset($roles)) : ?>data-js='<?= $roleString; ?>'<?php endif; ?>>
   <div class="projPanel <?php if ($inDevelopment) echo "inDevelopment" ?>">
-    <a href="<?= $slug; ?>" title="<?= $name; ?>">
-      <img src="assets/img/lqip/<?= $slug; ?>.jpg" loading="lazy" alt="<?= $name; ?>" <?php if ($inDevelopment) echo "class='inDevelopment'" ?>>
+    <a href="<?php echo ($inDevelopment ? 'development/' . $slug : $slug) ?>" title="<?= $name; ?>">
+      <img src="<?php echo $GLOBALS['d'];?>assets/img/lqip/<?= $slug; ?>.jpg" loading="lazy" alt="<?= $name; ?>" <?php if ($inDevelopment) echo "class='inDevelopment'" ?>>
       <?php if ($inDevelopment) echo "<div class='inDevelopmentText'>In Development</div>" ?>
       <div class="projJScontainer">
         <h2 class="projLabel"> <?= $name; ?> </h2>
