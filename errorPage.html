@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+<style>
+body {
+  background-color: #222222;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+} 
+h1 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+.errorPanel {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: max(16vw, 300px); 
+    height: max(15vw, 410px); 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.backLink {
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 700;
+    display: inline-block;
+    background-color: transparent;
+    cursor: pointer;
+    color: white;
+    border: none;
+    width: 8em;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+    position: relative;
+    margin: 1em 0;
+}
+.backLink:before {
+    white-space: pre;
+    content: "←    ";
+    color: white;
+    transition: 0.5s;
+    text-decoration: none!important;
+    position: absolute;
+    left: -2.95rem;
+}
+.backLink:hover {
+    text-decoration: underline;
+}
+.backLink:hover:before {
+    text-decoration: none !important;
+    left: -3.45rem;
+}
+</style>
+</head>
+<body>
+
+  <div class="errorPanel">
+    <h1>Oops!</h1>
+    <p>Looks like this site got lost in the void of the backlog...</p>
+    <p>404 - Page Not Found</p>
+    <button class="backLink" onclick="history.back()">Go Back</button>
+  </div>
+  
+</body>
+</html>
