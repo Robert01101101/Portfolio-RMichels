@@ -13,6 +13,9 @@ $screen-xl-min: 1200px;
 // Ultrawide
 $screen-xxl-min: 1600px;
 
+// Ultrawide
+$screen-xxxl-min: 1900px;
+
 
 // Small devices
 @mixin sm {
@@ -45,6 +48,13 @@ $screen-xxl-min: 1600px;
 // Extra large devices
 @mixin xxl {
     @media (min-width: #{$screen-xxl-min}) and (orientation: landscape) {
+        @content;
+    }
+ }
+
+// Extremely large devices
+@mixin xxxl {
+    @media (min-width: #{$screen-xxxl-min}) and (orientation: landscape) {
         @content;
     }
  }

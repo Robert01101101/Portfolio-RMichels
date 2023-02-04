@@ -40,6 +40,18 @@ section#Projects{
 				color: white;
 			}
 		}
+
+		@include sm {
+			display: block;
+		}
+
+		@include lg {
+			display: flex;
+		}
+
+		@include xxxl {
+			display: block;
+		}
 	}
 
 	//__breakpoints
@@ -48,8 +60,7 @@ section#Projects{
 		justify-content: space-between;
 
 		ul {
-			display: block;
-			
+
 			li {
 				margin-left: 1.5rem;
 
@@ -62,6 +73,14 @@ section#Projects{
 
 	@include md {
 		flex-wrap: nowrap;
+	}
+
+	@include lg {
+		flex-direction: column;
+	}
+
+	@include xxxl {
+		flex-direction: row;
 	}
 }
 
@@ -86,27 +105,73 @@ section#Projects{
 			top: 50%;
 			transform: translateY(-50%);
 		}
-		
-		@include xxl {
+
+		@include xl {
 			display: flex;
 			justify-content: space-between;
 			align-items: flex-start;
 			align-content: center;
 			max-width: 100%;
 		
-			gap: 10rem;
+			gap: 4rem;
 		
-			* {
-				flex-basis: 50%;
-			}
-
-			
+			/** {
+				flex-basis: 33%;
+			}*/
 
 			padding-bottom: 2rem;
 
 			> div {
-				&:first-of-type {
+				&:nth-child(2){
 					max-width: 40rem;
+					min-width: 22rem;
+					flex-basis: 30%;
+				}
+				&:nth-child(3){
+					flex-basis: 40%;
+				}
+			}
+		}
+		
+		@include xxl {
+
+			gap: 6rem;
+		}
+
+		@include xxxl {
+
+			gap: 10rem;
+		}
+
+		img {
+			max-width: 100%;
+			display: block;
+			
+		}
+
+		> div {
+			&:first-of-type {
+				position: relative;
+				width: 30%;
+				margin: auto;
+
+				@include xl {
+					margin: 0;
+					width: 100%;
+					flex-basis: 15%;
+					margin-top: calc(5rem - 5%);
+				}
+				
+
+				&:before {
+					position: absolute;
+					top: 4%;
+					left: 4%;
+					width: 102%;
+					height: 102%;
+					border: 4px solid white;
+					box-sizing: border-box;
+					content: '';
 				}
 			}
 		}
