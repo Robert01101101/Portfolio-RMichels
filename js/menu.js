@@ -37,10 +37,6 @@ document.addEventListener('click', function(event) {
   if (!overlayMenu.classList.contains("hidden") && !tmpDisable){
     var isClickInside = menuContent.contains(event.target);
 
-    console.log(menuContent);
-    console.log(event.target);
-    console.log(isClickInside);
-
     if (!isClickInside) {
       console.log("clickoutside");
       menuToggle.classList.toggle("change");
@@ -50,3 +46,15 @@ document.addEventListener('click', function(event) {
     }
   }
 });
+
+
+document.onkeydown = function(evt) {
+  evt = evt || window.event;
+  if (evt.key === "Escape") {
+      console.log('Esc key pressed.');
+      menuToggle.classList.toggle("change");
+      overlayMenu.classList.toggle("hidden");
+      contentToBlur.classList.toggle("blur");
+      mainGrid.classList.toggle("noClick");
+  }
+};
