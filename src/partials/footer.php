@@ -103,7 +103,7 @@
   <!--<script src="<?php echo $GLOBALS['d'];?>three/myThreeScript.js"></script>-->
   <!--<script src="<?php echo $GLOBALS['d'];?>three/skull.js"></script>-->
 
-  <script src="<?php echo $GLOBALS['d'];?>js/three/waves.js"></script>
+  <script src="<?php echo $GLOBALS['d'];?>js/three/waves.js?v=0.1"></script>
   
 
   <?php if(isset($index)) : ?>
@@ -118,7 +118,7 @@
 
   <?php else: ?>
 
-    <script src="<?php echo $GLOBALS['d'];?>js/downArrow.js"></script>
+    <script src="<?php echo $GLOBALS['d'];?>js/downArrow.js?v=0.1"></script>
 
   <?php endif; ?>
 

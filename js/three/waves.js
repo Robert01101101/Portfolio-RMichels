@@ -284,7 +284,12 @@ function waves () {
 			// document ready
 			console.log("page finished loading");
 		
-			setTimeout(() => { calcDocHeight(); updateCamera(); }, 20);
+			//TODO: Fix proper detection of page load finish. Likely due to
+			// 		complications with image loading, page load detection is currently
+			//		not 100% accurate, so this helps deal with that for now
+			for (let i = 0; i < 4; i++) {
+				setTimeout(() => { calcDocHeight(); updateCamera(); }, Math.pow(12, i+1));
+			}
 		}
 
 		if (typeof initProjectTiles !== "undefined") { 
