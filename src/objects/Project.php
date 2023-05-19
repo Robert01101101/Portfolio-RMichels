@@ -10,6 +10,7 @@ class Project
     protected $type;
     protected $year;
     protected $inDevelopment;
+    protected $company;
     protected $roles = []; 
     protected $teammembers = []; 
 
@@ -165,6 +166,24 @@ class Project
         return $this;
     }
 
+    /**
+     * @return string
+     */
+    public function getCompany(): string
+    {
+        return $this->company;
+    }
+
+    /**
+     * @param mixed $string
+     * @return Project
+     */
+    public function setCompany($company)
+    {
+        $this->company = $company;
+        return $this;
+    }
+
     public static function buildProjectFromSlug(string $slug) : self {
 
         // 1. Set up MySQLi connection
@@ -192,6 +211,7 @@ class Project
             $project_year = $row['project_year'];
             $project_slug = $row['project_slug'];
             $project_inDevelopment = $row['project_indevelopment'];
+            $project_company = $row['project_company'];
 
             $output = (new Project($project_slug))
                             ->setId($project_id)
@@ -199,7 +219,8 @@ class Project
                             ->setType($project_type)
                             ->setYear($project_year)
                             ->setSlug($project_slug)
-                            ->setInDevelopment($project_inDevelopment);
+                            ->setInDevelopment($project_inDevelopment)
+                            ->setCompany($project_company);
         }
 
         //2 GET ROLES

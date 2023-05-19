@@ -12,7 +12,7 @@
     <p><?php echo $project->getYear() ?></p>
   </div>
   <div class="projMetaItem">
-    <h2>My Roles</h2>
+    <h2>Skills Applied</h2>
     <ul>
 
       <?php 
@@ -27,9 +27,10 @@
     </ul>
   </div>
   <div class="projMetaItem">
-    <h2>Team</h2>    
-    <ul>
-      
+
+    <?php if (empty($project->getCompany())): ?>
+      <h2>Team</h2>
+      <ul>
       <?php 
 
         $teammembers = $project->getTeammembers();
@@ -39,7 +40,14 @@
         }
 
       ?>
-
     </ul>
+    <?php else: ?>
+      <h2>Company</h2>
+      <?php echo $project->getCompany() ?>
+    <?php endif; ?>
+
+
+   
+    
   </div>
 </div>
