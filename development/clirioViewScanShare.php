@@ -36,15 +36,22 @@ Partial::build('projectPageMeta', ["project" => $project]);
 
 
   <!----- Content / Embed 3D Scan ----->
-  <iframe src="https://clirioview-viw-prd.azurewebsites.net/guest/MEVdEANk9_Zhr6tlm4ibd1Vn" style="width: 100%" class="clirioScanShareEmbed"></iframe>
+  <figure ignorecarousel>
+    <iframe src="https://clirioview-viw-prd.azurewebsites.net/guest/MEVdEANk9_Zhr6tlm4ibd1Vn" style="width: 100%" class="clirioScanShareEmbed"></iframe>
+    <figcaption>Interactive example of an embedded scan share. Try to look at the model from different angles!</figcaption>
+  </figure>
 
 
   <!----- Content / Text ----->
   <section class="sectionText">
-    <h2>Placeholder</h2>
-    <p>Sed dapibus nisi sem, vel ornare ex sollicitudin vitae. Vestibulum magna ante, lacinia eget maximus sed, sagittis gravida nunc. Maecenas tempus sem ac odio pulvinar, ut posuere nibh efficitur. Nulla malesuada rutrum auctor. Sed fermentum eleifend risus, sed pulvinar erat. Suspendisse non augue eu erat consectetur tincidunt et vel nisi. Aenean et dui nec massa pellentesque pellentesque eget at velit. Vivamus eget metus ut ex aliquet suscipit ac a purus</p>
+    <h2>Development Overview</h2>
+    <p>There were two stories for the development of this feature: clientside app share UI and logic, and the webviewer.</p>
 
-    <p>Donec vel dignissim tortor, id porttitor metus. Donec sit amet elementum mauris. Integer vehicula vestibulum lacus pulvinar mattis. Nunc vitae ligula vel massa posuere vulputate id ac velit. Suspendisse potenti. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur tortor odio, finibus eu gravida ac, vehicula id leo. Donec molestie ante sit amet libero elementum efficitur. Cras lobortis ut ligula ac scelerisque. Ut pretium mi nec porta pharetra.</p>
+    <h3>Share UI and Logic</h3>
+    <p>Developed with C# in Unity, as a pop-up accessible through the observation details view in the Clirio View app. UI designed in Figma in collaboration with <a href="https://www.behance.net/wischj82b8/projects" target="_blank">Jordan Wischmann</a>.</p>
+
+    <h3>Webviewer</h3>
+    <p>Developed with Blazor APS.NET and Three.js. Backend token sharing implemented by <a href="https://github.com/timothyt">Timothy Thibault</a>.</p>
   </section>
 
 
@@ -58,15 +65,19 @@ Partial::build('projectPageMeta', ["project" => $project]);
         <figure onclick="viewImage(this)">
           <img src="<?php echo $GLOBALS['d'];?>assets/img/img.jpg">
         </figure>
-        <figure onclick="viewImage(this)">
-          <img src="<?php echo $GLOBALS['d'];?>assets/img/img.jpg">
-        </figure>
-        <figure onclick="viewImage(this)">
-          <img src="<?php echo $GLOBALS['d'];?>assets/img/img.jpg">
-        </figure>
       </div>
-      <figcaption>Caption</figcaption>
+      <figcaption>Left: Share UI. Right: Webviewer.</figcaption>
     </figure>
+  </section>
+
+  <!----- Content / Text ----->
+  <section class="sectionText">
+    <h2>Share UI and Logic</h2>
+  </section>
+
+  <!----- Content / Text ----->
+  <section class="sectionText">
+    <h2>Webviewer</h2>
   </section>
 
 
