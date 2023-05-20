@@ -38,7 +38,7 @@ Partial::build('projectPageMeta', ["project" => $project]);
   <!----- Content / Embed 3D Scan ----->
   <figure ignorecarousel>
     <iframe src="https://clirioview-viw-prd.azurewebsites.net/guest/MEVdEANk9_Zhr6tlm4ibd1Vn" style="width: 100%" class="clirioScanShareEmbed"></iframe>
-    <figcaption>Interactive example of an embedded scan share. Try to look at the model from different angles!</figcaption>
+    <figcaption>Interactive example of an embedded scan share. Click and drag to look at the model from different angles. The same share can also be opened in it's own <a href="https://clirioview-viw-prd.azurewebsites.net/guest/MEVdEANk9_Zhr6tlm4ibd1Vn" target="_blank">page</a>.</figcaption>
   </figure>
 
 
@@ -60,15 +60,15 @@ Partial::build('projectPageMeta', ["project" => $project]);
     <figure ignorecarousel>
       <div class="mediaRow mediaRow-equalWidth">
         <figure onclick="viewImage(this)">
-          <img src="<?php echo $GLOBALS['d'];?>assets/img/clirioViewScanShare/scanShareClientSideUi.jpg">
+          <img src="<?php echo $GLOBALS['d'];?>assets/img/clirioViewScanShare/lqip/scanShareClientSideUi.png">
           <figcaption>Share UI</figcaption>
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="<?php echo $GLOBALS['d'];?>assets/img/clirioViewScanShare/scanShareClientSideUiEmbed.jpg">
+          <img src="<?php echo $GLOBALS['d'];?>assets/img/clirioViewScanShare/lqip/scanShareClientSideUiEmbed.png">
           <figcaption>Embed UI</figcaption>
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="<?php echo $GLOBALS['d'];?>assets/img/clirioViewScanShare.jpg">
+          <img src="<?php echo $GLOBALS['d'];?>assets/img/lqip/clirioViewScanShare.jpg" class="whiteFrame">
           <figcaption>Webviewer</figcaption>
         </figure>
       </div>

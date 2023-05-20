@@ -123,6 +123,9 @@ main {
 	
 				img {
 					max-width: 100%;
+					&.whiteFrame {
+						border: 1px solid white;
+					}
 				}
 			}
 

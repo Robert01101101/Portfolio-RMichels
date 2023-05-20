@@ -42,6 +42,10 @@ figcaption {
 	&.center {
 		text-align: center;
 	}
+
+	a {
+		@include inTextLink;
+	}
 }
 
 figure {
