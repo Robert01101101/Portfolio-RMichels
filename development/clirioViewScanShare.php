@@ -51,22 +51,27 @@ Partial::build('projectPageMeta', ["project" => $project]);
     <p>Developed with C# in Unity, as a pop-up accessible through the observation details view in the Clirio View app. UI designed in Figma in collaboration with <a href="https://www.behance.net/wischj82b8/projects" target="_blank">Jordan Wischmann</a>.</p>
 
     <h3>Webviewer</h3>
-    <p>Developed with Blazor APS.NET and Three.js. Backend token sharing implemented by <a href="https://github.com/timothyt">Timothy Thibault</a>.</p>
+    <p>Developed with Blazor APS.NET and Three.js. Backend token sharing implemented by <a href="https://github.com/timothyt" target="_blank">Timothy Thibault</a>.</p>
   </section>
 
 
   <!----- Content / Media ----->
   <section class="sectionMedia">
     <figure ignorecarousel>
-      <div class="mediaSquare">
+      <div class="mediaRow mediaRow-equalWidth">
         <figure onclick="viewImage(this)">
-          <img src="<?php echo $GLOBALS['d'];?>assets/img/img.jpg">
+          <img src="<?php echo $GLOBALS['d'];?>assets/img/clirioViewScanShare/scanShareClientSideUi.jpg">
+          <figcaption>Share UI</figcaption>
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="<?php echo $GLOBALS['d'];?>assets/img/img.jpg">
+          <img src="<?php echo $GLOBALS['d'];?>assets/img/clirioViewScanShare/scanShareClientSideUiEmbed.jpg">
+          <figcaption>Embed UI</figcaption>
+        </figure>
+        <figure onclick="viewImage(this)">
+          <img src="<?php echo $GLOBALS['d'];?>assets/img/clirioViewScanShare.jpg">
+          <figcaption>Webviewer</figcaption>
         </figure>
       </div>
-      <figcaption>Left: Share UI. Right: Webviewer.</figcaption>
     </figure>
   </section>
 

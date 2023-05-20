@@ -125,6 +125,15 @@ main {
 					max-width: 100%;
 				}
 			}
+
+			&-equalWidth {
+				> * {
+					@include lg {
+						flex-grow: 1 !important;
+						flex-basis: 0 !important;
+					}
+				}
+			}
 		}
 
 		//____________________________________ mediaSquare
