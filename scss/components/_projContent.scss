@@ -115,7 +115,10 @@ main {
 					}
 				}
 
-				flex: 1 0 30%;
+				@include sm {
+					flex: 1 0 30%;
+				}
+				
 
 				@include lg {
 					flex: 0 1 auto;
