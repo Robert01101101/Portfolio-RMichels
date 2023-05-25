@@ -93,6 +93,15 @@ Partial::build('projectPageMeta', ["project" => $project]);
   </section>
 
 
+   <!----- Content / Media ----->
+  <section class="sectionMedia">
+    <div class="divText">
+      <h2>Code Sample</h2>
+      <p>The code snippet below contains the code related to loading and displaying the 3D Model inside the webviewer, using Three.js. Interesting sections include the loader which was modified to support SAS URLs, the scale legend lines, and the scale legend text labels.</p>
+    </div>
+    <script src="https://gist.github.com/Robert01101101/ec153ae228a8ae3f6fe28b143073b669.js"></script>
+  </section>
+
 </div>
 
 <?php
