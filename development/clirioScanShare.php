@@ -6,7 +6,7 @@ require "config.php";
 require "src/Partial.php";
 require "src/objects/Project.php";
 
-$project = Project::buildProjectFromSlug('clirioViewScanShare');
+$project = Project::buildProjectFromSlug('clirioScanShare');
 
 Partial::build('header', ["project" => $project]);
 
@@ -68,7 +68,7 @@ Partial::build('projectPageMeta', ["project" => $project]);
           <figcaption>Embed UI</figcaption>
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="<?php echo $GLOBALS['d'];?>assets/img/lqip/clirioViewScanShare.jpg" class="whiteFrame">
+          <img src="<?php echo $GLOBALS['d'];?>assets/img/lqip/clirioScanShare.jpg" class="whiteFrame">
           <figcaption>Webviewer</figcaption>
         </figure>
       </div>

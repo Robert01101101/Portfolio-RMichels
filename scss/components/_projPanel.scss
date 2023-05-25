@@ -72,7 +72,7 @@
 
 		&:hover:not(.inDevelopment){
 			h2::after {
-				width: calc(100% + 4rem);
+				width: calc(100% + 6rem);
 			}
 			img {
 				box-shadow: 5px 5px 20px _colour(shadow);
@@ -86,10 +86,10 @@
 				content: "";
 				position: absolute;
 				background-color: _colour(blue);
-				left: -2rem;
-				top: -.5rem;
+				left: -3rem;
+				top: -.6rem;
 				width: 0%;
-				height: calc(100% + 1rem);
+				height: calc(100% + 1.2rem);
 				z-index: -1;
 				transition: _duration(default);
 				box-shadow: 5px 5px 20px _colour(shadow);

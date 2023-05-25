@@ -6,18 +6,16 @@ require "config.php";
 require "src/Partial.php";
 require "src/objects/Project.php";
 
-$project = Project::buildProjectFromSlug('clirioWeb');
+$project = Project::buildProjectFromSlug('clirioCloud');
 
 Partial::build('header', ["project" => $project]);
 
 Partial::build('projectPageLanding', 
   ["project" => $project, 
-  "description" => "TODO",
-  "primaryLink" => "https://clirioview-viw-dev.azurewebsites.net/guest/f-aVQEv0LytBKHa8vARMx-Nl",
-  "primaryLinkText" => "TODO",
-  "secondaryLink" => "https://apps.microsoft.com/store/detail/clirio-view-desktop/9NB14S8DFWFP",
-  "secondaryLinkText" => "TODO",
-  "alt" => TRUE]);
+  "description" => "A web-based collection of tools for managing workspaces in Clirio View. Includes a user dashboard, workspace and observation creation tools, and bing maps.",
+  "primaryLink" => "https://cloud.clir.io/",
+  "primaryLinkText" => "Try Clirio Cloud",
+  "alt" => FALSE]);
 
 Partial::build('projectPageMeta', ["project" => $project]);
 
