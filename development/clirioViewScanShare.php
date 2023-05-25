@@ -14,9 +14,9 @@ Partial::build('projectPageLanding',
   ["project" => $project, 
   "description" => "Scan Share is a feature of the Clirio View product suite, for sharing photogrammetry scans quickly, and displaying them in a webviewer.",
   "primaryLink" => "https://clirioview-viw-dev.azurewebsites.net/guest/f-aVQEv0LytBKHa8vARMx-Nl",
-  "primaryLinkText" => "View Sample Scan Share",
+  "primaryLinkText" => "View Sample Share",
   "secondaryLink" => "https://apps.microsoft.com/store/detail/clirio-view-desktop/9NB14S8DFWFP",
-  "secondaryLinkText" => "Try with Clirio View Desktop",
+  "secondaryLinkText" => "Try Clirio View Desktop",
   "alt" => TRUE]);
 
 Partial::build('projectPageMeta', ["project" => $project]);
