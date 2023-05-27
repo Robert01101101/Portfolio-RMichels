@@ -60,11 +60,11 @@ Partial::build('projectPageMeta', ["project" => $project]);
     <figure ignorecarousel>
       <div class="mediaRow mediaRow-equalWidth">
         <figure onclick="viewImage(this)">
-          <img src="<?php echo $GLOBALS['d'];?>assets/img/clirioViewScanShare/lqip/scanShareClientSideUi.png">
+          <img src="<?php echo $GLOBALS['d'];?>assets/img/clirioScanShare/lqip/scanShareClientSideUi.png">
           <figcaption>Share UI</figcaption>
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="<?php echo $GLOBALS['d'];?>assets/img/clirioViewScanShare/lqip/scanShareClientSideUiEmbed.png">
+          <img src="<?php echo $GLOBALS['d'];?>assets/img/clirioScanShare/lqip/scanShareClientSideUiEmbed.png">
           <figcaption>Embed UI</figcaption>
         </figure>
         <figure onclick="viewImage(this)">
