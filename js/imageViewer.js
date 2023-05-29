@@ -32,6 +32,9 @@ function viewImage (sourceImage, carousel=false) {
         var imgWidth = img.width;
         var aspectRatio = imgWidth/imgHeight;
 
+        var captionNode = clone.getElementsByTagName('figcaption')[0];
+        console.log(captionNode);
+
         clone.innerHTML += origInnerHTML;
 
         //console.log(img.naturalHeight);
@@ -43,6 +46,10 @@ function viewImage (sourceImage, carousel=false) {
 
             //Add scroll container div to keep fullscreen icon at top
             clone.innerHTML = origInnerHTML;
+            if (captionNode != null) {
+                clone.appendChild(captionNode);
+                captionNode.classList.add("fullscreenCaption");
+            }
             newDiv = document.createElement("div");
             //newDiv.classList.add("tall");
             newDiv.id = "imgOverlayDivContainer";

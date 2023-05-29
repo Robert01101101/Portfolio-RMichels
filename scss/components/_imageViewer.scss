@@ -26,6 +26,23 @@
 			font-size: 1em;
 		}
 
+		.fullscreenCaption {
+			position: fixed;
+			bottom: 1rem;
+			left: 50%;
+			transform: translate(-50%, 0%);
+
+			color: _colour(white);
+
+			padding: 1.5rem;
+			
+			white-space: nowrap;
+
+			background-color: rgba(black, .4);
+			backdrop-filter: blur(10px);
+			opacity: 0; visibility: hidden; transition: .5s;
+		}
+
 		div.tall {
 			overflow-y: scroll;
 			max-height: 100vh;
@@ -96,6 +113,9 @@
 
 		&:hover{
 			.fas {
+				opacity: 1; visibility: visible;
+			}
+			.fullscreenCaption {
 				opacity: 1; visibility: visible;
 			}
 		}
