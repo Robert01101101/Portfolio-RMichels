@@ -203,12 +203,8 @@ function initCarousel(){
 
 // Next/previous controls
 function plusSlides(n) {
+    if (slideIndex === 0 && n < 0 || slideIndex === imgArray.length-1 && n > 0) return;
     slideIndex += n;
-    slideIndex = (slideIndex < 0) ? 0 : slideIndex;
-    slideIndex = (slideIndex > imgArray.length-1) ? imgArray.length-1 : slideIndex;
-
-    //console.log(imgArray[slideIndex]);
-    //console.log(slideIndex);
     viewImage(imgArray[slideIndex], true);
 }
 
