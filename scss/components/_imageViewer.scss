@@ -82,7 +82,7 @@
 			z-index: 960;
 		}
 
-		.fas {
+		.fa-solid {
 			position: absolute;
 			top: 1rem;
 			right: 2rem;
@@ -112,7 +112,7 @@
 		}
 
 		&:hover{
-			.fas {
+			.fa-solid {
 				opacity: 1; visibility: visible;
 			}
 			.fullscreenCaption {

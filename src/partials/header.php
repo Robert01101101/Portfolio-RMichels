@@ -49,7 +49,7 @@ setcookie("returningVisitor", "true");
 
   <!-- Load Font -->
   <!-- Load Icons -->
-  <script src="https://kit.fontawesome.com/93c460f451.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/cbd0a6dcda.js" crossorigin="anonymous"></script>
 
   <!-- Load Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="<?php echo $GLOBALS['d'];?>/assets/icon/apple-touch-icon.png">
@@ -70,10 +70,10 @@ setcookie("returningVisitor", "true");
       <nav>
         <ul>
           <?php if(isset($project) || isset($about)) : ?>
-            <li class="homeIcon"><a title="Home" href="/<?php if(isset($_COOKIE['visitorFilter'])){ echo "?filter=".$_COOKIE['visitorFilter']; } ?>"><i class="fas fa-home"></i></a></li>
+            <li class="homeIcon"><a title="Home" href="/<?php if(isset($_COOKIE['visitorFilter'])){ echo "?filter=".$_COOKIE['visitorFilter']; } ?>"><i class="fa-solid fa-house"></i></a></li>
 
           <?php else : ?>
-            <li class="homeIcon"><a title="About" href="<?php echo $GLOBALS['d'];?>about" title="About"><i class="fas fa-info-circle"></i></a></li>
+            <li class="homeIcon"><a title="About" href="<?php echo $GLOBALS['d'];?>about" title="About"><i class="fa-solid fa-circle-info"></i></a></li>
 
           <?php endif; ?>
 
