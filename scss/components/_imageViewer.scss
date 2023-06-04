@@ -76,6 +76,7 @@
 
 		img {
 			max-width: 100%;
+			min-width: 33vw;
             margin: auto;
 			display: block;
 
@@ -132,7 +133,7 @@
 	}
 
 	.prev, .next, .closeBtn {
-		position: absolute;
+		position: fixed;
 		top: 50%;
 
 		background-color: rgba(black, .7);
@@ -170,7 +171,7 @@
 	}
 
 	.prev {
-		left: -5rem;
+		left: 5rem;
 
 		&.flip {
 			left: 2rem;
@@ -178,7 +179,7 @@
 	}
 
 	.next, .closeBtn {
-		right: -5rem;
+		right: 5rem;
 
 		&.flip {
 			right: 2rem;
