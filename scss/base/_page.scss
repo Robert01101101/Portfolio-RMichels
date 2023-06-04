@@ -1,13 +1,7 @@
 //_____________________________________________ Core Styling
-//prevent sidescrolling
 html, body {
     max-width: 100%;
     overflow-x: hidden;
-
-	.stop-scrolling {
-		//max-height: 100vh;
-		//overflow-y: hidden;
-	}
 }
 
 html {
@@ -15,13 +9,12 @@ html {
 	scroll-behavior: smooth;
 }
 
+.stop-scrolling {
+	overflow-y: hidden;
+}
+
 main, #MainGrid {
 	margin: 0;
-
-	.stop-scrolling {
-		//max-height: 100vh;
-		//overflow-y: hidden;
-	}
 }
 
 #MainGrid {

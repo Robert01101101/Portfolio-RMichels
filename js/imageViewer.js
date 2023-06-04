@@ -9,7 +9,7 @@ var origInnerHTML = imageViewer.innerHTML;
 
 function viewImage (sourceImage, carousel=false) {
 
-    console.log(sourceImage);
+    document.documentElement.classList.add("stop-scrolling");
 
     if (viewerOpen && !carousel) {
         //closeImageViewer();
@@ -101,11 +101,13 @@ function viewImage (sourceImage, carousel=false) {
 //_____________________________________ Close //
 function closeImageViewer() {
     console.log("close");
+
     viewerOpen = false;
     //hide & clear viewer
     if (!imageViewer.classList.contains('hidden')) imageViewer.classList.add('hidden');
     imageViewer.innerHTML = origInnerHTML;
 
+    if (document.documentElement.classList.contains("stop-scrolling")) document.documentElement.classList.remove("stop-scrolling");
     if (body.classList.contains("stop-scrolling")) body.classList.remove("stop-scrolling");
     if (mainGrid.classList.contains("stop-scrolling")) mainGrid.classList.remove("stop-scrolling");
 }
@@ -257,14 +259,6 @@ function updateArrows() {
 }
   
 window.onresize = updateArrows;
-
-
-
-
-
-
-
-
 
 
 function is_touch_enabled() { 

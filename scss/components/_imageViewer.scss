@@ -76,7 +76,6 @@
 
 		img {
 			max-width: 100%;
-			min-width: 33vw;
             margin: auto;
 			display: block;
 
@@ -85,8 +84,8 @@
 
 		.fa-solid {
 			position: absolute;
-			top: 1rem;
-			right: 2rem;
+			top: 1.5rem;
+			right: 1.5rem;
 			font-size: 1.2em;
 
 			background-color: rgba(black, .7);
@@ -167,22 +166,22 @@
 	}
 
 	.closeBtn {
-		top: 1rem;
+		top: 1.5rem;
 	}
 
 	.prev {
-		left: 5rem;
+		left: 1.5rem;
 
 		&.flip {
-			left: 2rem;
+			left: 1.5rem;
 		}
 	}
 
 	.next, .closeBtn {
-		right: 5rem;
+		right: 1.5rem;
 
 		&.flip {
-			right: 2rem;
+			right: 1.5rem;
 		}
 	}
 
