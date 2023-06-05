@@ -1,0 +1,1 @@
+Mount with VeraCrypt, decrypt, place those folders in this folder. If db config changes, update the encrypted files to ensure it gets checked into git (in an encrypted state).
