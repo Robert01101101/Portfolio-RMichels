@@ -185,12 +185,9 @@ class Project
     }
 
     public static function buildProjectFromSlug(string $slug) : self {
+        include('nopublicaccess/auth.php');
 
         // 1. Set up MySQLi connection
-        $DBHOST = "localhost";
-        $DBUSER = "u596735338_u596735338";
-        $DBPASS = "_6P_sgvxipYH,Sd";
-        $DBNAME = "u596735338_robert_michels";
         $connection = mysqli_connect($DBHOST, $DBUSER, $DBPASS, $DBNAME);
         // Test if connection succeeded
         if(mysqli_connect_errno()) { die("Database connection failed: " . mysqli_connect_error() . " (" . mysqli_connect_errno() . ")" ); }
@@ -256,12 +253,9 @@ class Project
     }
 
     public static function getProjectsByFilter(array $filters) : array {
+        include('nopublicaccess/auth.php');
 
         // 1. Set up MySQLi connection
-        $DBHOST = "localhost";
-        $DBUSER = "u596735338_u596735338";
-        $DBPASS = "_6P_sgvxipYH,Sd";
-        $DBNAME = "u596735338_robert_michels";
         $connection = mysqli_connect($DBHOST, $DBUSER, $DBPASS, $DBNAME);
         // Test if connection succeeded
         if(mysqli_connect_errno()) { die("Database connection failed: " . mysqli_connect_error() . " (" . mysqli_connect_errno() . ")" ); }
@@ -305,12 +299,9 @@ class Project
     }
 
     public static function getProjects(int $count = 0) : array {
+        include('nopublicaccess/auth.php');
 
         // 1. Set up MySQLi connection
-        $DBHOST = "localhost";
-        $DBUSER = "u596735338_u596735338";
-        $DBPASS = "_6P_sgvxipYH,Sd";
-        $DBNAME = "u596735338_robert_michels";
         $connection = mysqli_connect($DBHOST, $DBUSER, $DBPASS, $DBNAME);
         // Test if connection succeeded
         if(mysqli_connect_errno()) { die("Database connection failed: " . mysqli_connect_error() . " (" . mysqli_connect_errno() . ")" ); }

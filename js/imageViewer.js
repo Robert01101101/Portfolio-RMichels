@@ -9,11 +9,15 @@ var origInnerHTML = imageViewer.innerHTML;
 
 function viewImage (sourceImage, carousel=false) {
 
-    console.log(sourceImage);
+    if (typeof sourceImage === 'string' || sourceImage instanceof String){
+        sourceImage = document.getElementById(sourceImage);
+        console.log(sourceImage);
+    }
 
     if (viewerOpen && !carousel) {
         //closeImageViewer();
     } else {
+        document.documentElement.classList.add("stop-scrolling");
         tmpDisableImg = true;
 
         //clone image
@@ -32,38 +36,46 @@ function viewImage (sourceImage, carousel=false) {
         var imgWidth = img.width;
         var aspectRatio = imgWidth/imgHeight;
 
+        var captionNode = clone.getElementsByTagName('figcaption')[0];
+        if (captionNode === undefined){
+            var parent = originImage.parentNode.parentNode;
+            captionNode = parent.getElementsByTagName('figcaption')[0];
+            captionNode = captionNode.cloneNode(true);
+        }
+        console.log(captionNode);
+
         clone.innerHTML += origInnerHTML;
 
         //console.log(img.naturalHeight);
         //console.log(window.innerHeight);
 
         //If very tall image, view with overflow
-        if ((aspectRatio < 1.2 && img.naturalHeight > window.innerHeight + 100) || sourceImage.hasAttribute("fullscreen")){
-            clone.classList.add("tall");
+        if ((img.naturalHeight > window.innerHeight) || sourceImage.hasAttribute("fullscreen")){
+            if (aspectRatio < 1.2 && img.naturalHeight > window.innerHeight + 100){
+                clone.classList.add("tall");
+                //Add scroll container div to keep fullscreen icon at top
+                clone.innerHTML = origInnerHTML;
 
-            //Add scroll container div to keep fullscreen icon at top
-            clone.innerHTML = origInnerHTML;
-            newDiv = document.createElement("div");
-            //newDiv.classList.add("tall");
-            newDiv.id = "imgOverlayDivContainer";
-            newDiv = clone.appendChild(newDiv);
-            newDiv.appendChild(imageNode);
+                newDiv = document.createElement("div");
+                //newDiv.classList.add("tall");
+                newDiv.id = "imgOverlayDivContainer";
+                newDiv = clone.appendChild(newDiv);
+                newDiv.appendChild(imageNode);
 
-            //TODO: fix background scroll 
-            body.classList.add("stop-scrolling");
-            mainGrid.classList.add("stop-scrolling");
+                //TODO: fix background scroll 
+                body.classList.add("stop-scrolling");
+                mainGrid.classList.add("stop-scrolling");
+            } else {
+                hideFullscreenImageOptions();
+            }
+            
+            if (captionNode != null) {
+                clone.appendChild(captionNode);
+                captionNode.classList.add("fullscreenCaption");
+            }
+            
         } else {
-            //Hide fullscreen icons
-            var fullScreenIcons = [];
-            fullScreenIcons = clone.getElementsByTagName('i');
-            fullScreenIcons = Array.prototype.slice.call(fullScreenIcons);
-
-            //console.log(fullScreenIcons);
-
-            fullScreenIcons.forEach(element => {
-                if(!element.classList.contains("hidden")) element.classList.add("hidden");
-            });
-
+            hideFullscreenImageOptions();
         }
     
         //unhide viewer
@@ -90,15 +102,30 @@ function viewImage (sourceImage, carousel=false) {
     }
 }
 
+function hideFullscreenImageOptions(){
+    //Hide fullscreen icons
+    var fullScreenIcons = [];
+    fullScreenIcons = clone.getElementsByTagName('i');
+    fullScreenIcons = Array.prototype.slice.call(fullScreenIcons);
+
+    //console.log(fullScreenIcons);
+
+    fullScreenIcons.forEach(element => {
+        if(!element.classList.contains("hidden")) element.classList.add("hidden");
+    });
+}
+
 
 //_____________________________________ Close //
 function closeImageViewer() {
     console.log("close");
+
     viewerOpen = false;
     //hide & clear viewer
     if (!imageViewer.classList.contains('hidden')) imageViewer.classList.add('hidden');
     imageViewer.innerHTML = origInnerHTML;
 
+    if (document.documentElement.classList.contains("stop-scrolling")) document.documentElement.classList.remove("stop-scrolling");
     if (body.classList.contains("stop-scrolling")) body.classList.remove("stop-scrolling");
     if (mainGrid.classList.contains("stop-scrolling")) mainGrid.classList.remove("stop-scrolling");
 }
@@ -196,12 +223,8 @@ function initCarousel(){
 
 // Next/previous controls
 function plusSlides(n) {
+    if (slideIndex === 0 && n < 0 || slideIndex === imgArray.length-1 && n > 0) return;
     slideIndex += n;
-    slideIndex = (slideIndex < 0) ? 0 : slideIndex;
-    slideIndex = (slideIndex > imgArray.length-1) ? imgArray.length-1 : slideIndex;
-
-    //console.log(imgArray[slideIndex]);
-    //console.log(slideIndex);
     viewImage(imgArray[slideIndex], true);
 }
 
@@ -254,14 +277,6 @@ function updateArrows() {
 }
   
 window.onresize = updateArrows;
-
-
-
-
-
-
-
-
 
 
 function is_touch_enabled() { 

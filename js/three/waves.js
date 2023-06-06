@@ -287,8 +287,8 @@ function waves () {
 			//TODO: Fix proper detection of page load finish. Likely due to
 			// 		complications with image loading, page load detection is currently
 			//		not 100% accurate, so this helps deal with that for now
-			for (let i = 0; i < 4; i++) {
-				setTimeout(() => { calcDocHeight(); updateCamera(); }, Math.pow(12, i+1));
+			for (let i = 0; i < 16; i++) {
+				setTimeout(() => { calcDocHeight(); updateCamera(); }, (50+Math.pow(4, (i/2)+1)/10));
 			}
 		}
 

@@ -17,7 +17,7 @@ Partial::build('header', ["about" => TRUE]);
   </div>
   <div>
     <h1 id="About">About Me</h1>
-    <p>I’m Robert Michels, a designer, and developer from Vancouver. I attended Simon Fraser University (SFU), where I earned my Bachelor’s Degree in Science with a major in Interactive Arts & Technology. My degree and my inexhaustible curiosity have made me an expert in the combination of design and technology. These days I’m working at <a href="https://www.clir.io" target="_blank">Clirio</a> on the development of MR apps for worksite inspection and collaboration.</p>
+    <p>I’m Robert Michels, a designer and developer from Vancouver. I attended Simon Fraser University (SFU), where I earned my Bachelor’s Degree of Science with a major in Interactive Arts & Technology. My degree and my inexhaustible curiosity have made me an expert in the combination of design and technology. These days I’m working at <a href="https://www.clir.io" target="_blank">Clirio</a> on the development of MR apps for worksite inspection and collaboration.</p>
   </div>
   <div>
     <h2>Skills</h2>

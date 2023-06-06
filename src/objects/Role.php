@@ -73,11 +73,9 @@ class Role
      */
     public static function getAllRoles(): array
     {
+        include('nopublicaccess/auth.php');
+
         // 1. Set up MySQLi connection
-        $DBHOST = "localhost";
-        $DBUSER = "u596735338_u596735338";
-        $DBPASS = "_6P_sgvxipYH,Sd";
-        $DBNAME = "u596735338_robert_michels";
         $connection = mysqli_connect($DBHOST, $DBUSER, $DBPASS, $DBNAME);
         // Test if connection succeeded
         if(mysqli_connect_errno()) { die("Database connection failed: " . mysqli_connect_error() . " (" . mysqli_connect_errno() . ")" ); }
