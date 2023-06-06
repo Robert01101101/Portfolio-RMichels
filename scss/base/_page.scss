@@ -41,6 +41,10 @@ figcaption {
 	}
 }
 
+.inTextLink {
+	@include inTextLink;
+}
+
 figure {
 	margin: 0;
 }

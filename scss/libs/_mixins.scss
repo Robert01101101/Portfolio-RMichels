@@ -1,6 +1,8 @@
 @mixin inTextLink {
 	color: _colour(white);
 	transition: .2s;
+	cursor: pointer;
+	text-decoration: underline;
 	text-decoration-thickness: from-font;
 
 	&:hover {

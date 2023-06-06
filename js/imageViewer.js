@@ -9,11 +9,15 @@ var origInnerHTML = imageViewer.innerHTML;
 
 function viewImage (sourceImage, carousel=false) {
 
-    document.documentElement.classList.add("stop-scrolling");
+    if (typeof sourceImage === 'string' || sourceImage instanceof String){
+        sourceImage = document.getElementById(sourceImage);
+        console.log(sourceImage);
+    }
 
     if (viewerOpen && !carousel) {
         //closeImageViewer();
     } else {
+        document.documentElement.classList.add("stop-scrolling");
         tmpDisableImg = true;
 
         //clone image

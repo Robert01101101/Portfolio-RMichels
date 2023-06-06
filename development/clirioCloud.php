@@ -51,7 +51,7 @@ Partial::build('projectPageMeta', ["project" => $project]);
           <img src="<?php echo $GLOBALS['d'];?>assets/img/clirioCloud/lqip/workspaceView.jpg">
           <figcaption>Workspace Management Tools</figcaption>
         </figure>
-        <figure onclick="viewImage(this)">
+        <figure onclick="viewImage(this)" id="img_createPoi">
           <img src="<?php echo $GLOBALS['d'];?>assets/img/clirioCloud/lqip/createPoi.jpg">
           <figcaption>Workspace Management Example: Create POI</figcaption>
         </figure>
@@ -96,7 +96,7 @@ Partial::build('projectPageMeta', ["project" => $project]);
   <section class="sectionMedia">
     <div class="divText">
       <h2>Code Sample</h2>
-      <p>An example of data binding between the form and data model for the POI create page.</p>
+      <p>An example of data binding between the form and data model for the <span onclick="viewImage('img_createPoi')" class="inTextLink">Create POI</span> page.</p>
     </div>
     <script src="https://gist.github.com/Robert01101101/062fa22fe781689ed11a85d85e4b2b3e.js"></script>
   </section>
