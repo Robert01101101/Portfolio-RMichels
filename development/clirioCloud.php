@@ -40,19 +40,19 @@ Partial::build('projectPageMeta', ["project" => $project]);
     <figure ignorecarousel>
       <div class="mediaSquare">
         <figure onclick="viewImage(this)">
-          <img src="<?php echo $GLOBALS['d'];?>assets/img/clirioCloud/dashboard.jpg">
+          <img src="<?php echo $GLOBALS['d'];?>assets/img/clirioCloud/lqip/dashboard.jpg">
           <figcaption>Dashboard</figcaption>
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="<?php echo $GLOBALS['d'];?>assets/img/clirioCloud/workspaceList.jpg">
+          <img src="<?php echo $GLOBALS['d'];?>assets/img/clirioCloud/lqip/workspaceList.jpg">
           <figcaption>Workspace List</figcaption>
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="<?php echo $GLOBALS['d'];?>assets/img/clirioCloud/workspaceView.jpg">
+          <img src="<?php echo $GLOBALS['d'];?>assets/img/clirioCloud/lqip/workspaceView.jpg">
           <figcaption>Workspace Management Tools</figcaption>
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="<?php echo $GLOBALS['d'];?>assets/img/clirioCloud/createPoi.jpg">
+          <img src="<?php echo $GLOBALS['d'];?>assets/img/clirioCloud/lqip/createPoi.jpg">
           <figcaption>Workspace Management Example: Create POI</figcaption>
         </figure>
       </div>
@@ -81,10 +81,10 @@ Partial::build('projectPageMeta', ["project" => $project]);
     <figure ignorecarousel>
       <div class="mediaRow mediaRow-equalWidth mediaRow-equalHeight">
         <figure onclick="viewImage(this)">
-          <img src="<?php echo $GLOBALS['d'];?>assets/img/clirioCloud/dashboard.jpg"> 
+          <img src="<?php echo $GLOBALS['d'];?>assets/img/clirioCloud/lqip/create3dModel.jpg"> 
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="<?php echo $GLOBALS['d'];?>assets/img/clirioCloud/workspaceList.jpg">
+          <img src="<?php echo $GLOBALS['d'];?>assets/img/clirioCloud/lqip/editBasemaps.jpg">
         </figure>
       </div>
       <figcaption>Some examples of data model binding to forms in Blazor. Expanding / collapsing optional sections of the form, and rearranging elements in a list, is made really easy with Blazor, since user inputs result in direct feedback without the need to write boilerplate code.</figcaption>
