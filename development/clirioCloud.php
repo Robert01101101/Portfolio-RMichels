@@ -91,6 +91,15 @@ Partial::build('projectPageMeta', ["project" => $project]);
     </figure>
   </section>
 
+
+  <!----- Content / Media ----->
+  <section class="sectionMedia">
+    <div class="divText">
+      <h2>Code Sample</h2>
+      <p>An example of data binding between the form and data model for the POI create page.</p>
+    </div>
+    <script src="https://gist.github.com/Robert01101101/062fa22fe781689ed11a85d85e4b2b3e.js"></script>
+  </section>
 </div>
 
 <?php
