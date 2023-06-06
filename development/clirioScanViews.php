@@ -61,6 +61,17 @@ Partial::build('projectPageMeta', ["project" => $project]);
   </section>
 
 
+  <!----- Content / Media ----->
+  <section class="sectionMedia">
+    <div class="auto-resizable-iframe">
+      <div>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/hdPXCnyH6us?playlist=hdPXCnyH6us&loop=1&autoplay=1&cc_load_policy=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <figcaption>An overview of the different scan views in the Clirio View Meta Quest VR app. A scan is first opened on map, then scan view is entered, where the scan is viewed from different angles, measured, and compared to another scan.</figcaption>
+    </div>
+  </section>
+
+
   <!----- Content / Text ----->
   <section class="sectionText">
     <h2>Challenges</h2>
