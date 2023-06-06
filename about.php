@@ -18,6 +18,16 @@ Partial::build('header', ["about" => TRUE]);
   <div>
     <h1 id="About">About Me</h1>
     <p>I’m Robert Michels, a designer and developer from Vancouver. I attended Simon Fraser University (SFU), where I earned my Bachelor’s Degree of Science with a major in Interactive Arts & Technology. My degree and my inexhaustible curiosity have made me an expert in the combination of design and technology. These days I’m working at <a href="https://www.clir.io" target="_blank">Clirio</a> on the development of MR apps for worksite inspection and collaboration.</p>
+  
+    <div class="contact">
+      Say Hi:
+      <ul class="icons">
+        <a href="mailto: hi@rmichels.com" target="_blank" title="E-Mail" id="emailLink"><li><i class="fa-solid fa-envelope fa-2x" id="email"></i></li></a>
+        <a href="https://linkedin.com/in/robert-michels" target="_blank" title="LinkedIn"><li><i class="fab fa-linkedin-in fa-2x"></i></li></a>
+      </ul>
+    </div>
+  
+  
   </div>
   <div>
     <h2>Skills</h2>

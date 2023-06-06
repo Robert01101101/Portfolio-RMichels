@@ -45,91 +45,6 @@ footer {
 		position: absolute;
 	}
 
-	ul.icons {
-		margin: 0;
-		padding: 0;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-
-		@include md {
-			gap: 5rem;
-		}
-
-		a {
-			color: _colour(white);
-		}
-
-		li {
-
-				display: inline-block;
-				vertical-align: middle;
-				z-index: 250;
-
-				i {
-					transition: .2s;
-
-					&:hover {
-						transform: scale(1.15, 1.15);
-					}
-
-					&:active {
-						transform: scale(1, 1);
-					}
-				}
-		}
-
-		div.emailContainer {
-			position: relative;
-		}
-		
-		div#emailOverlay {
-			margin: 0;
-			position: absolute;
-			//bottom: -1rem;
-			bottom: -4.2rem;
-			left: 0rem;
-			//left: 50%;
-			//transform: translateX(-50%);
-
-			padding: 3rem 2rem 2rem .6rem;
-
-			//background-color: rgba(red, .5);
-
-			transition: .2s;
-			opacity: 1;
-			visibility: visible;
-
-			z-index: -10;
-
-			text-align: center;
-
-			display: flex;
-			flex-direction: row;
-			justify-content: center;
-			align-items: center;
-			gap: 1rem;
-
-			&.hide {
-				visibility: hidden;
-				  opacity: 0;
-			}
-
-			i {
-				transition: .2s;
-				cursor: pointer;
-				
-				&:hover {
-					transform: scale(1.15, 1.15);
-				}
-
-				&:active {
-					transform: scale(1, 1);
-				}
-			}
-		}
-	}
-
 	.footerEnd {
 		display: flex;
 		flex-direction: column;
@@ -172,5 +87,90 @@ footer {
 		//visibility: hidden;
 		//opacity: 0;
 		display: none;
+	}
+}
+
+ul.icons {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	@include md {
+		gap: 5rem;
+	}
+
+	a {
+		color: _colour(white);
+	}
+
+	li {
+
+			display: inline-block;
+			vertical-align: middle;
+			z-index: 250;
+
+			i {
+				transition: .2s;
+
+				&:hover {
+					transform: scale(1.15, 1.15);
+				}
+
+				&:active {
+					transform: scale(1, 1);
+				}
+			}
+	}
+
+	div.emailContainer {
+		position: relative;
+	}
+	
+	div#emailOverlay {
+		margin: 0;
+		position: absolute;
+		//bottom: -1rem;
+		bottom: -4.2rem;
+		left: 0rem;
+		//left: 50%;
+		//transform: translateX(-50%);
+
+		padding: 3rem 2rem 2rem .6rem;
+
+		//background-color: rgba(red, .5);
+
+		transition: .2s;
+		opacity: 1;
+		visibility: visible;
+
+		z-index: -10;
+
+		text-align: center;
+
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		gap: 1rem;
+
+		&.hide {
+			visibility: hidden;
+			  opacity: 0;
+		}
+
+		i {
+			transition: .2s;
+			cursor: pointer;
+			
+			&:hover {
+				transform: scale(1.15, 1.15);
+			}
+
+			&:active {
+				transform: scale(1, 1);
+			}
+		}
 	}
 }
