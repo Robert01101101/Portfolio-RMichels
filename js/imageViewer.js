@@ -33,6 +33,11 @@ function viewImage (sourceImage, carousel=false) {
         var aspectRatio = imgWidth/imgHeight;
 
         var captionNode = clone.getElementsByTagName('figcaption')[0];
+        if (captionNode === undefined){
+            var parent = originImage.parentNode.parentNode;
+            captionNode = parent.getElementsByTagName('figcaption')[0];
+            captionNode = captionNode.cloneNode(true);
+        }
         console.log(captionNode);
 
         clone.innerHTML += origInnerHTML;
@@ -41,36 +46,32 @@ function viewImage (sourceImage, carousel=false) {
         //console.log(window.innerHeight);
 
         //If very tall image, view with overflow
-        if ((aspectRatio < 1.2 && img.naturalHeight > window.innerHeight + 100) || sourceImage.hasAttribute("fullscreen")){
-            clone.classList.add("tall");
+        if ((img.naturalHeight > window.innerHeight) || sourceImage.hasAttribute("fullscreen")){
+            if (aspectRatio < 1.2 && img.naturalHeight > window.innerHeight + 100){
+                clone.classList.add("tall");
+                //Add scroll container div to keep fullscreen icon at top
+                clone.innerHTML = origInnerHTML;
 
-            //Add scroll container div to keep fullscreen icon at top
-            clone.innerHTML = origInnerHTML;
+                newDiv = document.createElement("div");
+                //newDiv.classList.add("tall");
+                newDiv.id = "imgOverlayDivContainer";
+                newDiv = clone.appendChild(newDiv);
+                newDiv.appendChild(imageNode);
+
+                //TODO: fix background scroll 
+                body.classList.add("stop-scrolling");
+                mainGrid.classList.add("stop-scrolling");
+            } else {
+                hideFullscreenImageOptions();
+            }
+            
             if (captionNode != null) {
                 clone.appendChild(captionNode);
                 captionNode.classList.add("fullscreenCaption");
             }
-            newDiv = document.createElement("div");
-            //newDiv.classList.add("tall");
-            newDiv.id = "imgOverlayDivContainer";
-            newDiv = clone.appendChild(newDiv);
-            newDiv.appendChild(imageNode);
-
-            //TODO: fix background scroll 
-            body.classList.add("stop-scrolling");
-            mainGrid.classList.add("stop-scrolling");
+            
         } else {
-            //Hide fullscreen icons
-            var fullScreenIcons = [];
-            fullScreenIcons = clone.getElementsByTagName('i');
-            fullScreenIcons = Array.prototype.slice.call(fullScreenIcons);
-
-            //console.log(fullScreenIcons);
-
-            fullScreenIcons.forEach(element => {
-                if(!element.classList.contains("hidden")) element.classList.add("hidden");
-            });
-
+            hideFullscreenImageOptions();
         }
     
         //unhide viewer
@@ -95,6 +96,19 @@ function viewImage (sourceImage, carousel=false) {
 
         
     }
+}
+
+function hideFullscreenImageOptions(){
+    //Hide fullscreen icons
+    var fullScreenIcons = [];
+    fullScreenIcons = clone.getElementsByTagName('i');
+    fullScreenIcons = Array.prototype.slice.call(fullScreenIcons);
+
+    //console.log(fullScreenIcons);
+
+    fullScreenIcons.forEach(element => {
+        if(!element.classList.contains("hidden")) element.classList.add("hidden");
+    });
 }
 
 

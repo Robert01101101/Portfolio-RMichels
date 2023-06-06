@@ -41,6 +41,13 @@
 			background-color: rgba(black, .4);
 			backdrop-filter: blur(10px);
 			opacity: 0; visibility: hidden; transition: .5s;
+
+			max-width: 100%;
+    		text-wrap: wrap;
+
+			@include lg {
+				max-width: 80%;
+			}
 		}
 
 		div.tall {

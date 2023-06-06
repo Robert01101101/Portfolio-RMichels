@@ -29,9 +29,34 @@ Partial::build('projectPageMeta', ["project" => $project]);
     <h2>Overview</h2>
     <p>Clirio Cloud is a collection of tools which have been growing over time. These tools are provided to users of the Clirio Suite in a website developed with Blazor. Clirio builds solutions that help users inspect, document, and collaborate in 3D and XR on geospatial workspaces.<p>
 
-    </p>One of the main goals of Clirio Cloud is to extend the upload and organizational capabilities of the iOS Clirio apps, which serve as the primary capture platform. While a user can easily capture and upload 3D photogrammetry scans with Clirio's iOS apps, they might also want to upload other 3D models, for which Clirio Cloud provides an interface. The other workspace tools are upload and management of custom basemaps, upload of boreholes, guest invitations, point of interest creation, and workspace deletion.</p>
+    </p>One of the main goals of Clirio Cloud is to complement the upload and organizational capabilities of the iOS Clirio apps, which serve as the primary capture platform. While a user can easily capture and upload 3D photogrammetry scans with Clirio's iOS apps, they might also want to upload other 3D models, for which Clirio Cloud provides an interface. The other workspace tools are upload and management of custom basemaps, upload of boreholes, guest invitations, point of interest creation, and workspace deletion.</p>
 
     <p>Other goals of Clirio Cloud include providing an analytics dashboard to users, as well as an easy way to access the Clirio knowledge base and training videos. Finally, there also are subcription and account management tools.</p>
+  </section>
+
+
+  <!----- Content / Media ----->
+  <section class="sectionMedia">
+    <figure ignorecarousel>
+      <div class="mediaSquare">
+        <figure onclick="viewImage(this)">
+          <img src="<?php echo $GLOBALS['d'];?>assets/img/clirioCloud/dashboard.jpg">
+          <figcaption>Dashboard</figcaption>
+        </figure>
+        <figure onclick="viewImage(this)">
+          <img src="<?php echo $GLOBALS['d'];?>assets/img/clirioCloud/workspaceList.jpg">
+          <figcaption>Workspace List</figcaption>
+        </figure>
+        <figure onclick="viewImage(this)">
+          <img src="<?php echo $GLOBALS['d'];?>assets/img/clirioCloud/workspaceView.jpg">
+          <figcaption>Workspace Management Tools</figcaption>
+        </figure>
+        <figure onclick="viewImage(this)">
+          <img src="<?php echo $GLOBALS['d'];?>assets/img/clirioCloud/createPoi.jpg">
+          <figcaption>Workspace Management Example: Create POI</figcaption>
+        </figure>
+      </div>
+    </figure>
   </section>
 
 
@@ -48,6 +73,22 @@ Partial::build('projectPageMeta', ["project" => $project]);
 
     <h3>Learning</h3>
     <p>I enjoyed learning Blazor, as it shared some similarities to PHP, but had quite a lot of advantages, such as easy form binding to data models, data validation, and the improved readability and writeability to me as a developer who often works in C#. Besides Blazor, the Tailwind CSS Framework was also new to me, but learning that wasn't too hard since I am fairly familiar with CSS3. I did enjoy learning about it too, because I prefer its customizeability and efficiency compared to Bootstrap, although I still prefer Sass for my personal projects.</p>
+  </section>
+
+
+  <!----- Content / Media ----->
+  <section class="sectionMedia">
+    <figure ignorecarousel>
+      <div class="mediaRow mediaRow-equalWidth mediaRow-equalHeight">
+        <figure onclick="viewImage(this)">
+          <img src="<?php echo $GLOBALS['d'];?>assets/img/clirioCloud/dashboard.jpg"> 
+        </figure>
+        <figure onclick="viewImage(this)">
+          <img src="<?php echo $GLOBALS['d'];?>assets/img/clirioCloud/workspaceList.jpg">
+        </figure>
+      </div>
+      <figcaption>Some examples of data model binding to forms in Blazor. Expanding / collapsing optional sections of the form, and rearranging elements in a list, is made really easy with Blazor, since user inputs result in direct feedback without the need to write boilerplate code.</figcaption>
+    </figure>
   </section>
 
 </div>
