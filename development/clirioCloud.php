@@ -14,7 +14,7 @@ Partial::build('projectPageLanding',
   ["project" => $project, 
   "description" => "A web-based collection of tools for managing workspaces in Clirio View. Includes a user dashboard, workspace and observation creation tools, and bing maps.",
   "primaryLink" => "https://cloud.clir.io/",
-  "primaryLinkText" => "Try Clirio Cloud",
+  "primaryLinkText" => "Clirio Cloud",
   "alt" => FALSE]);
 
 Partial::build('projectPageMeta', ["project" => $project]);
