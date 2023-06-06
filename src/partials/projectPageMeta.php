@@ -43,7 +43,7 @@
     </ul>
     <?php else: ?>
       <h2>Company</h2>
-      <?php echo $project->getCompany() ?>
+      <a href="https://clir.io/"><?php echo $project->getCompany() ?></a>
     <?php endif; ?>
 
 
