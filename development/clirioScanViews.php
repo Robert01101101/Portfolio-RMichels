@@ -12,7 +12,7 @@ Partial::build('header', ["project" => $project]);
 
 Partial::build('projectPageLanding', 
   ["project" => $project, 
-  "description" => "A collection of features in the Clirio View apps for loading and viewing photogrammetry scans. Includes on-map, AR, comparison, and other views.",
+  "description" => "A collection of features in the Clirio View apps for loading and viewing photogrammetry scans. Includes on-map, AR, XR, comparison, and other views.",
   "primaryLink" => "https://clir.io/",
   "primaryLinkText" => "Clir.io",
   "alt" => FALSE]);
@@ -36,15 +36,15 @@ Partial::build('projectPageMeta', ["project" => $project]);
     <figure ignorecarousel>
       <div class="mediaRow mediaRow-equalWidth mediaRow-equalHeight">
         <figure onclick="viewImage(this)">
-          <img src="<?php echo $GLOBALS['d'];?>assets/img/lqip/clirioScanViews.jpg">
+        <img src="<?php echo $GLOBALS['d'];?>assets/img/clirioScanViews/lqip/bridgeMapView.jpg" class="whiteFrame">
           <figcaption>On-Map View (Desktop)</figcaption>
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="<?php echo $GLOBALS['d'];?>assets/img/clirioScanViews/lqip/bridgeScanView.jpg">
+          <img src="<?php echo $GLOBALS['d'];?>assets/img/clirioScanViews/lqip/bridgeScanView.jpg" class="whiteFrame">
           <figcaption>Scan View (Desktop)</figcaption>
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="<?php echo $GLOBALS['d'];?>assets/img/clirioScanViews/scanComparison.gif" ignorelqip>
+          <img src="<?php echo $GLOBALS['d'];?>assets/img/clirioScanViews/scanComparison.gif" ignorelqip class="whiteFrame">
           <figcaption>Scan View Comparison Mode (Desktop)</figcaption>
         </figure>
       </div>
