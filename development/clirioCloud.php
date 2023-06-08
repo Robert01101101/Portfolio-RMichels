@@ -63,7 +63,7 @@ Partial::build('projectPageMeta', ["project" => $project]);
   <!----- Content / Text ----->
   <section class="sectionText">
     <h2>Development</h2>
-    <p>The website was initially set up by <a href="https://github.com/timothyt" target="_blank">Timothy Thibault</a> using Blazor, in order to try using a web framework which has C# as its programming language, which could be an advantage considering we also used C# for Unity development. After setting up login, subscription management, and workspace listing with metadata, development was mostly handed off to me.</p>
+    <p>The website was initially set up by <a href="https://www.linkedin.com/in/timthibault/" target="_blank">Timothy Thibault</a> using Blazor, in order to try using a web framework which has C# as its programming language, which could be an advantage considering we also used C# for Unity development. After setting up login, subscription management, and workspace listing with metadata, development was mostly handed off to me.</p>
 
     <p>The first stories I implemented revolved around workspace management, where I added observation upload features. These typically use Blazor's forms to let users fill out required information, and a file upload tray. These first stories encompassed a variety of challenges. I had to connect to our APIs to load workspace and POI data, as well as to upload data. There was also the need to validate certain data such as coordinates, and to provide user feedback such as marking required or incorrect fields, and showing the upload status.</p>
 
