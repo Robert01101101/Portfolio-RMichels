@@ -67,7 +67,7 @@ Partial::build('projectPageMeta', ["project" => $project]);
 
     <p>The first stories I implemented revolved around workspace management, where I added observation upload features. These typically use Blazor's forms to let users fill out required information, and a file upload tray. These first stories encompassed a variety of challenges. I had to connect to our APIs to load workspace and POI data, as well as to upload data. There was also the need to validate certain data such as coordinates, and to provide user feedback such as marking required or incorrect fields, and showing the upload status.</p>
 
-    <p>After adding all of the workspace management features such as 3D model upload and user invitations, I started working on another set of stories revolving around the dashboard. I partnered up with <a href="https://www.behance.net/wischj82b8/projects" target="_blank">Jordan Wischmann</a>, who designed mockups, which I then implemented.</p>
+    <p>After adding all of the workspace management features such as 3D model upload and user invitations, I started working on another set of stories revolving around the dashboard. I partnered up with <a href="https://www.linkedin.com/in/jordan-wischmann-32a4b380/" target="_blank">Jordan Wischmann</a>, who designed mockups, which I then implemented.</p>
 
     <p>A noteworthy feature which was added fairly late, are the interactive Bing maps. These are used to position new workspaces and points of interest, and can get the user location for convenience. They are accomodated by a set of GPS coordinate input fields, which sync with the map.</p>
 
