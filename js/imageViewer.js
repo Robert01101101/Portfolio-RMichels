@@ -5,6 +5,7 @@ var body = document.getElementsByTagName("BODY")[0];//const body = document.getE
 var mainGrid = document.getElementById('MainGrid');
 var viewerOpen = false;
 var newDiv, clone, originImage, next, prev, closeBtn, expand, compress;
+var zoomed = false;
 var origInnerHTML = imageViewer.innerHTML;
 
 function viewImage (sourceImage, carousel=false) {
@@ -110,6 +111,7 @@ function viewImage (sourceImage, carousel=false) {
 //_____________________________________ Close //
 function closeImageViewer() {
     viewerOpen = false;
+    zoomed = false;
     //hide & clear viewer
     if (!imageViewer.classList.contains('hidden')) imageViewer.classList.add('hidden');
     imageViewer.innerHTML = origInnerHTML;
@@ -167,6 +169,7 @@ function expandView(item){
     document.getElementById("fullScreenCompress").classList.remove('hidden');
     document.getElementById("imgOverlayDivContainer").classList.remove('tall');
     item.classList.add("hidden");
+    zoomed = false;
 }
 
 function compressView(item){
@@ -174,6 +177,7 @@ function compressView(item){
     document.getElementById("fullScreenCompress").classList.add('hidden');
     document.getElementById("imgOverlayDivContainer").classList.add('tall');
     item.classList.add("hidden");
+    zoomed = true;
 }
 
 
@@ -204,10 +208,30 @@ function initCarousel(){
 
 // Next/previous controls
 function plusSlides(n) {
+    zoomed = false;
     if (slideIndex === 0 && n < 0 || slideIndex === imgArray.length-1 && n > 0) return;
     slideIndex += n;
     viewImage(imgArray[slideIndex], true);
 }
+
+//Detect swipes (from https://stackoverflow.com/a/56663695)
+let touchstartX = 0
+let touchendX = 0
+
+function checkDirection() {
+  if (zoomed) return;
+  if (touchendX < touchstartX) plusSlides(+1);
+  if (touchendX > touchstartX) plusSlides(-1);
+}
+
+document.addEventListener('touchstart', e => {
+  touchstartX = e.changedTouches[0].screenX
+})
+
+document.addEventListener('touchend', e => {
+  touchendX = e.changedTouches[0].screenX
+  checkDirection()
+})
 
 
 
