@@ -40,7 +40,7 @@
 
 			background-color: rgba(black, .4);
 			backdrop-filter: blur(10px);
-			opacity: 0; visibility: hidden; transition: .5s;
+			opacity: 0; visibility: hidden; transition: opacity .5s;
 
 			max-width: 100%;
     		text-wrap: wrap;

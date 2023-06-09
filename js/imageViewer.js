@@ -35,12 +35,6 @@ function viewImage (sourceImage, carousel=false) {
         //Get references
         var img = sourceImage.getElementsByTagName('img')[0];
         var imageNode = clone.getElementsByTagName('img')[0];
-        var captionNode = clone.getElementsByTagName('figcaption')[0];
-        if (captionNode === undefined){
-            var parent = originImage.parentNode.parentNode;
-            captionNode = parent.getElementsByTagName('figcaption')[0];
-            captionNode = captionNode.cloneNode(true);
-        }
         /*
         //determine aspect ratio
         var imgHeight = img.height
@@ -69,11 +63,6 @@ function viewImage (sourceImage, carousel=false) {
 
         //Configure depending on image dimensions
         setTimeout(function() {
-            console.log(window.innerHeight);
-            console.log(imageNode.offsetHeight);
-            console.log(imageNode.clientHeight);
-            console.log(imageNode);
-
             //If the image original height is much taller than the available window, show zoom options
             if ((img.naturalHeight > window.innerHeight + window.innerHeight/10) || sourceImage.hasAttribute("fullscreen")){
 
@@ -97,9 +86,19 @@ function viewImage (sourceImage, carousel=false) {
                 });
             }
 
+            //if figcaption is not in this figure, but its parent (group), reattach it
+            var captionNode = clone.getElementsByTagName('figcaption')[0];
+            if (captionNode === undefined){
+                var parent = originImage.parentNode.parentNode;
+                captionNode = parent.getElementsByTagName('figcaption')[0];
+                captionNode = captionNode.cloneNode(true);
+                if (captionNode != undefined){
+                    clone.appendChild(captionNode);
+                }
+            }
+
             //If no space at the bottom for caption, make it an overlay caption
-            if (((imageNode.offsetHeight > window.innerHeight - 100) || sourceImage.hasAttribute("fullscreen")) && captionNode != null){
-                clone.appendChild(captionNode);
+            if (((imageNode.offsetHeight > window.innerHeight - 100) || sourceImage.hasAttribute("fullscreen")) && captionNode != undefined){
                 captionNode.classList.add("fullscreenCaption");
             }
 
