@@ -12,7 +12,7 @@ Partial::build('header', ["project" => $project]);
 
 Partial::build('projectPageLanding', 
   ["project" => $project, 
-  "description" => "A collection of features in the Clirio View apps for loading and viewing photogrammetry scans. Includes on-map, AR, XR, comparison, and other views.",
+  "description" => "A collection of features in the Clirio View apps for loading and viewing photogrammetry scans. Includes on-map, XR, comparison, and other views.",
   "primaryLink" => "https://clir.io/",
   "primaryLinkText" => "Clir.io",
   "alt" => FALSE]);
@@ -27,7 +27,7 @@ Partial::build('projectPageMeta', ["project" => $project]);
   <!----- Content / Text ----->
   <section class="sectionText">
     <h2>Overview</h2>
-    <p>One of the key features of the Clirio product suite is the capability to capture photogrammetry scans with LiDAR enabled iOS devices, and then manage and view those scans. Captured scans can be viewed on-map, they can be always-on as an integral part of the map, or they can be viewed in scan view mode which comes with measure, comparison, and AR capabilities depending on the platform. In AR view, the scan can be scaled to 1m³ or 1:1 scale, or freely manipulated with hand manipulation. On iOS and Desktop, the view is controlled by touch or mouse inputs. Comparison views feature side-by-side, swipe, and overlay modes.</p>
+    <p>One of the key features of the Clirio product suite is the capability to capture photogrammetry scans with LiDAR enabled iOS devices, and then manage and view those scans. Captured scans can be viewed on-map, they can be always-on as an integral part of the map, or they can be viewed in scan view mode which comes with measure, comparison, and AR capabilities depending on the platform. In AR view, the scan can be scaled to 1m³ or 1:1 scale, or freely manipulated with hand manipulation. On iOS and Desktop, the view is controlled by touch or mouse inputs. Comparison views feature side-by-side, swipe, and overlay modes. Besides scans captured with Clirio Scan, other 3D models are also supported and can be uploaded on <a href="clirioCloud">Clirio Cloud</a>.</p>
   </section>
 
 

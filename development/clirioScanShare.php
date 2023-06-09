@@ -84,6 +84,18 @@ Partial::build('projectPageMeta', ["project" => $project]);
     <p>An interesting change to my approach of writing view controllers was first tested in this feature, after a discussion I had with my teammate <a href="https://www.linkedin.com/in/toniostillman" target="_blank">Tonio Stillman</a>. In the past, I would write public functions for button clicks, and hook them up in the inspector via the button's <code>OnClick()</code> event. Here, I instead set all the event listeners in the controller itself, kept all the corresponding listener functions private, and simplified the inspector setup so that each button only gets assigned once to the controller, and no other setup is needed. This makes setup in the editor much less error prone and maintainable, as it requires less understanding of the code.</p>
   </section>
 
+  <!----- Content / Media ----->
+  <section class="sectionMedia">
+    <figure ignorecarousel>
+      <div class="mediaRow mediaRow-centered">
+        <figure onclick="viewImage(this)">
+          <img src="<?php echo $GLOBALS['d'];?>assets/img/clirioScanShare/scanShareWalkthrough.gif" ignorelqip class="whiteFrame">
+          <figcaption>Share UX Walkthrough</figcaption>
+        </figure>
+      </div>
+    </figure>
+  </section>
+
   <!----- Content / Text ----->
   <section class="sectionText">
     <h2>Webviewer</h2>

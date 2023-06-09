@@ -12,7 +12,7 @@ Partial::build('header', ["project" => $project]);
 
 Partial::build('projectPageLanding', 
   ["project" => $project, 
-  "description" => "A web-based collection of tools for managing workspaces in Clirio View. Includes a user dashboard, workspace and observation creation tools, and bing maps.",
+  "description" => "A web-based collection of tools for managing workspaces in Clirio View. Includes a user dashboard, workspace and observation creation tools, and interactive bing maps.",
   "primaryLink" => "https://cloud.clir.io/",
   "primaryLinkText" => "Clirio Cloud",
   "alt" => FALSE]);

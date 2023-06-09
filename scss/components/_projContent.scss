@@ -148,6 +148,10 @@ main {
 			&-equalHeight {
 				align-items: stretch;
 			}
+
+			&-centered {
+				justify-content: center;
+			}
 		}
 
 		//____________________________________ mediaSquare
