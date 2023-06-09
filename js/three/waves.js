@@ -282,7 +282,7 @@ function waves () {
 	document.onreadystatechange = () => {
 		if (document.readyState === 'complete') {
 			// document ready
-			console.log("page finished loading");
+			//console.log("page finished loading");
 		
 			//TODO: Fix proper detection of page load finish. Likely due to
 			// 		complications with image loading, page load detection is currently

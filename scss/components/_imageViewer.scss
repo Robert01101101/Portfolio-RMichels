@@ -91,8 +91,8 @@
 
 		.fa-solid {
 			position: absolute;
-			top: 1.5rem;
-			right: 1.5rem;
+			top: 5rem;
+			right: 1.6rem;
 			font-size: 1.2em;
 
 			background-color: rgba(black, .7);
@@ -119,6 +119,14 @@
 		}
 
 		&:hover{
+			.fa-solid {
+				opacity: 1; visibility: visible;
+			}
+			.fullscreenCaption {
+				opacity: 1; visibility: visible;
+			}
+		}
+		@include nohover {
 			.fa-solid {
 				opacity: 1; visibility: visible;
 			}

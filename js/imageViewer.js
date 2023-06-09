@@ -11,13 +11,15 @@ function viewImage (sourceImage, carousel=false) {
 
     if (typeof sourceImage === 'string' || sourceImage instanceof String){
         sourceImage = document.getElementById(sourceImage);
-        console.log(sourceImage);
     }
 
     if (viewerOpen && !carousel) {
         //closeImageViewer();
     } else {
         document.documentElement.classList.add("stop-scrolling");
+        body.classList.add("stop-scrolling");
+        mainGrid.classList.add("stop-scrolling");
+
         tmpDisableImg = true;
 
         //clone image
@@ -28,61 +30,28 @@ function viewImage (sourceImage, carousel=false) {
         clone.removeAttribute("onclick");
         //add cloned image
         imageViewer.appendChild(clone);
+        clone.innerHTML += origInnerHTML;
 
-        //determine aspect ratio
+        //Get references
         var img = sourceImage.getElementsByTagName('img')[0];
         var imageNode = clone.getElementsByTagName('img')[0];
-        var imgHeight = img.height
-        var imgWidth = img.width;
-        var aspectRatio = imgWidth/imgHeight;
-
         var captionNode = clone.getElementsByTagName('figcaption')[0];
         if (captionNode === undefined){
             var parent = originImage.parentNode.parentNode;
             captionNode = parent.getElementsByTagName('figcaption')[0];
             captionNode = captionNode.cloneNode(true);
         }
-        console.log(captionNode);
+        /*
+        //determine aspect ratio
+        var imgHeight = img.height
+        var imgWidth = img.width;
+        var aspectRatio = imgWidth/imgHeight;*/
 
-        clone.innerHTML += origInnerHTML;
-
-        //console.log(img.naturalHeight);
-        //console.log(window.innerHeight);
-
-        //If very tall image, view with overflow
-        if ((img.naturalHeight > window.innerHeight) || sourceImage.hasAttribute("fullscreen")){
-            if (aspectRatio < 1.2 && img.naturalHeight > window.innerHeight + 100){
-                clone.classList.add("tall");
-                //Add scroll container div to keep fullscreen icon at top
-                clone.innerHTML = origInnerHTML;
-
-                newDiv = document.createElement("div");
-                //newDiv.classList.add("tall");
-                newDiv.id = "imgOverlayDivContainer";
-                newDiv = clone.appendChild(newDiv);
-                newDiv.appendChild(imageNode);
-
-                //TODO: fix background scroll 
-                body.classList.add("stop-scrolling");
-                mainGrid.classList.add("stop-scrolling");
-            } else {
-                hideFullscreenImageOptions();
-            }
-            
-            if (captionNode != null) {
-                clone.appendChild(captionNode);
-                captionNode.classList.add("fullscreenCaption");
-            }
-            
-        } else {
-            hideFullscreenImageOptions();
-        }
-    
-        //unhide viewer
+        //Unhide viewer
         if (imageViewer.classList.contains('hidden')) imageViewer.classList.remove('hidden');
 
+        //Carousel setup
         if (!carousel) initCarousel();
-
         var loadDelay = 10;
         next = document.getElementsByClassName("next")[0];
         prev = document.getElementsByClassName("prev")[0];
@@ -98,28 +67,49 @@ function viewImage (sourceImage, carousel=false) {
 
         }, loadDelay);
 
-        
+        //Configure depending on image dimensions
+        setTimeout(function() {
+            console.log(window.innerHeight);
+            console.log(imageNode.offsetHeight);
+            console.log(imageNode.clientHeight);
+            console.log(imageNode);
+
+            //If the image original height is much taller than the available window, show zoom options
+            if ((img.naturalHeight > window.innerHeight + window.innerHeight/10) || sourceImage.hasAttribute("fullscreen")){
+
+                //Show Zoom Options
+                clone.classList.add("tall");
+                //Add scroll container div to keep fullscreen icon at top
+                clone.innerHTML = origInnerHTML;
+                newDiv = document.createElement("div");
+                newDiv.id = "imgOverlayDivContainer";
+                newDiv = clone.appendChild(newDiv);
+                newDiv.appendChild(imageNode);
+            } else {
+
+                //Hide Zoom Options
+                var fullScreenIcons = [];
+                fullScreenIcons = clone.getElementsByTagName('i');
+                fullScreenIcons = Array.prototype.slice.call(fullScreenIcons);
+
+                fullScreenIcons.forEach(element => {
+                    if(!element.classList.contains("hidden")) element.classList.add("hidden");
+                });
+            }
+
+            //If no space at the bottom for caption, make it an overlay caption
+            if (((imageNode.offsetHeight > window.innerHeight - 100) || sourceImage.hasAttribute("fullscreen")) && captionNode != null){
+                clone.appendChild(captionNode);
+                captionNode.classList.add("fullscreenCaption");
+            }
+
+        }, loadDelay*2);
     }
-}
-
-function hideFullscreenImageOptions(){
-    //Hide fullscreen icons
-    var fullScreenIcons = [];
-    fullScreenIcons = clone.getElementsByTagName('i');
-    fullScreenIcons = Array.prototype.slice.call(fullScreenIcons);
-
-    //console.log(fullScreenIcons);
-
-    fullScreenIcons.forEach(element => {
-        if(!element.classList.contains("hidden")) element.classList.add("hidden");
-    });
 }
 
 
 //_____________________________________ Close //
 function closeImageViewer() {
-    console.log("close");
-
     viewerOpen = false;
     //hide & clear viewer
     if (!imageViewer.classList.contains('hidden')) imageViewer.classList.add('hidden');
@@ -174,7 +164,6 @@ document.onkeydown = function(evt) {
 
 //_______________________________________________________________________________________________ Toggle Fullscreen
 function expandView(item){
-    console.log("expand");
     document.getElementById("fullScreenExpand").classList.add('hidden');
     document.getElementById("fullScreenCompress").classList.remove('hidden');
     document.getElementById("imgOverlayDivContainer").classList.remove('tall');
@@ -182,7 +171,6 @@ function expandView(item){
 }
 
 function compressView(item){
-    console.log("compress");
     document.getElementById("fullScreenExpand").classList.remove('hidden');
     document.getElementById("fullScreenCompress").classList.add('hidden');
     document.getElementById("imgOverlayDivContainer").classList.add('tall');
@@ -206,18 +194,12 @@ for(var i = 0; i < allImages.length; i++) {
 var slideIndex;
 
 function initCarousel(){
-    //console.log(allImages);
-    //console.log(imgArray);
-    //console.log(originImage);
-
     var originIndex;
 
     for (i = 0; i < imgArray.length; i++) {
         if (imgArray[i] === originImage) originIndex = i;
-        //console.log(imgArray[i]);
     }
 
-    //console.log(originIndex);
     slideIndex = originIndex;
 }
 
@@ -241,9 +223,6 @@ function updateArrows() {
     //Place next / prev buttons inside of image if there isn't enough of a margin to the left / right
     var windowWidth = document.body.clientWidth;
     var imgWidth = clone.getBoundingClientRect().width;
-    
-    //console.log(windowWidth);
-    //console.log(imgWidth);
 
     if (windowWidth - imgWidth < 170) {
         if (!next.classList.contains('flip')) next.classList.add('flip');
@@ -251,14 +230,12 @@ function updateArrows() {
         if (!closeBtn.classList.contains('flip')) closeBtn.classList.add('flip');
         if (!expand.classList.contains('flip')) expand.classList.add('flip');
         if (!compress.classList.contains('flip')) compress.classList.add('flip');
-        //console.log("arrowsInside");
     } else {
         if (next.classList.contains('flip')) next.classList.remove('flip');
         if (prev.classList.contains('flip')) prev.classList.remove('flip');
         if (closeBtn.classList.contains('flip')) closeBtn.classList.remove('flip');
         if (expand.classList.contains('flip')) expand.classList.remove('flip');
         if (compress.classList.contains('flip')) compress.classList.remove('flip');
-        //console.log("arrowsOutside");
     }
     next.classList.remove("hidden");
     prev.classList.remove("hidden");
@@ -266,8 +243,7 @@ function updateArrows() {
 
     //hide l/r arrow if at start/end of carousel
     if (slideIndex == 0) {
-        console.log(prev);
-        if (!prev.classList.contains('end')) { prev.classList.add('end'); console.log("hi");}
+        if (!prev.classList.contains('end')) { prev.classList.add('end');}
     } else if (slideIndex == imgArray.length-1) {
         if (!next.classList.contains("end")) next.classList.add("end");
     } else {

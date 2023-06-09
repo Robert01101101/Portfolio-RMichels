@@ -21,8 +21,6 @@ function calcDocHeight() {
   docHeight = Math.max( docHeightBody.scrollHeight, docHeightBody.offsetHeight, 
     html.clientHeight, html.scrollHeight, html.offsetHeight );
 
-  console.log("docHeight: " + docHeight);
-
   return docHeight;
 }
 

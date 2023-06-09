@@ -98,38 +98,38 @@
     
   <script src="<?php echo $GLOBALS['d'];?>js/three/build/three.min.js"></script>
   <script src="<?php echo $GLOBALS['d'];?>js/three/examples/js/loaders/GLTFLoader.js"></script>
-  <script src="<?php echo $GLOBALS['d'];?>js/tools.js"></script>
-  <script src="<?php echo $GLOBALS['d'];?>js/lqip.js"></script>
+  <script src="<?php echo $GLOBALS['d'];?>js/tools.js?v=1.0.0"></script>
+  <script src="<?php echo $GLOBALS['d'];?>js/lqip.js?v=1.0.0"></script>
   <!--<script src="<?php echo $GLOBALS['d'];?>three/myThreeScript.js"></script>-->
   <!--<script src="<?php echo $GLOBALS['d'];?>three/skull.js"></script>-->
 
-  <script src="<?php echo $GLOBALS['d'];?>js/three/waves.js?v=0.1"></script>
+  <script src="<?php echo $GLOBALS['d'];?>js/three/waves.js?v=1.0.0"></script>
   
 
   <?php if(isset($index)) : ?>
 
-    <script src="<?php echo $GLOBALS['d'];?>js/three/landingModel.js"></script>
-    <script src="<?php echo $GLOBALS['d'];?>js/textAnim.js"></script>
+    <script src="<?php echo $GLOBALS['d'];?>js/three/landingModel.js?v=1.0.0"></script>
+    <script src="<?php echo $GLOBALS['d'];?>js/textAnim.js?v=1.0.0"></script>
 
   <?php endif; ?>
   <?php if(isset($projects)) : ?>
 
-    <script src="<?php echo $GLOBALS['d'];?>js/projectFilter.js"></script>
+    <script src="<?php echo $GLOBALS['d'];?>js/projectFilter.js?v=1.0.0"></script>
 
   <?php else: ?>
 
-    <script src="<?php echo $GLOBALS['d'];?>js/downArrow.js?v=0.1"></script>
+    <script src="<?php echo $GLOBALS['d'];?>js/downArrow.js?v=1.0.0"></script>
 
   <?php endif; ?>
 
   <?php if(!isset($index) && !isset($projects)) : ?>
 
-    <script src="<?php echo $GLOBALS['d'];?>js/imageViewer.js"></script>
+    <script src="<?php echo $GLOBALS['d'];?>js/imageViewer.js?v=1.0.0"></script>
 
   <?php endif; ?>
   
-  <script src="<?php echo $GLOBALS['d'];?>js/projectTile.js"></script>
-  <script src="<?php echo $GLOBALS['d'];?>js/other.js"></script>
+  <script src="<?php echo $GLOBALS['d'];?>js/projectTile.js?v=1.0.0"></script>
+  <script src="<?php echo $GLOBALS['d'];?>js/other.js?v=1.0.0"></script>
   
 
 

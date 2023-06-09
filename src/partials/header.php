@@ -104,4 +104,4 @@ setcookie("returningVisitor", "true");
     
     <!-- #################################### CONTENT ###################################### -->
     <main id="Content">
-    <script src="<?php echo $GLOBALS['d'];?>js/menu.js"></script>
+    <script src="<?php echo $GLOBALS['d'];?>js/menu.js?v=1.0.0"></script>
