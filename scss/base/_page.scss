@@ -31,6 +31,7 @@ figcaption {
 	font-family: _font(family-alt);
 	font-weight: _font(weight);
 	font-size: .8em;
+	max-width: 40rem;
 
 	&.center {
 		text-align: center;
