@@ -33,7 +33,9 @@
       <ul>
       <?php 
 
+        
         $teammembers = $project->getTeammembers();
+        if (empty($teammembers)) echo "<li>Personal Project</li>";
 
         foreach ($teammembers as $teammember) {
             echo "<li>".$teammember."</li>";
