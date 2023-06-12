@@ -16,8 +16,7 @@ Partial::build('projectPageLanding',
   "primaryLink" => "https://clirioview-viw-dev.azurewebsites.net/guest/f-aVQEv0LytBKHa8vARMx-Nl",
   "primaryLinkText" => "Sample Share",
   "secondaryLink" => "https://apps.microsoft.com/store/detail/clirio-view-desktop/9NB14S8DFWFP",
-  "secondaryLinkText" => "Clirio View Desktop",
-  "alt" => TRUE]);
+  "secondaryLinkText" => "Clirio View Desktop"]);
 
 Partial::build('projectPageMeta', ["project" => $project]);
 
