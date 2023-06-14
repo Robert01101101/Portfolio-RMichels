@@ -17,7 +17,10 @@ Partial::build('header', ["about" => TRUE]);
   </div>
   <div>
     <h1 id="About">About Me</h1>
-    <p>I’m Robert Michels, a designer and developer from Vancouver. I attended Simon Fraser University (SFU), where I earned my Bachelor’s Degree of Science with a major in Interactive Arts & Technology. My degree and my inexhaustible curiosity have made me an expert in the combination of design and technology. These days I’m working at <a href="https://www.clir.io" target="_blank">Clirio</a> on the development of MR apps for worksite inspection and collaboration.</p>
+    <p>👋 Hi there, I'm Robert!</p>
+    <p>I'm a designer, and developer from Vancouver. My inexhaustible curiosity and love for digital media led me to attend Simon Fraser University (SFU), where I earned my Bachelor's Degree of Science with a major in Interactive Arts & Technology.</p> 
+    </p>I've prototyped, designed, and developed various interactive applications throughout my career, covering everything from XR to web development. These experiences have shaped me into a designer who emphasizes a user-goal-driven approach, a developer who values scalability and accessibility, and an expert in rapid prototyping.</p>
+    <p>Contact me if you would like to make cool stuff together! I'm currently looking for work.</p>
   
     <div class="contact">
       Say Hi:
@@ -35,10 +38,9 @@ Partial::build('header', ["about" => TRUE]);
       <div>
         <h3>Design</h3>
         <ul>
-          <li>UX Design</li>
-          <li>UI Design</li>
+          <li>UX / UI</li>
+          <li>XR Design</li>
           <li>Game Design</li>
-          <li>VR Ix Design</li>
           <li>Figma</li>
           <li>Adobe CC</li>
         </ul>
@@ -46,24 +48,31 @@ Partial::build('header', ["about" => TRUE]);
       <div>
         <h3>Development</h3>
         <ul>
-          <li>HTML</li>
-          <li>SCSS</li>
-          <li>JS</li>
-          <li>PHP</li>
-          <li>MySQL</li>
           <li>C#</li>
           <li>Unity</li>
-          <li>Java</li>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>Tailwind</li>
+          <li>Sass</li>
+          <li>JavaScript</li>
+          <li>Node.js</li>
           <li>D3.js</li>
           <li>Three.js</li>
+          <li>PHP</li>
+          <li>Blazor</li>
+          <li>MySQL</li>
+          <li>Java</li>
         </ul>
       </div>
       <div>
         <h3>Other</h3>
         <ul>
+          <li>Wordpress</li>
           <li>Project Management</li>
           <li>3D Modelling</li>
           <li>CAD Modelling</li>
+          <li>Ardunio</li>
+          <li>3D Printing</li>
         </ul>
       </div>
     </div>
