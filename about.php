@@ -73,6 +73,8 @@ Partial::build('header', ["about" => TRUE]);
           <li>CAD Modelling</li>
           <li>Ardunio</li>
           <li>3D Printing</li>
+          <li>Photogrammetry</li>
+          <li>Geomapping</li>
         </ul>
       </div>
     </div>
