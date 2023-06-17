@@ -219,7 +219,7 @@ let touchstartX = 0
 let touchendX = 0
 
 function checkDirection() {
-  if (zoomed) return;
+  if (zoomed || !viewerOpen) return;
   if (touchendX < touchstartX) plusSlides(+1);
   if (touchendX > touchstartX) plusSlides(-1);
 }
