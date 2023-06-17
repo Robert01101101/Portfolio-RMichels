@@ -11,10 +11,10 @@ Partial::build('header', ["project" => $project]);
 Partial::build('projectPageLanding', 
   ["project" => $project, 
   "description" => "Amae is a utility app for busy parents. Amae helps parents to manage their time, learn about parenting and get help easily and quickly.",
-  "primaryLink" => "http://amae.rmichels.com/",
-  "primaryLinkText" => "Product Website",
-  "secondaryLink" => "https://www.figma.com/proto/MTkTlvyHoJziDU2ZnpaCSs/334_Stage5_v2?node-id=2%3A2849&viewport=422%2C1134%2C0.19956186413764954&scaling=contain",
-  "secondaryLinkText" => "Interactive Mockup",
+  "primaryLink" => "https://www.figma.com/proto/MTkTlvyHoJziDU2ZnpaCSs/334_Stage5_v2?node-id=2%3A2849&viewport=422%2C1134%2C0.19956186413764954&scaling=contain",
+  "primaryLinkText" => "Interactive Mockup",
+  "secondaryLink" => "http://amae.rmichels.com/",
+  "secondaryLinkText" => "Product Website",
   "alt" => TRUE]);
 
 Partial::build('projectPageMeta', ["project" => $project]);
@@ -36,19 +36,19 @@ Partial::build('projectPageMeta', ["project" => $project]);
   <section class="sectionMedia">
     <div class="mediaRow mediaRow-zigzag">
       <figure onclick="viewImage(this)">
-        <img src="assets/img/amae/lqip/Screen_Dashboard.gif">
+        <img src="assets/img/amae/lqip/Screen_Dashboard.png">
         <figcaption class="center">Dashboard</figcaption>
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="assets/img/amae/lqip/Screen_Nanny.gif">
+        <img src="assets/img/amae/lqip/Screen_Nanny.png">
         <figcaption class="center">Nanny</figcaption>
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="assets/img/amae/lqip/Screen_Learn.gif">
+        <img src="assets/img/amae/lqip/Screen_Learn.png">
         <figcaption class="center">Learn</figcaption>
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="assets/img/amae/lqip/Screen_Chat.gif">
+        <img src="assets/img/amae/lqip/Screen_Chat.png">
         <figcaption class="center">Chat</figcaption>
       </figure>
     </div>
@@ -101,8 +101,39 @@ Partial::build('projectPageMeta', ["project" => $project]);
     <p>One of our core challenges throughout the design process was making the app safe. One of our solutions was the design of the nanny experience. Nannies can learn and get certified through the ‘Learn’ feature. Their thorough profiles feature ratings, reviews, and skills, to allow parents to find the best nanny for their needs. Parents can see what tasks a nanny has completed, call them at any time, and report a nanny. These features aim to maximize transparency to create a safe experience.</p>
   </section>
 
-  <!----- Content / Media ----->
-  <section class="sectionMedia">
+<!----- Content / Media ----->
+<section class="sectionMedia">
+  <div class="mediaColumn mediaColumn-fullWidth">
+    <figure ignorecarousel>
+      <div class="mediaRow mediaRow-equalWidth mediaRow-equalHeight">
+        <iframe
+          height="1000"
+          width="100%"
+          src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FMTkTlvyHoJziDU2ZnpaCSs%2F334_Stage5_v2%3Ftype%3Ddesign%26node-id%3D2%253A88%26t%3DeBrLfv2OywkqzBGQ-1" 
+          allowfullscreen
+        >
+        </iframe>
+        <iframe
+          height="1000"
+          width="100%"
+          src="https://www.figma.com/embed?embed_host=astra&url=https://www.figma.com/proto/MTkTlvyHoJziDU2ZnpaCSs/334_Stage5_v2?node-id=2%3A2849&viewport=422%2C1134%2C0.19956186413764954&scaling=contain"
+          allowfullscreen
+        >
+        </iframe>
+      </div>
+    </figure>
+
+    <figure ignorecarousel>
+      <div class="mediaRow mediaRow-equalWidth mediaRow-equalHeight mediaRow-maxHeightMd">
+        <figure onclick="viewImage(this)">
+        <img src="<?php echo $GLOBALS['d'];?>assets/img/amae/lqip/personaChristina.jpg">
+        </figure>
+        <figure onclick="viewImage(this)">
+          <img src="<?php echo $GLOBALS['d'];?>assets/img/amae/stage3WireflowsSimplified.jpg">
+        </figure>
+      </div>
+    </figure>
+
     <figure ignorecarousel>
       <div class="mediaRow">
         <figure onclick="viewImage(this)">
@@ -115,10 +146,9 @@ Partial::build('projectPageMeta', ["project" => $project]);
           <img src="assets/img/amae/lqip/site-concept.jpg">
         </figure>
       </div>
-      <figcaption class="center">Mockup of the product website created in the last stage.</figcaption>
     </figure>
+    </div>
   </section>
-
 </div>
 
 <?php

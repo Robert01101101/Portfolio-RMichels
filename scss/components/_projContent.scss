@@ -147,6 +147,13 @@ main {
 
 			&-equalHeight {
 				align-items: stretch;
+				img {
+					object-fit: cover;
+				}
+			}
+
+			&-maxHeightMd {
+				max-height: 40rem;
 			}
 
 			&-centered {
@@ -234,6 +241,13 @@ main {
 
 				img {
 					max-width: 100%;
+				}
+			}
+
+			&-fullWidth {
+				width: 100%;
+				> * {
+					width: 100%;
 				}
 			}
 		}

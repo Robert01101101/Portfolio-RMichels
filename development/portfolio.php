@@ -36,7 +36,7 @@ Partial::build('projectPageMeta', ["project" => $project]);
     <p>Before starting development, I first began by browsing the web for inspiring portfolios. I created a collection of links and based off this created a moodboard.<p>
   </section>
 
-  <!----- Content / Video ----->
+  <!----- Content / Figma ----->
   <div class="auto-resizable-iframe">
     <div>
     <iframe
