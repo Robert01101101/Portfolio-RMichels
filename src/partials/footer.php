@@ -104,7 +104,7 @@
 
   <?php if(!isset($index) && !isset($projects)) : ?>
 
-    <script src="<?php echo $GLOBALS['d'];?>js/imageViewer.js?v=1.0.0"></script>
+    <script src="<?php echo $GLOBALS['d'];?>js/imageViewer.js?v=1.0.1"></script>
 
   <?php endif; ?>
   
