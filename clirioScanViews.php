@@ -1,7 +1,5 @@
 <?php
 
-chdir('../');
-
 require "config.php";
 require "src/Partial.php";
 require "src/objects/Project.php";
