@@ -15,7 +15,7 @@ Partial::build('header');
 <div class="downArrow"  id="downArrow"><a href="#MyWork" title="View Projects"><i class="fa-solid fa-chevron-down"></i></a></div>
 <canvas id="threeModel"></canvas>
 <!--<canvas class="cropCanvas"></canvas>-->
-<img src="assets/img/lqip/landingModel.gif" id="landingModelImage"></img>
+<img src="assets/img/landingModel.png" id="landingModelImage"></img>
 <div id="landingArea">
   <div class="row">
     <div class="col-50" id="landingText">
