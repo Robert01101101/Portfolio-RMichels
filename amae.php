@@ -103,6 +103,10 @@ Partial::build('projectPageMeta', ["project" => $project]);
 
 <!----- Content / Media ----->
 <section class="sectionMedia">
+  <div class="divText">
+      <h2>Result & Design Artifacts</h2>
+      <p>You can try the interactive mockup below, and take a look at the file itself. We got very positive feedback and were satisfied with our final result, the journey we took to get there, and the things we learned along the way.</p>
+  </div>
   <div class="mediaColumn mediaColumn-fullWidth">
     <figure ignorecarousel>
       <div class="mediaRow mediaRow-equalWidth mediaRow-equalHeight">
@@ -122,6 +126,11 @@ Partial::build('projectPageMeta', ["project" => $project]);
         </iframe>
       </div>
     </figure>
+
+    <div class="divText">
+      <h3>Design Artifacts</h3>
+      <p>Below are a selection of various design artifacts from this project. These represent many stages of our process, from researching our audience and their needs, to planning out UX flows and wireframes, to our final presentation of the mockup via a fictional product website, which was created in a 2 day sprint.</p>
+  </div>
 
     <figure ignorecarousel>
       <div class="mediaRow mediaRow-equalWidth mediaRow-equalHeight mediaRow-maxHeightMd">
