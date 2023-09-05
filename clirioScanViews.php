@@ -42,7 +42,7 @@ Partial::build('projectPageMeta', ["project" => $project]);
           <figcaption>Scan View (Desktop)</figcaption>
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="<?php echo $GLOBALS['d'];?>assets/img/clirioScanViews/scanComparison.gif" ignorelqip class="whiteFrame">
+          <img src="<?php echo $GLOBALS['d'];?>assets/img/clirioScanViews/lqip/scanComparison.jpg" lqip-gif class="whiteFrame">
           <figcaption>Scan View Comparison Mode (Desktop)</figcaption>
         </figure>
       </div>

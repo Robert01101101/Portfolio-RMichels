@@ -86,7 +86,7 @@ Partial::build('projectPageMeta', ["project" => $project]);
     <figure ignorecarousel>
       <div class="mediaRow mediaRow-centered">
         <figure onclick="viewImage(this)">
-          <img src="<?php echo $GLOBALS['d'];?>assets/img/clirioScanShare/scanShareWalkthrough.gif" ignorelqip class="whiteFrame">
+          <img src="<?php echo $GLOBALS['d'];?>assets/img/clirioScanShare/lqip/scanShareWalkthrough.jpg" lqip-gif class="whiteFrame">
           <figcaption>Share UX Walkthrough</figcaption>
         </figure>
       </div>

@@ -61,7 +61,7 @@ Partial::build('projectPageMeta', ["project" => $project]);
         <figcaption class="center">Filter</figcaption>
       </figure>-->
       <figure onclick="viewImage(this)">
-        <img src="assets/img/harbingersofdeath/animated-form.gif" ignorelqip>
+        <img src="assets/img/harbingersofdeath/lqip/animated-form.jpg" lqip-gif>
         <figcaption class="center">Form Styling (ARIA-friendly)</figcaption>
       </figure>
       <figure onclick="viewImage(this)">
