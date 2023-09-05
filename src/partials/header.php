@@ -45,7 +45,7 @@ setcookie("returningVisitor", "true");
 
 
   <link rel="stylesheet" href="<?php echo $GLOBALS['d'];?>css/normalize.css">
-  <link rel="stylesheet" href="<?php echo $GLOBALS['d'];?>css/main.css?v=1.0.6">
+  <link rel="stylesheet" href="<?php echo $GLOBALS['d'];?>css/main.css?v=1.0.7">
 
   <!-- Load Font -->
   <!-- Load Icons -->
@@ -90,9 +90,6 @@ setcookie("returningVisitor", "true");
             </a>
             <a href="<?php echo $GLOBALS['d'];?>about" title="About">
               <li <?php if(isset($about)){ echo "class='curPage'"; } ?>>About</li>
-            </a>
-            <a href="#Footer" title="Contact" onclick="toggleMenu()">
-              <li>Contact</li>
             </a>
             <a href="<?php echo $GLOBALS['d'];?>projects" title="All Projects">
               <li <?php if(isset($projects)){ echo "class='curPage'"; } ?>>All Projects</li>
