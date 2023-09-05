@@ -1,177 +1,172 @@
 .projRow {
-	width: 100%;
-	display: flex;
-	justify-content: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 
-	//----------------------- MEDIA QUERIES -----------------------//
-	@include lg {
-		display: flex;
-		justify-content: flex-end;
+  //----------------------- MEDIA QUERIES -----------------------//
+  @include lg {
+    display: flex;
+    justify-content: flex-end;
 
-		&--visible{
-			&:nth-of-type(even) {
-				justify-content: flex-start;
-			}
-		}
+    &--visible {
+      &:nth-of-type(even) {
+        justify-content: flex-start;
+      }
+    }
+  }
 
-	}
+  &:not(:last-child) {
+    margin-bottom: 7rem;
 
+    @include lg {
+      margin-bottom: 10rem;
+    }
+  }
 
-	
+  &--hidden {
+    display: none;
+  }
 
-	&:not(:last-child) {
-		margin-bottom: 7rem; 
+  .projPanel {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    z-index: 100;
 
-		@include lg {
-			margin-bottom: 10rem; 
-		}
-	}
+    //Mobile only
+    .projJScontainer {
+      width: calc(100% - 2rem);
+      position: absolute;
+      margin: 0 1rem;
 
-	&--hidden {
-		display: none;
-	}
+      @include xl {
+        margin: 0;
+        position: static;
+      }
+    }
 
-	.projPanel {
-		position: relative;
-		margin: 0;
-		padding: 0;
-		z-index: 100;
+    h2.projLabel {
+      font-size: 3em;
 
-		//Mobile only
-		.projJScontainer {
-			width: calc(100% - 2rem);
-			position: absolute;
-			margin: 0 1rem;
+      @include md {
+      }
 
-			@include xl {
-				margin: 0;
-				position: static;
-			}
-		}
+      //-- MQ
+      @include xl {
+        position: absolute;
+        bottom: 0;
+        left: 1rem;
+        left: -4rem;
+        font-size: 4em;
+      }
 
-		h2.projLabel {
-			font-size: 3em;
+      margin: 0;
+      z-index: 150;
+      color: _colour(white); /* TODO: wrap */
+    }
 
-			@include md {
-				
-			}
+    &:hover:not(.inDevelopment) {
+      h2::after {
+        width: calc(100% + 6rem);
+      }
+      img {
+        box-shadow: 5px 5px 20px _colour(shadow);
+        transform: scale(1.02);
+        filter: brightness(100%);
+      }
+    }
 
-			//-- MQ
-			@include xl {
-				position: absolute;
-				bottom: 0;
-				left: 1rem;
-				left: -4rem;
-				font-size: 4em;
-			}
+    @include xl {
+      h2::after {
+        content: "";
+        position: absolute;
+        background-color: _colour(blue);
+        left: -3rem;
+        top: -0.6rem;
+        width: 0%;
+        height: calc(100% + 1.2rem);
+        z-index: -1;
+        transition: _duration(default);
+        box-shadow: 5px 5px 20px _colour(shadow);
+      }
+    }
 
-			margin: 0;
-			z-index: 150;
-			color: _colour(white); /* TODO: wrap */
-		}
+    img {
+      filter: brightness(55%);
 
-		&:hover:not(.inDevelopment){
-			h2::after {
-				width: calc(100% + 6rem);
-			}
-			img {
-				box-shadow: 5px 5px 20px _colour(shadow);
-				transform: scale(1.02);
-				filter: brightness(100%);
-			}
-		}
+      @include xl {
+        filter: brightness(70%);
+      }
 
-		@include xl {
-			h2::after {
-				content: "";
-				position: absolute;
-				background-color: _colour(blue);
-				left: -3rem;
-				top: -.6rem;
-				width: 0%;
-				height: calc(100% + 1.2rem);
-				z-index: -1;
-				transition: _duration(default);
-				box-shadow: 5px 5px 20px _colour(shadow);
-			}
-		}
-		
+      transition: _duration(default);
+      box-shadow: 5px 5px 20px _colour(shadow_light);
 
-		img {
-			filter: brightness(55%);
+      max-width: 100%;
+      width: 800px;
+      height: 600px;
 
-			@include xl {
-				filter: brightness(70%);
-			}
+      &::after {
+        content: "view more";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 5rem;
+        height: 5rem;
+      }
 
-			transition: _duration(default);
-			box-shadow: 5px 5px 20px _colour(shadow_light);
+      //________________________________________________ In Development
+      &.inDevelopment {
+        filter: brightness(40%) contrast(70%);
+      }
+    }
 
-			max-width: 100%;
-			width: 800px;
+    .inDevelopmentText {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
 
-			&::after {
-				content: "view more";
-				position: absolute;
-				top: 0;
-				right: 0;
-				width: 5rem;
-				height: 5rem;
-			}
+      text-align: center;
 
-			//________________________________________________ In Development
-			&.inDevelopment {
-				filter: brightness(40%) contrast(70%);
-			}
-		}
+      color: _colour(white);
+      font-family: _font(family-alt);
+      font-weight: _font(weight-bold);
 
-		.inDevelopmentText {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
+      padding: 1.5rem;
 
-			text-align: center;
+      white-space: nowrap;
 
-			color: _colour(white);
-			font-family: _font(family-alt);
-			font-weight: _font(weight-bold);
+      background-color: rgba(black, 0.4);
+      backdrop-filter: blur(10px);
 
-			padding: 1.5rem;
-			
-			white-space: nowrap;
+      font-size: 2em;
+    }
 
-			background-color: rgba(black, .4);
-			backdrop-filter: blur(10px);
+    &.inDevelopment {
+      h2,
+      h3 {
+        color: #888 !important;
+      }
+    }
 
-			font-size: 2em;
-		}
+    h3 {
+      margin: 0;
+      margin-top: 0.5rem;
+      margin-left: 3rem;
+      font-weight: normal;
 
-		&.inDevelopment {
-			h2, h3 {
-				color: #888 !important;
-			}
-		}
+      //-- MQ
+      @include xl {
+        float: none;
+        position: absolute;
+        left: -3rem;
+        top: 0;
+        margin: 0;
+        transform: rotate(270deg) translate(-100%, 0);
+        transform-origin: 0 0;
 
-		h3 {
-			margin: 0;
-			margin-top: .5rem;
-			margin-left: 3rem;
-			font-weight: normal;
-
-			//-- MQ
-			@include xl {
-				float: none;
-				position: absolute;
-				left: -3rem;
-				top: 0;
-				margin: 0;
-				transform: rotate(270deg) translate(-100%, 0);
-				transform-origin: 0 0;
-
-				font-weight: _font(weight-light);
-			}
-			
-		}
-	}
+        font-weight: _font(weight-light);
+      }
+    }
+  }
 }
