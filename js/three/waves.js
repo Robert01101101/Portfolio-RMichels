@@ -278,17 +278,24 @@ function waves () {
 
 	updateCamera();
 
+	function refreshWindow() {
+		calcDocHeight(); updateCamera();
+	}
+
+	refreshWindow();
+	setTimeout(refreshWindow, 500);
+
 	//detect page finish loading
-	document.onreadystatechange = () => {
-		if (document.readyState === 'complete') {
+	document.DOMContentLoaded = () => {
+		if (document.readyState === 'interactive') {
 			// document ready
 			//console.log("page finished loading");
 		
-			//TODO: Fix proper detection of page load finish. Likely due to
+			//TODO: Fix proper detection of page load finish. Due to
 			// 		complications with image loading, page load detection is currently
 			//		not 100% accurate, so this helps deal with that for now
 			for (let i = 0; i < 16; i++) {
-				setTimeout(() => { calcDocHeight(); updateCamera(); }, (50+Math.pow(4, (i/2)+1)/10));
+				setTimeout(refreshWindow, (50+Math.pow(4, (i/2)+1)/10));
 			}
 		}
 
@@ -301,5 +308,3 @@ function waves () {
 }
 
 waves();
-
-
