@@ -103,7 +103,9 @@
 
       max-width: 100%;
       width: 800px;
-      height: 600px;
+      @include lg {
+        height: 600px;
+      }
 
       &::after {
         content: "view more";
