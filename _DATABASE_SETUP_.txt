@@ -1,1 +1,3 @@
-Mount with VeraCrypt, decrypt, place those folders in this folder. If db config changes, update the encrypted files to ensure it gets checked into git (in an encrypted state).
+Mount with VeraCrypt, decrypt, place those folders including all files inside in this folder (xampp/htdcos). If db config changes, update the encrypted files to ensure it gets checked into git (in an encrypted state).
+
+In PhpMyAdmin, create the two dbs as the sql files are named (u596735338_db_portfolio). Then, when inside each database, go to import and import the sql file. At the top level (no db selected) add the users with the defined passwords set in auth.php
