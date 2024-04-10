@@ -23,11 +23,16 @@ body, input, select, textarea, p, code {
 	    }
 
 	    @include lg {
-	        font-size: 20px;
+	        font-size: 19px;
 	        //color: yellow;
 	    }
 
 	    @include xl {
+	        font-size: 19px;
+	        //color: orange;
+	    }
+
+		@include xxxl {
 	        font-size: 20px;
 	        //color: orange;
 	    }

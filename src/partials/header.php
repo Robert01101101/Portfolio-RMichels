@@ -45,7 +45,7 @@ setcookie("returningVisitor", "true");
 
 
   <link rel="stylesheet" href="<?php echo $GLOBALS['d'];?>css/normalize.css">
-  <link rel="stylesheet" href="<?php echo $GLOBALS['d'];?>css/main.css?v=1.0.7">
+  <link rel="stylesheet" href="<?php echo $GLOBALS['d'];?>css/main.css?v=1.0.8">
 
   <!-- Load Font -->
   <!-- Load Icons -->
