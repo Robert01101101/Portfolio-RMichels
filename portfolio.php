@@ -1,7 +1,5 @@
 <?php
 
-chdir('../');
-
 require "config.php";
 require "src/Partial.php";
 require "src/objects/Project.php";
@@ -23,6 +21,12 @@ Partial::build('projectPageMeta', ["project" => $project]);
 
 
 <div id="projContent"> <!--___________ Proj Content ____________-->
+
+  <!----- Content / Text ----->
+  <section class="sectionText">
+    <h2>Overview</h2>
+    <p>This portfolio website was designed in Figma, developed using the LAMP stack with Sass style sheets, and uses technologies like Three.js. Development began in 2020, with occasional updates since then.<p>
+  </section>
 
   <!----- Content / Text ----->
   <section class="sectionText">

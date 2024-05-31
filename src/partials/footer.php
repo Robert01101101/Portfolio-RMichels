@@ -24,6 +24,7 @@
           </div>
           <noscript><small>hi@rmichels.com</small></noscript>
           <div class="footerEnd">
+            <small>This portfolio website was <a href="portfolio">developed</a> with the LAMP stack.</small>
             <small>Copyright &copy; <?php echo date("Y"); ?> Robert Michels. All Rights Reserved.</small>
             <div>
               <a href="<?php echo $GLOBALS['d'];?>assets/other/RobertMichelsResume.pdf"><small>Resume</small></a>
