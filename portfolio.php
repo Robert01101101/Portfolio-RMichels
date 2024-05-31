@@ -25,13 +25,33 @@ Partial::build('projectPageMeta', ["project" => $project]);
   <!----- Content / Text ----->
   <section class="sectionText">
     <h2>Overview</h2>
-    <p>This portfolio website was designed in Figma, developed using the LAMP stack with Sass style sheets, and uses technologies like Three.js. Development began in 2020, with occasional updates since then.<p>
+    <p>This portfolio website was designed in Figma, developed using the LAMP stack with Sass style sheets, and uses technologies like Three.js. Development began in 2020, with occasional updates since then. The MySQL database stores metadata on each project, which helped to organize my codebase by populating modular PHP components with the database contents. This setup also lets me send out custom portfolio links when applying for jobs, where I can filter my project page to show relevant projects only - for example, <a href="https://rmichels.com/?filter=vr">showing only VR projects.</a><p>
+  </section>
+
+  <!----- Content / Media ----->
+  <section class="sectionMedia">
+    <div class="mediaColumn">
+      <figure onclick="viewImage(this)">
+        <img src="assets/img/portfolio/erDiagram.png">
+        <figcaption class="center">ER Diagram of the portfolio database.</figcaption>
+      </figure>
+    </div>
   </section>
 
   <!----- Content / Text ----->
   <section class="sectionText">
     <h2>Goals</h2>
     <p>The primary goal of the portfolio website you're currently on, is to communicate to potential employers and partners, what my set of skills, experiences, and interests are. The secondary goal is to practice full-stack development, while avoiding reliance on frameworks wherever possible, in order to practice and showcase fundamental skills. Other goals include sharing and participating with the design and developer communities, and trying out different technologies and ideas I'm interested in.<p>
+  </section>
+
+  <!----- Content / Media ----->
+  <section class="sectionMedia">
+    <div class="mediaColumn">
+      <figure onclick="viewImage(this)">
+        <img src="assets/img/portfolio/modelProcess.jpg">
+        <figcaption class="center">Screenshot from Blender, where I cleaned up the photogrammetry capture of myself, which was created with RealityCapture.</figcaption>
+      </figure>
+    </div>
   </section>
 
   <!----- Content / Text ----->
