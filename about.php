@@ -49,19 +49,28 @@ Partial::build('header', ["about" => TRUE]);
         <h3>Development</h3>
         <ul>
           <li>C#</li>
-          <li>Unity</li>
           <li>HTML5</li>
           <li>CSS3</li>
-          <li>Tailwind</li>
           <li>Sass</li>
-          <li>JavaScript</li>
-          <li>Node.js</li>
-          <li>D3.js</li>
-          <li>Three.js</li>
           <li>PHP</li>
-          <li>Blazor</li>
-          <li>MySQL</li>
+          <li>JavaScript</li>
           <li>Java</li>
+          <li>Dart</li>
+          <li>Unity</li>
+          <li>.NET</li>
+          <li>Blazor</li>
+          <li>Unity XRI</li>
+          <li>MRTK3</li>
+          <li>Three.js</li>
+          <li>D3.js</li>
+          <li>Tailwind</li>
+          <li>Flutter</li>
+          <li>Git</li>
+          <li>Azure</li>
+          <li>Firebase</li>
+          <li>MySQL</li>
+          <li>SQLite</li>
+          <li>CI/CD</li>
         </ul>
       </div>
       <div>
@@ -75,6 +84,7 @@ Partial::build('header', ["about" => TRUE]);
           <li>3D Printing</li>
           <li>Photogrammetry</li>
           <li>Geomapping</li>
+          <li>Jira</li>
         </ul>
       </div>
     </div>
