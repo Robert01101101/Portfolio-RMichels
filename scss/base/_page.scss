@@ -74,9 +74,9 @@ main {
 		margin: 0 auto;
 		max-width: 40rem;
 
-		> * {
+		/*> * {
 			background-color: rgba(_colour(bg), .8);
-		}
+		}*/
 
 		a {
 			@include inTextLink;
