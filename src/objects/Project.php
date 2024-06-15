@@ -271,6 +271,7 @@ class Project
         {
             $role = (new Role($row['role_slug']))
                             ->setName($row['role_name'])
+                            ->setNameDe($row['role_name_de'])
                             ->setSlug($row['role_slug']);
 
             $output->addRole($role);

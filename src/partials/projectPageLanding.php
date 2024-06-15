@@ -7,7 +7,7 @@
   <div class="row">
     <div class="col-50">
       <div class="landingText">
-        <h1><?php echo $project->getName() ?></h1>
+        <h1><?php echo $GLOBALS['english'] ? $project->getName() : $project->getNameDe() ?></h1>
         <p><?php if (isset($description)) echo $description ?></p>
         <br>
         <div class="projectCallToAction">
