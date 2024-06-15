@@ -73,7 +73,7 @@ msgstr "Alle Projekte"
 
 #: src/partials/footer.php:27
 msgid "This portfolio website was "
-msgstr "Diese Portfolio Website wurde mit dem LAMP stack "
+msgstr "Diese Portfolio Website wurde mit dem LAMP-Stack "
 
 #: src/partials/footer.php:27
 msgid "developed"
@@ -102,3 +102,23 @@ msgstr "Datenschutzerklärung"
 #: src/partials/footer.php:37
 msgid "Copied to Clipboard!"
 msgstr "In die Zwischenablage kopiert!"
+
+#: index.php:19
+msgid "Hi, I'm Robert Michels."
+msgstr "Hi, Ich bin Robert Michels."
+
+#: index.php:19
+msgid "I design and program"
+msgstr "Ich designe und programmiere"
+
+#: index.php:22
+msgid "games.\", \"VR experiences.\", \"mobile apps.\", \"websites."
+msgstr "Videospiele.\", \"VR Erlebnisse.\", \"Mobile Apps.\", \"Websiten."
+
+#: index.php:22
+msgid "digital media."
+msgstr "Digitale Medien."
+
+#: index.php:74
+msgid "See More"
+msgstr "Siehe Mehr"

@@ -7,7 +7,9 @@ class Project
     protected $id;
     protected $slug;
     protected $name;
+    protected $name_de;
     protected $type;
+    protected $type_de;
     protected $year;
     protected $inDevelopment;
     protected $company;
@@ -75,6 +77,24 @@ class Project
         return $this;
     }
 
+    /**
+     * @return string
+     */
+    public function getNameDe(): string
+    {
+        return $this->name_de;
+    }
+
+    /**
+     * @param mixed $title
+     * @return Project
+     */
+    public function setNameDe($name_de)
+    {
+        $this->name_de = $name_de;
+        return $this;
+    }
+
 
     /**
      * @return mixed
@@ -91,6 +111,24 @@ class Project
     public function setType($type)
     {
         $this->type = $type;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTypeDe(): string
+    {
+        return $this->type_de;
+    }
+
+    /**
+     * @param mixed $title
+     * @return Project
+     */
+    public function setTypeDe($type_de)
+    {
+        $this->type_de = $type_de;
         return $this;
     }
 
@@ -204,7 +242,9 @@ class Project
         {
             $project_id = $row['project_id'];
             $project_name = $row['project_name'];
+            $project_name_de = $row['project_name_de'];
             $project_type = $row['project_type'];
+            $project_type_de = $row['project_type_de'];
             $project_year = $row['project_year'];
             $project_slug = $row['project_slug'];
             $project_inDevelopment = $row['project_indevelopment'];
@@ -213,7 +253,9 @@ class Project
             $output = (new Project($project_slug))
                             ->setId($project_id)
                             ->setName($project_name)
+                            ->setNameDe($project_name_de)
                             ->setType($project_type)
+                            ->setTypeDe($project_type_de)
                             ->setYear($project_year)
                             ->setSlug($project_slug)
                             ->setInDevelopment($project_inDevelopment)

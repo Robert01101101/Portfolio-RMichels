@@ -16,10 +16,10 @@ Partial::build('header');
 <div id="landingArea">
   <div class="row">
     <div class="col-50" id="landingText">
-      <p>Hi, I'm Robert Michels.<br>I <sp id="textDesign">design</sp> and <sp id="textProgram">program</sp><br><span
+      <p><?php echo _("Hi, I'm Robert Michels."); ?><br><?php echo _("I design and program"); ?><br><span
           class="txt-rotate"
           data-period="2000"
-          data-rotate='["games.", "VR experiences.", "mobile apps.", "websites."]'>digital media.</span></p>
+          data-rotate='["<?php echo _("games.\", \"VR experiences.\", \"mobile apps.\", \"websites."); ?>"]'><?php echo _("digital media."); ?></span></p>
     </div>
   </div>
 </div>
@@ -63,7 +63,7 @@ Partial::build('header');
     }
 
     foreach ($projects as $project) {
-      Partial::build('projectTile', ["slug" => $project->getSlug(), "name" => $project->getName(), "type" => $project->getType(), "inDevelopment" => $project->getInDevelopment()]);
+      Partial::build('projectTile', ["slug" => $project->getSlug(), "name" => $GLOBALS['english'] ? $project->getName() : $project->getNameDe() , "type" => $GLOBALS['english'] ? $project->getType() : $project->getTypeDe(), "inDevelopment" => $project->getInDevelopment()]);
     }
 
   ?>
@@ -71,7 +71,7 @@ Partial::build('header');
 <!-- source: https://codepen.io/fliseno1k/pen/WNboLBy -->
 <div class="seeMoreBtn">
   <a href="projects">
-    <span>See More</span>
+    <span><?php echo _("See More") ?></span>
     <div class="liquid"></div>
   </a>
 </div>

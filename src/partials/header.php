@@ -19,6 +19,7 @@ setlocale(LC_ALL, $lang);
 bindtextdomain("messages", "./locale");
 bind_textdomain_codeset("messages", "UTF-8");
 textdomain("messages");
+$GLOBALS['english'] = $lang != 'de_DE';
 
 ?>
 
