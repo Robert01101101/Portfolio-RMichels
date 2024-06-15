@@ -22,6 +22,7 @@ Partial::build('projectPageMeta', ["project" => $project]);
 
   <!----- Content / Text ----->
   <section class="sectionText">
+    <?php if ($GLOBALS['english'] == false) echo "Dieser Bereich der Website wurde noch nicht vollständig auf Deutsch übersetzt." ?>
     <h2>The Task</h2>
     <p>The goal of this project was to practice computational signal processing techniques for digital media. We researched experimental image processing techniques and decided to combine two techniques that we believed would complement each other well. The first technique is an advanced chroma key, which neutralizes color spill and supports all possible foreground colors. The second technique transfers color characteristics from one image to another. The idea was that by combining these two techniques, we would create a very effective process that creates high-quality image composites, where the subject doesn’t noticeably differ from the background.</p>
   </section>

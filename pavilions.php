@@ -23,6 +23,7 @@ Partial::build('projectPageMeta', ["project" => $project]);
 
   <!----- Content / Text ----->
   <section class="sectionText">
+    <?php if ($GLOBALS['english'] == false) echo "Dieser Bereich der Website wurde noch nicht vollständig auf Deutsch übersetzt." ?>
     <h2>The Task</h2>
     <p>These pavilions are the result of a course, which teaches design principles through spatial design exercises. The goal was to create a series of pavilion designs, that explore humans, objects, space, spatial composition, and parametric design. We had to learn and use Rhinoceros 3D to create these designs, as well as create physical prototypes.</p>
   </section>

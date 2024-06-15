@@ -24,6 +24,7 @@ Partial::build('projectPageMeta', ["project" => $project]);
 
   <!----- Content / Text ----->
   <section class="sectionText">
+    <?php if ($GLOBALS['english'] == false) echo "Dieser Bereich der Website wurde noch nicht vollständig auf Deutsch übersetzt." ?>
     <h2>Overview</h2>
     <p>This portfolio website was designed in Figma, developed using the LAMP stack with Sass style sheets, and uses technologies like Three.js. Development began in 2020, with occasional updates since then. The MySQL database stores metadata on each project, which helped to organize my codebase by populating modular PHP components with the database contents. This setup also lets me send out custom portfolio links when applying for jobs, where I can filter my project page to show relevant projects only - for example, <a href="https://rmichels.com/?filter=vr">showing only VR projects.</a><p>
   </section>

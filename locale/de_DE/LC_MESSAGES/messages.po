@@ -579,3 +579,260 @@ msgid ""
 "SAS tokens, and functions to help configure the viewer based on the model "
 "dimensions."
 msgstr "Der unten stehende Codeschnipsel enthält den Code zum Laden des 3D-Modells im Webviewer mit Three.js. Es handelt sich um einen kleinen Ausschnitt aus der eigentlichen Datei, aber er zeigt einige der Lösungen für aufgetretene Herausforderungen, wie z. B. den geänderten Prozess zum Laden der in der MTL-Datei definierten Texturen mithilfe von SAS-Tokens und Funktionen zur Konfiguration des Viewers auf der Grundlage der Modellabmessungen."
+
+#: amae.php:13
+msgid ""
+"Amae is a utility app for busy parents. Amae helps parents to manage their "
+"time, learn about parenting and get help easily and quickly."
+msgstr "Amae ist eine nützliche App für viel beschäftigte Eltern. Amae hilft Eltern, ihre Zeit zu managen, etwas über Erziehung zu lernen und einfach und schnell Hilfe zu bekommen."
+
+#: amae.php:29 futureEarth.php:29
+msgid "The Task"
+msgstr "Die Aufgabe"
+
+#: amae.php:30
+msgid ""
+"This project was a design exercise to create a user interface mockup. It was "
+"created for an interface design course that focused on goal-oriented design. "
+"Consequently, a big part of the project was identifying user needs within a "
+"particular domain, and designing a product that helps the users achieve "
+"their goals."
+msgstr "Bei diesem Projekt handelte es sich um eine Designübung zur Erstellung eines Benutzeroberflächen-Mockups. Es wurde für einen Schnittstellendesign-Kurs erstellt, der sich auf zielorientiertes Design konzentrierte. Daher bestand ein großer Teil des Projekts darin, die Bedürfnisse der Nutzer in einem bestimmten Bereich zu ermitteln und ein Produkt zu entwerfen, das den Nutzern hilft, ihre Ziele zu erreichen."
+
+#: amae.php:32
+msgid ""
+"Our domain was that of young parents. With our design, we tried to create an "
+"app that helps parents coordinate their parenting tasks, as well as get help "
+"easily and quickly when in need."
+msgstr "Unsere Domäne war die der jungen Eltern. Mit unserem Design haben wir versucht, eine App zu entwickeln, die Eltern dabei hilft, ihre Erziehungsaufgaben zu koordinieren und bei Bedarf einfach und schnell Hilfe zu bekommen."
+
+#: amae.php:59 futureEarth.php:60
+msgid "The Result"
+msgstr "Das Ergebnis"
+
+#: amae.php:61
+msgid ""
+"The dashboard helps parents with their most frequent tasks. Parents can "
+"coordinate recurring tasks, such as diaper changes, as well as scheduled "
+"events, such as doctor appointments."
+msgstr "Das Dashboard hilft Eltern bei ihren häufigsten Aufgaben. Eltern können wiederkehrende Aufgaben, wie Windelwechsel, sowie geplante Ereignisse, wie Arzttermine, koordinieren."
+
+#: amae.php:64
+msgid ""
+"With the nanny feature, users can browse for and book nearby nannies. Their "
+"profiles show ratings and reviews, their skills, and more information. Users "
+"can also easily rebook previously booked nannies."
+msgstr "Mit der Nannies-Funktion können die Nutzer nach Nannies in der Nähe suchen und diese buchen. Ihre Profile zeigen Bewertungen und Rezensionen, ihre Fähigkeiten und weitere Informationen. Außerdem können die Nutzer bereits gebuchte Nannies einfach umbuchen."
+
+#: amae.php:67
+msgid ""
+"Learn features curated articles, relevant news as well as community "
+"discussions. This helps parents as well as nannies learn more about child-"
+"rearing and provides a parenting community to engage with."
+msgstr "Learn bietet kuratierte Artikel, relevante Nachrichten und Diskussionen in der Gemeinschaft. Dies hilft Eltern und Nannies, mehr über Kindererziehung zu lernen und bietet eine Eltern-Community, in der sie sich engagieren können."
+
+#: amae.php:70
+msgid ""
+"The chat feature doubles as an easy way to stay in touch with other "
+"caretakers, as well as a way to organize. Through chat, parents can assign "
+"tasks to each other, as well as book and manage an appointment with a nanny."
+msgstr "Die Chat-Funktion ist eine einfache Möglichkeit, mit anderen Betreuern in Kontakt zu bleiben und sich zu organisieren. Über den Chat können sich die Eltern gegenseitig Aufgaben zuweisen und einen Termin mit einem Nannies buchen und verwalten."
+
+#: amae.php:90
+msgid ""
+"Design artifacts that detail components of our design & define a clear "
+"styleguide to achieve consistency."
+msgstr "Design-Artefakte, die die Komponenten unseres Designs detailliert beschreiben und einen klaren Styleguide definieren, um Konsistenz zu erreichen."
+
+#: amae.php:97 futureEarth.php:95
+msgid "Process"
+msgstr "Prozess"
+
+#: amae.php:98
+msgid ""
+"The project was developed in 4 months by a team of 5. I was the project "
+"manager, as well as one of the UX and UI designers. Our process began with "
+"brief domain brainstorming, followed by an ethnography study to better "
+"understand our users. After coming up with personas and multiple concept "
+"ideas, we focused on Amae. We then designed our product. For this, we "
+"designed many artifacts, such as flowcharts, wireframes, user journey maps, "
+"interaction patterns, and a style guide. In the last stages, we performed "
+"user testing and refinement. An outcome of this was that we dropped a health "
+"feature we had previously planned to include. Finally, we created a product "
+"website to present our final design."
+msgstr "Das Projekt wurde in 4 Monaten von einem 5-köpfigen Team entwickelt. Ich war der Projektleiter sowie einer der UX- und UI-Designer. Unser Prozess begann mit einem kurzen Domain-Brainstorming, gefolgt von einer ethnografischen Studie, um unsere Nutzer besser zu verstehen. Nachdem wir Personas und mehrere Konzeptideen entwickelt hatten, konzentrierten wir uns auf Amae. Dann haben wir unser Produkt entworfen. Dazu entwarfen wir zahlreiche Artefakte wie Flussdiagramme, Wireframes, User Journey Maps, Interaktionsmuster und einen Style Guide. In den letzten Phasen führten wir Benutzertests und Verfeinerungen durch. Ein Ergebnis davon war, dass wir eine Gesundheitsfunktion, die wir ursprünglich geplant hatten, weggelassen haben. Schließlich erstellten wir eine Produktwebsite, um unser endgültiges Design zu präsentieren."
+
+#: amae.php:101
+msgid ""
+"One of our core challenges throughout the design process was making the app "
+"safe. One of our solutions was the design of the nanny experience. Nannies "
+"can learn and get certified through the Learn feature. Their thorough "
+"profiles feature ratings, reviews, and skills, to allow parents to find the "
+"best nanny for their needs. Parents can see what tasks a nanny has "
+"completed, call them at any time, and report a nanny. These features aim to "
+"maximize transparency to create a safe experience."
+msgstr "Eine unserer größten Herausforderungen während des Designprozesses war es, die App sicher zu machen. Eine unserer Lösungen war die Gestaltung der Nanny-Erfahrung. Nannies können über die Funktion Lernen lernen und sich zertifizieren lassen. Ihre ausführlichen Profile enthalten Bewertungen, Rezensionen und Fähigkeiten, damit Eltern das beste Nannies für ihre Bedürfnisse finden können. Eltern können sehen, welche Aufgaben ein Nannies erledigt hat, sie jederzeit anrufen und ein Nannies melden. Diese Funktionen zielen darauf ab, die Transparenz zu maximieren und eine sichere Erfahrung zu schaffen."
+
+#: amae.php:107
+msgid "Result & Design Artifacts"
+msgstr "Ergebnis & Design-Artefakte"
+
+#: amae.php:108
+msgid ""
+"You can try the interactive mockup below, and take a look at the file "
+"itself. We got very positive feedback and were satisfied with our final "
+"result, the journey we took to get there, and the things we learned along "
+"the way."
+msgstr "Sie können das interaktive Mockup unten ausprobieren und einen Blick auf die Datei selbst werfen. Wir haben sehr positives Feedback erhalten und waren mit unserem Endergebnis, dem Weg dorthin und den Dingen, die wir auf dem Weg gelernt haben, zufrieden."
+
+#: amae.php:131
+msgid "Design Artifacts"
+msgstr "Design-Artefakte"
+
+#: amae.php:132
+msgid ""
+"Below are a selection of various design artifacts from this project. These "
+"represent many stages of our process, from researching our audience and "
+"their needs, to planning out UX flows and wireframes, to our final "
+"presentation of the mockup via a fictional product website, which was "
+"created in a 2 day sprint."
+msgstr "Im Folgenden finden Sie eine Auswahl verschiedener Design-Artefakte aus diesem Projekt. Diese repräsentieren viele Phasen unseres Prozesses, von der Erforschung unserer Zielgruppe und ihrer Bedürfnisse über die Planung von UX-Flows und Wireframes bis hin zu unserer abschließenden Präsentation des Mockups über eine fiktive Produktwebsite, die in einem zweitägigen Sprint erstellt wurde."
+
+#: futureEarth.php:13
+msgid ""
+"Future Earth is a VR adventure game set in a dystopian future, where the "
+"player has to grow trees, fight droids and collect parts."
+msgstr "Future Earth ist ein VR-Abenteuerspiel, das in einer dystopischen Zukunft spielt, in der der Spieler Bäume pflanzen, Droiden bekämpfen und Teile sammeln muss."
+
+#: futureEarth.php:30
+msgid ""
+"Future Earth was created as an exercise in designing and developing "
+"immersive environments."
+msgstr "Future Earth wurde als Übung für die Gestaltung und Entwicklung immersiver Umgebungen entwickelt."
+
+#: futureEarth.php:31
+msgid ""
+"With the concept design, we aimed to create a VR adventure game that "
+"encourages sustainable behaviors in players. This is achieved by placing the "
+"player in a dystopian futuristic environment and giving them the power to "
+"radically transform it for the better through gameplay."
+msgstr "Mit dem Konzeptentwurf wollten wir ein VR-Abenteuerspiel schaffen, das die Spieler zu nachhaltigen Verhaltensweisen anregt. Dies wird erreicht, indem wir den Spieler in eine dystopische, futuristische Umgebung versetzen und ihm die Macht geben, diese durch das Spiel radikal zum Besseren zu verändern."
+
+#: futureEarth.php:61
+msgid "Story"
+msgstr "Geschichte"
+
+#: futureEarth.php:62
+msgid ""
+"Set in a dystopian future, you are the first human to walk planet earth in a "
+"long time."
+msgstr "In einer dystopischen Zukunft bist du der erste Mensch, der seit langer Zeit die Erde bewandert."
+
+#: futureEarth.php:63
+msgid ""
+"Your mission objective is to plant and sustain 100 trees. Whether or not "
+"humanity will attempt to return to earth hinges upon your success."
+msgstr "Ihr Missionsziel ist es, 100 Bäume zu pflanzen und zu erhalten. Von Ihrem Erfolg hängt es ab, ob die Menschheit versuchen wird, zur Erde zurückzukehren oder nicht."
+
+#: futureEarth.php:64
+msgid ""
+"But that isn't an easy feat. Climate change and unsustainable human habits "
+"have created a toxic wasteland. And to make things worse, robots left behind "
+"to clean up, have fried in the sun and turned dangerous over time. Fight "
+"these bots, collect technical components, build sustainable technology and "
+"become the one to save the world!"
+msgstr "Doch das ist kein leichtes Unterfangen. Der Klimawandel und unhaltbare menschliche Gewohnheiten haben ein giftiges Ödland geschaffen. Und zu allem Übel sind die Roboter, die zum Aufräumen zurückgelassen wurden, in der Sonne gebraten und mit der Zeit gefährlich geworden. Bekämpfe diese Bots, sammle technische Komponenten, baue nachhaltige Technologie und werde derjenige, der die Welt rettet!"
+
+#: futureEarth.php:65
+msgid "Success"
+msgstr "Erfolg"
+
+#: futureEarth.php:66
+msgid ""
+"Our project won best overall project, best interaction design, project for "
+"impact, and best VR/AR in our class."
+msgstr "Unser Projekt gewann den Preis für das beste Gesamtprojekt, das beste Interaktionsdesign, das beste Projekt für die Wirkung und das beste VR/AR-Projekt in unserer Klasse."
+
+#: futureEarth.php:96
+msgid ""
+"The project was developed in 4 months by a team of 4. I was the project "
+"manager, as well as one of the VR / game designers & developers."
+msgstr "Das Projekt wurde in 4 Monaten von einem 4-köpfigen Team entwickelt. Ich war der Projektleiter sowie einer der VR-/Spieldesigner und -entwickler."
+
+#: futureEarth.php:97
+msgid ""
+"After deciding to create a project for impact with the theme of "
+"sustainability, we started to create a game. Our goal was to create a VR "
+"game that appeals to players without particular interest in sustainability, "
+"to reach a broader audience."
+msgstr "Nachdem wir beschlossen hatten, ein Impact-Projekt zum Thema Nachhaltigkeit zu entwickeln, begannen wir mit der Erstellung eines Spiels. Unser Ziel war es, ein VR-Spiel zu entwickeln, das auch Spieler ohne Interesse an Nachhaltigkeit anspricht, um ein breiteres Publikum zu erreichen."
+
+#: futureEarth.php:98
+msgid ""
+"As the PM, I split the concept design into a list of core and bonus "
+"features. The core design featured a small game, where players fight rogue "
+"robots, collect their parts, and build water filtering technology that helps "
+"trees to grow. This core prototype was implemented within the first three "
+"months."
+msgstr "Als PM teilte ich das Konzeptdesign in eine Liste von Kern- und Bonusfunktionen auf. Der Kernentwurf beinhaltete ein kleines Spiel, in dem die Spieler gegen bösartige Roboter kämpfen, deren Teile sammeln und eine Wasserfiltertechnologie bauen, die Bäumen beim Wachsen hilft. Dieser Kernprototyp wurde innerhalb der ersten drei Monate umgesetzt."
+
+#: futureEarth.php:99
+msgid ""
+"After a round of usertesting, we proceed to implement updated features in "
+"response to our testing results. These included measures to better "
+"communicate the narrative, such as a major update to the level design and "
+"the implementation of an aesthetic change as the player plants more trees. "
+"We also had time to implement some of our bonus features, which were mostly "
+"aesthetic improvements such as the addition of VFX, better models, and "
+"multiple collectible parts."
+msgstr "Nach einer Runde von Benutzertests haben wir als Reaktion auf die Testergebnisse aktualisierte Funktionen implementiert. Dazu gehörten Maßnahmen zur besseren Vermittlung der Geschichte, wie z. B. eine umfassende Aktualisierung des Leveldesigns und die Implementierung einer ästhetischen Veränderung, wenn der Spieler mehr Bäume pflanzt. Wir hatten auch Zeit, einige unserer Bonus-Features zu implementieren, bei denen es sich hauptsächlich um ästhetische Verbesserungen handelte, wie z. B. das Hinzufügen von VFX, bessere Modelle und mehrere sammelbare Teile."
+
+#: futureEarth.php:140
+msgid "The Code"
+msgstr "Der Code"
+
+#: futureEarth.php:141
+msgid ""
+"My programming efforts for this project focussed on the more unusual "
+"features of our game, such as spare part collection, item building, UI "
+"interactions, story sequencing and more. Another interesting feature I "
+"implemented was the trees, which required animations for growth and "
+"monitoring of their health based on the available water supply. In order to "
+"achieve fine control over the growth behavior, I used a Coroutine, which is "
+"also used to control dying trees. Instead of using an Unity animation I "
+"implemented smooth growth by affecting scale and rotation with the help of "
+msgstr "Meine Programmierarbeit für dieses Projekt konzentrierte sich auf die ungewöhnlicheren Funktionen unseres Spiels, wie z. B. das Sammeln von Ersatzteilen, das Bauen von Gegenständen, die Interaktion mit der Benutzeroberfläche, die Abfolge der Geschichte und mehr. Eine weitere interessante Funktion, die ich implementiert habe, waren die Bäume, die Animationen für das Wachstum und die Überwachung ihres Gesundheitszustands auf der Grundlage der verfügbaren Wasservorräte benötigten. Um eine feine Kontrolle über das Wachstumsverhalten zu erreichen, habe ich eine Coroutine verwendet, die auch zur Kontrolle sterbender Bäume eingesetzt wird. Anstatt eine Unity-Animation zu verwenden, implementierte ich ein sanftes Wachstum, indem ich Skalierung und Rotation definierte mit Hilfe von "
+
+#: futureEarth.php:141
+msgid " and "
+msgstr " und "
+
+#: futureEarth.php:141
+msgid ""
+" for smoothing. A challenge that came up was a bug where birds would land at "
+"the position of the tree's origin. The fix was simple: disabling their perch-"
+"targets until the trees had finished growing, and only then enabling them, "
+"so that their target positions were correctly located at the fully grown "
+"branches."
+msgstr " für die Glättung. Eine Herausforderung war ein Fehler, bei dem die Vögel an der Position des Baumursprungs landeten. Die Lösung war einfach: Die Sitzstangen-Ziele wurden deaktiviert, bis die Bäume fertig gewachsen waren, und erst dann aktiviert, so dass sich die Zielpositionen korrekt an den ausgewachsenen Ästen befanden."
+
+#: futureEarth.php:151
+msgid ""
+"One of the interesting changes that resulted from our user tests was the "
+"more drastic environment change coupled to player progress. The environment "
+"changes as the player plants more trees. In order to achieve the desired "
+"emotional effect with the player, we incorporated many variable layers: the "
+"skybox, fog, dust particles, water, lighting and post processing. All of "
+"these aspects of the environment are interpolated between a start and an end "
+"state, by the method "
+msgstr "Eine der interessanten Änderungen, die sich aus unseren Benutzertests ergaben, war die drastischere Veränderung der Umgebung in Abhängigkeit vom Fortschritt des Spielers. Die Umgebung verändert sich, wenn der Spieler mehr Bäume pflanzt. Um die gewünschte emotionale Wirkung beim Spieler zu erzielen, haben wir viele variable Ebenen eingebaut: die Skybox, Nebel, Staubpartikel, Wasser, Beleuchtung und Nachbearbeitung. All diese Aspekte der Umgebung werden zwischen einem Start- und einem Endzustand interpoliert, und zwar mit der Methode "
+
+#: futureEarth.php:151
+msgid " which I implemented in "
+msgstr " die ich implementierte in "
+
+#: futureEarth.php:151
+msgid ""
+"For instance, the fog has definitions of its color, start distance and end "
+"distance for both the beginning and the end."
+msgstr "Zum Beispiel hat der Nebel Definitionen für seine Farbe, die Startdistanz und die Enddistanz sowohl für den Anfang als auch für das Ende des Nebels."
