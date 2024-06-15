@@ -8,7 +8,7 @@ Translate using DeepL and ChatGPT
 
 
 SCRAPE TEXT COMMAND:
-xgettext -n about.php -n src/partials/header.php -n src/partials/footer.php -n index.php -n clirioCloud.php -n clirioScanShare.php -n clirioScanViews.php -n src/partials/projectPageMeta.php
+xgettext -n about.php -n src/partials/header.php -n src/partials/footer.php -n index.php -n clirioCloud.php -n src/partials/projectPageMeta.php -n clirioScanViews.php -n clirioScanShare.php
 
 CONVERT TO BINARY COMMAND:
 msgfmt messages.po
