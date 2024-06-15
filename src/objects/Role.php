@@ -5,6 +5,7 @@ class Role
     protected $id;
     protected $slug;
     protected $name;
+    protected $name_de;
 
 
     public function __construct($slug)
@@ -69,6 +70,24 @@ class Role
     }
 
     /**
+     * @return string
+     */
+    public function getNameDe(): string
+    {
+        return $this->name_de;
+    }
+
+    /**
+     * @param mixed $title
+     * @return Role
+     */
+    public function setNameDe($name_de)
+    {
+        $this->name_de = $name_de;
+        return $this;
+    }
+
+    /**
      * @return array
      */
     public static function getAllRoles(): array
@@ -91,6 +110,7 @@ class Role
         {
             $output[] = (new Role($row['role_slug']))
                                 ->setName($row['role_name'])
+                                ->setNameDe($row['role_name_de'])
                                 ->setSlug($row['role_slug']);
         }
 
