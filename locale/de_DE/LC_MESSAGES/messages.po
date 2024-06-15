@@ -122,3 +122,156 @@ msgstr "Digitale Medien."
 #: index.php:74
 msgid "See More"
 msgstr "Siehe Mehr"
+
+#: clirioCloud.php:13
+msgid ""
+"A web-based collection of tools for managing workspaces in Clirio View. "
+"Includes a user dashboard, workspace and observation creation tools, and "
+"interactive Bing maps."
+msgstr "Eine webbasierte Sammlung von Tools zur Verwaltung von Arbeitsbereichen in Clirio View. Enthält ein Benutzer-Dashboard, Tools zur Erstellung von Arbeitsbereichen und Beobachtungen sowie interaktive Bing-Karten."
+
+#: clirioCloud.php:27
+msgid "Overview"
+msgstr "Übersicht"
+
+#: clirioCloud.php:28
+msgid ""
+"Clirio Cloud is a collection of tools that have been growing over time. "
+"These tools are provided to users of the Clirio Suite on a website developed "
+"with Blazor. Clirio builds solutions that help users inspect, document, and "
+"collaborate in 3D and XR on geospatial workspaces."
+msgstr "Clirio Cloud ist eine Sammlung von Tools, die im Laufe der Zeit gewachsen ist. Diese Tools werden den Nutzern der Clirio Suite auf einer mit Blazor entwickelten Website zur Verfügung gestellt. Clirio entwickelt Lösungen, die den Nutzern helfen, geodätische Arbeitsbereiche in 3D und XR zu inspizieren, zu dokumentieren und zusammenzuarbeiten."
+
+#: clirioCloud.php:30
+msgid ""
+"One of the main goals of Clirio Cloud is to complement the upload and "
+"organizational capabilities of the iOS Clirio apps, which serve as the "
+"primary capture platform. While a user can easily capture and upload 3D "
+"photogrammetry scans with Clirio's iOS apps, they might also want to upload "
+"other 3D models, for which Clirio Cloud provides an interface. Other "
+"workspace tools are upload and management of custom basemaps, upload of "
+"boreholes, guest invitations, point of interest creation, and workspace "
+"deletion."
+msgstr "Eines der Hauptziele von Clirio Cloud ist es, die Upload- und Organisationsfunktionen der iOS-Apps von Clirio zu ergänzen, die als primäre Erfassungsplattform dienen. Während ein Benutzer mit den iOS-Apps von Clirio problemlos 3D-Photogrammetriescans erfassen und hochladen kann, möchte er möglicherweise auch andere 3D-Modelle hochladen, für die Clirio Cloud eine Schnittstelle bereitstellt. Weitere Werkzeuge für den Arbeitsbereich sind das Hochladen und Verwalten von benutzerdefinierten Basiskarten, das Hochladen von Bohrlöchern, das Einladen von Gästen, das Erstellen von Points of Interest und das Löschen von Arbeitsbereichen."
+
+#: clirioCloud.php:32
+msgid ""
+"Furthermore, Clirio Cloud provides an analytics dashboard to users, as well "
+"as an easy way to access the Clirio knowledge base and training videos. "
+"Finally, there also are subscription and account management tools."
+msgstr "Darüber hinaus bietet Clirio Cloud den Nutzern ein Analyse-Dashboard sowie eine einfache Möglichkeit, auf die Clirio-Wissensdatenbank und Schulungsvideos zuzugreifen. Schließlich gibt es auch Tools zur Abonnement- und Kontoverwaltung."
+
+#: clirioCloud.php:42
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: clirioCloud.php:46
+msgid "Workspace List"
+msgstr "Workspace Liste"
+
+#: clirioCloud.php:50
+msgid "Workspace Management Tools"
+msgstr "Workspace Management Tools"
+
+#: clirioCloud.php:54
+msgid "Workspace Management Example: Create POI"
+msgstr "Workspace Management Beispiel: Erstelle POI"
+
+#: clirioCloud.php:64
+msgid "The website was initially set up by "
+msgstr "Die Website wurde ursprünglich eingerichtet von "
+
+#: clirioCloud.php:64
+msgid ""
+" using Blazor, to try using a web framework that has C# as its programming "
+"language, which would be an advantage considering we also used C# for Unity "
+"development. After setting up authentication, subscription management, and "
+"workspace listing with metadata, development was mostly handed off to me."
+msgstr " unter der verwendung von Blazor, um ein Web-Framework mit C# als Programmiersprache auszuprobieren, was ein Vorteil wäre, wenn man bedenkt, dass wir C# auch für die Unity-Entwicklung verwenden. Nach der Einrichtung der Authentifizierung, der Abonnementverwaltung und der Auflistung der Arbeitsbereiche mit Metadaten wurde die Entwicklung größtenteils an mich übergeben."
+
+#: clirioCloud.php:66
+msgid ""
+"The first stories I implemented revolved around workspace management, where "
+"I added observation upload features. These typically use Blazor's forms to "
+"let users fill out required information, and a file upload tray. These first "
+"stories encompassed a variety of challenges. I had to connect to our APIs to "
+"load workspace and POI data, as well as to upload data. There was also the "
+"need to validate certain data such as coordinates, and to provide user "
+"feedback such as marking required or incorrect fields and showing the upload "
+"status. I designed the UI on the fly, following the existing styling."
+msgstr "Die ersten features, die ich implementiert habe, drehten sich um die Verwaltung von Arbeitsbereichen, wo ich Funktionen zum Hochladen von Beobachtungen hinzugefügt habe. Diese nutzen typischerweise die Formulare von Blazor, um den Benutzern das Ausfüllen der erforderlichen Informationen zu ermöglichen, sowie einen Dateiupload-Tray. Diese ersten Projekte waren mit einer Reihe von Herausforderungen verbunden. Ich musste eine Verbindung zu unseren APIs herstellen, um Arbeitsraum- und POI-Daten zu laden und Daten hochzuladen. Außerdem mussten bestimmte Daten, wie z. B. Koordinaten, validiert und dem Benutzer Feedback gegeben werden, z. B. durch Markierung erforderlicher oder falscher Felder und Anzeige des Upload-Status. Ich habe die Benutzeroberfläche währrend der Umsetzung entworfen und mich dabei an das bestehende Styling gehalten."
+
+#: clirioCloud.php:68
+msgid ""
+"After adding all of the workspace management features such as 3D model "
+"upload and user invitations, I started working on another set of stories "
+"revolving around the dashboard. I partnered up with "
+msgstr "Nachdem ich alle Funktionen zur Verwaltung des Arbeitsbereichs, wie z. B. den Upload von 3D-Modellen und Benutzereinladungen, hinzugefügt hatte, begann ich mit der Arbeit an einer weiteren Reihe von Geschichten, die sich um das Dashboard drehten. Ich habe mich gepartnert mit"
+
+#: clirioCloud.php:68
+msgid ", who designed mockups, which I then implemented."
+msgstr ", der Mockups entwarf, die ich dann umsetzte."
+
+#: clirioCloud.php:70
+msgid ""
+"A noteworthy feature that was added fairly late, are the interactive Bing "
+"maps. These are used to position new workspaces and points of interest and "
+"can get the user's location for convenience. They are accommodated by a set "
+"of GPS coordinate input fields, which sync with the map."
+msgstr "Eine bemerkenswerte Funktion, die relativ spät hinzugefügt wurde, sind die interaktiven Bing-Karten. Diese werden verwendet, um neue Arbeitsbereiche und Points of Interest zu positionieren, und können den Standort des Benutzers zur Bequemlichkeit abrufen. Sie werden durch eine Reihe von Eingabefeldern für GPS-Koordinaten unterstützt, die mit der Karte synchronisiert werden."
+
+#: clirioCloud.php:72
+msgid "Learning"
+msgstr "Lehren"
+
+#: clirioCloud.php:73
+msgid ""
+"I enjoyed learning Blazor, as it shared some similarities to PHP but had "
+"quite a lot of advantages, such as easy form binding to data models, data "
+"validation, and improved readability and writeability to me as a developer "
+"who often works in C#. Besides Blazor, the Tailwind CSS Framework was also "
+"new to me, but learning that wasn't too hard since I am fairly familiar with "
+"CSS3. I did enjoy learning about it too, because I prefer its "
+"customizability and efficiency compared to Bootstrap, although I still "
+"prefer Sass for my personal projects."
+msgstr "Es hat mir Spaß gemacht, Blazor zu lernen, da es einige Ähnlichkeiten mit PHP aufweist, aber eine ganze Reihe von Vorteilen hat, wie z. B. die einfache Formularanbindung an Datenmodelle, die Datenvalidierung und die verbesserte Lesbarkeit und Schreibbarkeit für mich als Entwickler, der oft in C# arbeitet. Neben Blazor war auch das Tailwind CSS Framework neu für mich, aber das zu lernen war nicht allzu schwer, da ich mit CSS3 recht gut vertraut bin. Es hat mir auch Spaß gemacht, es kennenzulernen, weil ich seine Anpassbarkeit und Effizienz im Vergleich zu Bootstrap bevorzuge, obwohl ich für meine persönlichen Projekte immer noch Sass bevorzuge."
+
+#: clirioCloud.php:88
+msgid ""
+"Some examples of data model binding to forms in Blazor. Expanding/collapsing "
+"optional sections of the form, and rearranging elements in a list, is made "
+"easy with Blazor since user inputs result in direct feedback without the "
+"need to write boilerplate code."
+msgstr "Einige Beispiele für die Anbindung von Datenmodellen an Formulare in Blazor. Das Erweitern/Kollabieren von optionalen Abschnitten des Formulars und das Umordnen von Elementen in einer Liste wird mit Blazor leicht gemacht, da die Benutzereingaben zu einem direkten Feedback führen, ohne dass man Boilerplate-Code schreiben muss."
+
+#: clirioCloud.php:96
+msgid "Code Sample"
+msgstr "Code Beispiel"
+
+#: clirioCloud.php:97
+msgid "An example of data binding between the form and data model for the "
+msgstr "Ein Beispiel für die Datenbindung zwischen dem Formular und dem Datenmodell für die "
+
+#: clirioCloud.php:97
+msgid "Create POI"
+msgstr "POI Erstellen"
+
+#: clirioCloud.php:97
+msgid " page."
+msgstr " Seite."
+
+#: src/partials/projectPageMeta.php:7
+msgid "Type"
+msgstr "Typ"
+
+#: src/partials/projectPageMeta.php:11
+msgid "Year"
+msgstr "Jahr"
+
+#: src/partials/projectPageMeta.php:15
+msgid "Skills Applied"
+msgstr "Angewandte Fähigkeiten"
+
+#: src/partials/projectPageMeta.php:47
+msgid "Company"
+msgstr "Firma"
