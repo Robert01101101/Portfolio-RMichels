@@ -1,6 +1,21 @@
 https://www.php.net/manual/en/book.gettext.php
 
 Note - doesn't seem to work locally on Windows with XAMPP, or maybe locale is wrong. Seems to work on Hostinger server
+gettext also might run into caching issues on shared hosting setups and a lot of people reccommend against using it...
+
+
+
+
+
+xgettext -n about.php -n src/partials/header.php -n src/partials/footer.php
+
+
+
+
+
+
+
+
 
 Messages header:
 

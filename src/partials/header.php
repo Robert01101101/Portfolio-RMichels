@@ -101,13 +101,13 @@ textdomain("messages");
         <div id="OverlayMenu" class="hidden"><!-- TODO: find no js solution -->
           <ul id="MenuContent">
             <a title="Featured Work" href="/<?php if(isset($_COOKIE['visitorFilter'])){ echo "?filter=".$_COOKIE['visitorFilter']; } ?>">
-              <li <?php if(!isset($about) && !isset($projects) && !isset($project)){ echo "class='curPage'"; } ?>>Featured Work</li>
+              <li <?php if(!isset($about) && !isset($projects) && !isset($project)){ echo "class='curPage'"; } ?>><?php echo _("Featured Work"); ?></li>
             </a>
             <a href="<?php echo $GLOBALS['d'];?>about" title="About">
-              <li <?php if(isset($about)){ echo "class='curPage'"; } ?>>About</li>
+              <li <?php if(isset($about)){ echo "class='curPage'"; } ?>><?php echo _("About"); ?></li>
             </a>
             <a href="<?php echo $GLOBALS['d'];?>projects" title="All Projects">
-              <li <?php if(isset($projects)){ echo "class='curPage'"; } ?>>All Projects</li>
+              <li <?php if(isset($projects)){ echo "class='curPage'"; } ?>><?php echo _("All Projects"); ?></li>
             </a>
             <div class="overlayMenuSpacer"></div> <!-- TODO: Move out of Nav -->
             <div class="overlayMenuLanguageSelector">  <!-- TODO: Move out of Nav -->

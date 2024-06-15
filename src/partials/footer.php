@@ -24,17 +24,17 @@
           </div>
           <noscript><small>hi@rmichels.com</small></noscript>
           <div class="footerEnd">
-            <small>This portfolio website was <a href="portfolio">developed</a> with the LAMP stack.</small>
-            <small>Copyright &copy; <?php echo date("Y"); ?> Robert Michels. All Rights Reserved.</small>
+            <small><?php echo _("This portfolio website was "); ?><a href="portfolio"><?php echo _("developed"); ?></a> <?php echo _("with the LAMP stack."); ?></small>
+            <small><?php echo _("Copyright"); ?> &copy; <?php echo date("Y"); ?> <?php echo _("Robert Michels. All Rights Reserved."); ?></small>
             <div>
-              <a href="<?php echo $GLOBALS['d'];?>assets/other/RobertMichelsResume.pdf"><small>Resume</small></a>
-              <a href="<?php echo $GLOBALS['d'];?>privacyPolicy"><small>Privacy Policy</small></a>
+              <a href="<?php echo $GLOBALS['d'];?>assets/other/RobertMichelsResume.pdf"><small><?php echo _("Resume"); ?></small></a>
+              <a href="<?php echo $GLOBALS['d'];?>privacyPolicy"><small><?php echo _("Privacy Policy"); ?></small></a>
             </div>
           </div>          
     </footer>
   </div>
 
-  <div id="copyConfirm" class="hidden"><small>Copied to Clipboard!</small></div>
+  <div id="copyConfirm" class="hidden"><small><?php echo _("Copied to Clipboard!"); ?></small></div>
 
   <?php if(!isset($_COOKIE["returningVisitor"])) : ?>
 

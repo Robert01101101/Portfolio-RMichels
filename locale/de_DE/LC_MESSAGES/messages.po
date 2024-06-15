@@ -1,17 +1,12 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# ROBERT MICHELS WEBPORTFOLIO TRANSLATION
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-13 18:19-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: Robert Michels\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -63,3 +58,47 @@ msgstr "Entwicklung"
 #: about.php:74
 msgid "Other"
 msgstr "Sonstige"
+
+#: src/partials/header.php:104
+msgid "Featured Work"
+msgstr "Projektübersicht"
+
+#: src/partials/header.php:107
+msgid "About"
+msgstr "Über Mich"
+
+#: src/partials/header.php:110
+msgid "All Projects"
+msgstr "Alle Projekte"
+
+#: src/partials/footer.php:27
+msgid "This portfolio website was "
+msgstr "Diese Portfolio Website wurde mit dem LAMP stack "
+
+#: src/partials/footer.php:27
+msgid "developed"
+msgstr "entwickelt"
+
+#: src/partials/footer.php:27
+msgid "with the LAMP stack."
+msgstr "."
+
+#: src/partials/footer.php:28
+msgid "Copyright"
+msgstr "Urheberrecht"
+
+#: src/partials/footer.php:28
+msgid "Robert Michels. All Rights Reserved."
+msgstr "Robert Michels. Alle Rechte vorbehalten."
+
+#: src/partials/footer.php:30
+msgid "Resume"
+msgstr "Lebenslauf"
+
+#: src/partials/footer.php:31
+msgid "Privacy Policy"
+msgstr "Datenschutzerklärung"
+
+#: src/partials/footer.php:37
+msgid "Copied to Clipboard!"
+msgstr "In die Zwischenablage kopiert!"

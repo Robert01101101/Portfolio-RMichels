@@ -13,14 +13,14 @@ Partial::build('header', ["about" => TRUE]);
     <img src="<?php echo $GLOBALS['d'];?>assets/img/portrait.jpg">
   </div>
   <div>
-    <h1 id="About"><?php echo gettext("About Me"); ?></h1>
-    <p>👋 <?php echo gettext("Hi there, I'm Robert!"); ?></p>
-    <p><?php echo gettext("I'm a designer, and developer from Vancouver. My inexhaustible curiosity and love for digital media led me to attend Simon Fraser University (SFU), where I earned my Bachelor's Degree of Science with a major in Interactive Arts & Technology."); ?></p> 
-    </p><?php echo gettext("I've prototyped, designed, and developed various interactive applications throughout my career, covering everything from XR to web development. These experiences have shaped me into a designer who emphasizes a user-goal-driven approach, a developer who values scalability and accessibility, and an expert in rapid prototyping."); ?></p>
-    <p><?php echo gettext("Contact me if you would like to make cool stuff together! I'm currently looking for work."); ?></p>
+    <h1 id="About"><?php echo _("About Me"); ?></h1>
+    <p>👋 <?php echo _("Hi there, I'm Robert!"); ?></p>
+    <p><?php echo _("I'm a designer, and developer from Vancouver. My inexhaustible curiosity and love for digital media led me to attend Simon Fraser University (SFU), where I earned my Bachelor's Degree of Science with a major in Interactive Arts & Technology."); ?></p> 
+    </p><?php echo _("I've prototyped, designed, and developed various interactive applications throughout my career, covering everything from XR to web development. These experiences have shaped me into a designer who emphasizes a user-goal-driven approach, a developer who values scalability and accessibility, and an expert in rapid prototyping."); ?></p>
+    <p><?php echo _("Contact me if you would like to make cool stuff together! I'm currently looking for work."); ?></p>
   
     <div class="contact">
-      <?php echo gettext("Say Hi:"); ?>
+      <?php echo _("Say Hi:"); ?>
       <ul class="icons">
         <a href="mailto: hi@rmichels.com" target="_blank" title="E-Mail" id="emailLink"><li><i class="fa-solid fa-envelope fa-2x" id="email"></i></li></a>
         <a href="https://linkedin.com/in/robert-michels" target="_blank" title="LinkedIn"><li><i class="fab fa-linkedin-in fa-2x"></i></li></a>
@@ -30,7 +30,7 @@ Partial::build('header', ["about" => TRUE]);
   
   </div>
   <div>
-    <h2><?php echo gettext("Skills"); ?></h2>
+    <h2><?php echo _("Skills"); ?></h2>
     <div class="skills">
       <div>
         <h3>Design</h3>
@@ -43,7 +43,7 @@ Partial::build('header', ["about" => TRUE]);
         </ul>
       </div>
       <div>
-        <h3><?php echo gettext("Development"); ?></h3>
+        <h3><?php echo _("Development"); ?></h3>
         <ul>
           <li>C#</li>
           <li>HTML5</li>
@@ -71,7 +71,7 @@ Partial::build('header', ["about" => TRUE]);
         </ul>
       </div>
       <div>
-        <h3><?php echo gettext("Other"); ?></h3>
+        <h3><?php echo _("Other"); ?></h3>
         <ul>
           <li>Wordpress</li>
           <li>Project Management</li>
