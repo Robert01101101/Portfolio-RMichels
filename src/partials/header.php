@@ -5,6 +5,21 @@ setcookie("returningVisitor", "true");
 
 //TODO: make description & title variable
 
+//Set Language
+//THIS WORKS WITH HOSTINGER BUT NOT MY SETUP -> WRONG LOCALE NAME?
+session_start();
+$accepted_languages = ['en', 'de'];
+$browser_lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+$lang = in_array($browser_lang, $accepted_languages) ? $browser_lang : 'en';
+// Adjust locale setting
+$locale = ($lang == 'en') ? 'en_US' : 'de_DE';
+$lang = isset($_SESSION['language']) ? $_SESSION['language'] : $locale;
+putenv("LC_ALL=$lang");
+setlocale(LC_ALL, $lang);
+bindtextdomain("messages", "./locale");
+bind_textdomain_codeset("messages", "UTF-8");
+textdomain("messages");
+
 ?>
 
 <!DOCTYPE html>
@@ -45,7 +60,7 @@ setcookie("returningVisitor", "true");
 
 
   <link rel="stylesheet" href="<?php echo $GLOBALS['d'];?>css/normalize.css">
-  <link rel="stylesheet" href="<?php echo $GLOBALS['d'];?>css/main.css?v=1.0.9">
+  <link rel="stylesheet" href="<?php echo $GLOBALS['d'];?>css/main.css?v=1.1.3">
 
   <!-- Load Font -->
   <!-- Load Icons -->
@@ -94,6 +109,13 @@ setcookie("returningVisitor", "true");
             <a href="<?php echo $GLOBALS['d'];?>projects" title="All Projects">
               <li <?php if(isset($projects)){ echo "class='curPage'"; } ?>>All Projects</li>
             </a>
+            <div class="overlayMenuSpacer"></div> <!-- TODO: Move out of Nav -->
+            <div class="overlayMenuLanguageSelector">  <!-- TODO: Move out of Nav -->
+              <form method="post" action="set_language.php" id="LanguageForm">
+                  <input type="hidden" name="language" value="<?php echo $lang == 'en_US' ? 'de_DE' : 'en_US'; ?>">
+                  <input type="submit" value="<?php echo $lang == 'en_US' ? 'Deutsch' : 'English'; ?>">
+              </form>
+            </div>
           </ul>
         </div>
       </nav>

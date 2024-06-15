@@ -1,0 +1,65 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-06-13 18:19-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: about.php:16
+msgid "About Me"
+msgstr "Über Mich"
+
+#: about.php:17
+msgid "Hi there, I'm Robert!"
+msgstr "Hallo, Ich bin Robert!"
+
+#: about.php:18
+msgid ""
+"I'm a designer, and developer from Vancouver. My inexhaustible curiosity and "
+"love for digital media led me to attend Simon Fraser University (SFU), where "
+"I earned my Bachelor's Degree of Science with a major in Interactive Arts & "
+"Technology."
+msgstr "Ich bin ein Designer und Entwickler aus Vancouver. Meine unerschöpfliche Neugier und Liebe zu digitalen Medien führten mich dazu, die Simon Fraser University (SFU) zu besuchen, wo ich meinen Bachelor of Science mit einem Schwerpunkt in Interaktiver Kunst und Technologie erworben habe."
+
+#: about.php:19
+msgid ""
+"I've prototyped, designed, and developed various interactive applications "
+"throughout my career, covering everything from XR to web development. These "
+"experiences have shaped me into a designer who emphasizes a user-goal-driven "
+"approach, a developer who values scalability and accessibility, and an "
+"expert in rapid prototyping."
+msgstr "Im Laufe meiner Karriere habe ich verschiedene interaktive Anwendungen prototypisiert, entworfen und entwickelt, die alles von XR bis zur Webentwicklung abdecken. Diese Erfahrungen haben mich zu einem Designer geformt, der eine benutzerzielorientierte Herangehensweise betont, zu einem Entwickler, der Skalierbarkeit und Zugänglichkeit schätzt, und zu einem Experten im Bereich des schnellen Prototypings."
+
+#: about.php:20
+msgid ""
+"Contact me if you would like to make cool stuff together! I'm currently "
+"looking for work."
+msgstr "Kontaktieren Sie mich, wenn Sie gemeinsam an coolen Projekten arbeiten möchten! Derzeit bin ich auf der Suche nach Arbeit."
+
+#: about.php:23
+msgid "Say Hi:"
+msgstr "Sag Hi:"
+
+#: about.php:33
+msgid "Skills"
+msgstr "Fähigkeiten"
+
+#: about.php:46
+msgid "Development"
+msgstr "Entwicklung"
+
+#: about.php:74
+msgid "Other"
+msgstr "Sonstige"

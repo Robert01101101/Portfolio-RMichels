@@ -4,9 +4,6 @@ require "config.php";
 require "src/Partial.php";
 require "src/objects/Project.php";
 
-// start session so that we can store logged in cookie
-// session_start();
-
 Partial::build('header');
 
 ?>

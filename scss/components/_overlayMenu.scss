@@ -98,4 +98,35 @@
       }
     }
   }
+
+  .overlayMenuLanguageSelector {
+    height: 1.7em;
+    display: block;
+
+    form {
+      height: 1.7em;
+  
+      input {
+        background-color: transparent;
+        height: 1.7em;
+        border: transparent;
+        padding: 0 .5rem;
+        cursor: pointer;
+        width: 100%;
+
+        &:hover, &:focus {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  
+
+  .overlayMenuSpacer{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+  }
 }
