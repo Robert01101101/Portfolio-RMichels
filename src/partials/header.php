@@ -61,7 +61,7 @@ $GLOBALS['english'] = $lang != 'de_DE';
 
 
   <link rel="stylesheet" href="<?php echo $GLOBALS['d'];?>css/normalize.css">
-  <link rel="stylesheet" href="<?php echo $GLOBALS['d'];?>css/main.css?v=1.1.3">
+  <link rel="stylesheet" href="<?php echo $GLOBALS['d'];?>css/main.css?v=1.1.4">
 
   <!-- Load Font -->
   <!-- Load Icons -->

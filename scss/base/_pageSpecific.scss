@@ -30,15 +30,62 @@ section#Projects{
 		flex-wrap: wrap;
 
 		li {
-			margin-left: .6rem;
+			margin-left: 0rem;
 			position: relative;
 
+			@include sm {
+				margin-left: 1.5rem;
+			}
+
+			@include lg {
+				margin-left: 0rem;
+			}
+
+			@include xxxl {
+				margin-left: 1.5rem;
+			}
+
 			&:before{
-				content: "-";
 				position: absolute;
 				left: -.6rem;
 				color: white;
+
+				@include sm {
+					content: "-";
+					left: -1.5rem;
+				}
+
+				@include lg {
+					content: "";
+				}
+
+				@include xxxl {
+					content: "-";
+				}
 			}
+
+			&:not(:last-child):after{
+				content: ",";
+				position: absolute;
+				right: -.25rem;
+				color: white;
+
+				@include sm {
+					content: "";
+				}
+
+				@include lg {
+					content: ",";
+				}
+
+				@include xxxl {
+					content: "";
+				}
+			}
+
+			
+
+			
 		}
 
 		@include sm {
@@ -58,17 +105,6 @@ section#Projects{
 	@include sm {
 		flex-direction: row;
 		justify-content: space-between;
-
-		ul {
-
-			li {
-				margin-left: 1.5rem;
-
-				&:before{
-					left: -1.5rem;
-				}
-			}
-		}
 	}
 
 	@include md {
