@@ -17,14 +17,14 @@ $projects = Project::getProjects();
     <div class="projectsFilter">
 
         <div>
-          <h1>Filter Projects (<span id="projectCount"><?= count($projects) ?></span>)</h1>
-            <div class="onoffswitch">
+          <h1><?php echo _("Filter Projects"); ?> (<span id="projectCount"><?= count($projects) ?></span>)</h1>
+            <!--<div class="onoffswitch"> Disabled On Off Switch for now, didn't look good and overcomplicated, OR seems good as default
                 <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="and_or_switch" tabindex="0">
                 <label class="onoffswitch-label" for="and_or_switch">
                     <span class="onoffswitch-inner"></span>
                     <span class="onoffswitch-switch"></span>
                 </label>
-            </div>
+            </div>-->
         </div>
         
         <?php
@@ -32,7 +32,7 @@ $projects = Project::getProjects();
 
             foreach ($roles as $role) {
                 echo "<button class='filterBtn' data-js='".$role->getSlug()."'>";
-                echo $role->getName();
+                echo $GLOBALS['english'] ? $role->getName() : $role->getNameDe();
                 echo "</button>";
             }
         ?>
