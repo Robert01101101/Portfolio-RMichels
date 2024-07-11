@@ -53,6 +53,7 @@ Partial::build('header', ["about" => TRUE]);
           <li>JavaScript</li>
           <li>Java</li>
           <li>Dart</li>
+          <li>Python</li>
           <li>Unity</li>
           <li>.NET</li>
           <li>Blazor</li>
