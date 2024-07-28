@@ -123,7 +123,7 @@ function sortProjects() {
 //
 // Handle Checkbox
 //
-var checkbox = document.getElementById('and_or_switch');
+/*var checkbox = document.getElementById('and_or_switch');
 
 checkbox.addEventListener('change', function() {
   andActive = this.checked;
@@ -134,4 +134,4 @@ checkbox.addEventListener('change', function() {
   document.dispatchEvent(new CustomEvent('updateProject', { bubbles: true, detail: { slug: () => slug, toggle: () => toggle } }))
 
   setTimeout(() => { sortProjects(); }, 10);
-});
+});*/

@@ -82,7 +82,7 @@
   <script src="<?php echo $GLOBALS['d'];?>js/tools.js?v=1.0.0"></script>
 
   <?php if(isset($projects)) : ?>
-    <script src="<?php echo $GLOBALS['d'];?>js/projectFilter.js?v=1.0.0"></script>
+    <script src="<?php echo $GLOBALS['d'];?>js/projectFilter.js?v=1.0.1"></script>
   <?php else: ?>
     <script src="<?php echo $GLOBALS['d'];?>js/downArrow.js?v=1.0.0"></script>
   <?php endif; ?>

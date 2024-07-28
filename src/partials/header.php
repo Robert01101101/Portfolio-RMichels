@@ -45,11 +45,12 @@ $GLOBALS['english'] = $lang != 'de_DE';
     }
 
     const portfolioLinkValue = getUrlParameter('portfolio_link');
-    console.log('Sending event with portfolio_link: ' + portfolioLinkValue); 
-    gtag('event', 'portfolio_link', {
-      'portfolio_link': portfolioLinkValue,
-    });
-
+    if (portfolioLinkValue){
+      console.log('Sending event with portfolio_link: ' + portfolioLinkValue); 
+      gtag('event', 'portfolio_link', {
+        'portfolio_link': portfolioLinkValue,
+      });
+    }
   </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
