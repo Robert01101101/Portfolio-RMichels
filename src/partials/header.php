@@ -34,8 +34,22 @@ $GLOBALS['english'] = $lang != 'de_DE';
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-WXGTTGWVKL');
+
+    // Function to get URL parameters
+    function getUrlParameter(name) {
+        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+        const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+        const results = regex.exec(location.search);
+        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    }
+
+    const portfolioLinkValue = getUrlParameter('portfolio_link');
+    console.log('Sending event with portfolio_link: ' + portfolioLinkValue); 
+    gtag('event', 'portfolio_link', {
+      'portfolio_link': portfolioLinkValue,
+    });
+
   </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
