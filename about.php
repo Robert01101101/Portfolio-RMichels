@@ -33,56 +33,81 @@ Partial::build('header', ["about" => TRUE]);
     <h2><?php echo _("Skills"); ?></h2>
     <div class="skills">
       <div>
-        <h3>Design</h3>
-        <ul>
-          <li>UX / UI</li>
-          <li>XR Design</li>
-          <li>Game Design</li>
-          <li>Figma</li>
-          <li>Adobe CC</li>
-        </ul>
-      </div>
-      <div>
-        <h3><?php echo _("Development"); ?></h3>
+        <h3><?php echo _("Programming"); ?></h3>
         <ul>
           <li>C#</li>
+          <li>PHP</li>
+          <li>Dart</li>
           <li>HTML5</li>
           <li>CSS3</li>
           <li>Sass</li>
-          <li>PHP</li>
           <li>JavaScript</li>
           <li>Java</li>
-          <li>Dart</li>
           <li>Python</li>
-          <li>Unity</li>
+        </ul>
+      </div>
+      <div>
+        <h3><?php echo _("Frameworks"); ?></h3>
+        <ul>
           <li>.NET</li>
+          <li>ASP.NET</li>
           <li>Blazor</li>
+          <li>UWP</li>
+          <li>Flutter</li>
+          <li>Android</li>
           <li>Unity XRI</li>
           <li>MRTK3</li>
           <li>Three.js</li>
           <li>D3.js</li>
           <li>Tailwind</li>
-          <li>Flutter</li>
+          <li>OAuth</li>
+        </ul>
+      </div>
+      <div>
+        <h3><?php echo _("Development"); ?></h3>
+        <ul>
+          <li>Unity</li>
           <li>Git</li>
+          <li>Jira</li>
           <li>Azure</li>
           <li>Firebase</li>
+          <li>Google Cloud</li>
           <li>MySQL</li>
           <li>SQLite</li>
           <li>CI/CD</li>
+          <li>Fastlane</li>
+          <li>GitHub Actions</li>
+          <li>XCode Cloud</li>
+          <li>Docker</li>
+          <li>VirtualBox</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Design</h3>
+        <ul>
+          <li>UX/UI</li>
+          <li>Figma</li>
+          <li>Adobe CC</li>
+          <li>IxD</li>
+          <li>Wireframing</li>
+          <li>Prototyping</li>
+          <li>XR</li>
         </ul>
       </div>
       <div>
         <h3><?php echo _("Other"); ?></h3>
         <ul>
+          <li>OOP</li>
+          <li>MVC</li>
           <li>Wordpress</li>
-          <li>Project Management</li>
+          <li>GIS</li>
+          <li>CAD</li>
           <li>3D Modelling</li>
-          <li>CAD Modelling</li>
           <li>Ardunio</li>
           <li>3D Printing</li>
           <li>Photogrammetry</li>
-          <li>Geomapping</li>
-          <li>Jira</li>
+          <li>Scrum</li>
+          <li>Agile</li>
         </ul>
       </div>
     </div>

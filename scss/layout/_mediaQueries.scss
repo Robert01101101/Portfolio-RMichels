@@ -13,8 +13,11 @@ $screen-xl-min: 1200px;
 // Ultrawide
 $screen-xxl-min: 1600px;
 
-// Ultrawide
+// Hyperwide
 $screen-xxxl-min: 2000px;
+
+// approaching 1440p
+$screen-xxxxl-min: 2304px;
 
 
 // Small devices
@@ -45,16 +48,23 @@ $screen-xxxl-min: 2000px;
    }
 }
 
-// Extra large devices
+// Ultrawide
 @mixin xxl {
     @media (min-width: #{$screen-xxl-min}) and (orientation: landscape) {
         @content;
     }
  }
 
-// Extremely large devices
+// Hyperwide
 @mixin xxxl {
     @media (min-width: #{$screen-xxxl-min}) and (orientation: landscape) {
+        @content;
+    }
+ }
+
+// approaching 1440p
+@mixin xxxxl {
+    @media (min-width: #{$screen-xxxxl-min}) and (orientation: landscape) {
         @content;
     }
  }

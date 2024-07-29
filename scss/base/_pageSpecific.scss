@@ -33,7 +33,7 @@ section#Projects{
 			margin-left: 0rem;
 			position: relative;
 
-			@include sm {
+			@include md {
 				margin-left: 1.5rem;
 			}
 
@@ -41,7 +41,7 @@ section#Projects{
 				margin-left: 0rem;
 			}
 
-			@include xxxl {
+			@include xxxxl {
 				margin-left: 1.5rem;
 			}
 
@@ -50,7 +50,7 @@ section#Projects{
 				left: -.6rem;
 				color: white;
 
-				@include sm {
+				@include md {
 					content: "-";
 					left: -1.5rem;
 				}
@@ -59,7 +59,7 @@ section#Projects{
 					content: "";
 				}
 
-				@include xxxl {
+				@include xxxxl {
 					content: "-";
 				}
 			}
@@ -70,7 +70,7 @@ section#Projects{
 				right: -.25rem;
 				color: white;
 
-				@include sm {
+				@include md {
 					content: "";
 				}
 
@@ -78,7 +78,7 @@ section#Projects{
 					content: ",";
 				}
 
-				@include xxxl {
+				@include xxxxl {
 					content: "";
 				}
 			}
@@ -88,7 +88,7 @@ section#Projects{
 			
 		}
 
-		@include sm {
+		@include md {
 			display: block;
 		}
 
@@ -96,13 +96,13 @@ section#Projects{
 			display: flex;
 		}
 
-		@include xxxl {
+		@include xxxxl {
 			display: block;
 		}
 	}
 
 	//__breakpoints
-	@include sm {
+	@include md {
 		flex-direction: row;
 		justify-content: space-between;
 	}
@@ -115,27 +115,16 @@ section#Projects{
 		flex-direction: column;
 	}
 
-	@include xxxl {
+	@include xxxxl {
 		flex-direction: row;
+		> * {
+			flex: 1 0 0;
+		}
 	}
 }
 
 .sectionText {
 	&.about {
-
-		///Decide which approach to keep:
-		//1) Center align with custom margins
-		/*
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		width: calc(100vw - calc(#{_grid(content-margin-md)} * 2));
-		box-sizing: border-box;
-
-		padding: 0 2rem 2rem 2rem;*/
-
-		//2) Within grid, with default margins, top-align with vertical centering
 		@include md {
 			position: relative;
 			top: 50%;
@@ -159,24 +148,36 @@ section#Projects{
 
 			> div {
 				&:nth-child(2){
-					max-width: 40rem;
+					max-width: 38rem;
 					min-width: 22rem;
-					flex-basis: 40%;
+					flex-basis: 33%;
+					@include xxxxl {
+						flex-basis: 33%;
+					}
 				}
 				&:nth-child(3){
-					flex-basis: 40%;
+					flex-basis: 55%;
+					@include xxxxl {
+						flex-basis: 55%;
+					}
+				}
+			}
+
+			@media (min-width: 1800px) and (orientation: landscape) {
+				> div {
+					&:nth-child(2){
+						flex-basis: 38%;
+					}
+					&:nth-child(3){
+						flex-basis: 50%;
+					}
 				}
 			}
 		}
 		
 		@include xxl {
 
-			gap: 6rem;
-		}
-
-		@include xxxl {
-
-			gap: 10rem;
+			gap: 5rem;
 		}
 
 		img {
@@ -186,15 +187,17 @@ section#Projects{
 		}
 
 		> div {
+			//pic
 			&:first-of-type {
 				position: relative;
 				width: 30%;
 				margin: auto;
+				flex-shrink: 0.3;
 
 				@include xl {
 					margin: 0;
 					width: 100%;
-					flex-basis: 15%;
+					flex-basis: 12%;
 					margin-top: calc(9rem - 5%);
 				}
 				
