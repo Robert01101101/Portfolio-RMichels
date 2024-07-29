@@ -14,6 +14,7 @@
     <li><a href="communityGuidelines.html">Community Guidelines</a></li>
     <li><a href="termsOfService.html">Terms of Service</a></li>
     <li><a href="privacyPolicy.html">Privacy Policy</a></li>
+    <li><a href="accountDeletion.html">Account Deletion Instructions</a></li>
 </ul>
 </body>
 </html>
