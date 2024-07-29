@@ -39,6 +39,33 @@ Partial::build('projectPageMeta', ["project" => $project]);
     <p>As of July 2024 the app has functionality for users to create a tour with waypoints, an explore page to browse these user-created tours, an AI chat page utilizing Google's Gemini AI roleplaying as a helpful tourguide, and a profile page. I'm using Firebase services such as Authentication, Firestore, Storage, Crashlytics and Remote Config, as well as Google APIs like Places, Maps and Vertex AI to power my app.</p>
   </section>
 
+  <!----- Content / Media ----->
+  <section class="sectionMedia">
+    <figure ignorecarousel>
+      <div class="mediaRow mediaRow-equalWidth mediaRow-equalHeight">
+        <figure onclick="viewImage(this)">
+          <img src="<?php echo $GLOBALS['d'];?>assets/img/tourguide/Screenshot_1.png"> 
+        </figure>
+        <figure onclick="viewImage(this)">
+          <img src="<?php echo $GLOBALS['d'];?>assets/img/tourguide/Screenshot_2.png">
+        </figure>
+        <figure onclick="viewImage(this)">
+          <img src="<?php echo $GLOBALS['d'];?>assets/img/tourguide/Screenshot_3.png"> 
+        </figure>
+        <figure onclick="viewImage(this)">
+          <img src="<?php echo $GLOBALS['d'];?>assets/img/tourguide/Screenshot_4.png">
+        </figure>
+        <figure onclick="viewImage(this)">
+          <img src="<?php echo $GLOBALS['d'];?>assets/img/tourguide/Screenshot_5.png"> 
+        </figure>
+        <figure onclick="viewImage(this)">
+          <img src="<?php echo $GLOBALS['d'];?>assets/img/tourguide/Screenshot_6.png">
+        </figure>
+      </div>
+      <figcaption><?php echo _("Screenshots from 2024/07/28"); ?></figcaption>
+    </figure>
+  </section>
+
   <!----- Content / Text ----->
   <section class="sectionText">
     <h2>What I learned</h2>
