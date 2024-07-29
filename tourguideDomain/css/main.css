@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&family=Vollkorn:wght@400&display=swap');
+
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: black;
+  margin: 0;
+  padding: 3rem;
+  background-color: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Vollkorn', serif;
+  font-weight: 400;
+  color: #3b4948;
+}
+
+a {
+  color: #006a65;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
