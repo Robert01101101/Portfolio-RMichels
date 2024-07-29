@@ -24,7 +24,7 @@ $GLOBALS['english'] = $lang != 'de_DE';
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-scroll">
 
 <!-- #################################### HEAD ###################################### --> 
 <head>
@@ -52,6 +52,25 @@ $GLOBALS['english'] = $lang != 'de_DE';
       });
     }
   </script>
+  <script src="js/locomotive-scroll.min.js"></script>
+  <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        window.scroll = new LocomotiveScroll({
+          el: document.querySelector('[data-scroll-container]'),
+          smooth: true
+        });
+
+        // Disable scrolling initially
+        scroll.stop();
+
+        // Enable scrolling after 3 seconds
+        setTimeout(() => {
+          scroll.start();
+          document.documentElement.classList.remove('no-scroll');
+          console.log("done waiting, scrolling enabled")
+        }, 400);
+      });
+  </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -76,7 +95,9 @@ $GLOBALS['english'] = $lang != 'de_DE';
 
 
   <link rel="stylesheet" href="<?php echo $GLOBALS['d'];?>css/normalize.css">
-  <link rel="stylesheet" href="<?php echo $GLOBALS['d'];?>css/main.css?v=1.1.4">
+  <link rel="stylesheet" href="<?php echo $GLOBALS['d'];?>css/main.css?v=1.1.7">
+  <link rel="stylesheet" href="<?php echo $GLOBALS['d'];?>css/locomotive-scroll.css">
+  
 
   <!-- Load Font -->
   <!-- Load Icons -->
@@ -95,48 +116,49 @@ $GLOBALS['english'] = $lang != 'de_DE';
 </head>
 
 <body>
-  <div id="MainGrid">
-    <!-- ##################################### HEADER ###################################### -->
-    <header>
-      <nav>
-        <ul>
-          <?php if(isset($project) || isset($about)) : ?>
-            <li class="homeIcon"><a title="Home" href="/<?php if(isset($_COOKIE['visitorFilter'])){ echo "?filter=".$_COOKIE['visitorFilter']; } ?>"><i class="fa-solid fa-house"></i></a></li>
+  <div data-scroll-container>
+    <div id="MainGrid">
+      <!-- ##################################### HEADER ###################################### -->
+      <header>
+        <nav data-scroll data-scroll-sticky data-scroll-target="#MainGrid">
+          <ul>
+            <?php if(isset($project) || isset($about)) : ?>
+              <li class="homeIcon"><a title="Home" href="/<?php if(isset($_COOKIE['visitorFilter'])){ echo "?filter=".$_COOKIE['visitorFilter']; } ?>"><i class="fa-solid fa-house"></i></a></li>
 
-          <?php else : ?>
-            <li class="homeIcon"><a title="About" href="<?php echo $GLOBALS['d'];?>about" title="About"><i class="fa-solid fa-circle-info"></i></a></li>
+            <?php else : ?>
+              <li class="homeIcon"><a title="About" href="<?php echo $GLOBALS['d'];?>about" title="About"><i class="fa-solid fa-circle-info"></i></a></li>
 
-          <?php endif; ?>
+            <?php endif; ?>
 
-          <li><div class="menuCont" onclick="toggleMenu()" id="MenuToggle" title="Menu">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-          </div></li>
-        </ul>
-        <div id="OverlayMenu" class="hidden"><!-- TODO: find no js solution -->
-          <ul id="MenuContent">
-            <a title="Featured Work" href="/<?php if(isset($_COOKIE['visitorFilter'])){ echo "?filter=".$_COOKIE['visitorFilter']; } ?>">
-              <li <?php if(!isset($about) && !isset($projects) && !isset($project)){ echo "class='curPage'"; } ?>><?php echo _("Featured Work"); ?></li>
-            </a>
-            <a href="<?php echo $GLOBALS['d'];?>about" title="About">
-              <li <?php if(isset($about)){ echo "class='curPage'"; } ?>><?php echo _("About"); ?></li>
-            </a>
-            <a href="<?php echo $GLOBALS['d'];?>projects" title="All Projects">
-              <li <?php if(isset($projects)){ echo "class='curPage'"; } ?>><?php echo _("All Projects"); ?></li>
-            </a>
-            <div class="overlayMenuSpacer"></div> <!-- TODO: Move out of Nav -->
-            <div class="overlayMenuLanguageSelector">  <!-- TODO: Move out of Nav -->
-              <form method="post" action="set_language.php" id="LanguageForm">
-                  <input type="hidden" name="language" value="<?php echo $lang == 'en_US' ? 'de_DE' : 'en_US'; ?>">
-                  <input type="submit" value="<?php echo $lang == 'en_US' ? 'Deutsch' : 'English'; ?>">
-              </form>
-            </div>
+            <li><div class="menuCont" onclick="toggleMenu()" id="MenuToggle" title="Menu">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+            </div></li>
           </ul>
-        </div>
-      </nav>
-    </header>
-    
-    <!-- #################################### CONTENT ###################################### -->
-    <main id="Content">
-    <script src="<?php echo $GLOBALS['d'];?>js/menu.js?v=1.0.0"></script>
+          <div id="OverlayMenu" class="hidden"><!-- TODO: find no js solution -->
+            <ul id="MenuContent">
+              <a title="Featured Work" href="/<?php if(isset($_COOKIE['visitorFilter'])){ echo "?filter=".$_COOKIE['visitorFilter']; } ?>">
+                <li <?php if(!isset($about) && !isset($projects) && !isset($project)){ echo "class='curPage'"; } ?>><?php echo _("Featured Work"); ?></li>
+              </a>
+              <a href="<?php echo $GLOBALS['d'];?>about" title="About">
+                <li <?php if(isset($about)){ echo "class='curPage'"; } ?>><?php echo _("About"); ?></li>
+              </a>
+              <a href="<?php echo $GLOBALS['d'];?>projects" title="All Projects">
+                <li <?php if(isset($projects)){ echo "class='curPage'"; } ?>><?php echo _("All Projects"); ?></li>
+              </a>
+              <div class="overlayMenuSpacer"></div> <!-- TODO: Move out of Nav -->
+              <div class="overlayMenuLanguageSelector">  <!-- TODO: Move out of Nav -->
+                <form method="post" action="set_language.php" id="LanguageForm">
+                    <input type="hidden" name="language" value="<?php echo $lang == 'en_US' ? 'de_DE' : 'en_US'; ?>">
+                    <input type="submit" value="<?php echo $lang == 'en_US' ? 'Deutsch' : 'English'; ?>">
+                </form>
+              </div>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      
+      <!-- #################################### CONTENT ###################################### -->
+      <main id="Content">
+      <script src="<?php echo $GLOBALS['d'];?>js/menu.js?v=1.0.0"></script>

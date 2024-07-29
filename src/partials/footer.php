@@ -2,37 +2,39 @@
 
 ?>
 
-</main>
+        </main>
 
-    <!-- #################################### FOOTER ###################################### -->
+      <!-- #################################### FOOTER ###################################### -->
 
-    <footer id="Contact">
-          <div>
-            <ul class="icons">
-              <div class="emailContainer"> <!-- onmouseover="overEmailOverlay()" onmouseout="outEmailOverlay()"> -->
-                <a href="mailto: hi@rmichels.com" target="_blank" title="E-Mail | Right-click to copy to clipboard" id="emailLink"><li><i class="fa-solid fa-envelope fa-2x" id="email"></i></li></a>
-                <!--<div id="emailOverlay" class="hide" onmouseover="overEmailContainer()" onmouseout="outEmailContainer()">
-                <i class="far fa-copy js-emailcopybtn" title="Copy E-Mail to Clipboard"></i>   
-                </div>-->
-              </div>
-              <small class="js-emaillink">hi@rmichels.com</small> 
-              <a href="https://linkedin.com/in/robert-michels" target="_blank" title="LinkedIn"><li><i class="fab fa-linkedin-in fa-2x"></i></li></a>
-              <a href="https://github.com/Robert01101101" target="_blank" title="GitHub"><li><i class="fab fa-github fa-2x"></i></li></a>
-              <a href="https://play.google.com/store/apps/developer?id=Studio+RM" target="_blank" title="Google Play"><li><i class="fab fa-google-play fa-2x"></i></li></a>
-              <a href="https://rmichels.itch.io/" target="_blank" ><li><i class="fab fa-itch-io fa-2x"title="Itch.io"></i></li></a>
-            </ul>
-          </div>
-          <noscript><small>hi@rmichels.com</small></noscript>
-          <div class="footerEnd">
-            <small><?php echo _("This portfolio website was "); ?><a href="portfolio"><?php echo _("developed"); ?></a> <?php echo _("with the LAMP stack."); ?></small>
-            <small><?php echo _("Copyright"); ?> &copy; <?php echo date("Y"); ?> <?php echo _("Robert Michels. All Rights Reserved."); ?></small>
+      <footer id="Contact">
             <div>
-              <a href="<?php echo $GLOBALS['d'];?>assets/other/RobertMichels<?php if($GLOBALS['english'] == false) { echo "Lebenslauf"; } else { echo "Resume"; }?>.pdf"><small><?php echo _("Resume"); ?></small></a>
-              <a href="<?php echo $GLOBALS['d'];?>privacyPolicy"><small><?php echo _("Privacy Policy"); ?></small></a>
+              <ul class="icons">
+                <div class="emailContainer"> <!-- onmouseover="overEmailOverlay()" onmouseout="outEmailOverlay()"> -->
+                  <a href="mailto: hi@rmichels.com" target="_blank" title="E-Mail | Right-click to copy to clipboard" id="emailLink"><li><i class="fa-solid fa-envelope fa-2x" id="email"></i></li></a>
+                  <!--<div id="emailOverlay" class="hide" onmouseover="overEmailContainer()" onmouseout="outEmailContainer()">
+                  <i class="far fa-copy js-emailcopybtn" title="Copy E-Mail to Clipboard"></i>   
+                  </div>-->
+                </div>
+                <small class="js-emaillink">hi@rmichels.com</small> 
+                <a href="https://linkedin.com/in/robert-michels" target="_blank" title="LinkedIn"><li><i class="fab fa-linkedin-in fa-2x"></i></li></a>
+                <a href="https://github.com/Robert01101101" target="_blank" title="GitHub"><li><i class="fab fa-github fa-2x"></i></li></a>
+                <a href="https://play.google.com/store/apps/developer?id=Studio+RM" target="_blank" title="Google Play"><li><i class="fab fa-google-play fa-2x"></i></li></a>
+                <a href="https://rmichels.itch.io/" target="_blank" ><li><i class="fab fa-itch-io fa-2x"title="Itch.io"></i></li></a>
+              </ul>
             </div>
-          </div>          
-    </footer>
-  </div>
+            <noscript><small>hi@rmichels.com</small></noscript>
+            <div class="footerEnd">
+              <small><?php echo _("This portfolio website was "); ?><a href="portfolio"><?php echo _("developed"); ?></a> <?php echo _("with the LAMP stack."); ?></small>
+              <small><?php echo _("Copyright"); ?> &copy; <?php echo date("Y"); ?> <?php echo _("Robert Michels. All Rights Reserved."); ?></small>
+              <div>
+                <a href="<?php echo $GLOBALS['d'];?>assets/other/RobertMichels<?php if($GLOBALS['english'] == false) { echo "Lebenslauf"; } else { echo "Resume"; }?>.pdf"><small><?php echo _("Resume"); ?></small></a>
+                <a href="<?php echo $GLOBALS['d'];?>privacyPolicy"><small><?php echo _("Privacy Policy"); ?></small></a>
+              </div>
+            </div>          
+      </footer>
+      <div class="footerBuffer"></div>
+    </div><!-- mainGrid -->
+  </div><!-- smoothScroll -->
 
   <div id="copyConfirm" class="hidden"><small><?php echo _("Copied to Clipboard!"); ?></small></div>
 
@@ -103,7 +105,7 @@
     <script src="<?php echo $GLOBALS['d'];?>js/imageViewer.js?v=1.0.1"></script>
   <?php endif; ?>
   
-  <script src="<?php echo $GLOBALS['d'];?>js/projectTile.js?v=1.0.0"></script>
+
   <script src="<?php echo $GLOBALS['d'];?>js/other.js?v=1.0.0"></script>
   
 

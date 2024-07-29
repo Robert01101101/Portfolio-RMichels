@@ -174,3 +174,23 @@ ul.icons {
 		}
 	}
 }
+
+//for smooth scroll fix
+.footerBuffer{
+	height: 10rem;
+	background-color: rgba(0,0,0,0.55);
+	position: absolute;
+	bottom: -10rem;
+	left: 2rem;
+	right: 2rem;
+
+	@include md {
+		left: 3.5rem;
+		right: 3.5rem;
+	}
+
+	@include xl {
+		left: calc(16.46vw + 1rem);
+		right: calc(16.46vw + 1rem);
+	}
+}

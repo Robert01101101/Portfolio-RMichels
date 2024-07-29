@@ -1,12 +1,13 @@
 #landingArea {
     height: 100vh;
+	position: relative;
 
     .row {
 		position: absolute;
-		top: 50%;
+		top: 44%;
 		left: 50%;
-		transform: translate(-50%, -50%);
-		width: 100%;
+		transform: translate(-50%, -44%);
+		width: 100vw;
     }
 
     .col-50 {
@@ -41,7 +42,30 @@
 	padding-right: .5rem;
 }
 
-//container to center horizontally
+//smooth scrolling fixes
+.downArrowWrapper {
+	position: relative;
+	top: 96vh;
+}
+
+.landingImageWrapper {
+	position: relative;
+	top: 50vh;
+    right: -3vh;
+
+	@include xl {
+		right: 0vh;
+		width: 80vw;
+	}
+}
+
+.projectDownArrowWrapper {
+	position: absolute;
+	top: 100vh;
+	left: 0;
+	width: 100vw;
+}
+
 .downArrow {
 	display: block;
 	width: 100%;

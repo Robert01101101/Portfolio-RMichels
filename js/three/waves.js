@@ -75,6 +75,7 @@ function waves () {
 		particles = new THREE.Points( geometry, material );
 		scene.add( particles );
 
+
 		//
 		//_____________________________________________________________________ INIT RENDERER
 		renderer = new THREE.WebGLRenderer( { antialias: true, alpha: true } );
@@ -84,8 +85,15 @@ function waves () {
 
 		//document.addEventListener( 'touchstart', onDocumentTouchStart, false );
 		//document.addEventListener( 'touchmove', onDocumentTouchMove, false );
-		window.addEventListener("scroll", updateCamera);
+		//window.addEventListener("scroll", updateCamera);
 		//
+		window.addEventListener('load', () => {
+			if (window.scroll) {
+			  window.scroll.on('scroll', (args) => {
+				updateCamera(args.scroll);
+			  });
+			}
+		  });
 
 		window.addEventListener( 'resize', onWindowResize, false );
 
@@ -93,14 +101,22 @@ function waves () {
 
 	//_________________________________________ on Scroll
 	function updateCamera(ev) {
-		
+		if (ev == null) return;
+		const scrollY = ev.y || window.scrollY;
+	    camera.position.y = (docHeight - scrollY + 100);//+ 100;
+	    //console.log("scroll: " + scrollY + ", docHeight: " + docHeight + ", window.innerWidth: " + window.innerWidth + ", window.innerHeight: " + window.innerHeight + ", camera.position " + camera.position.x + ", " + camera.position.y + ", " + camera.position.z);
 
-	    camera.position.y = (docHeight - window.scrollY) ;//+ 100;
+
+	    //camera.position.y = (docHeight - window.scrollY) ;//+ 100;
 	    //console.log("scroll: " + window.scrollY);
-
-	    var newCol = mapVal(window.scrollY, 0, docHeight, 0.13, .35);
+		
+	    var newCol = mapVal(scrollY, 0, docHeight, 0.13, .38);
 	    if (newCol < 0.13) newCol = 0.13;
 	    particles.material.uniforms.color = { type: "c", value: { r:newCol, g:newCol, b:newCol } };
+			
+
+
+
 	    /*
 	    particles.material.uniforms.opacity = { value: 0 };
 		particles.material.transparent = true;

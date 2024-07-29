@@ -14,7 +14,7 @@ if (isset($roles)){
       <img src="<?php echo $GLOBALS['d'];?>assets/img/lqip/<?= $slug; ?>.jpg" loading="lazy" alt="<?= $name; ?>" <?php if ($inDevelopment) echo "class='inDevelopment'" ?>>
       <?php if ($inDevelopment) echo "<div class='inDevelopmentText'>In Development</div>" ?>
       <div class="projJScontainer">
-        <h2 class="projLabel"> <?= $name; ?> </h2>
+        <h2 class="projLabel" data-scroll data-scroll-speed="1.8"> <?= $name; ?> </h2>
         <h3 class="projMeta"> <?= $type; ?> </h3>
       </div>
     </a>
