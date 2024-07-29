@@ -178,7 +178,7 @@ ul.icons {
 //for smooth scroll fix
 .footerBuffer{
 	height: 10rem;
-	background-color: rgba(0,0,0,0.55);
+	visibility: hidden;
 	position: absolute;
 	bottom: -10rem;
 	left: 2rem;
@@ -187,6 +187,7 @@ ul.icons {
 	@include md {
 		left: 3.5rem;
 		right: 3.5rem;
+		background-color: rgba(0,0,0,0.55);
 	}
 
 	@include xl {
