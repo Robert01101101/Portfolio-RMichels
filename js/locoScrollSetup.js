@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     if (downArrow != null) downArrow.classList.remove('hide');
     console.log("done waiting, scrolling enabled")
+    updateScrollSpeedForScreenSize();
   }, 1000);
 
   updateScrollSpeedForScreenSize();
