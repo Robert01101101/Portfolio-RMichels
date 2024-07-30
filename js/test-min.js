@@ -1,0 +1,1 @@
+list=document.querySelectorAll("h2");for(var i=0;i<list.length;i++)w=list[i].offsetWidth,list[i].parentNode.style.width=w+1+"px";console.log(list);

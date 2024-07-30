@@ -1,0 +1,1 @@
+var images=document.getElementsByTagName("img");function swapImages(){for(var e=0;e<images.length;e++)if(!images[e].hasAttribute("lqip-ignore")){var i=images[e].src;(i=i.replace("lqip/","")).includes("gif")&&(i=i.replace("gif","png")),images[e].hasAttribute("lqip-gif")&&(i=i.replace("jpg","gif")),images[e].src=i}}window.addEventListener("load",(function(){swapImages()}));

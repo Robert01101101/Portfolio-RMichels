@@ -1,0 +1,1 @@
+function mapVal(t,e,c,o,n){return(t-e)*(n-o)/(c-e)+o}function clamp(t,e,c){return t<=e?e:t>=c?c:t}function calcDocHeight(){var t=document.body,e=document.documentElement;return docHeight=Math.max(t.scrollHeight,t.offsetHeight,e.clientHeight,e.scrollHeight,e.offsetHeight)}var docHeight=calcDocHeight();const xlBreakPoint=1200,smBreakPoint=576;
