@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const downArrow =  document.getElementById("downArrow");
 
   // Get ready to unhide down arrow
-  if (downArrow != null) setTimeout(() => downArrow.classList.remove('forceHide'), 900);
+  if (downArrow != null) setTimeout(() => downArrow.classList.remove('forceHide'), 500);
 
   // Enable scrolling after delay
   setTimeout(() => {
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (downArrow != null) downArrow.classList.remove('hide');
     console.log("done waiting, scrolling enabled")
     updateScrollSpeedForScreenSize();
-  }, 1000);
+  }, 600);
 
   updateScrollSpeedForScreenSize();
 });

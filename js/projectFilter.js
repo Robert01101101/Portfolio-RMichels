@@ -35,7 +35,7 @@ document.querySelectorAll('.filterBtn').forEach(item => {
       document.dispatchEvent(new CustomEvent('updateProject', { bubbles: true, detail: { slug: () => slug, toggle: () => toggle } }))
 
       setTimeout(() => { sortProjects(); }, 10);
-
+      window.locoScroll.update();
     })
 })
 
