@@ -1,9 +1,18 @@
-window.addEventListener("scroll", updateArrow);
+//window.addEventListener("scroll", updateArrow);
 var downArrow = document.getElementById('downArrow');
+
+window.addEventListener('load', () => {
+    if (window.locoScroll) {
+      window.locoScroll.on('scroll', (args) => {
+        updateArrow(args.scroll);
+      });
+    }
+});
 
 //_________________________________________ on Scroll
 function updateArrow(ev) {
-	if (window.scrollY > 400) { 
+    const scrollY = ev.y || window.scrollY;
+	if (scrollY > 400) { 
         //console.log("hide");
         downArrow.classList.add("hide");
     } else {

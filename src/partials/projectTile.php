@@ -15,7 +15,7 @@ if (isset($roles)){
       <?php if ($inDevelopment) echo "<div class='inDevelopmentText'>In Development</div>" ?>
       <div class="projJScontainer">
         <h2 class="projLabel" data-scroll data-scroll-speed="1.8"> <?= $name; ?> </h2>
-        <h3 class="projMeta"> <?= $type; ?> </h3>
+        <h3 class="projMeta" data-scroll data-scroll-speed="1.8"> <?= $type; ?> </h3>
       </div>
     </a>
   </div>

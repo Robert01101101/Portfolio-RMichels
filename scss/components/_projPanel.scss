@@ -47,6 +47,8 @@
 
     h2.projLabel {
       font-size: 3em;
+      position: relative;//for loco scroll
+      bottom: 3rem;
 
       @include md {
       }
@@ -157,10 +159,16 @@
       margin-left: 3rem;
       font-weight: normal;
 
+      position: relative; //for loco scroll
+      bottom: 3rem;
+
       //-- MQ
       @include xl {
         float: none;
         position: absolute;
+
+        bottom: auto; //for loco scroll
+        
         left: -3rem;
         top: 0;
         margin: 0;

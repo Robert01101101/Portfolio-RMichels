@@ -53,24 +53,7 @@ $GLOBALS['english'] = $lang != 'de_DE';
     }
   </script>
   <script src="js/locomotive-scroll.min.js"></script>
-  <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        window.scroll = new LocomotiveScroll({
-          el: document.querySelector('[data-scroll-container]'),
-          smooth: true
-        });
-
-        // Disable scrolling initially
-        scroll.stop();
-
-        // Enable scrolling after 3 seconds
-        setTimeout(() => {
-          scroll.start();
-          document.documentElement.classList.remove('no-scroll');
-          console.log("done waiting, scrolling enabled")
-        }, 400);
-      });
-  </script>
+  <script src="<?php echo $GLOBALS['d'];?>js/locoScrollSetup.js?v=1.0.0"></script>  
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 

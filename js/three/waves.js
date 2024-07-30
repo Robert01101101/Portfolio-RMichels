@@ -88,12 +88,12 @@ function waves () {
 		//window.addEventListener("scroll", updateCamera);
 		//
 		window.addEventListener('load', () => {
-			if (window.scroll) {
-			  window.scroll.on('scroll', (args) => {
+			if (window.locoScroll) {
+			  window.locoScroll.on('scroll', (args) => {
 				updateCamera(args.scroll);
 			  });
 			}
-		  });
+		});
 
 		window.addEventListener( 'resize', onWindowResize, false );
 
