@@ -53,7 +53,7 @@ $GLOBALS['english'] = $lang != 'de_DE';
     }
   </script>
   <script src="js/locomotive-scroll.min.js"></script>
-  <script src="<?php echo $GLOBALS['d'];?>js/locoScrollSetup.js?v=1.0.2"></script>  
+  <script src="<?php echo $GLOBALS['d'];?>js/locoScrollSetup-min.js?v=1.0.2"></script>  
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -144,4 +144,4 @@ $GLOBALS['english'] = $lang != 'de_DE';
       
       <!-- #################################### CONTENT ###################################### -->
       <main id="Content">
-      <script src="<?php echo $GLOBALS['d'];?>js/menu.js?v=1.0.0"></script>
+      <script src="<?php echo $GLOBALS['d'];?>js/menu-min.js?v=1.0.0"></script>

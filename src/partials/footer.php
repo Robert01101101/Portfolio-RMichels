@@ -81,32 +81,32 @@
 
     </script>
     
-  <script src="<?php echo $GLOBALS['d'];?>js/tools.js?v=1.0.0"></script>
+  <script src="<?php echo $GLOBALS['d'];?>js/tools-min.js?v=1.0.0"></script>
 
   <?php if(isset($projects)) : ?>
-    <script src="<?php echo $GLOBALS['d'];?>js/projectFilter.js?v=1.0.1"></script>
+    <script src="<?php echo $GLOBALS['d'];?>js/projectFilter-min.js?v=1.0.1"></script>
   <?php else: ?>
-    <script src="<?php echo $GLOBALS['d'];?>js/downArrow.js?v=1.0.1"></script>
+    <script src="<?php echo $GLOBALS['d'];?>js/downArrow-min.js?v=1.0.1"></script>
   <?php endif; ?>
 
-  <script src="<?php echo $GLOBALS['d'];?>js/lqip.js?v=1.0.1"></script>  
+  <script src="<?php echo $GLOBALS['d'];?>js/lqip-min.js?v=1.0.1"></script>  
   <script src="<?php echo $GLOBALS['d'];?>js/three/build/three.min.js"></script>
   <script src="<?php echo $GLOBALS['d'];?>js/three/examples/js/loaders/GLTFLoader.js"></script>
-  <script src="<?php echo $GLOBALS['d'];?>js/three/waves.js?v=1.0.3"></script>
+  <script src="<?php echo $GLOBALS['d'];?>js/three/waves-min.js?v=1.0.3"></script>
   
 
   <?php if(isset($index)) : ?>
-    <script src="<?php echo $GLOBALS['d'];?>js/three/landingModel.js?v=1.0.0"></script>
-    <script src="<?php echo $GLOBALS['d'];?>js/textAnim.js?v=1.0.0"></script>
+    <script src="<?php echo $GLOBALS['d'];?>js/three/landingModel-min.js?v=1.0.0"></script>
+    <script src="<?php echo $GLOBALS['d'];?>js/textAnim-min.js?v=1.0.0"></script>
   <?php endif; ?>
   
 
   <?php if(!isset($index) && !isset($projects)) : ?>
-    <script src="<?php echo $GLOBALS['d'];?>js/imageViewer.js?v=1.0.1"></script>
+    <script src="<?php echo $GLOBALS['d'];?>js/imageViewer-min.js?v=1.0.1"></script>
   <?php endif; ?>
   
 
-  <script src="<?php echo $GLOBALS['d'];?>js/other.js?v=1.0.0"></script>
+  <script src="<?php echo $GLOBALS['d'];?>js/other-min.js?v=1.0.0"></script>
   
 
 
