@@ -12,7 +12,7 @@ window.addEventListener('load', () => {
 //_________________________________________ on Scroll
 function updateArrow(ev) {
     const scrollY = ev.y || window.scrollY;
-	if (scrollY > 400) { 
+	if (scrollY > window.innerHeight * 0.6) { 
         //console.log("hide");
         downArrow.classList.add("hide");
     } else {

@@ -2,7 +2,7 @@
 
 ?>
 
-<div class="projectDownArrowWrapper"><div class="downArrow downArrow-project" id="downArrow"><a data-scroll-to href="#projMeta"><i class="fa-solid fa-chevron-down"></i></a></div></div>
+<div class="projectDownArrowWrapper"><div class="downArrow downArrow-project forceHide hide" id="downArrow"><a data-scroll-to href="#projMeta"><i class="fa-solid fa-chevron-down"></i></a></div></div>
 <div id="projLanding"> <!--___________ Proj Landing ____________-->
   <div class="row">
     <div class="col-50">

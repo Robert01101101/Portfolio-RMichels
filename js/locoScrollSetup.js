@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Disable scrolling initially
   locoScroll.stop();
   const downArrow =  document.getElementById("downArrow");
-  if (downArrow != null) downArrow.classList.add('hide', 'forceHide');
 
   // Get ready to unhide down arrow
   if (downArrow != null) setTimeout(() => downArrow.classList.remove('forceHide'), 900);
