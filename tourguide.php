@@ -11,10 +11,8 @@ Partial::build('header', ["project" => $project]);
 Partial::build('projectPageLanding', 
   ["project" => $project, 
   "description" => "A crossplatform Flutter app that helps users explore tours with navigation, information on places, and chat with an AI tourguide. A personal project currently in development.",
-  "primaryLink" => "mailto:hi@rmichels?subject=Request%20access%20to%20join%20Tourguide%20Closed%20Testing&amp;body=Please%20add%20me%20to%20the%20Closed%20Testing%20of%20tourguide.%0AEmail%20to%20add%3A%20%5BInsert%20Your%20Email%20used%20on%20your%20Android%20Phone%5D",
-  "primaryLinkText" => "Request invite to Closed Testing",
-  "secondaryLink" => "https://play.google.com/apps/internaltest/4701730952049203829",
-  "secondaryLinkText" => "Access Closed Testing (requires invite)",
+  "primaryLink" => "https://play.google.com/apps/testing/com.robertmichelsdigitalmedia.tourguideapp",
+  "primaryLinkText" => "Download Android App (Open Testing)",
   "alt" => FALSE]);
 
 Partial::build('projectPageMeta', ["project" => $project]);
@@ -35,6 +33,12 @@ Partial::build('projectPageMeta', ["project" => $project]);
   <!----- Content / Text ----->
   <section class="sectionText">
     <h2>Development Progress</h2>
+    <h3>Update - July 29 2024</h3>
+    <p>I've made good progress and have published the app to Open Testing (Beta) on Google Play. In order to get CI/CD with fastlane and GitHub Actions up and running, I had to first publish my app. This required quite a bit of work in order to make sure that I comply with all the requirements - things like the ability to block and report users or content, ensuring account and data deletion works, and adding TOS and a privacy policy.</p>
+    <p>The last few weeks have been a great learning experience, as I got to really dig into the backend side of things, setting up email notifications and a system for myself to manage community reports. I discovered the great library of Firebase extensions like Trigger Email from Firestore and Delete User Data, which have come in handy. To extend their functionality, I also wrote some cloud functions to help with processes like unsubscribing from emails through a link in the email.</p>
+    <p>Wrapping up this work I moved on to setting up CI/CD. I had previous experience with managing CI/CD such as Azure Pipelines and XCode Cloud, but this was my first time setting it all up by myself, and also my first time using fastlane or GitHub Actions. For debugging purposes I also learned some of the basics of Docker and VirtualBox to standardize and test different environments. It's now up and running, with commits to my main branch automatically building and deploying to Google Play, which is pretty sweet.
+    </p>
+    <h3>Getting Started - July 10 2024</h3>
     <p>The tourguide app is currently in closed testing on the Google Play store. I plan to also host it as a webapp, and possibly an iOS app if I see demand for the app. You can <a href="mailto:hi@rmichels?subject=Request%20access%20to%20join%20Tourguide%20Closed%20Testing&amp;body=Please%20add%20me%20to%20the%20Closed%20Testing%20of%20tourguide.%0AEmail%20to%20add%3A%20%5BInsert%20Your%20Email%20used%20on%20your%20Android%20Phone%5D">request</a> to join testing if you're interested in trying it out.<p>
     <p>As of July 2024 the app has functionality for users to create a tour with waypoints, an explore page to browse these user-created tours, an AI chat page utilizing Google's Gemini AI roleplaying as a helpful tourguide, and a profile page. I'm using Firebase services such as Authentication, Firestore, Storage, Crashlytics and Remote Config, as well as Google APIs like Places, Maps and Vertex AI to power my app.</p>
   </section>
@@ -72,6 +76,16 @@ Partial::build('projectPageMeta', ["project" => $project]);
     <p>Flutter has been a delight to work with. I was previously working at <a href="https://clir.io/">Clirio</a>, where I was creating complex UIs with C# in Unity, a setup that's not really ideal for creating complex UIs, even less so with Clirio's apps supporting VR, MR, touchscreens on iOS and Android, as well as Desktop, and catering UI for each of those platforms. In comparison to the challenges this posed, Flutter makes it a breeze to implement complex UIs across many devices, while also working with an intuitive architecture of Stateless- and StatefulWidgets, Providers, and a large amount of packages to help speed up common tasks.</p>
   </section>
 
+  
+  <!----- Content / Media ----->
+  <section class="sectionText">
+    <h2>To-Do's</h2>
+    <p>You can see what I still have planned on my scrum board. It's a lot :)</p>
+    <blockquote class="trello-board-compact">
+      <a href="https://trello.com/b/ThscGOXW/tourguide-app">Trello Board</a>
+    </blockquote>
+    <script src="https://p.trellocdn.com/embed.min.js"></script>
+  </section>
 <?php
 
   Partial::build('footer');
