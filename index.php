@@ -16,10 +16,15 @@ Partial::build('header');
 <div id="landingArea">
   <div class="row">
     <div class="col-50" id="landingText">
-      <p><?php echo _("Hi, I'm Robert Michels."); ?><br><?php echo _("I design and program"); ?><br><span
+      <p><?php if (isset($_GET["greeting"])) {
+                  echo _("Hi ".$_GET["greeting"].", <br>I'm Robert Michels.");
+                } else {
+                  echo _("Hi, I'm Robert Michels."); 
+                }
+                ?><br><?php echo _("I design and program"); ?><br><span
           class="txt-rotate"
           data-period="2000"
-          data-rotate='["<?php echo _("games.\", \"VR experiences.\", \"mobile apps.\", \"websites."); ?>"]'><?php echo _("digital media."); ?></span></p>
+          data-rotate='["<?php echo _("full-stack apps.\", \"games.\", \"VR experiences.\", \"mobile apps.\", \"websites."); ?>"]'><?php echo _("digital media."); ?></span></p>
     </div>
   </div>
 </div>
