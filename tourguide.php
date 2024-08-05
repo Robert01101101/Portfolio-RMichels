@@ -33,8 +33,27 @@ Partial::build('projectPageMeta', ["project" => $project]);
   </section>
 
   <!----- Content / Text ----->
+  <section class="sectionText mockup">
+    <div>
+      <h2>Current Prototype</h2>
+      <p>Last updated on August 4, 2024</p>
+      <h3>Explore</h3>
+      <p>Explore user-created tours that are popular, close to you, or find your next destination with the highest rated tours around the world.</p>
+      <p>Get point-to-point navigation powered by Google API, and detailed descriptions for the places you'll see. Take in your destination while you listen to the history and fun facts with text-to-speech.</p>
+      <h3>AI Tourguide</h3>
+      <p>Ask your AI Tourguide about the best local destinations, parks, or beaches, or get a brief overview of the history or meaning of a place. Powered by Google Gemini with Vertex AI.</p>
+      <h3>Contribute</h3>
+      <p>Easily create new tours to contribute to the community, using a form powered by flutter's stepper widget. Add basic info, places, details, and you're done and the new tour is ready for people to explore.</p>
+      <h3>Profile</h3>
+      <p>Manage your profile settings, notification settings, and manage your account.</p>
+    </div>
+    <canvas id="threeModel" class="inText"></canvas>
+  </section>
+  <video id="video" src="assets/video/testSmaller.mp4" style="display:none" autoplay loop muted></video>
+
+  <!----- Content / Text ----->
   <section class="sectionText">
-    <h2>Development Progress</h2>
+    <h2>Development History</h2>
     <h3>Update - July 29 2024</h3>
     <p>I've made good progress and have published the app to Open Testing (Beta) on Google Play. In order to get CI/CD with fastlane and GitHub Actions up and running, I had to first publish my app. This required quite a bit of work in order to make sure that I comply with all the requirements - things like the ability to block and report users or content, ensuring account and data deletion works, and adding TOS and a privacy policy.</p>
     <p>The last few weeks have been a great learning experience, as I got to really dig into the backend side of things, setting up email notifications and a system for myself to manage community reports. I discovered the great library of Firebase extensions like Trigger Email from Firestore and Delete User Data, which have come in handy. To extend their functionality, I also wrote some cloud functions to help with processes like unsubscribing from emails through a link in the email.</p>
@@ -45,6 +64,9 @@ Partial::build('projectPageMeta', ["project" => $project]);
     <p>As of July 2024 the app has functionality for users to create a tour with waypoints, an explore page to browse these user-created tours, an AI chat page utilizing Google's Gemini AI roleplaying as a helpful tourguide, and a profile page. I'm using Firebase services such as Authentication, Firestore, Storage, Crashlytics and Remote Config, as well as Google APIs like Places, Maps and Vertex AI to power my app.</p>
   </section>
 
+  
+
+  
   <!----- Content / Media ----->
   <section class="sectionMedia">
     <figure ignorecarousel>
@@ -74,7 +96,7 @@ Partial::build('projectPageMeta', ["project" => $project]);
 
   <!----- Content / Text ----->
   <section class="sectionText">
-    <h2>What I learned</h2>
+    <h2>What I've learned so far</h2>
     <p>Flutter has been a delight to work with. I was previously working at <a href="https://clir.io/">Clirio</a>, where I was creating complex UIs with C# in Unity, a setup that's not really ideal for creating complex UIs, even less so with Clirio's apps supporting VR, MR, touchscreens on iOS and Android, as well as Desktop, and catering UI for each of those platforms. In comparison to the challenges this posed, Flutter makes it a breeze to implement complex UIs across many devices, while also working with an intuitive architecture of Stateless- and StatefulWidgets, Providers, and a large amount of packages to help speed up common tasks.</p>
   </section>
 

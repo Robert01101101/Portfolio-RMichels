@@ -1,0 +1,11 @@
+Model Information:
+* title:	Hololens 2
+* source:	https://sketchfab.com/3d-models/hololens-2-3dd665394e6f4b62ba16338e55828ddd
+* author:	Faber (https://sketchfab.com/muertoHambre)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Hololens 2" (https://sketchfab.com/3d-models/hololens-2-3dd665394e6f4b62ba16338e55828ddd) by Faber (https://sketchfab.com/muertoHambre) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

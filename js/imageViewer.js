@@ -245,6 +245,7 @@ document.addEventListener('touchend', e => {
 function updateArrows() {
     //Place next / prev buttons inside of image if there isn't enough of a margin to the left / right
     var windowWidth = document.body.clientWidth;
+    if (!clone) return;
     var imgWidth = clone.getBoundingClientRect().width;
 
     if (windowWidth - imgWidth < 170) {

@@ -2,7 +2,7 @@
 var downArrow = document.getElementById('downArrow');
 
 window.addEventListener('load', () => {
-    if (window.locoScroll) {
+    if (window.locoScroll && downArrow) {
       window.locoScroll.on('scroll', (args) => {
         updateArrow(args.scroll);
       });

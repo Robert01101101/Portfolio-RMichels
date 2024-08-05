@@ -81,18 +81,19 @@
 
     </script>
     
-  <script src="<?php echo $GLOBALS['d'];?>js/tools-min.js?v=1.0.0"></script>
+  <script src="<?php echo $GLOBALS['d'];?>js/tools-min.js?v=1.0.1"></script>
 
   <?php if(isset($projects)) : ?>
     <script src="<?php echo $GLOBALS['d'];?>js/projectFilter-min.js?v=1.0.2"></script>
   <?php else: ?>
-    <script src="<?php echo $GLOBALS['d'];?>js/downArrow-min.js?v=1.0.1"></script>
+    <script src="<?php echo $GLOBALS['d'];?>js/downArrow-min.js?v=1.0.2"></script>
   <?php endif; ?>
 
   <script src="<?php echo $GLOBALS['d'];?>js/lqip-min.js?v=1.0.1"></script>  
   <script src="<?php echo $GLOBALS['d'];?>js/three/build/three.min.js"></script>
   <script src="<?php echo $GLOBALS['d'];?>js/three/examples/js/loaders/GLTFLoader.js"></script>
   <script src="<?php echo $GLOBALS['d'];?>js/three/waves-min.js?v=1.0.3"></script>
+  <script src="<?php echo $GLOBALS['d'];?>js/three/phoneMockup.js?v=1.0.0"></script>
   
 
   <?php if(isset($index)) : ?>
@@ -102,7 +103,7 @@
   
 
   <?php if(!isset($index) && !isset($projects)) : ?>
-    <script src="<?php echo $GLOBALS['d'];?>js/imageViewer-min.js?v=1.0.1"></script>
+    <script src="<?php echo $GLOBALS['d'];?>js/imageViewer-min.js?v=1.0.2"></script>
   <?php endif; ?>
   
 
