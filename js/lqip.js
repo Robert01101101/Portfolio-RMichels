@@ -17,7 +17,7 @@ function swapImages() {
       src = src.replace("lqip/", "");
       if (src.includes("gif")) src = src.replace("gif", "png");
       if (images[i].hasAttribute("lqip-gif")) src = src.replace("jpg", "gif");
-
+      if (images[i].hasAttribute("lqip-webp")) src = src.replace("jpg", "webp");
       images[i].src = src;
     }
   }

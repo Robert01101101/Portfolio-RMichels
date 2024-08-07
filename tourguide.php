@@ -47,7 +47,7 @@ Partial::build('projectPageMeta', ["project" => $project]);
       <h3>Profile</h3>
       <p>Manage your profile settings, notification settings, and manage your account.</p>
     </div>
-    <canvas id="threeModel" class="inText"></canvas>
+    <canvas id="threeModel" class="inText" mockup-phone></canvas>
   </section>
   <video id="video" src="assets/video/testSmaller.mp4" style="display:none" autoplay loop muted></video>
 

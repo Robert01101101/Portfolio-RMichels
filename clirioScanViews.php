@@ -28,6 +28,12 @@ Partial::build('projectPageMeta', ["project" => $project]);
     <p><?php echo _("One of the key features of the Clirio product suite is the capability to capture photogrammetry scans with LiDAR-enabled iOS devices, and then manage and view those scans. Captured scans can be viewed on-map, they can be always-on as an integral part of the map, or they can be viewed in scan view mode which comes with measure, comparison, and XR capabilities depending on the platform. In XR view, the scan can be scaled to "); ?> 1m³ <?php echo _("or 1:1 scale, or freely manipulated with hand manipulation. On iOS and Desktop, the view is controlled by touch or mouse inputs. Comparison views feature side-by-side, swipe, and overlay modes. Besides scans captured with Clirio Scan, other 3D models are also supported and can be uploaded on "); ?><a href="clirioCloud">Clirio Cloud</a>.</p>
   </section>
 
+  <!----- Content / Text ----->
+  <section class="sectionText mockup hololens">
+    <canvas id="threeModel" class="inText hololens" mockup-hololens></canvas>
+    <div id="spinner"></div>
+  </section>
+
 
   <!----- Content / Media ----->
   <section class="sectionMedia">
@@ -42,7 +48,7 @@ Partial::build('projectPageMeta', ["project" => $project]);
           <figcaption><?php echo _("Scan View (Desktop)"); ?></figcaption>
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="<?php echo $GLOBALS['d'];?>assets/img/clirioScanViews/lqip/scanComparison.jpg" lqip-gif class="whiteFrame">
+          <img src="<?php echo $GLOBALS['d'];?>assets/img/clirioScanViews/lqip/scanComparison.jpg" lqip-webp class="whiteFrame">
           <figcaption><?php echo _("Scan View Comparison Mode (Desktop)"); ?></figcaption>
         </figure>
       </div>

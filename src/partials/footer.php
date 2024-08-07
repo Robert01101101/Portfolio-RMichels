@@ -90,10 +90,11 @@
   <?php endif; ?>
 
   <script src="<?php echo $GLOBALS['d'];?>js/lqip-min.js?v=1.0.1"></script>  
+  <script src='http://joeiddon.github.io/perlin/perlin.js'></script>
   <script src="<?php echo $GLOBALS['d'];?>js/three/build/three.min.js"></script>
   <script src="<?php echo $GLOBALS['d'];?>js/three/examples/js/loaders/GLTFLoader.js"></script>
   <script src="<?php echo $GLOBALS['d'];?>js/three/waves-min.js?v=1.0.3"></script>
-  <script src="<?php echo $GLOBALS['d'];?>js/three/phoneMockup.js?v=1.0.0"></script>
+  <script src="<?php echo $GLOBALS['d'];?>js/three/threeJsMockup-min.js?v=1.0.0"></script>
   
 
   <?php if(isset($index)) : ?>

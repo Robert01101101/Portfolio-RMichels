@@ -27,26 +27,47 @@
 
 	&.inText {
 		width: 100%;
-		height: 32rem;
+		&.hololens {
+			height: 24rem;
 
-		@include sm {
-			height: 40rem;
+			@include md {
+				height: 30rem;
+			}
+
+			@include lg {
+				height: 36rem;
+			}
+
+			@include xl {
+				height: 38rem;
+			}
+
+			@include xxxl {
+				height: 42rem;
+			}
 		}
 
-		@include md {
-			height: 60rem;
-			position: relative;
-			left: 2rem;
-		}
+		&:not(.hololens){
+			height: 32rem;
 
-		@include lg {
-			height: 60rem;
-			max-width: 35rem;
-		}
-			
-
-		@include xxl {
-			height: 65rem;
+			@include sm {
+				height: 40rem;
+			}
+	
+			@include md {
+				height: 60rem;
+				position: relative;
+				left: 2rem;
+			}
+	
+			@include lg {
+				max-width: 35rem;
+			}
+				
+	
+			@include xxl {
+				height: 65rem;
+			}
 		}
 	}
 }
@@ -74,4 +95,23 @@
 .cursor {
 	@include fullscreen;
 	z-index: 1;
+}
+
+#spinner {
+	position: absolute;
+	top: calc(40% - 30px);
+	left: calc(50% - 30px);
+	transform: translate(calc(-50% + 30px), calc(-50% + 30px));
+	border: 5px solid #b9b9b9; /* Light grey */
+	border-top: 5px solid #347fb0; /* Blue */
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	animation: spin 2s linear infinite;
+	z-index: 1000; /* Ensure it's above other elements */
+}
+
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
 }
