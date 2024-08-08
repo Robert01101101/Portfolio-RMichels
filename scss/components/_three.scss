@@ -19,7 +19,13 @@
 		right: 0;
 
 		@include xl {
-			width: 100vw;
+			&:not(img) {
+				width: 100vw;
+			}
+			&#landingModelImage{
+				left: 32vw;
+				top: -5vh;
+			}
 			left: 25vw;
 			right: 0;
 			top: 0;

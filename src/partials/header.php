@@ -78,7 +78,7 @@ $GLOBALS['english'] = $lang != 'de_DE';
 
 
   <link rel="stylesheet" href="<?php echo $GLOBALS['d'];?>css/normalize.css">
-  <link rel="stylesheet" href="<?php echo $GLOBALS['d'];?>css/main.css?v=1.1.8">
+  <link rel="stylesheet" href="<?php echo $GLOBALS['d'];?>css/main.css?v=1.1.9">
   <link rel="stylesheet" href="<?php echo $GLOBALS['d'];?>css/locomotive-scroll.css">
   
 
