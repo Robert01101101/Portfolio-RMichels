@@ -19,7 +19,8 @@
 		right: 0;
 
 		@include xl {
-			left: auto;
+			width: 100vw;
+			left: 25vw;
 			right: 0;
 			top: 0;
 		}

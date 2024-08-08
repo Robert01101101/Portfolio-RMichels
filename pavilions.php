@@ -31,7 +31,7 @@ Partial::build('projectPageMeta', ["project" => $project]);
   <!----- Content / Video ----->
   <div class="auto-resizable-iframe">
     <div>
-      <iframe src="https://www.youtube.com/embed/3MXKiZ-IckA?start=15" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/3MXKiZ-IckA?start=15" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
 
@@ -118,13 +118,13 @@ Partial::build('projectPageMeta', ["project" => $project]);
     </figure>
     <div class="auto-resizable-iframe">
       <div>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/9VzTCMDgkMM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/9VzTCMDgkMM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture" allowfullscreen></iframe>
       </div>
       <figcaption>A brief walkthrough of the Grasshopper algorithm, showing each node's functionality.</figcaption>
     </div>
     <div class="auto-resizable-iframe">
       <div>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/MHUs1-AVnpA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/MHUs1-AVnpA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture" allowfullscreen></iframe>
       </div>
       <figcaption>To stylize the final pavilion, reactor points are used to algorithmically affect the thickness of the structure.</figcaption>
     </div>

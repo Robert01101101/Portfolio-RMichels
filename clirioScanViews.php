@@ -32,6 +32,7 @@ Partial::build('projectPageMeta', ["project" => $project]);
   <section class="sectionText mockup hololens">
     <canvas id="threeModel" class="inText hololens" mockup-hololens></canvas>
     <div id="spinner"></div>
+    <figcaption><?php echo _("Scan View (HoloLens 2)"); ?></figcaption>
   </section>
 
 
@@ -69,7 +70,7 @@ Partial::build('projectPageMeta', ["project" => $project]);
   <section class="sectionMedia">
     <div class="auto-resizable-iframe">
       <div>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/hdPXCnyH6us?playlist=hdPXCnyH6us&loop=1&autoplay=1&cc_load_policy=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/hdPXCnyH6us?playlist=hdPXCnyH6us&loop=1&autoplay=1&cc_load_policy=1&mute=1&modestbranding=1&rel=0" title="YouTube video player" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
       <figcaption><?php echo _("An overview of the different scan views in the Clirio View Meta Quest VR app. A scan is first opened on-map, then scan view is entered, where the scan is viewed from different angles, measured, and compared to another scan."); ?></figcaption>
     </div>

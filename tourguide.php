@@ -49,7 +49,7 @@ Partial::build('projectPageMeta', ["project" => $project]);
     </div>
     <canvas id="threeModel" class="inText" mockup-phone></canvas>
   </section>
-  <video id="video" src="assets/video/testSmaller.mp4" style="display:none" autoplay loop muted></video>
+  <video id="video" src="assets/video/tourguideScreencap.mp4" style="display:none" autoplay loop muted></video>
 
   <!----- Content / Text ----->
   <section class="sectionText">
@@ -72,22 +72,22 @@ Partial::build('projectPageMeta', ["project" => $project]);
     <figure ignorecarousel>
       <div class="mediaRow mediaRow-equalWidth mediaRow-equalHeight">
         <figure onclick="viewImage(this)">
-          <img src="<?php echo $GLOBALS['d'];?>assets/img/tourguide/Screenshot_1.png"> 
+          <img src="<?php echo $GLOBALS['d'];?>assets/img/tourguide/Screenshot_1.jpg"> 
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="<?php echo $GLOBALS['d'];?>assets/img/tourguide/Screenshot_2.png">
+          <img src="<?php echo $GLOBALS['d'];?>assets/img/tourguide/Screenshot_2.jpg">
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="<?php echo $GLOBALS['d'];?>assets/img/tourguide/Screenshot_3.png"> 
+          <img src="<?php echo $GLOBALS['d'];?>assets/img/tourguide/Screenshot_3.jpg"> 
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="<?php echo $GLOBALS['d'];?>assets/img/tourguide/Screenshot_4.png">
+          <img src="<?php echo $GLOBALS['d'];?>assets/img/tourguide/Screenshot_4.jpg">
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="<?php echo $GLOBALS['d'];?>assets/img/tourguide/Screenshot_5.png"> 
+          <img src="<?php echo $GLOBALS['d'];?>assets/img/tourguide/Screenshot_5.jpg"> 
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="<?php echo $GLOBALS['d'];?>assets/img/tourguide/Screenshot_6.png">
+          <img src="<?php echo $GLOBALS['d'];?>assets/img/tourguide/Screenshot_6.jpg">
         </figure>
       </div>
       <figcaption><?php echo _("Screenshots from 2024/07/28"); ?></figcaption>

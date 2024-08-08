@@ -50,7 +50,7 @@ Partial::build('projectPageMeta', ["project" => $project]);
   <!----- Content / Video ----->
   <div class="auto-resizable-iframe">
       <div>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/mFMDWg2QdYU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/mFMDWg2QdYU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture" allowfullscreen></iframe>
       </div>
       <figcaption>Rising Waters project introduction, walkthrough & technical overview.</figcaption>
     </div>
@@ -67,7 +67,7 @@ Partial::build('projectPageMeta', ["project" => $project]);
   <!----- Content / Video ----->
   <div class="auto-resizable-iframe">
       <div>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/SX7YzMAc1OE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/SX7YzMAc1OE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture" allowfullscreen></iframe>
       </div>
       <figcaption>FIT4U project overview & showcase footage.</figcaption>
     </div>

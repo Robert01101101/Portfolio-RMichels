@@ -4,6 +4,7 @@ var canvas = document.querySelector('#threeModel');
 var renderer = new THREE.WebGLRenderer({canvas, alpha:true, antialias:true});//, preserveDrawingBuffer: true}); // SAVE IMAGE
 //var tmpImage = document.getElementById('landingModelImage');
 var mockupMesh;
+var initialMockupMeshRotation;
 var isPhone = canvas.hasAttribute('mockup-phone');
 const spinner = document.getElementById('spinner');
 var origHololensPosition;
@@ -25,6 +26,7 @@ if (video){
 }
 
 function hideSpinner() {
+  if (!spinner) return;
   spinner.style.display = 'none';
   canvas.style.display = 'block';
 }
@@ -39,6 +41,7 @@ loader.load(path, handle_load);
 
 function handle_load(gltf){
   mockupMesh = gltf.scene.children[0];
+  initialMockupMeshRotation = mockupMesh.rotation.clone();
 
   var raysMeshToRemove = [];
 
@@ -47,7 +50,8 @@ function handle_load(gltf){
     //console.log(node.name);
     if (node.name === 'Hololens'){
       
-      origHololensPosition = new THREE.Vector3(node.position.x + 50, node.position.y + 50, node.position.z);
+      //TODO: fix, not working as expected, seems to have no effect?
+      origHololensPosition = new THREE.Vector3(node.position.x, node.position.y, node.position.z);
       //console.log('Hololens found');
       hololens = node;
     }
@@ -183,7 +187,8 @@ function createLine(startPoint, endPoint) {
   const line = new THREE.Line(geometry, material);
   //console.log('Added line with positions:', startPoint, endPoint);
   rays.push(line);
-  scene.add(line);
+  mockupMesh.attach(line);
+  //scene.add(line);
 }
 
 
@@ -267,7 +272,8 @@ function animate() {
 	if (camera && scene){
 		//camera.position.y -= 0.002;
     var xShift = isPhone ? ((window.innerWidth > mdBreakPoint) ? .05 : 0) : -.02;
-    camera.position.x += xShift + ( mouseX - camera.position.x ) * (isPhone ? .05 : .03);
+    var timeShift = Date.now() * 0.0005;
+    camera.position.x += xShift + ( mouseX+(Math.sin(timeShift)/2) - camera.position.x ) * (isPhone ? .05 : .03);
     camera.position.y += ( - mouseY - camera.position.y ) * (isPhone ? .03 : 0.1) + (isPhone ? 0 : 0.2);
     var target = new THREE.Vector3(scene.position.x, scene.position.y, scene.position.z);
     if (!isPhone){
@@ -283,7 +289,7 @@ function animate() {
   var lastValue;
   rays.forEach((ray, index) => {
     // Use perlin noise to generate alpha value based on camera position
-    const noiseValue = perlin.get((camera.position.x * .4 + index/5 + Date.now() * 0.0005)/2, (camera.position.y * .4)/2)*.8; // Adjust the scale as needed
+    const noiseValue = perlin.get((camera.position.x * .4 + index/5 + timeShift)/2, (camera.position.y * .4)/2)*.8; // Adjust the scale as needed
     ray.material.uniforms.maxAlpha.value = noiseValue; // Ensure it stays between 0 and 1
     lastValue = ray.material.uniforms.maxAlpha.value;
   });
@@ -326,3 +332,34 @@ function initializePerlin() {
 
 // Call this function once to initialize Perlin noise
 initializePerlin();
+
+
+
+
+//_____________ SCROLL
+window.addEventListener('load', () => {
+  if (window.locoScroll) {
+    window.locoScroll.on('scroll', (args) => {
+      scrollUpdate(args.scroll);
+    });
+  }
+});
+function scrollUpdate(ev) {
+  if (ev == null) return;
+  const scrollY = ev.y || window.scrollY;
+  if (canvas){
+    // Get the bounding client rect of the canvas
+    const canvasRect = canvas.getBoundingClientRect();
+    // Calculate the scroll position relative to the scroll container
+    const canvasScrollTop = canvasRect.top + scrollY - canvas.height/6;
+    const diff = scrollY - canvasScrollTop;
+    const scaledDiff = quadraticTransform(diff / (isPhone ? 1200 : 2000));//1200);
+    //console.log('difference', scrollY - canvasScrollTop);
+    mockupMesh.rotation.y = initialMockupMeshRotation.y + scaledDiff;
+  }
+}
+
+function quadraticTransform(value) {
+  const sign = value >= 0 ? 1 : -1; // Preserve the sign of the input
+  return sign * Math.pow(value, 2);
+}

@@ -80,7 +80,11 @@
 	}
 
 	position: absolute;
-	bottom: 2rem;
+	bottom: 4rem;
+
+	@include sm {
+		bottom: 2rem;
+	}
 	left: 0;
 
 	text-align: center;

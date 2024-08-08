@@ -28,7 +28,7 @@ Partial::build('projectPageMeta', ["project" => $project]);
   <!----- Content / Video ----->
   <div class="auto-resizable-iframe">
     <div>
-      <iframe src="https://www.youtube.com/embed/6KXxwxTnbgM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/6KXxwxTnbgM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
   
