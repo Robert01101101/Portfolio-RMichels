@@ -36,7 +36,7 @@ Partial::build('projectPageMeta', ["project" => $project]);
   <section class="sectionText mockup">
     <div>
       <h2>Current Prototype</h2>
-      <p>Last updated on August 4, 2024</p>
+      <p>Last updated on August 12, 2024</p>
       <h3>Explore</h3>
       <p>Explore user-created tours that are popular, close to you, or find your next destination with the highest rated tours around the world.</p>
       <p>Get point-to-point navigation powered by Google API, and detailed descriptions for the places you'll see. Take in your destination while you listen to the history and fun facts with text-to-speech.</p>
@@ -90,7 +90,7 @@ Partial::build('projectPageMeta', ["project" => $project]);
           <img src="<?php echo $GLOBALS['d'];?>assets/img/tourguide/Screenshot_6.jpg">
         </figure>
       </div>
-      <figcaption><?php echo _("Screenshots from 2024/07/28"); ?></figcaption>
+      <figcaption><?php echo _("Screenshots from 2024/08/04"); ?></figcaption>
     </figure>
   </section>
 
