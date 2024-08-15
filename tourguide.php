@@ -11,10 +11,12 @@ Partial::build('header', ["project" => $project]);
 Partial::build('projectPageLanding', 
   ["project" => $project, 
   "description" => "A crossplatform Flutter app that helps users explore tours with navigation, information on places, and chat with an AI tourguide. A personal project currently in development.",
-  "primaryLink" => "https://play.google.com/apps/testing/com.robertmichelsdigitalmedia.tourguideapp",
-  "primaryLinkText" => "Join Google Play Testing (Beta)",
-  "secondaryLink" => "https://play.google.com/store/apps/details?id=com.robertmichelsdigitalmedia.tourguideapp",
-  "secondaryLinkText" => "Google Play Store Page (Beta)",
+  //"primaryLink" => "https://play.google.com/apps/testing/com.robertmichelsdigitalmedia.tourguideapp",
+  //"primaryLinkText" => "Join Google Play Testing (Beta)",
+  "primaryLink" => "https://play.google.com/store/apps/details?id=com.robertmichelsdigitalmedia.tourguideapp",
+  "primaryLinkText" => "Google Play Store Page (Beta)",
+  "secondaryLink" => "https://github.com/Robert01101101/tourguide_app",
+  "secondaryLinkText" => "Github Repository",
   "alt" => FALSE]);
 
 Partial::build('projectPageMeta', ["project" => $project]);
