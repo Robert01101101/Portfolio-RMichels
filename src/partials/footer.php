@@ -103,7 +103,7 @@
 
   <?php if(!isset($index) && !isset($projects)) : ?>
     <script src="<?php echo $GLOBALS['d'];?>js/imageViewer-min.js?v=1.0.3"></script>
-    <script src="<?php echo $GLOBALS['d'];?>js/three/threeJsMockup-min.js?v=1.0.1"></script>
+    <script src="<?php echo $GLOBALS['d'];?>js/three/threeJsMockup-min.js?v=1.0.2"></script>
   <?php endif; ?>
   
 

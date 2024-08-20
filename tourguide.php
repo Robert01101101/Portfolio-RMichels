@@ -51,7 +51,8 @@ Partial::build('projectPageMeta', ["project" => $project]);
     </div>
     <canvas id="threeModel" class="inText" mockup-phone></canvas>
   </section>
-  <video id="video" src="assets/video/tourguideScreencap.mp4" style="display:none" autoplay loop muted></video>
+  <video id="video" src="assets/video/tourguideScreencap.mp4" style="display:none" preload="none" autoplay="true" loop="true" muted="true" poster="assets/video/frame.jpg"></video>
+
 
   <!----- Content / Text ----->
   <section class="sectionText">

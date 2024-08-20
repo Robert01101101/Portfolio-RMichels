@@ -20,10 +20,53 @@ var videoTexture;
 if (video){
   video.play().catch(function(error) {
       console.error('Error attempting to play the video:', error);
+      video.load();
   });
   // Create a VideoTexture
   videoTexture = new THREE.VideoTexture(video);
 }
+
+function throttle(func, limit) {
+  let lastFunc;
+  let lastRan;
+  return function() {
+      const context = this;
+      const args = arguments;
+      if (!lastRan) {
+          func.apply(context, args);
+          lastRan = Date.now();
+      } else {
+          clearTimeout(lastFunc);
+          lastFunc = setTimeout(function() {
+              if ((Date.now() - lastRan) >= limit) {
+                  func.apply(context, args);
+                  lastRan = Date.now();
+              }
+          }, limit - (Date.now() - lastRan));
+      }
+  };
+}
+
+// Throttled reload function to prevent excessive reloads
+const throttledReload = throttle(function() {
+  console.warn('Reloading video...');
+  video.load();
+  video.play().catch(function(error) {
+      console.error('Error attempting to play the video after reload:', error);
+  });
+}, 2000);
+
+// Add event listener for video loading errors
+video.addEventListener('error', function(e) {
+  console.error('Error loading video:', e);
+  throttledReload();
+});
+
+// Add event listener for when the video stalls
+video.addEventListener('stalled', function() {
+  console.warn('Video stalled, reloading...');
+  throttledReload();
+});
 
 function hideSpinner() {
   if (!spinner) return;
