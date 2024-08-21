@@ -15,8 +15,10 @@ Partial::build('projectPageLanding',
   //"primaryLinkText" => "Join Google Play Testing (Beta)",
   "primaryLink" => "https://play.google.com/store/apps/details?id=com.robertmichelsdigitalmedia.tourguideapp",
   "primaryLinkText" => "Google Play Store Page (Beta)",
-  "secondaryLink" => "https://github.com/Robert01101101/tourguide_app",
-  "secondaryLinkText" => "Github Repository",
+  "secondaryLink" => "https://www.figma.com/proto/DKwKzxmnYg9oQeuUSmrlN7/Tourguide_App?page-id=54496%3A24191&node-id=54852-28956&viewport=-5776%2C-250%2C2&t=4HYfco7oHsFnRHPh-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=54852%3A28956",
+  "secondaryLinkText" => "Interactive Figma Mockup",
+  "tertiaryLink" => "https://github.com/Robert01101101/tourguide_app",
+  "tertiaryLinkText" => "Github Repository",
   "alt" => FALSE]);
 
 Partial::build('projectPageMeta', ["project" => $project]);
@@ -57,6 +59,10 @@ Partial::build('projectPageMeta', ["project" => $project]);
   <!----- Content / Text ----->
   <section class="sectionText">
     <h2>Development History</h2>
+    <h3>Update - August 19 2024</h3>
+    <p>Since moving to open testing, I've been focused on MVP UX polish and style improvements. An area of focus has been Tour Running UX/UI, which I enhanced to make it more immersive, and provide the user with richer map interactions as the tour progresses.</p>
+    <p> Regarding style improvements, I reworked all hardcoded style references to use the current theme, and created a theme provider and cleaned up theme building logic. With these changes, the UI now adheres more stringently to Material 3 Design styles, and supports dark mode. To help with that process, I first used the <a href="https://material-foundation.github.io/material-theme-builder/" title="Material Theme Builder" target="_blank">Material Theme Builder</a>, and then built an <a href="https://www.figma.com/proto/DKwKzxmnYg9oQeuUSmrlN7/Tourguide_App?page-id=54496%3A24191&node-id=54852-28956&viewport=-5776%2C-250%2C2&t=4HYfco7oHsFnRHPh-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=54852%3A28956" title="Interactive Figma Mockup" target="_blank">interactive mockup in Figma</a>, using the very helpful Figma Material 3 Design Kit template and Material Theme Builder plugin.</p>
+    <p>I'm happy with these changes and what I've learned about the Material Design system in the process. My goal now is to work on enhancing functionality and return to more UI polish down the line.</p>
     <h3>Update - July 29 2024</h3>
     <p>I've made good progress and have published the app to Open Testing (Beta) on Google Play. In order to get CI/CD with fastlane and GitHub Actions up and running, I had to first publish my app. This required quite a bit of work in order to make sure that I comply with all the requirements - things like the ability to block and report users or content, ensuring account and data deletion works, and adding TOS and a privacy policy.</p>
     <p>The last few weeks have been a great learning experience, as I got to really dig into the backend side of things, setting up email notifications and a system for myself to manage community reports. I discovered the great library of Firebase extensions like Trigger Email from Firestore and Delete User Data, which have come in handy. To extend their functionality, I also wrote some cloud functions to help with processes like unsubscribing from emails through a link in the email.</p>

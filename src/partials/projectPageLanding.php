@@ -14,6 +14,7 @@
         <?php 
           if (isset($primaryLink)) echo '<a href="'.$primaryLink.'" target="_blank">'.$primaryLinkText.'</a>';
           if (isset($secondaryLink)) echo '<a href="'.$secondaryLink.'" target="_blank">'.$secondaryLinkText.'</a>';
+          if (isset($tertiaryLink)) echo '<a href="'.$tertiaryLink.'" target="_blank">'.$tertiaryLinkText.'</a>';
         ?>
         </div>
       </div> 
