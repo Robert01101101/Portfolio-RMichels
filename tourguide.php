@@ -14,11 +14,14 @@ Partial::build('projectPageLanding',
   //"primaryLink" => "https://play.google.com/apps/testing/com.robertmichelsdigitalmedia.tourguideapp",
   //"primaryLinkText" => "Join Google Play Testing (Beta)",
   "primaryLink" => "https://play.google.com/store/apps/details?id=com.robertmichelsdigitalmedia.tourguideapp",
-  "primaryLinkText" => "Google Play Store Page (Beta)",
-  "secondaryLink" => "https://www.figma.com/proto/DKwKzxmnYg9oQeuUSmrlN7/Tourguide_App?page-id=54496%3A24191&node-id=54852-28956&viewport=-5776%2C-250%2C2&t=4HYfco7oHsFnRHPh-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=54852%3A28956",
-  "secondaryLinkText" => "Interactive Figma Mockup",
-  "tertiaryLink" => "https://github.com/Robert01101101/tourguide_app",
-  "tertiaryLinkText" => "Github Repository",
+  "primaryLinkText" => "Google Play Store (Beta)",
+  "secondaryLink" => "https://tourguide-firebase.web.app",
+  "secondaryLinkText" => "Web App (Beta)",
+  "tertiaryLink" => "https://www.figma.com/proto/DKwKzxmnYg9oQeuUSmrlN7/Tourguide_App?page-id=54496%3A24191&node-id=54852-28956&viewport=-5776%2C-250%2C2&t=4HYfco7oHsFnRHPh-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=54852%3A28956",
+  "tertiaryLinkText" => "Interactive Figma Mockup",
+  "quaternaryLink" => "https://github.com/Robert01101101/tourguide_app",
+  "quaternaryLinkText" => "Github Repository",
+  
   "alt" => FALSE]);
 
 Partial::build('projectPageMeta', ["project" => $project]);
@@ -59,6 +62,8 @@ Partial::build('projectPageMeta', ["project" => $project]);
   <!----- Content / Text ----->
   <section class="sectionText">
     <h2>Development History</h2>
+    <h3>Update and release of Web App - August 27 2024</h3>
+    <p>Thrilled to announce Tourguide's launch as a web app! You can find it at <a href="https://tourguide-firebase.web.app" title="Tourguide Web App" target="_blank">tourguide-firebase.web.app</a>. Adding web support marked a key milestone. Initial functionality worked well thanks to Flutter's cross-platform support, but there were some challenges with image handling, CORS issues, and UI adaptation for widescreens. Future efforts will focus on enhancing web UX and ensuring full support for all features on the web.</p>
     <h3>Update - August 19 2024</h3>
     <p>Since moving to open testing, I've been focused on MVP UX polish and style improvements. An area of focus has been Tour Running UX/UI, which I enhanced to make it more immersive, and provide the user with richer map interactions as the tour progresses.</p>
     <p> Regarding style improvements, I reworked all hardcoded style references to use the current theme, and created a theme provider and cleaned up theme building logic. With these changes, the UI now adheres more stringently to Material 3 Design styles, and supports dark mode. To help with that process, I first used the <a href="https://material-foundation.github.io/material-theme-builder/" title="Material Theme Builder" target="_blank">Material Theme Builder</a>, and then built an <a href="https://www.figma.com/proto/DKwKzxmnYg9oQeuUSmrlN7/Tourguide_App?page-id=54496%3A24191&node-id=54852-28956&viewport=-5776%2C-250%2C2&t=4HYfco7oHsFnRHPh-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=54852%3A28956" title="Interactive Figma Mockup" target="_blank">interactive mockup in Figma</a>, using the very helpful Figma Material 3 Design Kit template and Material Theme Builder plugin.</p>

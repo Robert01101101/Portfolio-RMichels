@@ -22,6 +22,17 @@ if (video){
       console.error('Error attempting to play the video:', error);
       video.load();
   });
+  // Add event listener for video loading errors
+  video.addEventListener('error', function(e) {
+    console.error('Error loading video:', e);
+    throttledReload();
+  });
+
+  // Add event listener for when the video stalls
+  video.addEventListener('stalled', function() {
+    console.warn('Video stalled, reloading...');
+    throttledReload();
+  });
   // Create a VideoTexture
   videoTexture = new THREE.VideoTexture(video);
 }
@@ -55,18 +66,6 @@ const throttledReload = throttle(function() {
       console.error('Error attempting to play the video after reload:', error);
   });
 }, 2000);
-
-// Add event listener for video loading errors
-video.addEventListener('error', function(e) {
-  console.error('Error loading video:', e);
-  throttledReload();
-});
-
-// Add event listener for when the video stalls
-video.addEventListener('stalled', function() {
-  console.warn('Video stalled, reloading...');
-  throttledReload();
-});
 
 function hideSpinner() {
   if (!spinner) return;
