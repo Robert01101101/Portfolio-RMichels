@@ -15,7 +15,7 @@ Partial::build('header', ["about" => TRUE]);
   <div>
     <h1 id="About"><?php echo _("About Me"); ?></h1>
     <p>👋 <?php echo _("Hi there, I'm Robert!"); ?></p>
-    <p><?php echo _("I'm a software developer from Vancouver. My inexhaustible curiosity and love for digital media led me to attend Simon Fraser University (SFU), where I earned my Bachelor's Degree of Science with a major in Interactive Arts & Technology."); ?></p> 
+    <p><?php echo _("I'm a software developer and designer from Vancouver. My inexhaustible curiosity and love for digital media led me to attend Simon Fraser University (SFU), where I earned my Bachelor's Degree of Science with a major in Interactive Arts & Technology."); ?></p> 
     </p><?php echo _("I've prototyped, designed, and developed various interactive applications throughout my career, covering everything from XR to web development. These experiences have shaped me into a designer who emphasizes a user-goal-driven approach, a developer who values scalability and accessibility, and an expert in rapid prototyping."); ?></p>
     <p><?php echo _("Contact me if you would like to make cool stuff together! I'm currently looking for work."); ?></p>
   

@@ -43,7 +43,7 @@ Partial::build('projectPageMeta', ["project" => $project]);
   <section class="sectionText mockup">
     <div>
       <h2>Current Prototype</h2>
-      <p>Last updated on August 19, 2024</p>
+      <p>Last updated on September 10, 2024</p>
       <h3>Explore</h3>
       <p>Explore user-created tours that are popular, close to you, or find your next destination with the highest rated tours around the world.</p>
       <p>Get point-to-point navigation powered by Google API, and detailed descriptions for the places you'll see. Take in your destination while you listen to the history and fun facts with text-to-speech.</p>
