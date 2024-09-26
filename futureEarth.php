@@ -66,6 +66,13 @@ Partial::build('projectPageMeta', ["project" => $project]);
     <p><?php echo _("Our project won best overall project, best interaction design, project for impact, and best VR/AR in our class."); ?></p>
   </section>
 
+  <!----- Content / Video ----->
+  <div class="auto-resizable-iframe">
+    <div>
+      <iframe src="https://www.youtube.com/embed/uQQSdkzXJdg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture;" allowfullscreen></iframe>
+    </div>
+  </div>
+
   <!----- Content / Media ----->
   <section class="sectionMedia">
     <div class="mediaGrid">
