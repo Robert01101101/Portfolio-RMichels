@@ -1,7 +1,7 @@
 
 //store all active filters (for multiple filters)
 var activeFilters = new Array();
-var andActive = false;
+var andActive = true;
 
 
 //

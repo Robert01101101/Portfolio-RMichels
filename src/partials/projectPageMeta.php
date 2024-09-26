@@ -11,7 +11,7 @@
     <h2><?php echo _("Year"); ?></h2>
     <p><?php echo $project->getYear() ?></p>
   </div>
-  <div class="projMetaItem">
+  <div class="projMetaItem skillsApplied">
     <h2><?php echo _("Skills Applied"); ?></h2>
     <ul>
       <?php 
@@ -26,7 +26,7 @@
       ?>
     </ul>
   </div>
-  <div class="projMetaItem">
+  <div class="projMetaItem team">
 
     <?php if (empty($project->getCompany())): ?>
       <h2>Team</h2>

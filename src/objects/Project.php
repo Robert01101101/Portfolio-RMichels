@@ -263,7 +263,7 @@ class Project
         }
 
         //2 GET ROLES
-        $query = "SELECT * FROM ((project INNER JOIN project_roles ON project.project_id = project_roles.project_id) INNER JOIN role ON project_roles.role_id = role.role_id) WHERE project.project_slug = '".$slug."'";
+        $query = "SELECT * FROM ((project INNER JOIN project_roles ON project.project_id = project_roles.project_id) INNER JOIN role ON project_roles.role_id = role.role_id) WHERE project.project_slug = '".$slug."' ORDER BY role.role_id ASC";
         $result = mysqli_query($connection, $query);
 
 

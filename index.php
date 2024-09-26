@@ -61,7 +61,7 @@ Partial::build('header');
         }
 
     } else {
-      $projects = Project::getProjects(5);
+      $projects = Project::getProjects(6);
 
       //Delete cookie if no filter set (in case user manually typed in vanilla url)
       setcookie("visitorFilter", "", time() - 3600);
