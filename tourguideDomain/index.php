@@ -9,12 +9,18 @@
 </head>
 <body>
 <h1>Tourguide</h1>
-<p>Tourguide's web presence is still under development.</p>
+<p>Tourguide is available for:</p>
+<ul>
+    <li>Web: &nbsp;&nbsp;&nbsp;<a href="https://tourguide-firebase.web.app/">tourguide-firebase.web.app</a></li>
+    <li>Android: &nbsp;&nbsp;&nbsp;<a href="https://play.google.com/store/apps/details?id=com.robertmichelsdigitalmedia.tourguideapp">Google Play Store</a></li>
+</ul>
+<p>Helpful Links:</p>
 <ul>
     <li><a href="communityGuidelines.html">Community Guidelines</a></li>
     <li><a href="termsOfService.html">Terms of Service</a></li>
     <li><a href="privacyPolicy.html">Privacy Policy</a></li>
     <li><a href="accountDeletion.html">Account Deletion Instructions</a></li>
+    <li><a href="https://rmichels.com/tourguide">Read More about Tourguide</a></li>
 </ul>
 </body>
 </html>
