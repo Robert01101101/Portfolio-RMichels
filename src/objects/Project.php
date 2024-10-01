@@ -315,6 +315,8 @@ class Project
             }
         }
 
+        $query .= "ORDER BY project.project_id ASC;";
+
         //echo $query;
         
         $result = mysqli_query($connection, $query);
