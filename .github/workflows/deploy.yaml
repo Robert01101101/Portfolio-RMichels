@@ -22,6 +22,7 @@ jobs:
           exclude: |
             **/.git*
             **/.git*/**
+            **/node_modules/**
             **/_PreAssets/**
             **/scss/**
             **/subdomains/amae/**
@@ -29,3 +30,8 @@ jobs:
             **/subdomains/understandingClimateChange/**
             **/nopublicaccess/**
             **/backup/**
+            **/encryptedDrive*
+            **/prepros.config*
+            **/_DATABASE_SETUP_*
+            **/_TRANSLATION_SETUP_*
+            
