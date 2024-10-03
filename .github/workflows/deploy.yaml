@@ -15,7 +15,7 @@ jobs:
       - name: 📂 Deploy files to Hostinger via FTPS
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ftps://${{ secrets.HOSTINGER_FTPS_SERVER }}  # Use FTPS
+          server: ${{ secrets.HOSTINGER_FTPS_SERVER }}  # Use FTPS
           username: ${{ secrets.HOSTINGER_FTPS_USERNAME }}
           password: ${{ secrets.HOSTINGER_FTPS_PASSWORD }}
           protocol: ftps
