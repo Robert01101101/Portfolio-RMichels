@@ -14,7 +14,9 @@ Partial::build('projectPageLanding',
   "primaryLink" => "https://rmichels.itch.io/cyberview",
   "primaryLinkText" => "Itch.io",
   "secondaryLink" => "https://404teamnotfound561902897.wordpress.com/",
-  "secondaryLinkText" => "Development Blog"]);
+  "secondaryLinkText" => "Development Blog",
+  "tertiaryLink" => "https://cyberview.rmichels.com",
+  "tertiaryLinkText" => "Play Online (WebGL Beta)"]);
 
 Partial::build('projectPageMeta', ["project" => $project]);
 
