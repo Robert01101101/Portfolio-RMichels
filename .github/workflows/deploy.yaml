@@ -22,7 +22,7 @@ jobs:
           dry-run: true
           log-level: verbose
           exclude: |
-          **/.git*
-          **/.git*/**
-          **/_PreAssets/**
-          **/scss/**
+            **/.git*
+            **/.git*/**
+            **/_PreAssets/**
+            **/scss/**
