@@ -19,10 +19,13 @@ jobs:
           username: ${{ secrets.HOSTINGER_FTPS_USERNAME }}
           password: ${{ secrets.HOSTINGER_FTPS_PASSWORD }}
           protocol: ftps
-          dry-run: true
-          log-level: verbose
           exclude: |
             **/.git*
             **/.git*/**
             **/_PreAssets/**
             **/scss/**
+            **/subdomains/amae/**
+            **/subdomains/harbingersofdeath/**
+            **/subdomains/understandingClimateChange/**
+            **/nopublicaccess/**
+            **/backup/**

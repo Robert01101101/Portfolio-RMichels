@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>404 | Robert Michels Portfolio</title>
+  <style>
+    /* Error Page CSS */
+    header {
+      grid-row: 1/2;
+      position: fixed;
+      left: 0;
+    }
+    header nav {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      pointer-events: none;
+    }
+    header a {
+      background-color: transparent;
+    }
+    header a i {
+      color: #ffffff;
+      font-size: 1.1em;
+      font-weight: 900;
+    }
+    header li {
+      display: inline-block;
+      vertical-align: middle;
+      z-index: 999;
+      pointer-events: auto;
+      line-height: 1.65;
+    }
+    header ul {
+      margin: 0;
+      padding: 0.5rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    body {
+      background-color: #222222;
+      color: white;
+      font-family: 'Roboto', sans-serif;
+      font-size: 20px;
+    }
+    #MainGrid {
+      grid-template-rows: 3.2rem auto;
+    }
+    h1 {
+      font-size: 2em;
+      font-weight: 700;
+      margin-top: 0;
+    }
+    .errorPanel {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: max(16vw, 300px); 
+        height: max(15vw, 410px); 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    div {
+        display: block;
+    }
+    @media (min-width:576px) { 
+      .errorPanel {
+        width: max(12vw, 220px); 
+        height: max(12vw, 280px);
+      }
+    }
+    @media (min-width:992px) { 
+      body {
+        font-size: 20px;
+      }
+      h1 {
+        font-size: 4rem;
+      } 
+      .errorPanel {
+        width: max(16vw, 300px); 
+        height: max(15vw, 410px);
+      }
+    }
+    .backLink {
+        text-decoration: none;
+        font-size: 1.5em;
+        font-weight: 700;
+        display: inline-block;
+        background-color: transparent;
+        cursor: pointer;
+        color: white;
+        border: none;
+        width: 8em;
+        display: flex;
+        justify-content: flex-start;
+        padding: 0;
+        position: relative;
+        margin: 1em 0;
+    }
+    .backLink:before {
+        white-space: pre;
+        content: "<    ";
+        color: white;
+        transition: 0.5s;
+        text-decoration: none!important;
+        position: absolute;
+        left: -2.95rem;
+    }
+    .backLink:hover {
+        text-decoration: underline;
+    }
+    .backLink:hover:before {
+        text-decoration: none !important;
+        left: -3.40rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="MainGrid">
+    <!-- HEADER -->
+    <header>
+      <nav>
+        <ul>
+          <li class="homeIcon"><a title="Home" href="https://www.rmichels.com"><i class="fas fa-home"></i></a></li>          
+        </ul>
+      </nav>
+    </header>
+    <!-- CONTENT -->
+    <main id="Content">
+      <div class="errorPanel">
+        <h1>Oops!</h1>
+        <p>Looks like this page got lost in the void of the backlog...</p>
+        <p>404 - Page Not Found</p>
+        <button class="backLink" onclick="history.back()">Go Back</button>
+      </div>
+    </main>
+  </div>
+ 
+</body>
+</html>
