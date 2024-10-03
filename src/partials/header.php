@@ -58,22 +58,33 @@ $GLOBALS['english'] = $lang != 'de_DE';
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <?php if(isset($project)) : ?>
-    <meta name="description" content="<?php echo $project->getName() ?> (<?php echo $project->getType() ?>) | Robert Michels Portfolio | I’m Robert Michels, a designer and developer from Vancouver. I design and program games, websites, and apps. ">
+    <meta name="description" content="<?php echo $project->getName() ?> (<?php echo $project->getType() ?>) | Robert Michels Portfolio | I’m Robert Michels, a designer and developer from Vancouver. I design and program games, websites, and apps.">
+    <meta property="og:description" content="<?php echo $project->getName() ?> (<?php echo $project->getType() ?>) | Robert Michels Portfolio | I’m Robert Michels, a designer and developer from Vancouver. I design and program games, websites, and apps."/>
     <title><?php echo $project->getName() ?> | Robert Michels Portfolio</title>
+    <meta property="og:title" content="<?php echo $project->getName() ?> | Robert Michels Portfolio" />
 
   <?php elseif(isset($projects)) : ?>
     <meta name="description" content="Browse through all my projects. Filter them to only see relevant projects. | Robert Michels Portfolio">
+    <meta name="og:description" content="Browse through all my projects. Filter them to only see relevant projects. | Robert Michels Portfolio">
     <title>All Projects | Robert Michels Portfolio</title>
+    <meta property="og:title" content="All Projects | Robert Michels Portfolio" />
 
-    <?php elseif(isset($about)) : ?>
+  <?php elseif(isset($about)) : ?>
     <meta name="description" content="Who is this Robert Michels? I'm a digital media designer and developer from Vancouver. I design and program games, websites, and apps.">
+    <meta name="og:description" content="Who is this Robert Michels? I'm a digital media designer and developer from Vancouver. I design and program games, websites, and apps.">
     <title>About | Robert Michels Portfolio</title>
+    <meta property="og:title" content="About | Robert Michels Portfolio" />
 
   <?php else : ?>
     <meta name="description" content="I’m Robert Michels, a designer and developer from Vancouver. I design and program games, websites, and apps. | Robert Michels Portfolio">
+    <meta name="og:description" content="I’m Robert Michels, a designer and developer from Vancouver. I design and program games, websites, and apps. | Robert Michels Portfolio">
     <title>Portfolio | Robert Michels</title>
+    <meta property="og:title" content="Portfolio | Robert Michels" />
 
   <?php endif; ?>
+
+  <meta property="og:image" content="https://rmichels.com/assets/img/portfolio.jpg" />
+
 
 
 
