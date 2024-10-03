@@ -1,5 +1,7 @@
 # Portfolio-RMichels
 
+[<img alt="Deployed with FTP Deploy Action" src="https://img.shields.io/badge/Deployed With-FTP DEPLOY ACTION-%3CCOLOR%3E?style=for-the-badge&color=228c8c">](https://github.com/SamKirkland/FTP-Deploy-Action)
+
 [Hosted Portfolio Website](https://rmichels.com)
 
 ## About

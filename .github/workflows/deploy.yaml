@@ -21,3 +21,9 @@ jobs:
           protocol: ftps
           dry-run: true
           log-level: verbose
+          exclude: |
+          **/.git*
+          **/.git*/**
+          **/_PreAssets/**
+          **/scss/**
+          fileToExclude.txt
