@@ -3,7 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tourguide</title>
+
+  <meta name="description" content="Tourguide is your ultimate travel companion for discovering and creating tours. Explore the world, plan your itinerary, and get AI-powered recommendations.">
+  <meta name="keywords" content="tour guide, travel app, itinerary planner, tours, travel destinations, AI travel assistant, create tours, sightseeing">
+  <meta property="og:title" content="Tourguide - Discover and Create Tours Worldwide">
+  <meta property="og:description" content="Unlock a world of discovery with Tourguide. Explore user-created tours, get AI-powered assistance, and plan your perfect travel experience.">
+  <meta property="og:image" content="../../assets/other/tourguide-og-image.jpg">
+  <meta property="og:url" content="https://tourguide.rmichels.com">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tourguide - Discover and Create Tours Worldwide">
+  <meta name="twitter:description" content="Plan your itinerary and explore the world with Tourguide's AI-powered travel assistant and user-created tours.">
+  <meta name="twitter:image" content="../../assets/other/tourguide-og-image.jpg">
+
+  <title>Tourguide - Discover and Create Tours</title>
   <link rel="stylesheet" href="css/main.css">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400&family=Vollkorn:wght@400&display=swap" rel="stylesheet">
 </head>
