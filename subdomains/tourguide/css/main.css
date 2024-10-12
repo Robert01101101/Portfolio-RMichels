@@ -1,16 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&family=Vollkorn:wght@400&display=swap');
 
 html {
-  font-size: .6rem;
+  font-size: .5rem;
 }
 
 @media (min-width: 1200px) {
+  html {
+    font-size: .7rem;
+  }
+}
+
+@media (min-width: 1800px) {
   html {
     font-size: .8rem;
   }
 }
 
-@media (min-width: 1800px) {
+@media (min-width: 2200px) {
   html {
     font-size: 1rem;
   }
@@ -26,7 +32,7 @@ body {
 
 main {
   margin: 0;
-  padding: 6rem 24rem;
+  padding: 2rem 4rem;
   z-index: 1;
   position: relative;
 }
@@ -44,6 +50,7 @@ a {
 
 a:hover {
   text-decoration: underline;
+  color: #05837c;
 }
 
 .img-fullscreen {
@@ -52,30 +59,27 @@ a:hover {
   top: 0;
   z-index:0;
   vertical-align: top;
+  height: 180%;
+  object-fit: cover;
+  object-position: right top;
 }
 
-@media (max-aspect-ratio: 16/14) {
-  .img-fullscreen {
-    height: 100%;
-    object-fit: cover;
-  }
-}
 
 section#landing {
   width: 100%;
-  height: calc(100vh - 6rem);
+  min-height: calc(100vh - 6rem);
   color: #003734;
+}
+
+section#landing > .row {
   justify-content: space-between;
+  flex-direction: column;
   gap: 2rem;
 }
 
 section#landing img {
-  max-height: 80vh;
+  max-height: 50vh;
   max-width: 100%;
-}
-
-section#documents{
-  background-color: wheat;
 }
 
 .row {
@@ -98,13 +102,9 @@ section#documents{
   font-weight: 500;
 }
 
-@media (min-width: 1200px) {
-  .hero-wrapper{
-    max-width: 40%;
-  }
+.hero-wrapper {
+  align-items: center;
 }
-
-
 
 .hero-wrapper > * {
   margin-bottom: 2.25rem;
@@ -117,11 +117,12 @@ section#documents{
   border-radius: 10rem;
   font-size: 1.5rem;
   font-weight: bold;
+  text-decoration: none;
 }
 
-.hero-button a {
+.hero-button:hover {
+  background-color: #05837c;
   color: white;
-  text-decoration: none;
 }
 
 .hero-wrapper > h1 {
@@ -132,4 +133,89 @@ section#documents{
 
 .gap {
   gap: 1rem;
+}
+
+.img-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.glass-container {
+  font-size: 2rem;
+
+   /* Background and blur effect */
+   background: rgba(255, 255, 255, 0.45); /* Semi-transparent white */
+   backdrop-filter: blur(14px); /* Blurs the background behind the div */
+   -webkit-backdrop-filter: blur(14px); /* Safari support */
+   
+   /* Border and shadow */
+   border-radius: 15px; /* Rounded corners */
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+   
+   /* Padding and dimensions */
+   padding: 2rem;
+
+   color: #003734;
+
+   margin-top: 5rem;
+}
+
+@media (min-width: 1200px) {
+  .hero-wrapper{
+    max-width: 40%;
+  }
+
+  main {
+    padding: 6rem 20rem;
+  }
+
+  section#landing > .row {
+    flex-direction: row;
+  }
+
+  .hero-wrapper {
+    align-items: start;
+  }
+
+  section#landing img {
+    max-height: 60vh;
+    max-width: 100%;
+  }
+
+  .glass-container {
+    padding: 4rem 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+  }
+}
+
+@media (min-width: 1800px) {
+  .hero-wrapper{
+    max-width: 45%;
+  }
+
+  main {
+    padding: 10rem 22rem;
+  }
+
+  section#landing img {
+    max-height: 70vh;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 2200px) {
+  section#landing img {
+    max-height: 80vh;
+  }
+
+  main {
+    padding: 6rem 24rem;
+  }
+
+  .hero-wrapper{
+    max-width: 40%;
+  }
 }
