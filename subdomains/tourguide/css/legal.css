@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&family=Vollkorn:wght@400&display=swap');
+
+html, body {
+    font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #003734;
+}
+
+a {
+    color: #006a65;
+    text-decoration: none;
+}
+
+body {
+    padding: 5% 15%;
+}
