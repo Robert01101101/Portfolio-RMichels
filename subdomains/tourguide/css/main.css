@@ -144,7 +144,7 @@ section#landing img {
   font-size: 2rem;
 
    /* Background and blur effect */
-   background: rgba(255, 255, 255, 0.45); /* Semi-transparent white */
+   background: rgba(255, 255, 255, 0.6); /* Semi-transparent white */
    backdrop-filter: blur(14px); /* Blurs the background behind the div */
    -webkit-backdrop-filter: blur(14px); /* Safari support */
    
@@ -218,4 +218,17 @@ section#landing img {
   .hero-wrapper{
     max-width: 40%;
   }
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+li {
+  margin-bottom: 0.5rem;
 }

@@ -41,7 +41,6 @@
     </section>
 
     <section id='documents' class="glass-container">
-      <p>Helpful Links</p>
       <ul>
           <li><a href="communityGuidelines.html">Community Guidelines</a></li>
           <li><a href="termsOfService.html">Terms of Service</a></li>
