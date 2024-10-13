@@ -19,9 +19,19 @@
   <title>Tourguide - Discover and Create Tours</title>
   <link rel="stylesheet" href="css/main.css">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400&family=Vollkorn:wght@400&display=swap" rel="stylesheet">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="favicon/favicon-48x48.png" sizes="48x48" />
+  <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+  <link rel="shortcut icon" href="favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/avicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Tourguide" />
+  <link rel="manifest" href="favicon/site.webmanifest" />
 </head>
 <body>
-  <img src="img/stephan-valentin-rwFQP0L2Xl4-unsplash-sml-crp.png" alt="Unsplash - Stéphan Valentin - city-buildings-near-sea-under-white-clouds-during-daytime-rwFQP0L2Xl4" class="img-fullscreen">
+  <div class="img-fullscreen-container">
+    <img src="img/stephan-valentin-rwFQP0L2Xl4-unsplash-sml-crp.png" alt="Unsplash - Stéphan Valentin - city-buildings-near-sea-under-white-clouds-during-daytime-rwFQP0L2Xl4" class="img-fullscreen">
+  </div>
   <main>
     <section id='landing'>
       <div class="row">
@@ -40,15 +50,38 @@
       </div>
     </section>
 
-    <section id='documents' class="glass-container">
-      <ul>
-          <li><a href="communityGuidelines.html">Community Guidelines</a></li>
-          <li><a href="termsOfService.html">Terms of Service</a></li>
-          <li><a href="privacyPolicy.html">Privacy Policy</a></li>
-          <li><a href="accountDeletion.html">Account Deletion Instructions</a></li>
-          <li><a href="https://rmichels.com/tourguide">Read More about Tourguide</a></li>
-      </ul>
-    </section>
+    <div class="glass-container">
+      <section id='features' class="column">
+        <h2>Features</h2>
+        <div class="row">
+          <div class="column">
+            <img src="img/features1.svg" alt="Discover Tours">
+            <h3>Discover Tours</h3>
+            <p>Explore tours created by our community. Know what to expect, what's special, and how to best experience a destination.</p>
+          </div>
+          <div class="column">
+            <img src="img/features2.svg" alt="Create Tours">
+            <h3>Contribute</h3>
+            <p>Create tours, add your personal insights and share them with our community. Review tours and give your comments.</p>
+          </div>
+          <div class="column">
+            <img src="img/features3.svg" alt="Get AI-Powered Recommendations">
+            <h3>AI-Powered Recommendations</h3>
+            <p>Chat with the AI tour guide and get recommendations for your tours and destinations.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id='documents'>
+        <ul>
+            <li><a href="communityGuidelines.html">Community Guidelines</a></li>
+            <li><a href="termsOfService.html">Terms of Service</a></li>
+            <li><a href="privacyPolicy.html">Privacy Policy</a></li>
+            <li><a href="accountDeletion.html">Account Deletion Instructions</a></li>
+            <li><a href="https://rmichels.com/tourguide">Read More about Tourguide</a></li>
+        </ul>
+      </section>
+    </div>
   </main>
 </body>
 </html>
