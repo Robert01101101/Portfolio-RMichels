@@ -10,7 +10,7 @@ Partial::build('header', ["project" => $project]);
 
 Partial::build('projectPageLanding', 
   ["project" => $project, 
-  "description" =>  _("Future Earth is a VR adventure game set in a dystopian future, where the player has to grow trees, fight droids and collect parts."),
+  "description" =>  _("Future Earth is a VR adventure game set in a dystopian future, where the player has to grow trees, fight droids and collect parts. Achieved over 3,000 downloads and 4 stars on SideQuest."),
   "primaryLink" => "https://sidequestvr.com/app/2597/future-earth",
   "primaryLinkText" => "SideQuest",
   "secondaryLink" => "https://404teamnotfound444314077.wordpress.com/",
@@ -64,6 +64,7 @@ Partial::build('projectPageMeta', ["project" => $project]);
     <p><?php echo _("But that isn't an easy feat. Climate change and unsustainable human habits have created a toxic wasteland. And to make things worse, robots left behind to clean up, have fried in the sun and turned dangerous over time. Fight these bots, collect technical components, build sustainable technology and become the one to save the world!"); ?></p>
     <h3><?php echo _("Success"); ?></h3>
     <p><?php echo _("Our project won best overall project, best interaction design, project for impact, and best VR/AR in our class."); ?></p>
+    <p><?php echo _("We're proud to have achieved over 3,000 downloads and a 4 star rating with our release to SideQuest."); ?></p>
   </section>
 
   <!----- Content / Video ----->
