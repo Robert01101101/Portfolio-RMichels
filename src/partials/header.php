@@ -53,7 +53,6 @@ $GLOBALS['english'] = $lang != 'de_DE';
     }
   </script>
   <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script> 
-  <script src="<?php echo $GLOBALS['d'];?>js/lenisSetup-min.js?v=1.0.0"></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -156,3 +155,4 @@ $GLOBALS['english'] = $lang != 'de_DE';
       <!-- #################################### CONTENT ###################################### -->
       <main id="Content">
       <script src="<?php echo $GLOBALS['d'];?>js/menu-min.js?v=1.0.0"></script>
+      <script src="<?php echo $GLOBALS['d'];?>js/lenisSetup-min.js?v=1.0.0"></script>

@@ -195,3 +195,38 @@ ul.icons {
 		right: calc(16.46vw + 1rem);
 	}
 }
+
+.toggle-label {
+	display: flex;
+	align-items: center;
+	margin: .75rem 0;
+	cursor: pointer;
+  }
+  
+  .toggle-label input[type="checkbox"] {
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	width: 14px;
+	height: 14px;
+	border: 2px solid white;
+	margin-right: .4rem;
+	position: relative;
+	cursor: pointer;
+  
+	&:checked {
+	  background-color:  _colour(blue);
+	  border-color:  _colour(blue);
+  
+	  &::after {
+		content: '\2714';
+		font-size: 14px;
+		color: white;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	  }
+	}
+  }
+  
