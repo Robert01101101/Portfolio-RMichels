@@ -1,21 +1,18 @@
-//window.addEventListener("scroll", updateArrow);
 var downArrow = document.getElementById('downArrow');
 
 window.addEventListener('load', () => {
-    if (window.locoScroll && downArrow) {
-      window.locoScroll.on('scroll', (args) => {
-        updateArrow(args.scroll);
-      });
-    }
+  if (window.lenis && downArrow) {
+    window.lenis.on('scroll', (args) => {
+      updateArrow(args);
+    });
+  }
 });
 
-//_________________________________________ on Scroll
 function updateArrow(ev) {
-    const scrollY = ev.y || window.scrollY;
-	if (scrollY > window.innerHeight * 0.6) { 
-        //console.log("hide");
-        downArrow.classList.add("hide");
-    } else {
-        downArrow.classList.remove("hide");
-    }
+  const scrollY = ev.animatedScroll;
+  if (scrollY > window.innerHeight * 0.6) { 
+    downArrow.classList.add("hide");
+  } else {
+    downArrow.classList.remove("hide");
+  }
 }

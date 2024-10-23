@@ -380,15 +380,15 @@ initializePerlin();
 
 //_____________ SCROLL
 window.addEventListener('load', () => {
-  if (window.locoScroll) {
-    window.locoScroll.on('scroll', (args) => {
-      scrollUpdate(args.scroll);
+  if (window.lenis) {
+    window.lenis.on('scroll', (args) => {
+      scrollUpdate(args);
     });
   }
 });
 function scrollUpdate(ev) {
   if (ev == null) return;
-  const scrollY = ev.y || window.scrollY;
+  const scrollY = ev.animatedScroll;
   if (canvas){
     // Get the bounding client rect of the canvas
     const canvasRect = canvas.getBoundingClientRect();

@@ -1,0 +1,1 @@
+const lenis=new Lenis;function raf(n){lenis.raf(n),requestAnimationFrame(raf)}lenis.on("scroll",(n=>{console.log(n)})),requestAnimationFrame(raf);

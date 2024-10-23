@@ -88,9 +88,9 @@ function waves () {
 		//window.addEventListener("scroll", updateCamera);
 		//
 		window.addEventListener('load', () => {
-			if (window.locoScroll) {
-			  window.locoScroll.on('scroll', (args) => {
-				updateCamera(args.scroll);
+			if (window.lenis) {
+			  window.lenis.on('scroll', (args) => {
+				updateCamera(args);
 			  });
 			}
 		});
@@ -102,10 +102,8 @@ function waves () {
 	//_________________________________________ on Scroll
 	function updateCamera(ev) {
 		if (ev == null) return;
-		const scrollY = ev.y || window.scrollY;
-	    camera.position.y = (docHeight - scrollY + 100);//+ 100;
-	    //console.log("scroll: " + scrollY + ", docHeight: " + docHeight + ", window.innerWidth: " + window.innerWidth + ", window.innerHeight: " + window.innerHeight + ", camera.position " + camera.position.x + ", " + camera.position.y + ", " + camera.position.z);
-
+		const scrollY = ev.animatedScroll;
+		camera.position.y = (docHeight - scrollY + 100);
 
 	    //camera.position.y = (docHeight - window.scrollY) ;//+ 100;
 	    //console.log("scroll: " + window.scrollY);

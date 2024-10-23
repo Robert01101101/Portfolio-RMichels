@@ -52,8 +52,8 @@ $GLOBALS['english'] = $lang != 'de_DE';
       });
     }
   </script>
-  <script src="js/locomotive-scroll.min.js"></script>
-  <script src="<?php echo $GLOBALS['d'];?>js/locoScrollSetup-min.js?v=1.0.3"></script>  
+  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script> 
+  <script src="<?php echo $GLOBALS['d'];?>js/lenisSetup-min.js?v=1.0.0"></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -90,7 +90,7 @@ $GLOBALS['english'] = $lang != 'de_DE';
 
   <link rel="stylesheet" href="<?php echo $GLOBALS['d'];?>css/normalize.css">
   <link rel="stylesheet" href="<?php echo $GLOBALS['d'];?>css/main.css?v=1.2.1">
-  <link rel="stylesheet" href="<?php echo $GLOBALS['d'];?>css/locomotive-scroll.css">
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.14/dist/lenis.css">
   
 
   <!-- Load Font -->
