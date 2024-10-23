@@ -106,7 +106,7 @@
     <script src="<?php echo $GLOBALS['d'];?>js/three/threeJsMockup-min.js?v=1.0.3"></script>
   <?php endif; ?>
   
-
+  <script src="<?php echo $GLOBALS['d'];?>js/projectTile.js?v=1.0.0"></script>
   <script src="<?php echo $GLOBALS['d'];?>js/other-min.js?v=1.0.1"></script>
   
 

@@ -24,7 +24,7 @@ $GLOBALS['english'] = $lang != 'de_DE';
 ?>
 
 <!DOCTYPE html>
-<html lang="en" class="no-scroll">
+<html lang="en">
 
 <!-- #################################### HEAD ###################################### --> 
 <head>
@@ -110,11 +110,11 @@ $GLOBALS['english'] = $lang != 'de_DE';
 </head>
 
 <body>
-  <div data-scroll-container>
+  <div>
     <div id="MainGrid">
       <!-- ##################################### HEADER ###################################### -->
       <header>
-        <nav data-scroll data-scroll-sticky data-scroll-target="#MainGrid">
+        <nav>
           <ul>
             <?php if(isset($project) || isset($about)) : ?>
               <li class="homeIcon"><a title="Home" href="/<?php if(isset($_COOKIE['visitorFilter'])){ echo "?filter=".$_COOKIE['visitorFilter']; } ?>"><i class="fa-solid fa-house"></i></a></li>

@@ -9,7 +9,7 @@ Partial::build('header');
 ?>
 
 
-<div class="downArrowWrapper"><div class="downArrow forceHide hide"  id="downArrow"><a data-scroll-to href="#MyWork" title="View Projects"><i class="fa-solid fa-chevron-down"></i></a></div></div>
+<div class="downArrowWrapper"><div class="downArrow forceHide hide"  id="downArrow"><a  href="#MyWork" title="View Projects"><i class="fa-solid fa-chevron-down"></i></a></div></div>
 <canvas id="threeModel"></canvas>
 <!--<canvas class="cropCanvas"></canvas>-->
 <div class="landingImageWrapper"><img src="assets/img/landingModel.png" id="landingModelImage"></img></div>
