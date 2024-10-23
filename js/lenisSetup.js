@@ -81,7 +81,7 @@ window.addEventListener('resize', updateScrollSpeedForScreenSize);
 
 
 // Initialize Lenis
-const lenis = new Lenis();
+window.lenis = new Lenis();
 
 // Listen for the scroll event and log the event data
 lenis.on('scroll', (e) => {
