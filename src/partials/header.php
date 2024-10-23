@@ -89,7 +89,7 @@ $GLOBALS['english'] = $lang != 'de_DE';
 
 
   <link rel="stylesheet" href="<?php echo $GLOBALS['d'];?>css/normalize.css">
-  <link rel="stylesheet" href="<?php echo $GLOBALS['d'];?>css/main.css?v=1.2.1">
+  <link rel="stylesheet" href="<?php echo $GLOBALS['d'];?>css/main.css?v=1.2.2">
   <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.14/dist/lenis.css">
   
 
