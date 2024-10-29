@@ -83,16 +83,16 @@ $GLOBALS['english'] = $lang != 'de_DE';
   <?php endif; ?>
 
   <meta property="og:image" content="https://rmichels.com/assets/img/portfolio.jpg" />
-
-
-
-
   <link rel="stylesheet" href="<?php echo $GLOBALS['d'];?>css/normalize.css">
-  <link rel="stylesheet" href="<?php echo $GLOBALS['d'];?>css/main.css?v=1.2.2">
+  <link rel="stylesheet" href="<?php echo $GLOBALS['d'];?>css/main.css?v=1.2.3">
   <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.14/dist/lenis.css">
   
 
   <!-- Load Font -->
+  <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+  <link rel='preload' as='style' href='https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&family=Roboto+Mono:wght@300;700&display=swap'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&family=Roboto+Mono:wght@300;700&display=swap'>
+
   <!-- Load Icons -->
   <script src="https://kit.fontawesome.com/cbd0a6dcda.js" crossorigin="anonymous"></script>
 

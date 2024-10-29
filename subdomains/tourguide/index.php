@@ -17,8 +17,11 @@
   <meta name="twitter:image" content="../../assets/other/tourguide-og-image.jpg">
 
   <title>Tourguide - Discover and Create Tours</title>
-  <link rel="stylesheet" href="css/main.css">
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400&family=Vollkorn:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css?v=1.0.2">
+
+  <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+  <link rel='preload' as='style' href='https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&family=Vollkorn:wght@400&display=swap'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&family=Vollkorn:wght@400&display=swap'>
 
   <!-- Favicons -->
   <link rel="icon" type="image/png" href="favicon/favicon-48x48.png" sizes="48x48" />
