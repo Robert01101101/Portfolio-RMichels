@@ -31,7 +31,9 @@ Partial::build('projectPageMeta', ["project" => $project]);
   <!----- Content / Text ----->
   <section class="sectionText mockup hololens">
     <canvas id="threeModel" class="inText hololens" mockup-hololens></canvas>
-    <div id="spinner"></div>
+    <div id="spinner" class="spinnerContainer">
+      <div class="fancySpinner"></div>
+    </div>
     <figcaption><?php echo _("Scan View (HoloLens 2)"); ?></figcaption>
   </section>
 

@@ -84,7 +84,7 @@ $GLOBALS['english'] = $lang != 'de_DE';
 
   <meta property="og:image" content="https://rmichels.com/assets/img/portfolio.jpg" />
   <link rel="stylesheet" href="<?php echo $GLOBALS['d'];?>css/normalize.css">
-  <link rel="stylesheet" href="<?php echo $GLOBALS['d'];?>css/main.css?v=1.2.3">
+  <link rel="stylesheet" href="<?php echo $GLOBALS['d'];?>css/main.css?v=1.2.4">
   <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.14/dist/lenis.css">
   
 

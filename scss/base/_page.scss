@@ -145,6 +145,36 @@ main {
 	}
 }
 
+.spinnerContainer {
+	position: absolute;
+	top: calc(40% - 30px);
+	left: calc(50% - 30px);
+	transform: translate(calc(-50% + 30px), calc(-50% + 30px));
+	z-index: 1000; /* Ensure it's above other elements */
+}
+.fancySpinner {
+	width: 2rem;
+	height: 2rem;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	border: 8px solid;
+	border-color: _colour(blue) #0000;
+	animation: l1 1s infinite;
+}
+@keyframes l1 {to{transform: rotate(.5turn)}}
+
+
+
+
+
+
+
+
+
+
+
+
+
 ::-webkit-scrollbar {
 	width: 10px;
 }

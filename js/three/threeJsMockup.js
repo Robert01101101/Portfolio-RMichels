@@ -389,7 +389,7 @@ window.addEventListener('load', () => {
 function scrollUpdate(ev) {
   if (ev == null) return;
   const scrollY = ev.animatedScroll;
-  if (canvas){
+  if (canvas && mockupMesh){
     // Get the bounding client rect of the canvas
     const canvasRect = canvas.getBoundingClientRect();
     // Calculate the scroll position relative to the scroll container

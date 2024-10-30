@@ -7,6 +7,8 @@ var scene = new THREE.Scene();
 var canvas = document.querySelector('#threeModel');
 var renderer = new THREE.WebGLRenderer({canvas, alpha:true, antialias:true});//, preserveDrawingBuffer: true}); // SAVE IMAGE
 var tmpImage = document.getElementById('landingModelImage');
+var tmpSpinner = document.getElementById('spinner');
+var doneLoading = false;
 
 
 //_____________________________________________________________________ PARTICLES _______________________________________________
@@ -15,6 +17,14 @@ var mesh;
 
 var loader = new THREE.GLTFLoader();
 loader.load( '/assets/models/me_v2.glb', handle_load);
+
+//show spinner after 100ms if model hasn't finished loading
+setTimeout(function(){
+  if(!doneLoading){
+    tmpSpinner.style.display = "flex";
+  }
+}, 100);
+
 
 function handle_load(gltf){
   mesh = gltf.scene.children[0];
@@ -28,11 +38,14 @@ function handle_load(gltf){
   
   //console.log("model finished loading");
   tmpImage.style.display = "none";
+  tmpSpinner.style.display = "none";
 
 
   scene.add(mesh);
 
   handle_particles();
+
+  doneLoading = true;
 }
 
 
@@ -88,7 +101,7 @@ function handle_particles(){
 //_____________________________________________________________________ DEFINE CAMERA
 var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 camera.position.z = (window.innerWidth > smBreakPoint) ? 11 : 15;
-camera.position.y = 4;
+camera.position.y = 0;
 camera.rotation.x = -Math.PI / 5;
 
 
@@ -132,10 +145,10 @@ var windowHalfY = window.innerHeight / 4;
 document.addEventListener( 'mousemove', onDocumentMouseMove, false );
 
 function onDocumentMouseMove( event ) {
+  if (!doneLoading) return;
 
   mouseX = (windowHalfX - event.clientX)/230;
   mouseY = (windowHalfY - event.clientY)/230;
-
 }
 
 
@@ -153,8 +166,8 @@ function animate() {
 	/////////////////////////////Animate (only if mesh assigned)
 	if (camera){
 		//camera.position.y -= 0.002;
-    camera.position.x += ( mouseX - camera.position.x ) * .05;
-    camera.position.y += ( - mouseY - camera.position.y ) * .05;
+    camera.position.x += ( mouseX - camera.position.x ) * .015;
+    camera.position.y += ( - mouseY - camera.position.y ) * .015;
     camera.lookAt( scene.position );
 	}
 

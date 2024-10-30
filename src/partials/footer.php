@@ -100,14 +100,14 @@
   <script src="<?php echo $GLOBALS['d'];?>js/three/waves-min.js?v=1.0.5"></script>
 
   <?php if(isset($index)) : ?>
-    <script src="<?php echo $GLOBALS['d'];?>js/three/landingModel-min.js?v=1.0.1"></script>
+    <script src="<?php echo $GLOBALS['d'];?>js/three/landingModel-min.js?v=1.0.2"></script>
     <script src="<?php echo $GLOBALS['d'];?>js/textAnim-min.js?v=1.0.1"></script>
   <?php endif; ?>
   
 
   <?php if(!isset($index) && !isset($projects)) : ?>
     <script src="<?php echo $GLOBALS['d'];?>js/imageViewer-min.js?v=1.0.3"></script>
-    <script src="<?php echo $GLOBALS['d'];?>js/three/threeJsMockup-min.js?v=1.0.4"></script>
+    <script src="<?php echo $GLOBALS['d'];?>js/three/threeJsMockup-min.js?v=1.0.5"></script>
   <?php endif; ?>
   
   <script src="<?php echo $GLOBALS['d'];?>js/projectTile.js?v=1.0.1"></script>
