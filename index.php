@@ -80,7 +80,7 @@ Partial::build('header');
 
 <!-- source: https://codepen.io/fliseno1k/pen/WNboLBy -->
 <div class="seeMoreBtn">
-  <a href="projects">
+  <a href="projects" title="See More" alt="See More">
     <span><?php echo _("See More") ?></span>
     <div class="liquid"></div>
   </a>
