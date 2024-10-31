@@ -13,6 +13,8 @@ function waves () {
 
 	var mouseX = 0, mouseY = 0;
 
+	var canvas;
+
 	var windowHalfX = window.innerWidth / 2;
 	var windowHalfY = window.innerHeight / 2;
 
@@ -79,9 +81,14 @@ function waves () {
 		//
 		//_____________________________________________________________________ INIT RENDERER
 		renderer = new THREE.WebGLRenderer( { antialias: true, alpha: true } );
+		canvas = renderer.domElement;
+		canvas.style.visibility = 'hidden';
+		canvas.classList.add('wavesCanvas');
 		renderer.setPixelRatio( window.devicePixelRatio );
 		renderer.setSize( window.innerWidth, window.innerHeight );
-		container.appendChild( renderer.domElement );
+		container.appendChild( canvas );
+
+		
 
 		//document.addEventListener( 'touchstart', onDocumentTouchStart, false );
 		//document.addEventListener( 'touchmove', onDocumentTouchMove, false );
@@ -319,6 +326,44 @@ function waves () {
 	};
 
 	animate();
+
+	showCanvasAfterFirstRenderToPreventWhiteFlash();
+
+	function showCanvasAfterFirstRenderToPreventWhiteFlash() {
+		renderer.render(scene, camera);
+		renderer.setClearColor(0x000000, 0);
+		
+		let frames = 0;
+		function waitFrames() {
+			renderer.render(scene, camera);
+			if (frames++ < 15) {
+				requestAnimationFrame(waitFrames);
+			} else {
+				//console.log('show canvas');
+				canvas.style.visibility = 'visible';
+			}
+		}
+		requestAnimationFrame(waitFrames);
+	}
+
+	// Handle Crashes
+	canvas.addEventListener('webglcontextlost', function(event) {
+		event.preventDefault(); // Prevent the default behavior (which is to stop rendering)
+		console.log("WebGL context lost!");
+
+		canvas.style.display = "none";
+	}, false);
+
+	canvas.addEventListener('webglcontextrestored', function(event) {
+		console.log("WebGL context restored!");
+
+		canvas.style.display = "";
+	}, false);
+
+
+	//// DEV
+	//setTimeout(() => renderer.forceContextLoss(), 2000); // Simulate crash after 5 seconds
+	//setTimeout(() => renderer.forceContextRestore(), 3000); // Simulate crash after 5 seconds
 }
 
 waves();

@@ -10,44 +10,27 @@ var tmpImage = document.getElementById('landingModelImage');
 var tmpSpinner = document.getElementById('spinner');
 var doneLoading = false;
 
-
-//_____________________________________________________________________ PARTICLES _______________________________________________
 //_____________________________________________________________________ LOAD MODEL
-var mesh;
-
-var loader = new THREE.GLTFLoader();
-loader.load( '/assets/models/me_v2.glb', handle_load);
-
 //show spinner after 100ms if model hasn't finished loading
 setTimeout(function(){
   if(!doneLoading){
     tmpSpinner.style.display = "flex";
   }
-}, 100);
+}, 300);
 
+var mesh;
+var loader = new THREE.GLTFLoader();
+loader.load( '/assets/models/me_v2.glb', handle_load);
 
 function handle_load(gltf){
   mesh = gltf.scene.children[0];
-
-  //assign material
-  /*mesh.material = new THREE.MeshStandardMaterial({
-    color: 0xFF0000,
-    metalness: 0, 
-    roughness: 0.5
-  });*/
-  
-  //console.log("model finished loading");
-  tmpImage.style.display = "none";
-  tmpSpinner.style.display = "none";
-
 
   scene.add(mesh);
 
   handle_particles();
 
-  doneLoading = true;
+  showCanvasAfterFirstRenderToPreventWhiteFlash();
 }
-
 
 
 //_____________________________________________________________________ SET UP PARTICLES
@@ -171,13 +154,67 @@ function animate() {
     camera.lookAt( scene.position );
 	}
 
-
-	
 	//Render
 	renderer.render( scene, camera );
 }
 
-//// SAVE IMAGE
+animate();
+
+
+function showCanvasAfterFirstRenderToPreventWhiteFlash() {
+  renderer.render(scene, camera);
+  renderer.setClearColor(0x000000, 0);
+  
+  let frames = 0;
+  //wait for frames to load, this seems to work best to prevent white flash
+  //but it's still not really what I want as it doesn't work every time
+  //and adds unneccessary delay
+  function waitFrames() {
+    frames++;
+    renderer.render(scene, camera);
+    if (frames < 20) {
+      requestAnimationFrame(waitFrames);
+    } else if (frames < 21){
+      canvas.style.display = '';
+      requestAnimationFrame(waitFrames);
+    } else if (frames < 22) {
+      canvas.style.visibility = 'visible';
+      requestAnimationFrame(waitFrames);
+    } else {
+      console.log('show canvas');
+      tmpImage.style.display = "none";
+      tmpSpinner.style.display = "none";
+      doneLoading = true;
+    }
+  }
+  requestAnimationFrame(waitFrames);
+}
+
+
+
+
+
+
+// Handle Crashes
+canvas.addEventListener('webglcontextlost', function(event) {
+    event.preventDefault(); // Prevent the default behavior (which is to stop rendering)
+    console.log("WebGL context lost!");
+
+    canvas.style.display = "none";
+    tmpImage.style.display = "";
+    // Handle the context loss (e.g., show a message, attempt to recover, etc.)
+}, false);
+
+canvas.addEventListener('webglcontextrestored', function(event) {
+  console.log("WebGL context restored!");
+
+  canvas.style.display = "";
+  tmpImage.style.display = "none";
+  // Handle the context loss (e.g., show a message, attempt to recover, etc.)
+}, false);
+
+
+//// DEV
 /*
 setTimeout(() => { 
   var screenshot = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");; 
@@ -185,8 +222,5 @@ setTimeout(() => {
   window.location.href=screenshot;  
 }, 2000);*/
 
-
-animate();
-
-
-//console.log(scene);
+//setTimeout(() => renderer.forceContextLoss(), 2000); // Simulate crash after 5 seconds
+//setTimeout(() => renderer.forceContextRestore(), 3000); // Simulate crash after 5 seconds

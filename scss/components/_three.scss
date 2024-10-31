@@ -34,7 +34,7 @@
 	width: 100vw;
 	height: 80vh;
 
-	
+	background: transparent !important;
 
 	overflow: hidden !important;
 
@@ -125,6 +125,11 @@
 .waves {
 	@include fullscreen;
 	z-index: -20;
+}
+
+.wavesCanvas {
+	@include fullscreen();
+	background: transparent !important;
 }
 
 .cursor {
