@@ -14,7 +14,7 @@ var doneLoading = false;
 //show spinner after 100ms if model hasn't finished loading
 setTimeout(function(){
   if(!doneLoading){
-    tmpSpinner.style.display = "flex";
+    tmpSpinner.style.display = "";
   }
 }, 300);
 
