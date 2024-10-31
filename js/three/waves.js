@@ -366,4 +366,29 @@ function waves () {
 	//setTimeout(() => renderer.forceContextRestore(), 3000); // Simulate crash after 5 seconds
 }
 
-waves();
+function isLowPoweredDeviceWaves() {
+	// Check the number of logical processors
+	const cores = navigator.hardwareConcurrency || 1; // Default to 1 if not available
+	if (cores <= 2) {
+		return true; // Likely a low-powered device
+	}
+  
+	// Check user agent for mobile devices
+	const userAgent = navigator.userAgent.toLowerCase();
+	const isMobile = /mobile|android|iphone|ipod/.test(userAgent);
+	if (isMobile) {
+		return true; // Mobile devices are often low-powered
+	}
+  
+	// Additional checks can be added here (e.g., specific device models)
+  
+	return false; // Assume it's not a low-powered device
+  }
+
+  // Check if the device is low-powered before loading the model
+if (isLowPoweredDeviceWaves()) {
+	console.warn("Low-powered device detected. Aborting model load.");
+	// Optionally, show a message to the user or load a simpler model
+} else {
+	waves();
+}

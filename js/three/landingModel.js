@@ -9,18 +9,47 @@ var renderer = new THREE.WebGLRenderer({canvas, alpha:true, antialias:true});//,
 var tmpImage = document.getElementById('landingModelImage');
 var tmpSpinner = document.getElementById('spinner');
 var doneLoading = false;
+var lowPoweredDevice = false;
 
 //_____________________________________________________________________ LOAD MODEL
 //show spinner after 100ms if model hasn't finished loading
 setTimeout(function(){
-  if(!doneLoading){
+  if(!doneLoading && !lowPoweredDevice){
     tmpSpinner.style.display = "";
   }
 }, 300);
 
 var mesh;
 var loader = new THREE.GLTFLoader();
-loader.load( '/assets/models/me_v2.glb', handle_load);
+
+function isLowPoweredDevice() {
+  // Check the number of logical processors
+  const cores = navigator.hardwareConcurrency || 1; // Default to 1 if not available
+  if (cores <= 2) {
+      lowPoweredDevice = true;
+      return true; // Likely a low-powered device
+  }
+
+  // Check user agent for mobile devices
+  const userAgent = navigator.userAgent.toLowerCase();
+  const isMobile = /mobile|android|iphone|ipod/.test(userAgent);
+  if (isMobile) {
+      lowPoweredDevice = true;
+      return true; // Mobile devices are often low-powered
+  }
+
+  // Additional checks can be added here (e.g., specific device models)
+
+  return false; // Assume it's not a low-powered device
+}
+
+// Check if the device is low-powered before loading the model
+if (isLowPoweredDevice()) {
+  console.warn("Low-powered device detected. Aborting model load.");
+  // Optionally, show a message to the user or load a simpler model
+} else {
+  loader.load('/assets/models/me_v2.glb', handle_load);
+}
 
 function handle_load(gltf){
   mesh = gltf.scene.children[0];
@@ -181,7 +210,6 @@ function showCanvasAfterFirstRenderToPreventWhiteFlash() {
       canvas.style.visibility = 'visible';
       requestAnimationFrame(waitFrames);
     } else {
-      console.log('show canvas');
       tmpImage.style.display = "none";
       tmpSpinner.style.display = "none";
       doneLoading = true;
