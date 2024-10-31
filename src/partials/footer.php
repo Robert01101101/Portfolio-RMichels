@@ -97,10 +97,10 @@
   <script src='http://joeiddon.github.io/perlin/perlin.js'></script>
   <script src="<?php echo $GLOBALS['d'];?>js/three/build/three.min.js"></script>
   <script src="<?php echo $GLOBALS['d'];?>js/three/examples/js/loaders/GLTFLoader.js"></script>
-  <script src="<?php echo $GLOBALS['d'];?>js/three/waves-min.js?v=1.0.6"></script>
+  <script src="<?php echo $GLOBALS['d'];?>js/three/waves-min.js?v=1.0.7"></script>
 
   <?php if(isset($index)) : ?>
-    <script src="<?php echo $GLOBALS['d'];?>js/three/landingModel-min.js?v=1.0.3"></script>
+    <script src="<?php echo $GLOBALS['d'];?>js/three/landingModel-min.js?v=1.0.4"></script>
     <script src="<?php echo $GLOBALS['d'];?>js/textAnim-min.js?v=1.0.1"></script>
   <?php endif; ?>
   
