@@ -1,10 +1,16 @@
-#landingModelImage {
-	@include xl {
-		left: 25vw !important;
-		width: 100vw !important;
-	}
+.landingModelImageWrapper {
+	display: flex;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+}
 
-	@include xxl {
+#landingModelImage {
+	width: calc(25rem + 20vh + 20vw) !important;
+	left: auto !important;
+	right: auto !important;
+
+	@include xl {
 		left: 45vw !important;
 		width: 60vw !important;
 	}

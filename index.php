@@ -12,7 +12,7 @@ Partial::build('header');
 <div class="downArrowWrapper"><div class="downArrow"  id="downArrow"><a  href="#MyWork" title="View Projects"><i class="fa-solid fa-chevron-down"></i></a></div></div>
 <canvas id="threeModel" style="visibility: hidden; display: none;"></canvas>
 <!--<canvas class="cropCanvas"></canvas>-->
-<div>
+<div class="landingModelImageWrapper">
   <img src="assets/img/landingModel.webp" id="landingModelImage"></img>
   <div id="spinner" class="landingSpinner" style="display: none;">
     <div class="fancySpinner"></div>
@@ -24,7 +24,7 @@ Partial::build('header');
       <p><?php if (isset($_GET["greeting"])) {
                   echo _("Hi ".$_GET["greeting"].", <br>I'm Robert Michels.");
                 } else {
-                  echo _("Hi, I'm Robert Michels."); 
+                  echo _("Hi, I'm Robert&nbsp;Michels."); 
                 }
                 ?><br><?php echo _("I design and program"); ?><br><span
           class="txt-rotate"
