@@ -5,14 +5,22 @@ gettext also might run into caching issues on shared hosting setups and a lot of
 
 Translate using DeepL and ChatGPT
 
+Use Poedit for easier management of updates of the messages.po files
+
 
 
 SCRAPE TEXT COMMAND:
-xgettext -n about.php -n src/partials/header.php -n src/partials/footer.php -n index.php -n clirioCloud.php -n src/partials/projectPageMeta.php -n clirioScanViews.php -n clirioScanShare.php -n amae.php -n futureEarth.php -n projects.php
+xgettext -n about.php -n src/partials/header.php -n src/partials/footer.php -n index.php -n clirioCloud.php -n src/partials/projectPageMeta.php -n clirioScanViews.php -n clirioScanShare.php -n amae.php -n futureEarth.php -n projects.php -n tourguide.php
 
 CONVERT TO BINARY COMMAND:
 msgfmt messages.po
 
+TO MERGE AN EXISTING AND NEW TRANSLATION PO FILE:
+Use msgmerge: https://www.gnu.org/software/gettext/manual/html_node/msgmerge-Invocation.html
+1) Scrape text with xgettext
+2) Copy header to new file
+3) msgmerge messages.po messagesNew.po > messagesMerged.po
+4) Use Poedit to easily view and update file
 
 
 Messages header:
