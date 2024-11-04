@@ -10,7 +10,7 @@ Partial::build('header', ["project" => $project]);
 
 Partial::build('projectPageLanding', 
   ["project" => $project, 
-  "description" => "A crossplatform Flutter app that helps users explore tours with navigation, information on places, and chat with an AI tourguide. A personal project currently in development.",
+  "description" => _("A crossplatform Flutter app that helps users explore tours with navigation, information on places, and chat with an AI tourguide. A personal project currently in development."),
   //"primaryLink" => "https://play.google.com/apps/testing/com.robertmichelsdigitalmedia.tourguideapp",
   //"primaryLinkText" => "Join Google Play Testing (Beta)",
   "primaryLink" => "https://play.google.com/store/apps/details?id=com.robertmichelsdigitalmedia.tourguideapp",
@@ -33,7 +33,6 @@ Partial::build('projectPageMeta', ["project" => $project]);
 
   <!----- Content / Text ----->
   <section class="sectionText">
-    <?php if ($GLOBALS['english'] == false) echo "Dieser Bereich der Website wurde noch nicht vollständig auf Deutsch übersetzt." ?>
     <h2><?php echo _("Overview"); ?></h2>
     <p><?php echo _("While on vacation in Rome, I became frustrated with the lack of options available for free detailed tours of the city. There are websites with suggested daily schedules, Google Maps supports adding a small number of places into a route, but I couldn't find a cohesive platform combining navigation and information on the places I visit into a tour I can simply follow. Like any programmer would, I thought to myself, 'I can create an app for this!'"); ?></p>
     <p><?php echo _("I had my eye on the Flutter framework, and this seemed like the perfect opportunity to learn the Dart language and how to build a crossplatform app with Flutter."); ?></p>

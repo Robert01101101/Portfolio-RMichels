@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-13 18:19-0700\n"
-"PO-Revision-Date: 2024-11-04 15:26-0800\n"
+"PO-Revision-Date: 2024-11-04 15:33-0800\n"
 "Last-Translator: Robert Michels\n"
 "Language-Team: \n"
 "Language: de\n"
@@ -173,7 +173,7 @@ msgstr ""
 "Arbeitsbereichen und Beobachtungen sowie interaktive Bing-Karten."
 
 #: clirioCloud.php:27 clirioScanViews.php:27 clirioScanShare.php:28
-#: tourguide.php:37
+#: tourguide.php:36
 msgid "Overview"
 msgstr "Übersicht"
 
@@ -1258,7 +1258,18 @@ msgstr ""
 msgid "Filter Projects"
 msgstr "Projekte Filtern"
 
-#: tourguide.php:38
+#: tourguide.php:13
+msgid ""
+"A crossplatform Flutter app that helps users explore tours with navigation, "
+"information on places, and chat with an AI tourguide. A personal project "
+"currently in development."
+msgstr ""
+"Eine plattformübergreifende Flutter-App, die Nutzern hilft, Touren mit "
+"Navigation, Informationen über Orte und Chat mit einem KI-Tourguide zu "
+"erkunden. Ein persönliches Projekt, das sich derzeit in der Entwicklung "
+"befindet."
+
+#: tourguide.php:37
 msgid ""
 "While on vacation in Rome, I became frustrated with the lack of options "
 "available for free detailed tours of the city. There are websites with "
@@ -1277,7 +1288,7 @@ msgstr ""
 "kann. Wie jeder Programmierer dachte ich mir: 'Dafür kann ich eine App "
 "entwickeln!'"
 
-#: tourguide.php:39
+#: tourguide.php:38
 msgid ""
 "I had my eye on the Flutter framework, and this seemed like the perfect "
 "opportunity to learn the Dart language and how to build a crossplatform app "
@@ -1287,19 +1298,19 @@ msgstr ""
 "perfekte Gelegenheit zu sein, die Sprache Dart zu lernen und zu erfahren, "
 "wie man mit Flutter eine plattformübergreifende Anwendung erstellt."
 
-#: tourguide.php:45
+#: tourguide.php:44
 msgid "Current Prototype"
 msgstr "Aktueller Prototyp"
 
-#: tourguide.php:46
+#: tourguide.php:45
 msgid "Last updated on October 2, 2024"
 msgstr "Letztes Update: Oktober 2, 2024"
 
-#: tourguide.php:47
+#: tourguide.php:46
 msgid "Explore"
 msgstr "Entdecken"
 
-#: tourguide.php:48
+#: tourguide.php:47
 msgid ""
 "Explore user-created tours that are popular, close to you, or find your next "
 "destination with the highest rated tours around the world."
@@ -1308,7 +1319,7 @@ msgstr ""
 "Ihrer Nähe befinden, oder finden Sie Ihr nächstes Ziel mit den am besten "
 "bewerteten Touren auf der ganzen Welt."
 
-#: tourguide.php:49
+#: tourguide.php:48
 msgid ""
 "Get point-to-point navigation powered by Google API, and detailed "
 "descriptions for the places you'll see. Take in your destination while you "
@@ -1319,11 +1330,11 @@ msgstr ""
 "werden. Sehen Sie sich Ihr Ziel an, während Sie sich mit Text-to-Speech die "
 "Geschichte und interessante Fakten anhören."
 
-#: tourguide.php:50
+#: tourguide.php:49
 msgid "AI Tourguide"
 msgstr "KI Tourguide"
 
-#: tourguide.php:51
+#: tourguide.php:50
 msgid ""
 "Ask your AI Tourguide about the best local destinations, parks, or beaches, "
 "or get a brief overview of the history or meaning of a place. Powered by "
@@ -1333,11 +1344,11 @@ msgstr ""
 "oder Stränden oder erhalten Sie einen kurzen Überblick über die Geschichte "
 "oder Bedeutung eines Ortes. Unterstützt von Google Gemini mit Vertex AI."
 
-#: tourguide.php:52
+#: tourguide.php:51
 msgid "Contribute"
 msgstr "Beitragen"
 
-#: tourguide.php:53
+#: tourguide.php:52
 msgid ""
 "Easily create new tours to contribute to the community, using a form powered "
 "by flutter's stepper widget. Add basic info, places, details, and you're "
@@ -1348,27 +1359,27 @@ msgstr ""
 "verwenden. Fügen Sie grundlegende Informationen, Orte und Details hinzu, und "
 "schon ist die neue Tour fertig und kann erkundet werden."
 
-#: tourguide.php:54
+#: tourguide.php:53
 msgid "Profile"
 msgstr "Profil"
 
-#: tourguide.php:55
+#: tourguide.php:54
 msgid ""
 "Manage your profile settings, notification settings, and manage your account."
 msgstr ""
 "Verwalten Sie Ihre Profileinstellungen, Benachrichtigungseinstellungen und "
 "Ihr Konto."
 
-#: tourguide.php:64
+#: tourguide.php:63
 #, fuzzy
 msgid "Development History"
 msgstr "Entwicklung"
 
-#: tourguide.php:65
+#: tourguide.php:64
 msgid "Web Improvements, tts, and more - October 2, 2024"
 msgstr "Web-Verbesserungen, tts, und mehr - 2. Oktober 2024"
 
-#: tourguide.php:66
+#: tourguide.php:65
 msgid ""
 "Over the last month I spent a lot of time polishing the UX of existing "
 "features and ensuring full support for all functionality on the web. When I "
@@ -1388,7 +1399,7 @@ msgstr ""
 "Außerdem habe ich weitere Media-Queries hinzugefügt, um die "
 "Benutzeroberfläche besser an eine Vielzahl von Bildschirmgrößen anzupassen."
 
-#: tourguide.php:67
+#: tourguide.php:66
 msgid ""
 "A new feature that I added, to improve the UX of interacting with the text-"
 "to-speech (tts) feature on tours, is interactive text-to-speech, where users "
@@ -1407,7 +1418,7 @@ msgstr ""
 "ich verwendete, nicht über die Fortschrittsaktualisierungsereignisse für das "
 "Web verfügte, die ich benötigte."
 
-#: tourguide.php:68
+#: tourguide.php:67
 msgid ""
 "To fix the lack of web support for progress updates with flutter_tts, I "
 "added the missing event myself, and opened a PR. I'm hoping my change will "
@@ -1422,11 +1433,11 @@ msgstr ""
 "Paket beschloss ich, mich auch an der Erstellung meines eigenen Pakets zu "
 "versuchen. Ich erstellte und veröffentlichte das "
 
-#: tourguide.php:68
+#: tourguide.php:67
 msgid "google_maps_custom_marker"
 msgstr "google_maps_custom_marker"
 
-#: tourguide.php:68
+#: tourguide.php:67
 msgid ""
 " package, based off utility code I had written. This package helps "
 "dynamically create markers with various customizable shapes, with the option "
@@ -1436,22 +1447,22 @@ msgstr ""
 "hilft dynamisch erstellen Markierungen mit verschiedenen anpassbaren Formen, "
 "mit der Option für Etiketten."
 
-#: tourguide.php:69
+#: tourguide.php:68
 msgid "Update and release of Web App - August 27, 2024"
 msgstr "Aktualisierung und Veröffentlichung der Web-App - 27. August 2024"
 
-#: tourguide.php:70
+#: tourguide.php:69
 msgid ""
 "I'm thrilled to announce Tourguide's launch as a web app! You can find it at "
 msgstr ""
 "Ich freue mich sehr, den Start von Tourguide als Web-App bekannt zu geben! "
 "Sie finden sie unter "
 
-#: tourguide.php:70
+#: tourguide.php:69
 msgid "tourguide-firebase.web.app"
 msgstr "tourguide-firebase.web.app"
 
-#: tourguide.php:70
+#: tourguide.php:69
 msgid ""
 ". Adding web support marked a key milestone. Initial functionality worked "
 "well thanks to Flutter's cross-platform support, but there were some "
@@ -1467,11 +1478,11 @@ msgstr ""
 "auf die Verbesserung der Web-UX und die Sicherstellung der vollen "
 "Unterstützung für alle Funktionen im Web konzentrieren."
 
-#: tourguide.php:71
+#: tourguide.php:70
 msgid "Update - August 19, 2024"
 msgstr "Update  - 19. August 2024"
 
-#: tourguide.php:72
+#: tourguide.php:71
 msgid ""
 "Since moving to open testing, I've been focused on MVP UX polish and style "
 "improvements. An area of focus has been Tour Running UX/UI, which I enhanced "
@@ -1484,7 +1495,7 @@ msgstr ""
 "Benutzer reichhaltigere Karteninteraktionen zu bieten, während die Tour "
 "fortschreitet."
 
-#: tourguide.php:73
+#: tourguide.php:72
 msgid ""
 "Regarding style improvements, I reworked all hardcoded style references to "
 "use the current theme and created a theme provider and cleaned up theme "
@@ -1499,19 +1510,19 @@ msgstr ""
 "Material 3-Designstile und unterstützt den dunklen Modus. Um diesen Prozess "
 "zu unterstützen, habe ich zunächst die "
 
-#: tourguide.php:73
+#: tourguide.php:72
 msgid "Material Theme Builder"
 msgstr "Material Theme Builder"
 
-#: tourguide.php:73
+#: tourguide.php:72
 msgid ", and then built an "
 msgstr "und baute dann ein "
 
-#: tourguide.php:73
+#: tourguide.php:72
 msgid "interactive mockup in Figma"
 msgstr "interaktives Mockup in Figma"
 
-#: tourguide.php:73
+#: tourguide.php:72
 msgid ""
 ", using the very helpful Figma Material 3 Design Kit template and Material "
 "Theme Builder plugin."
@@ -1519,7 +1530,7 @@ msgstr ""
 "mit der sehr hilfreichen Vorlage Figma Material 3 Design Kit und dem Plugin "
 "Material Theme Builder."
 
-#: tourguide.php:74
+#: tourguide.php:73
 msgid ""
 "I'm happy with these changes and what I've learned about the Material Design "
 "system in the process. My goal now is to work on enhancing functionality and "
@@ -1530,11 +1541,11 @@ msgstr ""
 "Verbesserung der Funktionalität zu arbeiten und die Benutzeroberfläche "
 "weiter zu verfeinern."
 
-#: tourguide.php:75
+#: tourguide.php:74
 msgid "Update - July 29, 2024"
 msgstr "Update - 29. Juli 2024"
 
-#: tourguide.php:76
+#: tourguide.php:75
 msgid ""
 "I've made good progress and have published the app to Open Testing (Beta) on "
 "Google Play. In order to get CI/CD with fastlane and GitHub Actions up and "
@@ -1551,7 +1562,7 @@ msgstr ""
 "sperren und zu melden, sicherzustellen, dass das Löschen von Konten und "
 "Daten funktioniert, und AGB und eine Datenschutzerklärung hinzuzufügen."
 
-#: tourguide.php:77
+#: tourguide.php:76
 msgid ""
 "The last few weeks have been a great learning experience, as I got to really "
 "dig into the backend side of things, setting up email notifications and a "
@@ -1571,7 +1582,7 @@ msgstr ""
 "geschrieben, die bei Prozessen wie dem Abbestellen von E-Mails über einen "
 "Link in der E-Mail helfen."
 
-#: tourguide.php:78
+#: tourguide.php:77
 msgid ""
 "Wrapping up this work I moved on to setting up CI/CD. I had previous "
 "experience with managing CI/CD such as Azure Pipelines and XCode Cloud, but "
@@ -1591,11 +1602,11 @@ msgstr ""
 "Hauptzweig automatisch erstellt und bei Google Play bereitgestellt werden, "
 "was ziemlich toll ist."
 
-#: tourguide.php:79
+#: tourguide.php:78
 msgid "Getting Started - July 10, 2024"
 msgstr "Erste Schritte - 10. Juli 2024"
 
-#: tourguide.php:80
+#: tourguide.php:79
 msgid ""
 "The tourguide app is currently in closed testing on the Google Play store. I "
 "plan to also host it as a webapp, and possibly an iOS app if I see demand "
@@ -1606,17 +1617,17 @@ msgstr ""
 "möglicherweise eine iOS-App, wenn ich die Nachfrage nach der App sehe. Sie "
 "können "
 
-#: tourguide.php:80
+#: tourguide.php:79
 msgid "request"
 msgstr "anfragen"
 
-#: tourguide.php:80
+#: tourguide.php:79
 msgid " to join testing if you're interested in trying it out."
 msgstr ""
 " um an den Tests teilzunehmen, wenn Sie daran interessiert sind, es "
 "auszuprobieren."
 
-#: tourguide.php:81
+#: tourguide.php:80
 msgid ""
 "As of July 2024 the app has functionality for users to create a tour with "
 "waypoints, an explore page to browse these user-created tours, an AI chat "
@@ -1633,20 +1644,20 @@ msgstr ""
 "Crashlytics und Remote Config sowie Google APIs wie Places, Maps und Vertex "
 "AI, um meine App zu betreiben."
 
-#: tourguide.php:110
+#: tourguide.php:109
 msgid "Screenshots from 2024/08/04"
 msgstr "Screenshots vom 2024/08/04"
 
-#: tourguide.php:116
+#: tourguide.php:115
 msgid "What I've learned so far"
 msgstr "Was ich bis jetzt gelernt habe"
 
-#: tourguide.php:117
+#: tourguide.php:116
 msgid "Flutter has been a delight to work with. I was previously working at "
 msgstr ""
 "Es war eine Freude, mit Flutter zusammenzuarbeiten. Ich arbeitete zuvor bei "
 
-#: tourguide.php:117
+#: tourguide.php:116
 msgid ""
 ", where I was creating complex UIs with C# in Unity, a setup that's not "
 "really ideal for creating complex UIs, even less so with Clirio's apps "
@@ -1667,11 +1678,11 @@ msgstr ""
 "und einer großen Anzahl von Paketen zu arbeiten, die dabei helfen, gängige "
 "Aufgaben zu beschleunigen."
 
-#: tourguide.php:123
+#: tourguide.php:122
 msgid "To-Do's"
 msgstr "To-Do's"
 
-#: tourguide.php:124
+#: tourguide.php:123
 msgid "You can see what I still have planned on my scrum board. It's a lot :)"
 msgstr ""
 "Auf meinem Scrum Board könnt ihr sehen, was ich noch geplant habe. Es ist "
