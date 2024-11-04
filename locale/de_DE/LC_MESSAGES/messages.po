@@ -2,15 +2,17 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-13 18:19-0700\n"
-"PO-Revision-Date: 2024-06-17 HO:MI+ZONE\n"
+"PO-Revision-Date: 2024-11-04 15:26-0800\n"
 "Last-Translator: Robert Michels\n"
+"Language-Team: \n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.4\n"
 
 #: about.php:16
 msgid "About Me"
@@ -22,11 +24,15 @@ msgstr "Hallo, Ich bin Robert!"
 
 #: about.php:18
 msgid ""
-"I'm a designer, and developer from Vancouver. My inexhaustible curiosity and "
-"love for digital media led me to attend Simon Fraser University (SFU), where "
-"I earned my Bachelor's Degree of Science with a major in Interactive Arts & "
-"Technology."
-msgstr "Ich bin ein Designer und Entwickler aus Vancouver. Meine unerschöpfliche Neugier und Liebe zu digitalen Medien führten mich dazu, die Simon Fraser University (SFU) zu besuchen, wo ich meinen Bachelor of Science mit einem Schwerpunkt in Interaktiver Kunst und Technologie erworben habe."
+"I'm a software developer and designer from Vancouver. My inexhaustible "
+"curiosity and love for digital media led me to attend Simon Fraser "
+"University (SFU), where I earned my Bachelor's Degree of Science with a "
+"major in Interactive Arts & Technology."
+msgstr ""
+"Ich bin ein Software Designer und Entwickler aus Vancouver. Meine "
+"unerschöpfliche Neugier und Liebe für digitale Medien führten mich dazu, die "
+"Simon Fraser University (SFU) zu besuchen, wo ich meinen Bachelor of Science "
+"mit einem Schwerpunkt in Interaktiver Kunst und Technologie erworben habe."
 
 #: about.php:19
 msgid ""
@@ -35,13 +41,21 @@ msgid ""
 "experiences have shaped me into a designer who emphasizes a user-goal-driven "
 "approach, a developer who values scalability and accessibility, and an "
 "expert in rapid prototyping."
-msgstr "Im Laufe meiner Karriere habe ich verschiedene interaktive Anwendungen prototypisiert, entworfen und entwickelt, die alles von XR bis zur Webentwicklung abdecken. Diese Erfahrungen haben mich zu einem Designer geformt, der eine benutzerzielorientierte Herangehensweise betont, zu einem Entwickler, der Skalierbarkeit und Zugänglichkeit schätzt, und zu einem Experten im Bereich des schnellen Prototypings."
+msgstr ""
+"Im Laufe meiner Karriere habe ich verschiedene interaktive Anwendungen "
+"prototypisiert, entworfen und entwickelt, die alles von XR bis zur "
+"Webentwicklung abdecken. Diese Erfahrungen haben mich zu einem Designer "
+"geformt, der eine benutzerzielorientierte Herangehensweise betont, zu einem "
+"Entwickler, der Skalierbarkeit und Zugänglichkeit schätzt, und zu einem "
+"Experten im Bereich des schnellen Prototypings."
 
 #: about.php:20
 msgid ""
 "Contact me if you would like to make cool stuff together! I'm currently "
 "looking for work."
-msgstr "Kontaktieren Sie mich, wenn Sie gemeinsam an coolen Projekten arbeiten möchten! Derzeit bin ich auf der Suche nach Arbeit."
+msgstr ""
+"Kontaktieren Sie mich, wenn Sie gemeinsam an coolen Projekten arbeiten "
+"möchten! Derzeit bin ich auf der Suche nach Arbeit."
 
 #: about.php:23
 msgid "Say Hi:"
@@ -51,23 +65,32 @@ msgstr "Sag Hi:"
 msgid "Skills"
 msgstr "Fähigkeiten"
 
-#: about.php:46
+#: about.php:36
+msgid "Programming"
+msgstr "Programmieren"
+
+#: about.php:50
+msgid "Frameworks"
+msgstr "Frameworks"
+
+#: about.php:67 clirioCloud.php:63 clirioScanViews.php:64
+#: clirioScanShare.php:44
 msgid "Development"
 msgstr "Entwicklung"
 
-#: about.php:74
+#: about.php:98
 msgid "Other"
 msgstr "Sonstige"
 
-#: src/partials/header.php:104
+#: src/partials/header.php:135
 msgid "Featured Work"
 msgstr "Projektübersicht"
 
-#: src/partials/header.php:107
+#: src/partials/header.php:138
 msgid "About"
 msgstr "Über Mich"
 
-#: src/partials/header.php:110
+#: src/partials/header.php:141
 msgid "All Projects"
 msgstr "Alle Projekte"
 
@@ -91,35 +114,51 @@ msgstr "Urheberrecht"
 msgid "Robert Michels. All Rights Reserved."
 msgstr "Robert Michels. Alle Rechte vorbehalten."
 
-#: src/partials/footer.php:30
+#: src/partials/footer.php:31
+msgid "Enable Smooth Scrolling"
+msgstr "Sanftes Scrollen"
+
+#: src/partials/footer.php:34
 msgid "Resume"
 msgstr "Lebenslauf"
 
-#: src/partials/footer.php:31
+#: src/partials/footer.php:35
 msgid "Privacy Policy"
 msgstr "Datenschutzerklärung"
 
-#: src/partials/footer.php:37
+#: src/partials/footer.php:43
 msgid "Copied to Clipboard!"
 msgstr "In die Zwischenablage kopiert!"
 
-#: index.php:19
-msgid "Hi, I'm Robert Michels."
-msgstr "Hi, Ich bin Robert Michels."
+#: index.php:25
+msgid "Hi "
+msgstr "Hi "
 
-#: index.php:19
+#: index.php:25
+msgid ", <br>I'm Robert Michels."
+msgstr ", <br>Ich bin Robert Michels."
+
+#: index.php:27
+msgid "Hi, I'm Robert&nbsp;Michels."
+msgstr "Hi, Ich bin Robert&nbsp;Michels."
+
+#: index.php:29
 msgid "I design and program"
 msgstr "Ich designe und programmiere"
 
-#: index.php:22
-msgid "games.\", \"VR experiences.\", \"mobile apps.\", \"websites."
-msgstr "Videospiele.\", \"VR Erlebnisse.\", \"Mobile Apps.\", \"Websiten."
+#: index.php:32
+msgid ""
+"full-stack apps.\", \"games.\", \"VR experiences.\", \"mobile apps.\", "
+"\"websites."
+msgstr ""
+"Full-Stack Apps.\", \"Videospiele.\", \"VR Erlebnisse.\", \"Mobile Apps.\", "
+"\"Websiten."
 
-#: index.php:22
+#: index.php:32
 msgid "digital media."
 msgstr "Digitale Medien."
 
-#: index.php:74
+#: index.php:84
 msgid "See More"
 msgstr "Siehe Mehr"
 
@@ -128,9 +167,13 @@ msgid ""
 "A web-based collection of tools for managing workspaces in Clirio View. "
 "Includes a user dashboard, workspace and observation creation tools, and "
 "interactive Bing maps."
-msgstr "Eine webbasierte Sammlung von Tools zur Verwaltung von Arbeitsbereichen in Clirio View. Enthält ein Benutzer-Dashboard, Tools zur Erstellung von Arbeitsbereichen und Beobachtungen sowie interaktive Bing-Karten."
+msgstr ""
+"Eine webbasierte Sammlung von Tools zur Verwaltung von Arbeitsbereichen in "
+"Clirio View. Enthält ein Benutzer-Dashboard, Tools zur Erstellung von "
+"Arbeitsbereichen und Beobachtungen sowie interaktive Bing-Karten."
 
-#: clirioCloud.php:27
+#: clirioCloud.php:27 clirioScanViews.php:27 clirioScanShare.php:28
+#: tourguide.php:37
 msgid "Overview"
 msgstr "Übersicht"
 
@@ -140,7 +183,12 @@ msgid ""
 "These tools are provided to users of the Clirio Suite on a website developed "
 "with Blazor. Clirio builds solutions that help users inspect, document, and "
 "collaborate in 3D and XR on geospatial workspaces."
-msgstr "Clirio Cloud ist eine Sammlung von Tools, die im Laufe der Zeit gewachsen ist. Diese Tools werden den Nutzern der Clirio Suite auf einer mit Blazor entwickelten Website zur Verfügung gestellt. Clirio entwickelt Lösungen, die den Nutzern helfen, geodätische Arbeitsbereiche in 3D und XR zu inspizieren, zu dokumentieren und zusammenzuarbeiten."
+msgstr ""
+"Clirio Cloud ist eine Sammlung von Tools, die im Laufe der Zeit gewachsen "
+"ist. Diese Tools werden den Nutzern der Clirio Suite auf einer mit Blazor "
+"entwickelten Website zur Verfügung gestellt. Clirio entwickelt Lösungen, die "
+"den Nutzern helfen, geodätische Arbeitsbereiche in 3D und XR zu inspizieren, "
+"zu dokumentieren und zusammenzuarbeiten."
 
 #: clirioCloud.php:30
 msgid ""
@@ -152,14 +200,27 @@ msgid ""
 "workspace tools are upload and management of custom basemaps, upload of "
 "boreholes, guest invitations, point of interest creation, and workspace "
 "deletion."
-msgstr "Eines der Hauptziele von Clirio Cloud ist es, die Upload- und Organisationsfunktionen der iOS-Apps von Clirio zu ergänzen, die als primäre Erfassungsplattform dienen. Während ein Benutzer mit den iOS-Apps von Clirio problemlos 3D-Photogrammetriescans erfassen und hochladen kann, möchte er möglicherweise auch andere 3D-Modelle hochladen, für die Clirio Cloud eine Schnittstelle bereitstellt. Weitere Werkzeuge für den Arbeitsbereich sind das Hochladen und Verwalten von benutzerdefinierten Basiskarten, das Hochladen von Bohrlöchern, das Einladen von Gästen, das Erstellen von Points of Interest und das Löschen von Arbeitsbereichen."
+msgstr ""
+"Eines der Hauptziele von Clirio Cloud ist es, die Upload- und "
+"Organisationsfunktionen der iOS-Apps von Clirio zu ergänzen, die als primäre "
+"Erfassungsplattform dienen. Während ein Benutzer mit den iOS-Apps von Clirio "
+"problemlos 3D-Photogrammetriescans erfassen und hochladen kann, möchte er "
+"möglicherweise auch andere 3D-Modelle hochladen, für die Clirio Cloud eine "
+"Schnittstelle bereitstellt. Weitere Werkzeuge für den Arbeitsbereich sind "
+"das Hochladen und Verwalten von benutzerdefinierten Basiskarten, das "
+"Hochladen von Bohrlöchern, das Einladen von Gästen, das Erstellen von Points "
+"of Interest und das Löschen von Arbeitsbereichen."
 
 #: clirioCloud.php:32
 msgid ""
 "Furthermore, Clirio Cloud provides an analytics dashboard to users, as well "
 "as an easy way to access the Clirio knowledge base and training videos. "
 "Finally, there also are subscription and account management tools."
-msgstr "Darüber hinaus bietet Clirio Cloud den Nutzern ein Analyse-Dashboard sowie eine einfache Möglichkeit, auf die Clirio-Wissensdatenbank und Schulungsvideos zuzugreifen. Schließlich gibt es auch Tools zur Abonnement- und Kontoverwaltung."
+msgstr ""
+"Darüber hinaus bietet Clirio Cloud den Nutzern ein Analyse-Dashboard sowie "
+"eine einfache Möglichkeit, auf die Clirio-Wissensdatenbank und "
+"Schulungsvideos zuzugreifen. Schließlich gibt es auch Tools zur Abonnement- "
+"und Kontoverwaltung."
 
 #: clirioCloud.php:42
 msgid "Dashboard"
@@ -187,7 +248,13 @@ msgid ""
 "language, which would be an advantage considering we also used C# for Unity "
 "development. After setting up authentication, subscription management, and "
 "workspace listing with metadata, development was mostly handed off to me."
-msgstr " unter der verwendung von Blazor, um ein Web-Framework mit C# als Programmiersprache auszuprobieren, was ein Vorteil wäre, wenn man bedenkt, dass wir C# auch für die Unity-Entwicklung verwenden. Nach der Einrichtung der Authentifizierung, der Abonnementverwaltung und der Auflistung der Arbeitsbereiche mit Metadaten wurde die Entwicklung größtenteils an mich übergeben."
+msgstr ""
+" unter der verwendung von Blazor, um ein Web-Framework mit C# als "
+"Programmiersprache auszuprobieren, was ein Vorteil wäre, wenn man bedenkt, "
+"dass wir C# auch für die Unity-Entwicklung verwenden. Nach der Einrichtung "
+"der Authentifizierung, der Abonnementverwaltung und der Auflistung der "
+"Arbeitsbereiche mit Metadaten wurde die Entwicklung größtenteils an mich "
+"übergeben."
 
 #: clirioCloud.php:66
 msgid ""
@@ -199,14 +266,30 @@ msgid ""
 "need to validate certain data such as coordinates, and to provide user "
 "feedback such as marking required or incorrect fields and showing the upload "
 "status. I designed the UI on the fly, following the existing styling."
-msgstr "Die ersten features, die ich implementiert habe, drehten sich um die Verwaltung von Arbeitsbereichen, wo ich Funktionen zum Hochladen von Beobachtungen hinzugefügt habe. Diese nutzen typischerweise die Formulare von Blazor, um den Benutzern das Ausfüllen der erforderlichen Informationen zu ermöglichen, sowie einen Dateiupload-Tray. Diese ersten Projekte waren mit einer Reihe von Herausforderungen verbunden. Ich musste eine Verbindung zu unseren APIs herstellen, um Arbeitsraum- und POI-Daten zu laden und Daten hochzuladen. Außerdem mussten bestimmte Daten, wie z. B. Koordinaten, validiert und dem Benutzer Feedback gegeben werden, z. B. durch Markierung erforderlicher oder falscher Felder und Anzeige des Upload-Status. Ich habe die Benutzeroberfläche währrend der Umsetzung entworfen und mich dabei an das bestehende Styling gehalten."
+msgstr ""
+"Die ersten features, die ich implementiert habe, drehten sich um die "
+"Verwaltung von Arbeitsbereichen, wo ich Funktionen zum Hochladen von "
+"Beobachtungen hinzugefügt habe. Diese nutzen typischerweise die Formulare "
+"von Blazor, um den Benutzern das Ausfüllen der erforderlichen Informationen "
+"zu ermöglichen, sowie einen Dateiupload-Tray. Diese ersten Projekte waren "
+"mit einer Reihe von Herausforderungen verbunden. Ich musste eine Verbindung "
+"zu unseren APIs herstellen, um Arbeitsraum- und POI-Daten zu laden und Daten "
+"hochzuladen. Außerdem mussten bestimmte Daten, wie z. B. Koordinaten, "
+"validiert und dem Benutzer Feedback gegeben werden, z. B. durch Markierung "
+"erforderlicher oder falscher Felder und Anzeige des Upload-Status. Ich habe "
+"die Benutzeroberfläche währrend der Umsetzung entworfen und mich dabei an "
+"das bestehende Styling gehalten."
 
 #: clirioCloud.php:68
 msgid ""
 "After adding all of the workspace management features such as 3D model "
 "upload and user invitations, I started working on another set of stories "
 "revolving around the dashboard. I partnered up with "
-msgstr "Nachdem ich alle Funktionen zur Verwaltung des Arbeitsbereichs, wie z. B. den Upload von 3D-Modellen und Benutzereinladungen, hinzugefügt hatte, begann ich mit der Arbeit an einer weiteren Reihe von Geschichten, die sich um das Dashboard drehten. Ich habe mich gepartnert mit"
+msgstr ""
+"Nachdem ich alle Funktionen zur Verwaltung des Arbeitsbereichs, wie z. B. "
+"den Upload von 3D-Modellen und Benutzereinladungen, hinzugefügt hatte, "
+"begann ich mit der Arbeit an einer weiteren Reihe von Geschichten, die sich "
+"um das Dashboard drehten. Ich habe mich gepartnert mit"
 
 #: clirioCloud.php:68
 msgid ", who designed mockups, which I then implemented."
@@ -218,7 +301,13 @@ msgid ""
 "maps. These are used to position new workspaces and points of interest and "
 "can get the user's location for convenience. They are accommodated by a set "
 "of GPS coordinate input fields, which sync with the map."
-msgstr "Eine bemerkenswerte Funktion, die relativ spät hinzugefügt wurde, sind die interaktiven Bing-Karten. Diese werden verwendet, um neue Arbeitsbereiche und Points of Interest zu positionieren, und können den Standort des Benutzers zur Bequemlichkeit abrufen. Sie werden durch eine Reihe von Eingabefeldern für GPS-Koordinaten unterstützt, die mit der Karte synchronisiert werden."
+msgstr ""
+"Eine bemerkenswerte Funktion, die relativ spät hinzugefügt wurde, sind die "
+"interaktiven Bing-Karten. Diese werden verwendet, um neue Arbeitsbereiche "
+"und Points of Interest zu positionieren, und können den Standort des "
+"Benutzers zur Bequemlichkeit abrufen. Sie werden durch eine Reihe von "
+"Eingabefeldern für GPS-Koordinaten unterstützt, die mit der Karte "
+"synchronisiert werden."
 
 #: clirioCloud.php:72
 msgid "Learning"
@@ -234,7 +323,16 @@ msgid ""
 "CSS3. I did enjoy learning about it too, because I prefer its "
 "customizability and efficiency compared to Bootstrap, although I still "
 "prefer Sass for my personal projects."
-msgstr "Es hat mir Spaß gemacht, Blazor zu lernen, da es einige Ähnlichkeiten mit PHP aufweist, aber eine ganze Reihe von Vorteilen hat, wie z. B. die einfache Formularanbindung an Datenmodelle, die Datenvalidierung und die verbesserte Lesbarkeit und Schreibbarkeit für mich als Entwickler, der oft in C# arbeitet. Neben Blazor war auch das Tailwind CSS Framework neu für mich, aber das zu lernen war nicht allzu schwer, da ich mit CSS3 recht gut vertraut bin. Es hat mir auch Spaß gemacht, es kennenzulernen, weil ich seine Anpassbarkeit und Effizienz im Vergleich zu Bootstrap bevorzuge, obwohl ich für meine persönlichen Projekte immer noch Sass bevorzuge."
+msgstr ""
+"Es hat mir Spaß gemacht, Blazor zu lernen, da es einige Ähnlichkeiten mit "
+"PHP aufweist, aber eine ganze Reihe von Vorteilen hat, wie z. B. die "
+"einfache Formularanbindung an Datenmodelle, die Datenvalidierung und die "
+"verbesserte Lesbarkeit und Schreibbarkeit für mich als Entwickler, der oft "
+"in C# arbeitet. Neben Blazor war auch das Tailwind CSS Framework neu für "
+"mich, aber das zu lernen war nicht allzu schwer, da ich mit CSS3 recht gut "
+"vertraut bin. Es hat mir auch Spaß gemacht, es kennenzulernen, weil ich "
+"seine Anpassbarkeit und Effizienz im Vergleich zu Bootstrap bevorzuge, "
+"obwohl ich für meine persönlichen Projekte immer noch Sass bevorzuge."
 
 #: clirioCloud.php:88
 msgid ""
@@ -242,15 +340,22 @@ msgid ""
 "optional sections of the form, and rearranging elements in a list, is made "
 "easy with Blazor since user inputs result in direct feedback without the "
 "need to write boilerplate code."
-msgstr "Einige Beispiele für die Anbindung von Datenmodellen an Formulare in Blazor. Das Erweitern/Kollabieren von optionalen Abschnitten des Formulars und das Umordnen von Elementen in einer Liste wird mit Blazor leicht gemacht, da die Benutzereingaben zu einem direkten Feedback führen, ohne dass man Boilerplate-Code schreiben muss."
+msgstr ""
+"Einige Beispiele für die Anbindung von Datenmodellen an Formulare in Blazor. "
+"Das Erweitern/Kollabieren von optionalen Abschnitten des Formulars und das "
+"Umordnen von Elementen in einer Liste wird mit Blazor leicht gemacht, da die "
+"Benutzereingaben zu einem direkten Feedback führen, ohne dass man "
+"Boilerplate-Code schreiben muss."
 
-#: clirioCloud.php:96
+#: clirioCloud.php:96 clirioScanShare.php:108
 msgid "Code Sample"
 msgstr "Code Beispiel"
 
 #: clirioCloud.php:97
 msgid "An example of data binding between the form and data model for the "
-msgstr "Ein Beispiel für die Datenbindung zwischen dem Formular und dem Datenmodell für die "
+msgstr ""
+"Ein Beispiel für die Datenbindung zwischen dem Formular und dem Datenmodell "
+"für die "
 
 #: clirioCloud.php:97
 msgid "Create POI"
@@ -262,7 +367,7 @@ msgstr " Seite."
 
 #: src/partials/projectPageMeta.php:7
 msgid "Type"
-msgstr "Typ"
+msgstr "Kategorie"
 
 #: src/partials/projectPageMeta.php:11
 msgid "Year"
@@ -280,7 +385,10 @@ msgstr "Firma"
 msgid ""
 "A collection of features in the Clirio View apps for loading and viewing "
 "photogrammetry scans. Includes on-map, XR, comparison, and other views."
-msgstr "Eine Sammlung von Funktionen in den Clirio View Anwendungen zum Laden und Betrachten von Photogrammetrie-Scans. Umfasst die Ansichten Auf der Karte, XR, Vergleich und andere Ansichten."
+msgstr ""
+"Eine Sammlung von Funktionen in den Clirio View Anwendungen zum Laden und "
+"Betrachten von Photogrammetrie-Scans. Umfasst die Ansichten Auf der Karte, "
+"XR, Vergleich und andere Ansichten."
 
 #: clirioScanViews.php:28
 msgid ""
@@ -290,7 +398,14 @@ msgid ""
 "always-on as an integral part of the map, or they can be viewed in scan view "
 "mode which comes with measure, comparison, and XR capabilities depending on "
 "the platform. In XR view, the scan can be scaled to "
-msgstr "Eine der wichtigsten Funktionen der Clirio-Produktsuite ist die Möglichkeit, photogrammetrische Scans mit LiDAR-fähigen iOS-Geräten zu erfassen und diese Scans anschließend zu verwalten und anzuzeigen. Erfasste Scans können auf der Karte angezeigt werden, sie können immer als integraler Bestandteil der Karte angezeigt werden, oder sie können im Scan-Ansichtsmodus angezeigt werden, der je nach Plattform über Mess-, Vergleichs- und XR-Funktionen verfügt. In der XR-Ansicht kann der Scan skaliert werden auf "
+msgstr ""
+"Eine der wichtigsten Funktionen der Clirio-Produktsuite ist die Möglichkeit, "
+"photogrammetrische Scans mit LiDAR-fähigen iOS-Geräten zu erfassen und diese "
+"Scans anschließend zu verwalten und anzuzeigen. Erfasste Scans können auf "
+"der Karte angezeigt werden, sie können immer als integraler Bestandteil der "
+"Karte angezeigt werden, oder sie können im Scan-Ansichtsmodus angezeigt "
+"werden, der je nach Plattform über Mess-, Vergleichs- und XR-Funktionen "
+"verfügt. In der XR-Ansicht kann der Scan skaliert werden auf "
 
 #: clirioScanViews.php:28
 msgid ""
@@ -298,40 +413,56 @@ msgid ""
 "Desktop, the view is controlled by touch or mouse inputs. Comparison views "
 "feature side-by-side, swipe, and overlay modes. Besides scans captured with "
 "Clirio Scan, other 3D models are also supported and can be uploaded on "
-msgstr "oder im Maßstab 1:1, oder frei mit der Hand manipuliert werden. Auf iOS und Desktop wird die Ansicht durch Touch- oder Mauseingaben gesteuert. Vergleichsansichten bieten die Modi Seite-an-Seite, Streichen und Überlagern. Neben Scans, die mit Clirio Scan erfasst wurden, werden auch andere 3D-Modelle unterstützt und können hochgeladen werden in die "
+msgstr ""
+"oder im Maßstab 1:1, oder frei mit der Hand manipuliert werden. Auf iOS und "
+"Desktop wird die Ansicht durch Touch- oder Mauseingaben gesteuert. "
+"Vergleichsansichten bieten die Modi Seite-an-Seite, Streichen und "
+"Überlagern. Neben Scans, die mit Clirio Scan erfasst wurden, werden auch "
+"andere 3D-Modelle unterstützt und können hochgeladen werden in die "
 
-#: clirioScanViews.php:38
+#: clirioScanViews.php:37
+msgid "Scan View (HoloLens 2)"
+msgstr "Scan View (HoloLens 2)"
+
+#: clirioScanViews.php:47
 msgid "On-Map View (Desktop)"
 msgstr "Auf der Karte Ansicht (Desktop)"
 
-#: clirioScanViews.php:42
+#: clirioScanViews.php:51
 msgid "Scan View (Desktop)"
 msgstr "Scan View (Desktop)"
 
-#: clirioScanViews.php:46
+#: clirioScanViews.php:55
 msgid "Scan View Comparison Mode (Desktop)"
 msgstr "Scan View Vergleichsmodus (Desktop)"
 
-#: clirioScanViews.php:56
+#: clirioScanViews.php:65
 msgid ""
 "The scan views have been continuously worked on from 2021 to 2023. In that "
 "timeframe, I was responsible for setting up most of the logic and views "
 "involved. My workflow involved designing UX and UI, and then quickly "
 "prototyping and refining until each feature was ready for release. My "
 "teammates "
-msgstr "An den Scanansichten wurde von 2021 bis 2023 kontinuierlich gearbeitet. In diesem Zeitraum war ich für die Einrichtung der meisten Logiken und Ansichten verantwortlich. Zu meinem Arbeitsablauf gehörte das Entwerfen von UX und UI und dann das schnelle Prototyping und die Verfeinerung, bis jede Funktion für die Veröffentlichung bereit war. Meine Teamkollegen "
+msgstr ""
+"An den Scanansichten wurde von 2021 bis 2023 kontinuierlich gearbeitet. In "
+"diesem Zeitraum war ich für die Einrichtung der meisten Logiken und "
+"Ansichten verantwortlich. Zu meinem Arbeitsablauf gehörte das Entwerfen von "
+"UX und UI und dann das schnelle Prototyping und die Verfeinerung, bis jede "
+"Funktion für die Veröffentlichung bereit war. Meine Teamkollegen "
 
-#: clirioScanViews.php:56
+#: clirioScanViews.php:65
 msgid ", and "
 msgstr " und "
 
-#: clirioScanViews.php:56
+#: clirioScanViews.php:65
 msgid ""
 " also made contributions. Some functionality was also carried over from the "
 "Ada Viewer app, upon which the Clirio View app was based."
-msgstr " leisteten ebenfalls Beiträge. Einige Funktionen wurden auch von der Ada-Viewer-App übernommen, auf der die Clirio-View-App basiert."
+msgstr ""
+" leisteten ebenfalls Beiträge. Einige Funktionen wurden auch von der Ada-"
+"Viewer-App übernommen, auf der die Clirio-View-App basiert."
 
-#: clirioScanViews.php:57
+#: clirioScanViews.php:66
 msgid ""
 "The initial set of requirements was the loading and viewing of scans in a "
 "scan view mode (no map), which would be supported in AR on the HoloLens 2, "
@@ -341,50 +472,77 @@ msgid ""
 "the analysis and monitoring of construction sites, for which scan "
 "comparisons help detect differences, and scan measurements help understand "
 "scale."
-msgstr "Die ersten Anforderungen waren das Laden und Betrachten von Scans in einem Scan-Ansichtsmodus (keine Karte), der in AR auf der HoloLens 2 und in 3D-Non-AR auf iOS unterstützt werden sollte. Nachdem diese Kernfunktionalitäten implementiert worden waren, war eine der wichtigsten Ergänzungen der Vergleichs- und Messmodus. Ein wichtiger Arbeitsablauf, der von den Clirio View-Apps unterstützt wird, ist die Analyse und Überwachung von Baustellen, bei denen Scan-Vergleiche helfen, Unterschiede zu erkennen, und Scan-Messungen helfen, den Maßstab zu verstehen."
+msgstr ""
+"Die ersten Anforderungen waren das Laden und Betrachten von Scans in einem "
+"Scan-Ansichtsmodus (keine Karte), der in AR auf der HoloLens 2 und in 3D-Non-"
+"AR auf iOS unterstützt werden sollte. Nachdem diese Kernfunktionalitäten "
+"implementiert worden waren, war eine der wichtigsten Ergänzungen der "
+"Vergleichs- und Messmodus. Ein wichtiger Arbeitsablauf, der von den Clirio "
+"View-Apps unterstützt wird, ist die Analyse und Überwachung von Baustellen, "
+"bei denen Scan-Vergleiche helfen, Unterschiede zu erkennen, und Scan-"
+"Messungen helfen, den Maßstab zu verstehen."
 
-#: clirioScanViews.php:58
+#: clirioScanViews.php:67
 msgid ""
 "Later, other features were added, such as viewing scans on-map, more viewing "
 "tools such as freehand manipulation in XR, and more comparison modes such as "
 "the overlay mode which fades the transparencies on XR, and the swipe "
 "comparison view on iOS which crops the viewports."
-msgstr "Später kamen weitere Funktionen hinzu, z. B. die Anzeige von Scans auf der Karte, weitere Anzeigewerkzeuge wie die Freihandmanipulation in XR und weitere Vergleichsmodi wie der Überlagerungsmodus, mit dem die Transparenzen in XR ausgeblendet werden, und die Swipe-Vergleichsansicht in iOS, die die Ansichtsfenster beschneidet."
+msgstr ""
+"Später kamen weitere Funktionen hinzu, z. B. die Anzeige von Scans auf der "
+"Karte, weitere Anzeigewerkzeuge wie die Freihandmanipulation in XR und "
+"weitere Vergleichsmodi wie der Überlagerungsmodus, mit dem die Transparenzen "
+"in XR ausgeblendet werden, und die Swipe-Vergleichsansicht in iOS, die die "
+"Ansichtsfenster beschneidet."
 
-#: clirioScanViews.php:68
+#: clirioScanViews.php:77
 msgid ""
 "An overview of the different scan views in the Clirio View Meta Quest VR "
 "app. A scan is first opened on-map, then scan view is entered, where the "
 "scan is viewed from different angles, measured, and compared to another scan."
-msgstr "Ein Überblick über die verschiedenen Scanansichten in der Clirio View Meta Quest VR-App. Ein Scan wird zunächst auf der Karte geöffnet, dann wird die Scanansicht aufgerufen, in der der Scan aus verschiedenen Blickwinkeln betrachtet, gemessen und mit einem anderen Scan verglichen wird."
+msgstr ""
+"Ein Überblick über die verschiedenen Scanansichten in der Clirio View Meta "
+"Quest VR-App. Ein Scan wird zunächst auf der Karte geöffnet, dann wird die "
+"Scanansicht aufgerufen, in der der Scan aus verschiedenen Blickwinkeln "
+"betrachtet, gemessen und mit einem anderen Scan verglichen wird."
 
-#: clirioScanViews.php:75
+#: clirioScanViews.php:84 amae.php:100
 msgid "Challenges"
 msgstr "Herausforderungen"
 
-#: clirioScanViews.php:76
+#: clirioScanViews.php:85
 msgid ""
 "One of the biggest challenges has been the complexity originating from "
 "different UX flows, platforms, features, and states which have been expanded "
 "slowly over time. Particularly in the final "
-msgstr "Eine der größten Herausforderungen war die Komplexität, die sich aus den verschiedenen UX-Flows, Plattformen, Funktionen und Zuständen ergab, die im Laufe der Zeit langsam erweitert wurden. Besonders in den letzten "
+msgstr ""
+"Eine der größten Herausforderungen war die Komplexität, die sich aus den "
+"verschiedenen UX-Flows, Plattformen, Funktionen und Zuständen ergab, die im "
+"Laufe der Zeit langsam erweitert wurden. Besonders in den letzten "
 
-#: clirioScanViews.php:76
+#: clirioScanViews.php:85
 msgid ""
 " versions of the Clirio View apps, complexity had ballooned, as MRTK2 had "
 "poor cross-platform support, which resulted in different prefabs, UI, and "
 "logic for iOS and HMDs."
-msgstr " Versionen der Clirio View-Apps hatte die Komplexität stark zugenommen, da MRTK2 nur unzureichend plattformübergreifende Unterstützung bot, was zu unterschiedlichen Prefabs, UI und Logik für iOS und HMDs führte."
+msgstr ""
+" Versionen der Clirio View-Apps hatte die Komplexität stark zugenommen, da "
+"MRTK2 nur unzureichend plattformübergreifende Unterstützung bot, was zu "
+"unterschiedlichen Prefabs, UI und Logik für iOS und HMDs führte."
 
-#: clirioScanViews.php:77
+#: clirioScanViews.php:86
 msgid ""
 "Another layer of complexity was the different file formats, features, and "
 "sources for 3D models. Especially the various material properties, texture "
 "reference formats, coordinate and unit systems were tricky to develop and "
 "test for."
-msgstr "Eine weitere Ebene der Komplexität waren die verschiedenen Dateiformate, Funktionen und Quellen für 3D-Modelle. Insbesondere die verschiedenen Materialeigenschaften, Texturreferenzformate, Koordinaten- und Einheitensysteme waren schwierig zu entwickeln und zu testen."
+msgstr ""
+"Eine weitere Ebene der Komplexität waren die verschiedenen Dateiformate, "
+"Funktionen und Quellen für 3D-Modelle. Insbesondere die verschiedenen "
+"Materialeigenschaften, Texturreferenzformate, Koordinaten- und "
+"Einheitensysteme waren schwierig zu entwickeln und zu testen."
 
-#: clirioScanViews.php:78
+#: clirioScanViews.php:87
 msgid ""
 "Solutions for these complexity challenges typically involved unifying "
 "behaviors, once similarities had been identified, and there was time to "
@@ -392,18 +550,31 @@ msgid ""
 "unified across platforms and modes, and the logic for switching in and out "
 "of AR in scan view was combined with the logic for doing the same in map "
 "view. Furthermore, with the migration to "
-msgstr "Die Lösungen für diese Komplexitätsherausforderungen bestanden in der Regel in der Vereinheitlichung von Verhaltensweisen, sobald Ähnlichkeiten identifiziert worden waren und Zeit für ein Refactoring zur Verfügung stand. So wurden beispielsweise das Speichern des Ausgangszustands und das Rücksetzverhalten plattform- und modusübergreifend vereinheitlicht, und die Logik für das Ein- und Ausschalten von AR in der Scanansicht wurde mit der Logik für dasselbe in der Kartenansicht kombiniert. Außerdem wurde mit der Migration zu "
+msgstr ""
+"Die Lösungen für diese Komplexitätsherausforderungen bestanden in der Regel "
+"in der Vereinheitlichung von Verhaltensweisen, sobald Ähnlichkeiten "
+"identifiziert worden waren und Zeit für ein Refactoring zur Verfügung stand. "
+"So wurden beispielsweise das Speichern des Ausgangszustands und das "
+"Rücksetzverhalten plattform- und modusübergreifend vereinheitlicht, und die "
+"Logik für das Ein- und Ausschalten von AR in der Scanansicht wurde mit der "
+"Logik für dasselbe in der Kartenansicht kombiniert. Außerdem wurde mit der "
+"Migration zu "
 
-#: clirioScanViews.php:78
+#: clirioScanViews.php:87
 msgid ""
 ", view logic and prefabs were combined, which greatly reduced complexity."
-msgstr " Ansichtslogik und Prefabs kombiniert, was die Komplexität erheblich reduzierte."
+msgstr ""
+" Ansichtslogik und Prefabs kombiniert, was die Komplexität erheblich "
+"reduzierte."
 
 #: clirioScanShare.php:13
 msgid ""
 "Scan Share is a feature of the Clirio product suite, for sharing "
 "photogrammetry scans quickly, and displaying them in a webviewer."
-msgstr "Scan Share ist eine Funktion der Clirio-Produktsuite, mit der Photogrammetriescans schnell ausgetauscht und in einem Webviewer angezeigt werden können."
+msgstr ""
+"Scan Share ist eine Funktion der Clirio-Produktsuite, mit der "
+"Photogrammetriescans schnell ausgetauscht und in einem Webviewer angezeigt "
+"werden können."
 
 #: clirioScanShare.php:29
 msgid ""
@@ -415,7 +586,17 @@ msgid ""
 "the share. The user has the option to set expiry, password protection, and "
 "to require that the viewer has been invited to the workspace, in which case "
 "the recipient will need to log in with their Clirio account to view the scan."
-msgstr "Mit der Clirio Scan Share-Funktion können Benutzer einen mit der Clirio Scan-App erfassten Photogrammetrie-Scan schnell teilen. Die Funktion besteht aus Freigabeoptionen in der in Unity entwickelten Clirio View-App und einem in Blazor und Three.js entwickelten Webviewer, über den geteilte Scans betrachtet werden können. Durch Drücken der Freigabe-Schaltfläche in einer der Clirio View-Apps öffnet sich ein Pop-up-Fenster zur Konfiguration der Freigabe. Der Benutzer hat die Möglichkeit, den Ablauf und den Passwortschutz festzulegen und zu verlangen, dass der Betrachter in den Arbeitsbereich eingeladen wurde. In diesem Fall muss sich der Empfänger mit seinem Clirio-Konto anmelden, um den Scan anzuzeigen."
+msgstr ""
+"Mit der Clirio Scan Share-Funktion können Benutzer einen mit der Clirio Scan-"
+"App erfassten Photogrammetrie-Scan schnell teilen. Die Funktion besteht aus "
+"Freigabeoptionen in der in Unity entwickelten Clirio View-App und einem in "
+"Blazor und Three.js entwickelten Webviewer, über den geteilte Scans "
+"betrachtet werden können. Durch Drücken der Freigabe-Schaltfläche in einer "
+"der Clirio View-Apps öffnet sich ein Pop-up-Fenster zur Konfiguration der "
+"Freigabe. Der Benutzer hat die Möglichkeit, den Ablauf und den "
+"Passwortschutz festzulegen und zu verlangen, dass der Betrachter in den "
+"Arbeitsbereich eingeladen wurde. In diesem Fall muss sich der Empfänger mit "
+"seinem Clirio-Konto anmelden, um den Scan anzuzeigen."
 
 #: clirioScanShare.php:30
 msgid ""
@@ -425,7 +606,15 @@ msgid ""
 "will open the share dialogue with compatible apps such as messengers, while "
 "on Windows the mail app will open. There is also an option for users to "
 "configure and generate a formatted embed iframe element with the share."
-msgstr "Sobald der Benutzer mit den ausgewählten Optionen zufrieden ist, kann er den Link erstellen und ihn entweder in die Zwischenablage kopieren oder die Freigabefunktion verwenden, um die plattformeigenen Freigabeoptionen auszulösen. Unter iOS wird beispielsweise der Freigabedialog mit kompatiblen Apps wie Messenger geöffnet, während unter Windows die Mail-App geöffnet wird. Es gibt auch eine Option, mit der die Nutzer ein formatiertes, eingebettetes Iframe-Element für die Freigabe konfigurieren und generieren können."
+msgstr ""
+"Sobald der Benutzer mit den ausgewählten Optionen zufrieden ist, kann er den "
+"Link erstellen und ihn entweder in die Zwischenablage kopieren oder die "
+"Freigabefunktion verwenden, um die plattformeigenen Freigabeoptionen "
+"auszulösen. Unter iOS wird beispielsweise der Freigabedialog mit kompatiblen "
+"Apps wie Messenger geöffnet, während unter Windows die Mail-App geöffnet "
+"wird. Es gibt auch eine Option, mit der die Nutzer ein formatiertes, "
+"eingebettetes Iframe-Element für die Freigabe konfigurieren und generieren "
+"können."
 
 #: clirioScanShare.php:31
 msgid ""
@@ -433,13 +622,21 @@ msgid ""
 "as lightweight and accessible as possible. The scan can be viewed from "
 "different angles, some metadata and a scale legend is displayed, and there "
 "are some buttons to hide or show elements."
-msgstr "Der Webviewer, mit dem die Empfänger den Scan betrachten können, soll so einfach und zugänglich wie möglich sein. Der Scan kann aus verschiedenen Blickwinkeln betrachtet werden, es werden einige Metadaten und eine Maßstabslegende angezeigt, und es gibt einige Schaltflächen zum Ein- und Ausblenden von Elementen."
+msgstr ""
+"Der Webviewer, mit dem die Empfänger den Scan betrachten können, soll so "
+"einfach und zugänglich wie möglich sein. Der Scan kann aus verschiedenen "
+"Blickwinkeln betrachtet werden, es werden einige Metadaten und eine "
+"Maßstabslegende angezeigt, und es gibt einige Schaltflächen zum Ein- und "
+"Ausblenden von Elementen."
 
 #: clirioScanShare.php:38
 msgid ""
 "An interactive example of an embedded scan share. Click and drag to look at "
 "the model from different angles. The same share can also be opened on its "
-msgstr "Ein interaktives Beispiel für eine eingebettete Scanshare. Klicken und ziehen Sie, um das Modell aus verschiedenen Blickwinkeln zu betrachten. Der scan ist auch erreichbar auf seiner eigenen "
+msgstr ""
+"Ein interaktives Beispiel für eine eingebettete Scanshare. Klicken und "
+"ziehen Sie, um das Modell aus verschiedenen Blickwinkeln zu betrachten. Der "
+"scan ist auch erreichbar auf seiner eigenen "
 
 #: clirioScanShare.php:38
 msgid "page"
@@ -449,7 +646,10 @@ msgstr "Seite"
 msgid ""
 "There were two stories for the development of this feature: the clientside "
 "app share UI and logic, and the webviewer."
-msgstr "Für die Entwicklung dieser Funktion gab es zwei Bereiche: die gemeinsame Nutzung der Benutzeroberfläche und der Logik der clientseitigen Anwendung und den Webviewer."
+msgstr ""
+"Für die Entwicklung dieser Funktion gab es zwei Bereiche: die gemeinsame "
+"Nutzung der Benutzeroberfläche und der Logik der clientseitigen Anwendung "
+"und den Webviewer."
 
 #: clirioScanShare.php:47 clirioScanShare.php:77
 msgid "Share UI and Logic"
@@ -460,7 +660,11 @@ msgid ""
 "Developed with C# in Unity, as a pop-up accessible through the observation "
 "details view of any scan in the Clirio View app. UI was designed in Figma in "
 "collaboration with "
-msgstr "Entwickelt mit C# in Unity, als Pop-up, das über die Beobachtungsdetails eines beliebigen Scans in der Clirio View App zugänglich ist. Die Benutzeroberfläche wurde in Figma in Zusammenarbeit mit Jordan Wischmann entworfen."
+msgstr ""
+"Entwickelt mit C# in Unity, als Pop-up, das über die Beobachtungsdetails "
+"eines beliebigen Scans in der Clirio View App zugänglich ist. Die "
+"Benutzeroberfläche wurde in Figma in Zusammenarbeit mit Jordan Wischmann "
+"entworfen."
 
 #: clirioScanShare.php:50
 msgid "Webviewer"
@@ -469,24 +673,32 @@ msgstr "Webviewer"
 #: clirioScanShare.php:51
 msgid ""
 "Developed with Blazor and Three.js. Backend token sharing was implemented by "
-msgstr "Entwickelt mit Blazor und Three.js. Backend Token-Sharing wurde implementiert von "
+msgstr ""
+"Entwickelt mit Blazor und Three.js. Backend Token-Sharing wurde "
+"implementiert von "
 
 #: clirioScanShare.php:78
 msgid ""
 "The share UI has gone through multiple iterations. Initially developed for "
-msgstr "Die Benutzeroberfläche für die Freigabe hat mehrere Iterationen durchlaufen. Ursprünglich entwickelt mit "
+msgstr ""
+"Die Benutzeroberfläche für die Freigabe hat mehrere Iterationen durchlaufen. "
+"Ursprünglich entwickelt mit "
 
 #: clirioScanShare.php:78
 msgid ""
 " with few options, the feature was later expanded to include expiry, "
 "password protection, and embed functionalities. Finally, in 2023, the UI was "
 "refreshed in collaboration with "
-msgstr " mit wenigen Optionen, wurde die Funktion später um Funktionen wie Ablaufdatum, Passwortschutz und Einbettung erweitert. Im Jahr 2023 wurde die Benutzeroberfläche neu designed in Zusammenarbeit mit "
+msgstr ""
+" mit wenigen Optionen, wurde die Funktion später um Funktionen wie "
+"Ablaufdatum, Passwortschutz und Einbettung erweitert. Im Jahr 2023 wurde die "
+"Benutzeroberfläche neu designed in Zusammenarbeit mit "
 
 #: clirioScanShare.php:78
 msgid ""
 ", who designed mockups in Figma, as the Clirio View app was migrated to "
-msgstr ", der Mockups in Figma entwarf, als die Clirio View App mirgriert wurde zu "
+msgstr ""
+", der Mockups in Figma entwarf, als die Clirio View App mirgriert wurde zu "
 
 #: clirioScanShare.php:79
 msgid ""
@@ -495,13 +707,22 @@ msgid ""
 "the user to share. For any new configuration of a share that hasn't been "
 "created yet, the user can press generate, and a request will be sent to a "
 "backend API implemented by "
-msgstr "Wenn ein Benutzer das Freigabe-Panel für einen Scan öffnet, prüft der Client, ob es bereits Links gibt. Wenn dies der Fall ist, werden die vorhandenen Links für den Benutzer zur Freigabe bereitgestellt. Für jede neue Konfiguration einer Freigabe, die noch nicht erstellt wurde, kann der Benutzer auf Generieren drücken, woraufhin eine Anfrage an eine Backend-API gesendet wird, die entwickelt wurde von "
+msgstr ""
+"Wenn ein Benutzer das Freigabe-Panel für einen Scan öffnet, prüft der "
+"Client, ob es bereits Links gibt. Wenn dies der Fall ist, werden die "
+"vorhandenen Links für den Benutzer zur Freigabe bereitgestellt. Für jede "
+"neue Konfiguration einer Freigabe, die noch nicht erstellt wurde, kann der "
+"Benutzer auf Generieren drücken, woraufhin eine Anfrage an eine Backend-API "
+"gesendet wird, die entwickelt wurde von "
 
 #: clirioScanShare.php:79
 msgid ""
 "The returned result includes a URL for the client to display to the user, "
 "and to include in native share options for each platform."
-msgstr "Das zurückgegebene Ergebnis enthält eine URL, die der Client dem Benutzer anzeigen und in die nativen Freigabeoptionen für jede Plattform aufnehmen kann."
+msgstr ""
+"Das zurückgegebene Ergebnis enthält eine URL, die der Client dem Benutzer "
+"anzeigen und in die nativen Freigabeoptionen für jede Plattform aufnehmen "
+"kann."
 
 #: clirioScanShare.php:80
 msgid ""
@@ -517,19 +738,40 @@ msgid ""
 "interaction, the UI refreshes to match the share configuration and all other "
 "states. If there is a share matching the configuration, that existing link "
 "is shown, otherwise the generate share button is shown."
-msgstr "Die größte Herausforderung für mich war die Gestaltung der Benutzeroberfläche, da es eine Vielzahl von Optionen für den Benutzer gab. Dazu gehörte auch die Option, Freigaben privat zu machen, so dass Benutzer die Freigabe intern auf Teams in Arbeitsbereichen beschränken konnten, was ebenfalls einen zusätzlichen Authentifizierungsfluss im Webviewer erforderte. Die Vielzahl der Optionen erschwerte auch die Gestaltung einer kompakten Benutzeroberfläche. Ich nutzte dynamisches Design und Layouts, damit versteckte Optionen wie die Verlängerung des Gültigkeitszeitraums oder die Änderung des Passworts elegant ein- oder ausgeblendet werden konnten. Die Entwicklung der Logik war ein relativ einfacher Prozess, die größere Herausforderung war die Überlegung, wie die Funktion überhaupt funktionieren sollte. Nach jeder Benutzerinteraktion wird die Benutzeroberfläche aktualisiert, um der Freigabekonfiguration und allen anderen Zuständen zu entsprechen. Wenn es eine Freigabe gibt, die mit der Konfiguration übereinstimmt, wird dieser vorhandene Link angezeigt, andernfalls wird die Schaltfläche zum Erzeugen einer Freigabe angezeigt."
+msgstr ""
+"Die größte Herausforderung für mich war die Gestaltung der "
+"Benutzeroberfläche, da es eine Vielzahl von Optionen für den Benutzer gab. "
+"Dazu gehörte auch die Option, Freigaben privat zu machen, so dass Benutzer "
+"die Freigabe intern auf Teams in Arbeitsbereichen beschränken konnten, was "
+"ebenfalls einen zusätzlichen Authentifizierungsfluss im Webviewer "
+"erforderte. Die Vielzahl der Optionen erschwerte auch die Gestaltung einer "
+"kompakten Benutzeroberfläche. Ich nutzte dynamisches Design und Layouts, "
+"damit versteckte Optionen wie die Verlängerung des Gültigkeitszeitraums oder "
+"die Änderung des Passworts elegant ein- oder ausgeblendet werden konnten. "
+"Die Entwicklung der Logik war ein relativ einfacher Prozess, die größere "
+"Herausforderung war die Überlegung, wie die Funktion überhaupt funktionieren "
+"sollte. Nach jeder Benutzerinteraktion wird die Benutzeroberfläche "
+"aktualisiert, um der Freigabekonfiguration und allen anderen Zuständen zu "
+"entsprechen. Wenn es eine Freigabe gibt, die mit der Konfiguration "
+"übereinstimmt, wird dieser vorhandene Link angezeigt, andernfalls wird die "
+"Schaltfläche zum Erzeugen einer Freigabe angezeigt."
 
 #: clirioScanShare.php:81
 msgid ""
 "An interesting change to my approach to writing controllers was first tested "
 "in this feature, after a discussion I had with my teammate "
-msgstr "Eine interessante Änderung meiner Herangehensweise an das Schreiben von Controllern wurde zum ersten Mal in diesem Feature getestet, nach einer Diskussion mit meinem Teamkollegen "
+msgstr ""
+"Eine interessante Änderung meiner Herangehensweise an das Schreiben von "
+"Controllern wurde zum ersten Mal in diesem Feature getestet, nach einer "
+"Diskussion mit meinem Teamkollegen "
 
 #: clirioScanShare.php:81
 msgid ""
 "In the past, I would write public functions for button clicks, and hook them "
 "up in the inspector via the button's "
-msgstr "In der Vergangenheit habe ich öffentliche Funktionen für Buttonklicks geschrieben und sie im Unity Inspektor verknüpft über das "
+msgstr ""
+"In der Vergangenheit habe ich öffentliche Funktionen für Buttonklicks "
+"geschrieben und sie im Unity Inspektor verknüpft über das "
 
 #: clirioScanShare.php:81
 msgid ""
@@ -539,7 +781,13 @@ msgid ""
 "controller, and no other reference is needed. This makes setup in the editor "
 "less error-prone and maintainable, as it requires less understanding of the "
 "code."
-msgstr "Event. Hier habe ich stattdessen alle Ereignis-Listener im Controller selbst gesetzt, alle entsprechenden Listener-Funktionen privat gehalten und die Einrichtung des Inspektors vereinfacht, so dass jede Schaltfläche nur einmal dem Controller zugewiesen wird und keine weitere Referenz benötigt wird. Dies macht die Einrichtung im Editor weniger fehleranfällig und wartbar, da es weniger Verständnis für den Code erfordert."
+msgstr ""
+"Event. Hier habe ich stattdessen alle Ereignis-Listener im Controller selbst "
+"gesetzt, alle entsprechenden Listener-Funktionen privat gehalten und die "
+"Einrichtung des Inspektors vereinfacht, so dass jede Schaltfläche nur einmal "
+"dem Controller zugewiesen wird und keine weitere Referenz benötigt wird. "
+"Dies macht die Einrichtung im Editor weniger fehleranfällig und wartbar, da "
+"es weniger Verständnis für den Code erfordert."
 
 #: clirioScanShare.php:99
 msgid ""
@@ -548,7 +796,14 @@ msgid ""
 "written in C# with Blazor, JavaScript with Three.js, and uses Tailwind CSS "
 "for styling. I had worked with Three.js in the past and enjoyed using it "
 "again, and a lot of my work revolved around setting up the viewer correctly."
-msgstr "Die Implementierung des Webviewers war die komplexere Geschichte, da es sich um eine eigenständige Anwendung handelt und die meisten Funktionen von Grund auf neu erstellt werden mussten. Der Viewer wurde in C# mit Blazor und JavaScript mit Three.js geschrieben und verwendet Tailwind CSS für das Styling. Ich hatte bereits in der Vergangenheit mit Three.js gearbeitet und genoss es, es wieder zu verwenden, und ein Großteil meiner Arbeit drehte sich darum, den Viewer korrekt einzurichten."
+msgstr ""
+"Die Implementierung des Webviewers war die komplexere Geschichte, da es sich "
+"um eine eigenständige Anwendung handelt und die meisten Funktionen von Grund "
+"auf neu erstellt werden mussten. Der Viewer wurde in C# mit Blazor und "
+"JavaScript mit Three.js geschrieben und verwendet Tailwind CSS für das "
+"Styling. Ich hatte bereits in der Vergangenheit mit Three.js gearbeitet und "
+"genoss es, es wieder zu verwenden, und ein Großteil meiner Arbeit drehte "
+"sich darum, den Viewer korrekt einzurichten."
 
 #: clirioScanShare.php:100
 msgid ""
@@ -559,7 +814,16 @@ msgid ""
 "begins to load its resources right away. The viewer is lightweight, and only "
 "provides some metadata, and options to reset the view and show/hide the grid "
 "and dimensions legend."
-msgstr "Wenn der Benutzer einen Freigabelink öffnet, sendet die Seite eine Anfrage an unsere Backend-API, um Informationen über die Freigabe zu sammeln, einschließlich der Angabe, ob sie öffentlich ist, und eine Liste von SAS-Tokens für alle Dateien, die zum Rendern des Scans erforderlich sind. Wenn der Scan privat ist, wird der Benutzer zu einer Anmeldeseite weitergeleitet, andernfalls beginnt der Scan sofort mit dem Laden seiner Ressourcen. Der Viewer ist leichtgewichtig und bietet nur einige Metadaten sowie Optionen zum Zurücksetzen der Ansicht und zum Ein- und Ausblenden des Rasters und der Dimensionslegende."
+msgstr ""
+"Wenn der Benutzer einen Freigabelink öffnet, sendet die Seite eine Anfrage "
+"an unsere Backend-API, um Informationen über die Freigabe zu sammeln, "
+"einschließlich der Angabe, ob sie öffentlich ist, und eine Liste von SAS-"
+"Tokens für alle Dateien, die zum Rendern des Scans erforderlich sind. Wenn "
+"der Scan privat ist, wird der Benutzer zu einer Anmeldeseite weitergeleitet, "
+"andernfalls beginnt der Scan sofort mit dem Laden seiner Ressourcen. Der "
+"Viewer ist leichtgewichtig und bietet nur einige Metadaten sowie Optionen "
+"zum Zurücksetzen der Ansicht und zum Ein- und Ausblenden des Rasters und der "
+"Dimensionslegende."
 
 #: clirioScanShare.php:101
 msgid ""
@@ -568,7 +832,14 @@ msgid ""
 "ensuring different MTL file formats and material properties are supported "
 "and displayed as desired, and making the viewer dynamic so it supports a "
 "wide range of model sizes and shapes, on a wide range of devices."
-msgstr "Zu den Herausforderungen bei der Einrichtung von Three.js gehörten das Hinzufügen von Unterstützung für das Laden der in der MTL-Datei definierten Texturdateien mit den korrekten SAS-Tokens, die Sicherstellung, dass verschiedene MTL-Dateiformate und Materialeigenschaften unterstützt und wie gewünscht angezeigt werden, und die Gestaltung eines dynamischen Viewers, der eine breite Palette von Modellgrößen und -formen auf einer Vielzahl von Geräten unterstützt."
+msgstr ""
+"Zu den Herausforderungen bei der Einrichtung von Three.js gehörten das "
+"Hinzufügen von Unterstützung für das Laden der in der MTL-Datei definierten "
+"Texturdateien mit den korrekten SAS-Tokens, die Sicherstellung, dass "
+"verschiedene MTL-Dateiformate und Materialeigenschaften unterstützt und wie "
+"gewünscht angezeigt werden, und die Gestaltung eines dynamischen Viewers, "
+"der eine breite Palette von Modellgrößen und -formen auf einer Vielzahl von "
+"Geräten unterstützt."
 
 #: clirioScanShare.php:109
 msgid ""
@@ -578,13 +849,22 @@ msgid ""
 "the modified process for loading the textures defined in the MTL file using "
 "SAS tokens, and functions to help configure the viewer based on the model "
 "dimensions."
-msgstr "Der unten stehende Codeschnipsel enthält den Code zum Laden des 3D-Modells im Webviewer mit Three.js. Es handelt sich um einen kleinen Ausschnitt aus der eigentlichen Datei, aber er zeigt einige der Lösungen für aufgetretene Herausforderungen, wie z. B. den geänderten Prozess zum Laden der in der MTL-Datei definierten Texturen mithilfe von SAS-Tokens und Funktionen zur Konfiguration des Viewers auf der Grundlage der Modellabmessungen."
+msgstr ""
+"Der unten stehende Codeschnipsel enthält den Code zum Laden des 3D-Modells "
+"im Webviewer mit Three.js. Es handelt sich um einen kleinen Ausschnitt aus "
+"der eigentlichen Datei, aber er zeigt einige der Lösungen für aufgetretene "
+"Herausforderungen, wie z. B. den geänderten Prozess zum Laden der in der MTL-"
+"Datei definierten Texturen mithilfe von SAS-Tokens und Funktionen zur "
+"Konfiguration des Viewers auf der Grundlage der Modellabmessungen."
 
 #: amae.php:13
 msgid ""
 "Amae is a utility app for busy parents. Amae helps parents to manage their "
 "time, learn about parenting and get help easily and quickly."
-msgstr "Amae ist eine nützliche App für viel beschäftigte Eltern. Amae hilft Eltern, ihre Zeit zu managen, etwas über Erziehung zu lernen und einfach und schnell Hilfe zu bekommen."
+msgstr ""
+"Amae ist eine nützliche App für viel beschäftigte Eltern. Amae hilft Eltern, "
+"ihre Zeit zu managen, etwas über Erziehung zu lernen und einfach und schnell "
+"Hilfe zu bekommen."
 
 #: amae.php:29 futureEarth.php:29
 msgid "The Task"
@@ -597,14 +877,24 @@ msgid ""
 "Consequently, a big part of the project was identifying user needs within a "
 "particular domain, and designing a product that helps the users achieve "
 "their goals."
-msgstr "Bei diesem Projekt handelte es sich um eine Designübung zur Erstellung eines Benutzeroberflächen-Mockups. Es wurde für einen Schnittstellendesign-Kurs erstellt, der sich auf zielorientiertes Design konzentrierte. Daher bestand ein großer Teil des Projekts darin, die Bedürfnisse der Nutzer in einem bestimmten Bereich zu ermitteln und ein Produkt zu entwerfen, das den Nutzern hilft, ihre Ziele zu erreichen."
+msgstr ""
+"Bei diesem Projekt handelte es sich um eine Designübung zur Erstellung eines "
+"Benutzeroberflächen-Mockups. Es wurde für einen Schnittstellendesign-Kurs "
+"erstellt, der sich auf zielorientiertes Design konzentrierte. Daher bestand "
+"ein großer Teil des Projekts darin, die Bedürfnisse der Nutzer in einem "
+"bestimmten Bereich zu ermitteln und ein Produkt zu entwerfen, das den "
+"Nutzern hilft, ihre Ziele zu erreichen."
 
 #: amae.php:32
 msgid ""
 "Our domain was that of young parents. With our design, we tried to create an "
 "app that helps parents coordinate their parenting tasks, as well as get help "
 "easily and quickly when in need."
-msgstr "Unsere Domäne war die der jungen Eltern. Mit unserem Design haben wir versucht, eine App zu entwickeln, die Eltern dabei hilft, ihre Erziehungsaufgaben zu koordinieren und bei Bedarf einfach und schnell Hilfe zu bekommen."
+msgstr ""
+"Unsere Domäne war die der jungen Eltern. Mit unserem Design haben wir "
+"versucht, eine App zu entwickeln, die Eltern dabei hilft, ihre "
+"Erziehungsaufgaben zu koordinieren und bei Bedarf einfach und schnell Hilfe "
+"zu bekommen."
 
 #: amae.php:59 futureEarth.php:60
 msgid "The Result"
@@ -615,36 +905,54 @@ msgid ""
 "The dashboard helps parents with their most frequent tasks. Parents can "
 "coordinate recurring tasks, such as diaper changes, as well as scheduled "
 "events, such as doctor appointments."
-msgstr "Das Dashboard hilft Eltern bei ihren häufigsten Aufgaben. Eltern können wiederkehrende Aufgaben, wie Windelwechsel, sowie geplante Ereignisse, wie Arzttermine, koordinieren."
+msgstr ""
+"Das Dashboard hilft Eltern bei ihren häufigsten Aufgaben. Eltern können "
+"wiederkehrende Aufgaben, wie Windelwechsel, sowie geplante Ereignisse, wie "
+"Arzttermine, koordinieren."
 
 #: amae.php:64
 msgid ""
 "With the nanny feature, users can browse for and book nearby nannies. Their "
 "profiles show ratings and reviews, their skills, and more information. Users "
 "can also easily rebook previously booked nannies."
-msgstr "Mit der Nannies-Funktion können die Nutzer nach Nannies in der Nähe suchen und diese buchen. Ihre Profile zeigen Bewertungen und Rezensionen, ihre Fähigkeiten und weitere Informationen. Außerdem können die Nutzer bereits gebuchte Nannies einfach umbuchen."
+msgstr ""
+"Mit der Nannies-Funktion können die Nutzer nach Nannies in der Nähe suchen "
+"und diese buchen. Ihre Profile zeigen Bewertungen und Rezensionen, ihre "
+"Fähigkeiten und weitere Informationen. Außerdem können die Nutzer bereits "
+"gebuchte Nannies einfach umbuchen."
 
 #: amae.php:67
 msgid ""
 "Learn features curated articles, relevant news as well as community "
 "discussions. This helps parents as well as nannies learn more about child-"
 "rearing and provides a parenting community to engage with."
-msgstr "Learn bietet kuratierte Artikel, relevante Nachrichten und Diskussionen in der Gemeinschaft. Dies hilft Eltern und Nannies, mehr über Kindererziehung zu lernen und bietet eine Eltern-Community, in der sie sich engagieren können."
+msgstr ""
+"Learn bietet kuratierte Artikel, relevante Nachrichten und Diskussionen in "
+"der Gemeinschaft. Dies hilft Eltern und Nannies, mehr über Kindererziehung "
+"zu lernen und bietet eine Eltern-Community, in der sie sich engagieren "
+"können."
 
 #: amae.php:70
 msgid ""
 "The chat feature doubles as an easy way to stay in touch with other "
 "caretakers, as well as a way to organize. Through chat, parents can assign "
 "tasks to each other, as well as book and manage an appointment with a nanny."
-msgstr "Die Chat-Funktion ist eine einfache Möglichkeit, mit anderen Betreuern in Kontakt zu bleiben und sich zu organisieren. Über den Chat können sich die Eltern gegenseitig Aufgaben zuweisen und einen Termin mit einem Nannies buchen und verwalten."
+msgstr ""
+"Die Chat-Funktion ist eine einfache Möglichkeit, mit anderen Betreuern in "
+"Kontakt zu bleiben und sich zu organisieren. Über den Chat können sich die "
+"Eltern gegenseitig Aufgaben zuweisen und einen Termin mit einem Nannies "
+"buchen und verwalten."
 
 #: amae.php:90
 msgid ""
 "Design artifacts that detail components of our design & define a clear "
 "styleguide to achieve consistency."
-msgstr "Design-Artefakte, die die Komponenten unseres Designs detailliert beschreiben und einen klaren Styleguide definieren, um Konsistenz zu erreichen."
+msgstr ""
+"Design-Artefakte, die die Komponenten unseres Designs detailliert "
+"beschreiben und einen klaren Styleguide definieren, um Konsistenz zu "
+"erreichen."
 
-#: amae.php:97 futureEarth.php:95
+#: amae.php:97 futureEarth.php:103
 msgid "Process"
 msgstr "Prozess"
 
@@ -660,7 +968,19 @@ msgid ""
 "user testing and refinement. An outcome of this was that we dropped a health "
 "feature we had previously planned to include. Finally, we created a product "
 "website to present our final design."
-msgstr "Das Projekt wurde in 4 Monaten von einem 5-köpfigen Team entwickelt. Ich war der Projektleiter sowie einer der UX- und UI-Designer. Unser Prozess begann mit einem kurzen Domain-Brainstorming, gefolgt von einer ethnografischen Studie, um unsere Nutzer besser zu verstehen. Nachdem wir Personas und mehrere Konzeptideen entwickelt hatten, konzentrierten wir uns auf Amae. Dann haben wir unser Produkt entworfen. Dazu entwarfen wir zahlreiche Artefakte wie Flussdiagramme, Wireframes, User Journey Maps, Interaktionsmuster und einen Style Guide. In den letzten Phasen führten wir Benutzertests und Verfeinerungen durch. Ein Ergebnis davon war, dass wir eine Gesundheitsfunktion, die wir ursprünglich geplant hatten, weggelassen haben. Schließlich erstellten wir eine Produktwebsite, um unser endgültiges Design zu präsentieren."
+msgstr ""
+"Das Projekt wurde in 4 Monaten von einem 5-köpfigen Team entwickelt. Ich war "
+"der Projektleiter sowie einer der UX- und UI-Designer. Unser Prozess begann "
+"mit einem kurzen Domain-Brainstorming, gefolgt von einer ethnografischen "
+"Studie, um unsere Nutzer besser zu verstehen. Nachdem wir Personas und "
+"mehrere Konzeptideen entwickelt hatten, konzentrierten wir uns auf Amae. "
+"Dann haben wir unser Produkt entworfen. Dazu entwarfen wir zahlreiche "
+"Artefakte wie Flussdiagramme, Wireframes, User Journey Maps, "
+"Interaktionsmuster und einen Style Guide. In den letzten Phasen führten wir "
+"Benutzertests und Verfeinerungen durch. Ein Ergebnis davon war, dass wir "
+"eine Gesundheitsfunktion, die wir ursprünglich geplant hatten, weggelassen "
+"haben. Schließlich erstellten wir eine Produktwebsite, um unser endgültiges "
+"Design zu präsentieren."
 
 #: amae.php:101
 msgid ""
@@ -671,7 +991,16 @@ msgid ""
 "best nanny for their needs. Parents can see what tasks a nanny has "
 "completed, call them at any time, and report a nanny. These features aim to "
 "maximize transparency to create a safe experience."
-msgstr "Eine unserer größten Herausforderungen während des Designprozesses war es, die App sicher zu machen. Eine unserer Lösungen war die Gestaltung der Nanny-Erfahrung. Nannies können über die Funktion Lernen lernen und sich zertifizieren lassen. Ihre ausführlichen Profile enthalten Bewertungen, Rezensionen und Fähigkeiten, damit Eltern das beste Nannies für ihre Bedürfnisse finden können. Eltern können sehen, welche Aufgaben ein Nannies erledigt hat, sie jederzeit anrufen und ein Nannies melden. Diese Funktionen zielen darauf ab, die Transparenz zu maximieren und eine sichere Erfahrung zu schaffen."
+msgstr ""
+"Eine unserer größten Herausforderungen während des Designprozesses war es, "
+"die App sicher zu machen. Eine unserer Lösungen war die Gestaltung der Nanny-"
+"Erfahrung. Nannies können über die Funktion Lernen lernen und sich "
+"zertifizieren lassen. Ihre ausführlichen Profile enthalten Bewertungen, "
+"Rezensionen und Fähigkeiten, damit Eltern das beste Nannies für ihre "
+"Bedürfnisse finden können. Eltern können sehen, welche Aufgaben ein Nannies "
+"erledigt hat, sie jederzeit anrufen und ein Nannies melden. Diese Funktionen "
+"zielen darauf ab, die Transparenz zu maximieren und eine sichere Erfahrung "
+"zu schaffen."
 
 #: amae.php:107
 msgid "Result & Design Artifacts"
@@ -683,7 +1012,11 @@ msgid ""
 "itself. We got very positive feedback and were satisfied with our final "
 "result, the journey we took to get there, and the things we learned along "
 "the way."
-msgstr "Sie können das interaktive Mockup unten ausprobieren und einen Blick auf die Datei selbst werfen. Wir haben sehr positives Feedback erhalten und waren mit unserem Endergebnis, dem Weg dorthin und den Dingen, die wir auf dem Weg gelernt haben, zufrieden."
+msgstr ""
+"Sie können das interaktive Mockup unten ausprobieren und einen Blick auf die "
+"Datei selbst werfen. Wir haben sehr positives Feedback erhalten und waren "
+"mit unserem Endergebnis, dem Weg dorthin und den Dingen, die wir auf dem Weg "
+"gelernt haben, zufrieden."
 
 #: amae.php:131
 msgid "Design Artifacts"
@@ -696,19 +1029,32 @@ msgid ""
 "their needs, to planning out UX flows and wireframes, to our final "
 "presentation of the mockup via a fictional product website, which was "
 "created in a 2 day sprint."
-msgstr "Im Folgenden finden Sie eine Auswahl verschiedener Design-Artefakte aus diesem Projekt. Diese repräsentieren viele Phasen unseres Prozesses, von der Erforschung unserer Zielgruppe und ihrer Bedürfnisse über die Planung von UX-Flows und Wireframes bis hin zu unserer abschließenden Präsentation des Mockups über eine fiktive Produktwebsite, die in einem zweitägigen Sprint erstellt wurde."
+msgstr ""
+"Im Folgenden finden Sie eine Auswahl verschiedener Design-Artefakte aus "
+"diesem Projekt. Diese repräsentieren viele Phasen unseres Prozesses, von der "
+"Erforschung unserer Zielgruppe und ihrer Bedürfnisse über die Planung von UX-"
+"Flows und Wireframes bis hin zu unserer abschließenden Präsentation des "
+"Mockups über eine fiktive Produktwebsite, die in einem zweitägigen Sprint "
+"erstellt wurde."
 
 #: futureEarth.php:13
 msgid ""
 "Future Earth is a VR adventure game set in a dystopian future, where the "
-"player has to grow trees, fight droids and collect parts."
-msgstr "Future Earth ist ein VR-Abenteuerspiel, das in einer dystopischen Zukunft spielt, in der der Spieler Bäume pflanzen, Droiden bekämpfen und Teile sammeln muss."
+"player has to grow trees, fight droids and collect parts. Achieved over "
+"3,000 downloads and 4 stars on SideQuest."
+msgstr ""
+"Future Earth ist ein VR-Abenteuerspiel, das in einer dystopischen Zukunft "
+"spielt, in der der Spieler Bäume pflanzen, Droiden bekämpfen und Teile "
+"sammeln muss. Auf SideQuest hat das Spiel über 3.000 Downloads und 4 Sterne "
+"erhalten."
 
 #: futureEarth.php:30
 msgid ""
 "Future Earth was created as an exercise in designing and developing "
 "immersive environments."
-msgstr "Future Earth wurde als Übung für die Gestaltung und Entwicklung immersiver Umgebungen entwickelt."
+msgstr ""
+"Future Earth wurde als Übung für die Gestaltung und Entwicklung immersiver "
+"Umgebungen entwickelt."
 
 #: futureEarth.php:31
 msgid ""
@@ -716,7 +1062,11 @@ msgid ""
 "encourages sustainable behaviors in players. This is achieved by placing the "
 "player in a dystopian futuristic environment and giving them the power to "
 "radically transform it for the better through gameplay."
-msgstr "Mit dem Konzeptentwurf wollten wir ein VR-Abenteuerspiel schaffen, das die Spieler zu nachhaltigen Verhaltensweisen anregt. Dies wird erreicht, indem wir den Spieler in eine dystopische, futuristische Umgebung versetzen und ihm die Macht geben, diese durch das Spiel radikal zum Besseren zu verändern."
+msgstr ""
+"Mit dem Konzeptentwurf wollten wir ein VR-Abenteuerspiel schaffen, das die "
+"Spieler zu nachhaltigen Verhaltensweisen anregt. Dies wird erreicht, indem "
+"wir den Spieler in eine dystopische, futuristische Umgebung versetzen und "
+"ihm die Macht geben, diese durch das Spiel radikal zum Besseren zu verändern."
 
 #: futureEarth.php:61
 msgid "Story"
@@ -726,13 +1076,18 @@ msgstr "Geschichte"
 msgid ""
 "Set in a dystopian future, you are the first human to walk planet earth in a "
 "long time."
-msgstr "In einer dystopischen Zukunft bist du der erste Mensch, der seit langer Zeit die Erde bewandert."
+msgstr ""
+"In einer dystopischen Zukunft bist du der erste Mensch, der seit langer Zeit "
+"die Erde bewandert."
 
 #: futureEarth.php:63
 msgid ""
 "Your mission objective is to plant and sustain 100 trees. Whether or not "
 "humanity will attempt to return to earth hinges upon your success."
-msgstr "Ihr Missionsziel ist es, 100 Bäume zu pflanzen und zu erhalten. Von Ihrem Erfolg hängt es ab, ob die Menschheit versuchen wird, zur Erde zurückzukehren oder nicht."
+msgstr ""
+"Ihr Missionsziel ist es, 100 Bäume zu pflanzen und zu erhalten. Von Ihrem "
+"Erfolg hängt es ab, ob die Menschheit versuchen wird, zur Erde "
+"zurückzukehren oder nicht."
 
 #: futureEarth.php:64
 msgid ""
@@ -741,7 +1096,13 @@ msgid ""
 "to clean up, have fried in the sun and turned dangerous over time. Fight "
 "these bots, collect technical components, build sustainable technology and "
 "become the one to save the world!"
-msgstr "Doch das ist kein leichtes Unterfangen. Der Klimawandel und unhaltbare menschliche Gewohnheiten haben ein giftiges Ödland geschaffen. Und zu allem Übel sind die Roboter, die zum Aufräumen zurückgelassen wurden, in der Sonne gebraten und mit der Zeit gefährlich geworden. Bekämpfe diese Bots, sammle technische Komponenten, baue nachhaltige Technologie und werde derjenige, der die Welt rettet!"
+msgstr ""
+"Doch das ist kein leichtes Unterfangen. Der Klimawandel und unhaltbare "
+"menschliche Gewohnheiten haben ein giftiges Ödland geschaffen. Und zu allem "
+"Übel sind die Roboter, die zum Aufräumen zurückgelassen wurden, in der Sonne "
+"gebraten und mit der Zeit gefährlich geworden. Bekämpfe diese Bots, sammle "
+"technische Komponenten, baue nachhaltige Technologie und werde derjenige, "
+"der die Welt rettet!"
 
 #: futureEarth.php:65
 msgid "Success"
@@ -751,32 +1112,54 @@ msgstr "Erfolg"
 msgid ""
 "Our project won best overall project, best interaction design, project for "
 "impact, and best VR/AR in our class."
-msgstr "Unser Projekt gewann den Preis für das beste Gesamtprojekt, das beste Interaktionsdesign, das beste Projekt für die Wirkung und das beste VR/AR-Projekt in unserer Klasse."
+msgstr ""
+"Unser Projekt gewann den Preis für das beste Gesamtprojekt, das beste "
+"Interaktionsdesign, das beste Projekt für die Wirkung und das beste VR/AR-"
+"Projekt in unserer Klasse."
 
-#: futureEarth.php:96
+#: futureEarth.php:67
+msgid ""
+"We're proud to have achieved over 3,000 downloads and a 4 star rating with "
+"our release to SideQuest."
+msgstr ""
+"Wir sind stolz darauf, auf dem SideQuest VR Store über 3.000 Downloads und "
+"eine 4 Sterne Bewertung erreicht zu haben."
+
+#: futureEarth.php:104
 msgid ""
 "The project was developed in 4 months by a team of 4. I was the project "
 "manager, as well as one of the VR / game designers & developers."
-msgstr "Das Projekt wurde in 4 Monaten von einem 4-köpfigen Team entwickelt. Ich war der Projektleiter sowie einer der VR-/Spieldesigner und -entwickler."
+msgstr ""
+"Das Projekt wurde in 4 Monaten von einem 4-köpfigen Team entwickelt. Ich war "
+"der Projektleiter sowie einer der VR-/Spieldesigner und -entwickler."
 
-#: futureEarth.php:97
+#: futureEarth.php:105
 msgid ""
 "After deciding to create a project for impact with the theme of "
 "sustainability, we started to create a game. Our goal was to create a VR "
 "game that appeals to players without particular interest in sustainability, "
 "to reach a broader audience."
-msgstr "Nachdem wir beschlossen hatten, ein Impact-Projekt zum Thema Nachhaltigkeit zu entwickeln, begannen wir mit der Erstellung eines Spiels. Unser Ziel war es, ein VR-Spiel zu entwickeln, das auch Spieler ohne Interesse an Nachhaltigkeit anspricht, um ein breiteres Publikum zu erreichen."
+msgstr ""
+"Nachdem wir beschlossen hatten, ein Impact-Projekt zum Thema Nachhaltigkeit "
+"zu entwickeln, begannen wir mit der Erstellung eines Spiels. Unser Ziel war "
+"es, ein VR-Spiel zu entwickeln, das auch Spieler ohne Interesse an "
+"Nachhaltigkeit anspricht, um ein breiteres Publikum zu erreichen."
 
-#: futureEarth.php:98
+#: futureEarth.php:106
 msgid ""
 "As the PM, I split the concept design into a list of core and bonus "
 "features. The core design featured a small game, where players fight rogue "
 "robots, collect their parts, and build water filtering technology that helps "
 "trees to grow. This core prototype was implemented within the first three "
 "months."
-msgstr "Als PM teilte ich das Konzeptdesign in eine Liste von Kern- und Bonusfunktionen auf. Der Kernentwurf beinhaltete ein kleines Spiel, in dem die Spieler gegen bösartige Roboter kämpfen, deren Teile sammeln und eine Wasserfiltertechnologie bauen, die Bäumen beim Wachsen hilft. Dieser Kernprototyp wurde innerhalb der ersten drei Monate umgesetzt."
+msgstr ""
+"Als PM teilte ich das Konzeptdesign in eine Liste von Kern- und "
+"Bonusfunktionen auf. Der Kernentwurf beinhaltete ein kleines Spiel, in dem "
+"die Spieler gegen bösartige Roboter kämpfen, deren Teile sammeln und eine "
+"Wasserfiltertechnologie bauen, die Bäumen beim Wachsen hilft. Dieser "
+"Kernprototyp wurde innerhalb der ersten drei Monate umgesetzt."
 
-#: futureEarth.php:99
+#: futureEarth.php:107
 msgid ""
 "After a round of usertesting, we proceed to implement updated features in "
 "response to our testing results. These included measures to better "
@@ -785,13 +1168,21 @@ msgid ""
 "We also had time to implement some of our bonus features, which were mostly "
 "aesthetic improvements such as the addition of VFX, better models, and "
 "multiple collectible parts."
-msgstr "Nach einer Runde von Benutzertests haben wir als Reaktion auf die Testergebnisse aktualisierte Funktionen implementiert. Dazu gehörten Maßnahmen zur besseren Vermittlung der Geschichte, wie z. B. eine umfassende Aktualisierung des Leveldesigns und die Implementierung einer ästhetischen Veränderung, wenn der Spieler mehr Bäume pflanzt. Wir hatten auch Zeit, einige unserer Bonus-Features zu implementieren, bei denen es sich hauptsächlich um ästhetische Verbesserungen handelte, wie z. B. das Hinzufügen von VFX, bessere Modelle und mehrere sammelbare Teile."
+msgstr ""
+"Nach einer Runde von Benutzertests haben wir als Reaktion auf die "
+"Testergebnisse aktualisierte Funktionen implementiert. Dazu gehörten "
+"Maßnahmen zur besseren Vermittlung der Geschichte, wie z. B. eine umfassende "
+"Aktualisierung des Leveldesigns und die Implementierung einer ästhetischen "
+"Veränderung, wenn der Spieler mehr Bäume pflanzt. Wir hatten auch Zeit, "
+"einige unserer Bonus-Features zu implementieren, bei denen es sich "
+"hauptsächlich um ästhetische Verbesserungen handelte, wie z. B. das "
+"Hinzufügen von VFX, bessere Modelle und mehrere sammelbare Teile."
 
-#: futureEarth.php:140
+#: futureEarth.php:148
 msgid "The Code"
 msgstr "Der Code"
 
-#: futureEarth.php:141
+#: futureEarth.php:149
 msgid ""
 "My programming efforts for this project focussed on the more unusual "
 "features of our game, such as spare part collection, item building, UI "
@@ -801,22 +1192,38 @@ msgid ""
 "achieve fine control over the growth behavior, I used a Coroutine, which is "
 "also used to control dying trees. Instead of using an Unity animation I "
 "implemented smooth growth by affecting scale and rotation with the help of "
-msgstr "Meine Programmierarbeit für dieses Projekt konzentrierte sich auf die ungewöhnlicheren Funktionen unseres Spiels, wie z. B. das Sammeln von Ersatzteilen, das Bauen von Gegenständen, die Interaktion mit der Benutzeroberfläche, die Abfolge der Geschichte und mehr. Eine weitere interessante Funktion, die ich implementiert habe, waren die Bäume, die Animationen für das Wachstum und die Überwachung ihres Gesundheitszustands auf der Grundlage der verfügbaren Wasservorräte benötigten. Um eine feine Kontrolle über das Wachstumsverhalten zu erreichen, habe ich eine Coroutine verwendet, die auch zur Kontrolle sterbender Bäume eingesetzt wird. Anstatt eine Unity-Animation zu verwenden, implementierte ich ein sanftes Wachstum, indem ich Skalierung und Rotation definierte mit Hilfe von "
+msgstr ""
+"Meine Programmierarbeit für dieses Projekt konzentrierte sich auf die "
+"ungewöhnlicheren Funktionen unseres Spiels, wie z. B. das Sammeln von "
+"Ersatzteilen, das Bauen von Gegenständen, die Interaktion mit der "
+"Benutzeroberfläche, die Abfolge der Geschichte und mehr. Eine weitere "
+"interessante Funktion, die ich implementiert habe, waren die Bäume, die "
+"Animationen für das Wachstum und die Überwachung ihres Gesundheitszustands "
+"auf der Grundlage der verfügbaren Wasservorräte benötigten. Um eine feine "
+"Kontrolle über das Wachstumsverhalten zu erreichen, habe ich eine Coroutine "
+"verwendet, die auch zur Kontrolle sterbender Bäume eingesetzt wird. Anstatt "
+"eine Unity-Animation zu verwenden, implementierte ich ein sanftes Wachstum, "
+"indem ich Skalierung und Rotation definierte mit Hilfe von "
 
-#: futureEarth.php:141
+#: futureEarth.php:149
 msgid " and "
 msgstr " und "
 
-#: futureEarth.php:141
+#: futureEarth.php:149
 msgid ""
 " for smoothing. A challenge that came up was a bug where birds would land at "
 "the position of the tree's origin. The fix was simple: disabling their perch-"
 "targets until the trees had finished growing, and only then enabling them, "
 "so that their target positions were correctly located at the fully grown "
 "branches."
-msgstr " für die Glättung. Eine Herausforderung war ein Fehler, bei dem die Vögel an der Position des Baumursprungs landeten. Die Lösung war einfach: Die Sitzstangen-Ziele wurden deaktiviert, bis die Bäume fertig gewachsen waren, und erst dann aktiviert, so dass sich die Zielpositionen korrekt an den ausgewachsenen Ästen befanden."
+msgstr ""
+" für die Glättung. Eine Herausforderung war ein Fehler, bei dem die Vögel an "
+"der Position des Baumursprungs landeten. Die Lösung war einfach: Die "
+"Sitzstangen-Ziele wurden deaktiviert, bis die Bäume fertig gewachsen waren, "
+"und erst dann aktiviert, so dass sich die Zielpositionen korrekt an den "
+"ausgewachsenen Ästen befanden."
 
-#: futureEarth.php:151
+#: futureEarth.php:159
 msgid ""
 "One of the interesting changes that resulted from our user tests was the "
 "more drastic environment change coupled to player progress. The environment "
@@ -825,18 +1232,447 @@ msgid ""
 "skybox, fog, dust particles, water, lighting and post processing. All of "
 "these aspects of the environment are interpolated between a start and an end "
 "state, by the method "
-msgstr "Eine der interessanten Änderungen, die sich aus unseren Benutzertests ergaben, war die drastischere Veränderung der Umgebung in Abhängigkeit vom Fortschritt des Spielers. Die Umgebung verändert sich, wenn der Spieler mehr Bäume pflanzt. Um die gewünschte emotionale Wirkung beim Spieler zu erzielen, haben wir viele variable Ebenen eingebaut: die Skybox, Nebel, Staubpartikel, Wasser, Beleuchtung und Nachbearbeitung. All diese Aspekte der Umgebung werden zwischen einem Start- und einem Endzustand interpoliert, und zwar mit der Methode "
+msgstr ""
+"Eine der interessanten Änderungen, die sich aus unseren Benutzertests "
+"ergaben, war die drastischere Veränderung der Umgebung in Abhängigkeit vom "
+"Fortschritt des Spielers. Die Umgebung verändert sich, wenn der Spieler mehr "
+"Bäume pflanzt. Um die gewünschte emotionale Wirkung beim Spieler zu "
+"erzielen, haben wir viele variable Ebenen eingebaut: die Skybox, Nebel, "
+"Staubpartikel, Wasser, Beleuchtung und Nachbearbeitung. All diese Aspekte "
+"der Umgebung werden zwischen einem Start- und einem Endzustand interpoliert, "
+"und zwar mit der Methode "
 
-#: futureEarth.php:151
+#: futureEarth.php:159
 msgid " which I implemented in "
 msgstr " die ich implementierte in "
 
-#: futureEarth.php:151
+#: futureEarth.php:159
 msgid ""
 "For instance, the fog has definitions of its color, start distance and end "
 "distance for both the beginning and the end."
-msgstr "Zum Beispiel hat der Nebel Definitionen für seine Farbe, die Startdistanz und die Enddistanz sowohl für den Anfang als auch für das Ende des Nebels."
+msgstr ""
+"Zum Beispiel hat der Nebel Definitionen für seine Farbe, die Startdistanz "
+"und die Enddistanz sowohl für den Anfang als auch für das Ende des Nebels."
 
 #: projects.php:20
 msgid "Filter Projects"
 msgstr "Projekte Filtern"
+
+#: tourguide.php:38
+msgid ""
+"While on vacation in Rome, I became frustrated with the lack of options "
+"available for free detailed tours of the city. There are websites with "
+"suggested daily schedules, Google Maps supports adding a small number of "
+"places into a route, but I couldn't find a cohesive platform combining "
+"navigation and information on the places I visit into a tour I can simply "
+"follow. Like any programmer would, I thought to myself, 'I can create an app "
+"for this!'"
+msgstr ""
+"Während meines Urlaubs in Rom war ich frustriert über den Mangel an "
+"kostenlosen, detaillierten Stadtführungen. Es gibt Websites mit "
+"vorgeschlagenen Tagesplänen, Google Maps unterstützt das Hinzufügen einer "
+"kleinen Anzahl von Orten zu einer Route, aber ich konnte keine "
+"zusammenhängende Plattform finden, die Navigation und Informationen über die "
+"Orte, die ich besuche, zu einer Tour kombiniert, der ich einfach folgen "
+"kann. Wie jeder Programmierer dachte ich mir: 'Dafür kann ich eine App "
+"entwickeln!'"
+
+#: tourguide.php:39
+msgid ""
+"I had my eye on the Flutter framework, and this seemed like the perfect "
+"opportunity to learn the Dart language and how to build a crossplatform app "
+"with Flutter."
+msgstr ""
+"Mein Auge war auf das Flutter-Framework gerichtet, und dies schien mir die "
+"perfekte Gelegenheit zu sein, die Sprache Dart zu lernen und zu erfahren, "
+"wie man mit Flutter eine plattformübergreifende Anwendung erstellt."
+
+#: tourguide.php:45
+msgid "Current Prototype"
+msgstr "Aktueller Prototyp"
+
+#: tourguide.php:46
+msgid "Last updated on October 2, 2024"
+msgstr "Letztes Update: Oktober 2, 2024"
+
+#: tourguide.php:47
+msgid "Explore"
+msgstr "Entdecken"
+
+#: tourguide.php:48
+msgid ""
+"Explore user-created tours that are popular, close to you, or find your next "
+"destination with the highest rated tours around the world."
+msgstr ""
+"Erkunden Sie von Nutzern erstellte Touren, die beliebt sind und sich in "
+"Ihrer Nähe befinden, oder finden Sie Ihr nächstes Ziel mit den am besten "
+"bewerteten Touren auf der ganzen Welt."
+
+#: tourguide.php:49
+msgid ""
+"Get point-to-point navigation powered by Google API, and detailed "
+"descriptions for the places you'll see. Take in your destination while you "
+"listen to the history and fun facts with text-to-speech."
+msgstr ""
+"Erhalten Sie eine Punkt-zu-Punkt-Navigation, die von der Google API "
+"unterstützt wird, und detaillierte Beschreibungen der Orte, die Sie sehen "
+"werden. Sehen Sie sich Ihr Ziel an, während Sie sich mit Text-to-Speech die "
+"Geschichte und interessante Fakten anhören."
+
+#: tourguide.php:50
+msgid "AI Tourguide"
+msgstr "KI Tourguide"
+
+#: tourguide.php:51
+msgid ""
+"Ask your AI Tourguide about the best local destinations, parks, or beaches, "
+"or get a brief overview of the history or meaning of a place. Powered by "
+"Google Gemini with Vertex AI."
+msgstr ""
+"Fragen Sie Ihren KI-Tourguide nach den besten lokalen Reisezielen, Parks "
+"oder Stränden oder erhalten Sie einen kurzen Überblick über die Geschichte "
+"oder Bedeutung eines Ortes. Unterstützt von Google Gemini mit Vertex AI."
+
+#: tourguide.php:52
+msgid "Contribute"
+msgstr "Beitragen"
+
+#: tourguide.php:53
+msgid ""
+"Easily create new tours to contribute to the community, using a form powered "
+"by flutter's stepper widget. Add basic info, places, details, and you're "
+"done and the new tour is ready for people to explore."
+msgstr ""
+"Erstellen Sie ganz einfach neue Touren, die Sie der Community zur Verfügung "
+"stellen möchten, indem Sie ein Formular mit dem Stepper-Widget von Flutter "
+"verwenden. Fügen Sie grundlegende Informationen, Orte und Details hinzu, und "
+"schon ist die neue Tour fertig und kann erkundet werden."
+
+#: tourguide.php:54
+msgid "Profile"
+msgstr "Profil"
+
+#: tourguide.php:55
+msgid ""
+"Manage your profile settings, notification settings, and manage your account."
+msgstr ""
+"Verwalten Sie Ihre Profileinstellungen, Benachrichtigungseinstellungen und "
+"Ihr Konto."
+
+#: tourguide.php:64
+#, fuzzy
+msgid "Development History"
+msgstr "Entwicklung"
+
+#: tourguide.php:65
+msgid "Web Improvements, tts, and more - October 2, 2024"
+msgstr "Web-Verbesserungen, tts, und mehr - 2. Oktober 2024"
+
+#: tourguide.php:66
+msgid ""
+"Over the last month I spent a lot of time polishing the UX of existing "
+"features and ensuring full support for all functionality on the web. When I "
+"released the first stable web build, there were a couple of issues left to "
+"address. Some of these turned out to be rather difficult to solve, for "
+"instance, I had to set up Firebase Cloud functions to fetch directions due "
+"to restrictions with the Google API I'm using. I also added more media "
+"queries to better adapt UI to a wide range of screen sizes."
+msgstr ""
+"Im letzten Monat habe ich viel Zeit damit verbracht, die "
+"Benutzerfreundlichkeit der bestehenden Funktionen zu verbessern und die "
+"volle Unterstützung aller Funktionen im Web sicherzustellen. Als ich den "
+"ersten stabilen Web-Build veröffentlicht habe, gab es noch ein paar Probleme "
+"zu lösen. Einige davon erwiesen sich als ziemlich schwierig zu lösen, z. B. "
+"musste ich Firebase Cloud-Funktionen zum Abrufen von Wegbeschreibungen "
+"einrichten, da die von mir verwendete Google-API Einschränkungen aufweist. "
+"Außerdem habe ich weitere Media-Queries hinzugefügt, um die "
+"Benutzeroberfläche besser an eine Vielzahl von Bildschirmgrößen anzupassen."
+
+#: tourguide.php:67
+msgid ""
+"A new feature that I added, to improve the UX of interacting with the text-"
+"to-speech (tts) feature on tours, is interactive text-to-speech, where users "
+"can tap any word to start reading from there, and tts settings for things "
+"like speech rate and voice selection. This also made for quite a challenge "
+"with the web implementation, because the tts package I was using, didn't "
+"have the progress update events for web, that I needed."
+msgstr ""
+"Eine neue Funktion, die ich hinzugefügt habe, um die Benutzerfreundlichkeit "
+"bei der Interaktion mit der Text-to-Speech-Funktion (tts) auf Touren zu "
+"verbessern, ist die interaktive Text-to-Speech-Funktion, bei der die "
+"Benutzer auf ein beliebiges Wort tippen können, um von dort aus mit dem "
+"Lesen zu beginnen, sowie tts-Einstellungen für Dinge wie "
+"Sprachgeschwindigkeit und Sprachauswahl. Dies machte auch die Web-"
+"Implementierung zu einer ziemlichen Herausforderung, da das tts-Paket, das "
+"ich verwendete, nicht über die Fortschrittsaktualisierungsereignisse für das "
+"Web verfügte, die ich benötigte."
+
+#: tourguide.php:68
+msgid ""
+"To fix the lack of web support for progress updates with flutter_tts, I "
+"added the missing event myself, and opened a PR. I'm hoping my change will "
+"be added and make this feature more widely available. Being inspired by "
+"working on this package, I decided to also have a try at creating my own "
+"package. I created and published the "
+msgstr ""
+"Um die fehlende Webunterstützung für Fortschrittsaktualisierungen mit "
+"flutter_tts zu beheben, habe ich das fehlende Ereignis selbst hinzugefügt "
+"und einen PR eröffnet. Ich hoffe, dass meine Änderung hinzugefügt wird und "
+"diese Funktion weiter verbreitet wird. Inspiriert durch die Arbeit an diesem "
+"Paket beschloss ich, mich auch an der Erstellung meines eigenen Pakets zu "
+"versuchen. Ich erstellte und veröffentlichte das "
+
+#: tourguide.php:68
+msgid "google_maps_custom_marker"
+msgstr "google_maps_custom_marker"
+
+#: tourguide.php:68
+msgid ""
+" package, based off utility code I had written. This package helps "
+"dynamically create markers with various customizable shapes, with the option "
+"for labels."
+msgstr ""
+" Paket, das auf dem von mir geschriebenen Utility-Code basiert. Dieses Paket "
+"hilft dynamisch erstellen Markierungen mit verschiedenen anpassbaren Formen, "
+"mit der Option für Etiketten."
+
+#: tourguide.php:69
+msgid "Update and release of Web App - August 27, 2024"
+msgstr "Aktualisierung und Veröffentlichung der Web-App - 27. August 2024"
+
+#: tourguide.php:70
+msgid ""
+"I'm thrilled to announce Tourguide's launch as a web app! You can find it at "
+msgstr ""
+"Ich freue mich sehr, den Start von Tourguide als Web-App bekannt zu geben! "
+"Sie finden sie unter "
+
+#: tourguide.php:70
+msgid "tourguide-firebase.web.app"
+msgstr "tourguide-firebase.web.app"
+
+#: tourguide.php:70
+msgid ""
+". Adding web support marked a key milestone. Initial functionality worked "
+"well thanks to Flutter's cross-platform support, but there were some "
+"challenges with image handling, CORS issues, and UI adaptation for "
+"widescreens. Future efforts will focus on enhancing web UX and ensuring full "
+"support for all features on the web."
+msgstr ""
+". Das Hinzufügen der Webunterstützung war ein wichtiger Meilenstein. Die "
+"anfängliche Funktionalität funktionierte dank der plattformübergreifenden "
+"Unterstützung von Flutter gut, aber es gab einige Herausforderungen bei der "
+"Handhabung von Bildern, CORS-Problemen und der Anpassung der "
+"Benutzeroberfläche für Breitbildschirme. Zukünftige Bemühungen werden sich "
+"auf die Verbesserung der Web-UX und die Sicherstellung der vollen "
+"Unterstützung für alle Funktionen im Web konzentrieren."
+
+#: tourguide.php:71
+msgid "Update - August 19, 2024"
+msgstr "Update  - 19. August 2024"
+
+#: tourguide.php:72
+msgid ""
+"Since moving to open testing, I've been focused on MVP UX polish and style "
+"improvements. An area of focus has been Tour Running UX/UI, which I enhanced "
+"to make it more immersive, and provide the user with richer map interactions "
+"as the tour progresses."
+msgstr ""
+"Seit dem Wechsel zum offenen Testen habe ich mich auf die Optimierung der "
+"MVP UX und stilistische Verbesserungen konzentriert. Ein Schwerpunkt war die "
+"UX/UI der Tour, die ich verbessert habe, um sie immersiver zu machen und dem "
+"Benutzer reichhaltigere Karteninteraktionen zu bieten, während die Tour "
+"fortschreitet."
+
+#: tourguide.php:73
+msgid ""
+"Regarding style improvements, I reworked all hardcoded style references to "
+"use the current theme and created a theme provider and cleaned up theme "
+"building logic. With these changes, the UI now adheres more stringently to "
+"Material 3 Design styles, and supports dark mode. To help with that process, "
+"I first used the "
+msgstr ""
+"Hinsichtlich der Stilverbesserungen habe ich alle fest kodierten "
+"Stilreferenzen überarbeitet, um das aktuelle Thema zu verwenden, und einen "
+"Themenanbieter erstellt und die Logik für die Themenerstellung bereinigt. "
+"Mit diesen Änderungen hält sich die Benutzeroberfläche nun strikter an die "
+"Material 3-Designstile und unterstützt den dunklen Modus. Um diesen Prozess "
+"zu unterstützen, habe ich zunächst die "
+
+#: tourguide.php:73
+msgid "Material Theme Builder"
+msgstr "Material Theme Builder"
+
+#: tourguide.php:73
+msgid ", and then built an "
+msgstr "und baute dann ein "
+
+#: tourguide.php:73
+msgid "interactive mockup in Figma"
+msgstr "interaktives Mockup in Figma"
+
+#: tourguide.php:73
+msgid ""
+", using the very helpful Figma Material 3 Design Kit template and Material "
+"Theme Builder plugin."
+msgstr ""
+"mit der sehr hilfreichen Vorlage Figma Material 3 Design Kit und dem Plugin "
+"Material Theme Builder."
+
+#: tourguide.php:74
+msgid ""
+"I'm happy with these changes and what I've learned about the Material Design "
+"system in the process. My goal now is to work on enhancing functionality and "
+"return to more UI polish down the line."
+msgstr ""
+"Ich bin zufrieden mit diesen Änderungen und dem, was ich dabei über das "
+"Material Design System gelernt habe. Mein Ziel ist es nun, an der "
+"Verbesserung der Funktionalität zu arbeiten und die Benutzeroberfläche "
+"weiter zu verfeinern."
+
+#: tourguide.php:75
+msgid "Update - July 29, 2024"
+msgstr "Update - 29. Juli 2024"
+
+#: tourguide.php:76
+msgid ""
+"I've made good progress and have published the app to Open Testing (Beta) on "
+"Google Play. In order to get CI/CD with fastlane and GitHub Actions up and "
+"running, I had to first publish my app. This required quite a bit of work in "
+"order to make sure that I comply with all the requirements - things like the "
+"ability to block and report users or content, ensuring account and data "
+"deletion works, and adding TOS and a privacy policy."
+msgstr ""
+"Ich bin gut vorangekommen und habe die App zum offenen Testen (Beta) auf "
+"Google Play veröffentlicht. Um CI/CD mit Fastlane und GitHub Actions zum "
+"Laufen zu bringen, musste ich meine App zunächst veröffentlichen. Das "
+"erforderte einiges an Arbeit, um sicherzustellen, dass ich alle "
+"Anforderungen erfülle - Dinge wie die Möglichkeit, Nutzer oder Inhalte zu "
+"sperren und zu melden, sicherzustellen, dass das Löschen von Konten und "
+"Daten funktioniert, und AGB und eine Datenschutzerklärung hinzuzufügen."
+
+#: tourguide.php:77
+msgid ""
+"The last few weeks have been a great learning experience, as I got to really "
+"dig into the backend side of things, setting up email notifications and a "
+"system for myself to manage community reports. I discovered the great "
+"library of Firebase extensions like Trigger Email from Firestore and Delete "
+"User Data, which have come in handy. To extend their functionality, I also "
+"wrote some cloud functions to help with processes like unsubscribing from "
+"emails through a link in the email."
+msgstr ""
+"Die letzten Wochen waren eine großartige Lernerfahrung, da ich mich wirklich "
+"in die Backend-Seite der Dinge vertieft habe, indem ich E-Mail-"
+"Benachrichtigungen und ein System für mich selbst zur Verwaltung von "
+"Community-Berichten eingerichtet habe. Ich entdeckte die großartige "
+"Bibliothek von Firebase-Erweiterungen wie Trigger Email from Firestore und "
+"Delete User Data, die sich als sehr nützlich erwiesen. Um ihre "
+"Funktionalität zu erweitern, habe ich auch einige Cloud-Funktionen "
+"geschrieben, die bei Prozessen wie dem Abbestellen von E-Mails über einen "
+"Link in der E-Mail helfen."
+
+#: tourguide.php:78
+msgid ""
+"Wrapping up this work I moved on to setting up CI/CD. I had previous "
+"experience with managing CI/CD such as Azure Pipelines and XCode Cloud, but "
+"this was my first time setting it all up by myself, and also my first time "
+"using fastlane or GitHub Actions. For debugging purposes I also learned some "
+"of the basics of Docker and VirtualBox to standardize and test different "
+"environments. It's now up and running, with commits to my main branch "
+"automatically building and deploying to Google Play, which is pretty sweet."
+msgstr ""
+"Zum Abschluss dieser Arbeit ging ich dazu über, CI/CD einzurichten. Ich "
+"hatte bereits Erfahrung mit der Verwaltung von CI/CD wie Azure Pipelines und "
+"XCode Cloud, aber dies war das erste Mal, dass ich alles selbst einrichtete, "
+"und auch das erste Mal, dass ich Fastlane oder GitHub Actions verwendete. Zu "
+"Debugging-Zwecken habe ich auch einige der Grundlagen von Docker und "
+"VirtualBox gelernt, um verschiedene Umgebungen zu standardisieren und zu "
+"testen. Es ist jetzt einsatzbereit und läuft, wobei Commits an meinen "
+"Hauptzweig automatisch erstellt und bei Google Play bereitgestellt werden, "
+"was ziemlich toll ist."
+
+#: tourguide.php:79
+msgid "Getting Started - July 10, 2024"
+msgstr "Erste Schritte - 10. Juli 2024"
+
+#: tourguide.php:80
+msgid ""
+"The tourguide app is currently in closed testing on the Google Play store. I "
+"plan to also host it as a webapp, and possibly an iOS app if I see demand "
+"for the app. You can "
+msgstr ""
+"Die Tourguide-App befindet sich derzeit in der geschlossenen Testphase im "
+"Google Play Store. Ich plane, sie auch als Webapp zu hosten, und "
+"möglicherweise eine iOS-App, wenn ich die Nachfrage nach der App sehe. Sie "
+"können "
+
+#: tourguide.php:80
+msgid "request"
+msgstr "anfragen"
+
+#: tourguide.php:80
+msgid " to join testing if you're interested in trying it out."
+msgstr ""
+" um an den Tests teilzunehmen, wenn Sie daran interessiert sind, es "
+"auszuprobieren."
+
+#: tourguide.php:81
+msgid ""
+"As of July 2024 the app has functionality for users to create a tour with "
+"waypoints, an explore page to browse these user-created tours, an AI chat "
+"page utilizing Google's Gemini AI roleplaying as a helpful tourguide, and a "
+"profile page. I'm using Firebase services such as Authentication, Firestore, "
+"Storage, Crashlytics and Remote Config, as well as Google APIs like Places, "
+"Maps and Vertex AI to power my app."
+msgstr ""
+"Ab Juli 2024 bietet die App Nutzern die Möglichkeit, eine Tour mit "
+"Wegpunkten zu erstellen, eine Erkundungsseite zum Durchsuchen dieser von "
+"Nutzern erstellten Touren, eine KI-Chat-Seite, die Googles Gemini-KI-"
+"Rollenspiel als hilfreichen Reiseführer nutzt, und eine Profilseite. Ich "
+"verwende Firebase-Dienste wie Authentifizierung, Firestore, Storage, "
+"Crashlytics und Remote Config sowie Google APIs wie Places, Maps und Vertex "
+"AI, um meine App zu betreiben."
+
+#: tourguide.php:110
+msgid "Screenshots from 2024/08/04"
+msgstr "Screenshots vom 2024/08/04"
+
+#: tourguide.php:116
+msgid "What I've learned so far"
+msgstr "Was ich bis jetzt gelernt habe"
+
+#: tourguide.php:117
+msgid "Flutter has been a delight to work with. I was previously working at "
+msgstr ""
+"Es war eine Freude, mit Flutter zusammenzuarbeiten. Ich arbeitete zuvor bei "
+
+#: tourguide.php:117
+msgid ""
+", where I was creating complex UIs with C# in Unity, a setup that's not "
+"really ideal for creating complex UIs, even less so with Clirio's apps "
+"supporting VR, MR, touchscreens on iOS and Android, as well as Desktop, and "
+"catering UI for each of those platforms. In comparison to the challenges "
+"this posed, Flutter makes it a breeze to implement complex UIs across many "
+"devices, while also working with an intuitive architecture of Stateless- and "
+"StatefulWidgets, Providers, and a large amount of packages to help speed up "
+"common tasks."
+msgstr ""
+"Dort habe ich komplexe UIs mit C# in Unity erstellt, ein Setup, das nicht "
+"wirklich ideal für die Erstellung komplexer UIs ist, schon gar nicht mit "
+"Clirios Apps, die VR, MR, Touchscreens auf iOS und Android sowie Desktop und "
+"Catering UI für jede dieser Plattformen unterstützen. Im Vergleich zu den "
+"damit verbundenen Herausforderungen ist es mit Flutter ein Kinderspiel, "
+"komplexe UIs über viele Geräte hinweg zu implementieren und gleichzeitig mit "
+"einer intuitiven Architektur aus Stateless- und StatefulWidgets, Providern "
+"und einer großen Anzahl von Paketen zu arbeiten, die dabei helfen, gängige "
+"Aufgaben zu beschleunigen."
+
+#: tourguide.php:123
+msgid "To-Do's"
+msgstr "To-Do's"
+
+#: tourguide.php:124
+msgid "You can see what I still have planned on my scrum board. It's a lot :)"
+msgstr ""
+"Auf meinem Scrum Board könnt ihr sehen, was ich noch geplant habe. Es ist "
+"eine Menge :)"

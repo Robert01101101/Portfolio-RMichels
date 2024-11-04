@@ -21,6 +21,9 @@ Use msgmerge: https://www.gnu.org/software/gettext/manual/html_node/msgmerge-Inv
 2) Copy header to new file
 3) msgmerge messages.po messagesNew.po > messagesMerged.po
 4) Use Poedit to easily view and update file
+  > Use arrow keys to switch entries
+  > Ctrl+Enter to confirm
+  > Ctrl+B to use English for German
 
 
 Messages header:

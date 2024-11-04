@@ -22,7 +22,7 @@ Partial::build('header');
   <div class="row">
     <div class="col-50" id="landingText">
       <p><?php if (isset($_GET["greeting"])) {
-                  echo _("Hi ".$_GET["greeting"].", <br>I'm Robert Michels.");
+                  echo _("Hi ").$_GET["greeting"]._(", <br>I'm Robert Michels.");
                 } else {
                   echo _("Hi, I'm Robert&nbsp;Michels."); 
                 }
