@@ -368,10 +368,10 @@ function waves () {
 
 function isLowPoweredDeviceWaves() {
 	// Check the number of logical processors
-	const cores = navigator.hardwareConcurrency || 2; // Default to 1 if not available
+	/*const cores = navigator.hardwareConcurrency || 2; // Default to 1 if not available
 	if (cores <= 2) {
 		return true; // Likely a low-powered device
-	}
+	}*/
   
 	// Check user agent for mobile devices
 	const userAgent = navigator.userAgent.toLowerCase();
