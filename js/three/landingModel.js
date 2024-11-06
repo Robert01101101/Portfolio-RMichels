@@ -24,7 +24,7 @@ var loader = new THREE.GLTFLoader();
 
 function isLowPoweredDevice() {
   // Check the number of logical processors
-  const cores = navigator.hardwareConcurrency || 1; // Default to 1 if not available
+  const cores = navigator.hardwareConcurrency || 2; // Default to 1 if not available
   if (cores <= 2) {
       lowPoweredDevice = true;
       return true; // Likely a low-powered device
