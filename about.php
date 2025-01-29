@@ -17,7 +17,8 @@ Partial::build('header', ["about" => TRUE]);
     <p>👋 <?php echo _("Hi there, I'm Robert!"); ?></p>
     <p><?php echo _("I'm a software developer and designer from Vancouver. My inexhaustible curiosity and love for digital media led me to attend Simon Fraser University (SFU), where I earned my Bachelor's Degree of Science with a major in Interactive Arts & Technology."); ?></p> 
     </p><?php echo _("I've prototyped, designed, and developed various interactive applications throughout my career, covering everything from XR to web development. These experiences have shaped me into a designer who emphasizes a user-goal-driven approach, a developer who values scalability and accessibility, and an expert in rapid prototyping."); ?></p>
-    <p><?php echo _("Contact me if you would like to make cool stuff together! I'm currently looking for work."); ?></p>
+    </p><?php echo _("Nowadays I work as a Full-Stack Web Developer at Qwadra Vancouver, developing web features with ASP.NET and React. I also occasionally work on personal projects, like my Flutter app Tourguide. Before that, I spent 3 years working as a Mixed Reality Software Developer at Clirio, where I developed cross-platform XR GIS apps in Unity with C#, and got to work with technologies like MRTK, Blazor and Three.js."); ?></p>
+    <p><?php echo _("Contact me if you would like to make cool stuff together! I'm always open to exploring interesting projects."); ?></p>
   
     <div class="contact">
       <?php echo _("Say Hi:"); ?>
