@@ -2,3 +2,9 @@ database/
 nopublicaccess/
 backups/
 *.lnk
+
+# MCP secrets — set via Cursor Settings → MCP env vars
+.cursor/mcp.json
+/vendor/
+/node_modules/
+composer.phar

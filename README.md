@@ -18,3 +18,8 @@ My personal portfolio website which serves as an online presence for my design a
 - Database copies, setup instructions, config.php and other files which contains security sensity information are encrypted with VeraCrypt.
 - Hosted with Hostinger.
 - Check my GDrive portfolio folder for links to SCRUM board, portfolio, etc.
+
+## AI Development
+
+For AI-assisted work in this repo, start with [AGENTS.md](AGENTS.md) (conventions, stack, and workflows) and [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) (request flow and structure). Cursor-specific guidance lives in `.cursor/rules/`; see `.cursorignore` for paths excluded from indexing.
+

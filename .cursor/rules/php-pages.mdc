@@ -1,0 +1,51 @@
+---
+description: PHP page conventions, Partial usage, and i18n
+globs: **/*.php
+alwaysApply: false
+---
+
+# PHP Pages
+
+## Requires
+
+Root pages:
+```php
+require "config.php";
+require "src/Partial.php";
+require "src/objects/Project.php";
+```
+
+Subdirectory pages:
+```php
+require_once __DIR__ . "/../config.php";
+require_once __DIR__ . "/../src/Partial.php";
+```
+
+## Partial::build
+
+```php
+Partial::build('header', ["project" => $project]);
+Partial::build('projectPageLanding', ["project" => $project, "description" => _("...")]);
+Partial::build('footer', ["index" => TRUE]);
+```
+
+Args are `extract()`'d into the partial scope. See `AGENTS.md` for context flags (`$project`, `$projects`, `$about`, `$index`, `$skills`).
+
+## Project pages
+
+```php
+$project = Project::buildProjectFromSlug('futureEarth');
+```
+
+Match slug to filename and DB row.
+
+## i18n
+
+Wrap user-facing strings in `_()`. Locale setup is in `src/partials/header.php`. German: `locale/de_DE/LC_MESSAGES/messages.po`. See `_TRANSLATION_SETUP_.txt`.
+
+## Asset paths
+
+- Root page body content often uses bare `assets/img/...` (see `futureEarth.php`).
+- Partials and some pages use `<?php echo $GLOBALS['d']; ?>assets/...`.
+- `skills/` pages: `config.php` sets `$GLOBALS['d'] = "../"`.
+- **Match sibling files** in the same directory — paths are inconsistent by design.

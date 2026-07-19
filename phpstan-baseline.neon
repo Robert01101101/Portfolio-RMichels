@@ -1,0 +1,171 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Variable \\$partialPath in isset\\(\\) always exists and is not nullable\\.$#"
+			count: 1
+			path: src/Partial.php
+
+		-
+			message: "#^Expression \"\\$output\" on a separate line does not do anything\\.$#"
+			count: 1
+			path: src/objects/Project.php
+
+		-
+			message: "#^Expression \"\\$slugs\" on a separate line does not do anything\\.$#"
+			count: 1
+			path: src/objects/Project.php
+
+		-
+			message: "#^Method Project\\:\\:__construct\\(\\) with return type void returns \\$this\\(Project\\) but should not return anything\\.$#"
+			count: 1
+			path: src/objects/Project.php
+
+		-
+			message: "#^PHPDoc tag @param references unknown parameter\\: \\$bool$#"
+			count: 1
+			path: src/objects/Project.php
+
+		-
+			message: "#^PHPDoc tag @param references unknown parameter\\: \\$string$#"
+			count: 1
+			path: src/objects/Project.php
+
+		-
+			message: "#^PHPDoc tag @param references unknown parameter\\: \\$title$#"
+			count: 7
+			path: src/objects/Project.php
+
+		-
+			message: "#^PHPDoc tag @return with type mixed is not subtype of native type string\\.$#"
+			count: 3
+			path: src/objects/Project.php
+
+		-
+			message: "#^PHPDoc tag @return with type string is incompatible with native type array\\.$#"
+			count: 2
+			path: src/objects/Project.php
+
+		-
+			message: "#^Variable \\$DBHOST might not be defined\\.$#"
+			count: 3
+			path: src/objects/Project.php
+
+		-
+			message: "#^Variable \\$DBNAME might not be defined\\.$#"
+			count: 3
+			path: src/objects/Project.php
+
+		-
+			message: "#^Variable \\$DBPASS might not be defined\\.$#"
+			count: 3
+			path: src/objects/Project.php
+
+		-
+			message: "#^Variable \\$DBUSER might not be defined\\.$#"
+			count: 3
+			path: src/objects/Project.php
+
+		-
+			message: "#^Variable \\$output might not be defined\\.$#"
+			count: 4
+			path: src/objects/Project.php
+
+		-
+			message: "#^Variable \\$slugs might not be defined\\.$#"
+			count: 1
+			path: src/objects/Project.php
+
+		-
+			message: "#^Method Role\\:\\:__construct\\(\\) with return type void returns \\$this\\(Role\\) but should not return anything\\.$#"
+			count: 1
+			path: src/objects/Role.php
+
+		-
+			message: "#^Method Role\\:\\:setId\\(\\) should return Project but returns \\$this\\(Role\\)\\.$#"
+			count: 1
+			path: src/objects/Role.php
+
+		-
+			message: "#^PHPDoc tag @param references unknown parameter\\: \\$title$#"
+			count: 2
+			path: src/objects/Role.php
+
+		-
+			message: "#^PHPDoc tag @return with type mixed is not subtype of native type string\\.$#"
+			count: 1
+			path: src/objects/Role.php
+
+		-
+			message: "#^Variable \\$DBHOST might not be defined\\.$#"
+			count: 1
+			path: src/objects/Role.php
+
+		-
+			message: "#^Variable \\$DBNAME might not be defined\\.$#"
+			count: 1
+			path: src/objects/Role.php
+
+		-
+			message: "#^Variable \\$DBPASS might not be defined\\.$#"
+			count: 1
+			path: src/objects/Role.php
+
+		-
+			message: "#^Variable \\$DBUSER might not be defined\\.$#"
+			count: 1
+			path: src/objects/Role.php
+
+		-
+			message: "#^Variable \\$primaryLinkText might not be defined\\.$#"
+			count: 1
+			path: src/partials/projectPageLanding.php
+
+		-
+			message: "#^Variable \\$project might not be defined\\.$#"
+			count: 4
+			path: src/partials/projectPageLanding.php
+
+		-
+			message: "#^Variable \\$quaternaryLinkText might not be defined\\.$#"
+			count: 1
+			path: src/partials/projectPageLanding.php
+
+		-
+			message: "#^Variable \\$secondaryLinkText might not be defined\\.$#"
+			count: 1
+			path: src/partials/projectPageLanding.php
+
+		-
+			message: "#^Variable \\$tertiaryLinkText might not be defined\\.$#"
+			count: 1
+			path: src/partials/projectPageLanding.php
+
+		-
+			message: "#^Variable \\$project might not be defined\\.$#"
+			count: 7
+			path: src/partials/projectPageMeta.php
+
+		-
+			message: "#^Variable \\$link might not be defined\\.$#"
+			count: 1
+			path: src/partials/projectPageVideo.php
+
+		-
+			message: "#^Variable \\$inDevelopment might not be defined\\.$#"
+			count: 1
+			path: src/partials/projectTile.php
+
+		-
+			message: "#^Variable \\$name might not be defined\\.$#"
+			count: 3
+			path: src/partials/projectTile.php
+
+		-
+			message: "#^Variable \\$slug might not be defined\\.$#"
+			count: 3
+			path: src/partials/projectTile.php
+
+		-
+			message: "#^Variable \\$type might not be defined\\.$#"
+			count: 1
+			path: src/partials/projectTile.php

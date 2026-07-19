@@ -1,0 +1,14 @@
+---
+description: SCSS source workflow and Prepros compilation
+globs: scss/**
+alwaysApply: false
+---
+
+# Styles
+
+- Edit `scss/`, not `css/main.css` (generated output).
+- Primary entry: `scss/main.scss` → `css/main.css`.
+- **Prepros** (`prepros.config`) is the primary build tool for SCSS and JS minification.
+- Alternative: `npm run build:css` or `npm run watch:css` (requires `npm install`).
+- Deploy excludes `scss/` — only compiled `css/` ships to production.
+- JS: edit source in `js/`; footer loads `*-min.js` built by Prepros. Do not edit `*-min.js` directly.

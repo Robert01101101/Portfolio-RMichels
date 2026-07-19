@@ -1,0 +1,12 @@
+{
+  "name": "portfolio-rmichels",
+  "private": true,
+  "scripts": {
+    "build:css": "sass scss/main.scss css/main.css --style=expanded",
+    "build:css:min": "sass scss/main.scss css/main.css --style=compressed",
+    "watch:css": "sass --watch scss/main.scss:css/main.css"
+  },
+  "devDependencies": {
+    "sass": "^1.77.0"
+  }
+}

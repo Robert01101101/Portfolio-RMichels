@@ -1,0 +1,26 @@
+﻿# Large binary / asset directories
+_RawAssets/
+_PreAssets/
+assets/
+
+# Unity WebGL build
+subdomains/cyberview/Build/
+
+# Vendored Three.js
+js/three/build/
+
+# Secrets and local data
+database/
+nopublicaccess/
+backups/
+
+# Binary media formats
+*.unityweb
+*.wmv
+*.psd
+*.blend
+*.glb
+*.obj
+
+# Compiled CSS source maps
+css/*.map

@@ -6,13 +6,32 @@ on:
       - main
 
 jobs:
-  deploy:
+  ci:
     runs-on: ubuntu-latest
     steps:
-      - name: 🚚 Get latest code
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: 📂 Deploy files to Hostinger via FTPS
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.2"
+          coverage: none
+
+      - name: Install dependencies
+        run: composer install --no-interaction --prefer-dist
+
+      - name: PHPStan
+        run: composer analyse
+
+  deploy:
+    needs: ci
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get latest code
+        uses: actions/checkout@v4
+
+      - name: Deploy files to Hostinger via FTPS
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.HOSTINGER_FTPS_SERVER }}
@@ -22,8 +41,11 @@ jobs:
           exclude: |
             **/.git*
             **/.git*/**
+            **/.cursor/**
             **/node_modules/**
             **/_PreAssets/**
+            **/_RawAssets/**
+            **/database/**
             **/scss/**
             **/subdomains/amae/**
             **/subdomains/harbingersofdeath/**
@@ -34,4 +56,5 @@ jobs:
             **/prepros.config*
             **/_DATABASE_SETUP_*
             **/_TRANSLATION_SETUP_*
+            **/phpinfo.php
             

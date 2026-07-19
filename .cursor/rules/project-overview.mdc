@@ -1,0 +1,30 @@
+---
+description: Portfolio site stack, routing, and page patterns
+alwaysApply: true
+---
+
+# Portfolio-RMichels Overview
+
+- Personal portfolio at [rmichels.com](https://rmichels.com): PHP + MySQL + Apache (LAMP), **no framework** (intentional).
+- One PHP file per route at repo root; `.htaccess` strips `.php` from URLs.
+- Templates: `Partial::build('partialName', $args)` loads `src/partials/{name}.php`.
+- Project metadata from MySQL; case study body content is hardcoded in each `{slug}.php`.
+- `skills/` = PHP showcase pages, **not** Cursor agent skills.
+- Do not refactor application logic unless explicitly asked.
+
+## Page bootstrap
+
+```php
+require "config.php";
+require "src/Partial.php";
+require "src/objects/Project.php";
+Partial::build('header', ["about" => TRUE]);
+// content
+Partial::build('footer');
+```
+
+Subdirectory pages (`skills/`, `development/`): use `__DIR__ . "/../"` requires; `development/` pages need `chdir('../')` first.
+
+## Slug coupling
+
+PHP filename = DB `project_slug` = `assets/img/{slug}.jpg` (hero image). Keep all three aligned.
