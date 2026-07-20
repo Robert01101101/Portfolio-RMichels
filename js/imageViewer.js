@@ -50,8 +50,8 @@ function viewImage (sourceImage, carousel=false) {
         var loadDelay = 10;
         next = document.getElementsByClassName("next")[0];
         prev = document.getElementsByClassName("prev")[0];
-        expand = document.getElementsByClassName("fa-expand")[0];
-        compress = document.getElementsByClassName("fa-compress")[0];
+        expand = document.getElementById("fullScreenExpand");
+        compress = document.getElementById("fullScreenCompress");
         closeBtn = document.getElementsByClassName("closeBtn")[0];
         next.classList.add("hidden");
         prev.classList.add("hidden");
@@ -79,8 +79,7 @@ function viewImage (sourceImage, carousel=false) {
 
                 //Hide Zoom Options
                 var fullScreenIcons = [];
-                fullScreenIcons = clone.getElementsByTagName('i');
-                fullScreenIcons = Array.prototype.slice.call(fullScreenIcons);
+                fullScreenIcons = clone.querySelectorAll('.viewer-control-icon');
 
                 fullScreenIcons.forEach(element => {
                     if(!element.classList.contains("hidden")) element.classList.add("hidden");

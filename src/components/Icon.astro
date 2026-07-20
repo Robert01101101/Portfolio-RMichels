@@ -1,0 +1,24 @@
+---
+import { icons, type IconName } from '../lib/icons';
+
+export interface Props {
+  name: IconName;
+  size?: 'md' | '2x';
+  class?: string;
+  id?: string;
+}
+
+const { name, size = 'md', class: className, id } = Astro.props;
+const icon = icons[name];
+---
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox={icon.viewBox}
+  class:list={['icon', size === '2x' && 'icon--2x', className]}
+  id={id}
+  aria-hidden="true"
+  focusable="false"
+>
+  <path fill="currentColor" d={icon.path} />
+</svg>

@@ -174,4 +174,12 @@ export function initLandingModel() {
   });
 }
 
-initLandingModel();
+function start() {
+  initLandingModel();
+}
+
+if ('requestIdleCallback' in window) {
+  requestIdleCallback(start);
+} else {
+  setTimeout(start, 1);
+}

@@ -62,9 +62,9 @@ header {
     transform: rotate(45deg) translate(-7px, -7px) ;
   }
 
-  //________________________________________________________ Home Icon
-  i {
+  .icon-header {
     color: _colour(white);
-    font-size: 1.1em;
+    width: 1.1em;
+    height: 1.1em;
   }
 }

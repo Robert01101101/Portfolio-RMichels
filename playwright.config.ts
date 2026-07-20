@@ -2,9 +2,6 @@ import { defineConfig, devices } from '@playwright/test';
 
 const blockedHosts = [
   'googletagmanager.com',
-  'googleapis.com',
-  'gstatic.com',
-  'kit.fontawesome.com',
   'unpkg.com',
 ];
 
