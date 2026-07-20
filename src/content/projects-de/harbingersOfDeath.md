@@ -20,8 +20,8 @@ order: 7
 
 <section class="sectionText">
     
-    <h2>The Task</h2>
-    <p>The intent of this project was to practice back-end development, using the LAMP stack. Users can sign up to the site, interact with items on the site and are greeted by a customized homepage. The site features database driven content, secure authentication handling, and AJAX searching and filtering.</p>
+    <h2>Die Aufgabe</h2>
+    <p>The intent of this project was to practice back-end development, using the LAMP stack. Users can sign up to the site, interact with items on the site und are greeted by a customized homeSeite. The site features database driven content, secure authentication handling und AJAX searching und filtering.</p>
   </section>
 
   
@@ -29,7 +29,7 @@ order: 7
     <div class="mediaSquare">
       <figure onclick="viewImage(this)">
         <img src="/assets/img/harbingersofdeath/lqip/screen-home.jpg">
-        <figcaption class="center">Homepage</figcaption>
+        <figcaption class="center">HomeSeite</figcaption>
       </figure>
       <figure onclick="viewImage(this)">
         <img src="/assets/img/harbingersofdeath/lqip/screen-omen.jpg">
@@ -40,10 +40,10 @@ order: 7
 
   
   <section class="sectionText">
-    <h2>The Result</h2>
-    <p>Harbingers of Death presents now-defunct omens sourced from an 1889 article as if they are real, as a satire of modern conspiracy theories. The Content Units are individual omens. They contain information about who is affected, what triggers the omen, and the kind of scenario you would encounter them in. Users can explore them through different taxonomies and by search.</p>
-    <p>Visitors can filter the omens by who is at fault, who will die, and the aspect of life that they apply to. Visitors may also search omens using a text input.</p>
-    <p>Website members sign in to keep track of which omens they have experienced, and whom it indicates is going to die.</p>
+    <h2>Das Ergebnis</h2>
+    <p>Harbingers of Death presents now-defunct omens sourced from an 1889 article as if they are real, as a satire of modern conspiracy theories. The Content Units are individual omens. They contain information about who is affected, what triggers the omen und the kind of scenario you would encounter them in. Users can explore them through different taxonomies und by search.</p>
+    <p>Visitors can filter the omens by who is at fault, who will die und the aspect of life that they apply to. Visitors may also search omens using a text input.</p>
+    <p>Website members sign in to keep track of which omens they have experienced und whom it indicates is going to die.</p>
   </section>
 
   
@@ -56,15 +56,15 @@ order: 7
       </figure>
       <figure onclick="viewImage(this)">
         <img src="/assets/img/harbingersofdeath/lqip/screen-member-home.jpg">
-        <figcaption class="center">Member Homepage</figcaption>
+        <figcaption class="center">Member HomeSeite</figcaption>
       </figure>
     </div>
   </section>
 
   
   <section class="sectionText">
-    <h2>The Code</h2>
-    <p>A crucial element for the success of this project was the separation of views and logic. This allowed us to write very clean code. For instance, when I implemented the individual omen's content pages, I seperated code responsible for displaying the page from the code that deals with retrieving and organizing data. At runtime, when the omen route is processed in <code>index.php</code>, the code constructs an <code>Omen</code> instance using <code>OmenCollection.php</code>, and passes this instance to the page view <code>omen.php</code>.</p>
+    <h2>Der Code</h2>
+    <p>A crucial element for the success of this project was the separation of views und logic. This allowed us to write very clean code. For instance, when I implemented the individual omen's content Seites, I seperated code responsible for displaying the Seite from the code that deals with retrieving und organizing data. At runtime, when the omen route is processed in <code>index.php</code>, the code constructs an <code>Omen</code> instance using <code>OmenCollection.php</code> und passes this instance to the Seite view <code>omen.php</code>.</p>
   </section>
 
   
@@ -76,7 +76,7 @@ order: 7
 
   
   <section class="sectionText">
-    <p>An interesting challenge was the implementation of floating labels for text inputs. These labels appear like placeholder text until the user enters text into the text input, at which point the labels are shrunk and positioned above the input, like a traditional label. The challenge was making sure that there is no compromise of function for form. As a result, labels and inputs are separate DOM objects, and the form is ARIA-friendly.</p>
+    <p>An interesting challenge was the implementation of floating labels for text inputs. These labels appear like placeholder text until the user enters text into the text input, at which point the labels are shrunk und positioned above the input, like a traditional label. The challenge was making sure that there is no compromise of function for form. As a result, labels und inputs are separate DOM objects und the form is ARIA-friendly.</p>
   </section>
 
   
@@ -86,7 +86,7 @@ order: 7
 
   
   <section class="sectionText">
-    <p>For this project I was also responsible for setting up our database, as well as all database queries. I designed the database with the following tables: user (to store user information), user_omen (an associative table to store which omens a user encountered), omen (to store information about each omen) and three taxonomy tables: aspect, death and fault (for tagging omens). The only two tables that can be modified through our website are the user and user_omen tables. The omen and taxology tables on the other hand are static.</p>
+    <p>For this project I was also responsible for setting up our database, as well as all database queries. I designed the database with the following tables: user (to store user information), user_omen (an associative table to store which omens a user encountered), omen (to store information about each omen) und three taxonomy tables: aspect, death und fault (for tagging omens). The only two tables that can be modified through our website are the user und user_omen tables. The omen und taxology tables on the other hand are static.</p>
   </section>
 
   

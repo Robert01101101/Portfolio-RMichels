@@ -1,14 +1,12 @@
 ---
-description: SCSS source workflow and Prepros compilation
-globs: scss/**
+description: Sass source workflow for Astro
+globs: src/styles/**
 alwaysApply: false
 ---
 
 # Styles
 
-- Edit `scss/`, not `css/main.css` (generated output).
-- Primary entry: `scss/main.scss` → `css/main.css`.
-- **Prepros** (`prepros.config`) is the primary build tool for SCSS and JS minification.
-- Alternative: `npm run build:css` or `npm run watch:css` (requires `npm install`).
-- Deploy excludes `scss/` — only compiled `css/` ships to production.
-- JS: edit source in `js/`; footer loads `*-min.js` built by Prepros. Do not edit `*-min.js` directly.
+- Edit `src/styles/`, not compiled output.
+- Primary entry: `src/styles/main.scss` (imported in `BaseLayout.astro`).
+- Vite compiles Sass during `npm run dev` / `npm run build`.
+- Legacy root `scss/` and `css/main.css` were removed after Astro migration.

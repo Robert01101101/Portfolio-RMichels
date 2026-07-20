@@ -25,11 +25,6 @@ jobs:
       - name: Sync assets to public/
         run: cp -r assets public/assets
 
-      - name: Export content (migration helper)
-        run: |
-          node scripts/export-db-to-content.mjs || echo "Export skipped — using committed content"
-          node scripts/po-to-json.mjs || echo "i18n export skipped — using committed JSON"
-
       - name: Astro check
         run: npm run check
 
@@ -44,3 +39,9 @@ jobs:
 
       - name: Verify build output
         run: npm run test:verify
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: E2E tests
+        run: npm run test:e2e

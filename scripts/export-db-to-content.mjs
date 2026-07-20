@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 /**
- * Export project metadata and markdown bodies from PHP case study files.
- * Falls back to embedded metadata when no SQL dump is available.
+ * Export project metadata and markdown bodies.
+ * Reads EN bodies from existing markdown (or legacy PHP if present).
+ * Applies gettext PO translations for DE bodies when scripts/archive/messages.po exists.
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -11,6 +12,67 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
 const outEn = path.join(root, 'src/content/projects');
 const outDe = path.join(root, 'src/content/projects-de');
+const poPath = path.join(root, 'scripts/archive/messages.po');
+
+function unescapePo(s) {
+  return s.replace(/\\n/g, '\n').replace(/\\"/g, '"').replace(/\\\\/g, '\\');
+}
+
+/** Parse gettext PO file into msgid → msgstr map (skips empty msgid header). */
+function parsePoFile(filePath) {
+  if (!fs.existsSync(filePath)) return new Map();
+  const po = fs.readFileSync(filePath, 'utf8').replace(/\r\n/g, '\n');
+  const map = new Map();
+  const blocks = po.split(/\n\n+/);
+  for (const block of blocks) {
+    const msgid = readPoString(block, 'msgid');
+    const msgstr = readPoString(block, 'msgstr');
+    if (!msgid || !msgstr) continue;
+    map.set(msgid, msgstr);
+  }
+  return map;
+}
+
+function readPoString(block, field) {
+  const lines = block.split('\n');
+  let value = '';
+  let inField = false;
+  for (const line of lines) {
+    const single = line.match(new RegExp(`^${field}\\s+"((?:[^"\\\\]|\\\\.)*)"`));
+    if (single) {
+      value = unescapePo(single[1]);
+      inField = true;
+      continue;
+    }
+    const cont = line.match(/^"((?:[^"\\]|\\.)*)"$/);
+    if (inField && cont) {
+      value += unescapePo(cont[1]);
+      continue;
+    }
+    if (inField && line.trim() && !line.startsWith('"')) inField = false;
+  }
+  return value;
+}
+
+function applyPoTranslations(text, translations) {
+  const entries = [...translations.entries()]
+    .filter(([msgid, msgstr]) => msgstr && text.includes(msgid))
+    .sort((a, b) => b[0].length - a[0].length);
+  let result = text;
+  for (const [msgid, msgstr] of entries) {
+    result = result.split(msgid).join(msgstr);
+  }
+  return result;
+}
+
+function extractBodyFromMd(mdPath) {
+  if (!fs.existsSync(mdPath)) return '';
+  const content = fs.readFileSync(mdPath, 'utf8');
+  const match = content.match(/^---\n[\s\S]*?\n---\n\n?([\s\S]*)$/);
+  return match ? match[1].trim() : '';
+}
+
+const poTranslations = parsePoFile(poPath);
 
 const PROJECTS = [
   {
@@ -135,12 +197,12 @@ const PROJECTS = [
     slug: 'portfolio',
     order: 8,
     name: { en: 'Portfolio Website', de: 'Portfolio Website' },
-    type: { en: 'LAMP Website', de: 'LAMP Website' },
+    type: { en: 'Static Website', de: 'Statische Website' },
     year: '2020',
     roles: ['front-end', 'back-end', 'threejs', 'design'],
     description: {
-      en: 'A full-stack website developed using the LAMP stack, utilizing Three.js and Sass.',
-      de: 'Eine Full-Stack-Website mit dem LAMP-Stack, Three.js und Sass.',
+      en: 'A static portfolio site built with Astro, TypeScript islands, Three.js, and Sass.',
+      de: 'Eine statische Portfolio-Website mit Astro, TypeScript-Islands, Three.js und Sass.',
     },
     links: [{ label: 'GitHub', url: 'https://github.com/Robert01101101/Portfolio-RMichels' }],
     heroAltLayout: false,
@@ -294,7 +356,11 @@ fs.mkdirSync(outDe, { recursive: true });
 
 for (const project of PROJECTS) {
   const phpPath = path.join(root, `${project.slug}.php`);
-  const body = extractProjContent(phpPath);
+  const enMdPath = path.join(outEn, `${project.slug}.md`);
+  const body =
+    extractProjContent(phpPath) ||
+    extractBodyFromMd(enMdPath);
+  const bodyDe = applyPoTranslations(body, poTranslations);
   const frontmatter = { ...project };
   delete frontmatter.links;
   const links = project.links;
@@ -319,7 +385,7 @@ for (const project of PROJECTS) {
   if (project.order) yaml += `order: ${project.order}\n`;
   yaml += '---\n\n';
   fs.writeFileSync(path.join(outEn, `${project.slug}.md`), yaml + body + '\n');
-  fs.writeFileSync(path.join(outDe, `${project.slug}.md`), yaml + body + '\n');
+  fs.writeFileSync(path.join(outDe, `${project.slug}.md`), yaml + bodyDe + '\n');
 }
 
 console.log(`Exported ${PROJECTS.length} projects to src/content/projects/`);

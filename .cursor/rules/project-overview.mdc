@@ -5,26 +5,37 @@ alwaysApply: true
 
 # Portfolio-RMichels Overview
 
-- Personal portfolio at [rmichels.com](https://rmichels.com): PHP + MySQL + Apache (LAMP), **no framework** (intentional).
-- One PHP file per route at repo root; `.htaccess` strips `.php` from URLs.
-- Templates: `Partial::build('partialName', $args)` loads `src/partials/{name}.php`.
-- Project metadata from MySQL; case study body content is hardcoded in each `{slug}.php`.
-- `skills/` = PHP showcase pages, **not** Cursor agent skills.
+- Personal portfolio at [rmichels.com](https://rmichels.com): **Astro** static site (EN root / DE `/de/`).
+- Content: markdown collections in `src/content/projects/` and `src/content/projects-de/`.
+- Styles: Sass in `src/styles/` (Vite build).
+- Client JS: TypeScript islands in `src/islands/` (Three.js, filters, etc.).
+- Deploy: GitHub Actions builds `dist/` → FTPS to Hostinger.
 - Do not refactor application logic unless explicitly asked.
 
-## Page bootstrap
+## Page pattern
 
-```php
-require "config.php";
-require "src/Partial.php";
-require "src/objects/Project.php";
-Partial::build('header', ["about" => TRUE]);
-// content
-Partial::build('footer');
+```astro
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const locale = 'en';
+---
+<BaseLayout title="..." description="..." locale={locale} pageType="about">
+  <!-- content -->
+</BaseLayout>
 ```
 
-Subdirectory pages (`skills/`, `development/`): use `__DIR__ . "/../"` requires; `development/` pages need `chdir('../')` first.
+Subdirectory routes: `src/pages/development/[slug].astro` for in-development projects (e.g. tourguide).
 
 ## Slug coupling
 
-PHP filename = DB `project_slug` = `assets/img/{slug}.jpg` (hero image). Keep all three aligned.
+Markdown `slug:` frontmatter = `public/assets/img/{slug}.jpg` (hero image). Keep aligned when adding projects.
+
+## Dev commands
+
+```bash
+npm run dev      # Astro dev server (port 4321)
+npm run build    # Output to dist/
+npm run check && npm run test:unit && npm run test:content
+```
+
+See `AGENTS.md` for full agent workflow.

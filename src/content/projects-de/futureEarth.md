@@ -23,9 +23,9 @@ order: 5
 ---
 
 <section class="sectionText">
-    <h2>The Task</h2>
-    <p>Future Earth was created as an exercise in designing and developing immersive environments.</p>
-    <p>With the concept design, we aimed to create a VR adventure game that encourages sustainable behaviors in players. This is achieved by placing the player in a dystopian futuristic environment and giving them the power to radically transform it for the better through gameplay.</p>
+    <h2>Die Aufgabe</h2>
+    <p>Future Earth wurde als Übung für die Gestaltung und Entwicklung immersiver Umgebungen entwickelt.</p>
+    <p>Mit dem Konzeptentwurf wollten wir ein VR-Abenteuerspiel schaffen, das die Spieler zu nachhaltigen Verhaltensweisen anregt. Dies wird erreicht, indem wir den Spieler in eine dystopische, futuristische Umgebung versetzen und ihm die Macht geben, diese durch das Spiel radikal zum Besseren zu verändern.</p>
   </section>
 
   
@@ -54,13 +54,13 @@ order: 5
 
   
   <section class="sectionText">
-    <h2>The Result</h2>
-    <h3>Story</h3>
-    <p>Set in a dystopian future, you are the first human to walk planet earth in a long time.</p>
-    <p>Your mission objective is to plant and sustain 100 trees. Whether or not humanity will attempt to return to earth hinges upon your success.</p>
+    <h2>Das Ergebnis</h2>
+    <h3>Geschichte</h3>
+    <p>In einer dystopischen Zukunft bist du der erste Mensch, der seit langer Zeit die Erde bewandert.</p>
+    <p>Ihr Missionsziel ist es, 100 Bäume zu pflanzen und zu erhalten. Von Ihrem Erfolg hängt es ab, ob die Menschheit versuchen wird, zur Erde zurückzukehren oder nicht.</p>
     <p></p>
-    <h3>Success</h3>
-    <p>Our project won best overall project, best interaction design, project for impact, and best VR/AR in our class.</p>
+    <h3>Erfolg</h3>
+    <p>Unser Projekt gewann den Preis für das beste Gesamtprojekt, das beste Interaktionsdesign, das beste Projekt für die Wirkung und das beste VR/AR-Projekt in unserer Klasse.</p>
     <p></p>
   </section>
 
@@ -97,11 +97,11 @@ order: 5
 
   
   <section class="sectionText">
-    <h2>Process</h2>
-    <p>The project was developed in 4 months by a team of 4. I was the project manager, as well as one of the VR / game designers & developers.</p>
-    <p>After deciding to create a project for impact with the theme of sustainability, we started to create a game. Our goal was to create a VR game that appeals to players without particular interest in sustainability, to reach a broader audience.</p>
-    <p>As the PM, I split the concept design into a list of core and bonus features. The core design featured a small game, where players fight rogue robots, collect their parts, and build water filtering technology that helps trees to grow. This core prototype was implemented within the first three months.</p>
-    <p>After a round of usertesting, we proceed to implement updated features in response to our testing results. These included measures to better communicate the narrative, such as a major update to the level design and the implementation of an aesthetic change as the player plants more trees. We also had time to implement some of our bonus features, which were mostly aesthetic improvements such as the addition of VFX, better models, and multiple collectible parts.</p>
+    <h2>Prozess</h2>
+    <p>Das Projekt wurde in 4 Monaten von einem 4-köpfigen Team entwickelt. Ich war der Projektleiter sowie einer der VR-/Spieldesigner und -entwickler.</p>
+    <p>Nachdem wir beschlossen hatten, ein Impact-Projekt zum Thema Nachhaltigkeit zu entwickeln, begannen wir mit der Erstellung eines Spiels. Unser Ziel war es, ein VR-Spiel zu entwickeln, das auch Spieler ohne Interesse an Nachhaltigkeit anspricht, um ein breiteres Publikum zu erreichen.</p>
+    <p>Als PM teilte ich das Konzeptdesign in eine Liste von Kern- und Bonusfunktionen auf. Der Kernentwurf beinhaltete ein kleines Spiel, in dem die Spieler gegen bösartige Roboter kämpfen, deren Teile sammeln und eine Wasserfiltertechnologie bauen, die Bäumen beim Wachsen hilft. Dieser Kernprototyp wurde innerhalb der ersten drei Monate umgesetzt.</p>
+    <p>Nach einer Runde von Benutzertests haben wir als Reaktion auf die Testergebnisse aktualisierte Funktionen implementiert. Dazu gehörten Maßnahmen zur besseren Vermittlung der Geschichte, wie z. B. eine umfassende Aktualisierung des Leveldesigns und die Implementierung einer ästhetischen Veränderung, wenn der Spieler mehr Bäume pflanzt. Wir hatten auch Zeit, einige unserer Bonus-Features zu implementieren, bei denen es sich hauptsächlich um ästhetische Verbesserungen handelte, wie z. B. das Hinzufügen von VFX, bessere Modelle und mehrere sammelbare Teile.</p>
   </section>
 
   
@@ -142,8 +142,8 @@ order: 5
 
   
   <section class="sectionText">
-    <h2>The Code</h2>
-    <p>My programming efforts for this project focussed on the more unusual features of our game, such as spare part collection, item building, UI interactions, story sequencing and more. Another interesting feature I implemented was the trees, which required animations for growth and monitoring of their health based on the available water supply. In order to achieve fine control over the growth behavior, I used a Coroutine, which is also used to control dying trees. Instead of using an Unity animation I implemented smooth growth by affecting scale and rotation with the help of <code>Mathf.SmoothStep()</code> and <code>Mathf.Sin()</code></p>
+    <h2>Der Code</h2>
+    <p>Meine Programmierarbeit für dieses Projekt konzentrierte sich auf die ungewöhnlicheren Funktionen unseres Spiels, wie z. B. das Sammeln von Ersatzteilen, das Bauen von Gegenständen, die Interaktion mit der Benutzeroberfläche, die Abfolge der Geschichte und mehr. Eine weitere interessante Funktion, die ich implementiert habe, waren die Bäume, die Animationen für das Wachstum und die Überwachung ihres Gesundheitszustands auf der Grundlage der verfügbaren Wasservorräte benötigten. Um eine feine Kontrolle über das Wachstumsverhalten zu erreichen, habe ich eine Coroutine verwendet, die auch zur Kontrolle sterbender Bäume eingesetzt wird. Anstatt eine Unity-Animation zu verwenden, implementierte ich ein sanftes Wachstum, indem ich Skalierung und Rotation definierte mit Hilfe von <code>Mathf.SmoothStep()</code> und <code>Mathf.Sin()</code></p>
   </section>
 
   
@@ -153,7 +153,7 @@ order: 5
 
   
   <section class="sectionText">
-    <p>One of the interesting changes that resulted from our user tests was the more drastic environment change coupled to player progress. The environment changes as the player plants more trees. In order to achieve the desired emotional effect with the player, we incorporated many variable layers: the skybox, fog, dust particles, water, lighting and post processing. All of these aspects of the environment are interpolated between a start and an end state, by the method <code>SetEnvironment()</code> which I implemented in <code>GameCtrl.cs</code>. For instance, the fog has definitions of its color, start distance and end distance for both the beginning and the end.</p>
+    <p>Eine der interessanten Änderungen, die sich aus unseren Benutzertests ergaben, war die drastischere Veränderung der Umgebung in Abhängigkeit vom Fortschritt des Spielers. Die Umgebung verändert sich, wenn der Spieler mehr Bäume pflanzt. Um die gewünschte emotionale Wirkung beim Spieler zu erzielen, haben wir viele variable Ebenen eingebaut: die Skybox, Nebel, Staubpartikel, Wasser, Beleuchtung und Nachbearbeitung. All diese Aspekte der Umgebung werden zwischen einem Start- und einem Endzustand interpoliert, und zwar mit der Methode <code>SetEnvironment()</code> die ich implementierte in <code>GameCtrl.cs</code>. Zum Beispiel hat der Nebel Definitionen für seine Farbe, die Startdistanz und die Enddistanz sowohl für den Anfang als auch für das Ende des Nebels.</p>
   </section>
 
   

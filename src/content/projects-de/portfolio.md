@@ -4,14 +4,14 @@ name:
   en: "Portfolio Website"
   de: "Portfolio Website"
 projectType:
-  en: "LAMP Website"
-  de: "LAMP Website"
+  en: "Static Website"
+  de: "Statische Website"
 year: "2020"
 inDevelopment: false
 roles: ["front-end", "back-end", "threejs", "design"]
 description:
-  en: "A full-stack website developed using the LAMP stack, utilizing Three.js and Sass."
-  de: "Eine Full-Stack-Website mit dem LAMP-Stack, Three.js und Sass."
+  en: "A static portfolio site built with Astro, TypeScript islands, Three.js, and Sass."
+  de: "Eine statische Portfolio-Website mit Astro, TypeScript-Islands, Three.js und Sass."
 links:
   - label: "GitHub"
     url: "https://github.com/Robert01101101/Portfolio-RMichels"
@@ -21,8 +21,8 @@ order: 8
 
 <section class="sectionText">
     
-    <h2>Overview</h2>
-    <p>This portfolio website was designed in Figma, developed using the LAMP stack with Sass style sheets, and uses technologies like Three.js. Development began in 2020, with occasional updates since then. The MySQL database stores metadata on each project, which helped to organize my codebase by populating modular PHP components with the database contents. This setup also lets me send out custom portfolio links when applying for jobs, where I can filter my project page to show relevant projects only - for example, <a href="https://rmichels.com/?filter=vr">showing only VR projects.</a><p>
+    <h2>Übersicht</h2>
+    <p>Diese Portfolio-Website wurde in Figma entworfen und als statische Site mit Astro, Sass und Three.js-Client-Islands umgesetzt. Die Entwicklung begann 2020; die Site wurde vom LAMP-Stack auf Astro migriert, für schnellere Ladezeiten und einfacheres Deployment. Projektmetadaten liegen in Markdown-Content-Collections, wodurch Case Studies organisiert und versionskontrolliert bleiben. Der Homepage-Filter unterstützt weiterhin individuelle Portfolio-Links bei Bewerbungen – zum Beispiel <a href="https://rmichels.com/?filter=vr">nur VR-Projekte anzeigen.</a><p>
   </section>
 
   
@@ -37,15 +37,15 @@ order: 8
 
   
   <section class="sectionText">
-    <h2>Goals</h2>
-    <p>The primary goal of the portfolio website you're currently on, is to communicate to potential employers and partners, what my set of skills, experiences, and interests are. The secondary goal is to practice full-stack development, while avoiding reliance on frameworks wherever possible, in order to practice and showcase fundamental skills. Other goals include sharing and participating with the design and developer communities, and trying out different technologies and ideas I'm interested in.<p>
+    <h2>Ziele</h2>
+    <p>Das primäre Ziel der Portfolio-Website, auf der Sie sich gerade befinden, ist es, potenziellen Arbeitgebern und Partnern meine Fähigkeiten, Erfahrungen und Interessen zu vermitteln. Das sekundäre Ziel ist es, Full-Stack- und Static-Site-Entwicklung zu praktizieren und dabei grundlegende Fähigkeiten zu zeigen. Weitere Ziele sind der Austausch mit Design- und Entwickler-Communities sowie das Ausprobieren verschiedener Technologien und Ideen.<p>
   </section>
 
   
   <section class="sectionMedia">
     <div class="mediaColumn">
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/portfolio/modelProcess.jpg">
+        <img src="/assets/img/portfolio/modelProzess.jpg">
         <figcaption class="center">Screenshot from Blender, where I cleaned up the photogrammetry capture of myself, which was created with RealityCapture.</figcaption>
       </figure>
     </div>
@@ -53,8 +53,8 @@ order: 8
 
   
   <section class="sectionText">
-    <h2>Process</h2>
-    <p>Before starting development, I first began by browsing the web for inspiring portfolios. I created a collection of links and based off this created a moodboard.<p>
+    <h2>Prozess</h2>
+    <p>Before starting development, I first began by browsing the web for inspiring portfolios. I created a collection of links und based off this created a moodboard.</p><p>
   </section>
 
   

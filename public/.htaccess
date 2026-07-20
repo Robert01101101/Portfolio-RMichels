@@ -1,0 +1,13 @@
+# Serve Astro static output (directory format: /about/index.html)
+DirectoryIndex index.html
+Options -MultiViews
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Add trailing slash for extensionless paths (skip files and existing trailing slashes)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_URI} !/$
+  RewriteCond %{REQUEST_URI} !\.[a-zA-Z0-9]{1,5}$
+  RewriteRule ^ %{REQUEST_URI}/ [R=301,L]
+</IfModule>

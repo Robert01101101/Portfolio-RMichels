@@ -2,8 +2,6 @@
 
 Personal portfolio site for [rmichels.com](https://rmichels.com). **Astro** static site with content collections, bilingual routes (EN root / DE `/de/`), and client islands for Three.js and filtering.
 
-> **Migration note:** PHP/LAMP files remain in the repo during validation on `feat/astro-migration`. Production cutover deploys `dist/` via GitHub Actions → FTPS.
-
 ## Stack
 
 | Layer | Technology |
@@ -15,7 +13,7 @@ Personal portfolio site for [rmichels.com](https://rmichels.com). **Astro** stat
 | 3D | Three.js (per-page islands) |
 | i18n | Locale-prefixed routes + `src/i18n/ui-*.json` |
 | Deploy | GitHub Actions → FTPS (`dist/`) to Hostinger |
-| Local dev | `npm run dev` (port 4321); legacy PHP still on XAMPP |
+| Local dev | `npm run dev` (port 4321) |
 
 ## Dev Tooling
 
@@ -27,10 +25,10 @@ npm run check    # astro check
 npm run test:unit      # Vitest (src/lib/*)
 npm run test:content   # Content/asset/i18n validation
 npm run test:verify    # Post-build dist/ route checks (run after build)
+npm run test:e2e       # Playwright (after build)
 ```
 
-- Content export: `npm run export:content` (PHP/SQL → markdown), `npm run export:i18n` (gettext PO → JSON)
-- Legacy PHP: `composer install` + `composer analyse` (until cutover)
+- Content export (dev helper): `npm run export:content` — regenerates markdown from embedded metadata; applies PO translations for DE when `scripts/archive/messages.po` is present
 - Commit `package-lock.json`; `node_modules/` is gitignored
 
 ## Directory Map
@@ -41,11 +39,13 @@ npm run test:verify    # Post-build dist/ route checks (run after build)
 ├── package.json
 ├── public/
 │   ├── assets/              # Images, icons, models (junction/copy from assets/)
+│   ├── .htaccess            # Static hosting rules (copied to dist/)
 │   └── css/normalize.css
 ├── src/
 │   ├── content/
 │   │   ├── config.ts        # Zod schemas
-│   │   └── projects/        # Case study frontmatter + markdown body
+│   │   ├── projects/        # EN case study frontmatter + body
+│   │   └── projects-de/     # DE case study bodies (translated)
 │   ├── i18n/ui-en.json, ui-de.json
 │   ├── layouts/BaseLayout.astro, ProjectLayout.astro
 │   ├── components/          # Header, Footer, ProjectTile, etc.
@@ -54,8 +54,7 @@ npm run test:verify    # Post-build dist/ route checks (run after build)
 │   ├── pages/               # EN routes
 │   └── pages/de/            # DE routes
 ├── scripts/
-│   ├── export-db-to-content.mjs
-│   └── po-to-json.mjs
+│   └── export-db-to-content.mjs
 ├── subdomains/              # Separate deploy (tourguide, etc.)
 └── docs/
 ```
@@ -93,7 +92,7 @@ UI strings: `t('key', locale)` from `src/lib/i18n.ts`. Language toggle links to 
 
 - Case study slugs use camelCase via `slug:` frontmatter (e.g. `futureEarth`)
 - Homepage filter: `/?filter=vr` sets `visitorFilter` cookie
-- `tourguide` is `inDevelopment` — tile links to `/development/tourguide` (PHP until migrated)
+- `tourguide` is `inDevelopment` — tile links to `/development/tourguide`
 
 ## Testing
 
@@ -121,8 +120,9 @@ npm run test:content && npm run build && npm run test:verify
 
 ## Deploy
 
-- `main` branch: CI runs `npm ci`, `npm run check`, `npm run test:unit`, `npm run test:content`, `npm run build`, `npm run test:verify`
-- Deploy uploads `./dist/` only; `subdomains/tourguide/` has separate FTPS step
+- `main` branch: CI runs `npm ci`, sync assets, `npm run check`, `npm run test:unit`, `npm run test:content`, `npm run build`, `npm run test:verify`, Playwright E2E
+- Deploy uploads `./dist/`; remove stale PHP files on the server root manually once after cutover (`dangerous-clean-slate` is off to protect `/subdomains/*`)
+- `subdomains/tourguide/` has a separate FTPS step
 
 ## Never Edit or Commit
 

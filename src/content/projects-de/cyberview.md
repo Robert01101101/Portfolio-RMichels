@@ -24,10 +24,10 @@ order: 9
 
 <section class="sectionText">
     
-    <h2>The Task</h2>
-    <p>The goal of this project was to design and develop a fully-fledged game. The project was created in an advanced game design course, and we used the Unity game engine to develop the game.</p>
+    <h2>Die Aufgabe</h2>
+    <p>The goal of this project was to design und develop a fully-fledged game. The project was created in an advanced game design course und we used the Unity game engine to develop the game.</p>
     
-    <p>Cyberview is a 2D platformer, where you fight enemies and solve puzzles, using a range of body mods. But be careful! You can only equip up to three at a time, and each use depletes your energy. After all, you are still a robot and are bound by your robot body's limits.</p>
+    <p>Cyberview is a 2D platformer, where you fight enemies und solve puzzles, using a range of body mods. But be careful! You can only equip up to three at a time und each use depletes your energy. After all, you are still a robot und are bound by your robot body's limits.</p>
   </section>
 
   
@@ -53,12 +53,12 @@ order: 9
 
   
   <section class="sectionText">
-    <h2>The Result</h2>
+    <h2>Das Ergebnis</h2>
     <h3>Mechanics</h3>
-    <p>An important aspect of our design was the game mechanics. The most important two mechanics were the ability to swap body mods, and energy depletion when using body mods. Body mods include a drill, grappling hook, strong arms, gun, regular and super legs, as well as a jetpack.</p>
+    <p>An important aspect of our design was the game mechanics. The most important two mechanics were the ability to swap body mods und energy depletion when using body mods. Body mods include a drill, grappling hook, strong arms, gun, regular und super legs, as well as a jetpack.</p>
     
     <h3>Narrative</h3>
-    <p>Unit 241 is an all-purpose android at the mega-factory Airsite. This factory uses androids, like Unit 241, to carry out all sorts of dangerous tasks. All androids come equipped with highly functional AI, but their cognitive abilities are inhibited to what is essential for their tasks. When 241 is damaged in a mine collapse, the android's intelligence inhibitor is shut off, allowing 241 to think freely. You get to explore the Airsite factory with 241 and overcome many challenges while discovering what it means to be alive. Find a way out, and try to save the other bots!</p>
+    <p>Unit 241 is an all-purpose android at the mega-factory Airsite. This factory uses androids, like Unit 241, to carry out all sorts of dangerous tasks. All androids come equipped with highly functional AI, but their cognitive abilities are inhibited to what is essential for their tasks. When 241 is damaged in a mine collapse, the android's intelligence inhibitor is shut off, allowing 241 to think freely. You get to explore the Airsite factory with 241 und overcome many challenges while discovering what it means to be alive. Find a way out und try to save the other bots!</p>
   </section>
 
   

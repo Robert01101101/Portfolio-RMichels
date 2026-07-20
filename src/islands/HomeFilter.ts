@@ -1,4 +1,4 @@
-// Homepage URL filter — mirrors index.php ?filter= behavior (client-side for static build)
+// Homepage URL filter — client-side cookie for static build (?filter=vr)
 const section = document.getElementById('MyWork');
 if (section) {
   const params = new URLSearchParams(window.location.search);

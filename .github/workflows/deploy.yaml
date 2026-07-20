@@ -21,26 +21,27 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Export content
-        run: |
-          node scripts/export-db-to-content.mjs
-          node scripts/po-to-json.mjs
+      - name: Sync assets to public/
+        run: cp -r assets public/assets
 
       - name: Astro check
         run: npm run check
 
-      - name: Run tests
-        run: |
-          npm run test:unit
-          npm run test:content
+      - name: Unit tests
+        run: npm run test:unit
 
-      - name: Build Astro site
+      - name: Content validation
+        run: npm run test:content
+
+      - name: Build
         run: npm run build
 
       - name: Verify build output
         run: npm run test:verify
 
       - name: Deploy dist/ to Hostinger via FTPS
+        # Note: stale PHP files on the server root must be removed manually once after cutover.
+        # dangerous-clean-slate is intentionally off — it would also wipe /subdomains/* on Hostinger.
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.HOSTINGER_FTPS_SERVER }}

@@ -21,12 +21,12 @@ order: 4
 ---
 
 <section class="sectionText">
-    <h2>Overview</h2>
-    <p>Clirio Cloud is a collection of tools that have been growing over time. These tools are provided to users of the Clirio Suite on a website developed with Blazor. Clirio builds solutions that help users inspect, document, and collaborate in 3D and XR on geospatial workspaces.</p>
+    <h2>Übersicht</h2>
+    <p>Clirio Cloud ist eine Sammlung von Tools, die im Laufe der Zeit gewachsen ist. Diese Tools werden den Nutzern der Clirio Suite auf einer mit Blazor entwickelten Website zur Verfügung gestellt. Clirio entwickelt Lösungen, die den Nutzern helfen, geodätische Arbeitsbereiche in 3D und XR zu inspizieren, zu dokumentieren und zusammenzuarbeiten.</p>
 
-    <p>One of the main goals of Clirio Cloud is to complement the upload and organizational capabilities of the iOS Clirio apps, which serve as the primary capture platform. While a user can easily capture and upload 3D photogrammetry scans with Clirio's iOS apps, they might also want to upload other 3D models, for which Clirio Cloud provides an interface. Other workspace tools are upload and management of custom basemaps, upload of boreholes, guest invitations, point of interest creation, and workspace deletion.</p>
+    <p>Eines der Hauptziele von Clirio Cloud ist es, die Upload- und Organisationsfunktionen der iOS-Apps von Clirio zu ergänzen, die als primäre Erfassungsplattform dienen. Während ein Benutzer mit den iOS-Apps von Clirio problemlos 3D-Photogrammetriescans erfassen und hochladen kann, möchte er möglicherweise auch andere 3D-Modelle hochladen, für die Clirio Cloud eine Schnittstelle bereitstellt. Weitere Werkzeuge für den Arbeitsbereich sind das Hochladen und Verwalten von benutzerdefinierten Basiskarten, das Hochladen von Bohrlöchern, das Einladen von Gästen, das Erstellen von Points of Interest und das Löschen von Arbeitsbereichen.</p>
 
-    <p>Furthermore, Clirio Cloud provides an analytics dashboard to users, as well as an easy way to access the Clirio knowledge base and training videos. Finally, there also are subscription and account management tools.</p>
+    <p>Darüber hinaus bietet Clirio Cloud den Nutzern ein Analyse-Dashboard sowie eine einfache Möglichkeit, auf die Clirio-Wissensdatenbank und Schulungsvideos zuzugreifen. Schließlich gibt es auch Tools zur Abonnement- und Kontoverwaltung.</p>
   </section>
 
 
@@ -40,7 +40,7 @@ order: 4
         </figure>
         <figure onclick="viewImage(this)">
           <img src="/assets/img/clirioCloud/lqip/workspaceList.jpg">
-          <figcaption>Workspace List</figcaption>
+          <figcaption>Workspace Liste</figcaption>
         </figure>
         <figure onclick="viewImage(this)">
           <img src="/assets/img/clirioCloud/lqip/workspaceView.jpg">
@@ -48,7 +48,7 @@ order: 4
         </figure>
         <figure onclick="viewImage(this)" id="img_createPoi">
           <img src="/assets/img/clirioCloud/lqip/createPoi.jpg">
-          <figcaption>Workspace Management Example: Create POI</figcaption>
+          <figcaption>Workspace Management Beispiel: Erstelle POI</figcaption>
         </figure>
       </div>
     </figure>
@@ -57,16 +57,16 @@ order: 4
 
   
   <section class="sectionText">
-    <h2>Development</h2>
-    <p>The website was initially set up by <a href="https://www.linkedin.com/in/timthibault/" target="_blank">Timothy Thibault</a> using Blazor, to try using a web framework that has C# as its programming language, which would be an advantage considering we also used C# for Unity development. After setting up authentication, subscription management, and workspace listing with metadata, development was mostly handed off to me.</p>
+    <h2>Entwicklung</h2>
+    <p>Die Website wurde ursprünglich eingerichtet von <a href="https://www.linkedin.com/in/timthibault/" target="_blank">Timothy Thibault</a> unter der verwendung von Blazor, um ein Web-Framework mit C# als Programmiersprache auszuprobieren, was ein Vorteil wäre, wenn man bedenkt, dass wir C# auch für die Unity-Entwicklung verwenden. Nach der Einrichtung der Authentifizierung, der Abonnementverwaltung und der Auflistung der Arbeitsbereiche mit Metadaten wurde die Entwicklung größtenteils an mich übergeben.</p>
 
     <p></p>
 
-    <p>After adding all of the workspace management features such as 3D model upload and user invitations, I started working on another set of stories revolving around the dashboard. I partnered up with <a href="https://www.linkedin.com/in/jordan-wischmann-32a4b380/" target="_blank">Jordan Wischmann</a>, who designed mockups, which I then implemented.</p>
+    <p>Nachdem ich alle Funktionen zur Verwaltung des Arbeitsbereichs, wie z. B. den Upload von 3D-Modellen und Benutzereinladungen, hinzugefügt hatte, begann ich mit der Arbeit an einer weiteren Reihe von Geschichten, die sich um das Dashboard drehten. Ich habe mich gepartnert mit<a href="https://www.linkedin.com/in/jordan-wischmann-32a4b380/" target="_blank">Jordan Wischmann</a>, der Mockups entwarf, die ich dann umsetzte.</p>
 
     <p></p>
 
-    <h3>Learning</h3>
+    <h3>Lehren</h3>
     <p></p>
   </section>
 
@@ -82,7 +82,7 @@ order: 4
           <img src="/assets/img/clirioCloud/lqip/editBasemaps.jpg">
         </figure>
       </div>
-      <figcaption>Some examples of data model binding to forms in Blazor. Expanding/collapsing optional sections of the form, and rearranging elements in a list, is made easy with Blazor since user inputs result in direct feedback without the need to write boilerplate code.</figcaption>
+      <figcaption>Einige Beispiele für die Anbindung von Datenmodellen an Formulare in Blazor. Das Erweitern/Kollabieren von optionalen Abschnitten des Formulars und das Umordnen von Elementen in einer Liste wird mit Blazor leicht gemacht, da die Benutzereingaben zu einem direkten Feedback führen, ohne dass man Boilerplate-Code schreiben muss.</figcaption>
     </figure>
   </section>
 
@@ -90,8 +90,8 @@ order: 4
   
   <section class="sectionMedia">
     <div class="divText">
-      <h2>Code Sample</h2>
-      <p>An example of data binding between the form and data model for the <span onclick="viewImage('img_createPoi')" class="inTextLink">Create POI</span> page.</p>
+      <h2>Code Beispiel</h2>
+      <p>Ein Beispiel für die Datenbindung zwischen dem Formular und dem Datenmodell für die <span onclick="viewImage('img_createPoi')" class="inTextLink">POI Erstellen</span> Seite.</p>
     </div>
     <script src="https://gist.github.com/Robert01101101/062fa22fe781689ed11a85d85e4b2b3e.js"></script>
   </section>

@@ -22,10 +22,10 @@ order: 6
 ---
 
 <section class="sectionText">
-    <h2>The Task</h2>
-    <p>This project was a design exercise to create a user interface mockup. It was created for an interface design course that focused on goal-oriented design. Consequently, a big part of the project was identifying user needs within a particular domain, and designing a product that helps the users achieve their goals.</p>
+    <h2>Die Aufgabe</h2>
+    <p>Bei diesem Projekt handelte es sich um eine Designübung zur Erstellung eines Benutzeroberflächen-Mockups. Es wurde für einen Schnittstellendesign-Kurs erstellt, der sich auf zielorientiertes Design konzentrierte. Daher bestand ein großer Teil des Projekts darin, die Bedürfnisse der Nutzer in einem bestimmten Bereich zu ermitteln und ein Produkt zu entwerfen, das den Nutzern hilft, ihre Ziele zu erreichen.</p>
     
-    <p>Our domain was that of young parents. With our design, we tried to create an app that helps parents coordinate their parenting tasks, as well as get help easily and quickly when in need.</p>
+    <p>Unsere Domäne war die der jungen Eltern. Mit unserem Design haben wir versucht, eine App zu entwickeln, die Eltern dabei hilft, ihre Erziehungsaufgaben zu koordinieren und bei Bedarf einfach und schnell Hilfe zu bekommen.</p>
   </section>
 
   
@@ -52,18 +52,18 @@ order: 6
 
   
   <section class="sectionText">
-    <h2>The Result</h2>
+    <h2>Das Ergebnis</h2>
     <h3>Dashboard</h3>
-    <p>The dashboard helps parents with their most frequent tasks. Parents can coordinate recurring tasks, such as diaper changes, as well as scheduled events, such as doctor appointments.</p>
+    <p>Das Dashboard hilft Eltern bei ihren häufigsten Aufgaben. Eltern können wiederkehrende Aufgaben, wie Windelwechsel, sowie geplante Ereignisse, wie Arzttermine, koordinieren.</p>
 
     <h3>Nanny</h3>
-    <p>With the nanny feature, users can browse for and book nearby nannies. Their profiles show ratings and reviews, their skills, and more information. Users can also easily rebook previously booked nannies.</p>
+    <p>Mit der Nannies-Funktion können die Nutzer nach Nannies in der Nähe suchen und diese buchen. Ihre Profile zeigen Bewertungen und Rezensionen, ihre Fähigkeiten und weitere Informationen. Außerdem können die Nutzer bereits gebuchte Nannies einfach umbuchen.</p>
 
     <h3>Learn</h3>
-    <p>Learn features curated articles, relevant news as well as community discussions. This helps parents as well as nannies learn more about child-rearing and provides a parenting community to engage with.</p>
+    <p>Learn bietet kuratierte Artikel, relevante Nachrichten und Diskussionen in der Gemeinschaft. Dies hilft Eltern und Nannies, mehr über Kindererziehung zu lernen und bietet eine Eltern-Community, in der sie sich engagieren können.</p>
 
     <h3>Chat</h3>
-    <p>The chat feature doubles as an easy way to stay in touch with other caretakers, as well as a way to organize. Through chat, parents can assign tasks to each other, as well as book and manage an appointment with a nanny.</p>
+    <p>Die Chat-Funktion ist eine einfache Möglichkeit, mit anderen Betreuern in Kontakt zu bleiben und sich zu organisieren. Über den Chat können sich die Eltern gegenseitig Aufgaben zuweisen und einen Termin mit einem Nannies buchen und verwalten.</p>
   </section>
 
    
@@ -83,25 +83,25 @@ order: 6
           <img src="/assets/img/amae/lqip/process-components.jpg">
         </figure>
       </div>
-      <figcaption>Design artifacts that detail components of our design & define a clear styleguide to achieve consistency.</figcaption>
+      <figcaption>Design-Artefakte, die die Komponenten unseres Designs detailliert beschreiben und einen klaren Styleguide definieren, um Konsistenz zu erreichen.</figcaption>
     </figure>
   </section>
 
 
   
   <section class="sectionText">
-    <h2>Process</h2>
-    <p>The project was developed in 4 months by a team of 5. I was the project manager, as well as one of the UX and UI designers. Our process began with brief domain brainstorming, followed by an ethnography study to better understand our users. After coming up with personas and multiple concept ideas, we focused on Amae. We then designed our product. For this, we designed many artifacts, such as flowcharts, wireframes, user journey maps, interaction patterns, and a style guide. In the last stages, we performed user testing and refinement. An outcome of this was that we dropped a health feature we had previously planned to include. Finally, we created a product website to present our final design.</p>
+    <h2>Prozess</h2>
+    <p>Das Projekt wurde in 4 Monaten von einem 5-köpfigen Team entwickelt. Ich war der Projektleiter sowie einer der UX- und UI-Designer. Unser Prozess begann mit einem kurzen Domain-Brainstorming, gefolgt von einer ethnografischen Studie, um unsere Nutzer besser zu verstehen. Nachdem wir Personas und mehrere Konzeptideen entwickelt hatten, konzentrierten wir uns auf Amae. Dann haben wir unser Produkt entworfen. Dazu entwarfen wir zahlreiche Artefakte wie Flussdiagramme, Wireframes, User Journey Maps, Interaktionsmuster und einen Style Guide. In den letzten Phasen führten wir Benutzertests und Verfeinerungen durch. Ein Ergebnis davon war, dass wir eine Gesundheitsfunktion, die wir ursprünglich geplant hatten, weggelassen haben. Schließlich erstellten wir eine Produktwebsite, um unser endgültiges Design zu präsentieren.</p>
     
-    <h3>Challenges</h3>
-    <p>One of our core challenges throughout the design process was making the app safe. One of our solutions was the design of the nanny experience. Nannies can learn and get certified through the Learn feature. Their thorough profiles feature ratings, reviews, and skills, to allow parents to find the best nanny for their needs. Parents can see what tasks a nanny has completed, call them at any time, and report a nanny. These features aim to maximize transparency to create a safe experience.</p>
+    <h3>Herausforderungen</h3>
+    <p>Eine unserer größten Herausforderungen während des Designprozesses war es, die App sicher zu machen. Eine unserer Lösungen war die Gestaltung der Nanny-Erfahrung. Nannies können über die Funktion Lernen lernen und sich zertifizieren lassen. Ihre ausführlichen Profile enthalten Bewertungen, Rezensionen und Fähigkeiten, damit Eltern das beste Nannies für ihre Bedürfnisse finden können. Eltern können sehen, welche Aufgaben ein Nannies erledigt hat, sie jederzeit anrufen und ein Nannies melden. Diese Funktionen zielen darauf ab, die Transparenz zu maximieren und eine sichere Erfahrung zu schaffen.</p>
   </section>
 
 
 <section class="sectionMedia">
   <div class="divText">
-      <h2>Result & Design Artifacts</h2>
-      <p>You can try the interactive mockup below, and take a look at the file itself. We got very positive feedback and were satisfied with our final result, the journey we took to get there, and the things we learned along the way.</p>
+      <h2>Ergebnis & Design-Artefakte</h2>
+      <p>Sie können das interaktive Mockup unten ausprobieren und einen Blick auf die Datei selbst werfen. Wir haben sehr positives Feedback erhalten und waren mit unserem Endergebnis, dem Weg dorthin und den Dingen, die wir auf dem Weg gelernt haben, zufrieden.</p>
   </div>
   <div class="mediaColumn mediaColumn-fullWidth">
     <figure ignorecarousel>
@@ -124,8 +124,8 @@ order: 6
     </figure>
 
     <div class="divText">
-      <h3>Design Artifacts</h3>
-      <p>Below are a selection of various design artifacts from this project. These represent many stages of our process, from researching our audience and their needs, to planning out UX flows and wireframes, to our final presentation of the mockup via a fictional product website, which was created in a 2 day sprint.</p>
+      <h3>Design-Artefakte</h3>
+      <p>Im Folgenden finden Sie eine Auswahl verschiedener Design-Artefakte aus diesem Projekt. Diese repräsentieren viele Phasen unseres Prozesses, von der Erforschung unserer Zielgruppe und ihrer Bedürfnisse über die Planung von UX-Flows und Wireframes bis hin zu unserer abschließenden Präsentation des Mockups über eine fiktive Produktwebsite, die in einem zweitägigen Sprint erstellt wurde.</p>
   </div>
 
     <figure ignorecarousel>
