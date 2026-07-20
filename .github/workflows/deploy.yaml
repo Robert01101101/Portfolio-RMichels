@@ -26,8 +26,19 @@ jobs:
           node scripts/export-db-to-content.mjs
           node scripts/po-to-json.mjs
 
+      - name: Astro check
+        run: npm run check
+
+      - name: Run tests
+        run: |
+          npm run test:unit
+          npm run test:content
+
       - name: Build Astro site
         run: npm run build
+
+      - name: Verify build output
+        run: npm run test:verify
 
       - name: Deploy dist/ to Hostinger via FTPS
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5

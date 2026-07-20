@@ -24,6 +24,9 @@ npm install
 npm run dev      # Astro dev server
 npm run build    # Output to dist/
 npm run check    # astro check
+npm run test:unit      # Vitest (src/lib/*)
+npm run test:content   # Content/asset/i18n validation
+npm run test:verify    # Post-build dist/ route checks (run after build)
 ```
 
 - Content export: `npm run export:content` (PHP/SQL → markdown), `npm run export:i18n` (gettext PO → JSON)
@@ -92,9 +95,33 @@ UI strings: `t('key', locale)` from `src/lib/i18n.ts`. Language toggle links to 
 - Homepage filter: `/?filter=vr` sets `visitorFilter` cookie
 - `tourguide` is `inDevelopment` — tile links to `/development/tourguide` (PHP until migrated)
 
+## Testing
+
+After code changes, run the agent verification loop (fast tier, < 3 min):
+
+```bash
+npm run check && npm run test:unit && npm run test:content && npm run build && npm run test:verify
+```
+
+Before changes touching islands, filters, or i18n routing, also run:
+
+```bash
+npm run test:e2e
+```
+
+Content-only changes (new case study markdown + images):
+
+```bash
+npm run test:content && npm run build && npm run test:verify
+```
+
+**Single-command alias:** `npm run test:fast && npm run build && npm run test:verify` covers the common agent loop without E2E.
+
+**Failure diagnostics:** Vitest reports file:line; `validate-content.mjs` emits `{ slug, field, error }` JSON lines; Playwright captures screenshots on failure in `playwright-report/`.
+
 ## Deploy
 
-- `main` branch: CI runs `npm ci`, `npm run check`, `npm run build`
+- `main` branch: CI runs `npm ci`, `npm run check`, `npm run test:unit`, `npm run test:content`, `npm run build`, `npm run test:verify`
 - Deploy uploads `./dist/` only; `subdomains/tourguide/` has separate FTPS step
 
 ## Never Edit or Commit
