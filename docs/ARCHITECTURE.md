@@ -72,4 +72,4 @@ Markdown body = case study HTML sections (former `#projContent`).
 
 ## Subdomains
 
-`subdomains/tourguide/` and others deploy separately; not part of Astro `dist/`.
+`subdomains/tourguide/` and others are deployed manually via FTPS; not part of Astro `dist/` or CI.

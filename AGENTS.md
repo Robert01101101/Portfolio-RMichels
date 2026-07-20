@@ -55,7 +55,7 @@ npm run test:e2e       # Playwright (after build)
 │   └── pages/de/            # DE routes
 ├── scripts/
 │   └── export-db-to-content.mjs
-├── subdomains/              # Separate deploy (tourguide, etc.)
+├── subdomains/              # Manual deploy only (tourguide, etc.)
 └── docs/
 ```
 
@@ -122,7 +122,7 @@ npm run test:content && npm run build && npm run test:verify
 
 - `main` branch: CI runs `npm ci`, sync assets, `npm run check`, `npm run test:unit`, `npm run test:content`, `npm run build`, `npm run test:verify`, Playwright E2E
 - Deploy uploads `./dist/` with `state-name: .ftp-deploy-sync-state-dist.json` and `dangerous-clean-slate: false` so the legacy full-repo FTP state cannot delete `/subdomains/*`; remove stale PHP files on the server root manually once after cutover
-- `subdomains/tourguide/` has a separate FTPS step
+- `subdomains/` are deployed manually via FTPS (not in CI)
 
 ## Never Edit or Commit
 
