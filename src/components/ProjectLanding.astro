@@ -2,6 +2,7 @@
 import type { CollectionEntry } from 'astro:content';
 import type { Locale } from '../lib/i18n';
 import { getLocalized, getProjectSlug } from '../lib/projects';
+import Icon from './Icon.astro';
 
 interface Props {
   project: CollectionEntry<'projects'> | CollectionEntry<'projects-de'>;
@@ -16,7 +17,7 @@ const links = p.links ?? [];
 
 <div class="projectDownArrowWrapper">
   <div class="downArrow downArrow-project" id="downArrow">
-    <a href="#projMeta"><i class="fa-solid fa-chevron-down"></i></a>
+    <a href="#projMeta"><Icon name="chevron-down" class="icon-chevron-down" /></a>
   </div>
 </div>
 <div id="projLanding">

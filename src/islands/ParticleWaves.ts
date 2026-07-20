@@ -8,8 +8,13 @@ import {
 } from '../lib/particle-waves-shaders';
 
 const SEPARATION = 160;
-const AMOUNTX = 180;
-const AMOUNTY = 40;
+
+function getParticleGrid() {
+  const w = window.innerWidth;
+  if (w < 768) return { amountX: 90, amountY: 20 };
+  if (w < 1200) return { amountX: 120, amountY: 30 };
+  return { amountX: 180, amountY: 40 };
+}
 
 function isLowPoweredDevice() {
   const userAgent = navigator.userAgent.toLowerCase();
@@ -19,6 +24,7 @@ function isLowPoweredDevice() {
 export function initParticleWaves() {
   if (document.querySelector('.waves')) return;
 
+  const { amountX: AMOUNTX, amountY: AMOUNTY } = getParticleGrid();
   let count = 0;
   let docHeight = calcDocHeight();
 
@@ -110,10 +116,34 @@ export function initParticleWaves() {
     count += 0.02;
   };
 
+  let animationId: number | null = null;
+
   const animate = () => {
-    requestAnimationFrame(animate);
+    animationId = requestAnimationFrame(animate);
+    if (document.hidden) return;
     render();
   };
+
+  const startAnimate = () => {
+    if (animationId === null) {
+      animationId = requestAnimationFrame(animate);
+    }
+  };
+
+  const stopAnimate = () => {
+    if (animationId !== null) {
+      cancelAnimationFrame(animationId);
+      animationId = null;
+    }
+  };
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      stopAnimate();
+    } else {
+      startAnimate();
+    }
+  });
 
   const refreshWindow = () => updateCamera();
 
@@ -147,16 +177,18 @@ export function initParticleWaves() {
   refreshWindow();
   setTimeout(refreshWindow, 500);
   hookLenis();
-  animate();
+  startAnimate();
   showCanvasAfterFirstRender();
 
   canvas.addEventListener('webglcontextlost', (event) => {
     event.preventDefault();
     canvas.style.display = 'none';
+    stopAnimate();
   });
 
   canvas.addEventListener('webglcontextrestored', () => {
     canvas.style.display = '';
+    startAnimate();
   });
 }
 

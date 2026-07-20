@@ -89,7 +89,7 @@
 			z-index: 960;
 		}
 
-		.fa-solid {
+		.viewer-control-icon {
 			position: absolute;
 			top: 5rem;
 			right: 1.6rem;
@@ -119,7 +119,7 @@
 		}
 
 		&:hover{
-			.fa-solid {
+			.viewer-control-icon {
 				opacity: 1; visibility: visible;
 			}
 			.fullscreenCaption {
@@ -127,7 +127,7 @@
 			}
 		}
 		@include nohover {
-			.fa-solid {
+			.viewer-control-icon {
 				opacity: 1; visibility: visible;
 			}
 			.fullscreenCaption {

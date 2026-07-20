@@ -2,6 +2,91 @@
 DirectoryIndex index.html
 Options -MultiViews
 
+# =============================================================================
+# Compression (mod_deflate) — gzip text-based responses when module is available
+# =============================================================================
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml
+  AddOutputFilterByType DEFLATE application/javascript application/json
+  AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# =============================================================================
+# ETags — file mtime + size (standard Apache behavior, explicit for clarity)
+# =============================================================================
+FileETag MTime Size
+
+# =============================================================================
+# Cache: path flags for mod_headers (SetEnvIf)
+# =============================================================================
+<IfModule mod_setenvif.c>
+  # Astro build output — content-hashed JS/CSS chunks in /_astro/
+  SetEnvIf Request_URI "^/_astro/" astro_asset=1
+  # Images, fonts, models, and other static media in /assets/
+  SetEnvIf Request_URI "^/assets/" site_asset=1
+</IfModule>
+
+# =============================================================================
+# Cache: mod_expires — MIME-based expiration defaults
+# =============================================================================
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # HTML — no long-lived cache; deploys should propagate quickly
+  ExpiresByType text/html "access plus 0 seconds"
+
+  # Hashed JS/CSS (primarily /_astro/) — safe for 1 year
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+
+  # Images — medium cache (1 month)
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/gif "access plus 1 month"
+  ExpiresByType image/webp "access plus 1 month"
+  ExpiresByType image/avif "access plus 1 month"
+  ExpiresByType image/svg+xml "access plus 1 month"
+  ExpiresByType image/x-icon "access plus 1 month"
+  ExpiresByType image/vnd.microsoft.icon "access plus 1 month"
+
+  # Web fonts — medium cache (1 month)
+  ExpiresByType font/woff2 "access plus 1 month"
+  ExpiresByType font/woff "access plus 1 month"
+  ExpiresByType font/ttf "access plus 1 month"
+  ExpiresByType application/font-woff2 "access plus 1 month"
+  ExpiresByType application/font-woff "access plus 1 month"
+  ExpiresByType application/vnd.ms-fontobject "access plus 1 month"
+
+  # 3D models (Three.js GLTF) — medium cache (1 month)
+  ExpiresByType model/gltf+json "access plus 1 month"
+  ExpiresByType model/gltf-binary "access plus 1 month"
+
+  # Manifest / XML — short cache (1 week)
+  ExpiresByType application/manifest+json "access plus 1 week"
+  ExpiresByType application/xml "access plus 1 week"
+  ExpiresByType text/xml "access plus 1 week"
+</IfModule>
+
+# =============================================================================
+# Cache: mod_headers — explicit Cache-Control (complements mod_expires)
+# =============================================================================
+<IfModule mod_headers.c>
+  # Static HTML pages — revalidate so deploys are visible immediately
+  <FilesMatch "\.(html|htm)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+
+  # /_astro/* — hashed filenames; immutable 1-year cache
+  Header set Cache-Control "public, max-age=31536000, immutable" env=astro_asset
+
+  # /assets/* — images, fonts, models; 30-day cache
+  Header set Cache-Control "public, max-age=2592000" env=site_asset
+</IfModule>
+
+# =============================================================================
+# URL rewriting — trailing slash for extensionless paths
+# =============================================================================
 <IfModule mod_rewrite.c>
   RewriteEngine On
 

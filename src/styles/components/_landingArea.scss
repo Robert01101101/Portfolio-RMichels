@@ -70,7 +70,7 @@
 		padding: 1rem;
 
 		&:hover {
-			.fa-chevron-down {
+			.icon-chevron-down {
 				transform: scale(1.4);
 			}
 		}
@@ -87,7 +87,7 @@
 }
 
 //actual arrow
-.fa-chevron-down {
+.icon-chevron-down {
 	text-align: center;
 	color: _colour(white);
 	transition: _duration(default);
@@ -99,6 +99,6 @@
 	}
 }
 
-#project .fa-chevron-down {
+#project .icon-chevron-down {
 	display: none;
 }

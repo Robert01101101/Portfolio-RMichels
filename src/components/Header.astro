@@ -1,5 +1,6 @@
 ---
 import { t, type Locale, localizedPath } from '../lib/i18n';
+import Icon from './Icon.astro';
 
 interface Props {
   locale: Locale;
@@ -21,13 +22,13 @@ const altLabel = locale === 'en' ? t('deutsch', locale) : t('english', locale);
       {pageType === 'project' || pageType === 'about' ? (
         <li class="homeIcon">
           <a title="Home" href={homeHref} data-home-link>
-            <i class="fa-solid fa-house"></i>
+            <Icon name="house" class="icon-header" />
           </a>
         </li>
       ) : (
         <li class="homeIcon">
           <a title="About" href={aboutHref}>
-            <i class="fa-solid fa-circle-info"></i>
+            <Icon name="circle-info" class="icon-header" />
           </a>
         </li>
       )}

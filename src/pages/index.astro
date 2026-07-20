@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ProjectTile from '../components/ProjectTile.astro';
+import Icon from '../components/Icon.astro';
 import { getAllProjects, projectToTileData } from '../lib/projects';
 import { t } from '../lib/i18n';
 
@@ -22,7 +23,7 @@ const description = "I'm Robert Michels, a designer and developer from Vancouver
 >
   <div class="downArrowWrapper">
     <div class="downArrow" id="downArrow">
-      <a href="#MyWork" title="View Projects"><i class="fa-solid fa-chevron-down"></i></a>
+      <a href="#MyWork" title="View Projects"><Icon name="chevron-down" class="icon-chevron-down" /></a>
     </div>
   </div>
   <canvas id="threeModel" style="visibility: hidden; display: none;"></canvas>

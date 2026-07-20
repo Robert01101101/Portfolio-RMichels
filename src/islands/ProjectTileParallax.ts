@@ -1,5 +1,3 @@
-declare const xlBreakPoint: number;
-
 function mapVal(num: number, inMin: number, inMax: number, outMin: number, outMax: number) {
   return ((num - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin;
 }
@@ -13,11 +11,16 @@ function offset(el: Element) {
 }
 
 export function initProjectTileParallax() {
-  const xlBreakPoint = 1200;
   const projLabel = document.querySelectorAll<HTMLElement>('.projLabel');
   const projJScontainer = document.querySelectorAll<HTMLElement>('.projJScontainer');
 
+  if (projLabel.length === 0 && projJScontainer.length === 0) return;
+
+  const xlBreakPoint = 1200;
+  let ticking = false;
+
   const update = () => {
+    ticking = false;
     const buffer = 50;
     let min = -80;
     let max = 100;
@@ -29,12 +32,24 @@ export function initProjectTileParallax() {
     }
     elementsToOffset.forEach((curElement) => {
       const yPos = offset(curElement);
-      curElement.style.bottom =
-        clamp(mapVal(yPos, 0, window.innerHeight, max, min), min - buffer, max + buffer) + 'px';
+      const bottomVal = clamp(
+        mapVal(yPos, 0, window.innerHeight, max, min),
+        min - buffer,
+        max + buffer,
+      );
+      curElement.style.transform = `translateY(${-bottomVal}px)`;
     });
   };
 
-  window.addEventListener('scroll', update);
+  const onScroll = () => {
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(update);
+    }
+  };
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
   update();
 }
 

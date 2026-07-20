@@ -37,11 +37,15 @@
     .projJScontainer {
       width: calc(100% - 2rem);
       position: absolute;
+      bottom: 0;
       margin: 0 1rem;
+      will-change: transform;
 
       @include xl {
         margin: 0;
         position: static;
+        bottom: auto;
+        will-change: auto;
       }
     }
 
@@ -58,6 +62,7 @@
         left: 1rem;
         left: -4rem;
         font-size: 4em;
+        will-change: transform;
       }
 
       margin: 0;
@@ -93,6 +98,7 @@
 
     img {
       filter: brightness(55%);
+      aspect-ratio: 4 / 3;
 
       @include xl {
         filter: brightness(70%);
