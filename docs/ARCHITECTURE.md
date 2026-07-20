@@ -67,7 +67,7 @@ Markdown body = case study HTML sections (former `#projContent`).
 ## Deploy
 
 - CI: `npm ci` → sync assets → check → test → build → verify → Playwright E2E
-- Deploy: `dist/` via FTPS with `dangerous-clean-slate: true` (removes stale server files)
+- Deploy: `dist/` via FTPS with `dangerous-clean-slate: false` and a dist-specific state file (does not touch `/subdomains/*`)
 - `public/.htaccess` → copied to `dist/` for Apache directory index and trailing slashes
 
 ## Subdomains

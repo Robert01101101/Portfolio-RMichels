@@ -121,7 +121,7 @@ npm run test:content && npm run build && npm run test:verify
 ## Deploy
 
 - `main` branch: CI runs `npm ci`, sync assets, `npm run check`, `npm run test:unit`, `npm run test:content`, `npm run build`, `npm run test:verify`, Playwright E2E
-- Deploy uploads `./dist/`; remove stale PHP files on the server root manually once after cutover (`dangerous-clean-slate` is off to protect `/subdomains/*`)
+- Deploy uploads `./dist/` with `state-name: .ftp-deploy-sync-state-dist.json` and `dangerous-clean-slate: false` so the legacy full-repo FTP state cannot delete `/subdomains/*`; remove stale PHP files on the server root manually once after cutover
 - `subdomains/tourguide/` has a separate FTPS step
 
 ## Never Edit or Commit
