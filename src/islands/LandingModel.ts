@@ -1,6 +1,10 @@
 // @ts-nocheck
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import {
+  particleWavesFragmentShader,
+  particleWavesVertexShader,
+} from '../lib/particle-waves-shaders';
 
 const smBreakPoint = 576;
 const xlBreakPoint = 1200;
@@ -33,10 +37,6 @@ function resizeRendererToDisplaySize(
 }
 
 function handleParticles(scene: THREE.Scene, mesh: THREE.Object3D) {
-  const vertexShader = document.getElementById('vertexshader')?.textContent;
-  const fragmentShader = document.getElementById('fragmentshader')?.textContent;
-  if (!vertexShader || !fragmentShader) return;
-
   const childMesh = mesh as THREE.Mesh;
   if (!childMesh.geometry) return;
 
@@ -49,8 +49,8 @@ function handleParticles(scene: THREE.Scene, mesh: THREE.Object3D) {
 
   const material = new THREE.ShaderMaterial({
     uniforms: { color: { value: new THREE.Color(0xffffff) } },
-    vertexShader,
-    fragmentShader,
+    vertexShader: particleWavesVertexShader,
+    fragmentShader: particleWavesFragmentShader,
   });
 
   const particles = new THREE.Points(pointGeo, material);
