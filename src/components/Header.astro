@@ -1,0 +1,84 @@
+---
+import { t, type Locale, localizedPath } from '../lib/i18n';
+
+interface Props {
+  locale: Locale;
+  pageType: 'home' | 'about' | 'projects' | 'project' | 'privacy' | 'default';
+  altHref: string;
+}
+
+const { locale, pageType, altHref } = Astro.props;
+const prefix = locale === 'de' ? '/de' : '';
+const homeHref = prefix || '/';
+const aboutHref = `${prefix}/about`;
+const projectsHref = `${prefix}/projects`;
+const altLabel = locale === 'en' ? t('deutsch', locale) : t('english', locale);
+---
+
+<header>
+  <nav>
+    <ul>
+      {pageType === 'project' || pageType === 'about' ? (
+        <li class="homeIcon">
+          <a title="Home" href={homeHref} data-home-link>
+            <i class="fa-solid fa-house"></i>
+          </a>
+        </li>
+      ) : (
+        <li class="homeIcon">
+          <a title="About" href={aboutHref}>
+            <i class="fa-solid fa-circle-info"></i>
+          </a>
+        </li>
+      )}
+      <li>
+        <div class="menuCont" id="MenuToggle" title="Menu">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+      </li>
+    </ul>
+    <div id="OverlayMenu" class="hidden">
+      <ul id="MenuContent">
+        <a title="Featured Work" href={homeHref} data-home-link>
+          <li class:list={{ curPage: pageType === 'home' }}>{t('featured_work', locale)}</li>
+        </a>
+        <a href={aboutHref} title="About">
+          <li class:list={{ curPage: pageType === 'about' }}>{t('about', locale)}</li>
+        </a>
+        <a href={projectsHref} title="All Projects">
+          <li class:list={{ curPage: pageType === 'projects' }}>{t('all_projects', locale)}</li>
+        </a>
+        <div class="overlayMenuSpacer"></div>
+        <div class="overlayMenuLanguageSelector">
+          <a href={altHref} class="lang-toggle">{altLabel}</a>
+        </div>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<script>
+  function applyVisitorFilterToHomeLinks() {
+    const match = document.cookie.match(/(?:^|;\s*)visitorFilter=([^;]*)/);
+    const filter = match ? decodeURIComponent(match[1]) : '';
+    document.querySelectorAll('[data-home-link]').forEach((el) => {
+      const base = el.getAttribute('href') || '/';
+      el.setAttribute('href', filter ? `${base}?filter=${filter}` : base);
+    });
+  }
+  applyVisitorFilterToHomeLinks();
+</script>
+
+<style>
+  .lang-toggle {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    font: inherit;
+    padding: 0;
+    text-decoration: none;
+  }
+</style>

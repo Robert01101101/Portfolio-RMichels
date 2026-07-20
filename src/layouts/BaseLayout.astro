@@ -1,0 +1,115 @@
+---
+import '../styles/main.scss';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import {
+  type Locale,
+  getLocaleFromUrl,
+  getAlternateUrl,
+  alternateLocale,
+} from '../lib/i18n';
+
+export interface Props {
+  title: string;
+  description: string;
+  locale?: Locale;
+  pageType?: 'home' | 'about' | 'projects' | 'project' | 'privacy' | 'default';
+  ogImage?: string;
+  canonicalPath?: string;
+}
+
+const {
+  title,
+  description,
+  locale: localeProp,
+  pageType = 'default',
+  ogImage = 'https://rmichels.com/assets/img/portfolio.jpg',
+  canonicalPath,
+} = Astro.props;
+
+const locale = localeProp ?? getLocaleFromUrl(Astro.url);
+const altLocale = alternateLocale(locale);
+const site = Astro.site?.href?.replace(/\/$/, '') ?? 'https://rmichels.com';
+const path = canonicalPath ?? Astro.url.pathname;
+const canonical = `${site}${path === '/' ? '' : path}`;
+const altPath = getAlternateUrl(path, altLocale);
+const altUrl = `${site}${altPath === '/' ? '' : altPath}`;
+const enUrl = locale === 'en' ? canonical : `${site}${getAlternateUrl(path, 'en')}`;
+const deUrl = locale === 'de' ? canonical : `${site}${getAlternateUrl(path, 'de')}`;
+const htmlLang = locale === 'de' ? 'de' : 'en';
+const showHomeIcon = pageType === 'project' || pageType === 'about';
+---
+
+<!DOCTYPE html>
+<html lang={htmlLang}>
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WXGTTGWVKL"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WXGTTGWVKL');
+      function getUrlParameter(name) {
+        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+        const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+        const results = regex.exec(location.search);
+        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+      }
+      const portfolioLinkValue = getUrlParameter('portfolio_link');
+      if (portfolioLinkValue) {
+        gtag('event', 'portfolio_link', { portfolio_link: portfolioLinkValue });
+      }
+    </script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="en" href={enUrl} />
+    <link rel="alternate" hreflang="de" href={deUrl} />
+    <link rel="alternate" hreflang="x-default" href={enUrl} />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.14/dist/lenis.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&family=Roboto+Mono:wght@300;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&family=Roboto+Mono:wght@300;700&display=swap" />
+    <script src="https://kit.fontawesome.com/cbd0a6dcda.js" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icon/favicon-16x16.png" />
+    <link rel="manifest" href="/assets/icon/site.webmanifest" />
+    <link rel="mask-icon" href="/assets/icon/safari-pinned-tab.svg" color="#5bbad5" />
+    <link rel="shortcut icon" href="/assets/icon/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+  <body data-page-type={pageType}>
+    <div>
+      <div id="MainGrid">
+        <Header locale={locale} pageType={pageType} altHref={altPath} />
+        <main id="Content">
+          <script>
+            import '../islands/Menu.ts';
+          </script>
+          <script>
+            import '../islands/LenisSetup.ts';
+          </script>
+          <slot />
+        </main>
+        <Footer locale={locale} />
+      </div>
+    </div>
+    <script>
+      import '../islands/ParticleWaves.ts';
+    </script>
+    <script>
+      import '../islands/DownArrow.ts';
+    </script>
+    <script>
+      import '../islands/PageBoot.ts';
+    </script>
+  </body>
+</html>

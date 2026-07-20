@@ -1,0 +1,72 @@
+---
+import { t, type Locale } from '../lib/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+
+const resumeFile =
+  locale === 'de'
+    ? '/assets/other/RobertMichelsLebenslauf.pdf'
+    : '/assets/other/RobertMichelsResume.pdf';
+const privacyHref = locale === 'de' ? '/de/privacyPolicy' : '/privacyPolicy';
+const portfolioHref = locale === 'de' ? '/de/portfolio' : '/portfolio';
+const year = new Date().getFullYear();
+---
+
+<footer id="Contact">
+  <div>
+    <ul class="icons">
+      <div class="emailContainer">
+        <a href="mailto: hi@rmichels.com" target="_blank" title="E-Mail | Right-click to copy to clipboard" id="emailLink">
+          <li><i class="fa-solid fa-envelope fa-2x" id="email"></i></li>
+        </a>
+      </div>
+      <small class="js-emaillink">hi@rmichels.com</small>
+      <a href="https://linkedin.com/in/robert-michels" target="_blank" title="LinkedIn"><li><i class="fab fa-linkedin-in fa-2x"></i></li></a>
+      <a href="https://github.com/Robert01101101" target="_blank" title="GitHub"><li><i class="fab fa-github fa-2x"></i></li></a>
+      <a href="https://play.google.com/store/apps/developer?id=Studio+RM" target="_blank" title="Google Play"><li><i class="fab fa-google-play fa-2x"></i></li></a>
+      <a href="https://rmichels.itch.io/" target="_blank"><li><i class="fab fa-itch-io fa-2x" title="Itch.io"></i></li></a>
+    </ul>
+  </div>
+  <noscript><small>hi@rmichels.com</small></noscript>
+  <div class="footerEnd">
+    <small>
+      {t('portfolio_developed', locale)}
+      <a href={portfolioHref}>{t('developed', locale)}</a>
+      {t('with_astro', locale)}
+    </small>
+    <small>{t('copyright', locale)} &copy; {year} {t('rights_reserved', locale)}</small>
+    <label class="toggle-label">
+      <input type="checkbox" id="lenisScrollToggle" checked />
+      <small>{t('enable_smooth_scrolling', locale)}</small>
+    </label>
+    <div>
+      <a href={resumeFile}><small>{t('resume', locale)}</small></a>
+      <a href={privacyHref}><small>{t('privacy_policy', locale)}</small></a>
+    </div>
+  </div>
+</footer>
+<div class="footerBuffer"></div>
+
+<div id="copyConfirm" class="hidden"><small>{t('copied', locale)}</small></div>
+
+<div id="imageViewer" class="hidden">
+  <a class="prev">&#10094;</a>
+  <a class="next">&#10095;</a>
+  <a class="closeBtn">&#10006;</a>
+  <i class="fa-solid fa-expand hidden" id="fullScreenExpand"></i>
+  <i class="fa-solid fa-compress" id="fullScreenCompress"></i>
+</div>
+
+<script>
+  import '../islands/Lqip.ts';
+</script>
+<script>
+  import '../islands/ProjectTileParallax.ts';
+</script>
+<script>
+  import '../islands/EmailCopy.ts';
+</script>

@@ -1,0 +1,45 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import type { Locale } from '../lib/i18n';
+import { getLocalized, getProjectSlug } from '../lib/projects';
+
+interface Props {
+  project: CollectionEntry<'projects'> | CollectionEntry<'projects-de'>;
+  locale: Locale;
+}
+
+const { project, locale } = Astro.props;
+const p = project.data;
+const slug = getProjectSlug(project);
+const links = p.links ?? [];
+---
+
+<div class="projectDownArrowWrapper">
+  <div class="downArrow downArrow-project" id="downArrow">
+    <a href="#projMeta"><i class="fa-solid fa-chevron-down"></i></a>
+  </div>
+</div>
+<div id="projLanding">
+  <div class="row">
+    <div class="col-50">
+      <div class="landingText">
+        <h1>{getLocalized(p.name, locale)}</h1>
+        <p>{getLocalized(p.description, locale)}</p>
+        <br />
+        <div class="projectCallToAction">
+          {links.map((link) => (
+            <a href={link.url} target="_blank" rel="noopener noreferrer">{link.label}</a>
+          ))}
+        </div>
+      </div>
+    </div>
+    <div class="col-50">
+      <img
+        src={`/assets/img/${slug}.jpg`}
+        class:list={['imgBG', p.heroAltLayout && 'alt']}
+        alt=""
+      />
+      <img src={`/assets/img/${slug}.jpg`} alt={getLocalized(p.name, locale)} />
+    </div>
+  </div>
+</div>

@@ -1,10 +1,35 @@
+# Secrets & local data
 database/
 nopublicaccess/
 backups/
-*.lnk
 
 # MCP secrets — set via Cursor Settings → MCP env vars
 .cursor/mcp.json
+
+# Cursor agent plans (local)
+.cursor/plans/
+
+# PHP / Composer
 /vendor/
-/node_modules/
 composer.phar
+
+# Node / Astro
+/node_modules/
+/dist/
+.astro/
+playwright-report/
+test-results/
+.phpunit.cache/
+
+# Astro dev: mirror of repo-root assets/ (do not duplicate in git)
+public/assets/
+
+# Large raw / design source files
+_RawAssets/
+_PreAssets/
+
+# VeraCrypt volumes
+encryptedDrive*
+
+# Windows shortcuts
+*.lnk

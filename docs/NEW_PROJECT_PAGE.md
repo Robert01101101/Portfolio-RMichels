@@ -1,86 +1,87 @@
-# New Project Page
+# New Project Page (Astro)
 
-Checklist for adding a portfolio case study. Reference: `futureEarth.php` (published) and `development/samplePageInDevelopment.php` (in-dev template).
+Checklist for adding a portfolio case study after the Astro migration.
 
-## 1. Database
+## 1. Content file
 
-Add a row to the `projects` table (and related role rows). Required fields include `project_slug`, name, type, year. Slug must match the PHP filename.
+Create `src/content/projects/{slug}.md`:
 
-Import/update via phpMyAdmin per `_DATABASE_SETUP_.txt`.
+```yaml
+---
+slug: yourSlug
+name:
+  en: "Project Name"
+  de: "Projektname"
+projectType:
+  en: "VR Game"
+  de: "VR-Spiel"
+year: "2025"
+inDevelopment: false
+roles: ["vr", "unity", "game-development"]
+description:
+  en: "Short summary for the landing area."
+  de: "Kurze Zusammenfassung."
+links:
+  - label: "Live Demo"
+    url: "https://example.com"
+heroAltLayout: false
+order: 1
+---
 
-## 2. Hero image
+## Section Title
 
-Add `assets/img/{slug}.jpg` — used by `projectPageLanding` partial. Slug must match DB and PHP filename.
-
-## 3. Gallery images (optional)
-
-Create `assets/img/{slug}/lqip/` for gallery images. Use `onclick="viewImage(this)"` on `<figure>` elements (see `futureEarth.php`).
-
-## 4. PHP page
-
-Copy `futureEarth.php` → `{slug}.php` at repo root (or start from `development/samplePageInDevelopment.php` for in-dev pages).
-
-```php
-<?php
-require "config.php";
-require "src/Partial.php";
-require "src/objects/Project.php";
-
-$project = Project::buildProjectFromSlug('yourSlug');
-
-Partial::build('header', ["project" => $project]);
-Partial::build('projectPageLanding', [
-  "project" => $project,
-  "description" => _("Short summary."),
-  "primaryLink" => "https://example.com",
-  "primaryLinkText" => "Label",
-  // "secondaryLink" / "secondaryLinkText" optional
-  // "alt" => TRUE for alternate hero layout
-]);
-Partial::build('projectPageMeta', ["project" => $project]);
-?>
-
-<div id="projContent">
-  <section class="sectionText">
-    <h2><?php echo _("Section Title"); ?></h2>
-    <p><?php echo _("Body text."); ?></p>
-  </section>
-  <section class="sectionMedia">
-    <div class="mediaGrid">
-      <figure onclick="viewImage(this)">
-        <img src="assets/img/yourslug/lqip/1.jpg">
-      </figure>
-    </div>
-  </section>
-</div>
-
-<?php Partial::build('footer'); ?>
+Body markdown converted from case study sections.
 ```
 
-### In-development page
+**Important:** `slug` in frontmatter sets the URL (`/yourSlug`). Do not add `slug` to the Zod schema in `config.ts` — Astro treats it as a reserved routing field.
 
-Place in `development/`, add `chdir('../');` before requires, and set `inDevelopment` in DB so the tile shows the dev badge.
+## 2. Images
 
-## 5. Routing
+| Asset | Path |
+|-------|------|
+| Hero | `public/assets/img/{slug}.jpg` |
+| Tile LQIP | `public/assets/img/lqip/{slug}.jpg` |
+| Gallery | `public/assets/img/{slug}/lqip/*.jpg` |
 
-No config change needed — `.htaccess` maps `/yourSlug` → `yourSlug.php` automatically.
+Gallery images in markdown use `![gallery](/assets/img/{slug}/lqip/1.jpg)` or HTML figures (ImageViewer binds click handlers).
 
-## 6. Translations
+## 3. Roles
 
-Wrap new user-facing strings in `_()`. Update `locale/de_DE/LC_MESSAGES/messages.po` per `_TRANSLATION_SETUP_.txt`.
+If the project needs new filter tags, add entries to `src/lib/roles.ts` and assign `roles: [...]` in frontmatter.
 
-## 7. Verify
+## 4. Optional flags
 
-- [ ] Slug matches: PHP filename, DB row, `assets/img/{slug}.jpg`
-- [ ] Page loads at `/yourSlug`
-- [ ] Appears on index/projects with correct filter
+| Field | Effect |
+|-------|--------|
+| `threeMockup: phone` | Phone Three.js mockup island |
+| `threeMockup: hololens` | HoloLens mockup |
+| `heroAltLayout: true` | Alternate hero image layout |
+| `inDevelopment: true` | Dev badge; excluded from `/slug` route; tile → `/development/{slug}` |
+| `draft: true` | Excluded from build |
+
+## 5. German body (optional)
+
+DE UI strings come from frontmatter `name` / `description` / `projectType`. For a fully translated body, extend `projects-de` collection or add DE sections to the same file (future enhancement).
+
+## 6. Verify locally
+
+```bash
+npm run dev
+```
+
+- [ ] `/yourSlug` and `/de/yourSlug` render
+- [ ] Tile appears on `/` and `/projects` with correct filter roles
 - [ ] Image viewer works on gallery images
-- [ ] German translation updated (if applicable)
+- [ ] LQIP swaps to full-res on load
 
-## Triple coupling reminder
+## 7. Deploy
+
+Push to `main` → CI builds `dist/` → FTPS deploy. No database or new PHP file required.
+
+## Slug coupling (unchanged concept)
 
 ```
-yourSlug.php  ↔  DB project_slug  ↔  assets/img/yourSlug.jpg
+src/content/projects/yourSlug.md  ↔  slug frontmatter  ↔  public/assets/img/yourSlug.jpg
 ```
 
 All three must use the same slug string.

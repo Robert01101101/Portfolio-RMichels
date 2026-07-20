@@ -4,23 +4,44 @@ on:
   pull_request:
     branches: [main]
   push:
-    branches: [main]
+    branches: [main, feat/astro-migration]
 
 jobs:
-  analyse:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          php-version: "8.2"
-          coverage: none
+          node-version: 20
+          cache: npm
 
       - name: Install dependencies
-        run: composer install --no-interaction --prefer-dist
+        run: npm ci
 
-      - name: PHPStan
-        run: composer analyse
+      - name: Sync assets to public/
+        run: cp -r assets public/assets
+
+      - name: Astro check
+        run: npm run check
+
+      - name: Unit tests
+        run: npm run test:unit
+
+      - name: Content validation
+        run: npm run test:content
+
+      - name: Build
+        run: npm run build
+
+      - name: Verify build output
+        run: npm run test:verify
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: E2E tests
+        run: npm run test:e2e

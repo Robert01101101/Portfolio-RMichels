@@ -6,55 +6,66 @@ on:
       - main
 
 jobs:
-  ci:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          php-version: "8.2"
-          coverage: none
+          node-version: 20
+          cache: npm
 
       - name: Install dependencies
-        run: composer install --no-interaction --prefer-dist
+        run: npm ci
 
-      - name: PHPStan
-        run: composer analyse
+      - name: Sync assets to public/
+        run: cp -r assets public/assets
 
-  deploy:
-    needs: ci
-    runs-on: ubuntu-latest
-    steps:
-      - name: Get latest code
-        uses: actions/checkout@v4
+      - name: Astro check
+        run: npm run check
 
-      - name: Deploy files to Hostinger via FTPS
+      - name: Unit tests
+        run: npm run test:unit
+
+      - name: Content validation
+        run: npm run test:content
+
+      - name: Build
+        run: npm run build
+
+      - name: Verify build output
+        run: npm run test:verify
+
+      - name: Deploy dist/ to Hostinger via FTPS
+        # Note: stale PHP files on the server root must be removed manually once after cutover.
+        # dangerous-clean-slate is intentionally off — it would also wipe /subdomains/* on Hostinger.
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.HOSTINGER_FTPS_SERVER }}
           username: ${{ secrets.HOSTINGER_FTPS_USERNAME }}
           password: ${{ secrets.HOSTINGER_FTPS_PASSWORD }}
           protocol: ftps
+          local-dir: ./dist/
           exclude: |
             **/.git*
             **/.git*/**
-            **/.cursor/**
-            **/node_modules/**
-            **/_PreAssets/**
-            **/_RawAssets/**
-            **/database/**
-            **/scss/**
-            **/subdomains/amae/**
-            **/subdomains/harbingersofdeath/**
-            **/subdomains/understandingClimateChange/**
-            **/nopublicaccess/**
-            **/backup/**
-            **/encryptedDrive*
-            **/prepros.config*
-            **/_DATABASE_SETUP_*
-            **/_TRANSLATION_SETUP_*
-            **/phpinfo.php
-            
+
+  deploy-subdomains:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy tourguide subdomain
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.HOSTINGER_FTPS_SERVER }}
+          username: ${{ secrets.HOSTINGER_FTPS_USERNAME }}
+          password: ${{ secrets.HOSTINGER_FTPS_PASSWORD }}
+          protocol: ftps
+          local-dir: ./subdomains/tourguide/
+          server-dir: /subdomains/tourguide/
