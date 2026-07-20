@@ -41,7 +41,7 @@ jobs:
 
       - name: Deploy dist/ to Hostinger via FTPS
         # Note: stale PHP files on the server root must be removed manually once after cutover.
-        # dangerous-clean-slate is intentionally off — it would also wipe /subdomains/* on Hostinger.
+        # Use a dist-specific state file so the legacy full-repo state does not delete /subdomains/*.
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.HOSTINGER_FTPS_SERVER }}
@@ -49,9 +49,12 @@ jobs:
           password: ${{ secrets.HOSTINGER_FTPS_PASSWORD }}
           protocol: ftps
           local-dir: ./dist/
+          state-name: .ftp-deploy-sync-state-dist.json
+          dangerous-clean-slate: false
           exclude: |
             **/.git*
             **/.git*/**
+            **/subdomains/**
 
   deploy-subdomains:
     needs: build
@@ -69,3 +72,5 @@ jobs:
           protocol: ftps
           local-dir: ./subdomains/tourguide/
           server-dir: /subdomains/tourguide/
+          state-name: .ftp-deploy-sync-state-subdomains-tourguide.json
+          dangerous-clean-slate: false
