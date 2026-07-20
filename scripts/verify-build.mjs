@@ -21,6 +21,18 @@ function requirePath(relPath) {
   }
 }
 
+function assertNotLfsPointer(relPath) {
+  const full = path.join(dist, ...relPath.split('/'));
+  if (!fs.existsSync(full)) {
+    errors.push(relPath);
+    return;
+  }
+  const head = fs.readFileSync(full, 'utf8').slice(0, 40);
+  if (head.startsWith('version https://git-lfs.github.com/spec/v1')) {
+    errors.push(`LFS pointer (run git lfs pull): ${relPath}`);
+  }
+}
+
 function forbidPath(relPath) {
   const full = path.join(dist, ...relPath.split('/'));
   if (fs.existsSync(full)) {
@@ -105,6 +117,15 @@ if (!hasSitemap) {
 }
 
 forbidPath('tourguide');
+
+const lfsCheckedAssets = [
+  'assets/img/portrait.jpg',
+  'assets/img/portfolio.jpg',
+  'assets/img/lqip/futureEarth.jpg',
+];
+for (const assetPath of lfsCheckedAssets) {
+  assertNotLfsPointer(assetPath);
+}
 
 const publishedSlugs = getPublishedProjectSlugs();
 for (const slug of publishedSlugs) {
