@@ -1,31 +1,20 @@
 // @ts-nocheck
 import * as THREE from 'three';
+import { calcDocHeight, mapVal } from './tools';
+
+const SEPARATION = 160;
+const AMOUNTX = 180;
+const AMOUNTY = 40;
+
+function isLowPoweredDevice() {
+  const userAgent = navigator.userAgent.toLowerCase();
+  return /mobile|android|iphone|ipod/.test(userAgent);
+}
 
 export function initParticleWaves() {
   if (document.querySelector('.waves')) return;
 
-  const SEPARATION = 160;
-  const AMOUNTX = 180;
-  const AMOUNTY = 40;
-
   let count = 0;
-  let mouseX = 0;
-  let mouseY = 0;
-  const windowHalfX = window.innerWidth / 2;
-  const windowHalfY = window.innerHeight / 2;
-
-  const calcDocHeight = () => {
-    const body = document.body;
-    const html = document.documentElement;
-    return Math.max(
-      body.scrollHeight,
-      body.offsetHeight,
-      html.clientHeight,
-      html.scrollHeight,
-      html.offsetHeight,
-    );
-  };
-
   let docHeight = calcDocHeight();
 
   const container = document.createElement('div');
@@ -34,7 +23,6 @@ export function initParticleWaves() {
 
   const camera = new THREE.PerspectiveCamera(120, window.innerWidth / window.innerHeight, 1, 10000);
   camera.position.z = 3500;
-  camera.position.y = (docHeight - 200 - window.scrollY) * 10;
 
   const scene = new THREE.Scene();
   const numParticles = AMOUNTX * AMOUNTY;
@@ -65,51 +53,105 @@ export function initParticleWaves() {
   const particles = new THREE.Points(geometry, material);
   scene.add(particles);
 
-  const renderer = new THREE.WebGLRenderer({ alpha: true });
+  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+  const canvas = renderer.domElement;
+  canvas.style.visibility = 'hidden';
+  canvas.classList.add('wavesCanvas');
   renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(window.innerWidth, window.innerHeight);
-  container.appendChild(renderer.domElement);
+  container.appendChild(canvas);
+
+  const getScrollY = () => window.lenis?.animatedScroll ?? window.scrollY ?? 0;
+
+  const updateCamera = (scrollY = getScrollY()) => {
+    docHeight = calcDocHeight();
+    camera.position.y = docHeight - scrollY + 100;
+
+    const newCol = mapVal(scrollY, 0, docHeight, 0.13, 0.38);
+    material.uniforms.color.value.setRGB(
+      Math.max(0.13, newCol),
+      Math.max(0.13, newCol),
+      Math.max(0.13, newCol),
+    );
+  };
 
   const onWindowResize = () => {
-    docHeight = calcDocHeight();
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
+    updateCamera();
   };
 
-  const onDocumentMouseMove = (event: MouseEvent) => {
-    mouseX = event.clientX - windowHalfX;
-    mouseY = event.clientY - windowHalfY;
+  const render = () => {
+    const positionsAttr = particles.geometry.getAttribute('position') as THREE.BufferAttribute;
+    const scalesAttr = particles.geometry.getAttribute('scale') as THREE.BufferAttribute;
+    let idx = 0;
+    let scaleIdx = 0;
+
+    for (let ix = 0; ix < AMOUNTX; ix++) {
+      for (let iy = 0; iy < AMOUNTY; iy++) {
+        positionsAttr.array[idx + 1] =
+          Math.sin((ix + count) * 0.3) * 200 + Math.sin((iy + count) * 0.5) * 100;
+        scalesAttr.array[scaleIdx] =
+          (Math.sin((ix + count) * 0.3) + 1) * 8 + (Math.sin((iy + count) * 0.5) + 1) * 1;
+        idx += 3;
+        scaleIdx++;
+      }
+    }
+
+    positionsAttr.needsUpdate = true;
+    scalesAttr.needsUpdate = true;
+    renderer.render(scene, camera);
+    count += 0.02;
   };
 
   const animate = () => {
     requestAnimationFrame(animate);
-    camera.position.y = (docHeight - 200 - window.scrollY) * 10;
-    camera.position.x += (mouseX - camera.position.x) * 0.05;
-    camera.position.y += (-mouseY - camera.position.y) * 0.05;
-    camera.lookAt(scene.position);
+    render();
+  };
 
-    const positionsAttr = particles.geometry.getAttribute('position') as THREE.BufferAttribute;
-    const scalesAttr = particles.geometry.getAttribute('scale') as THREE.BufferAttribute;
-    let idx = 0;
-    for (let ix = 0; ix < AMOUNTX; ix++) {
-      for (let iy = 0; iy < AMOUNTY; iy++) {
-        positionsAttr.array[idx + 1] =
-          Math.sin((ix + count) * 0.3) * 50 + Math.sin((iy + count) * 0.5) * 50;
-        scalesAttr.array[idx / 3] =
-          (Math.sin((ix + count) * 0.3) + 1) * 8 + (Math.sin((iy + count) * 0.5) + 1) * 8;
-        idx += 3;
-      }
+  const refreshWindow = () => updateCamera();
+
+  const hookLenis = () => {
+    if (window.lenis) {
+      window.lenis.on('scroll', (args: { animatedScroll: number }) => {
+        updateCamera(args.animatedScroll);
+      });
+      updateCamera(window.lenis.animatedScroll);
+      return;
     }
-    positionsAttr.needsUpdate = true;
-    scalesAttr.needsUpdate = true;
-    renderer.render(scene, camera);
-    count += 0.1;
+    requestAnimationFrame(hookLenis);
+  };
+
+  const showCanvasAfterFirstRender = () => {
+    renderer.setClearColor(0x000000, 0);
+    let frames = 0;
+    const waitFrames = () => {
+      render();
+      if (frames++ < 15) {
+        requestAnimationFrame(waitFrames);
+      } else {
+        canvas.style.visibility = 'visible';
+      }
+    };
+    requestAnimationFrame(waitFrames);
   };
 
   window.addEventListener('resize', onWindowResize);
-  document.addEventListener('mousemove', onDocumentMouseMove);
+  refreshWindow();
+  setTimeout(refreshWindow, 500);
+  hookLenis();
   animate();
+  showCanvasAfterFirstRender();
+
+  canvas.addEventListener('webglcontextlost', (event) => {
+    event.preventDefault();
+    canvas.style.display = 'none';
+  });
+
+  canvas.addEventListener('webglcontextrestored', () => {
+    canvas.style.display = '';
+  });
 }
 
 function start() {
@@ -119,6 +161,12 @@ function start() {
     requestAnimationFrame(start);
     return;
   }
+
+  if (isLowPoweredDevice()) {
+    console.warn('Low-powered device detected. Aborting particle waves load.');
+    return;
+  }
+
   initParticleWaves();
 }
 
