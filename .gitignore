@@ -7,4 +7,6 @@ backups/
 .cursor/mcp.json
 /vendor/
 /node_modules/
+/dist/
+.astro/
 composer.phar

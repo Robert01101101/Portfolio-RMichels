@@ -1,0 +1,296 @@
+//_____________________________________________ Page Specific
+section#Projects{
+	margin-bottom: 16rem;
+}
+
+//______________________________________________ About
+.skills {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+
+	gap: 1rem;
+
+	> * {
+		max-width: 100%;
+	}
+
+	h3 {
+		margin-top: 0;
+	}
+
+	ul {
+		padding-left: 0rem;
+		list-style-type: none;
+
+		display: flex;
+		column-gap: 1rem;
+		flex-wrap: wrap;
+
+		li {
+			margin-left: 0rem;
+			position: relative;
+
+			@include md {
+				margin-left: 1.5rem;
+			}
+
+			@include lg {
+				margin-left: 0rem;
+			}
+
+			@include xxxxl {
+				margin-left: 1.5rem;
+			}
+
+			&:before{
+				position: absolute;
+				left: -.6rem;
+				color: white;
+
+				@include md {
+					content: "-";
+					left: -1.5rem;
+				}
+
+				@include lg {
+					content: "";
+				}
+
+				@include xxxxl {
+					content: "-";
+				}
+			}
+
+			&:not(:last-child):after{
+				content: ",";
+				position: absolute;
+				right: -.25rem;
+				color: white;
+
+				@include md {
+					content: "";
+				}
+
+				@include lg {
+					content: ",";
+				}
+
+				@include xxxxl {
+					content: "";
+				}
+			}
+
+			
+
+			
+		}
+
+		@include md {
+			display: block;
+		}
+
+		@include lg {
+			display: flex;
+		}
+
+		@include xxxxl {
+			display: block;
+		}
+	}
+
+	//__breakpoints
+	@include md {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	@include md {
+		flex-wrap: nowrap;
+	}
+
+	@include lg {
+		flex-direction: column;
+	}
+
+	@include xxxxl {
+		flex-direction: row;
+		> * {
+			flex: 1 0 0;
+		}
+	}
+}
+
+.sectionText {
+	&.about {
+		@include md {
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		@include xl {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			align-content: center;
+			max-width: 100%;
+		
+			gap: 4rem;
+		
+			/** {
+				flex-basis: 33%;
+			}*/
+
+			padding-bottom: 2rem;
+
+			> div {
+				&:nth-child(2){
+					max-width: 38rem;
+					min-width: 22rem;
+					flex-basis: 33%;
+					@include xxxxl {
+						flex-basis: 33%;
+					}
+				}
+				&:nth-child(3){
+					flex-basis: 55%;
+					@include xxxxl {
+						flex-basis: 55%;
+					}
+				}
+			}
+
+			@media (min-width: 1800px) and (orientation: landscape) {
+				> div {
+					&:nth-child(2){
+						flex-basis: 38%;
+					}
+					&:nth-child(3){
+						flex-basis: 50%;
+					}
+				}
+			}
+		}
+		
+		@include xxl {
+
+			gap: 5rem;
+		}
+
+		img {
+			max-width: 100%;
+			display: block;
+			
+		}
+
+		> div {
+			//pic
+			&:first-of-type {
+				position: relative;
+				width: 30%;
+				margin: auto;
+				flex-shrink: 0.3;
+
+				@include xl {
+					margin: 0;
+					width: 100%;
+					flex-basis: 12%;
+					margin-top: calc(9rem - 5%);
+				}
+				
+
+				&:before {
+					position: absolute;
+					top: 4%;
+					left: 4%;
+					width: 102%;
+					height: 102%;
+					border: 4px solid white;
+					box-sizing: border-box;
+					content: '';
+				}
+			}
+		}
+	}
+}
+
+.contact{
+	display: flex;
+	gap: 2rem;
+	align-items: center;
+	font-weight: bold;
+	margin-top: 3rem;
+
+	.icons{
+		gap: 2rem;
+	}
+}
+
+
+//______________________________________________ Project pages
+
+
+//////////////////////////////////////////////// TMP
+#tmpVisitorPopUp {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(black, .8);
+	z-index: 500;
+
+	> div {
+		position: absolute;
+		top: 2rem;
+		left: 2rem;
+		right: 2rem;
+		bottom: 2rem;
+		background-color: rgba(#444, .95);
+
+		padding: 3rem;
+
+		@include md {
+			top: calc(50vh - 22rem);
+			left: calc(50vw - 22rem);
+			right: calc(50vw - 22rem);
+			bottom: calc(50vh - 22rem);
+		}
+
+		h2 {
+			margin-top: 0;
+		}
+
+		a, button {
+			display: block;
+			color: _colour(white);
+			text-decoration: none;
+			font-weight: bold;
+			margin-top: 1rem;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		button {
+			background-color: transparent;
+			border: none;
+			padding: 0;
+			margin: 0;
+			color: white;
+			text-decoration: none;
+			margin-bottom: 4rem;
+			margin-top: 1rem;
+			cursor: pointer;
+		}
+
+		> div {
+			position: absolute;
+			bottom: 0;
+		}
+	}
+}

@@ -4,23 +4,31 @@ on:
   pull_request:
     branches: [main]
   push:
-    branches: [main]
+    branches: [main, feat/astro-migration]
 
 jobs:
-  analyse:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          php-version: "8.2"
-          coverage: none
+          node-version: 20
+          cache: npm
 
       - name: Install dependencies
-        run: composer install --no-interaction --prefer-dist
+        run: npm ci
 
-      - name: PHPStan
-        run: composer analyse
+      - name: Export content (if scripts present)
+        run: |
+          node scripts/export-db-to-content.mjs || true
+          node scripts/po-to-json.mjs || true
+
+      - name: Astro check
+        run: npm run check
+
+      - name: Build
+        run: npm run build

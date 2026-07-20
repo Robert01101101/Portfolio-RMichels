@@ -1,10 +1,25 @@
 {
   "name": "portfolio-rmichels",
   "private": true,
+  "type": "module",
   "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "check": "astro check",
+    "preview": "astro preview",
+    "export:content": "node scripts/export-db-to-content.mjs",
+    "export:i18n": "node scripts/po-to-json.mjs",
     "build:css": "sass scss/main.scss css/main.css --style=expanded",
     "build:css:min": "sass scss/main.scss css/main.css --style=compressed",
     "watch:css": "sass --watch scss/main.scss:css/main.css"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/sitemap": "^3.3.1",
+    "astro": "^5.7.10",
+    "lenis": "^1.1.14",
+    "three": "^0.175.0",
+    "typescript": "^5.8.3"
   },
   "devDependencies": {
     "sass": "^1.77.0"

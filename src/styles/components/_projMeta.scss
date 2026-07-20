@@ -1,0 +1,106 @@
+#projMeta {
+	background-color: _colour(bg_alt);
+
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+
+	
+	//Don't wrap children on small-large screens, wrap on small screens
+	flex-wrap: wrap;
+
+	gap: 1rem;
+
+	//Position at the bottom of landing viewport, with negative L / R margins equal the grid margins
+	$margin-sm: _grid(content-margin);
+	padding: 3rem $margin-sm;
+	margin: 0 -#{$margin-sm};
+
+	@include sm {
+		flex-wrap: nowrap;
+		gap: 2rem;
+	}
+
+	@include md {
+		$margin-md: _grid(content-margin-md);
+		margin: 0 -#{$margin-md};
+		padding: 4rem $margin-md;
+		gap: 3rem;
+	}
+	
+	@include lg {
+		$margin-lg: _grid(content-margin-lg);
+		margin: calc(100vh - 3.2rem) calc(#{$margin-lg} * -1) 0 calc(#{$margin-lg} * -1);
+		padding: 6rem $margin-lg;
+		background-color: _colour(bg_alt);
+		gap: 4rem;
+	}
+
+	@include xl {
+		gap: 6rem;
+	}
+
+	@include xxl {
+		gap: 8rem;
+	}
+
+	div {
+		flex-basis: calc(50% - .5rem);
+
+		@include sm {
+			flex-basis: 25%;
+
+			&.skillsApplied {
+				flex-basis: 30%;
+			}
+
+			&.team {
+				flex-basis: 20%;
+			}
+		}
+	}
+
+	h2 {
+		font-size: 1.2rem;
+		font-family: _font(family-body);
+		font-weight: bold;
+		//text-decoration: underline;
+		margin-top: 0;
+	}
+
+	p {
+		//font-weight: bold;
+	}
+
+	ul {
+		list-style-type: none;
+		padding: 0;
+		margin-bottom: 0;
+
+		li {
+			//font-weight: bold;
+		}
+	}
+	
+	a {
+		@include inTextLink;
+	}
+
+	.skillsApplied {
+
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+			column-gap: .5rem;
+		}
+		
+	}
+
+	.skillsApplied, .team {
+		ul {
+			li:not(:last-child)::after {
+				content: ",";
+			}
+		}
+	}
+}

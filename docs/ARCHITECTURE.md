@@ -1,56 +1,75 @@
-# Architecture
+# Architecture — Portfolio-RMichels (Astro)
 
-## Request flow
+## Overview
 
+The site is a **static Astro** build. All HTML is generated at build time from:
+
+- **Pages** in `src/pages/` (and `src/pages/de/` for German)
+- **Project metadata + body** in `src/content/projects/*.md`
+- **UI strings** in `src/i18n/ui-en.json` and `ui-de.json`
+- **Roles** for filtering in `src/lib/roles.ts`
+
+No MySQL or PHP at runtime after cutover.
+
+## Build Flow
+
+```mermaid
+flowchart LR
+  MD[src/content/projects/*.md]
+  Pages[src/pages]
+  MD --> Astro[Astro build]
+  Pages --> Astro
+  Astro --> Dist[dist/]
+  Dist --> GHA[GitHub Actions]
+  GHA --> FTPS[Hostinger FTPS]
 ```
-Browser → Apache (.htaccess) → {route}.php → Partial::build() → MySQL (metadata)
-```
-
-1. **`.htaccess`** rewrites clean URLs (`/futureEarth`) to PHP files (`futureEarth.php`) when no matching file/directory exists.
-2. **Page PHP** loads `config.php`, `Partial.php`, and optionally `Project.php`.
-3. **`Partial::build()`** extracts args and `require`s `src/partials/{name}.php`.
-4. **`header.php`** sets up gettext locale, HTML head, nav, and opens `<main>`.
-5. Page body is inline HTML/PHP in the route file.
-6. **`footer.php`** closes layout, loads page-specific JS, and renders contact links.
-
-## Data model (hybrid)
-
-| Source | Contents |
-|--------|----------|
-| **MySQL** | Project metadata: slug, name, type, year, roles, in-development flag |
-| **PHP files** | Case study body: sections, images, videos, gists |
-| **`assets/img/`** | Hero image (`{slug}.jpg`), gallery images under `{slug}/` |
-
-`Project::buildProjectFromSlug()` loads DB row; page content is not stored in DB.
 
 ## Routing
 
-- Root routes: one `.php` file per page (`about.php`, `futureEarth.php`, …).
-- `skills/*.php` and `development/*.php` are accessed by path; `development/` pages call `chdir('../')` so partial paths resolve.
-- Subdomains (`subdomains/tourguide/`, `subdomains/cyberview/`) are separate mini-apps deployed alongside the main site.
+| URL | Source |
+|-----|--------|
+| `/` | `src/pages/index.astro` |
+| `/about` | `src/pages/about.astro` |
+| `/projects` | `src/pages/projects.astro` |
+| `/futureEarth` | `src/pages/[slug].astro` + `slug` frontmatter |
+| `/de/about` | `src/pages/de/about.astro` |
 
-## i18n
+`astro.config.mjs` sets `i18n.defaultLocale: 'en'`, `prefixDefaultLocale: false`.
 
-Gettext via `_()` in PHP. Locale files in `locale/de_DE/LC_MESSAGES/`. Language toggle posts to `set_language.php`. See `_TRANSLATION_SETUP_.txt`.
+## Layouts
 
-## Build & assets
+- **BaseLayout** — `<head>` (GA, hreflang, canonical, OG), Header, Footer, global islands
+- **ProjectLayout** — case study shell: ProjectLanding, ProjectMeta, markdown body, optional Three.js mockup
 
-- **SCSS** (`scss/`) → **CSS** (`css/`) via Prepros or `npm run build:css`.
-- **JS** source files minified to `*-min.js` by Prepros; footer references minified versions.
-- Large/raw assets in `_RawAssets/`; web-ready assets in `assets/`.
+## Client Islands
 
-## Deploy pipeline
+Loaded per page via `<script src="..." client:load|visible|idle>`:
 
-```
-push to main → CI (phpstan) → FTPS deploy (Hostinger)
-```
+| Island | Pages |
+|--------|-------|
+| LandingModel | Home |
+| ProjectFilter | Home, Projects, About |
+| ImageViewer, Lqip | Case studies |
+| ThreeMockup | tourguide, clirioScanViews |
+| ParticleWaves | All (footer) |
+| Menu, LenisSetup | All |
 
-**`ci.yaml`**: checkout, PHP 8.2, `composer install`, `phpstan analyse`.
+## Content Model
 
-**`deploy.yaml`**: runs after CI passes; FTPS upload via `SamKirkland/FTP-Deploy-Action`. Excludes dev-only paths (`.git`, `scss/`, `_RawAssets/`, `.cursor/`, `database/`, etc.). Secrets via GitHub Actions.
+Frontmatter fields (see `src/content/config.ts`):
 
-## Security boundaries
+- `slug` — URL override (camelCase; not in Zod — Astro reserved)
+- `name`, `projectType`, `description` — `{ en, de }`
+- `year`, `roles`, `links`, `heroAltLayout`, `threeMockup`, `inDevelopment`, `order`
 
-- `nopublicaccess/auth.php` — DB credentials (not in repo).
-- `database/` — SQL dumps (not in repo).
-- Deploy excludes setup docs and encrypted drive references.
+Markdown body = former `#projContent` HTML converted to MD.
+
+## Coexistence with PHP (migration branch)
+
+- Astro dev: `npm run dev` → `localhost:4321`
+- Legacy PHP: XAMPP → `localhost`
+- Until merge: PHP files unchanged; deploy workflow on branch targets `dist/`
+
+## Subdomains
+
+`subdomains/tourguide/` and others deploy separately; not part of Astro `dist/`.

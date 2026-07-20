@@ -1,0 +1,45 @@
+$colour: (
+	black: 			#000000,
+	blue: 			#228C8C,
+	bg:				#222222,
+	bg_alt:			#444444,
+	white:			#ffffff,
+	white_alt: 		#dddddd,
+	shadow:			rgba(0,0,0,0.5),
+	shadow_light:	rgba(0,0,0,0.1)
+);
+
+$size: (
+	textXL:			4rem,
+	textMobileXL:	2em,
+	textS: 			.8em,
+	bodyWidth:      680px,
+	btnPadding:		.8rem,
+	element-margin:	2em,
+	gap:			1.5rem
+);
+
+$myWidth: 680px;
+
+$duration: (
+	default:				.4s
+);
+
+$font: (
+	family-body:			('Roboto', sans-serif),
+	family-header:			('Roboto', sans-serif),
+	family-alt:				('Roboto Mono', monospace),
+	weight:					300,
+	weight-medium:  	 	400,
+	weight-bold:			700,
+	weight-light:			300,
+	kern-heading:			0.1em
+);
+
+$grid: (
+	content-margin:			2rem,
+	content-margin-md:		3.5rem,
+	content-margin-lg:		calc(16.7vw + 1rem)
+);
+
+/* ========================== ADD LAYERS FOR Z INDEX ====================== */

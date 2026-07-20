@@ -1,0 +1,149 @@
+.landingModelImageWrapper {
+	display: flex;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+}
+
+#landingModelImage {
+	width: calc(25rem + 20vh + 20vw) !important;
+	left: auto !important;
+	right: auto !important;
+
+	@include xl {
+		left: 45vw !important;
+		width: 60vw !important;
+	}
+}
+
+.landingSpinner {
+	position: absolute;
+	display: none;
+    bottom: 0;
+    left: calc(50vw - 1.5rem);
+
+	@include md {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		top: 20vh;
+	}
+	@include xl {
+		left: 75vw;
+	}
+}
+
+#threeModel, .cropCanvas, #landingModelImage {
+	z-index: -10;
+	display: block;
+
+	width: 100vw;
+	height: 80vh;
+
+	background: transparent !important;
+
+	overflow: hidden !important;
+
+	@include xl {
+		width: 50vw;
+		height: 100vh;
+	}
+	
+	&:not(.inText) {
+		position: absolute;
+		right: 0;
+
+		@include xl {
+			&:not(img) {
+				width: 100vw;
+			}
+			&#landingModelImage{
+				top: 50vh;
+			}
+			left: 25vw;
+			right: 0;
+			top: 0;
+		}
+	}
+
+	&.inText {
+		width: 100%;
+		&.hololens {
+			height: 24rem;
+
+			@include md {
+				height: 30rem;
+			}
+
+			@include lg {
+				height: 36rem;
+			}
+
+			@include xl {
+				height: 38rem;
+			}
+
+			@include xxxl {
+				height: 42rem;
+			}
+		}
+
+		&:not(.hololens){
+			height: 32rem;
+
+			@include sm {
+				height: 40rem;
+			}
+	
+			@include md {
+				height: 60rem;
+				position: relative;
+				left: 2rem;
+			}
+	
+			@include lg {
+				max-width: 35rem;
+			}
+				
+	
+			@include xxl {
+				height: 65rem;
+			}
+		}
+	}
+}
+
+#landingModelImage {
+	height: auto;
+	
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+@mixin fullscreen {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+
+.waves {
+	@include fullscreen;
+	z-index: -20;
+}
+
+.wavesCanvas {
+	@include fullscreen();
+	background: transparent !important;
+}
+
+.cursor {
+	@include fullscreen;
+	z-index: 1;
+}
+
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}

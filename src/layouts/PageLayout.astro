@@ -1,0 +1,24 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import type { Locale } from '../lib/i18n';
+
+interface Props {
+  locale?: Locale;
+  title: string;
+  description: string;
+  pageType?: 'home' | 'about' | 'projects' | 'project' | 'privacy';
+  ogImage?: string;
+}
+
+const { locale = 'en', title, description, pageType = 'home', ogImage } = Astro.props;
+---
+
+<BaseLayout
+  locale={locale}
+  title={title}
+  description={description}
+  pageType={pageType}
+  ogImage={ogImage}
+>
+  <slot />
+</BaseLayout>

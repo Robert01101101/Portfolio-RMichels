@@ -1,0 +1,45 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import ProjectLanding from '../components/ProjectLanding.astro';
+import ProjectMeta from '../components/ProjectMeta.astro';
+import type { CollectionEntry } from 'astro:content';
+import type { Locale } from '../lib/i18n';
+import { getLocalized, getProjectSlug } from '../lib/projects';
+
+interface Props {
+  project: CollectionEntry<'projects'> | CollectionEntry<'projects-de'>;
+  locale: Locale;
+}
+
+const { project, locale } = Astro.props;
+const p = project.data;
+const title = `${getLocalized(p.name, locale)} | Robert Michels Portfolio`;
+const description = `${getLocalized(p.name, locale)} (${getLocalized(p.projectType, locale)}) | Robert Michels Portfolio | I'm Robert Michels, a designer and developer from Vancouver.`;
+const slug = getProjectSlug(project);
+const basePath = p.inDevelopment ? `/development/${slug}` : `/${slug}`;
+const canonicalPath = locale === 'de' ? `/de${basePath}` : basePath;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  locale={locale}
+  pageType="project"
+  canonicalPath={canonicalPath}
+  ogImage={`https://rmichels.com/assets/img/${slug}.jpg`}
+>
+  <ProjectLanding project={project} locale={locale} />
+  <ProjectMeta project={project} locale={locale} />
+  <div id="projContent">
+    <slot />
+  </div>
+  {p.threeMockup && (
+    <canvas
+      id="threeModel"
+      class:list={['inText', p.threeMockup === 'hololens' && 'hololens']}
+      data-mockup-phone={p.threeMockup === 'phone' ? true : undefined}
+      data-mockup-hololens={p.threeMockup === 'hololens' ? true : undefined}
+      style="display:none"
+    />
+  )}
+</BaseLayout>

@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import fs from 'node:fs';
+import path from 'node:path';
+
+const locale = 'en' as const;
+const php = fs.readFileSync(path.resolve('privacyPolicy.php'), 'utf8');
+const styleMatch = php.match(/<style>[\s\S]*?<\/style>/);
+const bodyMatch = php.match(/<div data-custom-class="body">[\s\S]*?<\/div>\s*<div style="color: #bbbbbb/);
+const styles = styleMatch?.[0] ?? '';
+const bodyHtml = bodyMatch?.[0]?.replace(/<div style="color: #bbbbbb[\s\S]*$/, '') ?? '<p>Privacy policy content unavailable.</p>';
+---
+
+<BaseLayout
+  title="Privacy Policy | Robert Michels Portfolio"
+  description="Privacy policy for rmichels.com"
+  locale={locale}
+  pageType="default"
+  canonicalPath="/privacyPolicy"
+>
+  <Fragment set:html={styles} />
+  <Fragment set:html={bodyHtml} />
+</BaseLayout>
