@@ -1,3 +1,5 @@
+import { getScrollLenis } from '../lib/scroll-lenis';
+
 export function initDownArrow() {
   const downArrow = document.getElementById('downArrow');
   if (!downArrow) return;
@@ -8,8 +10,9 @@ export function initDownArrow() {
   };
 
   window.addEventListener('load', () => {
-    if (window.lenis) {
-      window.lenis.on('scroll', (args: { animatedScroll: number }) => updateArrow(args.animatedScroll));
+    const lenis = getScrollLenis();
+    if (lenis) {
+      lenis.on('scroll', (instance) => updateArrow(instance.animatedScroll));
     } else {
       window.addEventListener('scroll', () => updateArrow(window.scrollY));
     }

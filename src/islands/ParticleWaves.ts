@@ -1,6 +1,11 @@
 // @ts-nocheck
 import * as THREE from 'three';
 import { calcDocHeight, mapVal } from './tools';
+import { getScrollLenis } from '../lib/scroll-lenis';
+import {
+  particleWavesFragmentShader,
+  particleWavesVertexShader,
+} from '../lib/particle-waves-shaders';
 
 const SEPARATION = 160;
 const AMOUNTX = 180;
@@ -46,8 +51,8 @@ export function initParticleWaves() {
 
   const material = new THREE.ShaderMaterial({
     uniforms: { color: { value: new THREE.Color(0x666666) } },
-    vertexShader: document.getElementById('vertexshader')?.textContent ?? '',
-    fragmentShader: document.getElementById('fragmentshader')?.textContent ?? '',
+    vertexShader: particleWavesVertexShader,
+    fragmentShader: particleWavesFragmentShader,
   });
 
   const particles = new THREE.Points(geometry, material);
@@ -61,7 +66,7 @@ export function initParticleWaves() {
   renderer.setSize(window.innerWidth, window.innerHeight);
   container.appendChild(canvas);
 
-  const getScrollY = () => window.lenis?.animatedScroll ?? window.scrollY ?? 0;
+  const getScrollY = () => getScrollLenis()?.animatedScroll ?? window.scrollY ?? 0;
 
   const updateCamera = (scrollY = getScrollY()) => {
     docHeight = calcDocHeight();
@@ -113,11 +118,12 @@ export function initParticleWaves() {
   const refreshWindow = () => updateCamera();
 
   const hookLenis = () => {
-    if (window.lenis) {
-      window.lenis.on('scroll', (args: { animatedScroll: number }) => {
-        updateCamera(args.animatedScroll);
+    const lenis = getScrollLenis();
+    if (lenis) {
+      lenis.on('scroll', (instance) => {
+        updateCamera(instance.animatedScroll);
       });
-      updateCamera(window.lenis.animatedScroll);
+      updateCamera(lenis.animatedScroll);
       return;
     }
     requestAnimationFrame(hookLenis);
@@ -155,13 +161,6 @@ export function initParticleWaves() {
 }
 
 function start() {
-  const vertexShader = document.getElementById('vertexshader')?.textContent;
-  const fragmentShader = document.getElementById('fragmentshader')?.textContent;
-  if (!vertexShader || !fragmentShader) {
-    requestAnimationFrame(start);
-    return;
-  }
-
   if (isLowPoweredDevice()) {
     console.warn('Low-powered device detected. Aborting particle waves load.');
     return;

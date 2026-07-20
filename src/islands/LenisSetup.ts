@@ -1,8 +1,8 @@
 import Lenis from 'lenis';
+import { setScrollLenis } from '../lib/scroll-lenis';
 
 declare global {
   interface Window {
-    lenis?: Lenis;
     locoScroll?: { update: () => void };
   }
 }
@@ -16,11 +16,12 @@ export function initLenis() {
       smoothWheel: enabled,
     });
 
-  window.lenis = createLenis(stored);
-  window.locoScroll = { update: () => window.lenis?.resize() };
+  const lenis = createLenis(stored);
+  setScrollLenis(lenis);
+  window.locoScroll = { update: () => lenis.resize() };
 
   function raf(time: number) {
-    window.lenis?.raf(time);
+    lenis.raf(time);
     requestAnimationFrame(raf);
   }
   requestAnimationFrame(raf);

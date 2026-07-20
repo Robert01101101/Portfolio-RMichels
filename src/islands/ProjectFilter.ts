@@ -92,3 +92,5 @@ function applyUrlFilter() {
 initFilterButtons();
 initProjectRows();
 applyUrlFilter();
+
+export {};

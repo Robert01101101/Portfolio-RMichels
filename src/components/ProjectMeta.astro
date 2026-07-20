@@ -6,7 +6,7 @@ import { getLocalized } from '../lib/projects';
 import { getRoleBySlug } from '../lib/roles';
 
 interface Props {
-  project: CollectionEntry<'projects'>;
+  project: CollectionEntry<'projects'> | CollectionEntry<'projects-de'>;
   locale: Locale;
 }
 
