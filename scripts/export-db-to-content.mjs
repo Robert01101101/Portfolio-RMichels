@@ -218,31 +218,47 @@ const PROJECTS = [
 function extractProjContent(phpPath) {
   if (!fs.existsSync(phpPath)) return '';
   const src = fs.readFileSync(phpPath, 'utf8');
-  const match = src.match(/<div id="projContent"[^>]*>([\s\S]*?)<\/div>\s*(?:<\?php|<!--)/);
-  if (!match) return '';
-  return htmlToMarkdown(match[1].trim());
+  const openIdx = src.indexOf('<div id="projContent"');
+  if (openIdx === -1) return '';
+  const contentStart = src.indexOf('>', openIdx) + 1;
+  const closeIdx = src.indexOf('</div>\n\n<?php', contentStart);
+  if (closeIdx === -1) {
+    const footerIdx = src.indexOf("Partial::build('footer')", contentStart);
+    if (footerIdx === -1) return '';
+    const slice = src.slice(contentStart, footerIdx);
+    const lastDiv = slice.lastIndexOf('</div>');
+    if (lastDiv === -1) return '';
+    return cleanupHtml(slice.slice(0, lastDiv).trim());
+  }
+  return cleanupHtml(src.slice(contentStart, closeIdx).trim());
 }
 
-function htmlToMarkdown(html) {
-  let md = html;
-  md = md.replace(/<\?php[\s\S]*?\?>/g, '');
-  md = md.replace(/<script[\s\S]*?<\/script>/gi, (m) => {
-    const src = m.match(/src="([^"]+)"/);
-    if (src) return `\n<script src="${src[1]}"></script>\n`;
+/** Extract gettext literals and drop other PHP from case study HTML. */
+function stripPhp(html) {
+  return html.replace(/<\?php[\s\S]*?\?>/g, (block) => {
+    const parts = [...block.matchAll(/_\(\s*["']((?:\\.|[^"'\\])*)["']\s*\)/g)];
+    if (parts.length) return parts.map((m) => m[1]).join('');
+    if (block.includes("$GLOBALS['d']")) return '';
     return '';
   });
-  md = md.replace(/<iframe[^>]+src="([^"]+)"[^>]*><\/iframe>/gi, '\n<iframe src="$1" frameborder="0" allowfullscreen></iframe>\n');
-  md = md.replace(/<h2[^>]*>(.*?)<\/h2>/gi, '\n## $1\n');
-  md = md.replace(/<h3[^>]*>(.*?)<\/h3>/gi, '\n### $1\n');
-  md = md.replace(/<p[^>]*>(.*?)<\/p>/gis, '\n$1\n');
-  md = md.replace(/<code>(.*?)<\/code>/gi, '`$1`');
-  md = md.replace(/<figure[^>]*onclick="viewImage\(this\)"[^>]*>\s*<img[^>]+src="([^"]+)"[^>]*>\s*<\/figure>/gi, '\n![gallery]($1)\n');
-  md = md.replace(/<div class="mediaGrid">([\s\S]*?)<\/div>/gi, '$1');
-  md = md.replace(/<div class="auto-resizable-iframe">[\s\S]*?<\/div>/gi, (m) => m);
-  md = md.replace(/<[^>]+>/g, '');
-  md = md.replace(/&nbsp;/g, ' ');
-  md = md.replace(/\n{3,}/g, '\n\n');
-  return md.trim();
+}
+
+function cleanupHtml(html) {
+  let h = stripPhp(html);
+  h = h.replace(/<!--[\s\S]*?-->/g, '');
+  h = h.replace(/src="(?:\.\.\/)?assets\//g, 'src="/assets/');
+  h = h.replace(/href="(?!https?:|\/|#|mailto:)([a-zA-Z][a-zA-Z0-9]*)"/g, 'href="/$1"');
+  h = h.replace(/<p>([^<]*)<p>/gi, '<p>$1</p><p>');
+  h = h.replace(/<\/p>\s*<\/p>/g, '</p>');
+  // Three.js mockup canvas is injected by ProjectLayout; keep figcaption only.
+  h = h.replace(/<section class="sectionText mockup[^"]*">([\s\S]*?)<\/section>/gi, (match, inner) => {
+    const cap = inner.match(/<figcaption>([\s\S]*?)<\/figcaption>/i);
+    if (!cap) return '';
+    const sectionClass = match.match(/<section class="([^"]*)"/i)?.[1] ?? 'sectionText mockup';
+    return `<section class="${sectionClass}"><figcaption>${cap[1].trim()}</figcaption></section>`;
+  });
+  h = h.replace(/\n{3,}/g, '\n\n');
+  return h.trim();
 }
 
 function toYaml(value, indent = 0) {

@@ -22,52 +22,48 @@ links:
 order: 9
 ---
 
-## The Task
-
+<section class="sectionText">
     
-The goal of this project was to design and develop a fully-fledged game. The project was created in an advanced game design course, and we used the Unity game engine to develop the game.
-
+    <h2>The Task</h2>
+    <p>The goal of this project was to design and develop a fully-fledged game. The project was created in an advanced game design course, and we used the Unity game engine to develop the game.</p>
     
-    
-Cyberview is a 2D platformer, where you fight enemies and solve puzzles, using a range of body mods. But be careful! You can only equip up to three at a time, and each use depletes your energy. After all, you are still a robot and are bound by your robot body's limits.
+    <p>Cyberview is a 2D platformer, where you fight enemies and solve puzzles, using a range of body mods. But be careful! You can only equip up to three at a time, and each use depletes your energy. After all, you are still a robot and are bound by your robot body's limits.</p>
+  </section>
 
   
+  <section class="sectionMedia">
+    <figure ignorecarousel>
+      <div class="mediaSquare">
+        <figure onclick="viewImage(this)">
+          <img src="/assets/img/cyberview/lqip/screen-0.jpg">
+        </figure>
+        <figure onclick="viewImage(this)">
+          <img src="/assets/img/cyberview/lqip/screen-1.jpg">
+        </figure>
+        <figure onclick="viewImage(this)">
+          <img src="/assets/img/cyberview/lqip/screen-2.jpg">
+        </figure>
+        <figure onclick="viewImage(this)">
+          <img src="/assets/img/cyberview/lqip/screen-3.jpg">
+        </figure>
+      </div>
+      <figcaption class="center">Screenshots from the game.</figcaption>
+    </figure>
+  </section>
 
   
-  
+  <section class="sectionText">
+    <h2>The Result</h2>
+    <h3>Mechanics</h3>
+    <p>An important aspect of our design was the game mechanics. The most important two mechanics were the ability to swap body mods, and energy depletion when using body mods. Body mods include a drill, grappling hook, strong arms, gun, regular and super legs, as well as a jetpack.</p>
     
-      
-        
-![gallery](assets/img/cyberview/lqip/screen-0.jpg)
-
-        
-![gallery](assets/img/cyberview/lqip/screen-1.jpg)
-
-        
-![gallery](assets/img/cyberview/lqip/screen-2.jpg)
-
-        
-![gallery](assets/img/cyberview/lqip/screen-3.jpg)
-
-      
-      Screenshots from the game.
-    
-  
+    <h3>Narrative</h3>
+    <p>Unit 241 is an all-purpose android at the mega-factory Airsite. This factory uses androids, like Unit 241, to carry out all sorts of dangerous tasks. All androids come equipped with highly functional AI, but their cognitive abilities are inhibited to what is essential for their tasks. When 241 is damaged in a mine collapse, the android's intelligence inhibitor is shut off, allowing 241 to think freely. You get to explore the Airsite factory with 241 and overcome many challenges while discovering what it means to be alive. Find a way out, and try to save the other bots!</p>
+  </section>
 
   
-  
-    
-## The Result
-
-    
-### Mechanics
-
-    
-An important aspect of our design was the game mechanics. The most important two mechanics were the ability to swap body mods, and energy depletion when using body mods. Body mods include a drill, grappling hook, strong arms, gun, regular and super legs, as well as a jetpack.
-
-    
-    
-### Narrative
-
-    
-Unit 241 is an all-purpose android at the mega-factory Airsite. This factory uses androids, like Unit 241, to carry out all sorts of dangerous tasks. All androids come equipped with highly functional AI, but their cognitive abilities are inhibited to what is essential for their tasks. When 241 is damaged in a mine collapse, the android's intelligence inhibitor is shut off, allowing 241 to think freely. You get to explore the Airsite factory with 241 and overcome many challenges while discovering what it means to be alive. Find a way out, and try to save the other bots!
+  <div class="auto-resizable-iframe">
+    <div>
+      <iframe src="https://www.youtube.com/embed/cMnbb1hC0T4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
