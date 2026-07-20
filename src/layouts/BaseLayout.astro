@@ -89,7 +89,7 @@ const showHomeIcon = pageType === 'project' || pageType === 'about';
   <body data-page-type={pageType}>
     <div>
       <div id="MainGrid">
-        <Header locale={locale} pageType={pageType} altUrl={altUrl} />
+        <Header locale={locale} pageType={pageType} altHref={altPath} />
         <main id="Content">
           <script>
             import '../islands/Menu.ts';

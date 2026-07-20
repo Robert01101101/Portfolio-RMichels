@@ -1,17 +1,13 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ProjectTile from '../../components/ProjectTile.astro';
-import { getAllProjects, filterByRoles, projectToTileData } from '../../lib/projects';
+import { getAllProjects, projectToTileData } from '../../lib/projects';
 import { t } from '../../lib/i18n';
 
 const locale = 'de' as const;
 const params = Astro.url.searchParams;
-const filterParam = params.get('filter');
-const filters = filterParam ? filterParam.split(',').filter(Boolean) : [];
-const allProjects = await getAllProjects();
-let projects = filters.length ? filterByRoles(allProjects, filters) : allProjects.slice(0, 6);
-if (filters.length && !projects.length) projects = allProjects.slice(0, 5);
 const greeting = params.get('greeting');
+const allProjects = await getAllProjects(locale);
 const textRotateItems = ['Full-Stack-Apps.', 'Spiele.', 'VR-Erlebnisse.', 'Mobile Apps.', 'Websites.'];
 ---
 
@@ -52,7 +48,7 @@ const textRotateItems = ['Full-Stack-Apps.', 'Spiele.', 'VR-Erlebnisse.', 'Mobil
     </div>
   </div>
   <section class="sectionMedia" id="MyWork">
-    {projects.map((project) => {
+    {allProjects.map((project) => {
       const tile = projectToTileData(project, locale);
       return (
         <ProjectTile
@@ -72,14 +68,7 @@ const textRotateItems = ['Full-Stack-Apps.', 'Spiele.', 'VR-Erlebnisse.', 'Mobil
       </a>
     </div>
   </section>
-  {filterParam && filters.length > 0 && projects.length > 0 && (
-    <script is:inline define:vars={{ filterParam }}>
-      document.cookie = `visitorFilter=${encodeURIComponent(filterParam)}; path=/; max-age=31536000`;
-    </script>
-  )}
-  {!filterParam && (
-    <script is:inline>
-      document.cookie = 'visitorFilter=; Max-Age=0; path=/';
-    </script>
-  )}
+  <script>
+    import '../../islands/HomeFilter.ts';
+  </script>
 </BaseLayout>

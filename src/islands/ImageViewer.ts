@@ -11,9 +11,13 @@ export function initImageViewer() {
   let slideIndex = 0;
   const origInnerHTML = imageViewer.innerHTML;
 
-  const allImages = Array.from(document.querySelectorAll('figure')).filter(
+  const figureImages = Array.from(document.querySelectorAll('figure')).filter(
     (f) => !f.hasAttribute('ignorecarousel'),
   );
+  const galleryImages = Array.from(
+    document.querySelectorAll<HTMLImageElement>('#projContent img[alt="gallery"]'),
+  ).filter((img) => !img.closest('figure'));
+  const allImages: HTMLElement[] = [...figureImages, ...galleryImages];
 
   const closeImageViewer = () => {
     viewerOpen = false;
@@ -41,7 +45,7 @@ export function initImageViewer() {
     clone = sourceImage.cloneNode(true) as HTMLElement;
     clone.removeAttribute('onclick');
     imageViewer.appendChild(clone);
-    clone.innerHTML += origInnerHTML;
+    imageViewer.insertAdjacentHTML('beforeend', origInnerHTML);
     imageViewer.classList.remove('hidden');
 
     if (!carousel) {
@@ -78,12 +82,23 @@ export function initImageViewer() {
 
   bindControls();
 
-  document.querySelectorAll<HTMLElement>('#projContent figure[onclick], #projContent figure img').forEach((fig) => {
-    const figure = fig.tagName === 'FIGURE' ? fig : fig.closest('figure');
-    if (!figure) return;
-    figure.style.cursor = 'pointer';
-    figure.addEventListener('click', () => viewImage(figure as HTMLElement));
-  });
+  const bindGalleryTarget = (target: HTMLElement) => {
+    target.style.cursor = 'pointer';
+    target.addEventListener('click', () => {
+      const figure = target.closest('figure') ?? target;
+      viewImage(figure as HTMLElement);
+    });
+  };
+
+  document
+    .querySelectorAll<HTMLElement>('#projContent figure[onclick], #projContent figure img')
+    .forEach((fig) => {
+      const figure = fig.tagName === 'FIGURE' ? fig : fig.closest('figure');
+      if (!figure) return;
+      bindGalleryTarget(figure as HTMLElement);
+    });
+
+  document.querySelectorAll<HTMLElement>('#projContent img[alt="gallery"]').forEach(bindGalleryTarget);
 
   (window as unknown as { viewImage: typeof viewImage }).viewImage = viewImage;
   (window as unknown as { closeImageViewer: typeof closeImageViewer }).closeImageViewer = closeImageViewer;

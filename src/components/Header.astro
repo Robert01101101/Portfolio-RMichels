@@ -4,10 +4,10 @@ import { t, type Locale, localizedPath } from '../lib/i18n';
 interface Props {
   locale: Locale;
   pageType: 'home' | 'about' | 'projects' | 'project' | 'default';
-  altUrl: string;
+  altHref: string;
 }
 
-const { locale, pageType, altUrl } = Astro.props;
+const { locale, pageType, altHref } = Astro.props;
 const prefix = locale === 'de' ? '/de' : '';
 const homeHref = prefix || '/';
 const aboutHref = `${prefix}/about`;
@@ -52,7 +52,7 @@ const altLabel = locale === 'en' ? t('deutsch', locale) : t('english', locale);
         </a>
         <div class="overlayMenuSpacer"></div>
         <div class="overlayMenuLanguageSelector">
-          <a href={altUrl} class="lang-toggle">{altLabel}</a>
+          <a href={altHref} class="lang-toggle">{altLabel}</a>
         </div>
       </ul>
     </div>

@@ -1,17 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ProjectTile from '../components/ProjectTile.astro';
-import { getAllProjects, filterByRoles, getLocalized, projectToTileData } from '../lib/projects';
+import { getAllProjects, projectToTileData } from '../lib/projects';
 import { t } from '../lib/i18n';
 
 const locale = 'en' as const;
 const params = Astro.url.searchParams;
-const filterParam = params.get('filter');
-const filters = filterParam ? filterParam.split(',').filter(Boolean) : [];
-const allProjects = await getAllProjects();
-let projects = filters.length ? filterByRoles(allProjects, filters) : allProjects.slice(0, 6);
-if (filters.length && !projects.length) projects = allProjects.slice(0, 5);
 const greeting = params.get('greeting');
+const allProjects = await getAllProjects();
 const textRotateItems = t('text_rotate', locale).split('", "').map((s) => s.replace(/^"|"$/g, ''));
 const title = 'Portfolio | Robert Michels';
 const description = "I'm Robert Michels, a designer and developer from Vancouver. I design and program games, websites, and apps. | Robert Michels Portfolio";
@@ -58,7 +54,7 @@ const description = "I'm Robert Michels, a designer and developer from Vancouver
     </div>
   </div>
   <section class="sectionMedia" id="MyWork">
-    {projects.map((project) => {
+    {allProjects.map((project) => {
       const tile = projectToTileData(project, locale);
       return (
         <ProjectTile
@@ -78,14 +74,7 @@ const description = "I'm Robert Michels, a designer and developer from Vancouver
       </a>
     </div>
   </section>
-  {filterParam && filters.length > 0 && projects.length > 0 && (
-    <script is:inline define:vars={{ filterParam }}>
-      document.cookie = `visitorFilter=${encodeURIComponent(filterParam)}; path=/; max-age=31536000`;
-    </script>
-  )}
-  {!filterParam && (
-    <script is:inline>
-      document.cookie = 'visitorFilter=; Max-Age=0; path=/';
-    </script>
-  )}
+  <script>
+    import '../islands/HomeFilter.ts';
+  </script>
 </BaseLayout>

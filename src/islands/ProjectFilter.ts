@@ -52,7 +52,7 @@ function initProjectRows() {
     item.setAttribute('data-tile', String(position));
     counter++;
 
-    item.addEventListener('updateProject', () => {
+    window.addEventListener('updateProject', () => {
       let active = false;
       let missedHit = false;
       if (activeFilters.length > 0) {

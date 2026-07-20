@@ -89,8 +89,9 @@ export function initLandingModel() {
   camera.position.z = window.innerWidth > smBreakPoint ? 11 : 15;
   camera.rotation.x = -Math.PI / 5;
 
-  scene.add(new THREE.AmbientLight(0xffffff));
-  const light = new THREE.PointLight(0x909090, 1);
+  scene.add(new THREE.AmbientLight(0xffffff, 0.7));
+  const light = new THREE.PointLight(0xc7c7c7, 1.5, 0, 0);
+  light.decay = 0; // match legacy three r120 default; r175 defaults to 2 and washes out shading
   light.position.set(-6, 7, 6);
   scene.add(light);
 
@@ -110,6 +111,11 @@ export function initLandingModel() {
     '/assets/models/me_v2.glb',
     (gltf) => {
       const mesh = gltf.scene.children[0];
+      const meshMat = (mesh as THREE.Mesh).material;
+      if (meshMat?.isMeshStandardMaterial) {
+        meshMat.roughness = 0.71;
+        meshMat.metalness = 0.01;
+      }
       scene.add(mesh);
       handleParticles(scene, mesh);
       showCanvas();
