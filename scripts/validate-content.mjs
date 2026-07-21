@@ -8,6 +8,10 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import yaml from 'js-yaml';
 import { projectSchema, PARITY_FIELDS } from './content-schema.mjs';
+import {
+  findHtmlBlankLineIssues,
+  splitProjectMarkdown,
+} from './project-markdown-html.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
@@ -81,6 +85,24 @@ function parseFrontmatterObject(content) {
     return yaml.load(match[1]);
   } catch (err) {
     return null;
+  }
+}
+
+/**
+ * @param {string} filePath
+ * @param {string} slug
+ */
+function checkMarkdownHtmlBlankLines(filePath, slug) {
+  const content = fs.readFileSync(filePath, 'utf8');
+  const { body, bodyStartLine } = splitProjectMarkdown(content);
+  const issues = findHtmlBlankLineIssues(body);
+
+  for (const bodyLine of issues) {
+    fail(
+      slug,
+      'body',
+      `blank line inside HTML block at line ${bodyStartLine + bodyLine - 1} in ${path.basename(filePath)} — remove it or content may render as a code block`,
+    );
   }
 }
 
@@ -233,6 +255,7 @@ function checkProjects() {
     }
 
     validateSchema(project.data, project.slug);
+    checkMarkdownHtmlBlankLines(filePath, project.slug);
 
     const dePath = deByBasename.get(project.basename);
     if (dePath) {
@@ -241,6 +264,7 @@ function checkProjects() {
         fail(filenameSlug, 'frontmatter', `DE ${deProject.parseError}`);
       } else {
         checkFrontmatterParity(project.data, deProject.data, project.slug);
+        checkMarkdownHtmlBlankLines(dePath, project.slug);
       }
     }
 

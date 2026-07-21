@@ -25,12 +25,7 @@ order: 1
     <h2>Overview</h2>
     <p>One of the key features of the Clirio product suite is the capability to capture photogrammetry scans with LiDAR-enabled iOS devices, and then manage and view those scans. Captured scans can be viewed on-map, they can be always-on as an integral part of the map, or they can be viewed in scan view mode which comes with measure, comparison, and XR capabilities depending on the platform. In XR view, the scan can be scaled to  1m³ or 1:1 scale, or freely manipulated with hand manipulation. On iOS and Desktop, the view is controlled by touch or mouse inputs. Comparison views feature side-by-side, swipe, and overlay modes. Besides scans captured with Clirio Scan, other 3D models are also supported and can be uploaded on <a href="/clirioCloud">Clirio Cloud</a>.</p>
   </section>
-
-  
   <section class="sectionText mockup hololens"><figcaption>Scan View (HoloLens 2)</figcaption></section>
-
-
-  
   <section class="sectionMedia">
     <figure ignorecarousel>
       <div class="mediaRow mediaRow-equalWidth mediaRow-equalHeight">
@@ -49,18 +44,12 @@ order: 1
       </div>
     </figure>
   </section>
-
-
-  
   <section class="sectionText">
     <h2>Development</h2>
     <p>The scan views have been continuously worked on from 2021 to 2023. In that timeframe, I was responsible for setting up most of the logic and views involved. My workflow involved designing UX and UI, and then quickly prototyping and refining until each feature was ready for release. My teammates <a href="https://www.linkedin.com/in/toniostillman" target="_blank">Tonio Stillman</a>, <a href="https://www.linkedin.com/in/timthibault/" target="_blank">Timothy Thibault</a>, <a href="https://www.linkedin.com/in/jordan-wischmann-32a4b380/" target="_blank">Jordan Wischmann</a>, and <a href="https://www.linkedin.com/in/merdemgunay" target="_blank">Erdem Gunay</a> also made contributions. Some functionality was also carried over from the Ada Viewer app, upon which the Clirio View app was based.</p>
     <p>The initial set of requirements was the loading and viewing of scans in a scan view mode (no map), which would be supported in AR on the HoloLens 2, and in 3D non-AR on iOS. Once these core functionalities had been implemented, one of the most important additions was the comparison and measure modes. An important workflow supported by the Clirio View apps is the analysis and monitoring of construction sites, for which scan comparisons help detect differences, and scan measurements help understand scale.</p>
     <p>Later, other features were added, such as viewing scans on-map, more viewing tools such as freehand manipulation in XR, and more comparison modes such as the overlay mode which fades the transparencies on XR, and the swipe comparison view on iOS which crops the viewports.</p>
   </section>
-
-
-  
   <section class="sectionMedia">
     <div class="auto-resizable-iframe">
       <div>
@@ -69,9 +58,6 @@ order: 1
       <figcaption>An overview of the different scan views in the Clirio View Meta Quest VR app. A scan is first opened on-map, then scan view is entered, where the scan is viewed from different angles, measured, and compared to another scan.</figcaption>
     </div>
   </section>
-
-
-  
   <section class="sectionText">
     <h2>Challenges</h2>
     <p>One of the biggest challenges has been the complexity originating from different UX flows, platforms, features, and states which have been expanded slowly over time. Particularly in the final <a href="https://learn.microsoft.com/en-us/windows/mixed-reality/mrtk-unity/mrtk2/" target="_blank">MRTK2</a> versions of the Clirio View apps, complexity had ballooned, as MRTK2 had poor cross-platform support, which resulted in different prefabs, UI, and logic for iOS and HMDs.</p>

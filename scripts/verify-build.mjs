@@ -88,6 +88,26 @@ function getPublishedProjectSlugs() {
   return slugs.sort();
 }
 
+/**
+ * Accidental Shiki plaintext blocks mean raw HTML was parsed as markdown code.
+ * @param {string} slug
+ */
+function checkProjectHtmlRendering(slug) {
+  for (const localePrefix of ['', 'de/']) {
+    const relPath = `${localePrefix}${slug}/index.html`;
+    const full = path.join(dist, ...relPath.split('/'));
+    if (!fs.existsSync(full)) continue;
+
+    const html = fs.readFileSync(full, 'utf8');
+    const brokenCount = (html.match(/data-language="plaintext"/g) ?? []).length;
+    if (brokenCount > 0) {
+      errors.push(
+        `${relPath} has ${brokenCount} accidental HTML code block(s) (data-language="plaintext")`,
+      );
+    }
+  }
+}
+
 if (!fs.existsSync(dist)) {
   console.error('verify-build: dist/ does not exist — run `npm run build` first');
   process.exit(1);
@@ -127,6 +147,7 @@ const publishedSlugs = getPublishedProjectSlugs();
 for (const slug of publishedSlugs) {
   requirePath(`${slug}/index.html`);
   requirePath(`de/${slug}/index.html`);
+  checkProjectHtmlRendering(slug);
 }
 
 if (errors.length > 0) {

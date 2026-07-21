@@ -30,13 +30,7 @@ order: 3
     <p></p>
     <p>Mein Auge war auf das Flutter-Framework gerichtet, und dies schien mir die perfekte Gelegenheit zu sein, die Sprache Dart zu lernen und zu erfahren, wie man mit Flutter eine plattformübergreifende Anwendung erstellt.</p>
   </section>
-
-  
-  
   <video id="video" src="/assets/video/tourguideScreencap.mp4" style="display:none" preload="none" autoplay="true" loop="true" muted="true" poster="/assets/video/frame.jpg"></video>
-
-
-  
   <section class="sectionText">
     <h2>Entwicklung</h2>
     <h3>Web-Verbesserungen, tts, und mehr - 2. Oktober 2024</h3>
@@ -57,11 +51,6 @@ order: 3
     <p>Die Tourguide-App befindet sich derzeit in der geschlossenen Testphase im Google Play Store. Ich plane, sie auch als Webapp zu hosten, und möglicherweise eine iOS-App, wenn ich die Nachfrage nach der App sehe. Sie können <a href="mailto:hi@rmichels.com?subject=Request%20access%20to%20join%20Tourguide%20Closed%20Testing&amp;body=Please%20add%20me%20to%20the%20Closed%20Testing%20of%20tourguide.%0AEmail%20to%20add%3A%20%5BInsert%20Your%20Email%20used%20on%20your%20Android%20Phone%5D">anfragen</a></p>
     <p></p>
   </section>
-
-  
-
-  
-  
   <section class="sectionMedia">
     <figure ignorecarousel>
       <div class="mediaRow mediaRow-equalWidth mediaRow-equalHeight">
