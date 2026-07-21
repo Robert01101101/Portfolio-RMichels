@@ -8,7 +8,7 @@ test.describe('case study', () => {
     await expect(page.locator('#projMeta')).toBeVisible();
     await expect(page.locator('#projMeta')).toContainText('Type');
     await expect(page.locator('#projMeta')).toContainText('2020');
-    const galleryImages = page.locator('#projContent img[alt="gallery"]');
+    const galleryImages = page.locator('#projContent .sectionMedia figure img');
     await expect(galleryImages).not.toHaveCount(0);
 
     const firstImage = galleryImages.first();

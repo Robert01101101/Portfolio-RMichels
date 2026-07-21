@@ -5,14 +5,16 @@ test.describe('LQIP swap', () => {
     await page.goto('/');
     await page.waitForLoadState('load');
 
-    const tileImages = page.locator('#MyWork .projRow img');
+    // HomeFilter shows at most six homepage tiles when no ?filter= is set.
+    const tileImages = page.locator('#MyWork .projRow:not(.projRow--hidden) img');
     const count = await tileImages.count();
     expect(count).toBeGreaterThan(0);
+    expect(count).toBeLessThanOrEqual(6);
 
     // Visible tiles should swap without scrolling.
     await expect(tileImages.first()).not.toHaveAttribute('src', /\/lqip\//);
 
-    // Scroll remaining tiles into the observer root margin.
+    // Scroll remaining visible tiles into the observer root margin.
     for (let i = 1; i < count; i++) {
       await tileImages.nth(i).scrollIntoViewIfNeeded();
     }
