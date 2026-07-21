@@ -1,0 +1,64 @@
+
+.code-snippet {
+	margin: 0 0 1.5rem;
+
+	&-caption {
+		margin: 0;
+		padding: 0.6rem 1rem;
+		font-family: map-get($font, family-alt);
+		font-size: map-get($size, textS);
+		font-weight: map-get($font, weight-medium);
+		color: map-get($colour, white_alt);
+		background-color: #1e2428;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+	}
+
+	&-body {
+		overflow-x: auto;
+		background-color: #293134;
+
+		pre {
+			margin: 0;
+			padding: 1rem;
+			background: transparent !important;
+			font-family: map-get($font, family-alt);
+			font-size: 0.85rem;
+			line-height: 1.5;
+			tab-size: 4;
+			outline: none;
+		}
+
+		code {
+			display: block;
+			font-family: inherit;
+			border: none;
+			border-radius: 0;
+			padding: 0;
+			font-size: inherit;
+			font-weight: inherit;
+		}
+
+		.line {
+			display: block;
+		}
+	}
+
+	&-meta {
+		margin: 0.75rem 0 0;
+		font-size: map-get($size, textS);
+		text-align: right;
+
+		a {
+			color: map-get($colour, white_alt);
+		}
+	}
+
+	&-error {
+		margin: 0;
+		padding: 1rem;
+		font-family: map-get($font, family-alt);
+		font-size: map-get($size, textS);
+		color: map-get($colour, white_alt);
+		background-color: #293134;
+	}
+}
