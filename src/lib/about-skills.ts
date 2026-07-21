@@ -10,7 +10,7 @@ export interface AboutSkillGroup {
   skills: AboutSkill[];
 }
 
-const enSkills: AboutSkillGroup[] = [
+const aboutSkills: AboutSkillGroup[] = [
   {
     titleKey: 'programming',
     skills: [
@@ -70,29 +70,6 @@ const enSkills: AboutSkillGroup[] = [
   },
 ];
 
-const deSkills: AboutSkillGroup[] = [
-  {
-    titleKey: 'programming',
-    skills: [{ label: 'C#' }, { label: 'Dart' }, { label: 'JavaScript' }, { label: 'TypeScript' }],
-  },
-  {
-    titleKey: 'frameworks',
-    skills: [{ label: 'React' }, { label: 'Flutter' }, { label: 'Three.js' }, { label: 'Astro' }],
-  },
-  {
-    titleKey: 'development',
-    skills: [{ label: 'Unity' }, { label: 'Git' }, { label: 'CI/CD' }],
-  },
-  {
-    title: 'Design',
-    skills: [{ label: 'UX/UI' }, { label: 'Figma' }, { label: 'XR' }],
-  },
-  {
-    titleKey: 'other',
-    skills: [{ label: 'GIS' }, { label: 'AI Development' }, { label: 'Ollama' }],
-  },
-];
-
-export function getAboutSkillGroups(locale: Locale): AboutSkillGroup[] {
-  return locale === 'de' ? deSkills : enSkills;
+export function getAboutSkillGroups(_locale: Locale): AboutSkillGroup[] {
+  return aboutSkills;
 }
