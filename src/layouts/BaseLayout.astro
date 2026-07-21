@@ -43,12 +43,29 @@ const showHomeIcon = pageType === 'project' || pageType === 'about';
 <!DOCTYPE html>
 <html lang={htmlLang}>
   <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WXGTTGWVKL"></script>
-    <script is:inline>
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+    <script is:inline define:vars={{ gaId: 'G-WXGTTGWVKL' }}>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-WXGTTGWVKL');
+      gtag('config', gaId);
+
+      function loadGoogleAnalytics() {
+        if (document.querySelector('script[data-ga-loader]')) return;
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=' + gaId;
+        script.dataset.gaLoader = 'true';
+        document.head.appendChild(script);
+      }
+
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(loadGoogleAnalytics, { timeout: 3000 });
+      } else {
+        window.addEventListener('load', loadGoogleAnalytics, { once: true });
+      }
+
       function getUrlParameter(name) {
         name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
         const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
@@ -82,6 +99,10 @@ const showHomeIcon = pageType === 'project' || pageType === 'about';
     <meta name="theme-color" content="#ffffff" />
   </head>
   <body data-page-type={pageType}>
+    <script>
+      import { getDevicePerformanceTier } from '../lib/device-capability';
+      document.body.dataset.perfTier = getDevicePerformanceTier();
+    </script>
     <div>
       <div id="MainGrid">
         <Header locale={locale} pageType={pageType} altHref={altPath} />

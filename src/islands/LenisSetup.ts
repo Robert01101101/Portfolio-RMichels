@@ -1,5 +1,6 @@
 import Lenis from 'lenis';
 import 'lenis/dist/lenis.css';
+import { getDevicePerformanceTier } from '../lib/device-capability';
 import { setScrollLenis } from '../lib/scroll-lenis';
 
 declare global {
@@ -10,7 +11,10 @@ declare global {
 
 export function initLenis() {
   let currentlyEnabled = true;
-  const stored = localStorage.getItem('lenisSmoothScrolling') !== 'false';
+  const tier = getDevicePerformanceTier();
+  const storedOverride = localStorage.getItem('lenisSmoothScrolling');
+  const stored =
+    storedOverride !== null ? storedOverride !== 'false' : tier === 'full';
 
   const lenis = new Lenis({
     smoothWheel: stored,

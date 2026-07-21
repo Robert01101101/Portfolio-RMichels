@@ -2,9 +2,12 @@
 
 Checklist for adding a portfolio case study after the Astro migration.
 
-## 1. Content file
+## 1. Content files
 
-Create `src/content/projects/{slug}.md`:
+Create **both** locale files with matching frontmatter:
+
+- `src/content/projects/{slug}.md` — EN body
+- `src/content/projects-de/{slug}.md` — DE body (translated)
 
 ```yaml
 ---
@@ -35,6 +38,8 @@ Body markdown converted from case study sections.
 
 **Important:** `slug` in frontmatter sets the URL (`/yourSlug`). Do not add `slug` to the Zod schema in `config.ts` — Astro treats it as a reserved routing field.
 
+Frontmatter must match between EN and DE files for the same slug (validated by `npm run test:content`). Only the markdown body differs by locale.
+
 ## 2. Images
 
 | Asset | Path |
@@ -59,9 +64,9 @@ If the project needs new filter tags, add entries to `src/lib/roles.ts` and assi
 | `inDevelopment: true` | Dev badge; excluded from `/slug` route; tile → `/development/{slug}` |
 | `draft: true` | Excluded from build |
 
-## 5. German body (optional)
+## 5. German body
 
-DE UI strings come from frontmatter `name` / `description` / `projectType`. For a fully translated body, extend `projects-de` collection or add DE sections to the same file (future enhancement).
+Add a translated body in `src/content/projects-de/{slug}.md` with the same frontmatter as the EN file. UI strings on listing pages come from frontmatter `name` / `projectType` via `getLocalized()`.
 
 ## 6. Verify locally
 

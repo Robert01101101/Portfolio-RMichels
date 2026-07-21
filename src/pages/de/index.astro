@@ -9,22 +9,24 @@ const locale = 'de' as const;
 const params = Astro.url.searchParams;
 const greeting = params.get('greeting');
 const allProjects = await getAllProjects(locale);
-const textRotateItems = ['Full-Stack-Apps.', 'Spiele.', 'VR-Erlebnisse.', 'Mobile Apps.', 'Websites.'];
+const textRotateItems = t('text_rotate', locale).split('", "').map((s) => s.replace(/^"|"$/g, ''));
+const title = 'Portfolio | Robert Michels';
+const description = 'Robert Michels — Designer und Entwickler aus Vancouver.';
 ---
 
 <BaseLayout
-  title="Portfolio | Robert Michels"
-  description="Robert Michels — Designer und Entwickler aus Vancouver."
+  title={title}
+  description={description}
   locale={locale}
   pageType="home"
   canonicalPath="/de/"
 >
   <div class="downArrowWrapper">
     <div class="downArrow" id="downArrow">
-      <a href="#MyWork" title="View Projects"><Icon name="chevron-down" class="icon-chevron-down" /></a>
+      <a href="#MyWork" title={t('view_projects', locale)}><Icon name="chevron-down" class="icon-chevron-down" /></a>
     </div>
   </div>
-  <canvas id="threeModel" style="visibility: hidden; display: none;"></canvas>
+  <div id="threeModel" style="visibility: hidden; display: none;"></div>
   <div class="landingModelImageWrapper">
     <img src="/assets/img/landingModel.webp" id="landingModelImage" alt="" />
     <div id="spinner" class="landingSpinner" style="display: none;">
@@ -36,13 +38,17 @@ const textRotateItems = ['Full-Stack-Apps.', 'Spiele.', 'VR-Erlebnisse.', 'Mobil
       <div class="col-50" id="landingText">
         <p>
           {greeting ? (
-            <>Hallo {greeting},<br />ich bin Robert Michels.</>
+            <>
+              {t('hi_greeting', locale)}{greeting},
+              <br />
+              {t('greeting_suffix', locale).replace(/^, /, '')}
+            </>
           ) : (
-            <>Hallo, ich bin Robert&nbsp;Michels.</>
+            <span set:html={t('hi_im_robert', locale).replace('Robert Michels', 'Robert&nbsp;Michels')} />
           )}
-          <br />Ich designe und programmiere<br />
+          <br />{t('i_design', locale)}<br />
           <span class="txt-rotate" data-period="2000" data-rotate={JSON.stringify(textRotateItems)}>
-            digitale Medien.
+            {t('digital_media', locale)}
           </span>
         </p>
       </div>

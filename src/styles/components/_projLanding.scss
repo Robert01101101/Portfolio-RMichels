@@ -60,6 +60,8 @@
 		display:block;
 		margin-top: 3rem;
 		width: 100vw;
+		aspect-ratio: 4 / 3;
+		height: auto;
 
 		&.imgBG {
 			display: none;

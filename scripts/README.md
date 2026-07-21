@@ -1,0 +1,23 @@
+# Scripts
+
+| Script | Purpose |
+|--------|---------|
+| `validate-content.mjs` | Pre-build validation (`npm run test:content`) — assets, i18n keys, EN/DE parity |
+| `verify-build.mjs` | Post-build route checks (`npm run test:verify`) |
+| `assess-scroll-perf.mjs` | Optional scroll performance profiling |
+| `export-db-to-content.mjs` | **Deprecated** — see below |
+
+## export-db-to-content.mjs (deprecated)
+
+The Astro migration is complete. **Markdown collections are the source of truth:**
+
+- `src/content/projects/` — EN frontmatter + body
+- `src/content/projects-de/` — DE body (frontmatter duplicated from EN today)
+
+This script no longer embeds project metadata. It only regenerates DE markdown bodies from existing EN files, applying gettext PO translations when `scripts/archive/messages.po` is present.
+
+```bash
+npm run export:content   # optional; prefer editing markdown directly
+```
+
+Do not use this to add or change project metadata — edit the markdown files instead.

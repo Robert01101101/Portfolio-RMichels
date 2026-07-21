@@ -35,19 +35,19 @@ order: 4
     <figure ignorecarousel>
       <div class="mediaSquare">
         <figure onclick="viewImage(this)">
-          <img src="/assets/img/clirioCloud/lqip/dashboard.jpg">
+          <img src="/assets/img/clirioCloud/lqip/dashboard.jpg" alt="Dashboard">
           <figcaption>Dashboard</figcaption>
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="/assets/img/clirioCloud/lqip/workspaceList.jpg">
+          <img src="/assets/img/clirioCloud/lqip/workspaceList.jpg" alt="Workspace List">
           <figcaption>Workspace List</figcaption>
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="/assets/img/clirioCloud/lqip/workspaceView.jpg">
+          <img src="/assets/img/clirioCloud/lqip/workspaceView.jpg" alt="Workspace Management Tools">
           <figcaption>Workspace Management Tools</figcaption>
         </figure>
         <figure onclick="viewImage(this)" id="img_createPoi">
-          <img src="/assets/img/clirioCloud/lqip/createPoi.jpg">
+          <img src="/assets/img/clirioCloud/lqip/createPoi.jpg" alt="Workspace Management Example: Create POI">
           <figcaption>Workspace Management Example: Create POI</figcaption>
         </figure>
       </div>
@@ -76,10 +76,10 @@ order: 4
     <figure ignorecarousel>
       <div class="mediaRow mediaRow-equalWidth mediaRow-equalHeight">
         <figure onclick="viewImage(this)">
-          <img src="/assets/img/clirioCloud/lqip/create3dModel.jpg"> 
+          <img src="/assets/img/clirioCloud/lqip/create3dModel.jpg" alt="clirio Cloud – create3d Model"> 
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="/assets/img/clirioCloud/lqip/editBasemaps.jpg">
+          <img src="/assets/img/clirioCloud/lqip/editBasemaps.jpg" alt="clirio Cloud – edit Basemaps">
         </figure>
       </div>
       <figcaption>Some examples of data model binding to forms in Blazor. Expanding/collapsing optional sections of the form, and rearranging elements in a list, is made easy with Blazor since user inputs result in direct feedback without the need to write boilerplate code.</figcaption>

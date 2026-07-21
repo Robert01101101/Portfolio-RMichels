@@ -11,7 +11,7 @@ inDevelopment: false
 roles: ["3d-model", "cad", "design"]
 description:
   en: "Pavilions is the result of a spatial design exercise. Three pavilions proposed as a public space in Surrey's Holland Park, featuring abstract, modular, and parametric architecture."
-  de: "Pavilions ist das Ergebnis einer räumlichen Designübung. Drei Pavillons als öffentlicher Raum in Surreys Holland Park."
+  de: "Pavilions ist das Ergebnis einer räumlichen Designübung. Drei Pavillons als öffentlicher Raum in Surreys Holland Park – mit abstrakter, modularer und parametrischer Architektur."
 links:
   - label: "View 3D Models"
     url: "https://sketchfab.com/rmichels/collections/iat233-pavilions"
@@ -21,7 +21,7 @@ order: 12
 <section class="sectionText">
     
     <h2>Die Aufgabe</h2>
-    <p>These pavilions are the result of a course, which teaches design principles through spatial design exercises. The goal was to create a series of pavilion designs, that explore humans, objects, space, spatial composition und parametric design. We had to learn und use Rhinoceros 3D to create these designs, as well as create physical prototypes.</p>
+    <p>Diese Pavillons entstanden in einem Kurs, der Designprinzipien durch räumliche Designübungen vermittelt. Ziel war eine Serie von Pavillon-Entwürfen, die Menschen, Objekte, Raum, räumliche Komposition und parametrisches Design erkunden. Wir mussten Rhinoceros 3D erlernen und einsetzen, um diese Entwürfe zu erstellen, sowie physische Prototypen bauen.</p>
   </section>
 
   
@@ -34,10 +34,10 @@ order: 12
   
   <section class="sectionText">
     <h2>Das Ergebnis</h2>
-    <h3>Modular Pavilion</h3>
-    <p>This pavilion is intended for use as a stage for events. It features two interlocking spaces which can be used for different purposes within the same event. The theme for the design is an abstract representation of the human shape. The pavilion was designed with a constraint of using beam + infills architecture design rules as building blocks for the design. We embraced this philosophy und created an abstract modular design of hollow cubes.</p>
-    <h3>Parametric Pavilion</h3>
-    <p>The parametric pavilion was designed with an organic design in mind. It is intended to be placed next to trees in Holland park und imitates the shape of tree roots und branches. It houses a hidden sculpture und acts as a canopy over an existing path. This pavilion was designed using only parametric design. This was achieved using Grasshopper und the Mesh+ und Weaverbird plugins.</p>
+    <h3>Modularer Pavillon</h3>
+    <p>Dieser Pavillon ist als Bühne für Veranstaltungen gedacht. Er umfasst zwei ineinandergreifende Räume, die innerhalb derselben Veranstaltung unterschiedlich genutzt werden können. Das Designthema ist eine abstrakte Darstellung der menschlichen Form. Der Pavillon wurde unter der Vorgabe entworfen, Träger- und Füllwerk-Architektur als Bausteine zu nutzen. Wir griffen diese Philosophie auf und schufen einen abstrakten modularen Entwurf aus hohlen Würfeln.</p>
+    <h3>Parametrischer Pavillon</h3>
+    <p>Der parametrische Pavillon wurde mit organischem Design im Sinn geplant. Er soll neben Bäumen im Holland Park stehen und die Form von Baumwurzeln und -ästen nachahmen. Er beherbergt eine versteckte Skulptur und wirkt als Überdachung über einem bestehenden Weg. Dieser Pavillon wurde ausschließlich mit parametrischem Design entwickelt – mit Grasshopper sowie den Plugins Mesh+ und Weaverbird.</p>
   </section>
 
   
@@ -67,9 +67,9 @@ order: 12
   
   <section class="sectionText">
     <h2>Prozess</h2>
-    <p>All of our designs shared a similar process for the conceptualization phase. We began by studying the design principles that we wanted to practice und apply. We then discussed different ideas, with the help of simple paper sketches. Once we locked in on a particular concept, we designed high-fidelity prototypes in Rhino. The particular two pavilions showcased here were modeled by myself.</p>
-    <p>The modular pavilion was fairly easy to create in Rhino, as I could easily break it down into simple components that could be modeled using polysurfaces. Much more complicated was the process of assembling a physical model. For this, I sliced the model into layers of 2D support structures und connecting beams that we could -cut into cardboard. We then glued the final structure using hot glue.</p>
-    <p>The parametric pavilion was our most challenging pavilion. I had to learn Rhino’s parametric Grasshopper editor to be able to create the model. The model is defined by only two foundational curves und eight control points. The foundational curves set where the pavilion touches the ground und the control points affect the thickness und shape of the woven structure. These inputs are then processed by a generative algorithm that I defined with Grasshopper, using the Mesh+ und Weaverbird plugins. The final process stage was also challenging, as I had to 3D print the model using my own 3D printer. The model was too large to print in one go und had to be sliced into four sections. Furthermore, the complex structure with overhangs, the wood filament used und the low quality of my fairly cheap 3D printer, added to the challenge. However, the result did a great job of representing our design concept.</p>
+    <p>Alle unsere Entwürfe folgten in der Konzeptionsphase einem ähnlichen Prozess. Zunächst studierten wir die Designprinzipien, die wir anwenden wollten. Anschließend diskutierten wir Ideen anhand einfacher Papier-Skizzen. Sobald wir uns für ein Konzept entschieden hatten, entwarfen wir hochauflösende Prototypen in Rhino. Die beiden hier gezeigten Pavillons modellierte ich selbst.</p>
+    <p>Der modulare Pavillon ließ sich in Rhino relativ leicht erstellen, da ich ihn in einfache Komponenten zerlegen konnte, die sich mit Polysurfaces modellieren ließen. Deutlich komplexer war der Aufbau des physischen Modells. Dafür schichtete ich das Modell in 2D-Stützstrukturen und Verbindungsträger, die wir aus Pappe laserschneiden konnten. Die finale Struktur klebten wir mit Heißkleber zusammen.</p>
+    <p>Der parametrische Pavillon war unsere größte Herausforderung. Ich musste Rhinos parametrischen Grasshopper-Editor erlernen, um das Modell zu erstellen. Es wird durch nur zwei Grundkurven und acht Kontrollpunkte definiert. Die Grundkurven legen fest, wo der Pavillon den Boden berührt; die Kontrollpunkte beeinflussen Dicke und Form der gewebten Struktur. Diese Eingaben verarbeitet ein generativer Algorithmus, den ich in Grasshopper mit den Plugins Mesh+ und Weaverbird definierte. Auch die finale Prozessstufe war anspruchsvoll: Ich musste das Modell mit meinem eigenen 3D-Drucker drucken. Es war zu groß für einen Durchgang und musste in vier Teile geschnitten werden. Hinzu kamen die komplexe Struktur mit Überhängen, das Holzfilament und die begrenzte Qualität meines günstigen Druckers. Das Ergebnis repräsentierte unser Designkonzept dennoch überzeugend.</p>
   </section>
 
   
@@ -78,50 +78,50 @@ order: 12
       <div class="mediaSquare">
         <div class="mediaColumn">
           <figure onclick="viewImage(this)">
-            <img src="/assets/img/pavilions/lqip/2_1.jpg">
+            <img src="/assets/img/pavilions/lqip/2_1.jpg" alt="Physisches Modell des modularen Pavillons – Ansicht 1">
           </figure>
           <figure onclick="viewImage(this)">
-            <img src="/assets/img/pavilions/lqip/2_2.jpg">
+            <img src="/assets/img/pavilions/lqip/2_2.jpg" alt="Physisches Modell des modularen Pavillons – Ansicht 2">
           </figure>
           <figure onclick="viewImage(this)">
-            <img src="/assets/img/pavilions/lqip/2_3.jpg">
+            <img src="/assets/img/pavilions/lqip/2_3.jpg" alt="Physisches Modell des modularen Pavillons – Detail">
           </figure>
         </div>
         <div class="mediaColumn">
           <figure onclick="viewImage(this)">
-            <img src="/assets/img/pavilions/lqip/3_1.jpg">
+            <img src="/assets/img/pavilions/lqip/3_1.jpg" alt="Physisches Modell des parametrischen Pavillons – Ansicht 1">
           </figure>
           <figure onclick="viewImage(this)">
-            <img src="/assets/img/pavilions/lqip/3_2.jpg">
+            <img src="/assets/img/pavilions/lqip/3_2.jpg" alt="Physisches Modell des parametrischen Pavillons – Ansicht 2">
           </figure>
           <figure onclick="viewImage(this)">
-            <img src="/assets/img/pavilions/lqip/3_3.jpg">
+            <img src="/assets/img/pavilions/lqip/3_3.jpg" alt="Physisches Modell des parametrischen Pavillons – Detail 1">
           </figure>
           <figure onclick="viewImage(this)">
-            <img src="/assets/img/pavilions/lqip/3_4.jpg">
+            <img src="/assets/img/pavilions/lqip/3_4.jpg" alt="Physisches Modell des parametrischen Pavillons – Detail 2">
           </figure>
         </div>
       </div>
-      <figcaption>The physical models of the two pavilions. The modular pavilion (L) was created from cardboard prepared with a laser cutter. The parametric pavilion (R) was created using the Anet A8 3D printer und wood PLA filament.</figcaption>
+      <figcaption>Physische Modelle der beiden Pavillons. Der modulare Pavillon (L) entstand aus lasergeschnittener Pappe. Der parametrische Pavillon (R) wurde mit dem Anet A8 3D-Drucker und Holz-PLA-Filament gedruckt.</figcaption>
     </figure>
     <figure ignorecarousel class="spacer">
         <div class="mediaColumn">
           <figure onclick="viewImage(this)">
-            <img src="/assets/img/pavilions/lqip/3_5.jpg">
+            <img src="/assets/img/pavilions/lqip/3_5.jpg" alt="Grasshopper-Algorithmus als Node-Diagramm">
           </figure>
         </div>
-      <figcaption>Grasshopper parametric algorithm visualized with nodes.</figcaption>
+      <figcaption>Parametrischer Grasshopper-Algorithmus als Node-Diagramm.</figcaption>
     </figure>
     <div class="auto-resizable-iframe">
       <div>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/9VzTCMDgkMM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture" allowfullscreen></iframe>
       </div>
-      <figcaption>A brief walkthrough of the Grasshopper algorithm, showing each node's functionality.</figcaption>
+      <figcaption>Kurzer Walkthrough des Grasshopper-Algorithmus mit der Funktion jedes Nodes.</figcaption>
     </div>
     <div class="auto-resizable-iframe">
       <div>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/MHUs1-AVnpA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture" allowfullscreen></iframe>
       </div>
-      <figcaption>To stylize the final pavilion, reactor points are used to algorithmically affect the thickness of the structure.</figcaption>
+      <figcaption>Reaktorpunkte beeinflussen algorithmisch die Strukturdicke des finalen Pavillons.</figcaption>
     </div>
   </section>

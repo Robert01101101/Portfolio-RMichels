@@ -11,7 +11,7 @@ inDevelopment: false
 roles: ["game", "design"]
 description:
   en: "A narrative-driven 2D platformer, which revolves around unit 241, an AI-equipped droid that gains consciousness. Using a range of available body mods, unit 241 has to fight enemies, solve puzzles, and escape the building."
-  de: "Ein erzählerisches 2D-Platformer-Spiel um Einheit 241, einen KI-ausgestatteten Droiden, der Bewusstsein erlangt."
+  de: "Ein erzählerisches 2D-Platformer-Spiel um Einheit 241, einen KI-ausgestatteten Droiden, der Bewusstsein erlangt. Mit verschiedenen Body Mods bekämpft Einheit 241 Gegner, löst Rätsel und entkommt aus dem Gebäude."
 links:
   - label: "Itch.io"
     url: "https://rmichels.itch.io/cyberview"
@@ -35,16 +35,16 @@ order: 9
     <figure ignorecarousel>
       <div class="mediaSquare">
         <figure onclick="viewImage(this)">
-          <img src="/assets/img/cyberview/lqip/screen-0.jpg">
+          <img src="/assets/img/cyberview/lqip/screen-0.jpg" alt="cyberview – screen 0">
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="/assets/img/cyberview/lqip/screen-1.jpg">
+          <img src="/assets/img/cyberview/lqip/screen-1.jpg" alt="cyberview – screen 1">
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="/assets/img/cyberview/lqip/screen-2.jpg">
+          <img src="/assets/img/cyberview/lqip/screen-2.jpg" alt="cyberview – screen 2">
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="/assets/img/cyberview/lqip/screen-3.jpg">
+          <img src="/assets/img/cyberview/lqip/screen-3.jpg" alt="cyberview – screen 3">
         </figure>
       </div>
       <figcaption class="center">Screenshots from the game.</figcaption>

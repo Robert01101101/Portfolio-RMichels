@@ -26,6 +26,15 @@ jobs:
       - name: Sync assets to public/
         run: cp -r assets public/assets
 
+      - name: Astro check
+        run: npm run check
+
+      - name: Unit tests
+        run: npm run test:unit
+
+      - name: Content validation
+        run: npm run test:content
+
       - name: Build
         run: npm run build
 

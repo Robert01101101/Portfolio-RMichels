@@ -11,7 +11,7 @@ inDevelopment: false
 roles: ["vr", "game", "pm", "design"]
 description:
   en: "Semester in Alternate Realities (SIAR) is a program in which interdisciplinary teams tackle real-world problems using xR technologies. With the design challenge of \"VR4good\", we set out to create transformative experiences with a positive impact."
-  de: "Semester in Alternate Realities (SIAR) ist ein Programm, in dem interdisziplinäre Teams reale Probleme mit xR-Technologien angehen."
+  de: "Semester in Alternate Realities (SIAR) ist ein Programm, in dem interdisziplinäre Teams reale Probleme mit xR-Technologien angehen. Mit der Design-Herausforderung „VR4good“ entwickelten wir transformative Erlebnisse mit positivem gesellschaftlichem Impact."
 order: 11
 ---
 
@@ -25,10 +25,10 @@ order: 11
   <section class="sectionMedia">
     <div class="mediaGrid">
         <figure onclick="viewImage(this)">
-          <img src="/assets/img/siar/lqip/1.jpg">
+          <img src="/assets/img/siar/lqip/1.jpg" alt="Marshmallow challenge team-building exercise">
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="/assets/img/siar/lqip/2.jpg">
+          <img src="/assets/img/siar/lqip/2.jpg" alt="Interdisciplinary collaboration in conceptual discussions">
         </figure>
     </div>
     <figcaption>(L) The marshmallow challenge was one of the team-building exercises we did. (R) Interdisciplinary collaboration featured a lot of conceptual discussions.</figcaption>

@@ -6,6 +6,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import yaml from 'js-yaml';
+import { projectSchema, PARITY_FIELDS } from './content-schema.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
@@ -70,58 +72,90 @@ function listMarkdownBasenames(dir) {
 
 /**
  * @param {string} content
- * @returns {{ slug?: string, roles: string[], inDevelopment: boolean, draft: boolean, threeMockup?: string | null }}
+ * @returns {Record<string, unknown> | null}
  */
-function parseFrontmatter(content) {
+function parseFrontmatterObject(content) {
   const match = content.match(/^---\r?\n([\s\S]*?)\r?\n---/);
-  if (!match) {
-    return { roles: [], inDevelopment: false, draft: false };
+  if (!match) return null;
+  try {
+    return yaml.load(match[1]);
+  } catch (err) {
+    return null;
   }
-
-  const fm = match[1];
-  const slug = fm.match(/^slug:\s*["']?([^"'\n]+)["']?/m)?.[1];
-
-  const inDevelopment = /^inDevelopment:\s*true\s*$/m.test(fm);
-  const draft = /^draft:\s*true\s*$/m.test(fm);
-
-  let threeMockup;
-  const threeMockupMatch = fm.match(/^threeMockup:\s*(.+)$/m);
-  if (threeMockupMatch) {
-    const raw = threeMockupMatch[1].trim();
-    threeMockup = raw === 'null' ? null : raw.replace(/^["']|["']$/g, '');
-  }
-
-  /** @type {string[]} */
-  let roles = [];
-  const rolesBlock = fm.match(/^roles:\s*\[([^\]]*)\]/m);
-  if (rolesBlock) {
-    roles = rolesBlock[1]
-      .split(',')
-      .map((item) => item.trim().replace(/^["']|["']$/g, ''))
-      .filter(Boolean);
-  }
-
-  return { slug, roles, inDevelopment, draft, threeMockup };
 }
 
 /**
  * @param {string} filePath
- * @returns {{ basename: string, slug: string, roles: string[], inDevelopment: boolean, draft: boolean, threeMockup?: string | null }}
+ * @returns {{ basename: string, slug: string, data: Record<string, unknown>, parseError?: string }}
  */
-function loadProject(filePath) {
+function loadProjectData(filePath) {
   const basename = path.basename(filePath);
   const content = fs.readFileSync(filePath, 'utf8');
-  const parsed = parseFrontmatter(content);
+  const data = parseFrontmatterObject(content);
   const filenameSlug = basename.replace(/\.md$/i, '');
 
-  return {
-    basename,
-    slug: parsed.slug ?? filenameSlug,
-    roles: parsed.roles,
-    inDevelopment: parsed.inDevelopment,
-    draft: parsed.draft,
-    threeMockup: parsed.threeMockup,
-  };
+  if (!data || typeof data !== 'object') {
+    return {
+      basename,
+      slug: filenameSlug,
+      data: {},
+      parseError: 'invalid or missing YAML frontmatter',
+    };
+  }
+
+  const slug = typeof data.slug === 'string' ? data.slug : filenameSlug;
+  return { basename, slug, data };
+}
+
+/**
+ * @param {Record<string, unknown>} data
+ * @param {string} slug
+ */
+function validateSchema(data, slug) {
+  const result = projectSchema.safeParse(data);
+  if (!result.success) {
+    for (const issue of result.error.issues) {
+      fail(slug, issue.path.join('.') || 'frontmatter', issue.message);
+    }
+    return false;
+  }
+  return true;
+}
+
+/**
+ * @param {unknown} value
+ * @returns {unknown}
+ */
+function normalizeForParity(value) {
+  if (Array.isArray(value)) {
+    return value.map(normalizeForParity);
+  }
+  if (value && typeof value === 'object') {
+    /** @type {Record<string, unknown>} */
+    const out = {};
+    for (const key of Object.keys(value).sort()) {
+      out[key] = normalizeForParity(/** @type {Record<string, unknown>} */ (value)[key]);
+    }
+    return out;
+  }
+  return value;
+}
+
+/**
+ * @param {Record<string, unknown>} enData
+ * @param {Record<string, unknown>} deData
+ * @param {string} slug
+ */
+function checkFrontmatterParity(enData, deData, slug) {
+  for (const field of PARITY_FIELDS) {
+    const enVal = normalizeForParity(enData[field]);
+    const deVal = normalizeForParity(deData[field]);
+    const enJson = JSON.stringify(enVal);
+    const deJson = JSON.stringify(deVal);
+    if (enJson !== deJson) {
+      fail(slug, field, `EN/DE frontmatter mismatch for "${field}"`);
+    }
+  }
 }
 
 /**
@@ -179,28 +213,49 @@ function checkEnDeParity() {
 function checkProjects() {
   const roleSlugs = loadRoleSlugs();
   const enFiles = listMarkdownBasenames(PROJECTS_EN).map((name) => path.join(PROJECTS_EN, name));
-  const deFiles = listMarkdownBasenames(PROJECTS_DE).map((name) => path.join(PROJECTS_DE, name));
+  const deByBasename = new Map(
+    listMarkdownBasenames(PROJECTS_DE).map((name) => [name, path.join(PROJECTS_DE, name)]),
+  );
   /** @type {Map<string, { slug: string, inDevelopment: boolean, draft: boolean, threeMockup?: string | null }>} */
   const projectsBySlug = new Map();
 
-  for (const filePath of [...enFiles, ...deFiles]) {
-    const project = loadProject(filePath);
+  for (const filePath of enFiles) {
+    const project = loadProjectData(filePath);
     const filenameSlug = project.basename.replace(/\.md$/i, '');
+
+    if (project.parseError) {
+      fail(filenameSlug, 'frontmatter', project.parseError);
+      continue;
+    }
 
     if (project.slug !== filenameSlug) {
       fail(filenameSlug, 'slug', `frontmatter slug "${project.slug}" does not match filename "${filenameSlug}"`);
     }
-  }
 
-  for (const filePath of enFiles) {
-    const project = loadProject(filePath);
-    for (const role of project.roles) {
-      if (!roleSlugs.has(role)) {
+    validateSchema(project.data, project.slug);
+
+    const dePath = deByBasename.get(project.basename);
+    if (dePath) {
+      const deProject = loadProjectData(dePath);
+      if (deProject.parseError) {
+        fail(filenameSlug, 'frontmatter', `DE ${deProject.parseError}`);
+      } else {
+        checkFrontmatterParity(project.data, deProject.data, project.slug);
+      }
+    }
+
+    const roles = Array.isArray(project.data.roles) ? project.data.roles : [];
+    for (const role of roles) {
+      if (typeof role === 'string' && !roleSlugs.has(role)) {
         fail(project.slug, 'roles', `unknown role "${role}"`);
       }
     }
 
-    if (!project.draft) {
+    const draft = project.data.draft === true;
+    const inDevelopment = project.data.inDevelopment === true;
+    const threeMockup = project.data.threeMockup;
+
+    if (!draft) {
       const heroName = `${project.slug}.jpg`;
       if (!fileExistsExact(IMG_DIR, heroName)) {
         fail(
@@ -220,18 +275,16 @@ function checkProjects() {
       }
     }
 
-    if (project.threeMockup) {
-      const assetName = THREE_MOCKUP_ASSETS[project.threeMockup];
+    if (threeMockup) {
+      const assetName = THREE_MOCKUP_ASSETS[/** @type {keyof typeof THREE_MOCKUP_ASSETS} */ (threeMockup)];
       if (!assetName) {
-        fail(project.slug, 'threeMockup', `unknown threeMockup value "${project.threeMockup}"`);
-      } else {
-        if (!fileExistsExact(MODELS_DIR, assetName)) {
-          fail(project.slug, 'threeMockup', `missing model: public/assets/models/${assetName} (also checked assets/models/)`);
-        }
+        fail(project.slug, 'threeMockup', `unknown threeMockup value "${threeMockup}"`);
+      } else if (!fileExistsExact(MODELS_DIR, assetName)) {
+        fail(project.slug, 'threeMockup', `missing model: public/assets/models/${assetName} (also checked assets/models/)`);
       }
     }
 
-    projectsBySlug.set(project.slug, project);
+    projectsBySlug.set(project.slug, { slug: project.slug, inDevelopment, draft, threeMockup });
   }
 
   return projectsBySlug;

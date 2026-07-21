@@ -10,8 +10,8 @@ year: "2024"
 inDevelopment: false
 roles: ["android", "design"]
 description:
-  en: "A crossplatform Flutter app that helps users explore tours with navigation, information on places, and chat with an AI tourguide. A personal project currently in development."
-  de: "Eine plattformübergreifende Flutter-App, die Nutzern hilft, Touren mit Navigation, Informationen zu Orten und Chat mit einem KI-Reiseführer zu erkunden. Ein persönliches Projekt in Entwicklung."
+  en: "A crossplatform Flutter app that helps users explore tours with navigation, information on places, and chat with an AI tourguide. Available in beta on Google Play and as a web app."
+  de: "Eine plattformübergreifende Flutter-App, die Nutzern hilft, Touren mit Navigation, Informationen zu Orten und Chat mit einem KI-Reiseführer zu erkunden. Als Beta im Google Play Store und als Web-App verfügbar."
 links:
   - label: "Google Play Store (Beta)"
     url: "https://play.google.com/store/apps/details?id=com.robertmichelsdigitalmedia.tourguideapp"
@@ -33,7 +33,7 @@ order: 3
 
   
   
-  <video id="video" src="/assets/video/tourguideScreencap.mp4" style="display:none" preload="none" autoplay="true" loop="true" muted="true" poster="assets/video/frame.jpg"></video>
+  <video id="video" src="/assets/video/tourguideScreencap.mp4" style="display:none" preload="none" autoplay="true" loop="true" muted="true" poster="/assets/video/frame.jpg"></video>
 
 
   
@@ -54,7 +54,7 @@ order: 3
     <p>Die letzten Wochen waren eine großartige Lernerfahrung, da ich mich wirklich in die Backend-Seite der Dinge vertieft habe, indem ich E-Mail-Benachrichtigungen und ein System für mich selbst zur Verwaltung von Community-Berichten eingerichtet habe. Ich entdeckte die großartige Bibliothek von Firebase-Erweiterungen wie Trigger Email from Firestore und Delete User Data, die sich als sehr nützlich erwiesen. Um ihre Funktionalität zu erweitern, habe ich auch einige Cloud-Funktionen geschrieben, die bei Prozessen wie dem Abbestellen von E-Mails über einen Link in der E-Mail helfen.</p>
     <p></p>
     <h3>Erste Schritte - 10. Juli 2024</h3>
-    <p>Die Tourguide-App befindet sich derzeit in der geschlossenen Testphase im Google Play Store. Ich plane, sie auch als Webapp zu hosten, und möglicherweise eine iOS-App, wenn ich die Nachfrage nach der App sehe. Sie können <a href="mailto:hi@rmichels?subject=Request%20access%20to%20join%20Tourguide%20Closed%20Testing&amp;body=Please%20add%20me%20to%20the%20Closed%20Testing%20of%20tourguide.%0AEmail%20to%20add%3A%20%5BInsert%20Your%20Email%20used%20on%20your%20Android%20Phone%5D">anfragen</a></p>
+    <p>Die Tourguide-App befindet sich derzeit in der geschlossenen Testphase im Google Play Store. Ich plane, sie auch als Webapp zu hosten, und möglicherweise eine iOS-App, wenn ich die Nachfrage nach der App sehe. Sie können <a href="mailto:hi@rmichels.com?subject=Request%20access%20to%20join%20Tourguide%20Closed%20Testing&amp;body=Please%20add%20me%20to%20the%20Closed%20Testing%20of%20tourguide.%0AEmail%20to%20add%3A%20%5BInsert%20Your%20Email%20used%20on%20your%20Android%20Phone%5D">anfragen</a></p>
     <p></p>
   </section>
 
@@ -66,20 +66,20 @@ order: 3
     <figure ignorecarousel>
       <div class="mediaRow mediaRow-equalWidth mediaRow-equalHeight">
         <figure onclick="viewImage(this)">
-          <img src="/assets/img/tourguide/Screenshot_1.jpg"> 
+          <img src="/assets/img/tourguide/Screenshot_1.jpg" alt="tourguide – Screenshot 1"> 
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="/assets/img/tourguide/Screenshot_2.jpg">
+          <img src="/assets/img/tourguide/Screenshot_2.jpg" alt="tourguide – Screenshot 2">
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="/assets/img/tourguide/Screenshot_3.jpg"> 
+          <img src="/assets/img/tourguide/Screenshot_3.jpg" alt="tourguide – Screenshot 3"> 
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="/assets/img/tourguide/Screenshot_4.jpg">
+          <img src="/assets/img/tourguide/Screenshot_4.jpg" alt="tourguide – Screenshot 4">
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="/assets/img/tourguide/Screenshot_5.jpg"> 
+          <img src="/assets/img/tourguide/Screenshot_5.jpg" alt="tourguide – Screenshot 5"> 
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="/assets/img/tourguide/Screenshot_6.jpg">
+          <img src="/assets/img/tourguide/Screenshot_6.jpg" alt="tourguide – Screenshot 6">
         </figure>

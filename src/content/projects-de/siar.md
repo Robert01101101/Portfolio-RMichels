@@ -11,35 +11,35 @@ inDevelopment: false
 roles: ["vr", "game", "pm", "design"]
 description:
   en: "Semester in Alternate Realities (SIAR) is a program in which interdisciplinary teams tackle real-world problems using xR technologies. With the design challenge of \"VR4good\", we set out to create transformative experiences with a positive impact."
-  de: "Semester in Alternate Realities (SIAR) ist ein Programm, in dem interdisziplinäre Teams reale Probleme mit xR-Technologien angehen."
+  de: "Semester in Alternate Realities (SIAR) ist ein Programm, in dem interdisziplinäre Teams reale Probleme mit xR-Technologien angehen. Mit der Design-Herausforderung „VR4good“ entwickelten wir transformative Erlebnisse mit positivem gesellschaftlichem Impact."
 order: 11
 ---
 
 <section class="sectionText">
     
-    <h2>Über Mich the program</h2>
-    <p>Semester in Alternate Realities (SIAR) was unlike any other course I took during my time at SFU. A team of two instructors set out with a small class to create extended reality (xR) projects that aim for a positive impact. While it was a great opportunity to learn VR design und development, the course stood out for its interdisciplinary und collaborative nature. Key takeaways from the course were soft skills such as agile project development, team-building, project pitching und presenting, as well as hard skills, such as Unity VR development. If you want to find out more, check out this <a href="http://ispace.iat.sfu.ca/riecke/teaching/siar" target="_blank" title="iSpace Lab: Semester in Alternate Realities">info Seite</a>. Finally, I’d like to thank our professors Bernhard Riecke und Patrick Pennefather for this great experience.</p>
+    <h2>Über das Programm</h2>
+    <p>Semester in Alternate Realities (SIAR) unterschied sich von allen anderen Kursen, die ich während meiner Zeit an der SFU belegt habe. Ein Team aus zwei Dozenten startete mit einer kleinen Klasse, um Extended-Reality-Projekte (xR) mit positivem gesellschaftlichem Impact zu entwickeln. Der Kurs bot nicht nur eine großartige Gelegenheit, VR-Design und -Entwicklung zu erlernen, sondern zeichnete sich vor allem durch seinen interdisziplinären und kollaborativen Charakter aus. Zu den wichtigsten Erkenntnissen gehörten Soft Skills wie agiles Projektmanagement, Teambuilding, Pitching und Präsentation sowie Hard Skills wie Unity-VR-Entwicklung. Mehr Informationen finden sich auf dieser <a href="http://ispace.iat.sfu.ca/riecke/teaching/siar" target="_blank" title="iSpace Lab: Semester in Alternate Realities">Infoseite</a>. Abschließend möchte ich unseren Professoren Bernhard Riecke und Patrick Pennefather für diese großartige Erfahrung danken.</p>
   </section>
 
   
   <section class="sectionMedia">
     <div class="mediaGrid">
         <figure onclick="viewImage(this)">
-          <img src="/assets/img/siar/lqip/1.jpg">
+          <img src="/assets/img/siar/lqip/1.jpg" alt="Marshmallow-Challenge als Teambuilding-Übung">
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="/assets/img/siar/lqip/2.jpg">
+          <img src="/assets/img/siar/lqip/2.jpg" alt="Interdisziplinäre Zusammenarbeit mit konzeptionellen Diskussionen">
         </figure>
     </div>
-    <figcaption>(L) The marshmallow challenge was one of the team-building exercises we did. (R) Interdisciplinary collaboration featured a lot of conceptual discussions.</figcaption>
+    <figcaption>(L) Die Marshmallow-Challenge war eine unserer Teambuilding-Übungen. (R) Die interdisziplinäre Zusammenarbeit beinhaltete viele konzeptionelle Diskussionen.</figcaption>
   </section>
 
   
   <section class="sectionText">
     <h2>Rising Waters</h2>
-    <p>A VR project for the Oculus Go, that tackles the topic of climate change. Set in the future, the user gets to explore the city of Richmond, B.C., in the aftermath of a flood caused by rising sea levels.</p>
-    <p>Rising Waters is a mostly passive experience for the Oculus Go headset. Due to the limiting 3DOF tracking of the Oculus Go combined with the sparse input interface, we created a simple walkthrough experience that follows a predefined track. Users can pause und unpause their walkthrough und look around to explore the environment. At first, users are confronted with dozens of screens around them, which show clips related to global warming und its impacts. Then, they are dropped into a hypothetical future Richmond, which has been flooded due to rising sea levels. The user sees the world around them from the perspective of a surveying drone that has been deployed to collect probes und scan for human signals. This mission to collect data takes the user through Richmond suburban areas, under the SkyTrain und finally onto a rooftop where an old radio is still giving off signals. Our hope is that the experience raises awareness for the problem of climate change und deepens the understanding of what the potential local impact could be.</p>
-    <p>My roles in the development of Rising Waters included concept design, <a  href="#RisingWatersDev">C# und Unity development</a>, as well as 3D modeling the majority of 3D assets. In Blender, I modeled buildings, as well as local features such as the SkyTrain und Richmond banners und completed them with textures sourced from online.</p>
+    <p>Ein VR-Projekt für die Oculus Go, das sich dem Thema Klimawandel widmet. In einer futuristischen Setting erkunden Nutzer die Stadt Richmond, B.C., nach einer Überschwemmung infolge steigender Meeresspiegel.</p>
+    <p>Rising Waters ist ein überwiegend passives Erlebnis für das Oculus-Go-Headset. Aufgrund des eingeschränkten 3DOF-Trackings der Oculus Go und der spärlichen Eingabemöglichkeiten entwickelten wir ein einfaches Walkthrough-Erlebnis entlang einer vordefinierten Strecke. Nutzer können den Walkthrough pausieren und fortsetzen und sich umsehen, um die Umgebung zu erkunden. Zunächst werden sie von Dutzenden Bildschirmen umgeben, die Clips zum Thema globale Erwärmung und deren Auswirkungen zeigen. Anschließend werden sie in ein hypothetisches zukünftiges Richmond versetzt, das durch steigende Meeresspiegel überflutet wurde. Die Welt wird aus der Perspektive einer Aufklärungsdrohne erlebt, die Proben sammelt und nach menschlichen Signalen sucht. Diese Datensammelmission führt durch Vororte von Richmond, unter die SkyTrain-Strecke und schließlich auf ein Dach, wo noch ein altes Radio Signale sendet. Unser Ziel ist, das Bewusstsein für den Klimawandel zu schärfen und das Verständnis für mögliche lokale Auswirkungen zu vertiefen.</p>
+    <p>Meine Rollen bei der Entwicklung von Rising Waters umfassten Concept Design, <a href="#RisingWatersDev">C#- und Unity-Entwicklung</a> sowie das 3D-Modelling des Großteils der 3D-Assets. In Blender modellierte ich Gebäude sowie lokale Merkmale wie die SkyTrain und Richmond-Banner und versah sie mit online bezogenen Texturen.</p>
   </section>
 
   
@@ -47,16 +47,16 @@ order: 11
       <div>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/mFMDWg2QdYU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture" allowfullscreen></iframe>
       </div>
-      <figcaption>Rising Waters project introduction, walkthrough & technical overview.</figcaption>
+      <figcaption>Einführung in Rising Waters, Walkthrough und technischer Überblick.</figcaption>
     </div>
   </section>
 
   
   <section class="sectionText">
     <h2>FIT4U</h2>
-    <p>A VR project for the Oculus Rift, that masquerades as a meditative fitness experience. After collecting a bit of personal information, we confront users with a dramatized hacking encounter, which is personalized to the user’s personal data.</p>
-    <p>This project idea was initially entwickelt in a smaller team but later completed und polished by the entire class, in an exercise of hivemind collaboration. While there is a standalone version published to Itch.io, our final prototype requires manual operation. The process begins by signing up attendees to our showcase into time slots. A teammate und I would then begin searching the web for publicly available data of the user, typically by searching for their social media. Once the user arrives for their appointment, our teammate who plays a yoga instructor, would guide them into an isolated room und walk them into the experience in a very relaxing manner. Once in VR, users filled out a short form und then began a series of breathing und stretching exercises. Not before long, this is interrupted by the hacking event. The room around the user begins to flicker und collapses, to reveal that they’re in a virtual room, which displays the user’s personal data all around them. This dataset is comprised of the data they entered, as well as any publicly available information we could find. Inspired by the Matrix, we then provide them with two options: delete all of their data, or keep it. Depending on their choice, the experience either ends immediately, or they’re transported back into the fitness room, which is then overrun by personalized ads. The goal is that the experience helps users better understand what data they have made public und reflect whether they are comfortable with their approach to privacy.</p>
-    <p>With the development of FIT4U I played a minor role in the concept design und a major role in the <a  href="#Fit4uDev">C# und Unity development</a>. I was also responsible for operating the backend of the live performance version, where I would forage the web for public information available about participants und feed it into a separate UI not visible to the user. This posed quite a challenge to set up correctly in terms of rendering to the correct screen.</p>
+    <p>Ein VR-Projekt für die Oculus Rift, das als meditatives Fitness-Erlebnis getarnt ist. Nach der Erfassung einiger persönlicher Informationen konfrontieren wir Nutzer mit einem dramatisierten Hacking-Vorfall, der auf deren persönliche Daten zugeschnitten ist.</p>
+    <p>Die Projektidee wurde zunächst in einem kleineren Team entwickelt, später aber von der gesamten Klasse in einer Hivemind-Kollaboration fertiggestellt und verfeinert. Obwohl eine eigenständige Version auf Itch.io veröffentlicht wurde, erfordert unser finaler Prototyp manuelle Bedienung. Der Ablauf beginnt mit der Anmeldung von Showcase-Besuchern zu festen Zeitfenstern. Ein Teamkollege und ich durchsuchten anschließend das Web nach öffentlich verfügbaren Daten der Nutzer, typischerweise über deren Social-Media-Profile. Sobald der Nutzer zu seinem Termin erscheint, führt ein Teamkollege in der Rolle eines Yoga-Lehrers sie in einen abgeschirmten Raum und geleitet sie auf sehr entspannte Weise ins Erlebnis. In VR füllen Nutzer ein kurzes Formular aus und beginnen mit Atem- und Dehnübungen. Schon bald wird dies durch das Hacking-Ereignis unterbrochen. Der Raum um den Nutzer beginnt zu flackern und bricht zusammen, um zu enthüllen, dass sie sich in einem virtuellen Raum befinden, der ihre persönlichen Daten allseitig anzeigt. Dieser Datensatz besteht aus den eingegebenen Daten sowie allen öffentlich verfügbaren Informationen, die wir finden konnten. Inspiriert von Matrix bieten wir zwei Optionen: alle Daten löschen oder behalten. Je nach Wahl endet das Erlebnis sofort, oder die Nutzer werden zurück in den Fitnessraum transportiert, der dann von personalisierten Werbeanzeigen überflutet wird. Ziel ist, dass Nutzer besser verstehen, welche Daten sie öffentlich gemacht haben, und reflektieren, ob sie mit ihrem Umgang mit Privatsphäre einverstanden sind.</p>
+    <p>Bei der Entwicklung von FIT4U spielte ich eine untergeordnete Rolle im Concept Design und eine zentrale Rolle in der <a href="#Fit4uDev">C#- und Unity-Entwicklung</a>. Außerdem war ich für den Betrieb des Backends der Live-Performance-Version verantwortlich, bei der ich im Web nach öffentlich verfügbaren Informationen über Teilnehmer suchte und diese in eine separate UI einspeiste, die für den Nutzer nicht sichtbar war. Die korrekte Ausgabe auf den richtigen Bildschirm stellte dabei eine erhebliche Herausforderung dar.</p>
   </section>
 
   
@@ -64,7 +64,7 @@ order: 11
       <div>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/SX7YzMAc1OE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture" allowfullscreen></iframe>
       </div>
-      <figcaption>FIT4U project overview & showcase footage.</figcaption>
+      <figcaption>FIT4U-Projektüberblick und Showcase-Aufnahmen.</figcaption>
     </div>
   </section>
 
@@ -72,7 +72,7 @@ order: 11
   <section class="sectionText">
     <h2>Der Code</h2>
     <h3 id="RisingWatersDev">Rising Waters</h3>
-    <p>The C# und Unity development work of Rising Waters was split between Vlad Ryzhov und me. My responsibilities included the walkthrough movement und control. As this was one of my first Unity projects, this made for a thorough introduction to Vectors und Quaternions in the Unity API. A very helpful package that I used was the <a href="https://wiki.unity3d.com/index.php/Hermite_Spline_Controller#Description" target="_blank">Hermite Spline Controller</a>, which made it easy to interpolate a GameObject's position und orientation smoothly through an easily defined path. In the example below, I use the package's <code>GetHermiteInternal()</code> und <code>GetSquad()</code> methods to position und orientate the player along the predefined walkthrough path, as well as pause when arriving at any of the waypoint nodes that the path is comprised of.</p>
+    <p>Die C#- und Unity-Entwicklung von Rising Waters teilten sich Vlad Ryzhov und ich. Meine Verantwortlichkeiten umfassten die Walkthrough-Bewegung und -Steuerung. Da dies eines meiner ersten Unity-Projekte war, bot es eine gründliche Einführung in Vektoren und Quaternionen in der Unity-API. Ein sehr hilfreiches Paket war der <a href="https://wiki.unity3d.com/index.php/Hermite_Spline_Controller#Description" target="_blank">Hermite Spline Controller</a>, mit dem sich Position und Orientierung eines GameObjects entlang eines einfach definierten Pfads sanft interpolieren ließen. Im Beispiel unten nutze ich die Methoden <code>GetHermiteInternal()</code> und <code>GetSquad()</code> des Pakets, um den Spieler entlang des vordefinierten Walkthrough-Pfads zu positionieren und auszurichten sowie an Waypoint-Knoten des Pfads anzuhalten.</p>
   </section>
 
   
@@ -83,7 +83,7 @@ order: 11
   
   <section class="sectionText">
     <h3 id="Fit4uDev">FIT4U</h3>
-    <p>As the only C# und Unity developer working on FIT4U, I had a lot of responsibilities. One of my first completed features was a proof of concept, where I created a setup with multiple cameras, with player cameras rendering to the HMD und a separate UI camera rendering to a computer screen not visible to the player. This allowed us to enter user data while the experience is running. After that, I implemented the user database (which is temporary) und a number of different UI systems that would store user data based on the user inputs. The final step involved writing code to link up the individual screens und sequence the data breach, which is implemented with a Coroutine. The example below is an excerpt from <code>Ads.cs</code>, a script that starts crowding the walls around the user with generic und targeted ads if they choose not to delete their data in the end. The excerpt starts with a check of what data matches available ads, defining an array of ad images accordingly, shuffling it und then starting a coroutine which gradually begins filling the entire room with ads.</p>
+    <p>Als einziger C#- und Unity-Entwickler bei FIT4U hatte ich viele Verantwortlichkeiten. Eines meiner ersten abgeschlossenen Features war ein Proof of Concept mit mehreren Kameras: Spielerkameras rendern auf das HMD, eine separate UI-Kamera auf einen für den Spieler unsichtbaren Computerbildschirm. So konnten wir Nutzerdaten eingeben, während das Erlebnis lief. Anschließend implementierte ich die (temporäre) Nutzerdatenbank und mehrere UI-Systeme, die Nutzerdaten basierend auf Eingaben speicherten. Der letzte Schritt war Code, der die einzelnen Bildschirme verknüpfte und den Datenleck-Ablauf sequenzierte – implementiert als Coroutine. Das Beispiel unten ist ein Auszug aus <code>Ads.cs</code>, einem Skript, das die Wände um den Nutzer mit generischen und zielgerichteten Werbeanzeigen füllt, wenn sie am Ende ihre Daten nicht löschen. Der Auszug prüft, welche Daten zu verfügbaren Anzeigen passen, definiert entsprechend ein Array von Anzeigenbildern, mischt es und startet eine Coroutine, die den gesamten Raum schrittweise mit Anzeigen füllt.</p>
   </section>
 
   

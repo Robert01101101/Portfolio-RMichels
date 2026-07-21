@@ -1,3 +1,5 @@
+import { getScrollLenis } from '../lib/scroll-lenis';
+
 function mapVal(num: number, inMin: number, inMax: number, outMin: number, outMax: number) {
   return ((num - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin;
 }
@@ -10,27 +12,41 @@ function offset(el: Element) {
   return el.getBoundingClientRect().top;
 }
 
+function getVisibleElements(selector: string): HTMLElement[] {
+  return Array.from(document.querySelectorAll<HTMLElement>(selector)).filter((el) => {
+    const row = el.closest('.projRow');
+    return row && !row.classList.contains('projRow--hidden');
+  });
+}
+
 export function initProjectTileParallax() {
-  const projLabel = document.querySelectorAll<HTMLElement>('.projLabel');
-  const projJScontainer = document.querySelectorAll<HTMLElement>('.projJScontainer');
-
-  if (projLabel.length === 0 && projJScontainer.length === 0) return;
-
   const xlBreakPoint = 1200;
-  let ticking = false;
+  let scrollEndTimer: ReturnType<typeof setTimeout> | null = null;
+
+  const getElements = () => {
+    if (window.innerWidth < xlBreakPoint) {
+      return getVisibleElements('.projRow:not(.projRow--hidden) .projJScontainer');
+    }
+    return getVisibleElements('.projRow:not(.projRow--hidden) .projLabel');
+  };
+
+  const setWillChange = (active: boolean) => {
+    const prop = active ? 'transform' : '';
+    getElements().forEach((el) => {
+      el.style.willChange = prop;
+    });
+  };
 
   const update = () => {
-    ticking = false;
     const buffer = 50;
     let min = -80;
     let max = 100;
-    let elementsToOffset: NodeListOf<HTMLElement> = projLabel;
     if (window.innerWidth < xlBreakPoint) {
       min = -40;
       max = 0;
-      elementsToOffset = projJScontainer;
     }
-    elementsToOffset.forEach((curElement) => {
+
+    getElements().forEach((curElement) => {
       const yPos = offset(curElement);
       const bottomVal = clamp(
         mapVal(yPos, 0, window.innerHeight, max, min),
@@ -41,16 +57,29 @@ export function initProjectTileParallax() {
     });
   };
 
-  const onScroll = () => {
-    if (!ticking) {
-      ticking = true;
-      requestAnimationFrame(update);
-    }
+  const scheduleScrollEnd = () => {
+    if (scrollEndTimer) clearTimeout(scrollEndTimer);
+    scrollEndTimer = setTimeout(() => setWillChange(false), 150);
   };
 
-  window.addEventListener('scroll', onScroll, { passive: true });
+  const onScroll = () => {
+    setWillChange(true);
+    update();
+    scheduleScrollEnd();
+  };
+
+  const hookLenis = () => {
+    const lenis = getScrollLenis();
+    if (lenis) {
+      lenis.on('scroll', onScroll);
+      onScroll();
+      return;
+    }
+    requestAnimationFrame(hookLenis);
+  };
+
   window.addEventListener('resize', onScroll, { passive: true });
-  update();
+  hookLenis();
 }
 
 initProjectTileParallax();

@@ -28,11 +28,11 @@ order: 7
   <section class="sectionMedia">
     <div class="mediaSquare">
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/harbingersofdeath/lqip/screen-home.jpg">
+        <img src="/assets/img/harbingersofdeath/lqip/screen-home.jpg" alt="Homepage">
         <figcaption class="center">Homepage</figcaption>
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/harbingersofdeath/lqip/screen-omen.jpg">
+        <img src="/assets/img/harbingersofdeath/lqip/screen-omen.jpg" alt="Omen Content Unit">
         <figcaption class="center">Omen Content Unit</figcaption>
       </figure>
     </div>
@@ -51,11 +51,11 @@ order: 7
     <div class="mediaSquare">
       
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/harbingersofdeath/lqip/animated-form.jpg" lqip-gif>
+        <img src="/assets/img/harbingersofdeath/lqip/animated-form.jpg" lqip-gif lqip-gif alt="Form Styling (ARIA-friendly)">
         <figcaption class="center">Form Styling (ARIA-friendly)</figcaption>
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/harbingersofdeath/lqip/screen-member-home.jpg">
+        <img src="/assets/img/harbingersofdeath/lqip/screen-member-home.jpg" alt="Member Homepage">
         <figcaption class="center">Member Homepage</figcaption>
       </figure>
     </div>
@@ -93,7 +93,7 @@ order: 7
   <section class="sectionMedia">
     <div class="mediaColumn">
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/harbingersofdeath/lqip/db.jpg">
+        <img src="/assets/img/harbingersofdeath/lqip/db.jpg" alt="ER Diagram of our database.">
         <figcaption class="center">ER Diagram of our database.</figcaption>
       </figure>
     </div>
