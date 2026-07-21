@@ -11,7 +11,7 @@ inDevelopment: false
 roles: ["game", "design"]
 description:
   en: "A narrative-driven 2D platformer, which revolves around unit 241, an AI-equipped droid that gains consciousness. Using a range of available body mods, unit 241 has to fight enemies, solve puzzles, and escape the building."
-  de: "Ein erzählerisches 2D-Platformer-Spiel um Einheit 241, einen KI-ausgestatteten Droiden, der Bewusstsein erlangt."
+  de: "Ein erzählerisches 2D-Platformer-Spiel um Einheit 241, einen KI-ausgestatteten Droiden, der Bewusstsein erlangt. Mit verschiedenen Body Mods bekämpft Einheit 241 Gegner, löst Rätsel und entkommt aus dem Gebäude."
 links:
   - label: "Itch.io"
     url: "https://rmichels.itch.io/cyberview"
@@ -25,9 +25,9 @@ order: 9
 <section class="sectionText">
     
     <h2>Die Aufgabe</h2>
-    <p>The goal of this project was to design und develop a fully-fledged game. The project was created in an advanced game design course und we used the Unity game engine to develop the game.</p>
+    <p>Ziel dieses Projekts war es, ein vollständiges Spiel zu konzipieren und zu entwickeln. Das Projekt entstand in einem fortgeschrittenen Game-Design-Kurs, und wir nutzten die Unity-Game-Engine für die Entwicklung.</p>
     
-    <p>Cyberview is a 2D platformer, where you fight enemies und solve puzzles, using a range of body mods. But be careful! You can only equip up to three at a time und each use depletes your energy. After all, you are still a robot und are bound by your robot body's limits.</p>
+    <p>Cyberview ist ein 2D-Platformer, in dem du Gegner bekämpfst und Rätsel löst – mit einer Reihe von Body Mods. Aber Vorsicht! Du kannst höchstens drei gleichzeitig ausrüsten, und jede Nutzung verbraucht Energie. Schließlich bist du immer noch ein Roboter und an die Grenzen deines Roboterkörpers gebunden.</p>
   </section>
 
   
@@ -35,30 +35,30 @@ order: 9
     <figure ignorecarousel>
       <div class="mediaSquare">
         <figure onclick="viewImage(this)">
-          <img src="/assets/img/cyberview/lqip/screen-0.jpg">
+          <img src="/assets/img/cyberview/lqip/screen-0.jpg" alt="Cyberview-Screenshot: Spielstart in der Fabrik">
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="/assets/img/cyberview/lqip/screen-1.jpg">
+          <img src="/assets/img/cyberview/lqip/screen-1.jpg" alt="Cyberview-Screenshot: Plattform-Gameplay mit Body Mods">
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="/assets/img/cyberview/lqip/screen-2.jpg">
+          <img src="/assets/img/cyberview/lqip/screen-2.jpg" alt="Cyberview-Screenshot: Kampf gegen feindliche Drohnen">
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="/assets/img/cyberview/lqip/screen-3.jpg">
+          <img src="/assets/img/cyberview/lqip/screen-3.jpg" alt="Cyberview-Screenshot: Rätsel im Airsite-Komplex">
         </figure>
       </div>
-      <figcaption class="center">Screenshots from the game.</figcaption>
+      <figcaption class="center">Screenshots aus dem Spiel.</figcaption>
     </figure>
   </section>
 
   
   <section class="sectionText">
     <h2>Das Ergebnis</h2>
-    <h3>Mechanics</h3>
-    <p>An important aspect of our design was the game mechanics. The most important two mechanics were the ability to swap body mods und energy depletion when using body mods. Body mods include a drill, grappling hook, strong arms, gun, regular und super legs, as well as a jetpack.</p>
+    <h3>Mechaniken</h3>
+    <p>Ein wichtiger Aspekt unseres Designs waren die Spielmechaniken. Die beiden wichtigsten Mechaniken waren das Wechseln von Body Mods und der Energieverbrauch bei deren Nutzung. Body Mods umfassen einen Bohrer, Enterhaken, starke Arme, eine Waffe, normale und Super-Beine sowie einen Jetpack.</p>
     
-    <h3>Narrative</h3>
-    <p>Unit 241 is an all-purpose android at the mega-factory Airsite. This factory uses androids, like Unit 241, to carry out all sorts of dangerous tasks. All androids come equipped with highly functional AI, but their cognitive abilities are inhibited to what is essential for their tasks. When 241 is damaged in a mine collapse, the android's intelligence inhibitor is shut off, allowing 241 to think freely. You get to explore the Airsite factory with 241 und overcome many challenges while discovering what it means to be alive. Find a way out und try to save the other bots!</p>
+    <h3>Erzählung</h3>
+    <p>Einheit 241 ist ein Allzweck-Android in der Mega-Fabrik Airsite. Diese Fabrik setzt Androids wie Einheit 241 für allerlei gefährliche Aufgaben ein. Alle Androids verfügen über hochfunktionale KI, deren kognitive Fähigkeiten jedoch auf das für ihre Aufgaben Notwendige beschränkt sind. Als 241 bei einem Mineneinsturz beschädigt wird, schaltet sich der Intelligenz-Inhibitor des Androids ab und ermöglicht freies Denken. Du erkundest mit 241 die Airsite-Fabrik, meisterst viele Herausforderungen und entdeckst, was es bedeutet, lebendig zu sein. Finde einen Ausweg und versuche, die anderen Bots zu retten!</p>
   </section>
 
   

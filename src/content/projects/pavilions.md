@@ -11,7 +11,7 @@ inDevelopment: false
 roles: ["3d-model", "cad", "design"]
 description:
   en: "Pavilions is the result of a spatial design exercise. Three pavilions proposed as a public space in Surrey's Holland Park, featuring abstract, modular, and parametric architecture."
-  de: "Pavilions ist das Ergebnis einer räumlichen Designübung. Drei Pavillons als öffentlicher Raum in Surreys Holland Park."
+  de: "Pavilions ist das Ergebnis einer räumlichen Designübung. Drei Pavillons als öffentlicher Raum in Surreys Holland Park – mit abstrakter, modularer und parametrischer Architektur."
 links:
   - label: "View 3D Models"
     url: "https://sketchfab.com/rmichels/collections/iat233-pavilions"
@@ -78,27 +78,27 @@ order: 12
       <div class="mediaSquare">
         <div class="mediaColumn">
           <figure onclick="viewImage(this)">
-            <img src="/assets/img/pavilions/lqip/2_1.jpg">
+            <img src="/assets/img/pavilions/lqip/2_1.jpg" alt="pavilions – 2 1">
           </figure>
           <figure onclick="viewImage(this)">
-            <img src="/assets/img/pavilions/lqip/2_2.jpg">
+            <img src="/assets/img/pavilions/lqip/2_2.jpg" alt="pavilions – 2 2">
           </figure>
           <figure onclick="viewImage(this)">
-            <img src="/assets/img/pavilions/lqip/2_3.jpg">
+            <img src="/assets/img/pavilions/lqip/2_3.jpg" alt="pavilions – 2 3">
           </figure>
         </div>
         <div class="mediaColumn">
           <figure onclick="viewImage(this)">
-            <img src="/assets/img/pavilions/lqip/3_1.jpg">
+            <img src="/assets/img/pavilions/lqip/3_1.jpg" alt="pavilions – 3 1">
           </figure>
           <figure onclick="viewImage(this)">
-            <img src="/assets/img/pavilions/lqip/3_2.jpg">
+            <img src="/assets/img/pavilions/lqip/3_2.jpg" alt="pavilions – 3 2">
           </figure>
           <figure onclick="viewImage(this)">
-            <img src="/assets/img/pavilions/lqip/3_3.jpg">
+            <img src="/assets/img/pavilions/lqip/3_3.jpg" alt="pavilions – 3 3">
           </figure>
           <figure onclick="viewImage(this)">
-            <img src="/assets/img/pavilions/lqip/3_4.jpg">
+            <img src="/assets/img/pavilions/lqip/3_4.jpg" alt="pavilions – 3 4">
           </figure>
         </div>
       </div>
@@ -107,7 +107,7 @@ order: 12
     <figure ignorecarousel class="spacer">
         <div class="mediaColumn">
           <figure onclick="viewImage(this)">
-            <img src="/assets/img/pavilions/lqip/3_5.jpg">
+            <img src="/assets/img/pavilions/lqip/3_5.jpg" alt="pavilions – 3 5">
           </figure>
         </div>
       <figcaption>Grasshopper parametric algorithm visualized with nodes.</figcaption>

@@ -54,15 +54,15 @@ order: 2
     <figure ignorecarousel>
       <div class="mediaRow mediaRow-equalWidth">
         <figure onclick="viewImage(this)">
-          <img src="/assets/img/clirioScanShare/lqip/scanShareClientSideUi.png">
+          <img src="/assets/img/clirioScanShare/lqip/scanShareClientSideUi.png" alt="Share UI">
           <figcaption>Share UI</figcaption>
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="/assets/img/clirioScanShare/lqip/scanShareClientSideUiEmbed.png">
+          <img src="/assets/img/clirioScanShare/lqip/scanShareClientSideUiEmbed.png" alt="Embed UI">
           <figcaption>Embed UI</figcaption>
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="/assets/img/lqip/clirioScanShare.jpg" class="whiteFrame">
+          <img src="/assets/img/lqip/clirioScanShare.jpg" class="whiteFrame" class="whiteFrame" alt="Webviewer">
           <figcaption>Webviewer</figcaption>
         </figure>
       </div>
@@ -83,7 +83,7 @@ order: 2
     <figure ignorecarousel>
       <div class="mediaRow mediaRow-centered">
         <figure onclick="viewImage(this)">
-          <img src="/assets/img/clirioScanShare/lqip/scanShareWalkthrough.jpg" lqip-gif class="whiteFrame">
+          <img src="/assets/img/clirioScanShare/lqip/scanShareWalkthrough.jpg" lqip-gif class="whiteFrame" lqip-gif class="whiteFrame" alt="Share UX Walkthrough">
           <figcaption>Share UX Walkthrough</figcaption>
         </figure>
       </div>

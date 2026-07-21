@@ -35,19 +35,19 @@ order: 4
     <figure ignorecarousel>
       <div class="mediaSquare">
         <figure onclick="viewImage(this)">
-          <img src="/assets/img/clirioCloud/lqip/dashboard.jpg">
+          <img src="/assets/img/clirioCloud/lqip/dashboard.jpg" alt="Dashboard">
           <figcaption>Dashboard</figcaption>
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="/assets/img/clirioCloud/lqip/workspaceList.jpg">
+          <img src="/assets/img/clirioCloud/lqip/workspaceList.jpg" alt="Workspace Liste">
           <figcaption>Workspace Liste</figcaption>
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="/assets/img/clirioCloud/lqip/workspaceView.jpg">
+          <img src="/assets/img/clirioCloud/lqip/workspaceView.jpg" alt="Workspace Management Tools">
           <figcaption>Workspace Management Tools</figcaption>
         </figure>
         <figure onclick="viewImage(this)" id="img_createPoi">
-          <img src="/assets/img/clirioCloud/lqip/createPoi.jpg">
+          <img src="/assets/img/clirioCloud/lqip/createPoi.jpg" alt="Workspace Management Beispiel: Erstelle POI">
           <figcaption>Workspace Management Beispiel: Erstelle POI</figcaption>
         </figure>
       </div>
@@ -76,10 +76,10 @@ order: 4
     <figure ignorecarousel>
       <div class="mediaRow mediaRow-equalWidth mediaRow-equalHeight">
         <figure onclick="viewImage(this)">
-          <img src="/assets/img/clirioCloud/lqip/create3dModel.jpg"> 
+          <img src="/assets/img/clirioCloud/lqip/create3dModel.jpg" alt="clirio Cloud – create3d Model"> 
         </figure>
         <figure onclick="viewImage(this)">
-          <img src="/assets/img/clirioCloud/lqip/editBasemaps.jpg">
+          <img src="/assets/img/clirioCloud/lqip/editBasemaps.jpg" alt="clirio Cloud – edit Basemaps">
         </figure>
       </div>
       <figcaption>Einige Beispiele für die Anbindung von Datenmodellen an Formulare in Blazor. Das Erweitern/Kollabieren von optionalen Abschnitten des Formulars und das Umordnen von Elementen in einer Liste wird mit Blazor leicht gemacht, da die Benutzereingaben zu einem direkten Feedback führen, ohne dass man Boilerplate-Code schreiben muss.</figcaption>

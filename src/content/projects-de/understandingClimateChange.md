@@ -2,7 +2,7 @@
 slug: "understandingClimateChange"
 name:
   en: "Understanding Climate Change"
-  de: "Understanding Climate Change"
+  de: "Klimawandel verstehen"
 projectType:
   en: "D3.js Website"
   de: "D3.js Website"
@@ -11,7 +11,7 @@ inDevelopment: false
 roles: ["d3js", "front-end"]
 description:
   en: "A website that uses D3.js to visually analyze climate change data. Data visualizations include line charts and stacked area charts of global climate change data, as well as a detailed choropleth map and other visualizations of Canadian weather data."
-  de: "Eine Website, die D3.js nutzt, um Klimawandeldaten visuell zu analysieren."
+  de: "Eine Website, die D3.js nutzt, um Klimawandeldaten visuell zu analysieren. Visualisierungen umfassen Linien- und Stacked-Area-Charts globaler Klimadaten sowie eine detaillierte Choropleth-Karte und weitere Darstellungen kanadischer Wetterdaten."
 links:
   - label: "View Project"
     url: "http://understandingclimatechange.rmichels.com/ccImpacts.html"
@@ -21,20 +21,20 @@ order: 13
 <section class="sectionText">
     
     <h2>Die Aufgabe</h2>
-    <p>As an exercise of interactive data visualization techniques, we planned to comprehensively visualize climate change data. Our goal was to condense complex datasets into simple charts that communicate the mechanics, origins und local impact of climate change in Canada. To entice users, we would develop simple interactions such as pop-up tooltips, as well as complex interactions such as brushing, changing representations und animation.</p>
+    <p>Als Übung interaktiver Datenvisualisierung planten wir, Klimawandeldaten umfassend zu visualisieren. Unser Ziel war, komplexe Datensätze in einfache Diagramme zu verdichten, die Mechanismen, Ursprünge und lokale Auswirkungen des Klimawandels in Kanada vermitteln. Um Nutzer anzusprechen, entwickelten wir einfache Interaktionen wie Pop-up-Tooltips sowie komplexere wie Brushing, Darstellungswechsel und Animation.</p>
   </section>
 
   
   <section class="sectionMedia">
     <div class="mediaColumn">
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/understandingClimateChange/lqip/chart1.jpg">
+        <img src="/assets/img/understandingClimateChange/lqip/chart1.jpg" alt="Liniendiagramm globaler CO₂-Emissionen">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/understandingClimateChange/lqip/chart2.jpg">
+        <img src="/assets/img/understandingClimateChange/lqip/chart2.jpg" alt="Liniendiagramm der atmosphärischen CO₂-Konzentration">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/understandingClimateChange/lqip/chart3.jpg">
+        <img src="/assets/img/understandingClimateChange/lqip/chart3.jpg" alt="Stacked-Area-Chart der CO₂-Emissionen nach Region">
       </figure>
     </div>
   </section>
@@ -42,24 +42,24 @@ order: 13
   
   <section class="sectionText">
     <h2>Das Ergebnis</h2>
-    <h3>Understanding Climate Change</h3>
-    <p>Features four color-coded line charts of global CO2 emissions und atmospheric concentration, as well as a stacked area chart of CO2 emissions by region.</p>
+    <h3>Klimawandel verstehen</h3>
+    <p>Vier farbcodierte Liniendiagramme globaler CO₂-Emissionen und atmosphärischer Konzentration sowie ein Stacked-Area-Chart der CO₂-Emissionen nach Region.</p>
     
-    <h3>Understanding Climate Change Impact</h3>
-    <p>With the choropleth map of Canada und its provinces und territories, users can explore Canadian weather data, including temperature und precipitation, by year, month und province. There is also a spider chart of the global temperature anomaly over time. Both charts can be dynamically queried und animated.</p>
+    <h3>Auswirkungen des Klimawandels verstehen</h3>
+    <p>Mit der Choropleth-Karte Kanadas und seiner Provinzen und Territorien können Nutzer kanadische Wetterdaten – einschließlich Temperatur und Niederschlag – nach Jahr, Monat und Provinz erkunden. Zusätzlich gibt es ein Spider-Chart der globalen Temperaturanomalie über die Zeit. Beide Diagramme sind dynamisch abfragbar und animierbar.</p>
 
-    <h3>Climate Change Impact Summary</h3>
-    <p>The climate change summary charts aim to show a correlation, or lack thereof, of CO2 emissions und weather anomalies. There are four line plots of mean Canadian weather temperature, precipitation und their anomalies, grouped with a line plot of global CO2 emissions. </p>
+    <h3>Zusammenfassung der Klimawandelauswirkungen</h3>
+    <p>Die Summary-Charts zeigen einen Zusammenhang – oder dessen Fehlen – zwischen CO₂-Emissionen und Wetteranomalien. Vier Liniendiagramme der mittleren kanadischen Wettertemperatur, des Niederschlags und deren Anomalien sind mit einem Liniendiagramm globaler CO₂-Emissionen gruppiert.</p>
   </section>
 
   
   <section class="sectionMedia">
     <div class="mediaColumn">
       <figure onclick="viewImage(this)" id="chart4">
-        <img src="/assets/img/understandingClimateChange/lqip/chart4.jpg">
+        <img src="/assets/img/understandingClimateChange/lqip/chart4.jpg" alt="Interaktive Choropleth-Karte kanadischer Wetterdaten">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/understandingClimateChange/lqip/chart5.jpg">
+        <img src="/assets/img/understandingClimateChange/lqip/chart5.jpg" alt="Spider-Chart der globalen Temperaturanomalie">
       </figure>
     </div>
   </section>
@@ -67,20 +67,20 @@ order: 13
   
   <section class="sectionText">
     <h2>Prozess</h2>
-    <p>We entwickelt the project in a team of two, over the course of two months und it was our first experience with D3.js. Early on, we defined two central questions that we would attempt to answer with the project:</p>
+    <p>Wir entwickelten das Projekt zu zweit über zwei Monate hinweg – unsere erste Erfahrung mit D3.js. Früh definierten wir zwei zentrale Fragen, die das Projekt beantworten sollte:</p>
     <ol>
-      <li>What are the contributing factors to climate change?</li>
-      <li>Since climate impacts weather, are there indications of Canadian weather behaving abnormally?</li>
+      <li>Was sind die Beitragsfaktoren zum Klimawandel?</li>
+      <li>Da der Klimawandel das Wetter beeinflusst: Gibt es Anzeichen dafür, dass sich das kanadische Wetter abnormal verhält?</li>
     </ol>
-    <p>After defining these questions, we set out to find relevant data. Most data needed to be cleaned for outliers und bad data. The most complex dataset was that of Canadian weather data, as we needed to manually merge multiple large datasets, clean und sort the data und calculate monthly und annual averages.</p>
-    <p>The final phase of project development involved developing the D3.js driven visualizations und assembling the final website, which also doubles as a project report. Most charts, including the line charts und stacked area chart, were fairly straightforward to implement. By far the most complex chart was the choropleth map of Canadian weather data. While the visual mapping of data to geography und color was challenging, the outcome was worth it. The resulting map provides an enticing und interactive way to quickly browse through a large dataset of Canadian weather data und make local as well as federal-level observations.</p>
+    <p>Nach der Fragestellung suchten wir relevante Daten. Die meisten mussten von Ausreißern und fehlerhaften Werten bereinigt werden. Am komplexesten war der kanadische Wetterdatensatz: Mehrere große Datensätze mussten manuell zusammengeführt, bereinigt, sortiert und monatliche sowie jährliche Durchschnitte berechnet werden.</p>
+    <p>In der finalen Phase entwickelten wir die D3.js-gesteuerten Visualisierungen und bauten die Website, die zugleich als Projektbericht dient. Die meisten Diagramme – einschließlich Linien- und Stacked-Area-Charts – waren relativ unkompliziert. Mit Abstand am komplexesten war die Choropleth-Karte kanadischer Wetterdaten. Die visuelle Zuordnung von Daten zu Geografie und Farbe war anspruchsvoll, das Ergebnis lohnte sich: Die Karte bietet eine ansprechende, interaktive Möglichkeit, einen großen Wetterdatensatz schnell zu durchsuchen und lokale sowie bundesweite Beobachtungen zu machen.</p>
   </section>
 
   
   <section class="sectionMedia">
     <div class="mediaColumn">
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/understandingClimateChange/lqip/chart6.jpg">
+        <img src="/assets/img/understandingClimateChange/lqip/chart6.jpg" alt="Korrelationsdiagramm von CO₂-Emissionen und Wetteranomalien in Kanada">
       </figure>
     </div>
   </section>
@@ -88,7 +88,7 @@ order: 13
   
   <section class="sectionText">
     <h2>Der Code</h2>
-    <p>The project is entwickelt with HTML, CSS und JS, where we employ the data-driven visualization library <a href="https://d3js.org/" target="_blank">D3.js</a>. Implementing all the visualizations was very challenging, as D3 was new to us. Particularly the use of the chain syntax was cumbersome in the beginning. The general workflow consists of loading data, selecting DOM elements und inserting SVG elements with certain attributes mapped to the data. In the excerpt below, the <a  href="#chart4">Canadian Weather Data Chart</a> is rendered in <code>drawMap()</code>, with the color of each province mapped to temperature or percipitation data depending on the user's inputs. The excerpt also includes mouse hover interactions for the individual provinces starting at line 58, where the province is visually highlighted und data in the legend is updated by calling <code>updateDataData()</code>, which isn't show in the example.</p>
+    <p>Das Projekt ist in HTML, CSS und JS entwickelt; für die Visualisierungen nutzen wir die datengetriebene Bibliothek <a href="https://d3js.org/" target="_blank">D3.js</a>. Die Umsetzung aller Visualisierungen war anspruchsvoll, da D3 für uns neu war – besonders die Ketten-Syntax war anfangs umständlich. Der allgemeine Workflow lädt Daten, wählt DOM-Elemente aus und fügt SVG-Elemente mit bestimmten, an die Daten gebundenen Attributen ein. Im Auszug unten wird das <a href="#chart4">kanadische Wetterdaten-Diagramm</a> in <code>drawMap()</code> gerendert; die Farbe jeder Provinz wird Temperatur- oder Niederschlagsdaten je nach Nutzereingabe zugeordnet. Der Auszug enthält ab Zeile 58 auch Hover-Interaktionen für einzelne Provinzen: Die Provinz wird hervorgehoben und die Legende über <code>updateDataData()</code> aktualisiert (im Beispiel nicht gezeigt).</p>
   </section>
 
   

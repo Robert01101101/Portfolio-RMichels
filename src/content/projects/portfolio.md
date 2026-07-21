@@ -22,14 +22,14 @@ order: 8
 <section class="sectionText">
     
     <h2>Overview</h2>
-    <p>This portfolio website was designed in Figma and is built as a static site with Astro, Sass, and Three.js client islands. Development began in 2020; the site was migrated from a LAMP stack to Astro for faster loads and simpler deployment. Project metadata lives in markdown content collections, which keeps case studies organized and version-controlled. The homepage filter still supports custom portfolio links when applying for jobs — for example, <a href="https://rmichels.com/?filter=vr">showing only VR projects.</a><p>
+    <p>This portfolio website was designed in Figma and is built as a static site with Astro, Sass, and Three.js client islands. Development began in 2020; the site was migrated from a LAMP stack to Astro for faster loads and simpler deployment. Project metadata lives in markdown content collections, which keeps case studies organized and version-controlled. The homepage filter still supports custom portfolio links when applying for jobs — for example, <a href="https://rmichels.com/?filter=vr">showing only VR projects.</a></p>
   </section>
 
   
   <section class="sectionMedia">
     <div class="mediaColumn">
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/portfolio/erDiagram.png">
+        <img src="/assets/img/portfolio/erDiagram.png" alt="ER Diagram of the portfolio database.">
         <figcaption class="center">ER Diagram of the portfolio database.</figcaption>
       </figure>
     </div>
@@ -38,14 +38,14 @@ order: 8
   
   <section class="sectionText">
     <h2>Goals</h2>
-    <p>The primary goal of the portfolio website you're currently on, is to communicate to potential employers and partners, what my set of skills, experiences, and interests are. The secondary goal is to practice full-stack and static-site development while showcasing fundamental skills. Other goals include sharing and participating with the design and developer communities, and trying out different technologies and ideas I'm interested in.<p>
+    <p>The primary goal of the portfolio website you're currently on, is to communicate to potential employers and partners, what my set of skills, experiences, and interests are. The secondary goal is to practice full-stack and static-site development while showcasing fundamental skills. Other goals include sharing and participating with the design and developer communities, and trying out different technologies and ideas I'm interested in.</p>
   </section>
 
   
   <section class="sectionMedia">
     <div class="mediaColumn">
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/portfolio/modelProcess.jpg">
+        <img src="/assets/img/portfolio/modelProcess.jpg" alt="Screenshot from Blender, where I cleaned up the photogrammetry capture of myself, which was created with RealityCapture.">
         <figcaption class="center">Screenshot from Blender, where I cleaned up the photogrammetry capture of myself, which was created with RealityCapture.</figcaption>
       </figure>
     </div>
@@ -54,7 +54,7 @@ order: 8
   
   <section class="sectionText">
     <h2>Process</h2>
-    <p>Before starting development, I first began by browsing the web for inspiring portfolios. I created a collection of links and based off this created a moodboard.</p><p>
+    <p>Before starting development, I first began by browsing the web for inspiring portfolios. I created a collection of links and based off this created a moodboard.</p>
   </section>
 
   

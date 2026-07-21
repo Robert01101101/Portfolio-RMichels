@@ -9,7 +9,7 @@ projectType:
 year: "2020"
 inDevelopment: false
 roles: ["vr", "game", "pm", "design"]
-teammembers: ["Robert Michels", "Team Members"]
+teammembers: ["Robert Michels (PM)", "3 teammates (SFU IAT)"]
 description:
   en: "Future Earth is a VR adventure game set in a dystopian future, where the player has to grow trees, fight droids and collect parts. Achieved over 3,000 downloads and 4 stars on SideQuest."
   de: "Future Earth ist ein VR-Abenteuerspiel in einer dystopischen Zukunft, in der der Spieler Bäume pflanzen, Droiden bekämpfen und Teile sammeln muss. Über 3.000 Downloads und 4 Sterne auf SideQuest."
@@ -32,22 +32,22 @@ order: 5
   <section class="sectionMedia">
     <div class="mediaGrid">
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/futureearth/lqip/3.jpg">
+        <img src="/assets/img/futureearth/lqip/3.jpg" alt="future Earth – 3">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/futureearth/lqip/4.jpg">
+        <img src="/assets/img/futureearth/lqip/4.jpg" alt="future Earth – 4">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/futureearth/lqip/5.jpg">
+        <img src="/assets/img/futureearth/lqip/5.jpg" alt="future Earth – 5">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/futureearth/lqip/6.jpg">
+        <img src="/assets/img/futureearth/lqip/6.jpg" alt="future Earth – 6">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/futureearth/lqip/7.jpg">
+        <img src="/assets/img/futureearth/lqip/7.jpg" alt="future Earth – 7">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/futureearth/lqip/8.jpg">
+        <img src="/assets/img/futureearth/lqip/8.jpg" alt="future Earth – 8">
       </figure>
     </div>
   </section>
@@ -75,22 +75,22 @@ order: 5
   <section class="sectionMedia">
     <div class="mediaGrid">
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/futureearth/lqip/9.jpg">
+        <img src="/assets/img/futureearth/lqip/9.jpg" alt="future Earth – 9">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/futureearth/lqip/10.jpg">
+        <img src="/assets/img/futureearth/lqip/10.jpg" alt="future Earth – 10">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/futureearth/lqip/11.jpg">
+        <img src="/assets/img/futureearth/lqip/11.jpg" alt="future Earth – 11">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/futureearth/lqip/12.jpg">
+        <img src="/assets/img/futureearth/lqip/12.jpg" alt="future Earth – 12">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/futureearth/lqip/13.jpg">
+        <img src="/assets/img/futureearth/lqip/13.jpg" alt="future Earth – 13">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/futureearth/lqip/14.jpg">
+        <img src="/assets/img/futureearth/lqip/14.jpg" alt="future Earth – 14">
       </figure>
     </div>
   </section>
@@ -108,34 +108,34 @@ order: 5
   <section class="sectionMedia">
     <div class="mediaGrid">
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/futureearth/lqip/15.jpg">
+        <img src="/assets/img/futureearth/lqip/15.jpg" alt="future Earth – 15">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/futureearth/lqip/16.jpg">
+        <img src="/assets/img/futureearth/lqip/16.jpg" alt="future Earth – 16">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/futureearth/lqip/17.jpg">
+        <img src="/assets/img/futureearth/lqip/17.jpg" alt="future Earth – 17">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/futureearth/lqip/18.jpg">
+        <img src="/assets/img/futureearth/lqip/18.jpg" alt="future Earth – 18">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/futureearth/lqip/19.jpg">
+        <img src="/assets/img/futureearth/lqip/19.jpg" alt="future Earth – 19">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/futureearth/lqip/20.jpg">
+        <img src="/assets/img/futureearth/lqip/20.jpg" alt="future Earth – 20">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/futureearth/lqip/hud1.jpg">
+        <img src="/assets/img/futureearth/lqip/hud1.jpg" alt="future Earth – hud1">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/futureearth/lqip/hud2.jpg">
+        <img src="/assets/img/futureearth/lqip/hud2.jpg" alt="future Earth – hud2">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/futureearth/lqip/hud3.jpg">
+        <img src="/assets/img/futureearth/lqip/hud3.jpg" alt="future Earth – hud3">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/futureearth/lqip/hud4.jpg">
+        <img src="/assets/img/futureearth/lqip/hud4.jpg" alt="future Earth – hud4">
       </figure>
     </div>
   </section>

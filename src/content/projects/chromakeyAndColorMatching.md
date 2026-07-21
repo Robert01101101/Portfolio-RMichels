@@ -11,7 +11,7 @@ inDevelopment: false
 roles: ["java-dev", "design"]
 description:
   en: "A digital image compositing process. Automatically creates high-quality composites. Advantages include the ability to deal with any foreground color, preventing color spill and color grading the subject to match the background."
-  de: "Ein digitales Bild-Compositing-Verfahren. Erstellt automatisch hochwertige Composites."
+  de: "Ein digitales Bild-Compositing-Verfahren. Erstellt automatisch hochwertige Composites. Vorteile: beliebige Vordergrundfarben, Unterdrückung von Color Spill und Farbanpassung des Motivs an den Hintergrund."
 links:
   - label: "Download app"
     url: "/assets/other/ChromakeyAndColorMatching.exe"
@@ -28,30 +28,30 @@ order: 10
   <section class="sectionMedia">
     <div class="mediaColumn"><div class="mediaRow">
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/chromakeyAndColorMatching/lqip/1.jpg">
+        <img src="/assets/img/chromakeyAndColorMatching/lqip/1.jpg" alt="chromakey And Color Matching – 1">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/chromakeyAndColorMatching/lqip/2.jpg">
+        <img src="/assets/img/chromakeyAndColorMatching/lqip/2.jpg" alt="chromakey And Color Matching – 2">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/chromakeyAndColorMatching/lqip/3.jpg">
+        <img src="/assets/img/chromakeyAndColorMatching/lqip/3.jpg" alt="chromakey And Color Matching – 3">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/chromakeyAndColorMatching/lqip/4.jpg">
+        <img src="/assets/img/chromakeyAndColorMatching/lqip/4.jpg" alt="chromakey And Color Matching – 4">
       </figure>
     </div>
     <div class="mediaRow">
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/chromakeyAndColorMatching/lqip/5.jpg">
+        <img src="/assets/img/chromakeyAndColorMatching/lqip/5.jpg" alt="chromakey And Color Matching – 5">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/chromakeyAndColorMatching/lqip/6.jpg">
+        <img src="/assets/img/chromakeyAndColorMatching/lqip/6.jpg" alt="chromakey And Color Matching – 6">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/chromakeyAndColorMatching/lqip/7.jpg">
+        <img src="/assets/img/chromakeyAndColorMatching/lqip/7.jpg" alt="chromakey And Color Matching – 7">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/chromakeyAndColorMatching/lqip/8.jpg">
+        <img src="/assets/img/chromakeyAndColorMatching/lqip/8.jpg" alt="chromakey And Color Matching – 8">
       </figure>
     </div></div>
     
@@ -69,7 +69,7 @@ order: 10
   <section class="sectionMedia">
     <div class="mediaColumn">
       <figure onclick="viewImage(this)" fullscreen class="wide">
-        <img src="/assets/img/chromakeyAndColorMatching/lqip/overview.jpg">
+        <img src="/assets/img/chromakeyAndColorMatching/lqip/overview.jpg" alt="An overview of the entire process, with a clear distinction between the two techniques implemented, and additional processing applied to the images.">
         <figcaption>An overview of the entire process, with a clear distinction between the two techniques implemented, and additional processing applied to the images.</figcaption>
       </figure>
     </div>

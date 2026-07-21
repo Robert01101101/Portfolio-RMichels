@@ -2,7 +2,7 @@
 slug: "understandingClimateChange"
 name:
   en: "Understanding Climate Change"
-  de: "Understanding Climate Change"
+  de: "Klimawandel verstehen"
 projectType:
   en: "D3.js Website"
   de: "D3.js Website"
@@ -11,7 +11,7 @@ inDevelopment: false
 roles: ["d3js", "front-end"]
 description:
   en: "A website that uses D3.js to visually analyze climate change data. Data visualizations include line charts and stacked area charts of global climate change data, as well as a detailed choropleth map and other visualizations of Canadian weather data."
-  de: "Eine Website, die D3.js nutzt, um Klimawandeldaten visuell zu analysieren."
+  de: "Eine Website, die D3.js nutzt, um Klimawandeldaten visuell zu analysieren. Visualisierungen umfassen Linien- und Stacked-Area-Charts globaler Klimadaten sowie eine detaillierte Choropleth-Karte und weitere Darstellungen kanadischer Wetterdaten."
 links:
   - label: "View Project"
     url: "http://understandingclimatechange.rmichels.com/ccImpacts.html"
@@ -28,13 +28,13 @@ order: 13
   <section class="sectionMedia">
     <div class="mediaColumn">
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/understandingClimateChange/lqip/chart1.jpg">
+        <img src="/assets/img/understandingClimateChange/lqip/chart1.jpg" alt="understanding Climate Change – chart1">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/understandingClimateChange/lqip/chart2.jpg">
+        <img src="/assets/img/understandingClimateChange/lqip/chart2.jpg" alt="understanding Climate Change – chart2">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/understandingClimateChange/lqip/chart3.jpg">
+        <img src="/assets/img/understandingClimateChange/lqip/chart3.jpg" alt="understanding Climate Change – chart3">
       </figure>
     </div>
   </section>
@@ -56,10 +56,10 @@ order: 13
   <section class="sectionMedia">
     <div class="mediaColumn">
       <figure onclick="viewImage(this)" id="chart4">
-        <img src="/assets/img/understandingClimateChange/lqip/chart4.jpg">
+        <img src="/assets/img/understandingClimateChange/lqip/chart4.jpg" alt="understanding Climate Change – chart4">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/understandingClimateChange/lqip/chart5.jpg">
+        <img src="/assets/img/understandingClimateChange/lqip/chart5.jpg" alt="understanding Climate Change – chart5">
       </figure>
     </div>
   </section>
@@ -80,7 +80,7 @@ order: 13
   <section class="sectionMedia">
     <div class="mediaColumn">
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/understandingClimateChange/lqip/chart6.jpg">
+        <img src="/assets/img/understandingClimateChange/lqip/chart6.jpg" alt="understanding Climate Change – chart6">
       </figure>
     </div>
   </section>

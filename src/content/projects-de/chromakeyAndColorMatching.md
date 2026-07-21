@@ -11,7 +11,7 @@ inDevelopment: false
 roles: ["java-dev", "design"]
 description:
   en: "A digital image compositing process. Automatically creates high-quality composites. Advantages include the ability to deal with any foreground color, preventing color spill and color grading the subject to match the background."
-  de: "Ein digitales Bild-Compositing-Verfahren. Erstellt automatisch hochwertige Composites."
+  de: "Ein digitales Bild-Compositing-Verfahren. Erstellt automatisch hochwertige Composites. Vorteile: beliebige Vordergrundfarben, Unterdrückung von Color Spill und Farbanpassung des Motivs an den Hintergrund."
 links:
   - label: "Download app"
     url: "/assets/other/ChromakeyAndColorMatching.exe"
@@ -21,37 +21,37 @@ order: 10
 <section class="sectionText">
     
     <h2>Die Aufgabe</h2>
-    <p>The goal of this project was to practice computational signal processing techniques for Digitale Medien. We researched experimental image processing techniques und decided to combine two techniques that we believed would complement each other well. The first technique is an advanced chroma key, which neutralizes color spill und supports all possible foreground colors. The second technique transfers color characteristics from one image to another. The idea was that by combining these two techniques, we would create a very effective process that creates high-quality image composites, where the subject doesn’t noticeably differ from the background.</p>
+    <p>Ziel dieses Projekts war es, computergestützte Signalverarbeitungstechniken für digitale Medien zu üben. Wir recherchierten experimentelle Bildverarbeitungstechniken und entschieden uns, zwei Verfahren zu kombinieren, die sich unserer Meinung nach gut ergänzen. Das erste ist ein fortgeschrittener Chroma Key, der Color Spill neutralisiert und alle möglichen Vordergrundfarben unterstützt. Das zweite überträgt Farbcharakteristika von einem Bild auf ein anderes. Die Idee war, durch die Kombination dieser beiden Techniken einen sehr effektiven Prozess zu schaffen, der hochwertige Bild-Composites erzeugt, bei denen das Motiv sich nicht merklich vom Hintergrund unterscheidet.</p>
   </section>
 
   
   <section class="sectionMedia">
     <div class="mediaColumn"><div class="mediaRow">
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/chromakeyAndColorMatching/lqip/1.jpg">
+        <img src="/assets/img/chromakeyAndColorMatching/lqip/1.jpg" alt="Compositing-Schritt 1: Vordergrund mit grünem und magentafarbenem Hintergrund">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/chromakeyAndColorMatching/lqip/2.jpg">
+        <img src="/assets/img/chromakeyAndColorMatching/lqip/2.jpg" alt="Compositing-Schritt 2: Erzeugte Matte aus dem Vordergrund">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/chromakeyAndColorMatching/lqip/3.jpg">
+        <img src="/assets/img/chromakeyAndColorMatching/lqip/3.jpg" alt="Compositing-Schritt 3: Ausgewählter Hintergrund">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/chromakeyAndColorMatching/lqip/4.jpg">
+        <img src="/assets/img/chromakeyAndColorMatching/lqip/4.jpg" alt="Compositing-Schritt 4: Farbübertragung vom Hintergrund auf das Motiv">
       </figure>
     </div>
     <div class="mediaRow">
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/chromakeyAndColorMatching/lqip/5.jpg">
+        <img src="/assets/img/chromakeyAndColorMatching/lqip/5.jpg" alt="Compositing-Schritt 5: Anpassung von Helligkeit und Kantenunschärfe">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/chromakeyAndColorMatching/lqip/6.jpg">
+        <img src="/assets/img/chromakeyAndColorMatching/lqip/6.jpg" alt="Compositing-Schritt 6: Zwischenergebnis der Bildverarbeitung">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/chromakeyAndColorMatching/lqip/7.jpg">
+        <img src="/assets/img/chromakeyAndColorMatching/lqip/7.jpg" alt="Compositing-Schritt 7: Verfeinerung des Composites">
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/chromakeyAndColorMatching/lqip/8.jpg">
+        <img src="/assets/img/chromakeyAndColorMatching/lqip/8.jpg" alt="Compositing-Schritt 8: Finales Composite-Bild">
       </figure>
     </div></div>
     
@@ -60,17 +60,17 @@ order: 10
   
   <section class="sectionText">
     <h2>Das Ergebnis</h2>
-    <p>Our interface allows users to select a foreground image that includes both a green und magenta background und create a matte. At the same time, the user is also able to select the background image in which the foreground image will appear on top. The color transfer of the background image will affect the foreground image und apply its characteristics at a set value. Once set, the user is able to control the intensity of the color transfer, brightness transfer und the blurring of the foreground matte edges to help create a more believable composite image. The user is also able to view all of the process images created to form the final output image in order to view the progression. Lastly, the user is able to save the image they have created with a save button on the bottom of the main screen.</p>
-    <p>The first step in this process is based on the paper <cite>Color invariant chroma keying und color spill neutralization for dynamic scenes und cameras</cite> (Grundhöfer, Kurz, Thiele, & Bimber, 2010). This technique cleverly uses two complementary background colors, such as green und magenta, to be able to A) feature any colors in the foreground und B) automatically suppress color spill. A) is achieved by deriving the maximum of the two mattes resulting from a simple chromakey with each background color. B) is achieved by blending the two images with the complementary background colors, so that the light spilling onto the subject is neutralized into a grayscale tone, rather than green or magenta.</p>
-    <p>The second step in the process is not specifically intended for composites but proved to be very useful. The technique described in <cite>Color transfer between images</cite> (Reinhard, Adhikhmin, Gooch, & Shirley, 2001) analyzes a source image’s color characteristics by calculating the mean und standard deviation of each color channel. These characteristics are then applied to the color distribution of the target image. For this technique to work, the images need to be converted into the lαβ color space, which heavily considers the human visual system und minimizes correlation between channels for most natural scenes.</p>
+    <p>Unsere Oberfläche ermöglicht es Nutzern, ein Vordergrundbild mit grünem und magentafarbenem Hintergrund auszuwählen und eine Matte zu erzeugen. Gleichzeitig kann der Nutzer das Hintergrundbild wählen, auf dem das Vordergrundbild erscheinen soll. Die Farbübertragung des Hintergrundbilds wirkt auf das Vordergrundbild und wendet dessen Charakteristika mit einem festen Wert an. Anschließend kann der Nutzer die Intensität der Farbübertragung, der Helligkeitsübertragung und die Unschärfe der Vordergrund-Mattenkanten steuern, um ein glaubwürdigeres Composite zu erzeugen. Außerdem können alle Zwischenbilder des Prozesses bis zum finalen Ergebnis eingesehen werden. Schließlich kann das erstellte Bild über eine Speichern-Schaltfläche am unteren Rand des Hauptbildschirms gespeichert werden.</p>
+    <p>Der erste Schritt basiert auf dem Paper <cite>Color invariant chroma keying and color spill neutralization for dynamic scenes and cameras</cite> (Grundhöfer, Kurz, Thiele, & Bimber, 2010). Dieses Verfahren nutzt geschickt zwei komplementäre Hintergrundfarben wie Grün und Magenta, um A) beliebige Farben im Vordergrund zu ermöglichen und B) Color Spill automatisch zu unterdrücken. A) wird erreicht, indem das Maximum der beiden Mattes aus einem einfachen Chromakey mit jeder Hintergrundfarbe gebildet wird. B) wird erreicht, indem die beiden Bilder mit komplementären Hintergrundfarben gemischt werden, sodass das auf das Motiv fallende Licht in Grautöne neutralisiert wird, statt grün oder magenta zu erscheinen.</p>
+    <p>Der zweite Schritt ist nicht speziell für Composites gedacht, erwies sich aber als sehr nützlich. Das in <cite>Color transfer between images</cite> (Reinhard, Adhikhmin, Gooch, & Shirley, 2001) beschriebene Verfahren analysiert die Farbcharakteristika eines Quellbilds, indem Mittelwert und Standardabweichung jedes Farbkanals berechnet werden. Diese Charakteristika werden dann auf die Farbverteilung des Zielbilds angewendet. Damit das funktioniert, müssen die Bilder in den lαβ-Farbraum konvertiert werden, der das menschliche visuelle System stark berücksichtigt und die Korrelation zwischen Kanälen für die meisten natürlichen Szenen minimiert.</p>
   </section>
 
   
   <section class="sectionMedia">
     <div class="mediaColumn">
       <figure onclick="viewImage(this)" fullscreen class="wide">
-        <img src="/assets/img/chromakeyAndColorMatching/lqip/overview.jpg">
-        <figcaption>An overview of the entire process, with a clear distinction between the two techniques implemented und additional processing applied to the images.</figcaption>
+        <img src="/assets/img/chromakeyAndColorMatching/lqip/overview.jpg" alt="Übersicht des gesamten Chromakey- und Color-Matching-Prozesses">
+        <figcaption>Übersicht des gesamten Prozesses mit klarer Unterscheidung der beiden implementierten Techniken und zusätzlicher Bildverarbeitung.</figcaption>
       </figure>
     </div>
 
@@ -79,16 +79,16 @@ order: 10
       <div>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/6KXxwxTnbgM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture" allowfullscreen></iframe>
       </div>
-      <figcaption>App demo, walkthrough of the code und explanation of the theory behind the technique.</figcaption>
+      <figcaption>App-Demo, Code-Walkthrough und Erklärung der Theorie hinter dem Verfahren.</figcaption>
     </div>
   </section>
 
   
   <section class="sectionText">
-    <h2>References</h2>
+    <h2>Literatur</h2>
     <div class="references">
-    <p>Grundhöfer, A., Kurz, D., Thiele, S., &amp; Bimber, O. (2010). <a href="https://link.springer.com/article/10.1007/s00371-010-0464-8" target="_blank" title="Springer Link: Color invariant chroma keying und color spill neutralization for dynamic scenes und cameras"><cite>Color invariant chroma keying und color spill neutralization for dynamic scenes und cameras.</cite></a> The Visual Computer, 26(9), 1167-1176. doi:10.1007/s00371-010-0464-8</p>
-    <p>Reinhard, E., Adhikhmin, M., Gooch, B., &amp; Shirley, P. (2001). <a href="https://www.cs.tau.ac.il/~turkel/imagepapers/ColorTransfer.pdf" target="_blank" title="IEEE PDF: Color transfer between images"><cite>Color transfer between images.</cite></a> IEEE Computer Graphics und Applications, 21(4), 34-41. doi:10.1109/38.946629</p>
+    <p>Grundhöfer, A., Kurz, D., Thiele, S., &amp; Bimber, O. (2010). <a href="https://link.springer.com/article/10.1007/s00371-010-0464-8" target="_blank" title="Springer Link: Color invariant chroma keying and color spill neutralization for dynamic scenes and cameras"><cite>Color invariant chroma keying and color spill neutralization for dynamic scenes and cameras.</cite></a> The Visual Computer, 26(9), 1167-1176. doi:10.1007/s00371-010-0464-8</p>
+    <p>Reinhard, E., Adhikhmin, M., Gooch, B., &amp; Shirley, P. (2001). <a href="https://www.cs.tau.ac.il/~turkel/imagepapers/ColorTransfer.pdf" target="_blank" title="IEEE PDF: Color transfer between images"><cite>Color transfer between images.</cite></a> IEEE Computer Graphics and Applications, 21(4), 34-41. doi:10.1109/38.946629</p>
     </div>
     
   </section>

@@ -21,19 +21,19 @@ order: 7
 <section class="sectionText">
     
     <h2>Die Aufgabe</h2>
-    <p>The intent of this project was to practice back-end development, using the LAMP stack. Users can sign up to the site, interact with items on the site und are greeted by a customized homeSeite. The site features database driven content, secure authentication handling und AJAX searching und filtering.</p>
+    <p>Ziel dieses Projekts war es, Back-end-Entwicklung mit dem LAMP-Stack zu üben. Nutzer können sich auf der Seite registrieren, mit Inhalten interagieren und werden von einer personalisierten Startseite begrüßt. Die Seite bietet datenbankgesteuerte Inhalte, sichere Authentifizierung sowie AJAX-Suche und -Filterung.</p>
   </section>
 
   
   <section class="sectionMedia">
     <div class="mediaSquare">
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/harbingersofdeath/lqip/screen-home.jpg">
-        <figcaption class="center">HomeSeite</figcaption>
+        <img src="/assets/img/harbingersofdeath/lqip/screen-home.jpg" alt="Harbingers of Death – Startseite">
+        <figcaption class="center">Startseite</figcaption>
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/harbingersofdeath/lqip/screen-omen.jpg">
-        <figcaption class="center">Omen Content Unit</figcaption>
+        <img src="/assets/img/harbingersofdeath/lqip/screen-omen.jpg" alt="Harbingers of Death – Omen-Inhaltsseite">
+        <figcaption class="center">Omen-Inhaltseinheit</figcaption>
       </figure>
     </div>
   </section>
@@ -41,9 +41,9 @@ order: 7
   
   <section class="sectionText">
     <h2>Das Ergebnis</h2>
-    <p>Harbingers of Death presents now-defunct omens sourced from an 1889 article as if they are real, as a satire of modern conspiracy theories. The Content Units are individual omens. They contain information about who is affected, what triggers the omen und the kind of scenario you would encounter them in. Users can explore them through different taxonomies und by search.</p>
-    <p>Visitors can filter the omens by who is at fault, who will die und the aspect of life that they apply to. Visitors may also search omens using a text input.</p>
-    <p>Website members sign in to keep track of which omens they have experienced und whom it indicates is going to die.</p>
+    <p>Harbingers of Death präsentiert veraltete Omen aus einem Artikel von 1889, als wären sie real – als Satire moderner Verschwörungstheorien. Die Content Units sind einzelne Omen. Sie enthalten Informationen darüber, wen sie betreffen, was sie auslöst und in welcher Situation man ihnen begegnet. Nutzer können sie über verschiedene Taxonomien und per Suche erkunden.</p>
+    <p>Besucher können Omen filtern nach Schuldigen, Betroffenen und Lebensaspekt. Außerdem können Omen über ein Textfeld durchsucht werden.</p>
+    <p>Mitglieder melden sich an, um zu verfolgen, welche Omen sie erlebt haben und wen sie als nächstes sterben lassen.</p>
   </section>
 
   
@@ -51,12 +51,12 @@ order: 7
     <div class="mediaSquare">
       
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/harbingersofdeath/lqip/animated-form.jpg" lqip-gif>
-        <figcaption class="center">Form Styling (ARIA-friendly)</figcaption>
+        <img src="/assets/img/harbingersofdeath/lqip/animated-form.jpg" lqip-gif alt="Animiertes Formular mit schwebenden Labels (ARIA-freundlich)">
+        <figcaption class="center">Formular-Styling (ARIA-freundlich)</figcaption>
       </figure>
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/harbingersofdeath/lqip/screen-member-home.jpg">
-        <figcaption class="center">Member HomeSeite</figcaption>
+        <img src="/assets/img/harbingersofdeath/lqip/screen-member-home.jpg" alt="Harbingers of Death – Mitglieder-Startseite">
+        <figcaption class="center">Mitglieder-Startseite</figcaption>
       </figure>
     </div>
   </section>
@@ -64,7 +64,7 @@ order: 7
   
   <section class="sectionText">
     <h2>Der Code</h2>
-    <p>A crucial element for the success of this project was the separation of views und logic. This allowed us to write very clean code. For instance, when I implemented the individual omen's content Seites, I seperated code responsible for displaying the Seite from the code that deals with retrieving und organizing data. At runtime, when the omen route is processed in <code>index.php</code>, the code constructs an <code>Omen</code> instance using <code>OmenCollection.php</code> und passes this instance to the Seite view <code>omen.php</code>.</p>
+    <p>Ein entscheidendes Element für den Erfolg dieses Projekts war die Trennung von Views und Logik. So konnten wir sehr sauberen Code schreiben. Als ich die einzelnen Omen-Inhaltsseiten implementierte, trennte ich Code für die Darstellung von Code für das Abrufen und Organisieren der Daten. Zur Laufzeit wird beim Verarbeiten der Omen-Route in <code>index.php</code> eine <code>Omen</code>-Instanz über <code>OmenCollection.php</code> erzeugt und an die Seitenansicht <code>omen.php</code> übergeben.</p>
   </section>
 
   
@@ -76,7 +76,7 @@ order: 7
 
   
   <section class="sectionText">
-    <p>An interesting challenge was the implementation of floating labels for text inputs. These labels appear like placeholder text until the user enters text into the text input, at which point the labels are shrunk und positioned above the input, like a traditional label. The challenge was making sure that there is no compromise of function for form. As a result, labels und inputs are separate DOM objects und the form is ARIA-friendly.</p>
+    <p>Eine interessante Herausforderung war die Implementierung schwebender Labels für Texteingaben. Die Labels erscheinen wie Platzhaltertext, bis der Nutzer Text eingibt; dann werden sie verkleinert und oberhalb des Eingabefelds positioniert – wie ein klassisches Label. Die Herausforderung bestand darin, Funktion und Form nicht zu beeinträchtigen. Labels und Eingabefelder sind daher separate DOM-Objekte, und das Formular ist ARIA-freundlich.</p>
   </section>
 
   
@@ -86,15 +86,15 @@ order: 7
 
   
   <section class="sectionText">
-    <p>For this project I was also responsible for setting up our database, as well as all database queries. I designed the database with the following tables: user (to store user information), user_omen (an associative table to store which omens a user encountered), omen (to store information about each omen) und three taxonomy tables: aspect, death und fault (for tagging omens). The only two tables that can be modified through our website are the user und user_omen tables. The omen und taxology tables on the other hand are static.</p>
+    <p>Für dieses Projekt war ich außerdem für die Einrichtung der Datenbank und aller Abfragen verantwortlich. Ich entwarf die Datenbank mit folgenden Tabellen: <code>user</code> (Nutzerinformationen), <code>user_omen</code> (Zuordnungstabelle für erlebte Omen), <code>omen</code> (Informationen zu jedem Omen) sowie drei Taxonomie-Tabellen: <code>aspect</code>, <code>death</code> und <code>fault</code> (zum Taggen von Omen). Über die Website änderbar sind nur <code>user</code> und <code>user_omen</code>; die Omen- und Taxonomie-Tabellen sind statisch.</p>
   </section>
 
   
   <section class="sectionMedia">
     <div class="mediaColumn">
       <figure onclick="viewImage(this)">
-        <img src="/assets/img/harbingersofdeath/lqip/db.jpg">
-        <figcaption class="center">ER Diagram of our database.</figcaption>
+        <img src="/assets/img/harbingersofdeath/lqip/db.jpg" alt="ER-Diagramm der Harbingers-of-Death-Datenbank">
+        <figcaption class="center">ER-Diagramm unserer Datenbank.</figcaption>
       </figure>
     </div>
   </section>
