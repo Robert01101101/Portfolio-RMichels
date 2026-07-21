@@ -117,19 +117,19 @@ describe('projectToTileData', () => {
     expect(projectToTileData(project, 'de').href).toBe('/de/futureEarth');
   });
 
-  it('routes in-development tourguide to /development/tourguide', () => {
+  it('routes published tourguide to /tourguide', () => {
     const project = mockProject('tourguide.md', {
       name: { en: 'Tourguide', de: 'Tourguide' },
       projectType: { en: 'Flutter App', de: 'Flutter App' },
-      inDevelopment: true,
+      inDevelopment: false,
       roles: ['android', 'design'],
     });
 
     expect(projectToTileData(project, 'en')).toMatchObject({
       slug: 'tourguide',
-      inDevelopment: true,
-      href: '/development/tourguide',
+      inDevelopment: false,
+      href: '/tourguide',
     });
-    expect(projectToTileData(project, 'de').href).toBe('/de/development/tourguide');
+    expect(projectToTileData(project, 'de').href).toBe('/de/tourguide');
   });
 });

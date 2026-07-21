@@ -113,7 +113,7 @@ const PROJECTS = [
   {
     slug: 'tourguide',
     order: 3,
-    inDevelopment: true,
+    inDevelopment: false,
     name: { en: 'Tourguide', de: 'Tourguide' },
     type: { en: 'Flutter App', de: 'Flutter App' },
     year: '2024',

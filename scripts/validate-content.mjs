@@ -240,23 +240,8 @@ function checkProjects() {
 /**
  * @param {Map<string, { slug: string, inDevelopment: boolean, draft: boolean }>} projectsBySlug
  */
-function checkInDevelopmentRouting(projectsBySlug) {
-  for (const [slug, project] of projectsBySlug) {
-    if (project.inDevelopment && slug !== 'tourguide') {
-      fail(slug, 'inDevelopment', 'only tourguide may have inDevelopment: true');
-    }
-    if (!project.inDevelopment && slug === 'tourguide') {
-      fail(slug, 'inDevelopment', 'tourguide must have inDevelopment: true');
-    }
-  }
-
-  const publishedSlugs = [...projectsBySlug.values()]
-    .filter((project) => !project.draft && !project.inDevelopment)
-    .map((project) => project.slug);
-
-  if (publishedSlugs.includes('tourguide')) {
-    fail('tourguide', 'inDevelopment', 'tourguide must not be in published [slug] route set');
-  }
+function checkInDevelopmentRouting(_projectsBySlug) {
+  // inDevelopment projects are excluded from [slug] via Astro getStaticPaths filters.
 }
 
 function checkUiKeyParity() {

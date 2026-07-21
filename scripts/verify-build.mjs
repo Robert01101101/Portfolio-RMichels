@@ -98,10 +98,8 @@ const requiredPaths = [
   'projects/index.html',
   'about/index.html',
   'futureEarth/index.html',
-  'development/tourguide/index.html',
   'de/index.html',
   'de/futureEarth/index.html',
-  'de/development/tourguide/index.html',
 ];
 
 for (const relPath of requiredPaths) {
@@ -115,8 +113,6 @@ const hasSitemap =
 if (!hasSitemap) {
   errors.push('sitemap-index.xml or sitemap-0.xml');
 }
-
-forbidPath('tourguide');
 
 const lfsCheckedAssets = [
   'assets/img/portrait.jpg',
