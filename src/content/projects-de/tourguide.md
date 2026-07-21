@@ -7,7 +7,7 @@ projectType:
   en: "Flutter App"
   de: "Flutter App"
 year: "2024"
-inDevelopment: true
+inDevelopment: false
 roles: ["android", "design"]
 description:
   en: "A crossplatform Flutter app that helps users explore tours with navigation, information on places, and chat with an AI tourguide. A personal project currently in development."
