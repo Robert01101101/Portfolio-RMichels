@@ -1,0 +1,46 @@
+---
+import { parseGlossaryText } from '../lib/glossary';
+import { t, type Locale } from '../lib/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+---
+
+<div class="aboutMain">
+  <h1 id="About">{t('about_me', locale)}</h1>
+  <p class="aboutIntro">👋 {t('hi_there', locale)}</p>
+  <p set:html={parseGlossaryText(t('about_bio', locale), locale)} />
+
+  <h2>{t('about_experience', locale)}</h2>
+  <ul class="aboutHistory">
+    <li>
+      <div class="aboutHistory-entryHead">
+        <strong>{t('about_exp_qwadra_role', locale)}</strong>
+        <span class="aboutHistory-dates">{t('about_exp_qwadra_dates', locale)}</span>
+      </div>
+      <div class="aboutHistory-org">{t('about_exp_qwadra_org', locale)}</div>
+      <p set:html={parseGlossaryText(t('about_exp_qwadra_desc', locale), locale)} />
+    </li>
+    <li>
+      <div class="aboutHistory-entryHead">
+        <strong>{t('about_exp_clirio_role', locale)}</strong>
+        <span class="aboutHistory-dates">{t('about_exp_clirio_dates', locale)}</span>
+      </div>
+      <div class="aboutHistory-org">{t('about_exp_clirio_org', locale)}</div>
+      <p set:html={parseGlossaryText(t('about_exp_clirio_desc', locale), locale)} />
+    </li>
+  </ul>
+
+  <h2>{t('about_education', locale)}</h2>
+  <ul class="aboutHistory aboutHistory--education">
+    <li>
+      <div class="aboutHistory-entryHead">
+        <strong set:html={parseGlossaryText(t('about_edu_degree', locale), locale)} />
+      </div>
+      <div class="aboutHistory-org">{t('about_edu_school', locale)}</div>
+    </li>
+  </ul>
+</div>

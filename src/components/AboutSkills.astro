@@ -1,0 +1,26 @@
+---
+import { getAboutSkillGroups } from '../lib/about-skills';
+import { t, type Locale } from '../lib/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const groups = getAboutSkillGroups(locale);
+---
+
+<div class="skills">
+  {
+    groups.map((group) => (
+      <div>
+        <h3>{group.titleKey ? t(group.titleKey, locale) : group.title}</h3>
+        <ul>
+          {group.skills.map((skill) => (
+            <li>{skill.label}</li>
+          ))}
+        </ul>
+      </div>
+    ))
+  }
+</div>

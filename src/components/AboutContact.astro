@@ -1,0 +1,30 @@
+---
+import Icon from './Icon.astro';
+import { t, type Locale } from '../lib/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+
+const resumeFile =
+  locale === 'de'
+    ? '/assets/other/RobertMichelsLebenslauf.pdf'
+    : '/assets/other/RobertMichelsResume.pdf';
+---
+
+<div class="contact">
+  <ul class="icons">
+    <div class="emailContainer">
+      <a href="mailto: hi@rmichels.com" target="_blank" title="E-Mail | Right-click to copy to clipboard" id="emailLink">
+        <li><Icon name="envelope" size="2x" id="email" /></li>
+      </a>
+    </div>
+    <a href="https://linkedin.com/in/robert-michels" target="_blank" title="LinkedIn"><li><Icon name="linkedin-in" size="2x" /></li></a>
+    <a href="https://github.com/Robert01101101" target="_blank" title="GitHub"><li><Icon name="github" size="2x" /></li></a>
+    <a href="https://play.google.com/store/apps/developer?id=Studio+RM" target="_blank" title="Google Play"><li><Icon name="google-play" size="2x" /></li></a>
+    <a href="https://rmichels.itch.io/" target="_blank" title="itch.io"><li><Icon name="itch-io" size="2x" /></li></a>
+  </ul>
+  <a href={resumeFile} class="aboutResume">{t('resume', locale)}</a>
+</div>

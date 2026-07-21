@@ -94,7 +94,7 @@ const showHomeIcon = pageType === 'project' || pageType === 'about';
           </script>
           <slot />
         </main>
-        <Footer locale={locale} />
+        <Footer locale={locale} pageType={pageType} />
       </div>
     </div>
     <script>
