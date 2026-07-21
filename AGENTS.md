@@ -120,8 +120,9 @@ npm run test:content && npm run build && npm run test:verify
 
 ## Deploy
 
-- `main` branch: CI runs `npm ci`, sync assets, `npm run check`, `npm run test:unit`, `npm run test:content`, `npm run build`, `npm run test:verify`, Playwright E2E
-- Deploy uploads `./dist/` with `state-name: .ftp-deploy-sync-state-dist.json` and `dangerous-clean-slate: false` so the legacy full-repo FTP state cannot delete `/subdomains/*`; remove stale PHP files on the server root manually once after cutover
+- **PR → `main`:** CI runs full validation — `npm ci`, sync assets, `npm run check`, `npm run test:unit`, `npm run test:content`, `npm run build`, `npm run test:verify`, Playwright E2E
+- **Merge to `main`:** deploy workflow builds and uploads `./dist/` only (`npm run build`, `npm run test:verify`, FTPS); tests are not re-run post-merge
+- Deploy uses `state-name: .ftp-deploy-sync-state-dist.json` and `dangerous-clean-slate: false` so the legacy full-repo FTP state cannot delete `/subdomains/*`; remove stale PHP files on the server root manually once after cutover
 - `subdomains/` are deployed manually via FTPS (not in CI)
 
 ## Never Edit or Commit

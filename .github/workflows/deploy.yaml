@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -25,15 +25,6 @@ jobs:
 
       - name: Sync assets to public/
         run: cp -r assets public/assets
-
-      - name: Astro check
-        run: npm run check
-
-      - name: Unit tests
-        run: npm run test:unit
-
-      - name: Content validation
-        run: npm run test:content
 
       - name: Build
         run: npm run build
