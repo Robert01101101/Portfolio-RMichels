@@ -109,6 +109,9 @@
 
       max-width: 100%;
       width: 800px;
+      height: auto;
+      object-fit: cover;
+
       @include lg {
         height: 600px;
       }
