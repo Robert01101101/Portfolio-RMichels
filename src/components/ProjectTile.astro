@@ -1,7 +1,6 @@
 ---
 import type { Locale } from '../lib/i18n';
-import { getLocalized } from '../lib/projects';
-import type { CollectionEntry } from 'astro:content';
+import { t } from '../lib/i18n';
 
 interface Props {
   slug: string;
@@ -30,7 +29,7 @@ const roleString = roles.join(',');
         alt={name}
         class:list={inDevelopment ? ['inDevelopment'] : undefined}
       />
-      {inDevelopment && <div class="inDevelopmentText">{locale === 'de' ? 'In Entwicklung' : 'In Development'}</div>}
+      {inDevelopment && <div class="inDevelopmentText">{t('in_development', locale)}</div>}
       <div class="projJScontainer">
         <h2 class="projLabel">{name}</h2>
         <h3 class="projMeta">{type}</h3>

@@ -39,13 +39,11 @@
       position: absolute;
       bottom: 0;
       margin: 0 1rem;
-      will-change: transform;
 
       @include xl {
         margin: 0;
         position: static;
         bottom: auto;
-        will-change: auto;
       }
     }
 
@@ -62,7 +60,6 @@
         left: 1rem;
         left: -4rem;
         font-size: 4em;
-        will-change: transform;
       }
 
       margin: 0;
@@ -70,14 +67,40 @@
       color: _colour(white); /* TODO: wrap */
     }
 
+  @media (hover: hover) and (pointer: fine) {
     &:hover:not(.inDevelopment) {
       h2::after {
-        width: calc(100% + 6rem);
+        transform: scaleX(1);
+      }
+      > a::before {
+        opacity: 0;
       }
       img {
         box-shadow: 5px 5px 20px _colour(shadow);
         transform: scale(1.02);
-        filter: brightness(100%);
+      }
+    }
+  }
+
+    > a {
+      position: relative;
+      display: block;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: min(100%, 800px);
+        aspect-ratio: 4 / 3;
+        background-color: rgba(black, 0.45);
+        pointer-events: none;
+        z-index: 50;
+        transition: opacity _duration(default);
+
+        @include xl {
+          background-color: rgba(black, 0.3);
+        }
       }
     }
 
@@ -88,21 +111,18 @@
         background-color: _colour(blue);
         left: -3rem;
         top: -0.6rem;
-        width: 0%;
+        width: calc(100% + 6rem);
         height: calc(100% + 1.2rem);
         z-index: -1;
-        transition: _duration(default);
+        transform: scaleX(0);
+        transform-origin: left center;
+        transition: transform _duration(default);
         box-shadow: 5px 5px 20px _colour(shadow);
       }
     }
 
     img {
-      filter: brightness(55%);
       aspect-ratio: 4 / 3;
-
-      @include xl {
-        filter: brightness(70%);
-      }
 
       transition: _duration(default);
       box-shadow: 5px 5px 20px _colour(shadow_light);
@@ -129,6 +149,10 @@
       &.inDevelopment {
         filter: brightness(40%) contrast(70%);
       }
+    }
+
+    > a:has(img.inDevelopment)::before {
+      background-color: rgba(black, 0.6);
     }
 
     .inDevelopmentText {

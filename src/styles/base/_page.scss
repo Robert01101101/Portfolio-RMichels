@@ -89,6 +89,13 @@ main {
 	}
 
 	.mockup  {
+		.mockupFallback {
+			display: block;
+			width: 100%;
+			height: auto;
+			object-fit: contain;
+		}
+
 		&.hololens{
 			max-width: 200%;
 			margin: -8rem -2rem;

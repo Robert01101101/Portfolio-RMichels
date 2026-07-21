@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import type { Locale } from '../lib/i18n';
+import { heroLqipExists } from '../lib/assets';
 import { getLocalized, getProjectSlug } from '../lib/projects';
 import Icon from './Icon.astro';
 
@@ -13,6 +14,9 @@ const { project, locale } = Astro.props;
 const p = project.data;
 const slug = getProjectSlug(project);
 const links = p.links ?? [];
+const hasHeroLqip = heroLqipExists(slug);
+const heroSrc = `/assets/img/${slug}.jpg`;
+const heroName = getLocalized(p.name, locale);
 ---
 
 <div class="projectDownArrowWrapper">
@@ -24,7 +28,7 @@ const links = p.links ?? [];
   <div class="row">
     <div class="col-50">
       <div class="landingText">
-        <h1>{getLocalized(p.name, locale)}</h1>
+        <h1>{heroName}</h1>
         <p>{getLocalized(p.description, locale)}</p>
         <br />
         <div class="projectCallToAction">
@@ -35,12 +39,28 @@ const links = p.links ?? [];
       </div>
     </div>
     <div class="col-50">
+      {hasHeroLqip && (
+        <img
+          src={`/assets/img/lqip/${slug}.jpg`}
+          class:list={['imgBG', p.heroAltLayout && 'alt']}
+          alt=""
+          aria-hidden="true"
+          lqip-ignore
+          width="800"
+          height="600"
+          decoding="async"
+        />
+      )}
       <img
-        src={`/assets/img/${slug}.jpg`}
-        class:list={['imgBG', p.heroAltLayout && 'alt']}
-        alt=""
+        src={heroSrc}
+        alt={heroName}
+        class="heroImg"
+        fetchpriority="high"
+        loading="eager"
+        decoding="async"
+        width="800"
+        height="600"
       />
-      <img src={`/assets/img/${slug}.jpg`} alt={getLocalized(p.name, locale)} />
     </div>
   </div>
 </div>
