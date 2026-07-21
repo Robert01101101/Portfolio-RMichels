@@ -1,6 +1,7 @@
 // @ts-nocheck
 import * as THREE from 'three';
 import { calcDocHeight, mapVal } from './tools';
+import { getWebGLPixelRatio, isLowPoweredDevice } from '../lib/device-capability';
 import { getScrollLenis } from '../lib/scroll-lenis';
 import {
   particleWavesFragmentShader,
@@ -14,11 +15,6 @@ function getParticleGrid() {
   if (w < 768) return { amountX: 90, amountY: 20 };
   if (w < 1200) return { amountX: 120, amountY: 30 };
   return { amountX: 180, amountY: 40 };
-}
-
-function isLowPoweredDevice() {
-  const userAgent = navigator.userAgent.toLowerCase();
-  return /mobile|android|iphone|ipod/.test(userAgent);
 }
 
 export function initParticleWaves() {
@@ -68,7 +64,7 @@ export function initParticleWaves() {
   const canvas = renderer.domElement;
   canvas.style.visibility = 'hidden';
   canvas.classList.add('wavesCanvas');
-  renderer.setPixelRatio(window.devicePixelRatio);
+  renderer.setPixelRatio(getWebGLPixelRatio());
   renderer.setSize(window.innerWidth, window.innerHeight);
   container.appendChild(canvas);
 
@@ -89,6 +85,7 @@ export function initParticleWaves() {
   const onWindowResize = () => {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
+    renderer.setPixelRatio(getWebGLPixelRatio());
     renderer.setSize(window.innerWidth, window.innerHeight);
     updateCamera();
   };

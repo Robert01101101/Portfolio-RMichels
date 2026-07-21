@@ -1,6 +1,7 @@
 // @ts-nocheck
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import { getWebGLPixelRatio } from '../lib/device-capability';
 
 export function initThreeMockup() {
   const canvas = document.querySelector<HTMLCanvasElement>('#threeModel');
@@ -12,6 +13,7 @@ export function initThreeMockup() {
 
   const scene = new THREE.Scene();
   const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+  renderer.setPixelRatio(getWebGLPixelRatio());
   const camera = new THREE.PerspectiveCamera(45, canvas.clientWidth / canvas.clientHeight, 0.1, 100);
   camera.position.z = 5;
 
@@ -42,6 +44,7 @@ export function initThreeMockup() {
 
   function animate() {
     requestAnimationFrame(animate);
+    renderer.setPixelRatio(getWebGLPixelRatio());
     renderer.setSize(canvas.clientWidth, canvas.clientHeight);
     camera.aspect = canvas.clientWidth / canvas.clientHeight;
     camera.updateProjectionMatrix();
