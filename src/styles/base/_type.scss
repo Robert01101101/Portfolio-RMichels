@@ -111,3 +111,12 @@ code {
 	padding: 0rem .3rem;
 	font-weight: _font(weight);
 }
+
+pre code {
+	display: block;
+	border: none;
+	border-radius: 0;
+	padding: 0;
+	font-size: inherit;
+	font-weight: inherit;
+}

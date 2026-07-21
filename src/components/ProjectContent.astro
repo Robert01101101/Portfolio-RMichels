@@ -1,0 +1,13 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { renderProjectMarkdown } from '../lib/render-project-markdown';
+
+interface Props {
+  project: CollectionEntry<'projects'> | CollectionEntry<'projects-de'>;
+}
+
+const { project } = Astro.props;
+const { html } = await renderProjectMarkdown(project.body ?? '', project.data);
+---
+
+<Fragment set:html={html} />

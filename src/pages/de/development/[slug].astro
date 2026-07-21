@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import ProjectLayout from '../../../layouts/ProjectLayout.astro';
+import ProjectContent from '../../../components/ProjectContent.astro';
 import { getProjectSlug } from '../../../lib/projects';
 
 export async function getStaticPaths() {
@@ -15,10 +16,9 @@ export async function getStaticPaths() {
 }
 
 const { project } = Astro.props;
-const { Content } = await project.render();
 const locale = 'de' as const;
 ---
 
 <ProjectLayout project={project} locale={locale}>
-  <Content />
+  <ProjectContent project={project} />
 </ProjectLayout>
