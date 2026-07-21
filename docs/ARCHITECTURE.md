@@ -43,20 +43,27 @@ flowchart LR
 
 ## Client Islands
 
-Loaded per page via `<script src="..." client:load|visible|idle>`:
+Loaded per page via dynamic imports in `PageBoot.ts` or page `<script>` tags:
 
 | Island | Pages |
 |--------|-------|
-| LandingModel | Home |
-| ProjectFilter | Home, Projects, About |
+| HomeWebGL | Home |
+| ProjectFilter | Home, Projects |
 | ImageViewer, Lqip | Case studies |
 | ThreeMockup | tourguide, clirioScanViews |
-| ParticleWaves | All (footer) |
+| WebGLBackground | All (footer waves) |
 | Menu, LenisSetup | All |
 
 ## Content Model
 
-Frontmatter fields (see `src/content/config.ts`):
+Two collections share the same Zod schema (`src/content/config.ts`):
+
+| Collection | Purpose |
+|------------|---------|
+| `projects` | EN markdown body + bilingual frontmatter |
+| `projects-de` | DE markdown body + duplicated frontmatter (parity validated in CI) |
+
+Frontmatter fields:
 
 - `slug` — URL override (camelCase; not in Zod — Astro reserved)
 - `name`, `projectType`, `description` — `{ en, de }`
@@ -64,12 +71,27 @@ Frontmatter fields (see `src/content/config.ts`):
 
 Markdown body = case study HTML sections (former `#projContent`).
 
+## Assets (local dev)
+
+Large binaries live in tracked `assets/` at repo root. For local dev and CI, copy or junction into `public/assets/`:
+
+```bash
+cp -r assets public/assets   # CI / Linux
+# Windows: mklink /J public\assets assets
+```
+
+Validation checks both `public/assets/` and `assets/`.
+
 ## Deploy
 
 - **PR → `main`:** `npm ci` → sync assets → check → test → build → verify → Playwright E2E
-- **Merge to `main`:** build → verify → `dist/` via FTPS (`dangerous-clean-slate: false`, dist-specific state file; does not touch `/subdomains/*`)
+- **Merge to `main`:** check → test:unit → test:content → build → verify → `dist/` via FTPS (`dangerous-clean-slate: false`, dist-specific state file; does not touch `/subdomains/*`)
 - `public/.htaccess` → copied to `dist/` for Apache directory index and trailing slashes
 
 ## Subdomains
 
 `subdomains/tourguide/` and others are deployed manually via FTPS; not part of Astro `dist/` or CI.
+
+## Legacy
+
+Pre-Astro PHP/LAMP artifacts are archived in `archive/lamp-legacy/` (not used at runtime).

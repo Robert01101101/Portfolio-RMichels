@@ -28,7 +28,7 @@ npm run test:verify    # Post-build dist/ route checks (run after build)
 npm run test:e2e       # Playwright (after build)
 ```
 
-- Content export (dev helper): `npm run export:content` — regenerates markdown from embedded metadata; applies PO translations for DE when `scripts/archive/messages.po` is present
+- Content export (dev helper): `npm run export:content` — **deprecated**; syncs DE bodies from EN markdown with optional PO translations (see `scripts/README.md`)
 - Commit `package-lock.json`; `node_modules/` is gitignored
 
 ## Directory Map
@@ -54,7 +54,9 @@ npm run test:e2e       # Playwright (after build)
 │   ├── pages/               # EN routes
 │   └── pages/de/            # DE routes
 ├── scripts/
-│   └── export-db-to-content.mjs
+│   ├── validate-content.mjs # npm run test:content
+│   ├── verify-build.mjs
+│   └── export-db-to-content.mjs  # deprecated — see scripts/README.md
 ├── subdomains/              # Manual deploy only (tourguide, etc.)
 └── docs/
 ```
@@ -92,7 +94,7 @@ UI strings: `t('key', locale)` from `src/lib/i18n.ts`. Language toggle links to 
 
 - Case study slugs use camelCase via `slug:` frontmatter (e.g. `futureEarth`)
 - Homepage filter: `/?filter=vr` sets `visitorFilter` cookie
-- `tourguide` is `inDevelopment` — tile links to `/development/tourguide`
+- `tourguide` is published at `/tourguide` (beta on Google Play and web; `inDevelopment: false`)
 
 ## Testing
 
@@ -121,7 +123,7 @@ npm run test:content && npm run build && npm run test:verify
 ## Deploy
 
 - **PR → `main`:** CI runs full validation — `npm ci`, sync assets, `npm run check`, `npm run test:unit`, `npm run test:content`, `npm run build`, `npm run test:verify`, Playwright E2E
-- **Merge to `main`:** deploy workflow builds and uploads `./dist/` only (`npm run build`, `npm run test:verify`, FTPS); tests are not re-run post-merge
+- **Merge to `main`:** deploy workflow runs `check`, `test:unit`, `test:content`, build, `test:verify`, then FTPS upload of `./dist/`
 - Deploy uses `state-name: .ftp-deploy-sync-state-dist.json` and `dangerous-clean-slate: false` so the legacy full-repo FTP state cannot delete `/subdomains/*`; remove stale PHP files on the server root manually once after cutover
 - `subdomains/` are deployed manually via FTPS (not in CI)
 
