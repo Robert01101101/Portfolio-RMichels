@@ -1,0 +1,22 @@
+---
+import { getGlossaryLabel, getGlossaryTip } from '../lib/glossary';
+import type { Locale } from '../lib/i18n';
+
+interface Props {
+  term: string;
+  locale: Locale;
+  label?: string;
+}
+
+const { term, locale, label } = Astro.props;
+const tip = getGlossaryTip(term, locale);
+const displayLabel = label ?? getGlossaryLabel(term);
+---
+
+{
+  tip ? (
+    <abbr title={tip}>{displayLabel}</abbr>
+  ) : (
+    displayLabel
+  )
+}

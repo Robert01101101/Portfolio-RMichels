@@ -72,7 +72,6 @@ const showHomeIcon = pageType === 'project' || pageType === 'about';
     <link rel="alternate" hreflang="de" href={deUrl} />
     <link rel="alternate" hreflang="x-default" href={enUrl} />
     <link rel="stylesheet" href="/css/normalize.css" />
-    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.14/dist/lenis.css" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/icon/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/icon/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/icon/favicon-16x16.png" />
@@ -95,7 +94,7 @@ const showHomeIcon = pageType === 'project' || pageType === 'about';
           </script>
           <slot />
         </main>
-        <Footer locale={locale} />
+        <Footer locale={locale} pageType={pageType} />
       </div>
     </div>
     <script>

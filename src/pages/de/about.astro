@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import Icon from '../../components/Icon.astro';
+import AboutContact from '../../components/AboutContact.astro';
+import AboutMain from '../../components/AboutMain.astro';
+import AboutSkills from '../../components/AboutSkills.astro';
 import { t } from '../../lib/i18n';
 
 const locale = 'de' as const;
@@ -17,45 +19,12 @@ const locale = 'de' as const;
     <div>
       <img src="/assets/img/portrait.jpg" alt="Robert Michels" />
     </div>
-    <div>
-      <h1 id="About">{t('about_me', locale)}</h1>
-      <p>👋 {t('hi_there', locale)}</p>
-      <p>{t('about_bio1', locale)}</p>
-      <p>{t('about_bio2', locale)}</p>
-      <p>{t('about_bio3', locale)}</p>
-      <p>{t('about_bio4', locale)}</p>
-      <div class="contact">
-        {t('say_hi', locale)}
-        <ul class="icons">
-          <a href="mailto: hi@rmichels.com" target="_blank" title="E-Mail"><li><Icon name="envelope" size="2x" /></li></a>
-          <a href="https://linkedin.com/in/robert-michels" target="_blank" title="LinkedIn"><li><Icon name="linkedin-in" size="2x" /></li></a>
-        </ul>
-      </div>
-    </div>
-    <div>
+    <AboutMain locale={locale} />
+    <div class="aboutAside">
       <h2>{t('skills', locale)}</h2>
-      <div class="skills">
-        <div>
-          <h3>{t('programming', locale)}</h3>
-          <ul><li>C#</li><li>PHP</li><li>Dart</li><li>JavaScript</li><li>TypeScript</li></ul>
-        </div>
-        <div>
-          <h3>{t('frameworks', locale)}</h3>
-          <ul><li>React</li><li>Flutter</li><li>Three.js</li><li>Astro</li></ul>
-        </div>
-        <div>
-          <h3>{t('development', locale)}</h3>
-          <ul><li>Unity</li><li>Git</li><li>CI/CD</li></ul>
-        </div>
-        <div>
-          <h3>Design</h3>
-          <ul><li>UX/UI</li><li>Figma</li><li>XR</li></ul>
-        </div>
-        <div>
-          <h3>{t('other', locale)}</h3>
-          <ul><li>OOP</li><li>GIS</li><li>Scrum</li></ul>
-        </div>
-      </div>
+      <AboutSkills locale={locale} />
+      <h2 class="aboutSayHi-heading">{t('say_hi_heading', locale)}</h2>
+      <AboutContact locale={locale} />
     </div>
   </section>
 </BaseLayout>

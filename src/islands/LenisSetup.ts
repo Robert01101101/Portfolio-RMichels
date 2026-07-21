@@ -1,4 +1,5 @@
 import Lenis from 'lenis';
+import 'lenis/dist/lenis.css';
 import { setScrollLenis } from '../lib/scroll-lenis';
 
 declare global {
@@ -11,23 +12,22 @@ export function initLenis() {
   let currentlyEnabled = true;
   const stored = localStorage.getItem('lenisSmoothScrolling') !== 'false';
 
-  const createLenis = (enabled: boolean) =>
-    new Lenis({
-      smoothWheel: enabled,
-    });
+  const lenis = new Lenis({
+    smoothWheel: stored,
+    autoRaf: true,
+  });
 
-  const lenis = createLenis(stored);
   setScrollLenis(lenis);
   window.locoScroll = { update: () => lenis.resize() };
 
-  function raf(time: number) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-  }
-  requestAnimationFrame(raf);
+  const refreshScroll = () => lenis.resize();
+  document.fonts?.ready?.then(refreshScroll);
+  window.addEventListener('load', refreshScroll);
 
-  const toggle = document.getElementById('lenisScrollToggle') as HTMLInputElement | null;
-  if (toggle) {
+  const setupToggle = () => {
+    const toggle = document.getElementById('lenisScrollToggle') as HTMLInputElement | null;
+    if (!toggle) return;
+
     toggle.checked = stored;
     toggle.addEventListener('change', (e) => {
       const enabled = (e.target as HTMLInputElement).checked;
@@ -35,6 +35,12 @@ export function initLenis() {
       if (currentlyEnabled !== enabled) window.location.reload();
       currentlyEnabled = enabled;
     });
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupToggle);
+  } else {
+    setupToggle();
   }
 }
 

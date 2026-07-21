@@ -1,6 +1,7 @@
 // @ts-nocheck
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import { getWebGLPixelRatio, isLowPoweredDevice } from '../lib/device-capability';
 import {
   particleWavesFragmentShader,
   particleWavesVertexShader,
@@ -22,14 +23,16 @@ function resizeRendererToDisplaySize(
   camera: THREE.PerspectiveCamera,
 ) {
   const canvas = renderer.domElement;
-  const pixelRatio = window.devicePixelRatio;
   const displayWidth = canvas.clientWidth || getCanvasDisplaySize().width;
   const displayHeight = canvas.clientHeight || getCanvasDisplaySize().height;
-  const width = displayWidth * pixelRatio;
-  const height = displayHeight * pixelRatio;
-  const needResize = canvas.width !== width || canvas.height !== height;
+  const pixelRatio = getWebGLPixelRatio();
+  const needResize =
+    canvas.width !== Math.floor(displayWidth * pixelRatio) ||
+    canvas.height !== Math.floor(displayHeight * pixelRatio) ||
+    renderer.getPixelRatio() !== pixelRatio;
   if (needResize) {
-    renderer.setSize(width, height, false);
+    renderer.setPixelRatio(pixelRatio);
+    renderer.setSize(displayWidth, displayHeight, false);
     camera.aspect = displayWidth / displayHeight;
     camera.updateProjectionMatrix();
   }
@@ -65,8 +68,6 @@ export function initLandingModel() {
   const tmpImage = document.getElementById('landingModelImage');
   if (!canvas || !tmpImage) return;
 
-  const isLowPoweredDevice = () => /mobile|android|iphone|ipod/.test(navigator.userAgent.toLowerCase());
-
   if (isLowPoweredDevice()) {
     console.warn('Low-powered device detected. Aborting model load.');
     return;
@@ -74,6 +75,7 @@ export function initLandingModel() {
 
   const scene = new THREE.Scene();
   const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+  renderer.setPixelRatio(getWebGLPixelRatio());
   const tmpSpinner = document.getElementById('spinner');
   let doneLoading = false;
 
@@ -82,8 +84,7 @@ export function initLandingModel() {
   }, 300);
 
   const { width: initialWidth, height: initialHeight } = getCanvasDisplaySize();
-  const pixelRatio = window.devicePixelRatio;
-  renderer.setSize(initialWidth * pixelRatio, initialHeight * pixelRatio, false);
+  renderer.setSize(initialWidth, initialHeight, false);
 
   const camera = new THREE.PerspectiveCamera(75, initialWidth / initialHeight, 0.1, 1000);
   camera.position.z = window.innerWidth > smBreakPoint ? 11 : 15;

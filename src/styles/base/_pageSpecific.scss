@@ -19,11 +19,13 @@ section#Projects{
 
 	h3 {
 		margin-top: 0;
+		margin-bottom: 0.35rem;
 	}
 
 	ul {
 		padding-left: 0rem;
 		list-style-type: none;
+		margin-top: 0;
 
 		display: flex;
 		column-gap: 1rem;
@@ -186,6 +188,95 @@ section#Projects{
 			
 		}
 
+		.aboutMain {
+			h1 {
+				margin-top: 0;
+				margin-bottom: 1rem;
+			}
+
+			h2 {
+				margin-top: 2rem;
+				margin-bottom: 1rem;
+			}
+
+			abbr[title] {
+				text-decoration: underline dotted;
+				text-decoration-thickness: 1px;
+				text-underline-offset: 0.15em;
+				cursor: help;
+			}
+		}
+
+		> div:last-child > h2,
+		.aboutAside > h2 {
+			margin-top: 2rem;
+			margin-bottom: 1rem;
+
+			@include xl {
+				margin-top: 0;
+			}
+
+			&.aboutSayHi-heading {
+				margin-top: 2rem;
+			}
+		}
+
+		.aboutAside .contact {
+			margin-top: 0;
+		}
+
+		.aboutHistory {
+			list-style: none;
+			padding: 0;
+			margin: 0 0 0.5rem;
+
+			li {
+				margin-bottom: 1.5rem;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+
+			&-entryHead {
+				display: flex;
+				justify-content: space-between;
+				align-items: baseline;
+				gap: 1rem;
+				flex-wrap: wrap;
+			}
+
+			&-dates {
+				font-family: _font(family-alt);
+				font-size: 0.9em;
+				opacity: 0.85;
+				white-space: nowrap;
+			}
+
+			&-org {
+				margin: 0.2rem 0 0.4rem;
+				opacity: 0.9;
+			}
+
+			p {
+				margin: 0;
+			}
+
+			&--education {
+				margin-bottom: 1.5rem;
+			}
+		}
+
+		.aboutResume {
+			font-weight: bold;
+			text-decoration: none;
+			color: _colour(white);
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
 		> div {
 			//pic
 			&:first-of-type {
@@ -219,13 +310,18 @@ section#Projects{
 
 .contact{
 	display: flex;
-	gap: 2rem;
+	flex-wrap: wrap;
+	gap: 1rem 2rem;
 	align-items: center;
 	font-weight: bold;
-	margin-top: 3rem;
 
 	.icons{
-		gap: 2rem;
+		gap: 1.5rem;
+		flex-wrap: wrap;
+
+		@include md {
+			gap: 2rem;
+		}
 	}
 }
 

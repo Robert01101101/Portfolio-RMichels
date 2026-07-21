@@ -3,37 +3,35 @@ body, input, select, textarea, p, code {
 		color: _colour(white);
 		font-family: _font(family-body);
 		
-		font-size: 16px;
-    	//font-size: 1.3vw;
-    	//font-size: 12px;
+		font-size: 15px;
 
-		font-weight: _font(weight);
-		line-height: 1.65;
+		font-weight: _font(weight-medium);
+		line-height: 1.7;
 		
 		
 		//----------------------- MEDIA QUERIES -----------------------//
 		@include sm {
-        	font-size: 16px;
+        	font-size: 15px;
         	//color: green;
 	    }
 
 	    @include md {
-        	font-size: 18px;
+        	font-size: 17px;
         	//color: blue;
 	    }
 
 	    @include lg {
-	        font-size: 19px;
+	        font-size: 18px;
 	        //color: yellow;
 	    }
 
 	    @include xl {
-	        font-size: 19px;
+	        font-size: 18px;
 	        //color: orange;
 	    }
 
 		@include xxxl {
-	        font-size: 20px;
+	        font-size: 19px;
 	        //color: orange;
 	    }
 		
@@ -80,18 +78,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size: 2em;
-	@include lg { font-size: 2.5em; }
+	font-size: 1.87em;
+	@include lg { font-size: 2.33em; }
 }
 
 h2 {
-	font-size: 2em;
-	@include lg { font-size: 2.5em; }
+	font-size: 1.87em;
+	@include lg { font-size: 2.33em; }
 }
 
 h3 {
-	font-size: 1em;
-	@include lg { font-size: 1.2em; }
+	font-size: 0.94em;
+	@include lg { font-size: 1.12em; }
 }
 
 h4 {
