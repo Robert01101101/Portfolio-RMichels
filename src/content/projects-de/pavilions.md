@@ -19,19 +19,14 @@ order: 12
 ---
 
 <section class="sectionText">
-    
     <h2>Die Aufgabe</h2>
     <p>Diese Pavillons entstanden in einem Kurs, der Designprinzipien durch räumliche Designübungen vermittelt. Ziel war eine Serie von Pavillon-Entwürfen, die Menschen, Objekte, Raum, räumliche Komposition und parametrisches Design erkunden. Wir mussten Rhinoceros 3D erlernen und einsetzen, um diese Entwürfe zu erstellen, sowie physische Prototypen bauen.</p>
   </section>
-
-  
   <div class="auto-resizable-iframe">
     <div>
       <iframe src="https://www.youtube.com/embed/3MXKiZ-IckA?start=15" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
-
-  
   <section class="sectionText">
     <h2>Das Ergebnis</h2>
     <h3>Modularer Pavillon</h3>
@@ -39,8 +34,6 @@ order: 12
     <h3>Parametrischer Pavillon</h3>
     <p>Der parametrische Pavillon wurde mit organischem Design im Sinn geplant. Er soll neben Bäumen im Holland Park stehen und die Form von Baumwurzeln und -ästen nachahmen. Er beherbergt eine versteckte Skulptur und wirkt als Überdachung über einem bestehenden Weg. Dieser Pavillon wurde ausschließlich mit parametrischem Design entwickelt – mit Grasshopper sowie den Plugins Mesh+ und Weaverbird.</p>
   </section>
-
-  
   <section class="sectionMedia">
   <div class="models">
     <div class="sketchfab-embed-wrapper">
@@ -63,16 +56,12 @@ order: 12
     </div>
   </div>
   </section>
-
-  
   <section class="sectionText">
     <h2>Prozess</h2>
     <p>Alle unsere Entwürfe folgten in der Konzeptionsphase einem ähnlichen Prozess. Zunächst studierten wir die Designprinzipien, die wir anwenden wollten. Anschließend diskutierten wir Ideen anhand einfacher Papier-Skizzen. Sobald wir uns für ein Konzept entschieden hatten, entwarfen wir hochauflösende Prototypen in Rhino. Die beiden hier gezeigten Pavillons modellierte ich selbst.</p>
     <p>Der modulare Pavillon ließ sich in Rhino relativ leicht erstellen, da ich ihn in einfache Komponenten zerlegen konnte, die sich mit Polysurfaces modellieren ließen. Deutlich komplexer war der Aufbau des physischen Modells. Dafür schichtete ich das Modell in 2D-Stützstrukturen und Verbindungsträger, die wir aus Pappe laserschneiden konnten. Die finale Struktur klebten wir mit Heißkleber zusammen.</p>
     <p>Der parametrische Pavillon war unsere größte Herausforderung. Ich musste Rhinos parametrischen Grasshopper-Editor erlernen, um das Modell zu erstellen. Es wird durch nur zwei Grundkurven und acht Kontrollpunkte definiert. Die Grundkurven legen fest, wo der Pavillon den Boden berührt; die Kontrollpunkte beeinflussen Dicke und Form der gewebten Struktur. Diese Eingaben verarbeitet ein generativer Algorithmus, den ich in Grasshopper mit den Plugins Mesh+ und Weaverbird definierte. Auch die finale Prozessstufe war anspruchsvoll: Ich musste das Modell mit meinem eigenen 3D-Drucker drucken. Es war zu groß für einen Durchgang und musste in vier Teile geschnitten werden. Hinzu kamen die komplexe Struktur mit Überhängen, das Holzfilament und die begrenzte Qualität meines günstigen Druckers. Das Ergebnis repräsentierte unser Designkonzept dennoch überzeugend.</p>
   </section>
-
-  
   <section class="sectionMedia">
     <figure ignorecarousel class="spacer">
       <div class="mediaSquare">

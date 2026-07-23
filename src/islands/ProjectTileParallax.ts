@@ -19,15 +19,36 @@ function getVisibleElements(selector: string): HTMLElement[] {
   });
 }
 
+const PARALLAX_SELECTORS = [
+  '.projRow:not(.projRow--hidden) .projJScontainer',
+  '.projRow:not(.projRow--hidden) .projLabel',
+] as const;
+
+function isWideLayout() {
+  return window.innerWidth >= 1200 && window.matchMedia('(orientation: landscape)').matches;
+}
+
 export function initProjectTileParallax() {
-  const xlBreakPoint = 1200;
   let scrollEndTimer: ReturnType<typeof setTimeout> | null = null;
 
   const getElements = () => {
-    if (window.innerWidth < xlBreakPoint) {
-      return getVisibleElements('.projRow:not(.projRow--hidden) .projJScontainer');
+    if (isWideLayout()) {
+      return getVisibleElements('.projRow:not(.projRow--hidden) .projLabel');
     }
-    return getVisibleElements('.projRow:not(.projRow--hidden) .projLabel');
+    return getVisibleElements('.projRow:not(.projRow--hidden) .projJScontainer');
+  };
+
+  const resetInactiveParallaxStyles = (active: HTMLElement[]) => {
+    const activeSet = new Set(active);
+
+    PARALLAX_SELECTORS.forEach((selector) => {
+      getVisibleElements(selector).forEach((el) => {
+        if (!activeSet.has(el)) {
+          el.style.transform = '';
+          el.style.willChange = '';
+        }
+      });
+    });
   };
 
   const setWillChange = (active: boolean) => {
@@ -38,15 +59,18 @@ export function initProjectTileParallax() {
   };
 
   const update = () => {
+    const active = getElements();
+    resetInactiveParallaxStyles(active);
+
     const buffer = 50;
     let min = -80;
     let max = 100;
-    if (window.innerWidth < xlBreakPoint) {
+    if (!isWideLayout()) {
       min = -40;
       max = 0;
     }
 
-    getElements().forEach((curElement) => {
+    active.forEach((curElement) => {
       const yPos = offset(curElement);
       const bottomVal = clamp(
         mapVal(yPos, 0, window.innerHeight, max, min),

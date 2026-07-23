@@ -25,12 +25,7 @@ order: 1
     <h2>Übersicht</h2>
     <p>Eine der wichtigsten Funktionen der Clirio-Produktsuite ist die Möglichkeit, photogrammetrische Scans mit LiDAR-fähigen iOS-Geräten zu erfassen und diese Scans anschließend zu verwalten und anzuzeigen. Erfasste Scans können auf der Karte angezeigt werden, sie können immer als integraler Bestandteil der Karte angezeigt werden, oder sie können im Scan-Ansichtsmodus angezeigt werden, der je nach Plattform über Mess-, Vergleichs- und XR-Funktionen verfügt. In der XR-Ansicht kann der Scan skaliert werden auf  1m³ oder im Maßstab 1:1, oder frei mit der Hand manipuliert werden. Auf iOS und Desktop wird die Ansicht durch Touch- oder Mauseingaben gesteuert. Vergleichsansichten bieten die Modi Seite-an-Seite, Streichen und Überlagern. Neben Scans, die mit Clirio Scan erfasst wurden, werden auch andere 3D-Modelle unterstützt und können hochgeladen werden in die <a href="/clirioCloud">Clirio Cloud</a>.</p>
   </section>
-
-  
   <section class="sectionText mockup hololens"><figcaption>Scan View (HoloLens 2)</figcaption></section>
-
-
-  
   <section class="sectionMedia">
     <figure ignorecarousel>
       <div class="mediaRow mediaRow-equalWidth mediaRow-equalHeight">
@@ -49,18 +44,12 @@ order: 1
       </div>
     </figure>
   </section>
-
-
-  
   <section class="sectionText">
     <h2>Entwicklung</h2>
     <p>An den Scanansichten wurde von 2021 bis 2023 kontinuierlich gearbeitet. In diesem Zeitraum war ich für die Einrichtung der meisten Logiken und Ansichten verantwortlich. Zu meinem Arbeitsablauf gehörte das Entwerfen von UX und UI und dann das schnelle Prototyping und die Verfeinerung, bis jede Funktion für die Veröffentlichung bereit war. Meine Teamkollegen <a href="https://www.linkedin.com/in/toniostillman" target="_blank">Tonio Stillman</a>, <a href="https://www.linkedin.com/in/timthibault/" target="_blank">Timothy Thibault</a>, <a href="https://www.linkedin.com/in/jordan-wischmann-32a4b380/" target="_blank">Jordan Wischmann</a> und <a href="https://www.linkedin.com/in/merdemgunay" target="_blank">Erdem Gunay</a> leisteten ebenfalls Beiträge. Einige Funktionen wurden auch von der Ada-Viewer-App übernommen, auf der die Clirio-View-App basiert.</p>
     <p>Die ersten Anforderungen waren das Laden und Betrachten von Scans in einem Scan-Ansichtsmodus (keine Karte), der in AR auf der HoloLens 2 und in 3D-Non-AR auf iOS unterstützt werden sollte. Nachdem diese Kernfunktionalitäten implementiert worden waren, war eine der wichtigsten Ergänzungen der Vergleichs- und Messmodus. Ein wichtiger Arbeitsablauf, der von den Clirio View-Apps unterstützt wird, ist die Analyse und Überwachung von Baustellen, bei denen Scan-Vergleiche helfen, Unterschiede zu erkennen, und Scan-Messungen helfen, den Maßstab zu verstehen.</p>
     <p>Später kamen weitere Funktionen hinzu, z. B. die Anzeige von Scans auf der Karte, weitere Anzeigewerkzeuge wie die Freihandmanipulation in XR und weitere Vergleichsmodi wie der Überlagerungsmodus, mit dem die Transparenzen in XR ausgeblendet werden, und die Swipe-Vergleichsansicht in iOS, die die Ansichtsfenster beschneidet.</p>
   </section>
-
-
-  
   <section class="sectionMedia">
     <div class="auto-resizable-iframe">
       <div>
@@ -69,9 +58,6 @@ order: 1
       <figcaption>Ein Überblick über die verschiedenen Scanansichten in der Clirio View Meta Quest VR-App. Ein Scan wird zunächst auf der Karte geöffnet, dann wird die Scanansicht aufgerufen, in der der Scan aus verschiedenen Blickwinkeln betrachtet, gemessen und mit einem anderen Scan verglichen wird.</figcaption>
     </div>
   </section>
-
-
-  
   <section class="sectionText">
     <h2>Herausforderungen</h2>
     <p>Eine der größten Herausforderungen war die Komplexität, die sich aus den verschiedenen UX-Flows, Plattformen, Funktionen und Zuständen ergab, die im Laufe der Zeit langsam erweitert wurden. Besonders in den letzten <a href="https://learn.microsoft.com/en-us/windows/mixed-reality/mrtk-unity/mrtk2/" target="_blank">MRTK2</a> Versionen der Clirio View-Apps hatte die Komplexität stark zugenommen, da MRTK2 nur unzureichend plattformübergreifende Unterstützung bot, was zu unterschiedlichen Prefabs, UI und Logik für iOS und HMDs führte.</p>

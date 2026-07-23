@@ -1,6 +1,6 @@
 footer {
 	//________________________________________________________ General
-	width: 100vw;
+	width: calc(100% + #{_grid(content-margin)} * 2);
 	margin-left: -#{_grid(content-margin)};
 	margin-right: -#{_grid(content-margin)};
 	padding: 2rem #{_grid(content-margin)};
@@ -181,12 +181,12 @@ ul.icons {
 	visibility: hidden;
 	position: absolute;
 	bottom: -10rem;
-	left: 2rem;
-	right: 2rem;
+	left: #{_grid(content-margin)};
+	right: #{_grid(content-margin)};
 
 	@include md {
-		left: 3.5rem;
-		right: 3.5rem;
+		left: #{_grid(content-margin-md)};
+		right: #{_grid(content-margin-md)};
 		background-color: rgba(0,0,0,0.55);
 	}
 

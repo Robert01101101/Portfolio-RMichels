@@ -98,10 +98,10 @@ main {
 
 		&.hololens{
 			max-width: 200%;
-			margin: -8rem -2rem;
+			margin: -8rem -#{_grid(content-margin)};
 
 			@include md {
-				margin: -8rem -3.5rem;
+				margin: -8rem -#{_grid(content-margin-md)};
 			}
 
 			@include xl {

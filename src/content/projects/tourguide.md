@@ -30,13 +30,7 @@ order: 3
     <p></p>
     <p>I had my eye on the Flutter framework, and this seemed like the perfect opportunity to learn the Dart language and how to build a crossplatform app with Flutter.</p>
   </section>
-
-  
-  
   <video id="video" src="/assets/video/tourguideScreencap.mp4" style="display:none" preload="none" autoplay="true" loop="true" muted="true" poster="/assets/video/frame.jpg"></video>
-
-
-  
   <section class="sectionText">
     <h2>Development History</h2>
     <h3>Web Improvements, tts, and more - October 2, 2024</h3>
@@ -57,11 +51,6 @@ order: 3
     <p>The tourguide app is currently in closed testing on the Google Play store. I plan to also host it as a webapp, and possibly an iOS app if I see demand for the app. You can <a href="mailto:hi@rmichels.com?subject=Request%20access%20to%20join%20Tourguide%20Closed%20Testing&amp;body=Please%20add%20me%20to%20the%20Closed%20Testing%20of%20tourguide.%0AEmail%20to%20add%3A%20%5BInsert%20Your%20Email%20used%20on%20your%20Android%20Phone%5D">request</a></p>
     <p></p>
   </section>
-
-  
-
-  
-  
   <section class="sectionMedia">
     <figure ignorecarousel>
       <div class="mediaRow mediaRow-equalWidth mediaRow-equalHeight">

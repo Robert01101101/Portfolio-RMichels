@@ -39,6 +39,7 @@
       position: absolute;
       bottom: 0;
       margin: 0 1rem;
+      z-index: 60; // above > a::before overlay (50)
 
       @include xl {
         margin: 0;

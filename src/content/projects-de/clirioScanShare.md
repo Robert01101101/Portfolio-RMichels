@@ -27,29 +27,18 @@ order: 2
     <p>Sobald der Nutzer mit den ausgewählten Optionen zufrieden ist, kann er den Link erstellen und ihn entweder in die Zwischenablage kopieren oder die plattformeigene Freigabefunktion nutzen. Unter iOS öffnet sich der Freigabedialog mit kompatiblen Apps wie Messengern, unter Windows die Mail-App. Es gibt auch eine Option, ein formatiertes eingebettetes Iframe-Element für die Freigabe zu konfigurieren und zu generieren.</p>
     <p>Der Webviewer soll so leichtgewichtig und zugänglich wie möglich sein. Der Scan kann aus verschiedenen Blickwinkeln betrachtet werden; Metadaten und eine Maßstabslegende werden angezeigt, und Schaltflächen erlauben das Ein- und Ausblenden von Elementen.</p>
   </section>
-
-
-  
   <figure ignorecarousel>
     <iframe src="https://clirioview-viw-prd.azurewebsites.net/guest/MEVdEANk9_Zhr6tlm4ibd1Vn" style="width: 100%" class="clirioScanShareEmbed"></iframe>
     <figcaption>Ein interaktives Beispiel für eine eingebettete Scan-Freigabe. Klicken und ziehen, um das Modell aus verschiedenen Blickwinkeln zu betrachten. Dieselbe Freigabe ist auch auf einer eigenen <a href="https://clirioview-viw-prd.azurewebsites.net/guest/MEVdEANk9_Zhr6tlm4ibd1Vn" target="_blank">Seite</a> erreichbar.</figcaption>
   </figure>
-
-
-  
   <section class="sectionText">
     <h2>Entwicklung</h2>
     <p>Für die Entwicklung dieser Funktion gab es zwei Bereiche: die clientseitige Share-UI und -Logik sowie den Webviewer.</p>
-
     <h3>Share-UI und Logik</h3>
     <p>Entwickelt mit C# in Unity als Pop-up, erreichbar über die Beobachtungsdetails eines beliebigen Scans in der Clirio View-App. Die UI wurde in Figma in Zusammenarbeit mit <a href="https://www.linkedin.com/in/jordan-wischmann-32a4b380/" target="_blank">Jordan Wischmann</a> entworfen.</p>
-
     <h3>Webviewer</h3>
     <p>Entwickelt mit Blazor und Three.js. Das Backend-Token-Sharing implementierte <a href="https://www.linkedin.com/in/timthibault/" target="_blank">Timothy Thibault</a>.</p>
   </section>
-
-
-  
   <section class="sectionMedia">
     <figure ignorecarousel>
       <div class="mediaRow mediaRow-equalWidth">
@@ -68,8 +57,6 @@ order: 2
       </div>
     </figure>
   </section>
-
-  
   <section class="sectionText">
     <h2>Share-UI und Logik</h2>
     <p>Die Share-UI durchlief mehrere Iterationen. Ursprünglich für <a href="https://learn.microsoft.com/en-us/windows/mixed-reality/mrtk-unity/mrtk2/" target="_blank">MRTK2</a> mit wenigen Optionen entwickelt, wurde die Funktion später um Ablaufzeit, Passwortschutz und Embed-Funktionen erweitert. 2023 wurde die UI in Zusammenarbeit mit <a href="https://www.linkedin.com/in/jordan-wischmann-32a4b380/" target="_blank">Jordan Wischmann</a> überarbeitet, als die Clirio View-App auf <a href="https://learn.microsoft.com/en-us/windows/mixed-reality/mrtk-unity/mrtk3-overview/" target="_blank">MRTK3</a> migriert wurde.</p>
@@ -77,8 +64,6 @@ order: 2
     <p>Die größte Herausforderung war die UX-Gestaltung, da es viele Optionen für den Nutzer gab. Dazu gehörte die Möglichkeit, Freigaben privat zu machen und das Teilen intern auf Teams in Arbeitsbereichen zu beschränken – was einen zusätzlichen Authentifizierungsfluss im Webviewer erforderte. Die Vielzahl an Optionen erschwerte auch ein kompaktes UI. Ich nutzte dynamisches Design und Layouts, damit versteckte Optionen wie Ablaufverlängerung oder Passwortänderung elegant ein- oder ausgeblendet werden konnten. Die Logik-Entwicklung war vergleichsweise unkompliziert; die größere Herausforderung war zu definieren, wie die Funktion überhaupt arbeiten soll. Nach jeder Nutzerinteraktion aktualisiert sich die UI entsprechend der Freigabekonfiguration und aller anderen Zustände. Gibt es eine passende bestehende Freigabe, wird der vorhandene Link angezeigt, andernfalls die Schaltfläche zum Erzeugen einer neuen Freigabe.</p>
     <p>Eine interessante Änderung meiner Controller-Herangehensweise testete ich erstmals in diesem Feature – nach einer Diskussion mit meinem Teamkollegen <a href="https://www.linkedin.com/in/toniostillman" target="_blank">Tonio Stillman</a>. Zuvor verdrahtete ich <code>OnClick()</code>-Events direkt im Unity-Inspector. Hier setzte ich stattdessen alle Event-Listener im Controller selbst, hielt die Listener-Funktionen privat und vereinfachte die Inspector-Einrichtung so, dass jede Schaltfläche nur einmal dem Controller zugewiesen wird und keine weiteren Referenzen nötig sind. Das macht die Einrichtung im Editor weniger fehleranfällig und wartbarer, da weniger Code-Verständnis erforderlich ist.</p>
   </section>
-
-  
   <section class="sectionMedia">
     <figure ignorecarousel>
       <div class="mediaRow mediaRow-centered">
@@ -89,17 +74,12 @@ order: 2
       </div>
     </figure>
   </section>
-
-  
   <section class="sectionText">
     <h2>Webviewer</h2>
     <p>Die Implementierung des Webviewers war die komplexere Aufgabe, da er eigenständig ist und die meiste Funktionalität von Grund auf neu entstehen musste. Der Viewer wurde in C# mit Blazor und JavaScript mit Three.js geschrieben und nutzt Tailwind CSS für das Styling. Ich hatte zuvor mit Three.js gearbeitet und ein Großteil meiner Arbeit drehte sich um die korrekte Einrichtung des Viewers.</p>
     <p></p>
     <p>Zu den Herausforderungen bei Three.js gehörten das Laden der in der MTL-Datei definierten Texturdateien mit korrekten SAS-Tokens, die Unterstützung verschiedener MTL-Formate und Materialeigenschaften sowie ein dynamischer Viewer, der unterschiedliche Modellgrößen und -formen auf vielen Geräten unterstützt.</p>
   </section>
-
-
-   
   <section class="sectionMedia">
     <div class="divText">
       <h2>Code-Beispiel</h2>

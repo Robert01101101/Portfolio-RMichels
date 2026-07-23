@@ -14,15 +14,15 @@
       
       a {
         position: relative;
-        padding: 20px 50px;
+        padding: 14px 24px;
         display: flex;
         align-items: center;
         justify-content: center;
         text-decoration: none;
         text-transform: uppercase;
         font-weight: normal;
-        width: 15rem;
-        height: 15rem;
+        width: 10rem;
+        height: 10rem;
         overflow: hidden;
 
         border: 2px solid white;
@@ -30,14 +30,24 @@
         background-color: transparent;
 
         transition: 1.5s;
+
+        @media (orientation: landscape) {
+          width: 15rem;
+          height: 15rem;
+          padding: 20px 50px;
+        }
       }
       
       a span {
         position: relative;
         color: #fff;
-        letter-spacing: 8px;
+        letter-spacing: 4px;
         z-index: 1;
         text-align: center;
+
+        @media (orientation: landscape) {
+          letter-spacing: 8px;
+        }
       }
       
       a .liquid {

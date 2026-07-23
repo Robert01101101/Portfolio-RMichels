@@ -1,8 +1,11 @@
 //_____________________________________________________________________ GRID PARENT ___________________________________________//
+$margin-sm: _grid(content-margin);
+$margin-md: _grid(content-margin-md);
+
 #MainGrid {
 	display: grid;
 
-	grid-template-columns: 2rem calc(100% - 4rem) 2rem; //Margin, Content, Margin
+	grid-template-columns: #{$margin-sm} calc(100% - #{$margin-sm} * 2) #{$margin-sm}; //Margin, Content, Margin
                                                         //1      2         3      4
   grid-template-rows: 3.2rem 100vh auto auto; //Header, LandingArea, Body, Footer
 
@@ -12,7 +15,7 @@
     }
 
     @include md {
-      grid-template-columns: 3.5rem calc(100% - 7rem) 3.5rem;
+      grid-template-columns: #{$margin-md} calc(100% - #{$margin-md} * 2) #{$margin-md};
     }
 
     @include lg {
@@ -25,9 +28,19 @@
       //grid-template-columns: 1rem 1fr 1fr 4fr 4fr 1fr 1fr 1rem; //Margin, Col1/12, Col1/12, Col4/12, Col4/12, Col1/12, Col1/12, Margin
                                                                //1        2       3        4        5        6        7       8       9
     }
+}
 
-    
-    
+// About page: grow with content instead of locking to a 100vh hero row
+body[data-page-type="about"] #MainGrid {
+	grid-template-rows: 3.2rem auto auto;
+}
+
+body[data-page-type="about"] main {
+	grid-row: 2 / 3;
+}
+
+body[data-page-type="about"] footer {
+	grid-row: 3 / 4;
 }
 
 //_____________________________________________________________________ GRID CHILDREN ___________________________________________//

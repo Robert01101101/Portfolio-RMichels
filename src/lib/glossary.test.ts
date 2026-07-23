@@ -21,6 +21,6 @@ describe('parseGlossaryText', () => {
 
   it('uses German glossary tips for de locale', () => {
     const html = parseGlossaryText('[[xr]] apps', 'de');
-    expect(html).toContain('title="Extended Reality — VR, AR und Mixed Reality"');
+    expect(html).toContain('title="Extended Reality – VR (Virtuelle Realität), AR (Augmented Reality), MR (Mixed Reality)"');
   });
 });
