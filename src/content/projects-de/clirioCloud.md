@@ -29,19 +29,19 @@ order: 4
   <section class="sectionMedia">
     <figure ignorecarousel>
       <div class="mediaSquare">
-        <figure onclick="viewImage(this)">
+        <figure>
           <img src="/assets/img/clirioCloud/lqip/dashboard.jpg" alt="Dashboard">
           <figcaption>Dashboard</figcaption>
         </figure>
-        <figure onclick="viewImage(this)">
+        <figure>
           <img src="/assets/img/clirioCloud/lqip/workspaceList.jpg" alt="Workspace Liste">
           <figcaption>Workspace Liste</figcaption>
         </figure>
-        <figure onclick="viewImage(this)">
+        <figure>
           <img src="/assets/img/clirioCloud/lqip/workspaceView.jpg" alt="Workspace Management Tools">
           <figcaption>Workspace Management Tools</figcaption>
         </figure>
-        <figure onclick="viewImage(this)" id="img_createPoi">
+        <figure id="img_createPoi">
           <img src="/assets/img/clirioCloud/lqip/createPoi.jpg" alt="Workspace Management Beispiel: Erstelle POI">
           <figcaption>Workspace Management Beispiel: Erstelle POI</figcaption>
         </figure>
@@ -60,10 +60,10 @@ order: 4
   <section class="sectionMedia">
     <figure ignorecarousel>
       <div class="mediaRow mediaRow-equalWidth mediaRow-equalHeight">
-        <figure onclick="viewImage(this)">
+        <figure>
           <img src="/assets/img/clirioCloud/lqip/create3dModel.jpg" alt="clirio Cloud – create3d Model"> 
         </figure>
-        <figure onclick="viewImage(this)">
+        <figure>
           <img src="/assets/img/clirioCloud/lqip/editBasemaps.jpg" alt="clirio Cloud – edit Basemaps">
         </figure>
       </div>
@@ -73,7 +73,7 @@ order: 4
   <section class="sectionMedia">
     <div class="divText">
       <h2>Code Beispiel</h2>
-      <p>Ein Beispiel für die Datenbindung zwischen dem Formular und dem Datenmodell für die <span onclick="viewImage('img_createPoi')" class="inTextLink">POI Erstellen</span> Seite.</p>
+      <p>Ein Beispiel für die Datenbindung zwischen dem Formular und dem Datenmodell für die <span data-lightbox-id="img_createPoi" class="inTextLink">POI Erstellen</span> Seite.</p>
     </div>
     <script src="https://gist.github.com/Robert01101101/062fa22fe781689ed11a85d85e4b2b3e.js"></script>
   </section>

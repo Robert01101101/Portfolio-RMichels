@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { getFullResSrc } from './Lqip';
+import { getFullResSrc } from '../lib/lqip';
 
 function mockImg(attrs: Record<string, string> = {}, src = ''): HTMLImageElement {
   return {

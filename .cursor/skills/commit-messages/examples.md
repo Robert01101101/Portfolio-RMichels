@@ -148,3 +148,28 @@ git add -p src/pages/about.astro   # stage remaining hunks   → commit 2
 | `fix: typo and also refactor CI` | Two commits: `docs:` + `ci:` |
 | `FEAT: BIG CHANGE` | `feat!: remove legacy PHP stack` |
 | Planning 4 commits, running `git commit` once | Commit after each group; check `git status` between |
+
+## PR message (after commits)
+
+Always suggest this when finishing a commit session. Title goes in GitHub's title field; body is copy-paste markdown.
+
+**Title:** `WebGL refactor, content pipeline, and layout polish`
+
+````markdown
+## Summary
+
+- Render gist embeds as static Shiki code blocks at build time; fix project page HTML from markdown blank lines; add gallery alt text and refine team metadata
+- Extract shared WebGL modules with performance tiers; update architecture docs
+- Refactor content validation around a shared schema; run check/tests before deploy
+- Fix landing model overflow and responsive see-more button; reset project tile parallax on breakpoint change
+````
+
+### PR message anti-patterns
+
+| Avoid | Prefer |
+|-------|--------|
+| One bullet per commit (16 bullets for 16 commits) | Group by theme (3–7 bullets) |
+| `## Test plan` section | Summary only |
+| Repeating full commit hashes/subjects | Plain-language grouped summary |
+| Title: `fix: stuff` | Title: `WebGL refactor, content pipeline, and layout polish` |
+| Prose paragraph instead of bullets | `## Summary` with `-` bullets |

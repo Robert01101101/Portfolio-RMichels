@@ -54,21 +54,21 @@ order: 3
   <section class="sectionMedia">
     <figure ignorecarousel>
       <div class="mediaRow mediaRow-equalWidth mediaRow-equalHeight">
-        <figure onclick="viewImage(this)">
+        <figure>
           <img src="/assets/img/tourguide/Screenshot_1.jpg" alt="tourguide – Screenshot 1"> 
         </figure>
-        <figure onclick="viewImage(this)">
+        <figure>
           <img src="/assets/img/tourguide/Screenshot_2.jpg" alt="tourguide – Screenshot 2">
         </figure>
-        <figure onclick="viewImage(this)">
+        <figure>
           <img src="/assets/img/tourguide/Screenshot_3.jpg" alt="tourguide – Screenshot 3"> 
         </figure>
-        <figure onclick="viewImage(this)">
+        <figure>
           <img src="/assets/img/tourguide/Screenshot_4.jpg" alt="tourguide – Screenshot 4">
         </figure>
-        <figure onclick="viewImage(this)">
+        <figure>
           <img src="/assets/img/tourguide/Screenshot_5.jpg" alt="tourguide – Screenshot 5"> 
         </figure>
-        <figure onclick="viewImage(this)">
+        <figure>
           <img src="/assets/img/tourguide/Screenshot_6.jpg" alt="tourguide – Screenshot 6">
         </figure>

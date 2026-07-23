@@ -30,16 +30,16 @@ order: 9
   <section class="sectionMedia">
     <figure ignorecarousel>
       <div class="mediaSquare">
-        <figure onclick="viewImage(this)">
+        <figure>
           <img src="/assets/img/cyberview/lqip/screen-0.jpg" alt="cyberview – screen 0">
         </figure>
-        <figure onclick="viewImage(this)">
+        <figure>
           <img src="/assets/img/cyberview/lqip/screen-1.jpg" alt="cyberview – screen 1">
         </figure>
-        <figure onclick="viewImage(this)">
+        <figure>
           <img src="/assets/img/cyberview/lqip/screen-2.jpg" alt="cyberview – screen 2">
         </figure>
-        <figure onclick="viewImage(this)">
+        <figure>
           <img src="/assets/img/cyberview/lqip/screen-3.jpg" alt="cyberview – screen 3">
         </figure>
       </div>

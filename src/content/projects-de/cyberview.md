@@ -30,16 +30,16 @@ order: 9
   <section class="sectionMedia">
     <figure ignorecarousel>
       <div class="mediaSquare">
-        <figure onclick="viewImage(this)">
+        <figure>
           <img src="/assets/img/cyberview/lqip/screen-0.jpg" alt="Cyberview-Screenshot: Spielstart in der Fabrik">
         </figure>
-        <figure onclick="viewImage(this)">
+        <figure>
           <img src="/assets/img/cyberview/lqip/screen-1.jpg" alt="Cyberview-Screenshot: Plattform-Gameplay mit Body Mods">
         </figure>
-        <figure onclick="viewImage(this)">
+        <figure>
           <img src="/assets/img/cyberview/lqip/screen-2.jpg" alt="Cyberview-Screenshot: Kampf gegen feindliche Drohnen">
         </figure>
-        <figure onclick="viewImage(this)">
+        <figure>
           <img src="/assets/img/cyberview/lqip/screen-3.jpg" alt="Cyberview-Screenshot: Rätsel im Airsite-Komplex">
         </figure>
       </div>

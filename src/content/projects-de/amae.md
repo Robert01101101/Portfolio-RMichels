@@ -28,19 +28,19 @@ order: 6
   </section>
   <section class="sectionMedia">
     <div class="mediaRow mediaRow-zigzag">
-      <figure onclick="viewImage(this)">
+      <figure>
         <img src="/assets/img/amae/lqip/Screen_Dashboard.png" alt="Dashboard">
         <figcaption class="center">Dashboard</figcaption>
       </figure>
-      <figure onclick="viewImage(this)">
+      <figure>
         <img src="/assets/img/amae/lqip/Screen_Nanny.png" alt="Nanny">
         <figcaption class="center">Nanny</figcaption>
       </figure>
-      <figure onclick="viewImage(this)">
+      <figure>
         <img src="/assets/img/amae/lqip/Screen_Learn.png" alt="Learn">
         <figcaption class="center">Learn</figcaption>
       </figure>
-      <figure onclick="viewImage(this)">
+      <figure>
         <img src="/assets/img/amae/lqip/Screen_Chat.png" alt="Chat">
         <figcaption class="center">Chat</figcaption>
       </figure>
@@ -60,16 +60,16 @@ order: 6
    <section class="sectionMedia">
     <figure ignorecarousel>
       <div class="mediaSquare">
-        <figure onclick="viewImage(this)">
+        <figure>
           <img src="/assets/img/amae/lqip/process-scroll.jpg" alt="amae – process scroll">
         </figure>
-        <figure onclick="viewImage(this)">
+        <figure>
           <img src="/assets/img/amae/lqip/process-modality.jpg" alt="amae – process modality">
         </figure>
-        <figure onclick="viewImage(this)">
+        <figure>
           <img src="/assets/img/amae/lqip/process-styleguide.jpg" alt="amae – process styleguide">
         </figure>
-        <figure onclick="viewImage(this)">
+        <figure>
           <img src="/assets/img/amae/lqip/process-components.jpg" alt="amae – process components">
         </figure>
       </div>
@@ -108,23 +108,23 @@ order: 6
   </div>
     <figure ignorecarousel>
       <div class="mediaRow mediaRow-equalWidth mediaRow-equalHeight mediaRow-maxHeightMd">
-        <figure onclick="viewImage(this)">
+        <figure>
         <img src="/assets/img/amae/lqip/personaChristina.jpg" alt="amae – persona Christina">
         </figure>
-        <figure onclick="viewImage(this)">
+        <figure>
           <img src="/assets/img/amae/lqip/stage3WireflowsSimplified.jpg" alt="amae – stage3Wireflows Simplified">
         </figure>
       </div>
     </figure>
     <figure ignorecarousel>
       <div class="mediaRow">
-        <figure onclick="viewImage(this)">
+        <figure>
           <img src="/assets/img/amae/lqip/site-home.jpg" alt="amae – site home">
         </figure>
-        <figure onclick="viewImage(this)">
+        <figure>
           <img src="/assets/img/amae/lqip/site-taskboard.jpg" alt="amae – site taskboard">
         </figure>
-        <figure onclick="viewImage(this)">
+        <figure>
           <img src="/assets/img/amae/lqip/site-concept.jpg" alt="amae – site concept">
         </figure>
       </div>

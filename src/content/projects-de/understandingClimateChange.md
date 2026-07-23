@@ -24,13 +24,13 @@ order: 13
   </section>
   <section class="sectionMedia">
     <div class="mediaColumn">
-      <figure onclick="viewImage(this)">
+      <figure>
         <img src="/assets/img/understandingClimateChange/lqip/chart1.jpg" alt="Liniendiagramm globaler CO₂-Emissionen">
       </figure>
-      <figure onclick="viewImage(this)">
+      <figure>
         <img src="/assets/img/understandingClimateChange/lqip/chart2.jpg" alt="Liniendiagramm der atmosphärischen CO₂-Konzentration">
       </figure>
-      <figure onclick="viewImage(this)">
+      <figure>
         <img src="/assets/img/understandingClimateChange/lqip/chart3.jpg" alt="Stacked-Area-Chart der CO₂-Emissionen nach Region">
       </figure>
     </div>
@@ -46,10 +46,10 @@ order: 13
   </section>
   <section class="sectionMedia">
     <div class="mediaColumn">
-      <figure onclick="viewImage(this)" id="chart4">
+      <figure id="chart4">
         <img src="/assets/img/understandingClimateChange/lqip/chart4.jpg" alt="Interaktive Choropleth-Karte kanadischer Wetterdaten">
       </figure>
-      <figure onclick="viewImage(this)">
+      <figure>
         <img src="/assets/img/understandingClimateChange/lqip/chart5.jpg" alt="Spider-Chart der globalen Temperaturanomalie">
       </figure>
     </div>
@@ -66,7 +66,7 @@ order: 13
   </section>
   <section class="sectionMedia">
     <div class="mediaColumn">
-      <figure onclick="viewImage(this)">
+      <figure>
         <img src="/assets/img/understandingClimateChange/lqip/chart6.jpg" alt="Korrelationsdiagramm von CO₂-Emissionen und Wetteranomalien in Kanada">
       </figure>
     </div>

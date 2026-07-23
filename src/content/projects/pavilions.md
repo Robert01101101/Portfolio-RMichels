@@ -66,27 +66,27 @@ order: 12
     <figure ignorecarousel class="spacer">
       <div class="mediaSquare">
         <div class="mediaColumn">
-          <figure onclick="viewImage(this)">
+          <figure>
             <img src="/assets/img/pavilions/lqip/2_1.jpg" alt="pavilions – 2 1">
           </figure>
-          <figure onclick="viewImage(this)">
+          <figure>
             <img src="/assets/img/pavilions/lqip/2_2.jpg" alt="pavilions – 2 2">
           </figure>
-          <figure onclick="viewImage(this)">
+          <figure>
             <img src="/assets/img/pavilions/lqip/2_3.jpg" alt="pavilions – 2 3">
           </figure>
         </div>
         <div class="mediaColumn">
-          <figure onclick="viewImage(this)">
+          <figure>
             <img src="/assets/img/pavilions/lqip/3_1.jpg" alt="pavilions – 3 1">
           </figure>
-          <figure onclick="viewImage(this)">
+          <figure>
             <img src="/assets/img/pavilions/lqip/3_2.jpg" alt="pavilions – 3 2">
           </figure>
-          <figure onclick="viewImage(this)">
+          <figure>
             <img src="/assets/img/pavilions/lqip/3_3.jpg" alt="pavilions – 3 3">
           </figure>
-          <figure onclick="viewImage(this)">
+          <figure>
             <img src="/assets/img/pavilions/lqip/3_4.jpg" alt="pavilions – 3 4">
           </figure>
         </div>
@@ -95,7 +95,7 @@ order: 12
     </figure>
     <figure ignorecarousel class="spacer">
         <div class="mediaColumn">
-          <figure onclick="viewImage(this)">
+          <figure>
             <img src="/assets/img/pavilions/lqip/3_5.jpg" alt="pavilions – 3 5">
           </figure>
         </div>

@@ -24,11 +24,11 @@ order: 7
   </section>
   <section class="sectionMedia">
     <div class="mediaSquare">
-      <figure onclick="viewImage(this)">
+      <figure>
         <img src="/assets/img/harbingersofdeath/lqip/screen-home.jpg" alt="Harbingers of Death – Startseite">
         <figcaption class="center">Startseite</figcaption>
       </figure>
-      <figure onclick="viewImage(this)">
+      <figure>
         <img src="/assets/img/harbingersofdeath/lqip/screen-omen.jpg" alt="Harbingers of Death – Omen-Inhaltsseite">
         <figcaption class="center">Omen-Inhaltseinheit</figcaption>
       </figure>
@@ -42,11 +42,11 @@ order: 7
   </section>
   <section class="sectionMedia">
     <div class="mediaSquare">
-      <figure onclick="viewImage(this)">
+      <figure>
         <img src="/assets/img/harbingersofdeath/lqip/animated-form.jpg" lqip-gif alt="Animiertes Formular mit schwebenden Labels (ARIA-freundlich)">
         <figcaption class="center">Formular-Styling (ARIA-freundlich)</figcaption>
       </figure>
-      <figure onclick="viewImage(this)">
+      <figure>
         <img src="/assets/img/harbingersofdeath/lqip/screen-member-home.jpg" alt="Harbingers of Death – Mitglieder-Startseite">
         <figcaption class="center">Mitglieder-Startseite</figcaption>
       </figure>
@@ -72,7 +72,7 @@ order: 7
   </section>
   <section class="sectionMedia">
     <div class="mediaColumn">
-      <figure onclick="viewImage(this)">
+      <figure>
         <img src="/assets/img/harbingersofdeath/lqip/db.jpg" alt="ER-Diagramm der Harbingers-of-Death-Datenbank">
         <figcaption class="center">ER-Diagramm unserer Datenbank.</figcaption>
       </figure>

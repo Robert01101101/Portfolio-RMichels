@@ -24,13 +24,13 @@ order: 13
   </section>
   <section class="sectionMedia">
     <div class="mediaColumn">
-      <figure onclick="viewImage(this)">
+      <figure>
         <img src="/assets/img/understandingClimateChange/lqip/chart1.jpg" alt="understanding Climate Change – chart1">
       </figure>
-      <figure onclick="viewImage(this)">
+      <figure>
         <img src="/assets/img/understandingClimateChange/lqip/chart2.jpg" alt="understanding Climate Change – chart2">
       </figure>
-      <figure onclick="viewImage(this)">
+      <figure>
         <img src="/assets/img/understandingClimateChange/lqip/chart3.jpg" alt="understanding Climate Change – chart3">
       </figure>
     </div>
@@ -46,10 +46,10 @@ order: 13
   </section>
   <section class="sectionMedia">
     <div class="mediaColumn">
-      <figure onclick="viewImage(this)" id="chart4">
+      <figure id="chart4">
         <img src="/assets/img/understandingClimateChange/lqip/chart4.jpg" alt="understanding Climate Change – chart4">
       </figure>
-      <figure onclick="viewImage(this)">
+      <figure>
         <img src="/assets/img/understandingClimateChange/lqip/chart5.jpg" alt="understanding Climate Change – chart5">
       </figure>
     </div>
@@ -66,7 +66,7 @@ order: 13
   </section>
   <section class="sectionMedia">
     <div class="mediaColumn">
-      <figure onclick="viewImage(this)">
+      <figure>
         <img src="/assets/img/understandingClimateChange/lqip/chart6.jpg" alt="understanding Climate Change – chart6">
       </figure>
     </div>

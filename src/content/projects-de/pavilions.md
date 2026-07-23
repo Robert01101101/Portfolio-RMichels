@@ -66,27 +66,27 @@ order: 12
     <figure ignorecarousel class="spacer">
       <div class="mediaSquare">
         <div class="mediaColumn">
-          <figure onclick="viewImage(this)">
+          <figure>
             <img src="/assets/img/pavilions/lqip/2_1.jpg" alt="Physisches Modell des modularen Pavillons – Ansicht 1">
           </figure>
-          <figure onclick="viewImage(this)">
+          <figure>
             <img src="/assets/img/pavilions/lqip/2_2.jpg" alt="Physisches Modell des modularen Pavillons – Ansicht 2">
           </figure>
-          <figure onclick="viewImage(this)">
+          <figure>
             <img src="/assets/img/pavilions/lqip/2_3.jpg" alt="Physisches Modell des modularen Pavillons – Detail">
           </figure>
         </div>
         <div class="mediaColumn">
-          <figure onclick="viewImage(this)">
+          <figure>
             <img src="/assets/img/pavilions/lqip/3_1.jpg" alt="Physisches Modell des parametrischen Pavillons – Ansicht 1">
           </figure>
-          <figure onclick="viewImage(this)">
+          <figure>
             <img src="/assets/img/pavilions/lqip/3_2.jpg" alt="Physisches Modell des parametrischen Pavillons – Ansicht 2">
           </figure>
-          <figure onclick="viewImage(this)">
+          <figure>
             <img src="/assets/img/pavilions/lqip/3_3.jpg" alt="Physisches Modell des parametrischen Pavillons – Detail 1">
           </figure>
-          <figure onclick="viewImage(this)">
+          <figure>
             <img src="/assets/img/pavilions/lqip/3_4.jpg" alt="Physisches Modell des parametrischen Pavillons – Detail 2">
           </figure>
         </div>
@@ -95,7 +95,7 @@ order: 12
     </figure>
     <figure ignorecarousel class="spacer">
         <div class="mediaColumn">
-          <figure onclick="viewImage(this)">
+          <figure>
             <img src="/assets/img/pavilions/lqip/3_5.jpg" alt="Grasshopper-Algorithmus als Node-Diagramm">
           </figure>
         </div>

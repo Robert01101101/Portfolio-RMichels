@@ -24,30 +24,30 @@ order: 10
   </section>
   <section class="sectionMedia">
     <div class="mediaColumn"><div class="mediaRow">
-      <figure onclick="viewImage(this)">
+      <figure>
         <img src="/assets/img/chromakeyAndColorMatching/lqip/1.jpg" alt="Compositing-Schritt 1: Vordergrund mit grünem und magentafarbenem Hintergrund">
       </figure>
-      <figure onclick="viewImage(this)">
+      <figure>
         <img src="/assets/img/chromakeyAndColorMatching/lqip/2.jpg" alt="Compositing-Schritt 2: Erzeugte Matte aus dem Vordergrund">
       </figure>
-      <figure onclick="viewImage(this)">
+      <figure>
         <img src="/assets/img/chromakeyAndColorMatching/lqip/3.jpg" alt="Compositing-Schritt 3: Ausgewählter Hintergrund">
       </figure>
-      <figure onclick="viewImage(this)">
+      <figure>
         <img src="/assets/img/chromakeyAndColorMatching/lqip/4.jpg" alt="Compositing-Schritt 4: Farbübertragung vom Hintergrund auf das Motiv">
       </figure>
     </div>
     <div class="mediaRow">
-      <figure onclick="viewImage(this)">
+      <figure>
         <img src="/assets/img/chromakeyAndColorMatching/lqip/5.jpg" alt="Compositing-Schritt 5: Anpassung von Helligkeit und Kantenunschärfe">
       </figure>
-      <figure onclick="viewImage(this)">
+      <figure>
         <img src="/assets/img/chromakeyAndColorMatching/lqip/6.jpg" alt="Compositing-Schritt 6: Zwischenergebnis der Bildverarbeitung">
       </figure>
-      <figure onclick="viewImage(this)">
+      <figure>
         <img src="/assets/img/chromakeyAndColorMatching/lqip/7.jpg" alt="Compositing-Schritt 7: Verfeinerung des Composites">
       </figure>
-      <figure onclick="viewImage(this)">
+      <figure>
         <img src="/assets/img/chromakeyAndColorMatching/lqip/8.jpg" alt="Compositing-Schritt 8: Finales Composite-Bild">
       </figure>
     </div></div>
@@ -60,7 +60,7 @@ order: 10
   </section>
   <section class="sectionMedia">
     <div class="mediaColumn">
-      <figure onclick="viewImage(this)" fullscreen class="wide">
+      <figure class="wide">
         <img src="/assets/img/chromakeyAndColorMatching/lqip/overview.jpg" alt="Übersicht des gesamten Chromakey- und Color-Matching-Prozesses">
         <figcaption>Übersicht des gesamten Prozesses mit klarer Unterscheidung der beiden implementierten Techniken und zusätzlicher Bildverarbeitung.</figcaption>
       </figure>

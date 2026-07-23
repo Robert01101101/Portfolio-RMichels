@@ -29,15 +29,15 @@ order: 1
   <section class="sectionMedia">
     <figure ignorecarousel>
       <div class="mediaRow mediaRow-equalWidth mediaRow-equalHeight">
-        <figure onclick="viewImage(this)">
+        <figure>
         <img src="/assets/img/clirioScanViews/lqip/bridgeMapView.jpg" class="whiteFrame" class="whiteFrame" alt="Auf der Karte Ansicht (Desktop)">
           <figcaption>Auf der Karte Ansicht (Desktop)</figcaption>
         </figure>
-        <figure onclick="viewImage(this)">
+        <figure>
           <img src="/assets/img/clirioScanViews/lqip/bridgeScanView.jpg" class="whiteFrame" class="whiteFrame" alt="Scan View (Desktop)">
           <figcaption>Scan View (Desktop)</figcaption>
         </figure>
-        <figure onclick="viewImage(this)">
+        <figure>
           <img src="/assets/img/clirioScanViews/lqip/scanComparison.jpg" lqip-webp class="whiteFrame" lqip-webp class="whiteFrame" alt="Scan View Vergleichsmodus (Desktop)">
           <figcaption>Scan View Vergleichsmodus (Desktop)</figcaption>
         </figure>
