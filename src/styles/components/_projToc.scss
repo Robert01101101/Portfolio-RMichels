@@ -1,0 +1,63 @@
+.projContentBody {
+	min-width: 0;
+}
+
+#projToc.projToc {
+	display: none;
+	opacity: 0;
+	pointer-events: none;
+
+	&.is-enabled {
+		display: block;
+	}
+
+	max-width: 13rem;
+	z-index: 5;
+
+	&--fixed {
+		position: fixed;
+		z-index: 5;
+	}
+
+	.projToc-list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	.projToc-sub a {
+		padding-left: 1rem;
+	}
+
+	a {
+		display: block;
+		font-family: _font(family-body);
+		font-size: 1rem;
+		font-weight: _font(weight-medium);
+		color: _colour(white);
+		opacity: 0.35;
+		text-decoration: none;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		transition: opacity _duration(default);
+		line-height: 1.4;
+
+		&:hover,
+		&:focus-visible {
+			opacity: 0.7;
+			outline: none;
+		}
+
+		&:focus-visible {
+			text-decoration: underline;
+		}
+
+		&.is-active {
+			opacity: 1;
+		}
+	}
+}

@@ -1,13 +1,36 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import type { Locale } from '../lib/i18n';
+import { t } from '../lib/i18n';
+import { prepareProjectContent } from '../lib/project-toc';
 import { renderProjectMarkdown } from '../lib/render-project-markdown';
 
 interface Props {
   project: CollectionEntry<'projects'> | CollectionEntry<'projects-de'>;
+  locale: Locale;
 }
 
-const { project } = Astro.props;
-const { html } = await renderProjectMarkdown(project.body ?? '', project.data);
+const { project, locale } = Astro.props;
+const { html: rawHtml } = await renderProjectMarkdown(project.body ?? '', project.data);
+const { html, toc } = prepareProjectContent(rawHtml);
+const showToc = toc.length >= 2;
 ---
 
-<Fragment set:html={html} />
+<div class="projContentLayout">
+  {showToc && (
+    <nav id="projToc" class="projToc" aria-label={t('project_toc', locale)} hidden>
+      <ul class="projToc-list">
+        {toc.map((item) => (
+          <li class:list={[{ 'projToc-sub': item.level === 3 }]}>
+            <a href={`#${item.id}`} data-toc-link>
+              {item.text}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  )}
+  <div class="projContentBody">
+    <Fragment set:html={html} />
+  </div>
+</div>
