@@ -42,15 +42,15 @@ order: 2
   <section class="sectionMedia">
     <figure ignorecarousel>
       <div class="mediaRow mediaRow-equalWidth">
-        <figure onclick="viewImage(this)">
+        <figure>
           <img src="/assets/img/clirioScanShare/lqip/scanShareClientSideUi.png" alt="Clirio Scan Share – Freigabe-UI in Clirio View">
           <figcaption>Share-UI</figcaption>
         </figure>
-        <figure onclick="viewImage(this)">
+        <figure>
           <img src="/assets/img/clirioScanShare/lqip/scanShareClientSideUiEmbed.png" alt="Clirio Scan Share – Embed-Konfigurations-UI">
           <figcaption>Embed-UI</figcaption>
         </figure>
-        <figure onclick="viewImage(this)">
+        <figure>
           <img src="/assets/img/lqip/clirioScanShare.jpg" class="whiteFrame" alt="Clirio Scan Share – Webviewer mit 3D-Scan">
           <figcaption>Webviewer</figcaption>
         </figure>
@@ -67,7 +67,7 @@ order: 2
   <section class="sectionMedia">
     <figure ignorecarousel>
       <div class="mediaRow mediaRow-centered">
-        <figure onclick="viewImage(this)">
+        <figure>
           <img src="/assets/img/clirioScanShare/lqip/scanShareWalkthrough.jpg" lqip-gif class="whiteFrame" alt="Animierter UX-Walkthrough der Clirio Scan Share-Freigabe">
           <figcaption>Share-UX-Walkthrough</figcaption>
         </figure>

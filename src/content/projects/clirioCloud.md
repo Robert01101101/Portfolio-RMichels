@@ -29,19 +29,19 @@ order: 4
   <section class="sectionMedia">
     <figure ignorecarousel>
       <div class="mediaSquare">
-        <figure onclick="viewImage(this)">
+        <figure>
           <img src="/assets/img/clirioCloud/lqip/dashboard.jpg" alt="Dashboard">
           <figcaption>Dashboard</figcaption>
         </figure>
-        <figure onclick="viewImage(this)">
+        <figure>
           <img src="/assets/img/clirioCloud/lqip/workspaceList.jpg" alt="Workspace List">
           <figcaption>Workspace List</figcaption>
         </figure>
-        <figure onclick="viewImage(this)">
+        <figure>
           <img src="/assets/img/clirioCloud/lqip/workspaceView.jpg" alt="Workspace Management Tools">
           <figcaption>Workspace Management Tools</figcaption>
         </figure>
-        <figure onclick="viewImage(this)" id="img_createPoi">
+        <figure id="img_createPoi">
           <img src="/assets/img/clirioCloud/lqip/createPoi.jpg" alt="Workspace Management Example: Create POI">
           <figcaption>Workspace Management Example: Create POI</figcaption>
         </figure>
@@ -60,10 +60,10 @@ order: 4
   <section class="sectionMedia">
     <figure ignorecarousel>
       <div class="mediaRow mediaRow-equalWidth mediaRow-equalHeight">
-        <figure onclick="viewImage(this)">
+        <figure>
           <img src="/assets/img/clirioCloud/lqip/create3dModel.jpg" alt="clirio Cloud – create3d Model"> 
         </figure>
-        <figure onclick="viewImage(this)">
+        <figure>
           <img src="/assets/img/clirioCloud/lqip/editBasemaps.jpg" alt="clirio Cloud – edit Basemaps">
         </figure>
       </div>
@@ -73,7 +73,7 @@ order: 4
   <section class="sectionMedia">
     <div class="divText">
       <h2>Code Sample</h2>
-      <p>An example of data binding between the form and data model for the <span onclick="viewImage('img_createPoi')" class="inTextLink">Create POI</span> page.</p>
+      <p>An example of data binding between the form and data model for the <span data-lightbox-id="img_createPoi" class="inTextLink">Create POI</span> page.</p>
     </div>
     <script src="https://gist.github.com/Robert01101101/062fa22fe781689ed11a85d85e4b2b3e.js"></script>
   </section>

@@ -24,30 +24,30 @@ order: 10
   </section>
   <section class="sectionMedia">
     <div class="mediaColumn"><div class="mediaRow">
-      <figure onclick="viewImage(this)">
+      <figure>
         <img src="/assets/img/chromakeyAndColorMatching/lqip/1.jpg" alt="chromakey And Color Matching – 1">
       </figure>
-      <figure onclick="viewImage(this)">
+      <figure>
         <img src="/assets/img/chromakeyAndColorMatching/lqip/2.jpg" alt="chromakey And Color Matching – 2">
       </figure>
-      <figure onclick="viewImage(this)">
+      <figure>
         <img src="/assets/img/chromakeyAndColorMatching/lqip/3.jpg" alt="chromakey And Color Matching – 3">
       </figure>
-      <figure onclick="viewImage(this)">
+      <figure>
         <img src="/assets/img/chromakeyAndColorMatching/lqip/4.jpg" alt="chromakey And Color Matching – 4">
       </figure>
     </div>
     <div class="mediaRow">
-      <figure onclick="viewImage(this)">
+      <figure>
         <img src="/assets/img/chromakeyAndColorMatching/lqip/5.jpg" alt="chromakey And Color Matching – 5">
       </figure>
-      <figure onclick="viewImage(this)">
+      <figure>
         <img src="/assets/img/chromakeyAndColorMatching/lqip/6.jpg" alt="chromakey And Color Matching – 6">
       </figure>
-      <figure onclick="viewImage(this)">
+      <figure>
         <img src="/assets/img/chromakeyAndColorMatching/lqip/7.jpg" alt="chromakey And Color Matching – 7">
       </figure>
-      <figure onclick="viewImage(this)">
+      <figure>
         <img src="/assets/img/chromakeyAndColorMatching/lqip/8.jpg" alt="chromakey And Color Matching – 8">
       </figure>
     </div></div>
@@ -60,7 +60,7 @@ order: 10
   </section>
   <section class="sectionMedia">
     <div class="mediaColumn">
-      <figure onclick="viewImage(this)" fullscreen class="wide">
+      <figure class="wide">
         <img src="/assets/img/chromakeyAndColorMatching/lqip/overview.jpg" alt="An overview of the entire process, with a clear distinction between the two techniques implemented, and additional processing applied to the images.">
         <figcaption>An overview of the entire process, with a clear distinction between the two techniques implemented, and additional processing applied to the images.</figcaption>
       </figure>

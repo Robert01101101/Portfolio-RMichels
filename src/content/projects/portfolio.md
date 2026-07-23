@@ -25,7 +25,7 @@ order: 8
   </section>
   <section class="sectionMedia">
     <div class="mediaColumn">
-      <figure onclick="viewImage(this)">
+      <figure>
         <img src="/assets/img/portfolio/erDiagram.png" alt="ER Diagram of the portfolio database.">
         <figcaption class="center">ER Diagram of the portfolio database.</figcaption>
       </figure>
@@ -37,7 +37,7 @@ order: 8
   </section>
   <section class="sectionMedia">
     <div class="mediaColumn">
-      <figure onclick="viewImage(this)">
+      <figure>
         <img src="/assets/img/portfolio/modelProcess.jpg" alt="Screenshot from Blender, where I cleaned up the photogrammetry capture of myself, which was created with RealityCapture.">
         <figcaption class="center">Screenshot from Blender, where I cleaned up the photogrammetry capture of myself, which was created with RealityCapture.</figcaption>
       </figure>

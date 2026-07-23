@@ -21,10 +21,10 @@ order: 11
   </section>
   <section class="sectionMedia">
     <div class="mediaGrid">
-        <figure onclick="viewImage(this)">
+        <figure>
           <img src="/assets/img/siar/lqip/1.jpg" alt="Marshmallow challenge team-building exercise">
         </figure>
-        <figure onclick="viewImage(this)">
+        <figure>
           <img src="/assets/img/siar/lqip/2.jpg" alt="Interdisciplinary collaboration in conceptual discussions">
         </figure>
     </div>
