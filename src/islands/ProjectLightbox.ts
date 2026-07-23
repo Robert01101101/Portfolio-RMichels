@@ -36,7 +36,7 @@ export function initProjectLightbox() {
     },
   });
 
-  lightbox.addFilter('itemData', (itemData: PswpSlideData, index: number) => {
+  lightbox.addFilter('itemData', (itemData: PswpSlideData, _index: number) => {
     const element = itemData.element;
     if (!(element instanceof HTMLElement)) return itemData;
 
@@ -57,7 +57,9 @@ export function initProjectLightbox() {
     if (thumbEl) return thumbEl;
     const items = collectCarouselFigures(projContent);
     const figure = items[index];
-    return figure?.querySelector('img') ?? thumbEl;
+    const img = figure?.querySelector('img');
+    if (img instanceof HTMLElement) return img;
+    return figure ?? items[0] ?? projContent;
   });
 
   lightbox.on('uiRegister', () => {
