@@ -1,0 +1,33 @@
+.pswp {
+	--pswp-bg: #0a0a0a;
+	--pswp-root-z-index: 100000;
+}
+
+// Hide site chrome while the lightbox is open so the backdrop feels focused.
+body.is-lightbox-open {
+	header,
+	#projToc,
+	#copyConfirm {
+		visibility: hidden;
+		pointer-events: none;
+	}
+}
+
+.pswp__bg {
+	backdrop-filter: blur(12px);
+}
+
+.pswp__custom-caption {
+	position: absolute;
+	bottom: 1rem;
+	left: 50%;
+	transform: translateX(-50%);
+	max-width: min(80vw, 48rem);
+	padding: 0.5rem 1rem;
+	color: _colour(white);
+	text-align: center;
+	text-wrap: wrap;
+	background-color: rgba(black, 0.55);
+	backdrop-filter: blur(10px);
+	pointer-events: none;
+}

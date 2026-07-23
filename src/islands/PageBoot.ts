@@ -16,6 +16,6 @@ if (pageType === 'projects') {
 }
 
 if (pageType === 'project') {
-  void import('./ImageViewer.ts');
+  void import('./ProjectLightbox.ts');
   void import('./ThreeMockup.ts');
 }
