@@ -37,10 +37,19 @@ body[data-page-type="about"] #MainGrid {
 
 body[data-page-type="about"] main {
 	grid-row: 2 / 3;
+
+	// Use full content width on landscape desktops (default main is cols 3–5 only)
+	@include xl {
+		grid-column: 2 / 6;
+	}
 }
 
 body[data-page-type="about"] footer {
 	grid-row: 3 / 4;
+
+	@include xl {
+		grid-column: 2 / 6;
+	}
 }
 
 //_____________________________________________________________________ GRID CHILDREN ___________________________________________//
