@@ -2,9 +2,10 @@
 name: commit-messages
 description: >-
   Analyze the working copy, split changes into logical Conventional Commits
-  when appropriate, and commit them sequentially one after another. Use when
-  the user asks to commit, write commit messages, stage changes, or review
-  the working copy before committing.
+  when appropriate, commit them sequentially, and always suggest a copy-paste
+  GitHub PR message summarizing unmerged commits. Use when the user asks to
+  commit, write commit messages, stage changes, review the working copy, or
+  wants a PR summary.
 ---
 
 # Commit Messages
@@ -189,7 +190,7 @@ Use `git add -p` when a single file contains hunks belonging to different commit
 
 After the final commit, `git status` should show a clean working tree (or only intentionally uncommitted files).
 
-### 4. Summarize
+### 4. Summarize commits
 
 Tell the user what was committed:
 
@@ -199,6 +200,60 @@ Created 3 commits:
   def5678 feat(about): add glossary terms to about page
   ghi9012 feat(i18n): sync German about page copy
 ```
+
+### 5. Suggest a PR message (always)
+
+**After every commit session**, suggest a PR message for the unmerged branch. Do this even when the user only asked to commit — they should not need a separate request.
+
+Determine the base branch (`main` unless the user specifies otherwise):
+
+```bash
+git log main..HEAD --oneline
+git branch --show-current
+```
+
+#### PR message format
+
+Output **two parts**:
+
+1. **Title** — one short line for the GitHub PR title field (≤ ~72 chars). Name the main theme, not every commit.
+2. **Body** — markdown only, wrapped in a fenced `markdown` code block so the user can copy-paste into GitHub.
+
+**No test plan.** Summary only.
+
+Body template:
+
+````markdown
+## Summary
+
+- <grouped change 1>
+- <grouped change 2>
+- …
+````
+
+#### Writing rules
+
+- **Group related commits** into one bullet — do not list one bullet per commit unless there are ≤3 commits total.
+- **Past tense or neutral phrasing** is fine in bullets (`Add …`, `Fix …`, `Refactor …`); match commit intent, not commit subject verbatim.
+- **Order bullets** by importance: user-facing changes first, then refactors/tooling/chore last.
+- **Chore-only commits** (cursor skills, formatting) can be omitted from the summary unless they are the whole branch.
+- If the branch has a single commit, one bullet is enough.
+
+#### Example output
+
+**Title:** `WebGL refactor, content pipeline, and layout polish`
+
+````markdown
+## Summary
+
+- Render gist embeds as static Shiki code blocks at build time; fix project page HTML from markdown blank lines; add gallery alt text and refine team metadata
+- Extract shared WebGL modules with performance tiers; update architecture docs
+- Refactor content validation around a shared schema; run check/tests before deploy
+- Archive legacy LAMP PHP/JS artifacts
+- Fix project panel hero distortion; tighten content margins; refactor about page to CSS grid; remove resume links and refresh bio copy
+- Fix landing model overflow and responsive see-more button; reset project tile parallax on breakpoint change
+- Reorder project filter roles for job-application focus
+````
 
 ## Quick checklist
 
@@ -211,6 +266,7 @@ Created 3 commits:
 - [ ] Body explains *why*, not *what*
 - [ ] Breaking changes flagged with `!` or `BREAKING CHANGE:` footer
 - [ ] No secrets or unintended build artifacts staged
+- [ ] PR title + markdown summary suggested (grouped bullets, no test plan)
 
 ## Additional resources
 
