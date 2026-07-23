@@ -49,7 +49,7 @@ Loaded per page via dynamic imports in `PageBoot.ts` or page `<script>` tags:
 |--------|-------|
 | HomeWebGL | Home |
 | ProjectFilter | Home, Projects |
-| ImageViewer, Lqip | Case studies |
+| ProjectLightbox, Lqip | Case studies |
 | ThreeMockup | tourguide, clirioScanViews |
 | WebGLBackground | All (footer waves) |
 | Menu, LenisSetup | All |

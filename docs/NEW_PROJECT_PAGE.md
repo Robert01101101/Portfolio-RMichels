@@ -84,7 +84,7 @@ Use `<p></p>` for vertical spacing inside a section if needed (see `futureEarth.
 | `mediaSquare` | 2×2-style layout |
 | `mediaColumn` | Stacked blocks; `-fullWidth` for full bleed |
 
-Always wrap clickable gallery images in `<figure onclick="viewImage(this)">`. Add `ignorecarousel` on outer `<figure>` when the default carousel should not apply.
+Always wrap gallery images in `<figure><img …><figcaption>…</figcaption></figure>`. Clicking any figure opens the page-wide PhotoSwipe lightbox. Add `ignorecarousel` on outer `<figure>` when the wrapper should not be a slide itself (e.g. layout containers with nested figures).
 
 Gallery paths: `/assets/img/{slug}/lqip/*` (LQIP island swaps to full-res on load).
 
@@ -126,7 +126,7 @@ At build time, `remark-gist-embed` fetches the gist and renders styled `.code-sn
 | Tile LQIP | `public/assets/img/lqip/{slug}.jpg` |
 | Gallery | `public/assets/img/{slug}/lqip/*.jpg` |
 
-Gallery images in markdown use `![gallery](/assets/img/{slug}/lqip/1.jpg)` or HTML figures (ImageViewer binds click handlers).
+Gallery images in markdown use `![gallery](/assets/img/{slug}/lqip/1.jpg)` or HTML figures (ProjectLightbox binds click handlers automatically).
 
 ## 3. Roles
 
