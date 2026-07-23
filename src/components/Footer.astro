@@ -10,10 +10,6 @@ interface Props {
 const { locale, pageType = 'default' } = Astro.props;
 const showContact = pageType !== 'about';
 
-const resumeFile =
-  locale === 'de'
-    ? '/assets/other/RobertMichelsLebenslauf.pdf'
-    : '/assets/other/RobertMichelsResume.pdf';
 const privacyHref = locale === 'de' ? '/de/privacyPolicy' : '/privacyPolicy';
 const portfolioHref = locale === 'de' ? '/de/portfolio' : '/portfolio';
 const year = new Date().getFullYear();
@@ -49,7 +45,6 @@ const year = new Date().getFullYear();
       <small>{t('enable_smooth_scrolling', locale)}</small>
     </label>
     <div>
-      {showContact && <a href={resumeFile}><small>{t('resume', locale)}</small></a>}
       <a href={privacyHref}><small>{t('privacy_policy', locale)}</small></a>
     </div>
   </div>
